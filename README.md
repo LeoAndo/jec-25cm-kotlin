@@ -14,7 +14,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 
-**いま教科書があるのはK01だけで、その中身は4コマ目ぶん（`ex01`〜`ex06`）までです。** K01の5コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
+**いま教科書があるのはK01だけで、その中身は5コマ目ぶん（`ex01`〜`ex09`）までです。** K01の6コマ目は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
 
 ### 開き方
 
@@ -63,7 +63,7 @@ K01の授業順は次のとおりです（2026-09-23、オーナー決定）。`
 
 リストを作って読む操作を `map` より先に、クラスとプロパティをアクセサ・data classより先に置きます。前年度資料の節との対応は、下の「前年度の教材との関係」にあります。
 
-**いま教科書に書けているのは、4コマ目ぶん（`ex01`〜`ex06`）までです。** 5コマ目・6コマ目は、**同じ `docs/hello-kotlin/index.html` にSTEPを足します。** `config/teaching-materials.json` の `packages` も、いまは `ex01`〜`ex06` です。残りの演習は、その回の教科書を書くissueで登録します（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
+**いま教科書に書けているのは、5コマ目ぶん（`ex01`〜`ex09`）までです。** 6コマ目は、**同じ `docs/hello-kotlin/index.html` にSTEPを足します。** `config/teaching-materials.json` の `packages` も、いまは `ex01`〜`ex09` です。残りの `ex10`・`ex11` は、6コマ目の教科書を書くissueで登録します（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
 
 **純Kotlin系の単元は K01 の1つだけです。** K02以降は作りません。プロジェクトも `K01HelloKotlin` という1つのIntelliJ IDEAプロジェクトだけで、回を重ねるごとに `src/exNN/` のパッケージを足していきます。**単元ごとに別プロジェクトにしないのは、次の理由からです。**
 
