@@ -12,8 +12,10 @@
 
 | 系統 | 単元番号 | IDE | プロジェクト | 実行のしかた |
 | --- | --- | --- | --- | --- |
-| 純Kotlin | `K01`〜 | IntelliJ IDEA | `K01HelloKotlin`（`K01HelloKotlin/src/exNN/*.kt`。Gradleを使わない） | `fun main()` を実行してコンソール出力を見る |
-| Android | `A01`〜 | Android Studio | `A01HelloAndroid` `A02CalcGame` `A03GithubSearch` `A04FunnyCamera`（Gradle） | エミュレータ `jec_25cm_kotlin_Pixel 9a` で動かす |
+| 純Kotlin | `K01` の1つだけ | IntelliJ IDEA | `K01HelloKotlin` の1つだけ（回ごとに `K01HelloKotlin/src/exNN/*.kt` を足す。Gradleを使わない） | `fun main()` を実行してコンソール出力を見る |
+| Android | `A01`〜`A04` | Android Studio | `A01HelloAndroid` `A02CalcGame` `A03GithubSearch` `A04FunnyCamera`（単元ごとに別プロジェクト。Gradle） | エミュレータ `jec_25cm_kotlin_Pixel 9a` で動かす |
+
+**純Kotlin系の単元は `K01` の1つだけで、`K02` 以降は作らない。** Kotlinの文法は全6コマを `K01HelloKotlin` という1つのプロジェクトで扱い、回を重ねるごとに `K01HelloKotlin/src/exNN/` のパッケージと、教科書 `docs/hello-kotlin/index.html` のSTEPを足していく（前年度の配布資料PDFと同じ、1つのプロジェクトにファイルを足していく進め方）。教科書も `docs/hello-kotlin/index.html` の1冊だけで、回ごとに新しいスラッグのフォルダを作らない。**「Kotlinの回（`exNN`）を足す」と「単元を足す」は別の作業で、手順も違う**（§9）。単元そのものが増えるのは、Android系（`A01`〜）だけである。
 
 **Android系の基準バージョンは Android Studio Panda 2。** 教科書の手順・画面・生成される設定は、すべて Panda 2 を前提に書く。ひな形は `Panda2KotlinEmptyViewsActivity`（AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36）にある。教員の開発マシンには Quail 4 が入っているので、**自分の手元の Android Studio で作ったプロジェクトを、そのまま完成プロジェクトにしない。** 新しい完成プロジェクトは、ひな形と同じ構成になっているかを `app/build.gradle.kts`・`gradle/libs.versions.toml`・`gradle/wrapper/gradle-wrapper.properties` の3つで確かめる。
 
@@ -39,7 +41,7 @@
 
 - 1つのセッションで、2つ目のissueや別の単元の作業を始めない。頼まれたら、別のセッション（別のworktree）で行うことを提案する。
 - 例外：同じ種類の `size:XS` のissueは、1つのPRでまとめて閉じてよい（`Closes #<番号1>, closes #<番号2>`）。
-- 新しい単元は「完成プロジェクト」と「教材一式（教科書＋教員用ガイド＋登録）」の2つのissueに分ける。1つにまとめると `size:XL` になり、1セッションに収まらない（§6）。
+- 新しい単元（Android系）は「完成プロジェクト」と「教材一式（教科書＋教員用ガイド＋登録）」の2つのissueに分ける。1つにまとめると `size:XL` になり、1セッションに収まらない（§6）。Kotlinの回（`exNN`）を足すissueは単元を増やさないので、この分割は要らない（§9）。
 
 ## 2. 作業場所
 
@@ -58,7 +60,7 @@
   cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
   ```
 
-- **純Kotlin単元**：`K01HelloKotlin` はGradleプロジェクトではないので、コマンドラインのビルドがない。**IntelliJ IDEA で `K01HelloKotlin` を開き、対象の `exNN/main.kt` の `fun main()` を実行して、Runツールウィンドウの出力を目で確かめる。** `.idea/` はGit管理外（リポジトリ直下の `.gitignore`）なので、worktreeで初めて開いたときはJDKとKotlinの設定を聞かれる。これは正常で、設定ファイルはコミットしない。
+- **純Kotlin系（`K01`）**：`K01HelloKotlin` はGradleプロジェクトではないので、コマンドラインのビルドがない。**IntelliJ IDEA で `K01HelloKotlin` を開き、対象の `exNN/main.kt` の `fun main()` を実行して、Runツールウィンドウの出力を目で確かめる。** プロジェクトは1つだけなので、どの回の作業でも開くのは `K01HelloKotlin` である。`.idea/` はGit管理外（リポジトリ直下の `.gitignore`）なので、worktreeで初めて開いたときはJDKとKotlinの設定を聞かれる。これは正常で、設定ファイルはコミットしない。
 - **commitしないPoC成果物は、リポジトリの外に置く。** 置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables`。なければ作る。
 
   ```sh
@@ -109,18 +111,19 @@
 | 触る場所 | 並行 |
 | --- | --- |
 | Android単元ごとの場所だけ（`A0NXxx/` と、その単元の `docs/<スラッグ>/`・`teacher/<スラッグ>/`） | 別の単元のissueとは並行してよい。同じ単元のissue同士は直列 |
-| 純Kotlin単元ごとの場所だけ（例：`K01HelloKotlin/src/ex02/`、`docs/<スラッグ>/`、`teacher/<スラッグ>/`） | 別の `exNN/` のissueとは並行してよい。ただし下の注意を読む |
+| 純Kotlin（`K01`）の回ごとの場所だけ（`K01HelloKotlin/src/exNN/` の中だけ） | 別の `exNN` のissueとは並行してよい。ただし下の注意を読む |
 | 共有ファイル：リポジトリ直下のファイル（`README.md`、`AGENTS.md`、`CLAUDE.md`、`.gitignore`）、`config/`、`scripts/`、`docs/common/`、`docs/assets/`、`.github/`、`skills/` | 同時に開くPRは1本まで（ラベル `area:shared`） |
 | 対訳カタログ：`i18n/<言語>/`（§12） | 別の言語のissueとは並行してよい。単元や共有ファイルのissueとも並行してよい。同じ言語のissue同士は直列（ラベル `area:i18n`） |
 
-- **純Kotlin系は、単元が別でもプロジェクトが1つ（`K01HelloKotlin`）であることに注意する。** `K01HelloKotlin/src/exNN/` の中だけなら並行してよいが、次の2つは単元をまたいで共有される。
+- **純Kotlin系は、回が別でもプロジェクトが1つ（`K01HelloKotlin`）であることに注意する。** `K01HelloKotlin/src/exNN/` の中だけなら、別の `exNN` のissueと並行してよい。ただし、次の3つは回をまたいで共有される。
   - `K01HelloKotlin/.gitignore` とプロジェクト直下。ここを触るissueは共有ファイル扱いにする。
-  - 配布ZIP `docs/hello-kotlin/downloads/K01HelloKotlin.zip`。`config/teaching-materials.json` では、複数のK単元が同じ `archive` を指す。どのK単元に `exNN` を足しても、このZIPの中身が変わる。**並行する2本のPRが両方このZIPを作り直すと、バイナリなのでマージで必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
+  - 配布ZIP `docs/hello-kotlin/downloads/K01HelloKotlin.zip`。K01の `archive` はこの1つで、どの `exNN` を足してもこのZIPの中身が変わる。**並行する2本のPRが両方このZIPを作り直すと、バイナリなのでマージで必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
+  - 教科書 `docs/hello-kotlin/index.html`、教員用ガイド `teacher/hello-kotlin/index.html`、`config/teaching-materials.json` のK01の項目。**回を足すと、この3つは必ず同じ場所（STEPの列、進め方、`packages`／`sources`）が伸びる。** `config/` は共有ファイルなので、教科書やconfigまで触る回のissueは、同時に開くPRを1本までにする（ラベル `area:shared`）。並行してよいのは、`K01HelloKotlin/src/exNN/` だけで完結するissueである。
 - **`Panda2KotlinEmptyViewsActivity` と `Quail4KotlinEmptyViewsActivity` は単元ではない。** Android StudioのNew Projectウィザードが生成したひな形を、版ごとにそのまま置いてあるものである（Panda 2 と Quail 4）。教材の手順が古くなっていないかを、この2つを見比べて確かめるために置いている。`config/teaching-materials.json` には登録せず、学生用ZIPにも入れない。**中身に手を入れない。** 手を入れると「ウィザードが生成したそのままの形」という価値がなくなり、比較の基準として使えなくなる。版を上げるときは、新しい版のAndroid Studioで作り直したものを別のフォルダとして足す。
-- 新しい単元の登録（§9）は必ず共有ファイルに当たる。2つの単元を同時に登録しない。登録のPRは、既存の全単元の教科書のサイドバーも触る（§9の手順6）。`<div class="resources">` は全体で1行なので、ほかの単元のPRが同じ行を触っていると、先にマージされた側と衝突する。相手のPRが開いているあいだは、手順6では分からない（比べる相手が `origin/main` だけのため）。相手がマージされたあとの§3の手順6で確かめ、両方の変更を残す。
+- 新しい単元の登録（§9。登録するのはAndroid系の単元だけ）は必ず共有ファイルに当たる。2つの単元を同時に登録しない。登録のPRは、既存の全単元の教科書のサイドバーも触る（§9の手順6）。`<div class="resources">` は全体で1行なので、ほかの単元のPRが同じ行を触っていると、先にマージされた側と衝突する。相手のPRが開いているあいだは、手順6では分からない（比べる相手が `origin/main` だけのため）。相手がマージされたあとの§3の手順6で確かめ、両方の変更を残す。
 - 教科書 `docs/<スラッグ>/index.html` から他単元へのリンクは、topbarとサイドバーの2か所にある。どちらも本文ではなく導線で、手順やコードを他単元へ送るものではない（READMEの「授業用教科書の基本方針」が禁じているのは、本文から送ること）。サイドバーに先の単元へのリンクがあっても、方針違反ではない。
   - **サイドバー**（`<div class="resources">` の1行）には、どの単元でも全単元を単元番号順に並べる。位置は「完成プロジェクトを開く」のあと、「共通：…」の前。いま開いている単元だけはリンクにせず、現在地として書く（K01なら `<span aria-current="page">K01：HelloKotlin</span>`）。表示名は、`projects[].name` を番号と残りに分けて全角コロンでつないだ形にする。項目の中に別のタグは入れない。`scripts/check-teaching-materials.py` が、`config/teaching-materials.json` の `projects` の並びと、リンク先・表示名まで照合する。単元を足して1冊でも直し忘れると、CIが落ちる。位置は検査されない。
-  - **2系統の並び順は「K→A」。** 検査は、`projects` に最初に現れた接頭辞の順で並んでいること、同じ接頭辞の中では番号が昇順であることを見る。**一度Aに変わったあとでKに戻るとエラーになる。** あとからK単元を足すときは、A単元の前に入れる。
+  - **2系統の並び順は「K→A」。** 検査は、`projects` に最初に現れた接頭辞の順で並んでいること、同じ接頭辞の中では番号が昇順であることを見る。**一度Aに変わったあとでKに戻るとエラーになる。** 純Kotlin系は `K01HelloKotlin` の1つだけなので、`projects` は `K01HelloKotlin` を先頭に、そのうしろへAndroid単元を番号順に並べる形で固定される。Kotlinの回を足しても、この並びは変わらない（単元が増えないため）。
   - **topbar** は、直前の単元へのリンク1つだけにする（K01はなし）。こちらは検査されない。単元を挿入したときや、並行して作った単元をマージしたあとは、次の単元のtopbarが直前の単元を指しているかを目で確かめる。指す先が実在するかぎりリンク切れにはならないので、CIでは検出できない。
 
 ## 5. コミットのしかた
@@ -158,7 +161,7 @@
   - サイズ：S（同種の既存issueと比べて決めた）
   - 推奨構成：軽い構成で可（判断の要らない機械的な修正）
   - 人間の確認：XS（差分の目視のみ）
-  - 触る範囲：K01HelloKotlin/src/ex02/ と docs/<スラッグ>/ のみ（共有ファイルなし）
+  - 触る範囲：K01HelloKotlin/src/ex02/、docs/hello-kotlin/、teacher/hello-kotlin/、config/teaching-materials.json（共有ファイルあり）
   ```
 
   サイズの根拠には、**実在する既存のissue・PRの番号だけ**を書く。思い当たる番号がなければ、番号を書かずに「同種の既存issueと比べて決めた」と書く。存在しない番号を書くと、あとから根拠をたどれない。
@@ -171,9 +174,9 @@
 | サイズ | 定義と、このリポジトリでの例 |
 | --- | --- |
 | `size:XS` | 1ファイル、判断不要、ビルドも実行確認も要らない。例：教科書の誤記を1か所直す、READMEのリンクを1本直す、`teacher/` のコメントを足す |
-| `size:S` | 1単元に閉じた数ファイルの変更。検査スクリプトか、1回の実行・ビルドで確認できる。例：`K01HelloKotlin/src/exNN` を1つ足す、既存の教科書にSTEPを1つ書き足す、Android単元の文言を直して `assembleDebug` を通す |
+| `size:S` | 1単元（Kotlinなら1回）に閉じた数ファイルの変更。検査スクリプトか、1回の実行・ビルドで確認できる。例：`K01HelloKotlin/src/exNN` を1つ足して教科書にSTEPを1つ書き足す（§9のKotlinの回の手順）、Android単元の文言を直して `assembleDebug` を通す |
 | `size:M` | 複数の単元や共有ファイルにまたがり、全体の照合が要る。例：`scripts/` のロジックを変える、`config/teaching-materials.json` のスキーマを変える、`docs/common/` にページを足す、全教科書のサイドバーを機械的に直す |
-| `size:L` | 単元の完成プロジェクト1つ、または教材一式（教科書＋教員用ガイド＋登録）1単元ぶん。1セッションの上限。例：`A0NXxx/` を新規に作る、K単元の教科書を1冊書いて登録まで済ませる |
+| `size:L` | 単元の完成プロジェクト1つ、または教材一式（教科書＋教員用ガイド＋登録）1単元ぶん。1セッションの上限。例：`A0NXxx/` を新規に作る、Android単元の教科書を1冊書いて登録まで済ませる |
 | `size:XL` | 1セッションに収まらない。見積値ではなく分割の合図。このまま着手しない。例：完成プロジェクトと教材一式を1つのPRにまとめる、2つの単元を同時に登録する |
 
 - **推奨構成**は、その作業に足りる最小のモデルとエフォートを書く。判断の要らない機械的な修正（XS・S）は軽い構成でよい。教材の設計判断が要る作業は、最上位のモデルと高いエフォートにする。
@@ -198,7 +201,7 @@
 
   それぞれが見ているもの：1つ目は `config/teaching-materials.json` と教材の照合（コマ数の合計、サイドバーの並び、スニペットのバイト一致、ZIPの内容一致、指定AVD名の表記）、2つ目はスクリプト自身のテスト、3つ目は教科書HTMLから翻訳用の文を取り出せるか（§12の禁止事項を行番号つきで落とす）、4つ目は配布ZIPが最後まで組み立つか。
 - **Android単元**を触ったら、その単元をビルドする（§2）。画面に関わる変更は、エミュレータ `jec_25cm_kotlin_Pixel 9a` で確認する。教科書のスクリーンショットもこのエミュレータで撮る。
-- **純Kotlin単元**を触ったら、IntelliJ IDEA でその `exNN` の `fun main()` を実行し、コンソール出力が教科書に書いたとおりかを目で確かめる（§2）。教科書の `<pre id="...">` とソースのバイト一致は1つ目のコマンドが見るが、**出力が正しいかどうかは機械では確かめられない。**
+- **純Kotlin系（`K01`）**を触ったら、IntelliJ IDEA でその `exNN` の `fun main()` を実行し、コンソール出力が教科書に書いたとおりかを目で確かめる（§2）。教科書の `<pre id="...">` とソースのバイト一致は1つ目のコマンドが見るが、**出力が正しいかどうかは機械では確かめられない。**
 - **完成プロジェクトにUnit Testは書かない。** 動作はIntelliJ IDEAの実行と、エミュレータ・Logcatで確認する。`scripts/test_*.py` はCIで実行されるので、通る状態を保つ。
 - 確認できなかった項目は、PR本文に「未確認」と書く。§10の項目は確認しなくてよく、「未確認」にも挙げない。
 
@@ -227,37 +230,62 @@
 
 ## 9. 新しい単元を追加するとき
 
-`docs/<スラッグ>/` を作るだけでは足りない。次のすべてに登録する。手順は `skills/add-teaching-unit/SKILL.md` にもある。
+**先に、どちらの作業かを決める。**
 
-1. 完成プロジェクト。純Kotlin系は `K01HelloKotlin/src/exNN/`（§11の8。`exNN` の番号は前年度資料の節に対応させる）、Android系は `A0NXxx/`。**1つの単元が複数の `exNN` を扱ってよい**（K03なら `ex03` `ex05` `ex06`）。
-2. `docs/<スラッグ>/index.html`、`images/`（画像を使う単元だけ）、`downloads/<Project>.zip`。ZIPは次で作る。
+- **Kotlinの回（`exNN`）を足すだけなら、単元は増やさない。** 次の「Kotlinの回を足すときは、単元を増やさない」の5つだけをやる。
+- **単元そのものを足すのは、Android系（`A01`〜）だけ。** そのときは、下の「単元そのものを足す手順（Android系）」の1〜9をすべて行う。
+
+### Kotlinの回を足すときは、単元を増やさない
+
+**純Kotlin系の単元は `K01` の1つだけで、プロジェクトも `K01HelloKotlin` の1つだけ。** 前年度資料の節を1つ進めて `exNN` を足すのは「回」を足す作業で、「単元」を足す作業ではない。教科書も `docs/hello-kotlin/index.html` の1冊のままで、同じ教科書にSTEPを足していく。やることは次の5つだけで、下の1〜9の手順は要らない。
+
+1. `K01HelloKotlin/src/exNN/main.kt` を足す。**ファイルの先頭に `package exNN` を書く**（§11の8。`exNN` の番号は前年度資料の節に対応させる。対応表はREADMEの「前年度の教材との関係」）。
+2. `config/teaching-materials.json` のK01の `packages`（配列）と `sources` に、その `exNN` を足す。**`packages` に書いたのに `sources` が無いと検査が落ちる。** `sessions`（K01に割くコマ数）は、回を足しても増やさない。
+3. `docs/hello-kotlin/index.html` にSTEPを足す。**サイドバーの `.progress` の `max` と `data-progress-label` の総数を、増えたSTEP数に直す。** 教科書に貼ったコードは、configの `snippets` に `<pre id="…">` とソースの組を足して照合させる（手で写さず、ソースから差し込む）。
+4. `teacher/hello-kotlin/index.html` の進め方にその回を足し、`teacher/hello-kotlin/code/NN-main.kt` に完成コードの複製を置く。configの `mirrors` にも `source` と `copy` の組を足す（1バイトでも違うと検査が落ちるので、元ファイルからコピーする）。
+5. 配布ZIPを作り直す。
 
    ```sh
    python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip
    ```
 
-   `--project` と `--output` はどちらも必須で、既定値はない。純Kotlin系は全K単元が同じZIPを共有する（§4）。
-   - **`images/` を作るのは、スクリーンショットを撮れるAndroid系の単元だけ**（`skills/add-teaching-unit/SKILL.md` と同じ条件）。純Kotlin系（`K01`〜）は文章と表と手順で説明し、画像を使わないので `images/` も作らない（`docs/hello-kotlin/` には実際にない）。「ここに画像を入れる」のようなプレースホルダも置かない。
+   並行するPRとの衝突のしかたは§4にある。
+
+**`projects` に新しい単元を足さない。** 単元が増えないので、READMEの15コマ計画の行も増えず、サイドバー（§4）もtopbarも変わらない。`docs/` に新しいスラッグのフォルダも作らない。GitHubのラベルは `area:K01` をそのまま使う。
+
+### 単元そのものを足す手順（Android系）
+
+**この手順を使うのは、Android系（`A01`〜）の単元を新しく作るときだけ。** `docs/<スラッグ>/` を作るだけでは足りない。次のすべてに登録する。手順は `skills/add-teaching-unit/SKILL.md` にもある。
+
+1. 完成プロジェクト `A0NXxx/`（Android Studioで新規作成し、ひな形 `Panda2KotlinEmptyViewsActivity` と同じ構成にそろえる）。
+2. `docs/<スラッグ>/index.html`、`images/`（画像を使う単元だけ）、`downloads/<Project>.zip`。ZIPは次で作る。
+
+   ```sh
+   python3 scripts/package-project.py --project A0NXxx --output docs/<スラッグ>/downloads/A0NXxx.zip
+   ```
+
+   `--project` と `--output` はどちらも必須で、既定値はない。純Kotlin系のZIPは `docs/hello-kotlin/downloads/K01HelloKotlin.zip` の1つだけで、回を足したときに作り直す（上の「Kotlinの回を足すときは、単元を増やさない」の5）。
+   - **`images/` を作るのは、その教科書で実際に使うスクリーンショットがあるときだけ**（`skills/add-teaching-unit/SKILL.md` と同じ条件）。Android系は画面をエミュレータ `jec_25cm_kotlin_Pixel 9a` で撮る。純Kotlin系（`K01`）に画面はないので、撮るのは IntelliJ IDEA の操作（メニュー・ダイアログ・Runツールウィンドウ）だけで、文法の説明は文章と表と手順で書く（`docs/hello-kotlin/images/`）。**「ここに画像を入れる」のようなプレースホルダは置かない。**
 3. `teacher/<スラッグ>/index.html` と `teacher/<スラッグ>/code/`（STEPごとの照合コード。`NN-ファイル名.拡張子` の形式）。「この単元の教材方針」の節を必ず置き、何を意図的に外したかを理由つきで書く。
    - **教科書（手順2）と教員用ガイドの本文には、単元名（`projects[].name`）の表記を必ず入れる。** `scripts/check-teaching-materials.py` の `check_project` が、`docs` に挙げたHTMLを1つずつ開いて探す。**Android系（`kind` が `"android"`）の単元は、単元名に加えて `package` の値（`jp.ac.jec.…`）も本文に書く。両方を探すので、どちらか一方でも欠けている教科書・教員用ガイドがあると落ちる。** 純Kotlin系（`kind` が `"kotlin-console"`）は単元名だけでよい（`packages` の `ex01` のような短い語は本文に偶然現れるため、検査の対象にしていない）。
 4. `config/teaching-materials.json`：`scan_roots`、指定AVD名の `required_in`（Android単元だけ。教科書と教員用ガイドの両方）、`projects`。
-   - `projects` は単元番号順の位置に足す（サイドバーの検査がこの並びを基準にする。§4）。**K→Aの順を崩さない。**
-   - `kind` は `"kotlin-console"` か `"android"` のどちらか。ほかの値はエラーになる。
+   - `projects` は単元番号順の位置に足す（サイドバーの検査がこの並びを基準にする。§4）。**K→Aの順を崩さない。** 先頭は `K01HelloKotlin` で固定なので、Android単元はそのうしろへ番号順に足す。
+   - `kind` は `"kotlin-console"` か `"android"` のどちらか。ほかの値はエラーになる。**新しく足すのは `"android"` だけ**（`"kotlin-console"` の単元は `K01HelloKotlin` の1つだけ）。
    - **`kind` によって、扱うパッケージの書き方が違う。**
-     - `"kotlin-console"`：**`packages`（配列）** に、その単元で扱う演習を並べる。1つだけでも `["ex01"]` と配列で書く。`package`（単数）は書かない。**1つの単元で複数の `exNN` をまとめてよい**（例：`"packages": ["ex03", "ex05", "ex06"]`）。
+     - `"kotlin-console"`：**`packages`（配列）** に、その単元で扱う演習を並べる。1つだけでも `["ex01"]` と配列で書く。`package`（単数）は書かない。**K01は回を重ねるごとにここが伸びていく**（`["ex01"]` → `["ex01", "ex02"]` → …）。
      - `"android"`：いままでどおり **`package`（文字列）** にKotlinパッケージ名（`jp.ac.jec.…`）を書く。`packages` は書かない。
      - 書き間違えると `scripts/check-teaching-materials.py` が設定エラーとして落とす。`packages` に書いた演習の完成コードが `sources` に1つもないときも落ちる（書いたのに足し忘れる事故を捕まえるため）。
-   - `sessions` は、その単元に割くコマ数。**`projects` の `sessions` の合計が `course.total_sessions`（15）を超えるとエラー。** 未満は、まだ単元化していないだけなので通る。
+   - `sessions` は、その単元に割くコマ数。**`projects` の `sessions` の合計が `course.total_sessions`（15）を超えるとエラー。** 未満は、まだ単元化していないだけなので通る。K01の `sessions` はKotlinの回を足しても変えない（単元が増えないため）。
    - `snippets` は `<pre id="…">` とソースをバイト単位で照合するので、コードは手で写さずソースから生成する。
 5. `README.md`：教科書リンク、完成プロジェクトのリンク、教員用リンク、15コマ計画表、フォルダ表。
 6. 単元どうしのリンク（§4）。サイドバーは、**既存の全単元の教科書**に新しい単元へのリンクを単元番号順の位置へ足し、新しい単元の教科書には全単元を並べる（自単元は `<span aria-current="page">`）。1冊でも直し忘れると、`scripts/check-teaching-materials.py` が落ちる。topbarは、新しい単元に直前の単元へのリンクを置く。単元を途中に挿入したときは、次の単元のtopbarも新しい単元へ付け替える。topbarは検査されないので、目で確かめる。既存の教科書のサイドバーは、issueの「触る範囲」に挙がっていなくても、登録に必要な変更なので同じPRで直す（§6）。
-7. GitHubのラベル `area:K<NN>` または `area:A<NN>`。
+7. GitHubのラベル `area:A<NN>`（Kotlinの回のissueは、単元が増えないので `area:K01` をそのまま使う）。
 8. 翻訳の対象は `docs/` のHTMLから自動で見つかる。新単元のPRでは日本語だけを追加し、`python3 scripts/localize-student-materials.py check` で文を取り出せることを確かめる（§7）。翻訳そのものは日常のPRでは行わない（§12）。
-9. **Android系の単元を足したときは、`docs/common/apk.html` の「アプリを1つ選ぶ」の説明が古くなっていないかを確かめる。** 提出課題は、学生自身が作ったAndroidアプリを1つ選んでアレンジし、APKにして出す形（READMEの「提出課題」）。Android単元が増えると、学生が選べるアプリの本数と顔ぶれが変わるので、単元名を挙げている箇所と、本数に触れている箇所が古くなる。古くなっていたら、この登録のPRで一緒に直す（`docs/common/` は共有ファイル。§4）。純Kotlin系（`K01`〜）を足したときは、コンソールアプリで提出の対象外なので、直す必要はない。READMEの「提出課題」の本数の根拠（Android系に使えるコマ数とアプリの本数）も、同じときに読み直す。
+9. **Android系の単元を足したときは、`docs/common/apk.html` の「アプリを1つ選ぶ」の説明が古くなっていないかを確かめる。** 提出課題は、学生自身が作ったAndroidアプリを1つ選んでアレンジし、APKにして出す形（READMEの「提出課題」）。Android単元が増えると、学生が選べるアプリの本数と顔ぶれが変わるので、単元名を挙げている箇所と、本数に触れている箇所が古くなる。古くなっていたら、この登録のPRで一緒に直す（`docs/common/` は共有ファイル。§4）。Kotlinの回（`exNN`）を足したときは、`K01` がコンソールアプリで提出の対象外なので、直す必要はない。READMEの「提出課題」の本数の根拠（Android系に使えるコマ数とアプリの本数）も、同じときに読み直す。
 
 ### 配布スクリプトへの追記は不要
 
-**`scripts/package-student-materials.py` と `scripts/release-student-materials.py` には、単元を足しても何も書かない。** どちらも単元の一覧を `config/teaching-materials.json` の `projects` から読む。完成プロジェクトZIPの再生成も、`はじめに.txt` の単元一覧も、リリースノートの単元一覧も、上の手順4だけで自動的に付いてくる。
+**`scripts/package-student-materials.py` と `scripts/release-student-materials.py` には、単元を足しても何も書かない。** どちらも単元の一覧を `config/teaching-materials.json` の `projects` から読む。完成プロジェクトZIPの再生成も、`はじめに.txt` の単元一覧も、リリースノートの単元一覧も、Android系なら上の手順4、Kotlinの回なら `packages`・`sources` を足すだけで自動的に付いてくる。
 
 参照にした Androidプログラミング1 のリポジトリでは、この3か所が配布スクリプトに直書きしてあり、単元を足すたびに `config` と2つのスクリプトの計3か所を同じ順序で直す必要があった。**単元一覧が3か所に散っていること自体が、直し忘れの原因になっていた。** このリポジトリでは、単元の一覧が正しいかどうかを `config/teaching-materials.json` の1か所だけで判断できるようにしてある。**スクリプトに単元名や単元番号を直書きしない**（配布ZIPの名前や見出しのような、単元に依存しない固定値は直書きでよい）。
 
@@ -344,7 +372,7 @@ READMEの「完成コードの書き方（全単元共通）」を、このリ�
 
 7. **ライブラリは必要なときだけ足す。** バージョンは各プロジェクトの `gradle/libs.versions.toml` で管理し、`build.gradle.kts` にバージョンを直書きしない。単元で使わないライブラリは足さない。
 
-8. **純Kotlin系の完成コードは `K01HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。** `fun main()` を持たせて、IntelliJ IDEA の実行ボタンで動かせる形にする。
+8. **純Kotlin系の完成コードは `K01HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。** `fun main()` を持たせて、IntelliJ IDEA の実行ボタンで動かせる形にする。回を重ねるごとに `exNN` が増えていき、**プロジェクトは `K01HelloKotlin` の1つのまま**である（新しいプロジェクトを作らない）。
 
    ```kotlin
    // K01HelloKotlin/src/ex01/main.kt

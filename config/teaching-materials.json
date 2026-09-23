@@ -36,7 +36,7 @@
       "kind": "kotlin-console",
       "root": "K01HelloKotlin",
       "packages": ["ex01"],
-      "sessions": 1,
+      "sessions": 6,
       "docs": ["docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"],
       "sources": ["K01HelloKotlin/src/ex01/main.kt"],
       "snippets": [

@@ -25,12 +25,13 @@
 <div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
 </div></aside>
 <main id="main">
-<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>90分 × 1コマ目安</span><span>予習なしで始められる</span></div></div>
+<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · 今日は1コマ目</span><span>予習なしで始められる</span></div></div>
 <section id="step-0" aria-labelledby="title-0">
 <p class="step-meta">STEP 00 · 目安 5分</p>
 <h2 id="title-0">この単元のゴール</h2>
 
-<p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。今日はその1コマ目、単元 <code>K01HelloKotlin</code> です。</p>
+<p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>で、今日はその<strong>1コマ目</strong>です。</p>
+<p>6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>、<code>ex02</code> …とパッケージを足していきます。この教科書も1冊のままで、回ごとにSTEPが増えていきます。</p>
 <p>みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。</p>
 <ol><li><strong>Kotlinではどう書くのか</strong>。</li><li><strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。</li></ol>
 
@@ -85,12 +86,12 @@ print(name)</code></pre></div>
 3.0
 Tanaka</code></pre>
 <p>この4行を出すまでを、7つのステップに分けて進みます。</p>
-<h3>1コマ（90分）の進み方</h3>
+<h3>今日の1コマ（90分）の進み方</h3>
 <table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
 <tr><td>前半（約35分）</td><td>STEP 00〜02</td><td>Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。</td></tr>
 <tr><td>後半（約55分）</td><td>STEP 03〜06</td><td><code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。</td></tr>
 </tbody></table>
-<p>この授業では、毎回、<strong>自分でプロジェクトを新規作成</strong>します。今回は STEP 02 から <code>K01HelloKotlin</code> を作ります。</p>
+<p>プロジェクトは <strong>自分で新規作成</strong>します。今日は STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。</p>
 <p><a href="#sample-project">完成プロジェクト</a>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。</p>
 <div class="note"><p class="box-title">この教科書の進め方</p><p>書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。</p><p>分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>今日のゴールの4行を指させた。KotlinがJVM言語であること、入口が <code>fun main()</code> であることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
@@ -140,36 +141,101 @@ Tanaka</code></pre>
 <p class="step-meta">STEP 02 · 目安 20分</p>
 <h2 id="title-2">IntelliJ IDEAでプロジェクトを作る</h2>
 
-<div class="goal"><p class="box-title">このステップのゴール</p><p>IntelliJ IDEA で <code>K01HelloKotlin</code> プロジェクトを作り、その中に <code>ex01</code> パッケージと <code>main.kt</code> を用意して実行します。</p></div>
-<p>授業では <strong>IntelliJ IDEA 2026.3 EAP</strong> とMacを使います。最初の準備にはインターネット接続が必要です。IntelliJ IDEA をまだ入れていない人は、<a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a> を先に見てください。</p>
-<h3>① 保存する場所を用意する</h3>
-<ol><li>Finderの <strong>移動 → ホーム</strong> を開き、ホームフォルダの名前（自分のユーザ名）を確認します。</li><li>その中の <strong>書類（Documents）</strong> を開きます。<code>Kotlin</code> フォルダがなければ、<strong>ファイル → 新規フォルダ</strong> で作り、名前を <code>Kotlin</code> にします。</li></ol>
-<h3>② New Project を開く</h3>
-<ol><li>IntelliJ IDEA を開き、<strong>New Project</strong> をクリックします。別のプロジェクトが開いていたら、上のメニューから <strong>File → New → Project</strong> を選びます。</li><li>開いた画面の左の一覧で、いちばん上の <strong>New Project</strong> が選ばれていることを確認します。下のほうにある <strong>Generators</strong> の項目は選びません。</li></ol>
-<h3>③ 表のとおりに入力する</h3>
-<table><thead><tr><th>画面の項目</th><th>入力・選択する内容</th></tr></thead><tbody>
-<tr><td>Name</td><td><code>K01HelloKotlin</code></td></tr>
-<tr><td>Location</td><td><code>/Users/ユーザ名/Documents/Kotlin</code><br>「ユーザ名」を、自分のMacのユーザ名に読み替えます。</td></tr>
-<tr><td>Language</td><td><strong>Kotlin</strong></td></tr>
-<tr><td>Build system</td><td><strong>IntelliJ</strong>。<strong>Gradle</strong> と <strong>Maven</strong> は選びません。ビルドツールを使わない、いちばん軽い構成です。</td></tr>
-<tr><td>JDK</td><td>一覧から選びます。授業で使うものは先生が指定します。一覧が空のときは <strong>Download JDK</strong> を選びます。</td></tr>
-<tr><td>Add sample code</td><td>チェックを<strong>外す</strong>。</td></tr>
+<div class="goal"><p class="box-title">このステップのゴール</p><p>IntelliJ IDEA で <code>K01HelloKotlin</code> プロジェクトを作り、ウィザードが用意したコードをそのまま実行します。動くことを確かめてから、<code>src/ex01/main.kt</code> を自分で作ります。</p></div>
+<p>授業ではMacと <strong>IntelliJ IDEA 2026.3 EAP</strong> を使います。IntelliJ IDEA は、学校から借りているMacに<strong>インストール済み</strong>です。Launchpadで探すか、Spotlight（<kbd>⌘ Space</kbd>）に <code>IntelliJ</code> と打って開きます。</p>
+
+<h3>① 新規プロジェクト… を選ぶ</h3>
+<ol>
+<li>IntelliJ IDEA を開きます。最初に出るのがホーム画面です。</li>
+<li>左上の <strong>IntelliJ IDEA Home</strong> をクリックして、メニューを開きます。</li>
+<li>出てきた一覧から <strong>新規プロジェクト…</strong> を選びます。<strong>新規…</strong> ではありません。</li>
+<li>すでに別のプロジェクトが開いているときは、いちばん上のメニューバーから <strong>ファイル → 新規 → プロジェクト…</strong> を選びます。</li>
+</ol>
+<figure><a href="images/new-project-menu.png"><img src="images/new-project-menu.png" width="1034" height="392" alt="IntelliJ IDEAのホーム画面。左上のIntelliJ IDEA Homeから開いたメニューに、新規…、新規プロジェクト…、開く…が縦に並び、2番目の新規プロジェクト…が青く選ばれている"></a><figcaption>ホーム画面の左上のメニューから <strong>新規プロジェクト…</strong> を選びます。 <a href="images/new-project-menu.png">画像を大きく開く</a></figcaption></figure>
+
+<h3>② ダイアログに、表のとおり入力する</h3>
+<p><strong>新規プロジェクト</strong> のダイアログが開きます。次の7か所を、表のとおりに入力・選択します。</p>
+<table><thead><tr><th>項目</th><th>入力・選択する内容</th></tr></thead><tbody>
+<tr><td>左の一覧</td><td><strong>Kotlin</strong>。見出し <strong>新規プロジェクト</strong> の下に並ぶ4つのうちの2番目です。下の <strong>ジェネレーター</strong> の中からは選びません。</td></tr>
+<tr><td>名前</td><td><code>K01HelloKotlin</code></td></tr>
+<tr><td>場所</td><td><code>~/Documents/Kotlin</code>（<strong>書類</strong> の中の <code>Kotlin</code> フォルダ。無ければ <strong>書類</strong> の中に作ります）。プロジェクト名は入れません。</td></tr>
+<tr><td>ビルドシステム</td><td><strong>IntelliJ</strong>。<code>Kotlin</code>・<code>Maven</code>・<code>Gradle</code> は選びません。</td></tr>
+<tr><td>JDK</td><td>一覧に出ているものを、そのまま使います。</td></tr>
+<tr><td>サンプルコードの追加</td><td>チェックを<strong>入れたまま</strong>にします。</td></tr>
+<tr><td>コンパクトなプロジェクト構造を使用する</td><td>チェックを<strong>入れたまま</strong>にします。</td></tr>
 </tbody></table>
-<div class="note"><p class="box-title">Create を押す前に、保存先を確認</p><p><strong>Name</strong> と <strong>Location</strong> を合わせた場所にプロジェクトができます。ユーザ名が <code>cmstudent</code> の場合は <code>/Users/cmstudent/Documents/Kotlin/K01HelloKotlin</code> です。<code>ユーザ名</code> という文字をそのまま入力しません。</p><p>保存先の最後が <code>Documents/Kotlin/K01HelloKotlin</code> になっていることを確認します。すでに同名のプロジェクトがあるときは、先生に画面を見せます。</p></div>
-<ol start="3"><li><strong>Create</strong> をクリックします。</li><li>左のプロジェクト一覧に <code>K01HelloKotlin</code> と、その中の <code>src</code> フォルダが出ます。<code>src</code> がソースルートです。</li></ol>
-<div class="note"><p class="box-title">Main.kt ができていたとき</p><p><strong>Add sample code</strong> のチェックを外し忘れると、<code>src</code> の中に <code>Main.kt</code> ができます。そのファイルを右クリックし、<strong>Delete</strong> で消してから次へ進みます。</p></div>
-<h3>④ ex01 パッケージと main.kt を作る</h3>
-<ol><li>左のプロジェクト一覧で <code>src</code> を右クリックし、<strong>New → Package</strong> を選びます。</li><li>名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。</li><li>できた <code>ex01</code> を右クリックし、<strong>New → Kotlin Class/File</strong> を選びます。</li><li>名前に <code>main</code> と入力し、下の一覧から <strong>File</strong> を選んで <kbd>Return</kbd> を押します。</li><li><code>ex01</code> の中に <code>main.kt</code> ができ、エディタに <code>package ex01</code> の1行が出ます。</li></ol>
-<p>この授業では、単元ごとに <code>ex01</code>、<code>ex02</code> …とパッケージを分けていきます。</p>
-<h3>⑤ ファイル全体を、次の内容にする</h3>
+<figure><a href="images/new-project-dialog.png"><img src="images/new-project-dialog.png" width="2018" height="1748" alt="新規プロジェクトのダイアログ。左の一覧でKotlinが選ばれ、右は名前がK01HelloKotlin、場所が~/Documents/Kotlin、その下にプロジェクトは次に作成されます: ~/Documents/Kotlin/K01HelloKotlinと出ている。ビルドシステムはIntelliJ、JDKの欄、サンプルコードの追加とコンパクトなプロジェクト構造を使用するの両方にチェックが入り、右下に作成ボタンがある"></a><figcaption>表の7か所は、この画面の中にあります。<strong>JDK</strong> の欄に出る名前は、Macによって変わります。 <a href="images/new-project-dialog.png">画像を大きく開く</a></figcaption></figure>
+<div class="note"><p class="box-title">ビルドシステムに IntelliJ を選ぶ理由</p><p>Gradleを使わないので、ビルドの設定ファイルが増えず、自分が書いたKotlinのファイルだけを見ればよくなるからです。</p></div>
+<p>入力できたら、<strong>場所</strong> の欄のすぐ下に出ている <strong>プロジェクトは次に作成されます: <code>~/Documents/Kotlin/K01HelloKotlin</code></strong> の行を読みます。この場所になっていることを確かめてから、右下の <strong>作成(C)</strong> を押します。</p>
+
+<h3>③ できあがった形を確かめる</h3>
+<p>左の <strong>プロジェクト</strong> ツールウィンドウに、次の形ができます。</p>
+<ul>
+<li><code>K01HelloKotlin</code> — プロジェクトのいちばん外側。右に <code>~/Documents/Kotlin/K01HelloKotlin</code> と出ます。</li>
+<li><code>.idea</code> — IntelliJ IDEA が使う設定です。中は見ません。</li>
+<li><code>src</code> — ソースルート。これから書くKotlinのファイルは、すべてこの中に置きます。</li>
+<li><code>Main.kt</code> — <code>src</code> の中にあります。<strong>サンプルコードの追加</strong> にチェックを入れたので作られた、そのまま動くサンプルです。</li>
+<li><code>.gitignore</code> — Gitが無視するファイルの一覧です。この単元では触りません。</li>
+</ul>
+<p>右のエディタには <code>Main.kt</code> が開いています。<code>fun main()</code> の中に <code>val name = &quot;Kotlin&quot;</code>、<code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code>、そして <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code> が書かれています。</p>
+<figure><a href="images/project-created.png"><img src="images/project-created.png" width="2618" height="1158" alt="できたプロジェクトの画面。左のツリーにK01HelloKotlinがあり、その中に.idea、src、srcの中にMain.kt、そして.gitignoreが並ぶ。右のエディタにはfun mainとval name = Kotlin、printlnの行、for (i in 1..5)のループが表示されている"></a><figcaption><code>src</code> の中に <code>Main.kt</code> があり、エディタに開いています。 <a href="images/project-created.png">画像を大きく開く</a></figcaption></figure>
+
+<h3>④ まず、そのまま実行する</h3>
+<p>自分でコードを書く前に、ウィザードが用意したこのサンプルを、1文字も変えずに実行します。</p>
+<ol>
+<li>エディタで <code>Main.kt</code> を開きます。</li>
+<li><code>fun main()</code> の行の左、行番号の右にある緑の三角 ▷（ガターのアイコン）をクリックします。</li>
+<li>出てきたメニューの、いちばん上の <strong>'MainKt' の実行</strong> を選びます。キーボードの <kbd>^ ⇧ R</kbd> でも同じです。</li>
+</ol>
+<figure><a href="images/run-menu.png"><img src="images/run-menu.png" width="2842" height="1262" alt="エディタのfun mainの左にある緑の三角を押して出たメニュー。いちばん上の'MainKt' の実行が青く選ばれ、右端にショートカットの^⇧Rが出ている。その下に'MainKt' のデバッグなどが並ぶ"></a><figcaption>ガターの ▷ を押すと、いちばん上に <strong>'MainKt' の実行</strong> が出ます。 <a href="images/run-menu.png">画像を大きく開く</a></figcaption></figure>
+
+<h3>⑤ 出た内容を確かめる</h3>
+<p>画面の下に <strong>実行</strong> ツールウィンドウが開き、次の内容が出ます。最初の実行は時間がかかることがあります。</p>
+<div class="code-head">実行ツールウィンドウ · この内容が出れば成功</div>
+<pre tabindex="0"><code>Hello, Kotlin!
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+
+プロセスは終了コード 0 で終了しました</code></pre>
+<figure><a href="images/run-result.png"><img src="images/run-result.png" width="2558" height="1672" alt="画面の下に開いた実行ツールウィンドウ。MainKtタブの中にHello, Kotlin!、i = 1からi = 5までの5行、1行あけてプロセスは終了コード 0 で終了しましたが青い文字で出ている"></a><figcaption><strong>実行</strong> ツールウィンドウ。最後の行が <code>プロセスは終了コード 0 で終了しました</code> です。 <a href="images/run-result.png">画像を大きく開く</a></figcaption></figure>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>最後の <code>プロセスは終了コード 0 で終了しました</code> は、<strong>プログラムが最後まで動いて、正常に終わった</strong>という意味です。出力の一部ではありません。</li>
+<li>この <code>0</code> は、Javaの <code>System.exit(0)</code>、Swiftの <code>exit(0)</code> に書く <code>0</code> と同じものです。<code>0</code> 以外の数で終わったときは、途中で異常が起きています。</li>
+<li>自分でコードを書く前に一度動かしておくと、あとで動かなくなったときに、<strong>自分が書いた行</strong>だけを疑えます。「そもそも環境が動いていないのでは」を先に消しておく、ということです。</li>
+</ul></div>
+
+<h3>⑥ ex01 パッケージと main.kt を作る</h3>
+<p>動くことを確かめたら、ここからは自分のファイルを作ります。見本の <code>Main.kt</code> を先に消してから、<code>ex01</code> パッケージを作ります。</p>
+<ol><li>左のプロジェクトツリーで <code>src</code> の下の <code>Main.kt</code> を右クリックし、<strong>削除</strong> を選びます。確認のダイアログが出たら <strong>OK</strong> を押します。この単元では使いません。</li></ol>
+<figure><a href="images/delete-sample.png"><img src="images/delete-sample.png" width="1812" height="844" alt="ファイル Main.kt を削除しますか？ と尋ねる削除の確認ダイアログ。安全な削除とコメントと文字列内を検索にチェックが入っていて、右下にOKボタンがある"></a><figcaption>見本の <code>Main.kt</code> を消します。チェックはそのままで <strong>OK</strong> を押します。 <a href="images/delete-sample.png">画像を大きく開く</a></figcaption></figure>
+<ol start="2"><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。</li></ol>
+<figure><a href="images/new-package-menu.png"><img src="images/new-package-menu.png" width="1696" height="848" alt="プロジェクトツリーのsrcを右クリックして出たメニュー。新規の右に出たサブメニューでパッケージが選ばれている"></a><figcaption><code>src</code> を右クリックして <strong>新規 → パッケージ</strong>。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。 <a href="images/new-package-menu.png">画像を大きく開く</a></figcaption></figure>
+<ol start="3"><li>名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex01</code> ができます。</li></ol>
+<figure><a href="images/new-package-name.png"><img src="images/new-package-name.png" width="1290" height="340" alt="新規パッケージと書かれた小さな入力欄に ex01 と入力されている"></a><figcaption>パッケージ名は <code>ex01</code>。すべて小文字で、記号は入れません。 <a href="images/new-package-name.png">画像を大きく開く</a></figcaption></figure>
+<ol start="4"><li>できた <code>ex01</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> ではなく <code>ex01</code> を右クリックします。</strong></li></ol>
+<figure><a href="images/new-file-menu.png"><img src="images/new-file-menu.png" width="1970" height="868" alt="プロジェクトツリーでsrcの下のex01を右クリックして出たメニュー。新規のサブメニューでKotlin ファイル/クラスが選ばれている"></a><figcaption>今度は <code>ex01</code> を右クリックして <strong>新規 → Kotlin ファイル/クラス</strong>。 <a href="images/new-file-menu.png">画像を大きく開く</a></figcaption></figure>
+<ol start="5"><li>名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。</li></ol>
+<figure><a href="images/new-file-name.png"><img src="images/new-file-name.png" width="1790" height="858" alt="新規 Kotlin ファイル/クラスのダイアログ。上の入力欄に main と入力され、下の一覧でクラスの次にあるファイルが選ばれている"></a><figcaption>名前は <code>main</code>、種類は <strong>ファイル</strong>。上から2番目です。 <a href="images/new-file-name.png">画像を大きく開く</a></figcaption></figure>
+<ol start="6"><li>できた <code>main.kt</code> の1行目に <code>package ex01</code> が入っていることを確かめます。</li></ol>
+<figure><a href="images/package-file-created.png"><img src="images/package-file-created.png" width="810" height="618" alt="エディタに開いたmain.kt。1行目にpackage ex01、3行目から5行目にfun main()の空の関数が入っている"></a><figcaption>1行目の <code>package ex01</code> と、空の <code>fun main()</code> は IntelliJ IDEA が入れたものです。自分で打つ必要はありません。 <a href="images/package-file-created.png">画像を大きく開く</a></figcaption></figure>
+<div class="note"><p class="box-title">1行目が <code>package ex01</code> になっていないとき</p><p>ファイルが <code>ex01</code> の中ではなく <code>src</code> の直下にできています。<code>main.kt</code> を右クリックして削除し、④からやり直します。<code>ex01</code> を右クリックしたかどうかが分かれ目です。</p></div>
+<p>この単元は全6コマです。回を重ねるごとに、同じ <code>K01HelloKotlin</code> プロジェクトの <code>src</code> の下に、いまと同じ手順で <code>ex02</code>、<code>ex03</code> …とパッケージを足していきます。プロジェクトを作り直さないので、前の回に書いたコードを、いつでも開いて見返せます。</p>
+
+<h3>⑦ ファイル全体を、次の内容にする</h3>
 <div class="code-head">src/ex01/main.kt · 全体を置き換える</div>
 <pre id="code-package" tabindex="0"><code>package ex01
 
 fun main() {
     println(&quot;Hello, Kotlin!&quot;)
 }</code></pre>
-<p><code>fun main()</code> の行の左に出る緑の三角 <strong>▶</strong> をクリックし、<strong>Run 'MainKt'</strong> を選びます。画面の下のRunウィンドウに <code>Hello, Kotlin!</code> が出れば成功です。最初の実行は時間がかかることがあります。</p>
-<h3>⑥ ファイル名とクラス名の関係</h3>
+<p><code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。</p>
+<p><code>i = 1</code> 〜 <code>i = 5</code> はもう出ません。消した <code>Main.kt</code> ではなく、いま書いた <code>ex01</code> の <code>main.kt</code> が動いているからです。</p>
+<p>この「ガターの ▷ から <strong>'MainKt' の実行</strong> を選ぶ」操作を、この教科書では STEP 03 以降「Run」と書きます。STEP 01 の Kotlin Playground の <strong>Run</strong> ボタンと同じ意味です。</p>
+<h3>⑧ ファイル名とクラス名の関係</h3>
 <div class="compare">
 <div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>// src/ex01/main.kt
 package ex01
@@ -194,7 +260,7 @@ public class Main {
 <li>実行の設定名が <code>MainKt</code> になるのは、Kotlinが <code>main.kt</code> から <code>MainKt</code> というクラスを作ってバイトコードに落としているからです。クラスを書かなくても、JVMの上ではクラスになっています。</li>
 </ul></div>
 <div class="note"><p class="box-title">大文字と小文字</p><p>ファイル名は <code>main.kt</code>、パッケージ名は <code>ex01</code> です。<code>Main.kt</code> や <code>Ex01</code> ではありません。Kotlinは大文字と小文字を区別します。</p></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-2"><span><code>src/ex01/main.kt</code> を作り、IntelliJ IDEA のRunで <code>Hello, Kotlin!</code> を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-2"><span>ウィザードのサンプルをそのまま実行して <code>プロセスは終了コード 0 で終了しました</code> を出し、そのあと <code>src/ex01/main.kt</code> を作って <code>Hello, Kotlin!</code> を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-3">次へ：val と var →</a></div>
 
 </section><section id="step-3" aria-labelledby="title-3">
@@ -456,7 +522,7 @@ print(name)</code></pre></div>
 <tr><td>完成版の見本</td><td><code>/Users/ユーザ名/Documents/教材のフォルダ/samples/K01HelloKotlin</code></td></tr>
 </tbody></table>
 <h3>② IntelliJ IDEA で開く</h3>
-<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、上のメニューから <strong>File → Open</strong> を選びます。プロジェクトを1つも開いていないときは、最初の画面（Welcome画面）の <strong>Open</strong> をクリックします。</li><li>①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>New Window</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src → ex01 → main.kt</code> の順に開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の <strong>▶</strong> を押します。</li></ol>
+<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、いちばん上のメニューバーから <strong>ファイル → 開く…</strong> を選びます。プロジェクトを1つも開いていないときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選びます。</li><li>①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src → ex01 → main.kt</code> の順に開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の ▷ を押します。</li></ol>
 <h3>③ 今のステップの部分だけを比べる</h3>
 <p>たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。</p>
 <p>見終わったら、授業で作っている <code>Documents/Kotlin/K01HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。</p>
@@ -466,17 +532,18 @@ print(name)</code></pre></div>
 <p>赤くなっている最初の行を見ます。<strong>2分考えても分からなければ</strong>、先生に「ステップ番号・ファイル名・画面」を見せましょう。</p>
 <table><thead><tr><th>困ったこと</th><th>最初に確認すること</th></tr></thead><tbody>
 <tr><td>Playgroundで何も出ない</td><td><code>fun main()</code> があるか確認する。<code>println</code> の1行だけでは実行されません。</td></tr>
-<tr><td>New Project の画面に Kotlin がない</td><td>左の一覧で、いちばん上の <strong>New Project</strong> を選んでいるか確認する。<strong>Generators</strong> の中の項目ではありません。</td></tr>
-<tr><td>Build system に IntelliJ がない</td><td><strong>Language</strong> が <strong>Kotlin</strong> になっているか確認する。直らなければ画面を先生に見せる。</td></tr>
-<tr><td>JDK の一覧が空</td><td><strong>Download JDK</strong> を選ぶ。ダウンロードに時間がかかるので、始めたことを先生に伝える。</td></tr>
-<tr><td>緑の三角（▶）が出ない</td><td><code>fun main()</code> のつづりを1文字ずつ確認する。<code>main</code> は小文字で、うしろの <code>()</code> も必要。ファイルが <code>src</code> の中にあるかも確認する。</td></tr>
+<tr><td>新規プロジェクトの画面に Kotlin がない</td><td>左の一覧の、見出し <strong>新規プロジェクト</strong> の下を見る。下の <strong>ジェネレーター</strong> の中の項目ではありません。</td></tr>
+<tr><td>ビルドシステムに IntelliJ がない</td><td>左の一覧で <strong>Kotlin</strong> を選んでいるか確認する。直らなければ画面を先生に見せる。</td></tr>
+<tr><td>JDK の欄が空</td><td>欄を開いて、出てきたものを選ぶ。何も出てこないときは、先生に画面を見せる。</td></tr>
+<tr><td>緑の三角（▷）が出ない</td><td><code>fun main()</code> のつづりを1文字ずつ確認する。<code>main</code> は小文字で、うしろの <code>()</code> も必要。ファイルが <code>src</code> の中にあるかも確認する。</td></tr>
 <tr><td><code>package ex01</code> の行が赤い</td><td>ファイルの場所が <code>src/ex01/</code> か確認する。フォルダ名とパッケージ名を合わせる点はJavaと同じです。</td></tr>
 <tr><td><code>Unresolved reference</code> と出る</td><td>名前のつづりを確認する。<code>println</code>・<code>number1</code>・<code>name</code> の大文字と小文字も区別する。</td></tr>
 <tr><td><code>'val' cannot be reassigned</code> と出る</td><td><code>val</code> で宣言した変数に再代入していないか確認する。STEP 05 の練習B以外では書きません。</td></tr>
-<tr><td>Runしても何も出ない</td><td>画面の下の <strong>Run</strong> ウィンドウが開いているか確認する。閉じていたら <strong>View → Tool Windows → Run</strong> で開く。</td></tr>
+<tr><td>実行しても何も出ない</td><td>画面の下の <strong>実行</strong> ツールウィンドウが開いているか確認する。閉じていたら <strong>表示 → ツールウィンドウ → 実行</strong> で開く。</td></tr>
+<tr><td><code>プロセスは終了コード 1 で終了しました</code> と出る</td><td><code>0</code> 以外の数で終わったときは、途中で異常が起きています。その上に出ている赤い文字を、上から読む。</td></tr>
 <tr><td>出るけれど、内容が違う</td><td><code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。</td></tr>
 <tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>
-<tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>Location</strong> の入力を先生に見せる。</td></tr>
+<tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。</td></tr>
 </tbody></table>
 <p>一度にいくつも直すと、何が変わったか分かりにくくなります。1か所直して、もう一度Runしましょう。</p></section>
 <section id="references"><h2>もっと知りたいとき</h2><p>授業はこの教科書だけで進められます。次の公式資料は、あとから調べたい人向けです（英語で書かれています）。</p><ul>
@@ -487,7 +554,7 @@ print(name)</code></pre></div>
 <li><a href="https://kotlinlang.org/docs/home.html">Kotlin公式：ドキュメントの入口</a></li>
 <li><a href="https://www.jetbrains.com/help/idea/get-started-with-kotlin.html">IntelliJ IDEA公式：Get started with Kotlin</a></li>
 </ul></section>
-<footer class="footer"><p>教材の対象：K01HelloKotlin / IntelliJ IDEA 2026.3 EAP<br>この単元では画像を使いません。画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
+<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・今日は1コマ目） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
 </main></div>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
 </body></html>
