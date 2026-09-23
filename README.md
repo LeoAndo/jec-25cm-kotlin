@@ -27,7 +27,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。日本語以外の言語で読むときは、展開してできたフォルダの `index.html` を開いて言語を選びます。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。IntelliJ IDEA か Android Studio の Open で `samples/HelloKotlin` のように選ぶだけで開け、初回から参考資料として使えます（各教科書からZIPでも受け取れます）。
 
-学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。`teacher` フォルダは収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。`teacher` フォルダと、教員が確認に使うひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
 
@@ -89,11 +89,15 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 | フォルダ | 役割 |
 | --- | --- |
+| `Panda2KotlinEmptyViewsActivity` | **Android Studio Panda 2** の Kotlin / Empty Views Activity のひな形（学生には配布しません）。出発点のコードと設定を教員が確認するために置いています。AGP 9.1.1／Gradle 9.3.1／targetSdk 36 |
+| `Quail4KotlinEmptyViewsActivity` | 上と同じ設定を **Android Studio Quail 4** で作ったひな形（学生には配布しません）。版の違いによる差分を確認するための比較用。AGP 9.4.1／Gradle 9.6.0／targetSdk 37。完成プロジェクト（`A01`〜`A04`）はこちらと同じ構成です |
 | `HelloKotlin` | 純Kotlin系（K01〜K06）の完成プロジェクト。Gradleを使わないIntelliJ IDEAプロジェクトで、演習ごとに `src/exNN/main.kt` を持つ（`exNN` は前年度資料の節に対応）。配布用ZIPを教科書に同梱し、初回から学生も参照可能 |
 | `A01HelloAndroid` | 完成プロジェクト。TextViewとButton、Snackbar・Toast・Logcatでの結果の出し分けを扱う。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 | `A02CalcGame` | 完成プロジェクト。Chronometerで時間を計りながら計算問題に答えるゲーム。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 | `A03GithubSearch` | 完成プロジェクト。GitHubの検索APIをKtorで呼び、結果をRecyclerViewで一覧表示する。中身の説明は [`A03GithubSearch/README.md`](A03GithubSearch/README.md) にある。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 | `A04FunnyCamera` | 完成プロジェクト。CameraXのプレビューにキャラクターを重ね、合成した画像を保存する。中身の説明は [`A04FunnyCamera/README.md`](A04FunnyCamera/README.md) にある。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
+
+2つのひな形は、Android Studioの版が変わったときに、New Projectウィザードが生成するコードや設定がどう変わるかを見るために置いています。教材のスクリーンショットや手順が古くなっていないかは、この2つを見比べて確かめます。単元ではないので `config/teaching-materials.json` には登録せず、学生用ZIPにも入りません。
 
 教員用ガイドとSTEPごとの照合用コードは `teacher/<スラッグ>/` にまとめます（いまあるのは `teacher/hello-kotlin` だけです）。完成版の見本は、配布物の `samples` フォルダに展開済みで入っています。学生が自分で置き場所を作ったり、ZIPを展開したりする必要はありません。
 

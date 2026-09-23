@@ -39,3 +39,6 @@ dist/
 # Python
 __pycache__/
 *.pyc
+
+# macOS Finder
+.DS_Store
