@@ -45,8 +45,8 @@ FrameLayoutは子Viewを順番に重ねて表示するので、後に書いたVi
 
 ### 処理の流れ
 
-1. `onCreate()` でカメラの権限（`android.permission.CAMERA`）をリクエストする
-2. 権限が許可されたら `startCamera()` でプレビューを開始する（許可されなかった場合はSnackbarでメッセージを表示する）
+1. `onCreate()` でカメラの権限（`android.permission.CAMERA`）をリクエストする（`RequestPermission()` を使い、結果は `isGranted` で受け取る）
+2. 権限が許可されたら `startCamera()` でプレビューを開始する（許可されなかった場合や、カメラを起動できなかった場合はSnackbarでメッセージを表示する）
 3. キャラクターをドラッグすると、`DraggableImageView.onTouchEvent()` によって指の動きに合わせてキャラクターが移動する
 4. 「Take Picture」ボタンが押されたら `takeScreenshot()` が呼ばれる
    1. `previewView.bitmap` でプレビューに表示中のカメラ映像をBitmapとして取り出す
@@ -56,16 +56,17 @@ FrameLayoutは子Viewを順番に重ねて表示するので、後に書いたVi
 ### 実装のポイント
 
 - Viewの取得には `findViewById` を使っています（ViewBindingは使っていません）。
-- **キャラクターのドラッグ**：`AppCompatImageView` を継承した `DraggableImageView` を作り、`onTouchEvent()` をオーバーライドしてタッチイベントを受け取ります。レイアウトXMLでは `<jp.ac.jec.a04funnycamera.DraggableImageView>` のようにパッケージ名付きのクラス名で指定します。
+- **キャラクターのドラッグ**：`AppCompatImageView` を継承した `DraggableImageView` を作り、`onTouchEvent()` をオーバーライドしてタッチイベントを受け取ります。レイアウトXMLでは `<jp.ac.jec.a04funnycamera.DraggableImageView>` のようにパッケージ名付きのクラス名で指定します。XMLから生成されるときは引数2つ（`Context` と `AttributeSet`）のコンストラクタが呼ばれるので、そのコンストラクタだけを用意しています。
   - 指を置いた瞬間（`ACTION_DOWN`）に「指の位置とキャラクター左上のずれ」を記録しておきます。
   - 指を動かしている間（`ACTION_MOVE`）は `指の位置 + ずれ` の位置にキャラクターを移動します。ずれを記録しておかないと、キャラクターの左上が指の位置に飛んでしまいます。
-  - 移動先は `moveTo()` で親View（画面）のpaddingの内側に収まるように補正しています。画面の外までドラッグして、キャラクターが見えなくなるのを防ぐためです。
+  - 移動先は `moveTo()` で、`coerceIn()` を使って親View（画面）のpaddingの内側に収まるように補正しています。画面の外までドラッグして、キャラクターが見えなくなるのを防ぐためです。
   - 指を離したら（`ACTION_UP`）`performClick()` を呼び、TalkBackなどのアクセシビリティ機能にクリックを伝えます。
   - Viewの位置は `layout()` ではなく `x` / `y` で変更しています。`layout()` は本来親のViewGroupが呼ぶメソッドで、親がレイアウトをやり直すと元の位置に戻ってしまうことがあります。
 - **カスタムクラスにしている理由**：ImageViewに `setOnTouchListener` を設定すると、`performClick()` を呼んでいてもLintがアクセシビリティの警告（`ClickableViewAccessibility`）を出します。`@SuppressLint` で警告を隠すのではなく、Viewを継承して `onTouchEvent()` と `performClick()` をオーバーライドすることで、警告の原因そのものを解消しています。
 - **画面の合成**：カメラ映像は `ImageCapture` で撮影するのではなく、`PreviewView.getBitmap()`（Kotlinでは `previewView.bitmap`）で画面に表示されている映像を取り出しています。そのため、保存される画像は画面に見えている範囲・大きさと同じになります。キャラクターは `canvas.translate()` で位置を合わせてから `characterView.draw(canvas)` で描き込みます。ボタンは描き込まないので、保存した画像には写りません。
 - **画像の保存**：Android 10以降は、`MediaStore` を使えば権限なしで共有ストレージに画像を保存できます。書き込み中は `IS_PENDING` を `1` にして他のアプリから見えないようにし、書き込みが終わったら `0` に戻します。
-- 画像の圧縮と書き込みは時間がかかることがあるため、`Executors.newSingleThreadExecutor()` で作ったスレッドで実行し、画面の更新（Snackbarの表示）は `runOnUiThread { }` でメインスレッドに戻してから行います。
+- **コルーチン**：画像の圧縮と書き込みは時間がかかることがあるため、`lifecycleScope.launch { }` でコルーチンを起動し、`withContext(Dispatchers.IO) { }` の中でメインスレッド以外で実行します。`withContext` を抜けるとメインスレッドに戻るので、そのままSnackbarを表示できます。`lifecycleScope` で起動したコルーチンは、Activityが破棄されると自動でキャンセルされます。
+- **保存の失敗**：保存先のファイルを作れなかった場合や、書き込みに失敗した場合は `saveBitmap()` が `false` を返し、作りかけのファイルを削除します。
 
 ### 保存先
 
@@ -76,6 +77,7 @@ FrameLayoutは子Viewを順番に重ねて表示するので、後に書いたVi
 | ライブラリ | 用途 |
 | --- | --- |
 | CameraX（camera-core / camera-camera2 / camera-lifecycle / camera-view） | カメラのプレビュー表示 |
+| Lifecycle（lifecycle-runtime-ktx） | `lifecycleScope`（コルーチンの起動） |
 | Material Components | Snackbar |
 
 `camera-camera2` は直接コードから使っていませんが、CameraXが内部で使うため、追加しないと実行時にエラーになります。
