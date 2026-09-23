@@ -1363,3 +1363,52 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ProgressKeyTest(TeachingMaterialsCheckTest):
+    """チェック欄のあるページが、自分用の記録キーを持っているかの検査。
+
+    docs/assets/textbook.js は、そのページで見つかった data-check だけを
+    localStorage へ書き戻す。2つのページが同じキーを使うと、あとから開いた側が
+    もう一方の記録を消す。
+    """
+
+    def _page(self, key: str | None, checks: int) -> str:
+        body = "<body>" if key is None else f'<body data-progress-key="{key}">'
+        boxes = "".join(f'<input type="checkbox" data-check="step-{i}">' for i in range(checks))
+        return f'<!doctype html><html lang="ja">{body}<main>{boxes}</main></body></html>'
+
+    def _check(self, root: Path) -> list[str]:
+        errors: list[str] = []
+        CHECKER.check_progress_keys(root, errors)
+        return errors
+
+    def test_page_with_checks_needs_a_key(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, "docs/hello-kotlin/index.html", self._page(None, 2))
+            errors = self._check(root)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("data-progress-key", errors[0])
+
+    def test_page_without_checks_needs_no_key(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, "docs/common/apk.html", self._page(None, 0))
+            self.assertEqual(self._check(root), [])
+
+    def test_two_pages_must_not_share_a_key(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, "docs/hello-kotlin/index.html", self._page("jec-kotlin-hellokotlin-v1", 2))
+            self._write(root, "docs/common/setup.html", self._page("jec-kotlin-hellokotlin-v1", 1))
+            errors = self._check(root)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("docs/hello-kotlin/index.html", errors[0])
+
+    def test_distinct_keys_pass(self):
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, "docs/hello-kotlin/index.html", self._page("jec-kotlin-hellokotlin-v1", 2))
+            self._write(root, "docs/common/setup.html", self._page("jec-kotlin-setup-v1", 1))
+            self.assertEqual(self._check(root), [])

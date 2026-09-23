@@ -13,8 +13,17 @@
   } catch { /* 古い配布物でも日本語のUIを利用可能 */ }
   const message = (name, values = {}) => messages[name].replace(/\{(\w+)\}/g, (token, key) => values[key] ?? token);
   const checks = [...document.querySelectorAll('[data-check]')];
-  // 既定値は第1単元K01の記録用キー。単元を足すときは <body data-progress-key="jec-kotlin-<スラッグ>-v1"> を書く。
-  const key = document.body.dataset.progressKey || 'jec-kotlin-hellokotlin-v1';
+  // 記録用キーは <body data-progress-key="jec-kotlin-<スラッグ>-v1"> で指定する。
+  // 書き忘れたときの既定値は、ページのパスの末尾2つから作る（例 docs/common/setup.html →
+  // jec-kotlin-common-setup-v1）。ここを固定値にすると、キーを書き忘れたページが
+  // 別のページの記録を上書きして消してしまう。save() は、そのページで見つかった
+  // data-check だけを書き戻すためである。
+  const defaultKey = () => {
+    const parts = decodeURIComponent(window.location.pathname).split('/').filter(Boolean).slice(-2);
+    const slug = parts.join('-').replace(/\.html?$/i, '').replace(/[^A-Za-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
+    return `jec-kotlin-${slug || 'page'}-v1`;
+  };
+  const key = document.body.dataset.progressKey || defaultKey();
   const timeKey = `${key}:updated-at`;
   const knownIds = new Set(checks.map(item => item.dataset.check));
   const records = {};

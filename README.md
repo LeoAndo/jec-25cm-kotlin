@@ -24,7 +24,9 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 ### 学生への配布
 
-学生には [最新の教材リリース](https://github.com/LeoAndo/jec-25cm-kotlin/releases/latest) の Assets にあるZIPを案内します（初回公開後から利用可能）。ファイル名には `kotlin-student-materials-2026-09-23.zip` のように版の日付が入り、展開してできるフォルダも同じ名前になります。ダウンロードフォルダでどの版か分かり、別の版を同じ場所に展開しても混ざりません。
+学生には [最新の教材リリース](https://github.com/LeoAndo/jec-25cm-kotlin/releases/latest) の Assets にあるZIPを案内します（初回公開後から利用可能）。ファイル名には `kotlin-student-materials-2026-09-23.zip` のように版の日付が入り、展開してできるフォルダも同じ名前になります。ダウンロードフォルダでどの版か分かり、日付の違う版を同じ場所に展開しても混ざりません。
+
+**同じ日に2回公開すると、ファイル名も展開先のフォルダ名も同じになります。**版タグ（`materials-日付-コミットID`）は別でも、学生が見る名前は日付までしか入らないためです。同じ日に出し直すときは、Google Classroomの投稿に「古いほうのフォルダを消してから展開してください」と添えてください。
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。IntelliJ IDEA か Android Studio の Open で `samples/K01HelloKotlin` のように選ぶだけで開け、初回から参考資料として使えます（各教科書からZIPでも受け取れます）。
 
@@ -152,7 +154,7 @@ K01の6コマがどの演習をどの順で扱うかは、前年度資料の節�
 
 ### 完成プロジェクトのZIPを更新する（教員用）
 
-ZIPの再生成には、GitとPython 3、および **`git clone` で取得したリポジトリ** が必要です。GitHubの「Download ZIP」で取得したフォルダにはGit管理情報がないため、再生成には使えません。教材の閲覧と、同梱済みの完成プロジェクトZIPの利用は「Download ZIP」でも可能です。
+ZIPの再生成には、Gitと **Python 3.11以上**、および **`git clone` で取得したリポジトリ** が必要です。3.11以上が要るのは、`scripts/test_*.py` が `unittest.TestCase.enterContext`（3.11で入ったもの）を使っているためです。版は `python3 -V` で確かめられます。GitHubの「Download ZIP」で取得したフォルダにはGit管理情報がないため、再生成には使えません。教材の閲覧と、同梱済みの完成プロジェクトZIPの利用は「Download ZIP」でも可能です。
 
 ```sh
 git clone https://github.com/LeoAndo/jec-25cm-kotlin.git

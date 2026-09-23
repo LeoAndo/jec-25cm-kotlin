@@ -744,6 +744,57 @@ def check_project_layout(root: Path, config: dict, errors: list[str]) -> None:
                 add(errors, root, name, 1, "Git管理してはいけないファイルです")
 
 
+class ProgressKey(HTMLParser):
+    """<body> の data-progress-key と、ページ内の data-check の数を数える。"""
+
+    def __init__(self):
+        super().__init__()
+        self.key: str | None = None
+        self.checks = 0
+        self.body_line = 1
+
+    def handle_starttag(self, tag, attrs):
+        values = dict(attrs)
+        if tag == "body":
+            self.key = values.get("data-progress-key")
+            self.body_line = self.getpos()[0]
+        if "data-check" in values:
+            self.checks += 1
+
+
+def check_progress_keys(root: Path, errors: list[str]) -> None:
+    """チェック欄のあるページが、自分用の記録キーを持っているか確かめる。
+
+    記録は localStorage に、ページごとのキーで入れる。docs/assets/textbook.js は、
+    そのページで見つかった data-check だけを書き戻す。2つのページが同じキーを使うと、
+    あとから開いたページが、もう一方のページの記録を消してしまう。
+    キーを書き忘れると textbook.js がパスから既定値を作るので消えはしないが、
+    教材の置き場所が変わると記録も変わる。チェック欄を置くなら明示させる。
+    """
+    pages = sorted((root / "docs").rglob("*.html")) if (root / "docs").is_dir() else []
+    seen: dict[str, str] = {}
+    for path in pages:
+        if any(part in IGNORED_PARTS for part in path.relative_to(root).parts):
+            continue
+        parser = ProgressKey()
+        try:
+            parser.feed(read(path))
+        except (OSError, UnicodeDecodeError):
+            continue
+        if not parser.checks:
+            continue
+        if not parser.key:
+            add(errors, root, path, parser.body_line,
+                'チェック欄のあるページには、<body data-progress-key="jec-kotlin-…-v1"> を書いてください')
+            continue
+        shown = display(root, path)
+        if parser.key in seen:
+            add(errors, root, path, parser.body_line,
+                f"data-progress-keyが{seen[parser.key]}と同じです: {parser.key}（ページごとに変えてください）")
+        else:
+            seen[parser.key] = shown
+
+
 def validate(root: Path) -> list[str]:
     config_path = root / CONFIG
     if not config_path.is_file():
@@ -762,6 +813,7 @@ def validate(root: Path) -> list[str]:
     check_registration(root, config, errors)
     check_sidebar_units(root, config, errors)
     check_project_layout(root, config, errors)
+    check_progress_keys(root, errors)
     for project in config["projects"]:
         check_project(root, project, errors)
         check_mirrors(root, project, errors)
