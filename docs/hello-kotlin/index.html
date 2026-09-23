@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="JavaとSwiftを書ける人のためのKotlin入門。Playgroundと IntelliJ IDEA で、変数・Null安全・関数・条件式・繰り返し・クラス・アクセサ・data class・スマートキャスト・拡張関数を、他言語との差分で確かめる授業用教科書。">
+<meta name="description" content="JavaとSwiftを書ける人のためのKotlin入門。全6コマ・11演習で、変数・Null安全・関数・条件式・繰り返し・クラス・アクセサ・data class・スマートキャスト・拡張関数・map・by lazyを、他言語との差分で確かめる授業用教科書。">
 <title>K01HelloKotlin — Kotlinを書き始める | Kotlin演習</title>
 <link rel="stylesheet" href="../assets/textbook.css">
 <script src="../assets/textbook.js" defer></script>
@@ -50,19 +50,25 @@
 <li><a href="#step-27">27　ex09 と data class</a></li>
 <li><a href="#step-28">28　ex07 と拡張関数</a></li>
 <li><a href="#step-29">29　ミニ練習</a></li>
-<li><a href="#step-30">30　完成</a></li></ol></nav>
-<div class="progress"><span data-progress-label>0 / 31 ステップ確認済み</span><progress value="0" max="31" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
+<li><a href="#step-30">30　完成</a></li></ol>
+<p class="eyebrow">6コマ目 · STEP 31〜35</p>
+<ol><li><a href="#step-31">31　6コマ目を始める</a></li>
+<li><a href="#step-32">32　ex10 と map</a></li>
+<li><a href="#step-33">33　ex11 と lazy</a></li>
+<li><a href="#step-34">34　ミニ練習</a></li>
+<li><a href="#step-35">35　K01の完成</a></li></ol></nav>
+<div class="progress"><span data-progress-label>0 / 36 ステップ確認済み</span><progress value="0" max="36" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
 <div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
 </div></aside>
 <main id="main">
-<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · この教科書は5コマ目まで</span><span>予習なしで始められる</span></div></div>
+<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · 11演習を収録</span><span>予習なしで始められる</span></div></div>
 <section id="step-0" aria-labelledby="title-0">
 <p class="step-meta">STEP 00 · 目安 5分</p>
 <h2 id="title-0">この単元のゴール</h2>
 
 <p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>です。</p>
-<p>この教科書は、その6コマぶんを<strong>1冊に順に積み上げていきます</strong>。いま入っているのは<strong>1コマ目（STEP 00〜06）と2コマ目（STEP 07〜12）と3コマ目（STEP 13〜18）と4コマ目（STEP 19〜24）と5コマ目（STEP 25〜30）</strong>で、回を重ねるごとに、うしろへSTEPが増えていきます。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。</p>
-<p>6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>、<code>ex02</code> …とパッケージを足していきます。この教科書も1冊のままで、回ごとにSTEPが増えていきます。</p>
+<p>この教科書1冊で、<strong>全6コマ・11演習</strong>を進めます。1コマ目はSTEP 00〜06、2コマ目はSTEP 07〜12、3コマ目はSTEP 13〜18、4コマ目はSTEP 19〜24、5コマ目はSTEP 25〜30、6コマ目はSTEP 31〜35です。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。</p>
+<p>6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>〜<code>ex11</code> のパッケージを足していきます。演習番号と授業順が違う回も、教科書のSTEPの順に進めます。</p>
 <p>みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。</p>
 <ol><li><strong>Kotlinではどう書くのか</strong>。</li><li><strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。</li></ol>
 
@@ -1942,6 +1948,311 @@ print(foo.counter)</code></pre></div>
 <div class="note"><p class="box-title">POINT</p><p>KotlinとSwiftでは、プロパティを使う側の形を保ったまま、読み書きの処理を定義できます。今日のKotlinの完成コードでは、<code>foo.counter = 10</code> でsetterの行が、<code>println(foo.counter)</code> でgetterの行と値が順に出ます。</p></div>
 
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-30"><span>3ファイルの出力が完成チェックと一致し、<code>src</code> に <code>ex01</code>〜<code>ex09</code> が並んでいる。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-31">次へ：6コマ目を始める →</a></div>
+</section>
+
+<section id="step-31" aria-labelledby="title-31">
+<p class="step-meta">STEP 31 · 6コマ目 · 目安 5分</p>
+<h2 id="title-31">6コマ目を始める</h2>
+
+<div class="goal"><p class="box-title">今日のゴール</p><p><code>ex10</code> では、リストの各要素を <code>map</code> で変換します。<code>ex11</code> では、<code>by lazy</code> でプロパティを初めて読むときに計算し、2回目には保存した結果を使います。この2本で <code>K01HelloKotlin</code> の11演習がそろいます。</p></div>
+<h3>① 同じプロジェクトに ex10 を作る</h3>
+<ol>
+<li>IntelliJ IDEA の最近開いたプロジェクトから <code>K01HelloKotlin</code> を開きます。一覧にないときは <strong>開く…</strong> から <code>書類/Kotlin/K01HelloKotlin</code> を選びます。すでに開いていればそのまま使います。</li>
+<li>左の <code>src</code> に <code>ex01</code>〜<code>ex09</code> があることを確かめます。以前のパッケージは残します。</li>
+<li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex10</code> を作ります。</li>
+<li><code>ex10</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> から名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li>
+<li><code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。</li>
+</ol>
+<pre tabindex="0"><code>package ex10
+
+fun main() {
+    println("ex10")
+}</code></pre>
+<h3>② 実行結果</h3>
+<p>Runツールウィンドウに <code>ex10</code> が1行出ます。別の出力が出たときは、いま開いた <code>ex10/main.kt</code> の <code>fun main()</code> の左から実行し直します。</p>
+<h3>③ Java / Swift ではどう書くか</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>fun main() {
+    println("ex10")
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>// Main クラスの中
+public static void main(String[] args) {
+    System.out.println("ex10");
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>print("ex10")</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinではファイルの直下に <code>fun main()</code> を置きます。Javaのようにクラスで囲みません。今日もパッケージごとに <code>main</code> があるため、実行するファイルを選びます。</p></div>
+
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-31"><span><code>src/ex10/main.kt</code> の先頭が <code>package ex10</code> で、Runツールウィンドウに <code>ex10</code> が出ている。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-32">次へ：map でリストの要素を変換する →</a></div>
+</section>
+
+<section id="step-32" aria-labelledby="title-32">
+<p class="step-meta">STEP 32 · 6コマ目 · 目安 35分</p>
+<h2 id="title-32">map でリストの要素を変換する（ex10）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p>同じ名前のリストから、<code>San</code> を付けた文字列のリストと、<code>Person</code> のリストを作ります。JavaのStream APIの <code>map</code>、Swiftの配列の <code>map</code> に対応する書き方です。</p></div>
+<h3>① main.kt 全体を次の内容にする（10分）</h3>
+<p><code>src/ex10/main.kt</code> を開き、先ほどの <code>println("ex10")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。</p>
+<div class="code-head">src/ex10/main.kt · 完成コード</div>
+<pre id="code-ex10" tabindex="0"><code>package ex10
+
+// map関数のサンプル
+fun main() {
+    val list = listOf("Yamada", "Tanaka")
+
+    val result: List&lt;String&gt; = list.map { "$it San" }
+    println(result)
+
+    val result2: List&lt;Person&gt; = list.map { name -&gt; Person(name) }
+    println(result2)
+}
+
+data class Person(val name: String)</code></pre>
+<p>このファイルの <code>fun main()</code> の左からRunします。</p>
+<h3>② 実行結果</h3>
+<pre tabindex="0"><code>[Yamada San, Tanaka San]
+[Person(name=Yamada), Person(name=Tanaka)]</code></pre>
+<table><thead><tr><th>変数</th><th>型と中身</th></tr></thead><tbody>
+<tr><td><code>list</code></td><td><code>listOf("Yamada", "Tanaka")</code> で作った、2つの文字列を順に読む <code>List&lt;String&gt;</code> です。</td></tr>
+<tr><td><code>result</code></td><td><code>map</code> が各要素へ <code> San</code> を付けた、新しい <code>List&lt;String&gt;</code> です。</td></tr>
+<tr><td><code>result2</code></td><td>各文字列を <code>Person(name)</code> に渡して作った、新しい <code>List&lt;Person&gt;</code> です。</td></tr>
+</tbody></table>
+<p>この <code>Person</code> は、ファイルの最後に宣言した <code>ex10</code> のクラスです。<code>data class</code> が <code>toString()</code> を生成するため、2行目には <code>Person(name=...)</code> という中身が出ます。ほかのパッケージの <code>Person</code> は使いません。</p>
+<h3>③ Java / Swift ではどう書くか（10分）</h3>
+<p>まず、文字列から文字列への変換を比べます。比較用のコードは、完成コードへ追加しません。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val list = listOf("Yamada", "Tanaka")
+val result: List&lt;String&gt; = list.map { "$it San" }
+println(result)</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>// main の中。toList() は Java 16 以降
+var list = java.util.List.of("Yamada", "Tanaka");
+var result = list.stream()
+    .map(name -&gt; name + " San")
+    .toList();
+System.out.println(result);</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>let list = ["Yamada", "Tanaka"]
+let result = list.map { "\($0) San" }
+print(result)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinの <code>{ "$it San" }</code> は、<code>map</code> に渡す<strong>ラムダ式</strong>です。Javaの <code>name -&gt; name + " San"</code>、Swiftのクロージャ <code>{ "\($0) San" }</code> に対応します。</li>
+<li><code>it</code> は、引数が1つのラムダで、その引数の名前を省いたときに使える名前です。今回入るのはリストの要素1つで、最初は <code>"Yamada"</code>、次は <code>"Tanaka"</code> です。Swiftの <code>$0</code> にあたる位置です。</li>
+<li>文字列の <code>$it</code> は、値を文字列へ埋め込む部分です。Javaの文字列との <code>+</code>、Swiftの <code>\($0)</code> と比べられます。</li>
+<li>Java例は <code>stream()</code> から <code>map</code> を通し、<code>toList()</code> で結果をリストに集めます。Kotlinでは、この <code>List</code> の <code>map</code> が結果のリストを返します。</li>
+<li>Swiftは文字列を引用符付きで表示するなど、出力の表示形式には違いがあります。比べるのは要素の内容と順番です。</li>
+</ul></div>
+<h3>④ ラムダの引数に名前を付ける（10分）</h3>
+<ol><li><code>result</code> を作る行だけを次の形に変えます。型注釈の <code>List&lt;String&gt;</code> は残します。</li></ol>
+<pre tabindex="0"><code>val result: List&lt;String&gt; = list.map { name -&gt; "$name San" }</code></pre>
+<ol start="2"><li>Runし、出力が先ほどの2行と同じであることを確かめます。</li><li>確認したら、完成コードの <code>list.map { "$it San" }</code> に戻します。</li></ol>
+<p><code>name -&gt;</code> で引数名を決めると、<code>it</code> の代わりに <code>name</code> を使えます。<code>-&gt;</code> よりうしろが処理で、<strong>最後の式が、その要素を変換した結果</strong>です。完成コードの2本目も同じ形ですが、最後が文字列ではなく <code>Person(name)</code> なので、結果の要素型が変わります。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>data class Person(val name: String)
+
+// main の中。list は上と同じ文字列のリスト
+val result2: List&lt;Person&gt; = list.map { name -&gt; Person(name) }</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>record Person(String name) {}
+
+// main の中。list は上と同じ文字列のリスト
+var result2 = list.stream()
+    .map(name -&gt; new Person(name))
+    .toList();</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>struct Person { let name: String }
+
+// list は上と同じ文字列の配列
+let result2 = list.map { name in Person(name: name) }</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinは <code>{ 引数名 -&gt; 最後の式 }</code>、Swiftは <code>{ 引数名 in 最後の式 }</code> です。Javaの比較例は、矢印の右の式が結果になります。Kotlinのラムダでは、以前書いた <code>fun</code> の本体と異なり、この形で最後の式を結果にできます。<code>return</code> は足しません。</p></div>
+<h3>⑤ 元のリストが変わっていないことを確かめる（5分）</h3>
+<ol><li><code>main</code> の最後の <code>println(result2)</code> の次へ、一時的に <code>println(list)</code> を足してRunします。</li><li>3行目に <code>[Yamada, Tanaka]</code> が出ます。<code>San</code> を付けたのは変換結果で、元のリストの文字列は変わっていません。</li><li>足した <code>println(list)</code> を消してRunし、出力を元の2行に戻します。</li></ol>
+<p>この <code>map</code> は、元の要素を順に読み、各ラムダの結果を新しいリストへ並べます。<code>result</code> と <code>result2</code> は、同じ元の <code>list</code> をそれぞれ読んで作っています。</p>
+
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-32"><span>出力が <code>[Yamada San, Tanaka San]</code> と、名前が <code>Yamada</code>・<code>Tanaka</code> の <code>Person</code> 2人のリストの2行になっている。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-33">次へ：初めて読むときに計算する →</a></div>
+</section>
+
+<section id="step-33" aria-labelledby="title-33">
+<p class="step-meta">STEP 33 · 6コマ目 · 目安 30分</p>
+<h2 id="title-33">初めて読むときに計算する（ex11）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>foo.bar</code> を2回読んでも、<code>computed!</code> が1回だけ出ることを確かめます。Swiftの <code>lazy var</code> と初回計算の動きは似ています。Kotlinでは <code>by</code> を使い、プロパティの値を用意する処理を別のオブジェクトへ任せます。</p></div>
+<h3>① ex11/main.kt を作る（8分）</h3>
+<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。</li><li><code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。</li></ol>
+<div class="code-head">src/ex11/main.kt · 完成コード</div>
+<pre id="code-ex11" tabindex="0"><code>package ex11
+
+// Lazy プロパティのサンプル
+fun main() {
+    val foo = Foo()
+    println(foo.bar)
+    println(foo.bar)
+}
+
+class Foo {
+    var counter = 5.0
+
+    val bar: Double by lazy {
+        println("computed!")
+        counter + 1
+    }
+}</code></pre>
+<h3>② 実行結果</h3>
+<pre tabindex="0"><code>computed!
+6.0
+6.0</code></pre>
+<table><thead><tr><th>mainの行</th><th>起きること</th></tr></thead><tbody>
+<tr><td><code>val foo = Foo()</code></td><td><code>counter</code> は <code>5.0</code> で初期化されます。この時点では <code>lazy</code> のラムダの中は実行されません。</td></tr>
+<tr><td>1つ目の <code>println(foo.bar)</code></td><td><code>bar</code> を初めて読むためラムダが動き、<code>computed!</code> が出ます。最後の式 <code>counter + 1</code> の結果 <code>6.0</code> が保存され、その値を外側の <code>println</code> が出します。</td></tr>
+<tr><td>2つ目の <code>println(foo.bar)</code></td><td>保存された <code>6.0</code> を使います。ラムダを再実行しないため、<code>computed!</code> は増えません。</td></tr>
+</tbody></table>
+<h3>③ Java / Swift ではどう書くか（10分）</h3>
+<p>今回の <code>main</code> のように、同じオブジェクトの値を順に読む場合を比較します。Javaでは、計算済みかどうかと保存値を持つgetterを自分で書きます。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>class Foo {
+    var counter = 5.0
+
+    val bar: Double by lazy {
+        println("computed!")
+        counter + 1
+    }
+}
+
+// main の中
+val foo = Foo()
+println(foo.bar)
+println(foo.bar)</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>class Foo {
+    double counter = 5.0;
+    private boolean initialized = false;
+    private double savedBar;
+
+    double getBar() {
+        if (!initialized) {
+            System.out.println("computed!");
+            savedBar = counter + 1;
+            initialized = true;
+        }
+        return savedBar;
+    }
+}
+
+// main の中
+var foo = new Foo();
+System.out.println(foo.getBar());
+System.out.println(foo.getBar());</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>class Foo {
+    var counter = 5.0
+    lazy var bar: Double = {
+        print("computed!")
+        return self.counter + 1
+    }()
+}
+
+let foo = Foo()
+print(foo.bar)
+print(foo.bar)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li><code>by</code> は<strong>委譲</strong>の指定です。Kotlinのプロパティ <code>bar</code> の値を用意して保持する仕事を、<code>lazy { ... }</code> が返すオブジェクトへ任せています。この形のプロパティを<strong>委譲プロパティ</strong>と呼びます。</li>
+<li><code>lazy</code> はKotlinの標準ライブラリの関数です。<code>{ ... }</code> のラムダは、計算する手順として渡します。今回も最後の式 <code>counter + 1</code> がラムダの結果です。</li>
+<li>Swiftの <code>lazy var</code> は、初回まで計算を遅らせ、結果を保持する動きの比較です。<strong>Kotlinの <code>by</code> と同じ委譲の仕組みではありません。</strong>またSwift側は <code>var</code> で再代入できますが、今回のKotlinの <code>bar</code> は <code>val</code> です。</li>
+<li>Javaの比較例はgetterの中で計算済みの印と保存値を管理します。Kotlinでは、その処理を <code>lazy</code> が受け持つため、自分で同じフィールドと条件分岐を書かずに済みます。</li>
+<li>遅らせるのはラムダの中の計算です。<code>Foo()</code> の生成や <code>counter = 5.0</code> まで遅れるわけではありません。</li>
+</ul></div>
+<h3>④ bar を読まなければ計算しない（4分）</h3>
+<ol><li><code>main</code> の2つの <code>println(foo.bar)</code> をいったん消し、代わりに <code>println(foo.counter)</code> を1行書きます。</li><li>Runすると <code>5.0</code> だけが出て、<code>computed!</code> は出ません。オブジェクトを作っても、<code>bar</code> を読まなければその計算は始まらないことを確かめます。</li><li><code>println(foo.counter)</code> を消し、元の <code>println(foo.bar)</code> 2行へ戻します。</li></ol>
+<h3>⑤ 初回の前後で counter を変える（8分）</h3>
+<p><code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。</p>
+<pre tabindex="0"><code>fun main() {
+    val foo = Foo()
+    foo.counter = 10.0
+    println(foo.bar)
+    foo.counter = 20.0
+    println(foo.bar)
+}</code></pre>
+<p>Runすると、次の3行が出ます。</p>
+<pre tabindex="0"><code>computed!
+11.0
+11.0</code></pre>
+<p>初めて読むときの <code>counter</code> は <code>10.0</code> なので、保存される結果は <code>11.0</code> です。そのあと <code>counter</code> を変えても、2回目の <code>bar</code> は保存値を返します。<code>bar</code> は、その時々の <code>counter + 1</code> を毎回計算するgetterとは動きが違います。</p>
+<p>確認したら、追加した <code>foo.counter = ...</code> の2行を消します。Runして、完成コードの <code>computed!</code> / <code>6.0</code> / <code>6.0</code> に戻ることを確かめます。</p>
+
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-33"><span>完成コードへ戻り、<code>computed!</code> が1回、そのあと <code>6.0</code> が2回出ている。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-34">次へ：ミニ練習 →</a></div>
+</section>
+
+<section id="step-34" aria-labelledby="title-34">
+<p class="step-meta">STEP 34 · 6コマ目 · 目安 17分</p>
+<h2 id="title-34">ミニ練習：変換する型と、計算する回数</h2>
+
+<p>それぞれのファイルを開き、<code>fun main()</code> の左から実行します。エラーは文言を暗記せず、どの行と型の組み合わせで止まったかを確かめます。</p>
+<h3>① map の結果の型を確かめる（7分）</h3>
+<ol><li><code>ex10/main.kt</code> の <code>val result2: List&lt;Person&gt;</code> を <code>val result2: List&lt;String&gt;</code> に変えます。右辺の <code>list.map { name -&gt; Person(name) }</code> は変えません。</li><li><code>Person(name)</code> を返す行に赤い波線が出て、実行できないことを確かめます。文字列を要素とする型を指定したのに、ラムダが <code>Person</code> を返しているためです。</li><li><code>List&lt;Person&gt;</code> に戻します。次に、元の <code>listOf("Yamada", "Tanaka")</code> の末尾に <code>"Suzuki"</code> を足してRunします。</li></ol>
+<p>2つの変換処理を変えなくても、どちらの結果も3要素になります。</p>
+<pre tabindex="0"><code>[Yamada San, Tanaka San, Suzuki San]
+[Person(name=Yamada), Person(name=Tanaka), Person(name=Suzuki)]</code></pre>
+<h3>② Foo をもう1つ作る（7分）</h3>
+<p><code>ex11/main.kt</code> の <code>main</code> の中で、2つ目の <code>println(foo.bar)</code> のあとへ次の3行を足します。<code>class Foo</code> の中身は変えません。</p>
+<pre tabindex="0"><code>val foo2 = Foo()
+println(foo2.bar)
+println(foo2.bar)</code></pre>
+<p>Runすると、次の6行が出ます。</p>
+<pre tabindex="0"><code>computed!
+6.0
+6.0
+computed!
+6.0
+6.0</code></pre>
+<p><code>foo</code> と <code>foo2</code> は別のオブジェクトです。それぞれの <code>bar</code> が初回に計算され、そのオブジェクトで再び読むと保存した値が使われます。</p>
+<h3>③ Java / Swift でも別のオブジェクトを作る</h3>
+<p>STEP 33の各言語の <code>Foo</code> を使うと、呼び出しは次の形です。既存の <code>foo</code> を読んだあとに、新しいオブジェクトを読みます。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val foo2 = Foo()
+println(foo2.bar)
+println(foo2.bar)</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>var foo2 = new Foo();
+System.out.println(foo2.getBar());
+System.out.println(foo2.getBar());</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>let foo2 = Foo()
+print(foo2.bar)
+print(foo2.bar)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p><p>この <code>Foo</code> の <code>bar</code> は、すべての <code>Foo</code> で計算結果を1つだけ共有するものではありません。オブジェクトを2つ作り、それぞれで初めて読むと、<code>computed!</code> も2回になります。</p></div>
+<h3>④ 最後の3分 · 完成コードへ戻す</h3>
+<ol><li><code>ex10</code> の <code>listOf</code> から <code>"Suzuki"</code> を消します。<code>result2</code> の型が <code>List&lt;Person&gt;</code> に戻っていることも確かめます。</li><li><code>ex11</code> へ追加した <code>foo2</code> の3行を消します。</li><li>2本を実行します。<code>ex10</code> は2人を並べた2行、<code>ex11</code> は <code>computed!</code> / <code>6.0</code> / <code>6.0</code> の3行に戻ります。</li></ol>
+
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-34"><span>型を変えて止まった行を元に戻し、<code>ex10</code> の各リストが2要素、<code>ex11</code> の出力が3行に戻っている。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-35">次へ：K01の完成 →</a></div>
+</section>
+
+<section id="step-35" aria-labelledby="title-35">
+<p class="step-meta">STEP 35 · 6コマ目 · 目安 3分</p>
+<h2 id="title-35">K01の完成</h2>
+
+<h3>① 最後の3分 · 2本を順に実行する</h3>
+<p><code>ex10/main.kt</code> と <code>ex11/main.kt</code> を順に開き、それぞれの <code>fun main()</code> の左からRunします。</p>
+<h3>② 完成チェック</h3>
+<table><thead><tr><th>ファイル</th><th>確認する出力</th></tr></thead><tbody>
+<tr><td><code>src/ex10/main.kt</code></td><td>1行目は <code>[Yamada San, Tanaka San]</code>。2行目は <code>[Person(name=Yamada), Person(name=Tanaka)]</code>。</td></tr>
+<tr><td><code>src/ex11/main.kt</code></td><td><code>computed!</code> / <code>6.0</code> / <code>6.0</code> の3行。</td></tr>
+</tbody></table>
+<h3>③ ラムダの最後に置いた式を比べる</h3>
+<p>各言語の <code>list</code> は、STEP 32の2人の名前を持つリスト・配列です。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val result = list.map { name -&gt; "$name San" }</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>var result = list.stream()
+    .map(name -&gt; name + " San")
+    .toList();</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>let result = list.map { name in "\(name) San" }</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p><p><code>map</code> では各要素を変換した値を、<code>lazy</code> では初回に計算する値を、ラムダから返しました。Kotlinの今回のラムダでは、最後の式がその結果になります。</p></div>
+<p>左の <code>src</code> に <code>ex01</code>〜<code>ex11</code> の11パッケージがあることを確かめます。<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> です。6コマで使ったプロジェクトは、最初に作った <code>K01HelloKotlin</code> の1つです。自分で書いたコードを、そのまま残しておきます。</p>
+
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-35"><span>2本の出力が完成チェックと一致し、<code>src</code> に <code>ex01</code>〜<code>ex11</code> の11パッケージが並んでいる。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#sample-project">次へ：完成プロジェクトを開いて比べる →</a></div>
 </section>
 
@@ -1956,9 +2267,9 @@ print(foo.counter)</code></pre></div>
 <tr><td>完成版の見本</td><td><code>/Users/ユーザ名/Documents/教材のフォルダ/samples/K01HelloKotlin</code></td></tr>
 </tbody></table>
 <h3>② IntelliJ IDEA で開く</h3>
-<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、いちばん上のメニューバーから <strong>ファイル → 開く…</strong> を選びます。プロジェクトを1つも開いていないときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選びます。</li><li>①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src</code> を開き、いまの演習のパッケージを選びます。<code>ex01</code>〜<code>ex09</code> のうち、<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> を開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の ▷ を押します。</li></ol>
+<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、いちばん上のメニューバーから <strong>ファイル → 開く…</strong> を選びます。プロジェクトを1つも開いていないときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選びます。</li><li>①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src</code> を開き、いまの演習のパッケージを選びます。<code>ex01</code>〜<code>ex11</code> のうち、<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> を開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の ▷ を押します。</li></ol>
 <h3>③ 今のステップの部分だけを比べる</h3>
-<p>たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。5コマ目は、STEP 26なら <code>ex08/Foo.kt</code> の <code>get()</code>・<code>set()</code>、STEP 27なら <code>ex09/main.kt</code> の <code>Person</code>・<code>copy</code>、STEP 28なら <code>ex07/main.kt</code> の <code>plusTen</code> を比べます。</p>
+<p>たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。5コマ目は、STEP 26なら <code>ex08/Foo.kt</code> の <code>get()</code>・<code>set()</code>、STEP 27なら <code>ex09/main.kt</code> の <code>Person</code>・<code>copy</code>、STEP 28なら <code>ex07/main.kt</code> の <code>plusTen</code> を比べます。6コマ目は、STEP 32なら <code>ex10/main.kt</code> の2つの <code>map</code>、STEP 33なら <code>ex11/main.kt</code> の <code>by lazy</code> と2つの読み取りを比べます。</p>
 <p>見終わったら、授業で作っている <code>Documents/Kotlin/K01HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。</p>
 <p>教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a href="downloads/K01HelloKotlin.zip" download>K01HelloKotlin.zip</a>）。展開してできた <code>K01HelloKotlin</code> フォルダを、②と同じように開きます。</p>
 </section>
@@ -1987,6 +2298,11 @@ print(foo.counter)</code></pre></div>
 <tr><td><code>copy(age: 25)</code> が赤い</td><td>Kotlinの名前付き引数は <code>copy(age = 25)</code> です。Swiftの引数ラベルの <code>:</code> とは記号が違います（STEP 27）。</td></tr>
 <tr><td><code>value.name</code> や <code>name.count()</code> が赤い</td><td>一時的に書いた関数で、前者は <code>if (value is Person)</code>、後者は <code>if (name != null)</code> の中に置いたか確認します。条件の外では、確かめた型として使えません（STEP 27）。</td></tr>
 <tr><td><code>plusTen()</code> が見つからない</td><td><code>ex07/main.kt</code> の <code>main</code> の外に <code>fun Int.plusTen(): Int</code> があるか確認します。呼び出しは <code>5.plusTen()</code> です（STEP 28）。</td></tr>
+<tr><td><code>map</code> の <code>Person(name)</code> が赤い</td><td><code>result2</code> の型は <code>List&lt;Person&gt;</code> です。STEP 34の練習で <code>List&lt;String&gt;</code> に変えたままなら、元の型へ戻します。</td></tr>
+<tr><td><code>map</code> の中で <code>it</code> が見つからない</td><td><code>name -&gt;</code> と引数名を書いたラムダでは、その名前 <code>name</code> を使います。STEP 32の完成コードと、名前を付ける一時変更を混ぜていないか確認します。</td></tr>
+<tr><td><code>computed!</code> が出ない</td><td><code>ex11/main.kt</code> で <code>foo.bar</code> を読んでいるか確認します。STEP 33④の <code>println(foo.counter)</code> だけの形では、遅らせた計算は始まりません。</td></tr>
+<tr><td><code>counter</code> を変えたのに <code>bar</code> が変わらない</td><td>最初の <code>foo.bar</code> を読む前と後で動きが違います。初回の計算結果は保存され、同じオブジェクトの2回目以降の読み取りに使われます（STEP 33⑤）。</td></tr>
+<tr><td><code>ex11</code> が6行のまま</td><td>STEP 34で足した <code>val foo2 = Foo()</code> と、その <code>bar</code> を読む2行が残っていないか確認します。完成コードは1つの <code>foo</code> を使う3行の出力です。</td></tr>
 <tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>
 <tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。</td></tr>
 </tbody></table>
@@ -2001,7 +2317,7 @@ print(foo.counter)</code></pre></div>
 <li><a href="https://kotlinlang.org/docs/home.html">Kotlin公式：ドキュメントの入口</a></li>
 <li><a href="https://www.jetbrains.com/help/idea/get-started-with-kotlin.html">IntelliJ IDEA公式：Get started with Kotlin</a></li>
 </ul></section>
-<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・この教科書は5コマ目まで） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
+<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・11演習） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
 </main></div>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
 </body></html>
