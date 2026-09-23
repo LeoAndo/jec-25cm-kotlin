@@ -947,7 +947,7 @@ let length2: Int? = name2?.count</code></pre></div>
 <li>Kotlinは <code>fun</code> で始めます。Swiftの <code>func</code> にあたります。Javaには、この位置に置くキーワードがありません。</li>
 <li>引数は、Kotlinが <code>a: Int</code>、Swiftも <code>a: Int</code>、Javaだけが <code>int a</code> です。<strong>KotlinとSwiftは名前が先で、Javaは型が先です。</strong></li>
 <li>戻り値の型は、Kotlinがかっこのうしろの <code>: Int</code>、Swiftがかっこのうしろの <code>-&gt; Int</code>、Javaがメソッド名の前の <code>int</code> です。<strong>3つとも位置か記号が違います。</strong></li>
-<li>値を返す <code>return</code> と、行末の <code>;</code> の有無は、1コマ目・2コマ目と同じです。</li>
+<li>値を返す <code>return</code> は、JavaともSwiftとも同じ書き方です。行末に <code>;</code> が要らない点は、1コマ目・2コマ目と同じです。</li>
 </ul>
 <p>並びと位置は STEP 15 で1つずつ確かめます。ここでは「3つとも違う形になる」ことだけ見ておきます。</p></div>
 
@@ -1098,7 +1098,7 @@ final int ret = sum(1, 2);</code></pre></div>
 <p>この並びだと、<strong>型を省いても形が崩れません。</strong> <code>val number1 = 1</code> のように、うしろの <code>: Int</code> を取るだけで済みます。Javaの <code>int number1 = 1;</code> は先頭が型なので、そこを省くと何も残りません。<strong>型を省ける言語は、型をうしろに置くほうが都合がよいのです。</strong> Swiftが同じ並びなのも、同じ理由です。</p>
 <p>ただし、<strong>関数の引数の型だけは省けません。</strong> 呼ぶ側が何を渡してよいか決まらなくなるからです。ここはSwiftも同じです。</p></div>
 
-<h3>⑤ 戻り値は末尾に「: 型」 — 3言語で位置が全部違う</h3>
+<h3>⑤ 戻り値は末尾に「: 型」 — 3言語で位置か記号が違う</h3>
 <table><thead><tr><th>言語</th><th>宣言の1行目</th><th>戻り値の型を書く場所</th></tr></thead><tbody>
 <tr><td>Kotlin</td><td><code>fun sum(a: Int, b: Int): Int {</code></td><td>かっこのうしろに <code>: Int</code></td></tr>
 <tr><td>Java</td><td><code>static int sum(int a, int b) {</code></td><td>メソッド名の前に <code>int</code></td></tr>
@@ -1148,7 +1148,7 @@ fun sum2(a: Int, b: Int) {
 <tr><td>1行目</td><td><code>3</code></td><td><code>sum</code> が返した値を、<code>main</code> の <code>println(ret)</code> が出している。</td></tr>
 <tr><td>2行目</td><td><code>3</code></td><td><code>sum2</code> の中の <code>println(a + b)</code> が出している。<code>main</code> は受け取っていない。</td></tr>
 </tbody></table>
-<p>同じ <code>3</code> でも、<strong>出している場所が違います。</strong> <code>sum</code> は値を返すだけで出力せず、<code>sum2</code> は出力するだけで値を返しません。</p>
+<p>同じ <code>3</code> でも、<strong>出している場所が違います。</strong> <code>sum</code> は計算結果を返すだけで出力せず、<code>sum2</code> は計算結果を返さずに、関数の中で出力します。</p>
 
 <h3>③ Java / Swift ではどう書くか（戻り値がないとき）</h3>
 <div class="compare">
@@ -1236,7 +1236,7 @@ func sum2(a: Int, b: Int) {
 <p>Runし、コンソールの出力を上から順に見ます。</p>
 <table><thead><tr><th>行</th><th>出る内容</th><th>理由</th></tr></thead><tbody>
 <tr><td>1行目</td><td><code>3</code></td><td><code>sum(1, 2)</code> が返した値が <code>ret</code> に入り、<code>main</code> の <code>println(ret)</code> が出している。</td></tr>
-<tr><td>2行目</td><td><code>3</code></td><td><code>sum2(1, 2)</code> が値を返さず、<code>sum2</code> の中の <code>println(a + b)</code> が自分で出している。</td></tr>
+<tr><td>2行目</td><td><code>3</code></td><td><code>sum2(1, 2)</code> は計算結果を返さず、<code>sum2</code> の中の <code>println(a + b)</code> が出している。</td></tr>
 </tbody></table>
 <p>表のとおりになったら、先生に画面を見せ、<strong><code>: Int</code> と書いた場所と、何も書かなかった場所</strong>を指さして説明します。</p>
 <details><summary>入力したコードと照合する</summary>
@@ -1259,7 +1259,7 @@ fun sum2(a: Int, b: Int) {
 }</code></pre>
 </details>
 
-<h3>② 同じ2行を、JavaとSwiftで出すと</h3>
+<h3>② Javaの完成コードと、Swiftの関数宣言を比べる</h3>
 <div class="compare">
 <div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>package ex03
 
@@ -1293,7 +1293,7 @@ public class Main {
         System.out.println(a + b);
     }
 }</code></pre></div>
-<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>// 関数の宣言だけを並べる
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>// 呼び出しの引数ラベルはこの回では扱わないため、宣言だけを並べる
 func sum(a: Int, b: Int) -&gt; Int {
     return a + b
 }
@@ -1306,7 +1306,7 @@ func sum2(a: Int, b: Int) {
 <ul>
 <li>Javaで増えたのは、<strong>入口を包むクラスと、<code>void</code> と、行末の <code>;</code> の3つ</strong>です。処理そのものは同じです。</li>
 <li>Kotlinは <code>sum</code> も <code>sum2</code> もファイルの直下に置けます。Javaは、どちらもクラスの中の <code>static</code> メソッドにします。<strong>1コマ目から <code>fun main()</code> をクラスなしで書けていたのと、同じしくみです。</strong></li>
-<li>Swiftの2つの宣言は、Kotlinと形がよく似ています。<strong>違うのは <code>fun</code> と <code>func</code>、そして戻り値の <code>: Int</code> と <code>-&gt; Int</code> の2か所だけです。</strong></li>
+<li>Swiftの2つの宣言は、Kotlinと形がよく似ています。<strong>宣言の先頭行で違うのは <code>fun</code> と <code>func</code>、そして戻り値の <code>: Int</code> と <code>-&gt; Int</code> の2か所です。</strong>本体の出力は、1コマ目と同じく <code>println</code> と <code>print</code> の違いがあります。</li>
 <li>戻り値のない <code>sum2</code> は、Kotlinでも Swift でもかっこのうしろが空です。<strong>Javaだけが <code>void</code> を書きます。</strong></li>
 </ul></div>
 
@@ -1318,7 +1318,7 @@ func sum2(a: Int, b: Int) {
 </ol>
 <p>プロジェクトは <code>K01HelloKotlin</code> の1つだけを使い続けます。回を重ねるごとに <code>src</code> の下のパッケージが増えていくので、前に書いたコードをいつでも開いて見返せます。</p>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-18"><span>完成チェックを行い、先生に画面を見せた。<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が同じプロジェクトに並んでいることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
-<div class="goal"><p class="box-title">この回のまとめ</p><p><strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の位置は3つの言語で全部違います。書く順番が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。</p></div>
+<div class="goal"><p class="box-title">この回のまとめ</p><p><strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の型は3つの言語で書く位置か記号が違います。書く順番や記号が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。</p></div>
 
 </section>
 <section id="sample-project" aria-labelledby="sample-title">

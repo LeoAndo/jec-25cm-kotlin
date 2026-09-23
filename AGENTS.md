@@ -208,11 +208,18 @@
   - **エージェントは、IntelliJ IDEA に同梱の Kotlin コンパイラで、出力と警告をコマンドラインから確かめられる。** 教科書に載せる実行結果・「赤くなる／通る」と書いた挙動・完成コードに警告が出ないことは、**書く前に必ずこれで確かめる。** 一時ファイルはリポジトリの外（`/tmp` など）に置く。
 
     ```sh
-    KC="$HOME/Applications/IntelliJ IDEA.app/Contents/plugins/Kotlin/kotlinc"
-    "$KC/bin/kotlinc-jvm" -version                          # 版を確かめる（2026-09-23 時点で 2.4.10）
-    "$KC/bin/kotlinc-jvm" -d /tmp/out K01HelloKotlin/src/ex03/main.kt   # 警告があればここに出る
-    java -cp "/tmp/out:$KC/lib/kotlin-stdlib.jar" ex03.MainKt            # パッケージ名.MainKt
+    (
+      set -e
+      KC="$HOME/Applications/IntelliJ IDEA.app/Contents/plugins/Kotlin/kotlinc"
+      "$KC/bin/kotlinc-jvm" -version  # 版を確かめる（2026-09-23 時点で 2.4.10）
+      KOTLIN_CHECK_DIR=$(mktemp -d "${TMPDIR:-/tmp}/jec-kotlin-check.XXXXXX")
+      trap 'rm -rf "$KOTLIN_CHECK_DIR"' EXIT
+      "$KC/bin/kotlinc-jvm" -d "$KOTLIN_CHECK_DIR" K01HelloKotlin/src/ex03/main.kt
+      java -cp "$KOTLIN_CHECK_DIR:$KC/lib/kotlin-stdlib.jar" ex03.MainKt
+    )
     ```
+
+    毎回新しい出力先を使い、コンパイルに失敗したら実行せずに終了する。最後に出力先を削除するので、以前のクラスの出力を今回の結果と取り違えない。警告もコンパイル時に表示される。
 
     **`-nowarn` を付けない。** 付けると警告が消え、確かめたことにならない。これで見つかった誤りが2つある。1コマ目で `Val cannot be reassigned` と書いたが、Kotlin 2.x（K2）が出すのは `'val' cannot be reassigned` だった。2コマ目の完成コードの最後の `name2?.count()` には `unnecessary safe call` の警告が出るのに、教科書に説明がなかった。**エラーや警告の文言は教科書に引用しない**（「おおよそこういう意味のメッセージが出ます。言い回しは版で変わります」と書く）。確かめるのは、止まるか通るか、どの行か、警告が出るかどうかである。
 - **完成プロジェクトにUnit Testは書かない。** 動作はIntelliJ IDEAの実行と、エミュレータ・Logcatで確認する。`scripts/test_*.py` はCIで実行されるので、通る状態を保つ。
