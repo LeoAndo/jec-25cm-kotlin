@@ -95,3 +95,6 @@ Non-Bundled Plugins:
   codiumai.codiumai (2.2.8)
   io.flutter (96.0.0)
 ```
+
+### 多言語展開
+この教材を使う学生の母国語は、日本語・英語・中国語・韓国語・ミャンマー語・広東語の6つです。
