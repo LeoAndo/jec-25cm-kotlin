@@ -131,7 +131,9 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             "-c", "user.name=Test", "-c", "user.email=test@example.invalid", "commit", "-m", "fixture",
             env={"GIT_AUTHOR_DATE": FIXTURE_COMMITTED, "GIT_COMMITTER_DATE": FIXTURE_COMMITTED},
         )
-        self.archive = self.root / f"dist/{FIXTURE_STEM}.zip"
+        self.revision = self.git("rev-parse", "HEAD").stdout.decode().strip()
+        self.stem = f"{FIXTURE_STEM}-{self.revision[:12]}"
+        self.archive = self.root / f"dist/{self.stem}.zip"
 
     def set_integrity_check(self, status):
         """教材整合性チェックの代わりを、指定の終了コードで置き直す。"""
@@ -207,7 +209,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         """はじめに.txt の単元一覧は config/teaching-materials.json から作る。"""
         self.assertEqual(self.package().returncode, 0)
         with ZipFile(self.archive) as archive:
-            instructions = archive.read(f"{FIXTURE_STEM}/はじめに.txt").decode()
+            instructions = archive.read(f"{self.stem}/はじめに.txt").decode()
         self.assertIn("Kotlin演習 学生用教材", instructions)
         self.assertIn("  K01 HelloKotlin：docs/hello-kotlin/index.html", instructions)
         self.assertIn("  K02 NullSafety：docs/null-safety/index.html", instructions)
@@ -228,7 +230,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.git("add", "config/teaching-materials.json", "docs/functions/index.html")
         self.assertEqual(self.package().returncode, 0)
         with ZipFile(self.archive) as archive:
-            instructions = archive.read(f"{FIXTURE_STEM}/はじめに.txt").decode()
+            instructions = archive.read(f"{self.stem}/はじめに.txt").decode()
         self.assertIn("  K03 Functions：docs/functions/index.html", instructions)
 
     def test_missing_project_archive_rejects_package(self):
@@ -251,7 +253,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.enable_translation()
         result = self.package()
         self.assertEqual(result.returncode, 0, result.stderr)
-        prefix = f"{FIXTURE_STEM}/"
+        prefix = f"{self.stem}/"
         with ZipFile(self.archive) as archive:
             names = archive.namelist()
             english = archive.read(prefix + "docs/en/hello-kotlin/index.html").decode()
@@ -289,7 +291,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         path.write_text(json.dumps(config, ensure_ascii=False), encoding="utf-8")
         result = self.package()
         self.assertEqual(result.returncode, 0, result.stderr)
-        prefix = f"{FIXTURE_STEM}/"
+        prefix = f"{self.stem}/"
         with ZipFile(self.archive) as archive:
             for language in config["languages"]:
                 page = archive.read(prefix + f"docs/{language['code']}/hello-kotlin/index.html").decode()
@@ -327,7 +329,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         original = (self.root / "docs/hello-kotlin/index.html").read_bytes()
         result = self.package()
         self.assertEqual(result.returncode, 0, result.stderr)
-        prefix = f"{FIXTURE_STEM}/"
+        prefix = f"{self.stem}/"
         with ZipFile(self.archive) as archive:
             self.assertNotIn(prefix + 'index.html', archive.namelist())
             self.assertEqual(archive.read(prefix + 'docs/hello-kotlin/index.html'), original)
@@ -339,7 +341,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         (self.root / "K01HelloKotlin/src/ex01/main.kt").write_text("package ex01\n\nfun main() {\n    println(1)\n}\n", encoding="utf-8")
         result = self.package()
         self.assertEqual(result.returncode, 0, result.stderr)
-        prefix = f"{FIXTURE_STEM}/"
+        prefix = f"{self.stem}/"
         with ZipFile(self.archive) as archive:
             names = archive.namelist()
             self.assertFalse(any("teacher" in name or ".DS_Store" in name or "untracked" in name for name in names))
@@ -362,7 +364,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
 
     def test_extracted_samples_match_the_project_zip(self):
         self.assertEqual(self.package().returncode, 0)
-        prefix = f"{FIXTURE_STEM}/"
+        prefix = f"{self.stem}/"
         bundled_total = 0
         with ZipFile(self.archive) as archive:
             for archive_name in ("docs/hello-kotlin/downloads/K01HelloKotlin.zip",
@@ -382,18 +384,47 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertEqual(archive.getinfo(prefix + "samples/A01HelloAndroid/gradlew").external_attr >> 16, 0o100755)
             self.assertEqual(archive.getinfo(prefix + "samples/K01HelloKotlin/src/ex01/main.kt").external_attr >> 16, 0o100644)
 
-    def test_asset_name_and_folder_carry_the_release_date(self):
+    def test_asset_name_and_folder_carry_the_release_date_and_revision(self):
         self.assertEqual(self.package().returncode, 0)
         with ZipFile(self.archive) as archive:
             names = archive.namelist()
-        # 別の版を同じ場所に展開しても混ざらないよう、先頭フォルダにも日付を入れる。
-        self.assertTrue(all(name.startswith(f"{FIXTURE_STEM}/") for name in names), names)
+        # 同日の別版も混ざらないよう、先頭フォルダにも日付とコミットIDを入れる。
+        self.assertTrue(all(name.startswith(f"{self.stem}/") for name in names), names)
         checksum = (self.root / "dist/SHA256SUMS.txt").read_text(encoding="utf-8")
         self.assertEqual(checksum.split()[1], self.archive.name)
         metadata = json.loads((self.root / "dist/release-metadata.json").read_text(encoding="utf-8"))
         self.assertEqual(metadata["asset"], self.archive.name)
         # 版タグの日付と、配布物の名前の日付がそろっている。
-        self.assertEqual(metadata["version"].rsplit("-", 1)[0], "materials-2026.09.20")
+        self.assertEqual(metadata["version"], f"materials-2026.09.20-{self.revision[:12]}")
+        self.assertEqual(metadata["revision"], self.revision)
+        self.assertTrue(self.archive.name.endswith(f"-{self.revision[:12]}.zip"))
+
+    def test_two_commits_on_the_same_day_have_separate_archives_and_folders(self):
+        self.assertEqual(self.package().returncode, 0)
+        first_bytes = self.archive.read_bytes()
+        source = self.root / "K01HelloKotlin/src/ex01/main.kt"
+        source.write_text("package ex01\n\nfun main() {\n    println(2)\n}\n", encoding="utf-8")
+        self.git("add", "K01HelloKotlin/src/ex01/main.kt")
+        self.git(
+            "-c", "user.name=Test", "-c", "user.email=test@example.invalid", "commit", "-m", "same-day revision",
+            env={"GIT_AUTHOR_DATE": FIXTURE_COMMITTED, "GIT_COMMITTER_DATE": FIXTURE_COMMITTED},
+        )
+        second_revision = self.git("rev-parse", "HEAD").stdout.decode().strip()
+        self.assertEqual(self.package().returncode, 0)
+        metadata = json.loads((self.root / "dist/release-metadata.json").read_text(encoding="utf-8"))
+        second_archive = self.root / "dist" / metadata["asset"]
+        self.assertNotEqual(second_archive, self.archive)
+        self.assertEqual(self.archive.read_bytes(), first_bytes)
+        self.assertEqual(metadata["revision"], second_revision)
+        self.assertEqual(second_archive.stem, f"{FIXTURE_STEM}-{second_revision[:12]}")
+        with ZipFile(self.archive) as first, ZipFile(second_archive) as second:
+            first_folders = {name.split("/", 1)[0] for name in first.namelist()}
+            second_folders = {name.split("/", 1)[0] for name in second.namelist()}
+            self.assertEqual(first_folders, {self.archive.stem})
+            self.assertEqual(second_folders, {second_archive.stem})
+            self.assertTrue(first_folders.isdisjoint(second_folders))
+            copied = second.read(f"{second_archive.stem}/samples/K01HelloKotlin/src/ex01/main.kt")
+            self.assertEqual(copied, source.read_bytes())
 
     def test_missing_link_rejects_package(self):
         (self.root / "docs/hello-kotlin/index.html").write_text('<a href="../missing.html">資料</a>', encoding="utf-8")
@@ -420,7 +451,7 @@ class StudentReleaseTest(unittest.TestCase):
         self.addCleanup(temporary.cleanup)
         self.dist = Path(temporary.name)
         self.repo = "owner/repo"
-        self.asset = "kotlin-student-materials-2026-09-15.zip"
+        self.asset = "kotlin-student-materials-2026-09-15-123456789abc.zip"
         self.metadata = {"version": "materials-2026.09.15-123456789abc", "revision": "123456789abc" * 3 + "1234", "asset": self.asset}
         (self.dist / self.asset).write_bytes(b"student package")
         (self.dist / release.CHECKSUMS).write_text(f"{hashlib.sha256(b'student package').hexdigest()}  {self.asset}\n")
@@ -457,7 +488,26 @@ class StudentReleaseTest(unittest.TestCase):
     def test_asset_pattern_matches_this_course_only(self):
         """配布ZIPの名前が、この授業のものであることを確かめる。"""
         self.assertTrue(release.ASSET_PATTERN.fullmatch(self.asset))
-        self.assertFalse(release.ASSET_PATTERN.fullmatch("android1-student-materials-2026-09-15.zip"))
+        self.assertTrue(release.ASSET_PATTERN.fullmatch("kotlin-student-materials-2026-09-15.zip"))
+        for name in (
+            "android1-student-materials-2026-09-15-123456789abc.zip",
+            "kotlin-student-materials-2026-09-15-not-a-commit.zip",
+            "kotlin-student-materials-2026-09-15-1234567.zip",
+            "kotlin-student-materials-2026-09-15-123456789abcd.zip",
+            "kotlin-student-materials-2026-09-15-123456789abc.zip.exe",
+            "../kotlin-student-materials-2026-09-15-123456789abc.zip",
+        ):
+            with self.subTest(name=name):
+                self.assertFalse(release.ASSET_PATTERN.fullmatch(name))
+
+    def test_main_accepts_the_new_asset_name_before_preparing(self):
+        (self.dist / "release-metadata.json").write_text(json.dumps(self.metadata), encoding="utf-8")
+        with patch.object(release.sys, "argv", ["release-student-materials.py", "prepare"]), \
+                patch.dict(os.environ, {"GH_REPO": self.repo}), \
+                patch.object(release.subprocess, "check_output", return_value=self.metadata["revision"]), \
+                patch.object(release, "prepare") as prepare:
+            release.main()
+        prepare.assert_called_once_with(self.repo, self.metadata)
 
     def test_release_notes_list_units_from_the_configuration(self):
         """リリースノートの単元一覧は config/teaching-materials.json から作る。"""
@@ -609,7 +659,8 @@ class StudentReleaseTest(unittest.TestCase):
     def test_previous_release_ignores_drafts_prereleases_and_other_products(self):
         def item(tag, date, **kwargs):
             return {"tag_name": tag, "published_at": date, "draft": False, "prerelease": False, **kwargs}
-        previous = item("materials-previous", "2026-09-14")
+        previous = item("materials-previous", "2026-09-14",
+                        assets=[{"name": "kotlin-student-materials-2026-09-14.zip"}])
         items = [previous, item("other-product", "2026-09-15"), item("materials-draft", None, draft=True), item("materials-preview", "2026-09-15", prerelease=True), item(self.metadata["version"], "2026-09-15")]
         self.assertEqual(release.previous_release(items, self.metadata["version"]), previous)
 

@@ -15,8 +15,9 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 CHECKSUMS = "SHA256SUMS.txt"
-# 配布ZIPの名前は版ごとに変わるので、release-metadata.jsonから受け取る。
-ASSET_PATTERN = re.compile(r"kotlin-student-materials-\d{4}-\d{2}-\d{2}\.zip")
+# 配布ZIP名はmetadataから受け取る。日付だけの旧形式も入力として受け付ける。
+# 過去の公開版の検出は、ZIP名ではなく previous_release() の版タグで行う。
+ASSET_PATTERN = re.compile(r"kotlin-student-materials-\d{4}-\d{2}-\d{2}(?:-[0-9a-f]{12})?\.zip")
 MATERIALS_CONFIG = "config/teaching-materials.json"
 
 
