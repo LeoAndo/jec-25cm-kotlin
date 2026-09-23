@@ -7,9 +7,9 @@
 <header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../../docs/hello-kotlin/index.html">K01HelloKotlinの教科書へ戻る</a></header>
 <main id="main"><div class="hero"><p class="eyebrow">KOTLIN演習 / 共通資料・授業サポート</p><h1>教員用ガイド<br>K01HelloKotlin</h1><p class="lede">受講生は Java と Swift を学習済みです。この単元は「プログラミングの入門」ではなく、<strong>Java / Swift との差分の説明</strong>に時間を使います。1コマ90分、単元 K01HelloKotlin は<strong>全6コマ</strong>です。</p></div>
 
-<div class="note"><p class="box-title">この資料がいま扱うのは、6コマのうちの1コマ目から3コマ目までです</p>
+<div class="note"><p class="box-title">この資料がいま扱うのは、6コマのうちの1コマ目から4コマ目までです</p>
 <p><strong>K01HelloKotlin は全6コマ（1コマ90分）の単元です。</strong>純Kotlin系の単元はこの1つだけで、K02以降の単元は作りません。プロジェクトも <code>K01HelloKotlin</code> の1つだけを使い、回を重ねるごとに <code>src/ex01/</code>〜<code>src/ex11/</code> のパッケージを足していきます。教科書も <code>docs/hello-kotlin/index.html</code> の1冊だけで、回を重ねるごとに同じ教科書にSTEPを足します。</p>
-<p><strong>いま教科書に書けているのは、3コマ目ぶん（<code>ex01</code>・<code>ex02</code>・<code>ex03</code>）までです。</strong>この教員用ガイドが扱うのも、その3コマだけです。4コマ目以降（<code>ex04</code>〜<code>ex11</code>）は、新しい教科書を作るのではなく同じ教科書にSTEPを足す形で、その回を作る今後のissueで書きます。<strong>このガイドも同じように、回ごとに書き足して育てます。</strong>「3. 90分の進め方」も「7. 前年度の資料（PDF）との対応」も、いまは1コマ目から3コマ目ぶんだけが埋まっている状態です。</p>
+<p><strong>いま教科書に書けているのは、4コマ目ぶんまでです。</strong>1コマ目は <code>ex01</code>、2コマ目は <code>ex02</code>、3コマ目は <code>ex03</code>、4コマ目は <code>ex05</code>・<code>ex06</code>・<code>ex04</code> をこの順に進めます。このガイドの「3. 90分の進め方」と「7. 前年度の資料（PDF）との対応」も4コマ目までに対応しています。<strong>5・6コマ目も、新しい教科書を作らず、この教科書とガイドにSTEPと各回の節を足します。</strong></p>
 <table><thead><tr><th>コマ</th><th>単元</th><th>内容</th><th>プロジェクト</th></tr></thead><tbody>
 <tr><td>1–6</td><td>K01 HelloKotlin（この資料）</td><td>Kotlinの文法（前年度資料の §4〜§16 ＝ <code>ex01</code>〜<code>ex11</code>）</td><td><code>K01HelloKotlin</code></td></tr>
 <tr><td>7–8</td><td>A01 HelloAndroid</td><td>KotlinでAndroidアプリを作る</td><td><code>A01HelloAndroid</code></td></tr>
@@ -17,7 +17,7 @@
 <tr><td>11–13</td><td>A03 GithubSearch</td><td>Web APIと一覧表示</td><td><code>A03GithubSearch</code></td></tr>
 <tr><td>14–15</td><td>A04 FunnyCamera</td><td>カメラと画像の合成</td><td><code>A04FunnyCamera</code></td></tr>
 </tbody></table>
-<p>割り当ては仮です。進み具合に合わせて見直します。<strong>1コマ目に入れるのは <code>ex01</code>（前年度資料の §4 変数宣言、代入処理）だけ、2コマ目に入れるのは <code>ex02</code>（同 §5 Null許容の変数宣言と安全な呼び出し）だけ、3コマ目に入れるのは <code>ex03</code>（同 §6 メソッド作成）だけ</strong>で、残り8本を3コマで進めます。どの回でどの演習を扱うかは、その回を作るときに決めます。</p></div>
+<p>全15コマの割り当ては進み具合に合わせて見直します。<strong>K01の授業順は、1〜3コマ目に <code>ex01</code>・<code>ex02</code>・<code>ex03</code> を1本ずつ、4コマ目に <code>ex05</code> → <code>ex06</code> → <code>ex04</code>、5コマ目に <code>ex08</code> → <code>ex09</code> → <code>ex07</code>、6コマ目に <code>ex10</code> → <code>ex11</code> と決めています。</strong>演習番号は前年度資料の節との対応なので、授業順に合わせて番号を付け替えません。残り5本の教材は5・6コマ目のissueで追加します。</p></div>
 
 <section><h2>1. 授業前の準備</h2>
 <ul><li><strong>受講生像を全員の教員で共有します。</strong>受講生は Java と Swift を学習済みで、変数・型・条件分岐・繰り返し・クラスといった概念そのものの説明は不要です。説明するのは <strong>Kotlinでの書き方</strong>と、<strong>Java / Swift との違い</strong>、そして<strong>違う理由</strong>の3つです。</li>
@@ -29,22 +29,24 @@
 <li>完成版の <code>K01HelloKotlin</code> を開き、<code>src/ex01/main.kt</code> を <strong>Run</strong> して、コンソールに <code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code> の4行が出ることを確認します。</li>
 <li><strong>2コマ目の前には、<code>src/ex02/main.kt</code> も Run して、コンソールに <code>5</code> / <code>null</code> / <code>6</code> の3行が出ることを確認します。</strong>2行目の <code>null</code> は正しい出力です。学生から「エラーですか」と必ず聞かれるので、教員が先に自分の画面で見ておきます。</li>
 <li><strong>3コマ目の前には、<code>src/ex03/main.kt</code> も Run して、コンソールに <code>3</code> / <code>3</code> の2行が出ることを確認します。</strong>同じ <code>3</code> が2行並びます。1行目は <code>sum</code> が返した値を <code>main</code> が出したもの、2行目は <code>sum2</code> が自分で出したものです。<strong>どちらの行がどちらの関数の出力かを、教員が先に自分の画面で確かめておきます。</strong>授業中に必ず聞かれる場所です。</li>
-<li><strong>2コマ目と3コマ目は、プロジェクトを新規作成しません。</strong>学生が1コマ目に作った <code>Documents/Kotlin/K01HelloKotlin</code> を開き直すところから始まります。授業前に、最近開いたプロジェクトの一覧から開く操作を1台で確かめ、見つからない学生に案内する場所（Finderでの <code>Documents/Kotlin</code>）を決めておきます。</li>
+<li><strong>4コマ目の前には、<code>ex05/main.kt</code>、<code>ex06/main.kt</code>、<code>ex04/main.kt</code> を順にRunします。</strong>出力はそれぞれ <code>flag is true</code> / <code>string is not Tanaka</code> の2行、<code>tanaka</code> / <code>yamada</code> / <code>sato</code> の3行、<code>Yamada</code> / <code>20</code> の2行です。ファイル名はどれも <code>main.kt</code> なので、開いているファイルの <code>fun main()</code> 左の ▷ から実行し、実行対象と出力を対応させておきます。</li>
+<li><strong>STEP 22⑤のバイトコード確認は教員の画面で行います。</strong>授業前に、元の <code>ex04</code> の <code>Person</code> を対象に <strong>Show Kotlin Bytecode → Decompile</strong> を開き、コンストラクタ・<code>getName()</code>・<code>getAge()</code> が見える位置を確認しておきます。表示名と操作経路はIDEの版で確かめます。表示用のJavaコードを編集したり、学生のプロジェクトへコピーしたりはしません。</li>
+<li><strong>2コマ目以降は、プロジェクトを新規作成しません。</strong>学生が1コマ目に作った <code>Documents/Kotlin/K01HelloKotlin</code> を開き直すところから始まります。授業前に、最近開いたプロジェクトの一覧から開く操作を1台で確かめ、見つからない学生に案内する場所（Finderでの <code>Documents/Kotlin</code>）を決めておきます。</li>
 <li>はじめて授業を受ける学生には、<a href="../../docs/common/setup.html">共通資料：授業を始めるまでの準備</a>を先に開かせます。</li>
 <li>本日の停止位置を板書します。</li></ul>
 <h3>完成版を公開して進める</h3>
-<p><strong>各単元の初回に、学生自身がIDEからプロジェクトを新規作成することを固定方針とします。</strong>K01の2コマ目以降は、同じプロジェクトを開き直して続けます。完成版は、動く状態の確認と、自分のコードとの比較に使います。見本を読むときは今のステップの部分を指定します。理解は、STEP 05の小変更（どの行が赤くなるか）と、「6. 机間巡視の確認項目」の短い問いで確認します。</p>
+<p><strong>各単元の初回に、学生自身がIDEからプロジェクトを新規作成することを固定方針とします。</strong>K01の2コマ目以降は、同じプロジェクトを開き直して続けます。完成版は、動く状態の確認と、自分のコードとの比較に使います。見本を読むときは今のステップの部分を指定します。理解は、各回のミニ練習（変わった出力や、代入が止まった行）と、「6. 机間巡視の確認項目」の短い問いで確認します。</p>
 <p>見本は、配布する教材のフォルダの <code>samples/K01HelloKotlin</code> に、展開済みで入っています。学生はダウンロードも展開もせず、IntelliJ IDEA の <strong>Open</strong> で選ぶだけで開けます。学生が作る場所は <code>Documents/Kotlin/K01HelloKotlin</code> です。<a href="../../docs/hello-kotlin/index.html#sample-project">学生向けの完成版の開き方</a>を初回に案内します。</p>
 <h3>教材コードの基準となる環境</h3>
 <p>以下はこのリポジトリの設定値です。「最新バージョン」の指定ではありません。新規作成した環境と差がある場合は、授業前に教員が確認します。</p>
 <table><thead><tr><th>項目</th><th>値・確認先</th></tr></thead><tbody>
-<tr><td>単元 / プロジェクト</td><td>K01HelloKotlin（全6コマ） / <code>K01HelloKotlin</code>（6コマで <code>ex01</code>〜<code>ex11</code> のパッケージを足していく。教科書と教員用ガイドがそろっているのは、いまは <code>ex01</code>（1コマ目）・<code>ex02</code>（2コマ目）・<code>ex03</code>（3コマ目））</td></tr>
+<tr><td>単元 / プロジェクト</td><td>K01HelloKotlin（全6コマ） / <code>K01HelloKotlin</code>（6コマで <code>ex01</code>〜<code>ex11</code> のパッケージを足していく。教科書と教員用ガイドがそろっているのは、いまは <code>ex01</code>（1コマ目）・<code>ex02</code>（2コマ目）・<code>ex03</code>（3コマ目）・<code>ex05</code> → <code>ex06</code> → <code>ex04</code>（4コマ目））</td></tr>
 <tr><td>ブラウザで使うもの</td><td>Kotlin Playground（<a href="https://play.kotlinlang.org/">https://play.kotlinlang.org/</a>）。STEP 01だけで使います。</td></tr>
 <tr><td>IDE</td><td>IntelliJ IDEA 2026.3 EAP（Build #IU-263.5153.40）</td></tr>
 <tr><td>Kotlinプラグイン</td><td>263.5153.40-IJ</td></tr>
 <tr><td>プロジェクトの作り方（ビルドシステム）</td><td><strong>IntelliJ</strong>。GradleもMavenも使いません。「サンプルコードの追加」と「コンパクトなプロジェクト構造を使用する」はONのまま作ります。</td></tr>
 <tr><td>JDK</td><td>教員環境の IDE の Runtime version は 25。教科書の画面写真に写っているプロジェクトのJDKは <code>homebrew-17</code> です。学生には、一覧に出ているものをそのまま選ばせます。</td></tr>
-<tr><td>完成コード</td><td>1コマ目：<a href="../../K01HelloKotlin/src/ex01/main.kt">K01HelloKotlin/src/ex01/main.kt</a> / 2コマ目：<a href="../../K01HelloKotlin/src/ex02/main.kt">K01HelloKotlin/src/ex02/main.kt</a> / 3コマ目：<a href="../../K01HelloKotlin/src/ex03/main.kt">K01HelloKotlin/src/ex03/main.kt</a></td></tr>
+<tr><td>完成コード</td><td>1コマ目：<a href="../../K01HelloKotlin/src/ex01/main.kt">K01HelloKotlin/src/ex01/main.kt</a> / 2コマ目：<a href="../../K01HelloKotlin/src/ex02/main.kt">K01HelloKotlin/src/ex02/main.kt</a> / 3コマ目：<a href="../../K01HelloKotlin/src/ex03/main.kt">K01HelloKotlin/src/ex03/main.kt</a> / 4コマ目：<a href="../../K01HelloKotlin/src/ex05/main.kt">ex05/main.kt</a> → <a href="../../K01HelloKotlin/src/ex06/main.kt">ex06/main.kt</a> → <a href="../../K01HelloKotlin/src/ex04/main.kt">ex04/main.kt</a></td></tr>
 <tr><td>配布用ZIP</td><td><code>docs/hello-kotlin/downloads/K01HelloKotlin.zip</code></td></tr>
 <tr><td>指定AVD</td><td>jec_25cm_kotlin_Pixel 9a。後半のAndroid系の単元で使うもので、<strong>この単元では使いません</strong>。名前を変えたエミュレータを作らせないでください。</td></tr>
 </tbody></table>
@@ -56,16 +58,16 @@
 <h3>Kotlinパートを、単元に分けずに1つにした理由</h3>
 <p><strong>Kotlinの文法は、K01HelloKotlin という単元1つ、プロジェクト1つ、教科書1冊で、6コマかけて進めます。</strong>「変数」「Null安全」「クラス」…と単元を分け、そのたびに新しいプロジェクトを作らせる形にはしていません。理由は3つです。</p>
 <ul>
-<li><strong>ウィザードの操作で時間が消えるからです。</strong>1コマで書くコードは十数行です。それなのに毎回プロジェクトを新規作成させると、90分のうち15〜20分が新規プロジェクトの操作と最初のビルド待ちに消えます。比較に使う時間がそのぶん減ります。</li>
+<li><strong>ウィザードの操作で時間が消えるからです。</strong>短い演習ごとにプロジェクトを新規作成させると、90分のうち15〜20分が新規プロジェクトの操作と最初のビルド待ちに消えます。比較に使う時間がそのぶん減ります。</li>
 <li><strong>前に書いたコードを見返せるからです。</strong>同じプロジェクトに <code>ex01</code>、<code>ex02</code> …と並ぶので、「先週の <code>val</code> の行と見比べて」と、画面の中だけで指示できます。別プロジェクトだと、開き直す操作から説明することになります。</li>
 <li><strong>前年度の資料と同じ形だからです。</strong>前年度も1つの <code>HelloKotlin</code> プロジェクトに、節ごとのファイル（<code>Main01</code>、<code>Main02</code> …）を足していく形でした。今年はファイルの代わりに <code>src/exNN/</code> のパッケージを足します（「7. 前年度の資料（PDF）との対応」）。</li>
 </ul>
 <p>この決め方の結果として、<strong>2コマ目以降は「新しいプロジェクトを作る回」ではなく「同じプロジェクトを開き直す回」になります。</strong>1コマ目の STEP 02（プロジェクトの新規作成）は、6コマで1回だけです。ここで作った場所（<code>Documents/Kotlin/K01HelloKotlin</code>）を学生がFinderで開けるようにしておくことが、2コマ目以降の授業時間を守ります。</p>
 <table><thead><tr><th>方針</th><th>理由</th><th>授業での扱い</th></tr></thead><tbody>
-<tr><td>Kotlinパートを <strong>単元1つ・プロジェクト1つ・教科書1冊</strong>にまとめ、6コマかけて <code>ex01</code>〜<code>ex11</code> を進める</td><td>1コマ十数行のコードのために毎回プロジェクトを作ると、90分のうち15〜20分がウィザードの操作に消える。前の回のコードが同じプロジェクトに並ぶので見返せる。前年度の資料も1プロジェクトにファイルを足す形だった。</td><td>プロジェクトの新規作成は1コマ目のSTEP 02の1回だけ。2コマ目以降は、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> を開かせ、<code>src</code> に次のパッケージを足させる。</td></tr>
+<tr><td>Kotlinパートを <strong>単元1つ・プロジェクト1つ・教科書1冊</strong>にまとめ、6コマかけて <code>ex01</code>〜<code>ex11</code> を進める</td><td>演習ごとにプロジェクトを作ると、90分のうち15〜20分がウィザードの操作に消える。前の回のコードが同じプロジェクトに並ぶので見返せる。前年度の資料も1プロジェクトにファイルを足す形だった。</td><td>プロジェクトの新規作成は1コマ目のSTEP 02の1回だけ。2コマ目以降は、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> を開かせ、<code>src</code> に次のパッケージを足させる。</td></tr>
 <tr><td>各STEPに <strong>Java / Swift との比較</strong>を必ず置く</td><td>受講生は概念を知っていて、知らないのは書き方だけ。概念から説明すると、知っている話を聞く時間になり、90分が足りなくなる。前年度の資料も同じ方針で書かれている。</td><td>教科書の比較ブロックを読ませたあと、「Javaなら何行になるか」を問う。教員は違いの<strong>理由</strong>（なぜKotlinはそう決めたか）を1文で足す。</td></tr>
 <tr><td>導入の最初だけ <strong>Kotlin Playground</strong> を使い、STEP 02からは IntelliJ IDEA に移る</td><td>環境構築で最初の10分を失うと、比較に使う時間がなくなる。ブラウザなら全員が同じ画面で1行目を動かせる。一方でPlaygroundはコード補完が効かず実行も遅いので、学習の本体には向かない。</td><td>詳しくは「4. Playground と IntelliJ IDEA の使い分け」を参照。Playgroundは10分で切り上げる。</td></tr>
-<tr><td>ビルドシステムに <strong>Gradle ではなく IntelliJ</strong> を選ばせる</td><td>この単元で見せたいのは <code>val</code> / <code>var</code> と型推論の差分だけ。Gradleを入れると、設定ファイル・同期待ち・依存関係の説明が増え、比較の時間を食う。<strong>できあがるフォルダの形も変わり、以降6コマぶんの画面と手順が教科書と食い違う。</strong>Gradleは後半のAndroid系の単元で扱う。</td><td>STEP 02の表で <strong>ビルドシステム</strong> を <code>IntelliJ</code> と指定している。ここは学生が最も間違えやすい場所なので、<strong>机間巡視で最初に見る</strong>（「3. 90分の進め方」の STEP 02、「6. 机間巡視の確認項目」）。HELPにも「ビルドシステムに IntelliJ がない」の行を置いている。</td></tr>
+<tr><td>ビルドシステムに <strong>Gradle ではなく IntelliJ</strong> を選ばせる</td><td>1コマ目で見せたいのは <code>val</code> / <code>var</code> と型推論の差分だけ。Gradleを入れると、設定ファイル・同期待ち・依存関係の説明が増え、比較の時間を食う。<strong>できあがるフォルダの形も変わり、以降6コマぶんの画面と手順が教科書と食い違う。</strong>Gradleは後半のAndroid系の単元で扱う。</td><td>STEP 02の表で <strong>ビルドシステム</strong> を <code>IntelliJ</code> と指定している。ここは学生が最も間違えやすい場所なので、<strong>机間巡視で最初に見る</strong>（「3. 90分の進め方」の STEP 02、「6. 机間巡視の確認項目」）。HELPにも「ビルドシステムに IntelliJ がない」の行を置いている。</td></tr>
 <tr><td><strong>「サンプルコードの追加」をONのまま</strong>作らせ、自分でコードを書く前に<strong>まず1回実行させる</strong></td><td>動く状態から始めれば、あとで動かなくなったときに疑う場所が<strong>自分が書き換えた行だけ</strong>になる。空のプロジェクトから始めると、JDKの選択・実行構成・書いたコードのどれが原因かを切り分けられず、質問が「動きません」で止まる。ウィザードが作る <code>Main.kt</code> は、<code>fun main()</code> がクラスの外にあるKotlinの形そのものでもある。</td><td>STEP 02で、まず <code>src/Main.kt</code> をそのまま実行させ、コンソールに出力が出ることを全員で確認する。そのあと <code>Main.kt</code> を消し、<code>ex01</code> パッケージと <code>main.kt</code> を作らせる。</td></tr>
 <tr><td>学生にも <code>src/ex01/</code> パッケージを作らせ、<code>package ex01</code> を書かせる</td><td>リポジトリの完成プロジェクト <code>K01HelloKotlin</code> は、6コマぶんの演習を <code>src/exNN/</code> で分ける構成にしている。学生の手元も同じ形にしておくと、見本と1対1で比べられ、行き先を言葉で指定できる。2コマ目以降に <code>ex02</code>、<code>ex03</code> …を足していくときも、同じ操作の繰り返しで済む。</td><td>STEP 02で作らせる。Javaのパッケージと同じ考え方だと1文で伝え、Kotlinではフォルダ構成と一致させなくてもよいという細部には触れない。</td></tr>
 <tr><td><code>val</code> の再代入エラーを、STEP 05の練習Bで<strong>わざと出させる</strong></td><td>Javaの <code>final</code>、Swiftの <code>let</code> を知っているので、説明より「自分の画面に出たエラー文」のほうが対応付けが早い。STEP 03は <code>val</code> と <code>var</code> の書き分けに使い、エラーを出すのは書き分けを一度書いたあとにする。</td><td>STEP 05の練習Bで <code>number1 = 5</code> を書き足させ、その行の赤い波線と、再代入が拒否されたことを確認させてから消させる。あわせて「<code>val</code> は再代入禁止であって、中身が変わらない保証ではない」ことを口で言う。</td></tr>
@@ -77,11 +79,11 @@
 <table><thead><tr><th>扱わないこと</th><th>理由</th><th>どの回で扱うか</th></tr></thead><tbody>
 <tr><td>Null安全（<code>?</code> / <code>?.</code> / <code>?:</code> / <code>!!</code>）</td><td>受講生はSwiftのオプショナルを知っているので、比較の題材としては良いが、1コマに入れると差分が2つになる。今回の値はすべてnullにならないので、使わない記号を先に見せない。</td><td><code>ex02</code>（2コマ目）。ただし2コマ目で扱うのは <code>?</code> と <code>?.</code> の2つだけで、<code>?:</code> と <code>!!</code> はさらにあとに回す（「2コマ目で意図的に扱わないこと」）</td></tr>
 <tr><td>関数を自分で作る（<code>fun</code> の定義・引数・戻り値）</td><td>今回書く <code>fun</code> は <code>main</code> だけ。引数の書き方（<code>引数名: 型</code>）はSwiftと同じで、戻り値の書き方だけがJavaと違う。ここは1つのSTEPを取って比較したい。</td><td><code>ex03</code></td></tr>
-<tr><td>条件分岐と繰り返し（<code>if</code> / <code>when</code> / <code>for</code>）</td><td>出力が4行で固定のため、なくても完成する。Javaとほぼ同じ書き方なので、説明の優先度も低い。</td><td><code>ex05</code> / <code>ex06</code></td></tr>
-<tr><td>クラス・プロパティ・アクセサ（<code>get()</code> / <code>set()</code> / <code>field</code>）</td><td>「値に名前を付ける」ところに集中させるため。プライマリコンストラクタと <code>new</code> 不要は、Javaとの差が大きく、1コマ分の題材になる。</td><td><code>ex04</code> / <code>ex08</code></td></tr>
-<tr><td><strong>バイトコードの確認</strong>（Show Kotlin Bytecode → Decompile）</td><td>この回にはアクセサも自動生成コードもなく、見ても差分が現れない。バイトコードは「プロパティにアクセスするとアクセサメソッドが呼ばれている」ことを確かめるための道具なので、プロパティを扱う回に置く。</td><td><code>ex04</code>（前年度資料の 7.4）</td></tr>
+<tr><td>条件分岐と繰り返し（<code>if</code> / <code>when</code> / <code>for</code>）</td><td>出力が4行で固定のため、なくても完成する。Javaとほぼ同じ書き方なので、説明の優先度も低い。</td><td><code>if</code> は4コマ目の <code>ex05</code>、<code>for</code> は同じ回の <code>ex06</code>。<code>when</code> は今回の完成コードにないため、必要な題材が出たとき。</td></tr>
+<tr><td>クラス・プロパティ・アクセサ（<code>get()</code> / <code>set()</code> / <code>field</code>）</td><td>「値に名前を付ける」ところに集中させるため。プライマリコンストラクタと <code>new</code> 不要は、Javaとの差が大きく、まとまった比較時間を取る。</td><td>クラスと既定getterは4コマ目の <code>ex04</code>、カスタムアクセサは5コマ目の <code>ex08</code></td></tr>
+<tr><td><strong>バイトコードの確認</strong>（Show Kotlin Bytecode → Decompile）</td><td>この回にはアクセサも自動生成コードもなく、見ても差分が現れない。バイトコードは「プロパティにアクセスするとアクセサメソッドが呼ばれている」ことを確かめるための道具なので、プロパティを扱う回に置く。</td><td>4コマ目の <code>ex04</code>、STEP 22⑤（前年度資料の 7.4）。教員の画面で5分の実演。</td></tr>
 <tr><td><code>data class</code>・スマートキャスト・拡張関数</td><td>今回はクラスを作らない。拡張関数はSwiftの <code>extension</code> と同じ発想なので、比較の題材としてまとめて扱いたい。</td><td><code>ex09</code> / <code>ex07</code></td></tr>
-<tr><td>コレクション（<code>List</code> / <code>map</code>）・<code>by lazy</code></td><td>値が4つしかないため、まとめて扱う必要がない。</td><td><code>ex10</code> / <code>ex11</code></td></tr>
+<tr><td>コレクション（<code>List</code> / <code>map</code>）・<code>by lazy</code></td><td>1コマ目は値が4つだけなので、まとめて扱う必要がない。</td><td>リストを作って読む形は4コマ目の <code>ex06</code>。変換操作の <code>map</code> と <code>by lazy</code> は6コマ目の <code>ex10</code> / <code>ex11</code>。</td></tr>
 <tr><td><strong>Javaのプリミティブ型とラッパー型の詳細</strong>（<code>int</code> と <code>Integer</code>、オートボクシング、Kotlinの <code>Int</code> が何にコンパイルされるか）</td><td>Kotlinでは <code>Int</code> と書くだけで、使い分けの判断が要らない。「Java側の事情がどう消えたか」を語り始めると、今日の主題である書き方の差分から離れ、実行時の話に入ってしまう。</td><td>Java相互運用を扱う場面（この15コマでは扱いません）</td></tr>
 <tr><td><code>Long</code> / <code>Short</code> / <code>Byte</code> / <code>Char</code> / <code>Boolean</code> などの<strong>網羅</strong></td><td>完成コードにない型は出さない方針のため。型の一覧はJavaで学習済みで、Kotlinでも名前が違うだけ。使う3つ（<code>Int</code> / <code>Double</code> / <code>Float</code>）に絞り、リテラルの書き方の差（<code>3.0f</code>）だけを見せる。</td><td>必要になった単元</td></tr>
 <tr><td>文字列テンプレート（<code>$name</code>）と <code>String</code> の操作</td><td>1コマ目の新概念を1つに保つため。<code>$</code> を足すと「文字列の中と外」という別の話が増える。ウィザードのサンプルコードには <code>$i</code> が出てくるが、消すので説明しない。</td><td>あとの回（2コマ目の <code>ex02</code> でも扱わない）</td></tr>
@@ -138,21 +140,42 @@
 <h3>この3コマ目で意図的に扱わないこと</h3>
 <p>1コマ目・2コマ目と同じく、「あとの回で扱う」と書いたものは教科書の本文からは案内しません（まだ書かれていないSTEPへ本文で送らない方針のため）。教員が口頭で「それは次回」と言う用途の表です。<strong>この回はとくに、呼び出し側の書き方について質問が集中します。</strong>JavaにもSwiftにも、Kotlinの名前付き引数に似て見える書き方があるためです。行き先を決めておくと、その場で1文で返せます。</p>
 <table><thead><tr><th>扱わないこと</th><th>理由</th><th>どの回で扱うか</th></tr></thead><tbody>
-<tr><td><strong>Swiftの引数ラベル（<code>sum(a: 1, b: 2)</code>）と、Kotlinの名前付き引数（<code>sum(a = 1, b = 2)</code>）</strong></td><td>この2つは<strong>似ているだけで、別のしくみ</strong>である。Swiftのラベルは宣言側が決めて呼び出し側に強制するもの、Kotlinの名前付き引数は呼び出し側が任意で付けるもの。並べて出すと「同じ機能の書き方違い」として受け取られ、あとで直しにくい。しかも<strong>名前付き引数は「省略できる引数」と組にして初めて使いどころが出る</strong>ので、片方だけ先に出しても書く理由がない。</td><td>既定引数と<strong>同じ回で、組にして</strong>扱う。K01のあとの回か、Android系の単元（<code>A01</code>〜）。どちらで扱うかは、その回のSTEPを書くときに決める。</td></tr>
+<tr><td><strong>Swiftの引数ラベル（<code>sum(a: 1, b: 2)</code>）と、Kotlinの名前付き引数（<code>sum(a = 1, b = 2)</code>）</strong></td><td>この2つは<strong>似ているだけで、別のしくみ</strong>である。Swiftのラベルは宣言側が決めて呼び出し側に強制するもの、Kotlinの名前付き引数は呼び出し側が任意で付けるもの。並べて出すと「同じ機能の書き方違い」として受け取られ、あとで直しにくい。しかも<strong>名前付き引数は「省略できる引数」と組にして初めて使いどころが出る</strong>ので、片方だけ先に出しても書く理由がない。</td><td>5コマ目の <code>ex09</code> で、<code>copy(age = 25)</code> を使うときに、既定引数と<strong>組にして</strong>扱う。</td></tr>
 <tr><td>既定引数（引数に既定値を置いて、呼び出し側で省けるようにする書き方）</td><td>今日の2本は、引数を2つとも必ず渡す。既定値を置く場面がコードの中にない。上の名前付き引数と組にしたい。</td><td>同上（名前付き引数と同じ回）。</td></tr>
 <tr><td><strong>単一式関数（<code>fun sum(a: Int, b: Int) = a + b</code>）</strong></td><td><code>return</code> と、戻り値の型注釈を<strong>同時に</strong>省く書き方で、<strong>今日の主題である「戻り値の型をどこに書くか」が、コードから消える。</strong>先に見せると、標準の形を一度も書かないまま終わる学生が出る。手元で試すと通ってしまい、出力も同じ <code>3</code> になるので、「書けない」とも言えない。</td><td>K01のあとの回。式を多く書く <code>ex10</code>（前年度資料の §15 map関数）の前後が候補。その回のSTEPを書くときに決める。</td></tr>
 <tr><td><code>Unit</code> を<strong>型として</strong>扱うこと（<code>fun sum2(…): Unit</code> と書く、<code>Unit</code> を返す関数を値として渡す）</td><td><code>Unit</code> という型があること自体は、教科書STEP 16④で1回だけ見せる（上の教材方針）。<strong>そこから先、型として扱い始めると、値としての関数の話に入る。</strong>宣言の形が身につく前に出すと、今日の要点である「何も書かない」が揺らぐ。</td><td>ラムダ・高階関数を扱う回。戻り値の無い関数を値として渡すときに、<code>Unit</code> が型として画面に出てくる。</td></tr>
 <tr><td>ラムダ・高階関数（<code>{ a, b -&gt; a + b }</code>、関数を引数に渡す・関数を返す）</td><td>今日は「関数を宣言して、名前で呼ぶ」ところまで。<strong>関数を値として扱う話</strong>は、宣言の形が身につく前に出すと、どちらの <code>{ }</code> を見ているのか分からなくなる。</td><td><code>ex10</code>（前年度資料の §15 コレクション変換操作: map関数）の回。</td></tr>
 <tr><td>ローカル関数（<code>fun main()</code> の<strong>中</strong>に <code>fun</code> を書く形）</td><td>Kotlinでは<strong>書けてしまう</strong>が、使える書き方としては紹介しない。紹介すると、トップレベルに書く形と2つを同時に覚えることになり、「どちらで書けばよいか」という判断が増える。教科書は「入れ子にしません」とだけ書いている。</td><td>扱わない。間違って書いた学生への対応は下の「5. Java / Swift 経験者が躓きやすい点」にある。質問が出たら「書けますが、今日は外に書きます」で止める。</td></tr>
 <tr><td>同じ名前の関数を複数作る（オーバーロード）</td><td>Javaで学習済みで、Kotlinでも同じように書ける。今日は関数が2本しかなく、差が画面に出ない（「単元の範囲の決め方」2）。</td><td>必要になった単元。</td></tr>
-<tr><td>可変長引数（<code>vararg</code>）、<code>infix</code>、クラスの中のメソッド、拡張関数</td><td>網羅しても理解は増えず、読む量だけが増える（「単元の範囲の決め方」3）。クラスの中に関数を書く形は、クラスそのものを扱う回でまとめたい。拡張関数はSwiftの <code>extension</code> と同じ発想なので、これも1回でまとめたい。</td><td>クラスの中のメソッドは <code>ex04</code>（§7 クラス作成）、拡張関数は <code>ex07</code>（§10 拡張メソッド）の回。<code>vararg</code> と <code>infix</code> は必要になった単元。</td></tr>
+<tr><td>可変長引数（<code>vararg</code>）、<code>infix</code>、クラスの中のメソッド、拡張関数</td><td>網羅しても理解は増えず、読む量だけが増える（「単元の範囲の決め方」3）。クラスの中に関数を書く形は、クラスそのものを扱う回でまとめたい。拡張関数はSwiftの <code>extension</code> と同じ発想なので、これも1回でまとめたい。</td><td>クラスの中のメソッドは4コマ目の <code>ex04</code>、STEP 22④で一時的に追加してから戻す。拡張関数は5コマ目の <code>ex07</code>（§10 拡張メソッド）の回。<code>vararg</code> と <code>infix</code> は必要になった単元。</td></tr>
 </tbody></table>
 <div class="note"><p class="box-title">完成コードを説明するときの注意（3コマ目）</p><p><code>sum</code> / <code>sum2</code> という関数名、<code>a</code> / <code>b</code> という引数名、<code>sum</code> の <code>: Int</code>、<code>sum2</code> に戻り値の型を<strong>書かない</strong>こと、そして <code>fun main()</code> が2本より<strong>上</strong>にあることは変えません。教科書の3コマ目の完成コードは、<code>scripts/check-teaching-materials.py</code> が <code>K01HelloKotlin/src/ex03/main.kt</code> とバイト単位で照合します。<code>teacher/hello-kotlin/code/03-main.kt</code> も、同じ検査が <code>config/teaching-materials.json</code> の <code>mirrors</code> を見て、完成コードとバイト単位で照合します。1コマ目・2コマ目と同じく、3か所を同時に直してください。</p></div>
 <div class="note"><p class="box-title">完成コードを説明するときの注意（2コマ目）</p><p><code>val name1: String = &quot;Saito&quot;</code> の型注釈、<code>var name2: String?</code> の <code>?</code>、<code>name2?.count()</code> の <code>?.</code>、そして <code>count()</code>（<code>length</code> ではない）は変えません。教科書の2コマ目の完成コードは、<code>scripts/check-teaching-materials.py</code> が <code>K01HelloKotlin/src/ex02/main.kt</code> とバイト単位で照合します。<code>teacher/hello-kotlin/code/02-main.kt</code> も、同じ検査が <code>config/teaching-materials.json</code> の <code>mirrors</code> を見て、完成コードとバイト単位で照合します。1コマ目と同じく、3か所を同時に直してください。</p></div>
+
+<h3>4コマ目（<code>ex05</code> → <code>ex06</code> → <code>ex04</code>）の教材方針</h3>
+<p>この回は、Java / Swiftで書いた条件分岐・繰り返し・クラスを、Kotlinの記号と宣言へ置き換えます。<strong>概念の入門説明を繰り返さず、完成コードの3本を順に動かして比較します。</strong>条件式と繰り返しの短いコードを先に動かし、Javaとの差が多いクラスに30分を割きます。</p>
+<table><thead><tr><th>方針</th><th>理由</th><th>授業での扱い</th></tr></thead><tbody>
+<tr><td>授業順は <code>ex05</code> → <code>ex06</code> → <code>ex04</code></td><td>前の2本はクラスに依存しない。短い実行結果を確認してから、コンストラクタとプロパティの比較へ進める。</td><td>IDEの番号順ではなくSTEP 20 → 21 → 22の順。演習番号は前年度資料との対応として残す。</td></tr>
+<tr><td><code>ex05</code> は <code>if</code> と文字列の <code>==</code> に絞る</td><td>完成コードで見える差は、Javaなら <code>equals</code> と書く内容の比較を <code>==</code> と書けること。</td><td>Swiftの文字列比較と、Javaの <code>String.equals</code> を対応させる。<code>if</code> の結果を代入する形や <code>when</code> は足さない。</td></tr>
+<tr><td><code>listOf</code> は <code>ex06</code> で最小限紹介する</td><td>その場で書くリスト作成の行を、後の回へ送らずに説明するため。</td><td>3要素と3行の出力を対応させ、Javaの拡張for・Swiftのfor-inと比較する。<code>val</code> と、読み取り用の <code>List</code> の役割を分ける。</td></tr>
+<tr><td><code>Person</code> の1行の宣言を保つ</td><td>コンストラクタ引数に <code>val</code> を付けると、プロパティも宣言できる差をそのまま見せられる。</td><td>Javaのフィールド・コンストラクタ・getter、Swiftの保存用プロパティ・<code>init</code> と対応させる。Swiftの比較は <code>class</code> で、<code>struct</code> と同じ動作だとは説明しない。</td></tr>
+<tr><td>クラス内メソッドは5分の一時実演</td><td>3コマ目に <code>ex04</code> で扱うと予告済み。<code>fun</code> をクラス内へ置くことと、インスタンス経由の呼び出しだけを見せたい。</td><td>STEP 22④で <code>greet()</code> と <code>yamada.greet()</code> を足し、3行目の <code>Yamada</code> を見てから消す。完成コードには残さない。</td></tr>
+<tr><td>バイトコード確認は教員の実演5分</td><td>1コマ目から先送りした「プロパティの読み取りとgetterの対応」を、この回なら実物で見られる。逆コンパイル全体の読解は主題ではない。</td><td>STEP 22⑤で元の <code>Person</code> のコンストラクタ・<code>getName()</code>・<code>getAge()</code> を示す。命令列や生成された注釈は追わず、学生全員に同じ画面を開かせない。</td></tr>
+<tr><td>変数の <code>val</code> とプロパティの <code>val</code> を分ける</td><td><code>val yamada</code> だから <code>age</code> を変えられない、と説明すると役割を取り違える。</td><td>STEP 23②では <code>Person</code> の <code>val age: Int</code> と、止まった代入行を対応させる。</td></tr>
+</tbody></table>
+<h3>この4コマ目で意図的に扱わないこと</h3>
+<table><thead><tr><th>扱わないこと</th><th>理由・行き先</th></tr></thead><tbody>
+<tr><td><code>when</code>、<code>if</code> の結果を変数へ代入する形、<code>===</code></td><td>完成コードにない比較・分岐の書き方を増やさない。必要な題材が出たときに扱う。</td></tr>
+<tr><td>数値範囲、添字を使うfor、while、変更可能なリスト</td><td><code>ex06</code> は並べた要素を読む形だけにする。<code>map</code> は6コマ目の <code>ex10</code>。</td></tr>
+<tr><td>カスタム <code>get</code> / <code>set</code> / <code>field</code>、<code>data class</code>、拡張関数</td><td>クラスとプロパティの基本形を先に書く。5コマ目の <code>ex08</code> → <code>ex09</code> → <code>ex07</code> で扱う。</td></tr>
+<tr><td>名前付き引数・既定引数</td><td>この回は <code>Person("Yamada", 20)</code> にそろえる。5コマ目の <code>ex09</code> の <code>copy(age = 25)</code> で組にして説明する。</td></tr>
+<tr><td>継承・<code>open</code>・複数のコンストラクタ、JVM命令や生成コードの詳細</td><td>今回の出力で必要な差に絞る。メソッド実演やバイトコード実演を、クラス機能の網羅へ広げない。</td></tr>
+</tbody></table>
+<div class="note"><p class="box-title">完成コードを説明するときの注意（4コマ目）</p><p><code>ex05</code> の <code>flag</code>・<code>yamada</code> と文字列の大文字・小文字、<code>ex06</code> の <code>persons</code>・<code>person</code>、<code>ex04</code> の <code>Person</code>・<code>name</code>・<code>age</code> は変えません。<code>Person</code> に <code>data</code> や <code>var</code> を足しません。<strong><code>greet()</code> の実演とミニ練習は一時変更で、最後に3本とも完成コードへ戻します。</strong>完成ソース・教科書・教員用複製の対応は「9. 教材の保守と確認」にまとめています。</p><p>この3本は、Kotlin 2.4.10のコンパイラで警告なしで通り、上記の出力になることを確認しています。IDE独自の検査表示とは区別し、色が付いたことだけで完成コードと違うと決めず、該当行と表示内容を確認します。</p></div>
 </section>
 
-<section><h2>3. 90分の進め方（1コマ目 ＝ <code>ex01</code> / 2コマ目 ＝ <code>ex02</code> / 3コマ目 ＝ <code>ex03</code>）</h2>
-<p>ここに書くのは、<strong>6コマのうち1コマ目から3コマ目までの、それぞれ90分</strong>です。4コマ目以降の進め方は、その回のSTEPを教科書に足すときに、この節へ表を足します。</p>
+<section><h2>3. 90分の進め方（1コマ目 ＝ <code>ex01</code> / 2コマ目 ＝ <code>ex02</code> / 3コマ目 ＝ <code>ex03</code> / 4コマ目 ＝ <code>ex05</code> → <code>ex06</code> → <code>ex04</code>）</h2>
+<p>ここに書くのは、<strong>6コマのうち1コマ目から4コマ目までの、それぞれ90分</strong>です。5コマ目以降の進め方は、その回のSTEPを教科書に足すときに、この節へ表を足します。</p>
 <p>STEPの区切り・見出し・目安時間は、教科書の各STEPの見出し（<code>step-meta</code>）に合わせています。教科書のSTEP構成や目安時間を変えたときは、この表も同時に直します。</p>
 <h3>1コマ目（<code>ex01</code> ＝ 変数宣言と数の型）の90分</h3>
 <table><thead><tr><th>STEP</th><th>目安</th><th>教員がすること</th><th>終了時の確認</th></tr></thead><tbody>
@@ -224,6 +247,20 @@
 <p><strong>目安時間の合計は 5＋5＋30＋20＋15＋15 ＝ 90分</strong>で、1コマにちょうど収まります。遅れが出たときは、<strong>STEP 17の15分から先に削ります。</strong>練習Cの2分、練習Bの4分の順です。<strong>STEP 15の30分とSTEP 16の20分は削りません。</strong>ここを削ると、並びの突き合わせをしないまま「Kotlinの関数を書いた」だけで終わります。</p>
 <p>遅れている学生は、<strong>STEP 16（2行が出る）までの到達を優先</strong>します。STEP 17は元に戻す練習なので、到達していなくても次の回に影響しません。<strong>STEP 14（<code>ex03</code> パッケージができている）で止まっている学生は、その場で追いつかせます。</strong>ここが終わっていないと、この回のコードを1行も書けません。</p>
 <p>進みが速い学生には、<code>sum</code> の中の <code>return a + b</code> を、<strong>変数に入れてから返す</strong>形（<code>val total = a + b</code> のあと <code>return total</code>）に書き換えて、同じ <code>3</code> が出るかを確かめさせます。<strong>単一式関数（<code>= a + b</code>）や名前付き引数は渡しません</strong>（「この3コマ目で意図的に扱わないこと」）。</p>
+
+<h3>4コマ目（<code>ex05</code> → <code>ex06</code> → <code>ex04</code>）の90分</h3>
+<p>同じ <code>K01HelloKotlin</code> を開き直し、各演習の最初にパッケージと <code>main.kt</code> を作ります。<strong>今日の3本は、過去の演習も互いのコードも呼びません。</strong>先週の未完成を理由に、今日の演習まで止めないようにします。</p>
+<table><thead><tr><th>STEP</th><th>目安</th><th>教員がすること</th><th>終了時の確認</th></tr></thead><tbody>
+<tr><td>STEP 19 4コマ目のゴール（条件式・繰り返し・クラス）</td><td>5分</td><td>自分のプロジェクトを開かせる。今日の出力表と3言語の見取り図で、<code>if</code>・<code>for</code>・インスタンス作成を対応させる。</td><td><code>src</code> と教科書の4コマ目が開いている。以前のパッケージが残っている。</td></tr>
+<tr><td>STEP 20 ex05 を作る：if と文字列の比較</td><td>20分</td><td><code>ex05</code> を作って2行を出させる。Javaの <code>equals</code>、Swiftの <code>==</code> と比較する。④で <code>flag</code> だけを <code>false</code> にし、1行目の変化を見てから戻す。</td><td><code>package ex05</code> があり、<code>flag is true</code> / <code>string is not Tanaka</code> の2行が出る。</td></tr>
+<tr><td>STEP 21 ex06 を作る：listOf と for</td><td>20分</td><td><code>ex06</code> を作り、<code>persons</code> と <code>person</code> を区別して3行を出させる。Javaの拡張for・Swiftのfor-inと比較。④で先頭と末尾を入れ替え、出力順を見てから戻す。</td><td><code>tanaka</code> / <code>yamada</code> / <code>sato</code> の3行が、<code>listOf</code> の順で出る。</td></tr>
+<tr><td>STEP 22 ex04 を作る：クラスとプライマリコンストラクタ</td><td>30分</td><td>①〜③の20分で <code>ex04</code> を作り、Javaのフィールド・コンストラクタ・getter、Swiftの <code>init</code> と比較する。④の5分は <code>greet()</code> を一時追加して戻す。⑤の5分は教員の画面で生成されたgetterを示す。</td><td><code>val name</code>・<code>val age</code> があり、メソッド実演を消して <code>Yamada</code> / <code>20</code> の2行へ戻っている。教員画面で <code>getName()</code>・<code>getAge()</code> を確認した。</td></tr>
+<tr><td>STEP 23 ミニ練習：変えた行と出力を対応させる</td><td>12分</td><td>①の6分で <code>ex05</code> の <code>flag</code> を <code>false</code>、文字列を <code>"Tanaka"</code> にし、<code>ex06</code> の末尾へ <code>"suzuki"</code> を足す。②・③の3分で <code>age</code> への代入を試し、3言語で読み取り専用の形を比較。④の3分で全変更を戻す。</td><td>条件を変えた2行、4人目の出力、<code>age</code> への代入が止まった行を確認し、3本とも完成出力へ戻っている。</td></tr>
+<tr><td>STEP 24 4コマ目の完成</td><td>3分</td><td>3本をそれぞれの <code>fun main()</code> から実行させる。文字列比較・<code>for</code>・プロパティ参照を比較欄と照合し、パッケージを確認する。</td><td>3つの実行結果が表と一致し、練習の追加行がない。<code>src</code> に <code>ex04</code>・<code>ex05</code>・<code>ex06</code> がある。</td></tr>
+</tbody></table>
+<p><strong>合計は 5＋20＋20＋30＋12＋3＝90分</strong>です。STEP 22の30分は基本形の入力と比較20分・メソッド実演5分・バイトコード実演5分、STEP 23の12分は変更と実行6分・代入と比較3分・復元3分に分けます。教科書の <code>step-meta</code> と同じ値にします。</p>
+<p>遅れが出たときは、<strong>STEP 23①の6分から先に短縮します</strong>。条件の変更と4人目の追加を教員の実演に切り替えます。<strong>STEP 23④の復元3分とSTEP 24の完成確認3分は残します。</strong>最低到達点は、3演習の完成出力をそれぞれ出せることです。STEP 22④の入力が間に合わない学生は教員画面でメソッド実演を見て、元の <code>Person</code> を保ちます。クラスの比較時間を全部削って生成コードだけを見せる形にはしません。</p>
+<p>進みが速い学生には、<code>ex05</code> の文字列、<code>ex06</code> の要素順、<code>ex04</code> の名前・年齢のいずれか1か所だけ変えさせ、該当する出力を確認させます。新しいAPIや継承は渡さず、完成確認の前に元へ戻します。</p>
 </section>
 
 <section><h2>4. Playground と IntelliJ IDEA の使い分け</h2>
@@ -242,7 +279,7 @@
 <p>ここに挙げるのは、プログラミングが初めてだから起きることではなく、<strong>JavaとSwiftを知っているから起きる</strong>間違いです。見回りで探す対象もこの表にそろえます。</p>
 <h3>1コマ目（<code>ex01</code>）</h3>
 <table><thead><tr><th>症状</th><th>原因（どの言語の癖か）</th><th>その場での直し方</th></tr></thead><tbody>
-<tr><td><code>val</code> を「中身まで変わらないもの」だと説明してしまう / そう受け取る</td><td>Javaの <code>final</code> と同じで、<strong>再代入が禁止されるだけ</strong>。参照先のオブジェクトの中身は変えられる。Swiftの <code>let</code> は構造体では中身も変わらないため、Swift側の感覚とずれる。</td><td>「<code>val</code> は名前の付け替えを禁止する。箱の中身の話ではない」と言い直す。この単元の値は数と文字列だけなので差は出ない。実際の差はコレクションを扱う <code>ex10</code> の回で見せる、と伝えて先へ進む。</td></tr>
+<tr><td><code>val</code> を「中身まで変わらないもの」だと説明してしまう / そう受け取る</td><td>Javaの <code>final</code> と同じで、<strong>再代入が禁止されるだけ</strong>。参照先のオブジェクトの中身は変えられる。Swiftの <code>let</code> は構造体では中身も変わらないため、Swift側の感覚とずれる。</td><td>「<code>val</code> は名前の付け替えを禁止する。箱の中身の話ではない」と言い直す。1コマ目の値は数と文字列だけなので差は出ない。実際の差はコレクションを扱う <code>ex10</code> の回で見せる、と伝えて先へ進む。</td></tr>
 <tr><td><code>val number3: Float = 3.0</code> と書いて、赤いエラーが出る</td><td>Swiftでは型注釈を書けばリテラルがその型になる。Kotlinでは <code>3.0</code> は <code>Double</code> のままで、<code>Float</code> へ暗黙に変換されない。</td><td><code>3.0f</code> と書かせる。「型を書けば合わせてくれる」のではなく「<strong>リテラルの書き方で型が決まる</strong>」という順序に直す。教科書STEP 04の比較表を一緒に読む。</td></tr>
 <tr><td><code>f</code> を付けずに <code>Float</code> のつもりで進み、型が <code>Double</code> になっている</td><td>Javaでも <code>float f = 3.0;</code> はエラーだが、Kotlinは型を書かないので<strong>エラーにならず通ってしまう</strong>。</td><td><code>number3</code> にマウスを重ねて、推論された型を画面で見せる。出力の <code>3.0</code> だけでは見分けが付かないことを伝える。</td></tr>
 <tr><td>行末にセミコロンを付けている</td><td>Javaの癖。Kotlinはセミコロンを許容するので<strong>コンパイルが通ってしまう</strong>。IDEの設定によっては弱い警告が出ることはあるが、赤いエラーにはならないため、指摘しなければ癖が残る。</td><td>付けさせる練習はしません。教科書STEP 03のPOINT「Swiftと同様に文末のセミコロン（<code>;</code>）が不要です」をその場で読ませます。見回りで残っているのを見つけたら消させ、消しても動くことを1回実行して見せる。Swiftも不要だった、と対応付けると残りやすい。以降の回でも、見回りでセミコロンを探す。</td></tr>
@@ -290,6 +327,20 @@
 <tr><td>練習Cのあと、<code>return</code> が消えたまま赤くなっている</td><td>元に戻す手順を飛ばした。</td><td><code>return a + b</code> に戻させる。「<code>: Int</code> と書いたら <code>return</code> で返す」を教科書STEP 17のPOINTで確かめさせる。</td></tr>
 <tr><td><code>package ex02</code> のままの <code>main.kt</code> が <code>ex03</code> の中にある</td><td>先週のファイルをコピーして作った。</td><td>1行目を <code>package ex03</code> に直させる。置き場所が <code>ex03</code> の中であることも確かめさせる。</td></tr>
 <tr><td>実行すると <code>5</code> / <code>null</code> / <code>6</code> が出る</td><td>先週の <code>ex02</code> の <code>main</code> を実行している。</td><td><code>ex03/main.kt</code> を開かせ、その <code>fun main()</code> の左の ▷ から実行させる。</td></tr>
+</tbody></table>
+
+<h3>4コマ目（<code>ex05</code>・<code>ex06</code>・<code>ex04</code>）</h3>
+<table><thead><tr><th>症状</th><th>原因・見る場所</th><th>その場での直し方</th></tr></thead><tbody>
+<tr><td><code>ex04</code> から書き始める</td><td>IDEの番号順を授業順だと思っている。</td><td>教科書のSTEP順、<code>ex05</code> → <code>ex06</code> → <code>ex04</code> を示す。番号を変えない。</td></tr>
+<tr><td>文字列比較を <code>equals</code> に書き換える</td><td>Javaで学んだ内容比較の形を使っている。</td><td>Kotlinでは文字列の <code>==</code> が内容の等価性を調べると、Javaの比較欄と対応させる。完成コードは <code>==</code> に戻す。</td></tr>
+<tr><td><code>Tanaka</code> と <code>tanaka</code> で結果が違う</td><td>文字列の大文字・小文字を見落としている。</td><td>比較式の <code>"Tanaka"</code> と、<code>yamada</code> に代入した値を画面で並べる。</td></tr>
+<tr><td>forにJavaの型とコロンを書く／Swiftのように丸かっこを省く</td><td>前の言語の構文が手に残っている。</td><td><code>for (person in persons)</code> をKotlinの比較欄と照合する。要素を受ける名前に <code>val</code> は付けない。</td></tr>
+<tr><td><code>person</code> と <code>persons</code> を取り違える</td><td>1要素とリスト全体の名前が似ている。</td><td><code>listOf</code> の行と <code>for</code> の行を指す。<code>println</code> に渡すのは <code>person</code>。</td></tr>
+<tr><td><code>new Person(...)</code> と書いて止まる</td><td>Javaのオブジェクト作成の形。</td><td><code>new</code> を消して <code>Person("Yamada", 20)</code> に戻す。Swiftにも <code>new</code> はなかった、と対応させる。</td></tr>
+<tr><td><code>Person</code> の引数から <code>val</code> を消すと、<code>yamada.name</code> が止まる</td><td>コンストラクタ引数名だけで、外から読むプロパティも宣言されると思っている。</td><td><code>name</code> の前の <code>val</code> を戻し、宣言と読み取りの行を対応させる。</td></tr>
+<tr><td><code>yamada.age = 21</code> が止まり、<code>val yamada</code> を <code>var</code> にしようとする</td><td>変数の再代入とプロパティへの代入を混同している。</td><td><code>Person</code> の <code>val age: Int</code> を指す。練習の代入行を消し、変数も元の <code>val</code> に戻す。</td></tr>
+<tr><td><code>ex04</code> が3行、または <code>ex06</code> が4行のまま</td><td>メソッド実演かミニ練習を戻していない。</td><td><code>greet()</code> の宣言・呼び出し、<code>"suzuki"</code> を探して消す。STEP 23④の復元時間を確保する。</td></tr>
+<tr><td>別の演習の出力が出る／コピーしたpackageが前の番号のまま</td><td>同じ <code>main.kt</code> が増え、実行対象や先頭行を取り違えている。</td><td>フォルダ名と <code>package exNN</code> をそろえ、いま開いている <code>fun main()</code> 左の ▷ から実行する。</td></tr>
 </tbody></table>
 </section>
 
@@ -368,6 +419,25 @@
 <tr><td>出力の2行のうち、2行目の <code>3</code> はどの <code>println</code> が出していますか。</td><td><code>sum2</code> の中の <code>println</code>、と答える。1行目は <code>main</code> の <code>println(ret)</code>。</td></tr>
 <tr><td><code>sum2</code> は、何も返していませんか。</td><td><code>Unit</code> を返している、と答える。STEP 16④で <code>kotlin.Unit</code> が出たのがその値。</td></tr>
 </tbody></table>
+
+<h3>4コマ目（<code>ex05</code>・<code>ex06</code>・<code>ex04</code>）で見る場所</h3>
+<p>パッケージが3つ増えるので、まず開いているファイルと実行対象を見ます。各演習の入力が終わったところで、出力と宣言を対応させます。</p>
+<table><thead><tr><th>見る場所</th><th>画面で確認すること</th><th>合っていないときの対応</th></tr></thead><tbody>
+<tr><td>プロジェクトと <code>src</code></td><td>自分の <code>K01HelloKotlin</code> に以前の演習が残り、当日のパッケージが増えている。</td><td>新規プロジェクトを作らせず、本人の保存先を開き直す。</td></tr>
+<tr><td><code>ex05</code> の比較式とRun</td><td><code>==</code> の行と完成時の2行が対応している。</td><td>大文字・小文字、<code>flag</code> の値、実行対象を確認する。</td></tr>
+<tr><td><code>ex06</code> の <code>listOf</code>・<code>for</code>・Run</td><td>3要素と出力順が一致し、<code>println</code> に渡しているのは <code>person</code>。</td><td>リスト全体と1要素を受ける名前を指して対応させる。</td></tr>
+<tr><td><code>ex04</code> のclass宣言とRun</td><td><code>val name</code>・<code>val age</code> があり、<code>Yamada</code> / <code>20</code> が出る。</td><td>引数の <code>val</code>、<code>new</code>、メソッド実演の残りを見る。</td></tr>
+<tr><td>STEP 23②の代入行</td><td><code>yamada.age = 21</code> が止まる位置を画面で確認している。</td><td>エラー文を暗記させず、宣言側の <code>val age</code> と対応させる。</td></tr>
+<tr><td>STEP 24の完成確認</td><td>3本とも完成出力へ戻り、以前の演習も残っている。</td><td>追加行・変更した文字列・要素を完成コードと照合する。</td></tr>
+</tbody></table>
+<h3>理解確認に使う短い問い（4コマ目）</h3>
+<table><thead><tr><th>問い</th><th>見たい答え・行動</th></tr></thead><tbody>
+<tr><td><code>ex05</code> の文字列比較はJavaではどう書きますか。</td><td><code>"Tanaka".equals(yamada)</code>。Kotlinの <code>==</code> の行を指す。</td></tr>
+<tr><td><code>persons</code> と <code>person</code> はどちらが1人分ですか。</td><td><code>person</code> が1人分。<code>persons</code> は <code>List&lt;String&gt;</code>、<code>person</code> は <code>String</code>。</td></tr>
+<tr><td><code>Person</code> の引数に付く <code>val</code> は何を宣言していますか。</td><td><code>name</code> と <code>age</code> の読み取り用プロパティ。class宣言と2つの読み取り行を指す。</td></tr>
+<tr><td>Java側でnameとageを読むメソッド名は何ですか。</td><td><code>getName()</code> と <code>getAge()</code>。教員のDecompile画面の該当箇所を指す。</td></tr>
+<tr><td>一時追加した <code>greet()</code> はどこに置き、どう呼びましたか。</td><td><code>Person</code> の中に置き、<code>yamada.greet()</code> で呼ぶ。完成版では宣言と呼び出しの両方が消えている。</td></tr>
+</tbody></table>
 </section>
 
 <section><h2>7. 前年度の資料（PDF）との対応</h2>
@@ -375,25 +445,31 @@
 <div class="note"><p class="box-title">PDFの置き場</p><p>PDFは <code>~/Documents/jec-25cm-kotlin-verification-deliverables/</code> に置いています。<strong>このリポジトリにはcommitしません。</strong>配布物ではないうえ、教材本体はHTMLに移したためです。教員の手元にPDFがないときは、上のフォルダを教員間で共有してください。PDFの図とスクリーンショットも、今年の教材には持ち込みません。前年度はAndroid Studioの画面で解説しており、今年のIntelliJ IDEAの画面と違うためです。教科書STEP 02の画面写真は、今年の環境で撮り直したものです。</p></div>
 <div class="note"><p class="box-title">前年度も、プロジェクトは1つだった</p><p>前年度の資料は、1つの <code>HelloKotlin</code> プロジェクトに、節ごとのファイル（<code>Main01</code>、<code>Main02</code> …）を足していく形で進みます。<strong>今年の K01HelloKotlin も同じ形で、ファイルの代わりに <code>src/exNN/</code> のパッケージを足します。</strong>節ごとにプロジェクトを作り直す形ではありません（「2. この単元の教材方針」）。</p></div>
 <h3>PDFの節と、この単元の回の対応</h3>
-<p><strong>PDFの §4〜§16 が、<code>ex01</code>〜<code>ex11</code> に対応します。この11本を6コマかけて進めます。</strong>読み方は「<strong>§4 変数宣言、代入処理 ＝ <code>ex01</code> ＝ この単元の1コマ目</strong>」「<strong>§5 Null許容の変数宣言と安全な呼び出し ＝ <code>ex02</code> ＝ この単元の2コマ目</strong>」「<strong>§6 メソッド作成 ＝ <code>ex03</code> ＝ この単元の3コマ目</strong>」です。<code>exNN</code> の番号は前年度資料の節の順です。新しい番号を勝手に振らず、その節の演習として置きます。</p>
+<p><strong>PDFの §4〜§16 が、<code>ex01</code>〜<code>ex11</code> に対応します。この11本を6コマかけて進めます。</strong>読み方は「<strong>§4 変数宣言、代入処理 ＝ <code>ex01</code> ＝ この単元の1コマ目</strong>」「<strong>§5 Null許容の変数宣言と安全な呼び出し ＝ <code>ex02</code> ＝ この単元の2コマ目</strong>」「<strong>§6 メソッド作成 ＝ <code>ex03</code> ＝ この単元の3コマ目</strong>」です。<code>exNN</code> の番号は前年度資料の節の順です。新しい番号を勝手に振らず、その節の演習として置きます。<strong>番号順と授業順は別です。</strong>4コマ目以降は、教科書のSTEP順と下の割当で進めます。</p>
 <table><thead><tr><th>PDFの節</th><th>演習</th><th>この単元での扱い</th></tr></thead><tbody>
 <tr><td>4 変数宣言、代入処理</td><td><code>ex01</code></td><td><strong>1コマ目（この資料が扱う回）</strong>。教科書のSTEP 03・STEP 04。</td></tr>
 <tr><td>5 Null許容の変数宣言と安全な呼び出し</td><td><code>ex02</code></td><td><strong>2コマ目（この資料が扱う回）</strong>。教科書のSTEP 09・STEP 10。</td></tr>
 <tr><td>6 メソッド作成</td><td><code>ex03</code></td><td><strong>3コマ目（この資料が扱う回）</strong>。教科書のSTEP 15・STEP 16。</td></tr>
-<tr><td>7 クラス作成（7.4 バイトコードの確認方法もここ）</td><td><code>ex04</code></td><td>4コマ目以降。教科書に同じ形でSTEPを足す。</td></tr>
-<tr><td>8 条件式（if文）</td><td><code>ex05</code></td><td>同上</td></tr>
-<tr><td>9 繰り返し（for文）</td><td><code>ex06</code></td><td>同上</td></tr>
-<tr><td>10 拡張メソッド</td><td><code>ex07</code></td><td>同上</td></tr>
-<tr><td>11 アクセサメソッドをカスタマイズ</td><td><code>ex08</code></td><td>同上</td></tr>
-<tr><td>12 data class（13 スマートキャストもここで一緒に見せる）</td><td><code>ex09</code></td><td>同上</td></tr>
-<tr><td>15 コレクション変換操作: map関数（14 Kotlin Standard Library はその導入）</td><td><code>ex10</code></td><td>同上</td></tr>
-<tr><td>16 Lazyプロパティ</td><td><code>ex11</code></td><td>同上</td></tr>
+<tr><td>7 クラス作成（7.4 バイトコードの確認方法もここ）</td><td><code>ex04</code></td><td><strong>4コマ目</strong>。STEP 22。メソッドの一時実演と、教員のバイトコード実演もここで行う。</td></tr>
+<tr><td>8 条件式（if文）</td><td><code>ex05</code></td><td><strong>4コマ目の1本目</strong>。STEP 20。</td></tr>
+<tr><td>9 繰り返し（for文）</td><td><code>ex06</code></td><td><strong>4コマ目の2本目</strong>。STEP 21。</td></tr>
+<tr><td>10 拡張メソッド</td><td><code>ex07</code></td><td>5コマ目の3本目。教科書・ガイドは今後追加。</td></tr>
+<tr><td>11 アクセサメソッドをカスタマイズ</td><td><code>ex08</code></td><td>5コマ目の1本目。教科書・ガイドは今後追加。</td></tr>
+<tr><td>12 data class（13 スマートキャストもここで一緒に見せる）</td><td><code>ex09</code></td><td>5コマ目の2本目。教科書・ガイドは今後追加。</td></tr>
+<tr><td>15 コレクション変換操作: map関数（14 Kotlin Standard Library はその導入）</td><td><code>ex10</code></td><td>6コマ目の1本目。教科書・ガイドは今後追加。</td></tr>
+<tr><td>16 Lazyプロパティ</td><td><code>ex11</code></td><td>6コマ目の2本目。教科書・ガイドは今後追加。</td></tr>
 </tbody></table>
 <p>演習に対応しない節は次のとおりです。<strong>1 はじめに</strong> と <strong>2 Kotlinの概要</strong> は、教科書のSTEP 00で1〜2分だけ触れます（JVM言語であること、Javaと相互運用できること、Null安全であること）。Null安全の中身は2コマ目（<code>ex02</code>）で扱います。<strong>3 開発環境：Playground編</strong> は教科書のSTEP 01です。PDFと同じく、環境構築の前にブラウザで1回動かします。PDFの画面構成の説明（バージョン切り替え・共有・実行ボタン）は、教員が口頭で補います。<strong>17 まとめ</strong> と <strong>18 Kotlin言語のドキュメント</strong> は、教科書の「もっと知りたいとき」に置き換えています。</p>
 <p>1コマ目に入れるのは <code>ex01</code> だけです。<strong>PDFの §4 のPOINT（<code>val</code> は再代入禁止、<code>var</code> は再代入可能、Swiftと同様に型推論が効く、Swiftと同様にセミコロン不要）が、そのまま1コマ目の要点です。</strong></p>
 <p>2コマ目に入れるのも <code>ex02</code> だけです。<strong>PDFの §5 のPOINT（型の最後に <code>?</code> を付けなければnullを代入できずコンパイルエラーになる、<code>?</code> を付ければNull許容になる、<code>?.</code> を付けた呼び出しは変数がnullならメソッドを実行せずnullを返す）が、そのまま2コマ目の要点です。</strong>PDFも <code>name2</code> という変数に <code>count</code> を <code>?</code> 付きで呼ぶ形で書かれており、今年の <code>ex02</code> はその題材をそのまま引き継いでいます。<strong>ただし、授業で示す実行結果はPDFの画像ではなく、今年の完成コード <code>K01HelloKotlin/src/ex02/main.kt</code> を実際に実行して得た3行（<code>5</code> / <code>null</code> / <code>6</code>）です。</strong></p>
 <p>3コマ目に入れるのも <code>ex03</code> だけです。<strong>PDFの §6 のPOINT（メソッドの先頭に <code>fun</code> を付ける、戻り値がある場合は最後に「<code>: 型名</code>」を付ける、引数は「<code>引数名: 型</code>」と書く、戻り値がない場合は何も付けない）が、そのまま3コマ目の要点です。</strong>PDFも <code>sum</code> と <code>sum2</code> の2本で書かれており、今年の <code>ex03</code> はその題材をそのまま引き継いでいます。PDFは「メソッド」と呼んでいますが、教科書ではクラスに属さないトップレベルの <code>fun</code> を「関数」と呼び、クラスの中のものを扱う回（<code>ex04</code>）と分けています。<strong>授業で示す実行結果は、今年の完成コード <code>K01HelloKotlin/src/ex03/main.kt</code> を実際に実行して得た2行（<code>3</code> / <code>3</code>）です。</strong></p>
-<p>1コマ目から3コマ目までは1本ずつ扱い、残り8本（<code>ex04</code>〜<code>ex11</code>）を4〜6コマ目の3コマで進めます。どの回で何本進めるかは、今後決めます。<strong>1コマ目から3コマ目までは、それぞれJava / Swiftとの比較に時間を使う構成です。</strong></p>
+<p><strong>4コマ目は <code>ex05</code> → <code>ex06</code> → <code>ex04</code> の3本です。</strong>これで <code>ex01</code>〜<code>ex06</code> の6本を扱います。クラス内のメソッドはSTEP 22④で一時追加し、完成コードに戻します。前年度資料の7.4は、STEP 22⑤の教員実演に対応します。</p>
+<table><thead><tr><th>コマ</th><th>授業順</th><th>教材の状態</th></tr></thead><tbody>
+<tr><td>4</td><td><code>ex05</code> 条件式 → <code>ex06</code> 繰り返し → <code>ex04</code> クラス</td><td>STEP 19〜24と、このガイドに掲載済み。</td></tr>
+<tr><td>5</td><td><code>ex08</code> アクセサ → <code>ex09</code> data class → <code>ex07</code> 拡張関数</td><td>残り5本のうち3本。教材は今後追加。</td></tr>
+<tr><td>6</td><td><code>ex10</code> map → <code>ex11</code> lazy</td><td>残りの2本。教材は今後追加。</td></tr>
+</tbody></table>
+
 <p>PDFを読み返すときの注意が1つあります。PDFの「他言語との比較」はJava 8を前提に書かれた時期があり、Androidで使えるJavaの版についての記述も当時のものです。<strong>版の話はそのまま読み上げず、授業で使う環境に合わせて言い直してください。</strong>比較の趣旨（Kotlinだと何行減るか、どの記号が消えるか）は今でもそのまま使えます。</p>
 </section>
 
@@ -452,19 +528,39 @@
 <tr><td>次に再開できる</td><td>できたSTEPと困っている場所を、教員が聞き取って記録する。<code>src</code> に <code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることも確かめる。</td></tr>
 </tbody></table>
 <p><strong>上の5つは、どれも画面で確かめられる形にしてあります。</strong>この回は新しい考え方を入れない回なので、JavaやSwiftの宣言の形が手に残っていないかを、2つ目と3つ目で見ます。エラーメッセージの文言は覚えさせません（IntelliJ IDEA と Kotlin の版で変わります）。</p>
+<h3>4コマ目（<code>ex05</code>・<code>ex06</code>・<code>ex04</code>）の再開地点</h3>
+<table><thead><tr><th>確認するステップ</th><th>照合するコード</th><th>そのとき出る出力・画面</th></tr></thead><tbody>
+<tr><td>STEP 19完了</td><td><a href="../../docs/hello-kotlin/index.html#step-19">教科書STEP 19の操作</a></td><td>自分の <code>K01HelloKotlin</code> が開いている。</td></tr>
+<tr><td>STEP 20完了</td><td><a href="code/05-main.kt">05-main.kt</a></td><td><code>flag is true</code> / <code>string is not Tanaka</code> の2行。</td></tr>
+<tr><td>STEP 21完了</td><td><a href="code/06-main.kt">06-main.kt</a></td><td><code>tanaka</code> / <code>yamada</code> / <code>sato</code> の3行。</td></tr>
+<tr><td>STEP 22完了</td><td><a href="code/04-main.kt">04-main.kt</a></td><td>メソッド実演を戻し、<code>Yamada</code> / <code>20</code> の2行。getterは教員画面で確認する。</td></tr>
+<tr><td>STEP 23・24完了</td><td>上の3つの複製コード</td><td>3本とも完成出力へ戻り、練習の追加行が残っていない。</td></tr>
+</tbody></table>
+<p>複製コードの番号は演習番号です。<a href="code/05-main.kt">05-main.kt</a> は <a href="../../K01HelloKotlin/src/ex05/main.kt">ex05/main.kt</a>、<a href="code/06-main.kt">06-main.kt</a> は <a href="../../K01HelloKotlin/src/ex06/main.kt">ex06/main.kt</a>、<a href="code/04-main.kt">04-main.kt</a> は <a href="../../K01HelloKotlin/src/ex04/main.kt">ex04/main.kt</a> と同じ内容にします。STEP 22④とSTEP 23は一時変更なので、別の完成コードの複製は置きません。</p>
+<p><strong>3演習はコード上独立しています。</strong>途中参加の学生は、教員がいま扱っている演習のパッケージと <code>main.kt</code> から再開します。前の演習の未完成を理由に、その回の残りまで止めません。未完のパッケージ名と止まったSTEPは教員が記録します。</p>
+<h3>到達度の確認（4コマ目）</h3>
+<table><thead><tr><th>観点</th><th>授業内で確認する証拠</th></tr></thead><tbody>
+<tr><td>条件による出力</td><td><code>ex05</code> の完成2行。STEP 23①では変更した条件に対応する2行が出た。</td></tr>
+<tr><td>順に取り出す</td><td><code>ex06</code> の3要素と3行が同じ順。STEP 23①では4行目に <code>suzuki</code> が出た。</td></tr>
+<tr><td>プロパティを読む</td><td><code>ex04</code> に <code>val</code> 付きの <code>Person</code> と2つの読み取りがあり、<code>Yamada</code> / <code>20</code> が出る。</td></tr>
+<tr><td>読み取り用プロパティへの代入</td><td>STEP 23②で <code>age</code> への代入が止まる位置を確認し、追加行を削除してある。</td></tr>
+<tr><td>次に再開できる</td><td>当日の3パッケージがあり、完成コードへ戻っている。未完の演習があれば、教員がパッケージ名・止まったSTEPを記録している。</td></tr>
+</tbody></table>
+<p>短縮して実施しなかった練習は、実施済みとして記録しません。確認欄には、実際に画面で見た出力・宣言・復元状態を使います。</p>
 <p>チェックの保存はブラウザのlocalStorageを使い、送信はしません。ブラウザ・ファイルの移動・保存設定で記録が消える場合があるため、成績や提出の記録には使わないでください。到達度は、各回の表に挙げた証拠を授業内で確認します。</p>
 </section>
 
 <section><h2>9. 教材の保守と確認</h2>
 <ul><li><code>K01HelloKotlin/src/ex01/main.kt</code> を変更したら、教科書STEP 06の完成コードと <code>teacher/hello-kotlin/code/01-main.kt</code> を<strong>同時に</strong>直します。どちらも <code>scripts/check-teaching-materials.py</code> がバイト単位で照合します（教科書は <code>config/teaching-materials.json</code> の <code>snippets</code>、教員用の複製は同じ設定の <code>mirrors</code>）。1か所だけ直すと検査が落ちます。</li>
 <li><code>K01HelloKotlin/src/ex02/main.kt</code> も同じです。変更したら、教科書STEP 10・STEP 12の完成コードと <code>teacher/hello-kotlin/code/02-main.kt</code> を<strong>同時に</strong>直します。</li>
-<li><code>K01HelloKotlin/src/ex03/main.kt</code> を変更したら、教科書STEP 16・STEP 18の完成コードと <code>teacher/hello-kotlin/code/03-main.kt</code> を<strong>同時に</strong>直します。STEP 15の途中段階のコードと、Java / Swiftとの比較も、説明が食い違っていないか確認します。<strong>回が増えるたびに、この照合の組が1組ずつ増えます。</strong></li>
+<li><code>K01HelloKotlin/src/ex03/main.kt</code> を変更したら、教科書STEP 16・STEP 18の完成コードと <code>teacher/hello-kotlin/code/03-main.kt</code> を<strong>同時に</strong>直します。STEP 15の途中段階のコードと、Java / Swiftとの比較も、説明が食い違っていないか確認します。<strong>演習が増えるたびに、この照合の組が増えます。4コマ目は3組を追加しています。</strong></li>
+<li><strong>4コマ目は3演習を別々に照合します。</strong><code>ex05/main.kt</code> は教科書STEP 20の <code>code-ex05</code> と <code>teacher/hello-kotlin/code/05-main.kt</code>、<code>ex06/main.kt</code> はSTEP 21の <code>code-ex06</code> と <code>code/06-main.kt</code>、<code>ex04/main.kt</code> はSTEP 22の <code>code-ex04</code> と <code>code/04-main.kt</code> が対応します。<code>sources</code>・<code>snippets</code>・<code>mirrors</code> の組も確認します。STEP 22④の <code>greet()</code> は一時実演なので、既存完成ソースとのバイト一致対象ではありません。実演とSTEP 23の練習も、出力・止まる位置・警告を別途確認します。</li>
 <li>完成コードを変更したら、配布用ZIPも作り直します。</li>
 <li>教科書STEP 02には、新規プロジェクトの画面の写真を置いています。IntelliJ IDEA の版が上がって画面の項目名や並びが変わったときは、教科書STEP 02の画面写真・表・HELPの表と、この教員用ガイドの「STEP 02 で見る4つの場所」を同時に直します。</li>
 <li>教科書のSTEPの区切り・見出し・目安時間を変えたときは、この教員用ガイドの「3. 90分の進め方」と「8. 遅れた学生の再開地点と到達度の確認」も同時に直します。<strong>「3. 90分の進め方」の目安時間は、教科書の各STEPの <code>step-meta</code> と同じ値にし、合計が90分になることを数えて確かめます。</strong></li>
 <li>Java / Swift との比較を足すときは、<strong>Kotlinを先頭（左端）</strong>に置きます。比較のコードは翻訳の対象外なので、どの言語版の教材でもそのまま表示されます。</li>
 <li>印刷時は補足・解答も展開されます。解答を配布したくない場合は、ブラウザで授業中に開く方式を使ってください。</li>
-<li><strong>4コマ目以降を作るときも、新しい単元も新しい教科書も作りません。</strong>同じ <code>K01HelloKotlin</code> プロジェクトに <code>src/ex04/</code> のようにパッケージを足し、同じ <code>docs/hello-kotlin/index.html</code> にSTEPを足し、この教員用ガイドにもその回の節を足します。<code>config/teaching-materials.json</code> の <code>packages</code> に <code>ex04</code> 以降を足すのも、その回の教科書を書くときです（<code>packages</code> に書いた演習の完成コードがそろっていないと検査が落ちます）。2コマ目（<code>ex02</code>）と3コマ目（<code>ex03</code>）も、この形で足しています。</li></ul>
+<li><strong>5コマ目以降も、新しい単元や教科書は作りません。</strong>同じ <code>K01HelloKotlin</code> に次の演習のパッケージを足し、同じ <code>docs/hello-kotlin/index.html</code> とこのガイドへSTEPと各回の節を足します。次は <code>ex08</code> → <code>ex09</code> → <code>ex07</code> の順です。<code>config/teaching-materials.json</code> の <code>packages</code>・<code>sources</code> も教材を書くときに増やし、<code>sessions</code> は6のままにします。4コマ目もこの形で3演習を追加しています。教科書の進捗は現在STEP 00〜24の25個で、STEP追加時は <code>max</code> と表示総数を同時に増やします。</li></ul>
 <div class="code-head">配布用ZIPを作り直す</div>
 <pre tabindex="0"><code>python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip</code></pre>
 <div class="code-head">教材の検証（リポジトリ直下で実行する）</div>
@@ -472,7 +568,7 @@
 python3 -m unittest discover -s scripts -p &#39;test_*.py&#39;
 python3 scripts/localize-student-materials.py check
 python3 scripts/package-student-materials.py</code></pre>
-<p><code>K01HelloKotlin</code> は、IntelliJ IDEA で <code>ex01</code> の <code>fun main()</code> を実行して出力が4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）であること、<code>ex02</code> の <code>fun main()</code> を実行して出力が3行（<code>5</code> / <code>null</code> / <code>6</code>）であること、<code>ex03</code> の <code>fun main()</code> を実行して出力が2行（<code>3</code> / <code>3</code>）であることも確かめます。回を足したときは、その回の <code>exNN</code> も同じように実行して確かめます。<strong>出力が正しいかどうかは検査スクリプトでは分からないので、ここだけは目で見ます。</strong>完成プロジェクトにUnit Testは書きません。</p>
+<p><code>K01HelloKotlin</code> は、IntelliJ IDEA で <code>ex01</code> の <code>fun main()</code> を実行して出力が4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）であること、<code>ex02</code> の <code>fun main()</code> を実行して出力が3行（<code>5</code> / <code>null</code> / <code>6</code>）であること、<code>ex03</code> の <code>fun main()</code> を実行して出力が2行（<code>3</code> / <code>3</code>）であることも確かめます。4コマ目の <code>ex05</code> は <code>flag is true</code> / <code>string is not Tanaka</code> の2行、<code>ex06</code> は <code>tanaka</code> / <code>yamada</code> / <code>sato</code> の3行、<code>ex04</code> は <code>Yamada</code> / <code>20</code> の2行を確認します。回を足したときは、その回の各 <code>exNN</code> も同じように実行します。<strong>出力が正しいかどうかは検査スクリプトでは分からないので、ここだけは目で見ます。</strong>完成プロジェクトにUnit Testは書きません。</p>
 <p><a href="../../docs/common/setup.html">共通資料：授業を始めるまでの準備</a>は、ほかの単元でも使います。Kotlin Playground と IntelliJ IDEA の準備の手順を変えたときは、この共通資料を先に直します。</p>
 </section>
 
@@ -489,5 +585,5 @@ python3 scripts/package-student-materials.py</code></pre>
 <p><strong>提出先と締め切りは、共通資料には書いていません。教員が授業で案内します。</strong>年度やクラスで変わるため、教材には書かない方針です。</p>
 </section>
 
-<footer class="footer"><p><a href="../../docs/hello-kotlin/index.html">← K01HelloKotlinの教科書へ戻る</a></p><p>対象：K01HelloKotlin（全6コマ）の1〜3コマ目 ＝ <code>ex01</code>・<code>ex02</code>・<code>ex03</code> / macOS / Kotlin Playground + IntelliJ IDEA 2026.3 EAP</p></footer></main>
+<footer class="footer"><p><a href="../../docs/hello-kotlin/index.html">← K01HelloKotlinの教科書へ戻る</a></p><p>対象：K01HelloKotlin（全6コマ）の1〜4コマ目 ＝ <code>ex01</code>・<code>ex02</code>・<code>ex03</code>・<code>ex05</code>・<code>ex06</code>・<code>ex04</code> / macOS / Kotlin Playground（初回のみ） + IntelliJ IDEA 2026.3 EAP</p></footer></main>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>

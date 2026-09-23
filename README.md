@@ -14,7 +14,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 
-**いま教科書があるのはK01だけで、その中身も3コマ目ぶん（`ex01`・`ex02`・`ex03`）までです。** K01の4コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
+**いま教科書があるのはK01だけで、その中身は4コマ目ぶん（`ex01`〜`ex06`）までです。** K01の5コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
 
 ### 開き方
 
@@ -50,9 +50,20 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 | 11–13 | A03 GithubSearch | Web APIと一覧表示 | `A03GithubSearch` |
 | 14–15 | A04 FunnyCamera | カメラと画像の合成 | `A04FunnyCamera` |
 
-K01の6コマがどの演習をどの順で扱うかは、前年度資料の節と `ex01`〜`ex11` の対応表のとおりです（下の「前年度の教材との関係」）。
+K01の授業順は次のとおりです（2026-09-23、オーナー決定）。`exNN` は前年度資料との対応番号なので、授業順に合わせて付け替えません。
 
-**いま教科書に書けているのは、3コマ目ぶん（`ex01`・`ex02`・`ex03`）までです。** 4コマ目以降（`ex04` 以降）は、その回を作る今後のissueで、**新しい教科書を作るのではなく、同じ `docs/hello-kotlin/index.html` にSTEPを足していきます。** `config/teaching-materials.json` の `packages` も、いまは `["ex01", "ex02", "ex03"]` だけです。`ex04` 以降をここに足すのは、その回の教科書を書くissueのときです（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
+| コマ | 演習を進める順 |
+| --- | --- |
+| 1 | `ex01` 変数・数の型 |
+| 2 | `ex02` Null安全 |
+| 3 | `ex03` 関数 |
+| 4 | `ex05` 条件式 → `ex06` 繰り返し → `ex04` クラス |
+| 5 | `ex08` アクセサ → `ex09` data class → `ex07` 拡張関数 |
+| 6 | `ex10` map → `ex11` lazy |
+
+リストを作って読む操作を `map` より先に、クラスとプロパティをアクセサ・data classより先に置きます。前年度資料の節との対応は、下の「前年度の教材との関係」にあります。
+
+**いま教科書に書けているのは、4コマ目ぶん（`ex01`〜`ex06`）までです。** 5コマ目・6コマ目は、**同じ `docs/hello-kotlin/index.html` にSTEPを足します。** `config/teaching-materials.json` の `packages` も、いまは `ex01`〜`ex06` です。残りの演習は、その回の教科書を書くissueで登録します（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
 
 **純Kotlin系の単元は K01 の1つだけです。** K02以降は作りません。プロジェクトも `K01HelloKotlin` という1つのIntelliJ IDEAプロジェクトだけで、回を重ねるごとに `src/exNN/` のパッケージを足していきます。**単元ごとに別プロジェクトにしないのは、次の理由からです。**
 
@@ -92,7 +103,7 @@ K01の6コマがどの演習をどの順で扱うかは、前年度資料の節�
 
 前年度の資料も、1つの `HelloKotlin` プロジェクトに節ごとのファイルを足していく形でした。今年の `K01HelloKotlin` も同じ形で、ファイルの代わりに `src/exNN/` のパッケージを足していきます。
 
-資料の各節と `K01HelloKotlin/src/exNN/` の演習は、次のように対応しています。15コマ計画のK01の6コマは、この対応表の `ex01`〜`ex11` を前から順にたどります。
+資料の各節と `K01HelloKotlin/src/exNN/` の演習は、次のように対応しています。演習番号はこの対応表のまま保ち、授業では上の「15コマ計画」に記した順に進めます。
 
 | 前年度資料の節 | 内容 | 対応する演習 |
 | --- | --- | --- |
