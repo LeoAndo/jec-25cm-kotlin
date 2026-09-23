@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JavaとSwiftを書ける人のためのKotlin入門。Playgroundと IntelliJ IDEA で、val・var・型推論・数の型を、他言語との差分で確かめる授業用教科書。">
+<title>HelloKotlin — Kotlinを書き始める | Kotlin演習</title>
+<link rel="stylesheet" href="../assets/textbook.css">
+<script src="../assets/textbook.js" defer></script>
+</head>
+<body data-progress-key="jec-kotlin-hellokotlin-v1">
+<a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / Kotlin演習</span><span>授業用教科書 · Kotlin + IntelliJ IDEA</span></header>
+<div class="shell">
+<aside class="sidebar"><div class="sidebar-inner">
+<p class="eyebrow">CONTENTS / 学習の順番</p>
+<nav aria-label="学習ステップ"><ol><li><a href="#step-0">00　この単元のゴール</a></li>
+<li><a href="#step-1">01　Playgroundで動かす</a></li>
+<li><a href="#step-2">02　プロジェクトを作る</a></li>
+<li><a href="#step-3">03　val と var</a></li>
+<li><a href="#step-4">04　数の型</a></li>
+<li><a href="#step-5">05　ミニ練習</a></li>
+<li><a href="#step-6">06　完成</a></li></ol></nav>
+<div class="progress"><span data-progress-label>0 / 7 ステップ確認済み</span><progress value="0" max="7" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a></div>
+</div></aside>
+<main id="main">
+<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>90分 × 1コマ目安</span><span>予習なしで始められる</span></div></div>
+<section id="step-0" aria-labelledby="title-0">
+<p class="step-meta">STEP 00 · 目安 5分</p>
+<h2 id="title-0">この単元のゴール</h2>
+
+<p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。今日はその1コマ目、単元 <code>K01HelloKotlin</code> です。</p>
+<p>みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。</p>
+<ol><li><strong>Kotlinではどう書くのか</strong>。</li><li><strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。</li></ol>
+
+<h3>Kotlinはどこで動く言語か</h3>
+<p>Kotlinで書いたコードは、JVM（Java Virtual Machine）で動くJavaバイトコード（<code>class</code> ファイル）にコンパイルされます。つまり、Javaが動く環境ならKotlinも動きます。このような言語を <strong>JVM言語</strong> と呼びます。</p>
+<table><thead><tr><th>Kotlinの特徴</th><th>中身</th><th>すでに知っていることとの関係</th></tr></thead><tbody>
+<tr><td>記述量が少ない</td><td>同じ処理でも、Javaより短く書ける。</td><td>省けた部分はコンパイラが補っています。何が省かれたのかを、この単元で1つずつ確かめます。</td></tr>
+<tr><td>Javaとの相互運用</td><td>JavaのコードからKotlinを、KotlinのコードからJavaを呼べる。</td><td>全部をKotlinに書き換えなくても混在させられます。古いAndroidアプリにJavaが残っているのはこのためです。</td></tr>
+<tr><td>Null安全</td><td>nullを入れられる型と、入れられない型を、言語が区別する。</td><td>Swiftのオプショナルと同じ発想です。次の単元で扱います。</td></tr>
+<tr><td>Javaの資産が使える</td><td>Java用のライブラリやフレームワークをそのまま使える。</td><td>JVM言語だからです。Kotlin用に作り直されるのを待つ必要はありません。</td></tr>
+</tbody></table>
+
+<h3>同じ処理を3つの言語で並べる</h3>
+<p>名前を変数に入れて出力するだけのプログラムです。まず全体の差を見ます。細かいところは STEP 03 以降で1つずつ扱います。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>fun main() {
+    val name = &quot;Kotlin&quot;
+    println(name)
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>public class Main {
+    public static void main(String[] args) {
+        final String name = &quot;Java&quot;;
+        System.out.println(name);
+    }
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let name = &quot;Swift&quot;
+print(name)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinの入口は <code>fun main()</code> です。Javaのように、入口をクラスで包む必要がありません。<code>String[] args</code> にあたる引数も省けます。</li>
+<li>Kotlinの <code>val</code> は、Javaの <code>final</code>、Swiftの <code>let</code> にあたります。</li>
+<li>型注釈はSwiftと同じく省けます。右辺から型が決まります。</li>
+<li>文末のセミコロンはSwiftと同じく要りません。Javaとはここが違います。</li>
+<li>出力はKotlinが <code>println</code>、Javaが <code>System.out.println</code>、Swiftが <code>print</code> です。</li>
+</ul>
+<p>JavaとSwiftを知っていれば、Kotlinは「差分」で覚えられます。この教科書は、その差分だけを並べていきます。</p></div>
+
+<h3>この単元で出てくるKotlinの言葉</h3>
+<table><thead><tr><th>Kotlinの言葉</th><th>Javaでの対応</th><th>Swiftでの対応</th></tr></thead><tbody>
+<tr><td><code>val</code></td><td><code>final</code> を付けた変数</td><td><code>let</code></td></tr>
+<tr><td><code>var</code></td><td><code>final</code> を付けない変数</td><td><code>var</code></td></tr>
+<tr><td>トップレベル関数</td><td>クラスの <code>static</code> メソッド</td><td>グローバル関数</td></tr>
+<tr><td><code>println</code></td><td><code>System.out.println</code></td><td><code>print</code></td></tr>
+<tr><td><code>Int</code> / <code>Double</code> / <code>Float</code></td><td><code>int</code> / <code>double</code> / <code>float</code> とそのラッパークラス</td><td><code>Int</code> / <code>Double</code> / <code>Float</code></td></tr>
+</tbody></table>
+
+<h3>今日のゴール（コンソールに出る4行）</h3>
+<div class="code-head">Runの結果 · この4行が出れば完成</div>
+<pre tabindex="0"><code>1
+2.0
+3.0
+Tanaka</code></pre>
+<p>この4行を出すまでを、7つのステップに分けて進みます。</p>
+<h3>1コマ（90分）の進み方</h3>
+<table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
+<tr><td>前半（約35分）</td><td>STEP 00〜02</td><td>Playgroundで1行動かし、IntelliJ IDEA に <code>HelloKotlin</code> プロジェクトを作る。</td></tr>
+<tr><td>後半（約55分）</td><td>STEP 03〜06</td><td><code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。</td></tr>
+</tbody></table>
+<p>この授業では、毎回、<strong>自分でプロジェクトを新規作成</strong>します。今回は STEP 02 から <code>HelloKotlin</code> を作ります。</p>
+<p><a href="#sample-project">完成プロジェクト</a>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。</p>
+<div class="note"><p class="box-title">この教科書の進め方</p><p>書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。</p><p>分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>今日のゴールの4行を指させた。KotlinがJVM言語であること、入口が <code>fun main()</code> であることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-1">次へ：Playgroundで動かす →</a></div>
+
+</section><section id="step-1" aria-labelledby="title-1">
+<p class="step-meta">STEP 01 · 目安 10分</p>
+<h2 id="title-1">Kotlin Playgroundで動かす</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p>開発環境を用意する前に、ブラウザだけでKotlinの <code>fun main()</code> を実行します。</p></div>
+<p>統合開発環境の準備は一手間かかります。最初の1行を動かすだけなら、ブラウザで動く <strong>Kotlin Playground</strong> で十分です。</p>
+<h3>① Playgroundを開く</h3>
+<ol><li>ブラウザで <a href="https://play.kotlinlang.org/">https://play.kotlinlang.org/</a> を開きます。</li><li>エディタと、その下に実行結果のウィンドウがある画面が出ます。</li></ol>
+<table><thead><tr><th>画面の場所</th><th>役割</th></tr></thead><tbody>
+<tr><td>上の言語バージョンのメニュー</td><td>Kotlinのバージョンを切り替えます。既定で最新版です。授業では変更しません。</td></tr>
+<tr><td>共有のボタン</td><td>いま書いているコードのURLを作ります。人に見せるときに使います。</td></tr>
+<tr><td><strong>Run</strong> ボタン</td><td>プログラムを実行します。</td></tr>
+<tr><td>ショートカットのボタン</td><td>キーボードショートカットの一覧を出します。</td></tr>
+<tr><td>下の実行結果のウィンドウ</td><td>出力が出る場所です。Runすると自動で開きます。</td></tr>
+</tbody></table>
+<h3>② エディタの中身を置き換えて実行する</h3>
+<p>エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。</p>
+<div class="code-head">Playgroundのエディタ · 全体を置き換える</div>
+<pre id="code-hello" tabindex="0"><code>fun main() {
+    println(&quot;Hello, Kotlin!&quot;)
+}</code></pre>
+<ol><li><strong>Run</strong> をクリックします。</li><li>下のウィンドウに <code>Hello, Kotlin!</code> が出れば成功です。</li></ol>
+<h3>③ 同じことを、JavaとSwiftではどこで試すか</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>fun main() {
+    println(&quot;Hello, Kotlin!&quot;)
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>System.out.println(&quot;Hello, Java!&quot;)</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>print(&quot;Hello, Swift!&quot;)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>JavaのJShellやSwiftのREPLは、<strong>式を1つずつ</strong>打って結果を見る場所です。だから <code>System.out.println(…)</code> や <code>print(…)</code> の1行だけで動きます。</li>
+<li>Kotlin Playgroundは、<strong>ファイル1つ分をまるごと実行する</strong>場所です。だから入口の <code>fun main()</code> が要ります。<code>println(&quot;Hello, Kotlin!&quot;)</code> だけを貼っても実行されません。</li>
+<li>Swiftのように「トップレベルに書いた文がそのまま上から実行される」わけでもありません。Kotlinの入口は、常に <code>fun main()</code> です。</li>
+</ul></div>
+<div class="note"><p class="box-title">Playgroundの短所</p><p>実行結果が出るまでに時間がかかります。サーバー側でコンパイルして実行しているためです。</p><p>コード補完がほとんど効きません。型を確かめたり、候補から選んだりする書き方ができません。</p><p>この2つがあるので、この先は統合開発環境を使います。Playgroundは、短いコードを人に見せるときや、あとで文法を思い出したいときに使ってください。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-1"><span>Playgroundで <code>Hello, Kotlin!</code> を出せた。<code>fun main()</code> が要る理由を言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-2">次へ：プロジェクトを作る →</a></div>
+
+</section><section id="step-2" aria-labelledby="title-2">
+<p class="step-meta">STEP 02 · 目安 20分</p>
+<h2 id="title-2">IntelliJ IDEAでプロジェクトを作る</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p>IntelliJ IDEA で <code>HelloKotlin</code> プロジェクトを作り、その中に <code>ex01</code> パッケージと <code>main.kt</code> を用意して実行します。</p></div>
+<p>授業では <strong>IntelliJ IDEA 2026.3 EAP</strong> とMacを使います。最初の準備にはインターネット接続が必要です。IntelliJ IDEA をまだ入れていない人は、<a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a> を先に見てください。</p>
+<h3>① 保存する場所を用意する</h3>
+<ol><li>Finderの <strong>移動 → ホーム</strong> を開き、ホームフォルダの名前（自分のユーザ名）を確認します。</li><li>その中の <strong>書類（Documents）</strong> を開きます。<code>Kotlin</code> フォルダがなければ、<strong>ファイル → 新規フォルダ</strong> で作り、名前を <code>Kotlin</code> にします。</li></ol>
+<h3>② New Project を開く</h3>
+<ol><li>IntelliJ IDEA を開き、<strong>New Project</strong> をクリックします。別のプロジェクトが開いていたら、上のメニューから <strong>File → New → Project</strong> を選びます。</li><li>開いた画面の左の一覧で、いちばん上の <strong>New Project</strong> が選ばれていることを確認します。下のほうにある <strong>Generators</strong> の項目は選びません。</li></ol>
+<h3>③ 表のとおりに入力する</h3>
+<table><thead><tr><th>画面の項目</th><th>入力・選択する内容</th></tr></thead><tbody>
+<tr><td>Name</td><td><code>HelloKotlin</code></td></tr>
+<tr><td>Location</td><td><code>/Users/ユーザ名/Documents/Kotlin</code><br>「ユーザ名」を、自分のMacのユーザ名に読み替えます。</td></tr>
+<tr><td>Language</td><td><strong>Kotlin</strong></td></tr>
+<tr><td>Build system</td><td><strong>IntelliJ</strong>。<strong>Gradle</strong> と <strong>Maven</strong> は選びません。ビルドツールを使わない、いちばん軽い構成です。</td></tr>
+<tr><td>JDK</td><td>一覧から選びます。授業で使うものは先生が指定します。一覧が空のときは <strong>Download JDK</strong> を選びます。</td></tr>
+<tr><td>Add sample code</td><td>チェックを<strong>外す</strong>。</td></tr>
+</tbody></table>
+<div class="note"><p class="box-title">Create を押す前に、保存先を確認</p><p><strong>Name</strong> と <strong>Location</strong> を合わせた場所にプロジェクトができます。ユーザ名が <code>cmstudent</code> の場合は <code>/Users/cmstudent/Documents/Kotlin/HelloKotlin</code> です。<code>ユーザ名</code> という文字をそのまま入力しません。</p><p>保存先の最後が <code>Documents/Kotlin/HelloKotlin</code> になっていることを確認します。すでに同名のプロジェクトがあるときは、先生に画面を見せます。</p></div>
+<ol start="3"><li><strong>Create</strong> をクリックします。</li><li>左のプロジェクト一覧に <code>HelloKotlin</code> と、その中の <code>src</code> フォルダが出ます。<code>src</code> がソースルートです。</li></ol>
+<div class="note"><p class="box-title">Main.kt ができていたとき</p><p><strong>Add sample code</strong> のチェックを外し忘れると、<code>src</code> の中に <code>Main.kt</code> ができます。そのファイルを右クリックし、<strong>Delete</strong> で消してから次へ進みます。</p></div>
+<h3>④ ex01 パッケージと main.kt を作る</h3>
+<ol><li>左のプロジェクト一覧で <code>src</code> を右クリックし、<strong>New → Package</strong> を選びます。</li><li>名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。</li><li>できた <code>ex01</code> を右クリックし、<strong>New → Kotlin Class/File</strong> を選びます。</li><li>名前に <code>main</code> と入力し、下の一覧から <strong>File</strong> を選んで <kbd>Return</kbd> を押します。</li><li><code>ex01</code> の中に <code>main.kt</code> ができ、エディタに <code>package ex01</code> の1行が出ます。</li></ol>
+<p>この授業では、単元ごとに <code>ex01</code>、<code>ex02</code> …とパッケージを分けていきます。</p>
+<h3>⑤ ファイル全体を、次の内容にする</h3>
+<div class="code-head">src/ex01/main.kt · 全体を置き換える</div>
+<pre id="code-package" tabindex="0"><code>package ex01
+
+fun main() {
+    println(&quot;Hello, Kotlin!&quot;)
+}</code></pre>
+<p><code>fun main()</code> の行の左に出る緑の三角 <strong>▶</strong> をクリックし、<strong>Run 'MainKt'</strong> を選びます。画面の下のRunウィンドウに <code>Hello, Kotlin!</code> が出れば成功です。最初の実行は時間がかかることがあります。</p>
+<h3>⑥ ファイル名とクラス名の関係</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>// src/ex01/main.kt
+package ex01
+
+fun main() {
+    println(&quot;Hello, Kotlin!&quot;)
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>// src/ex01/Main.java
+package ex01;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello, Java!&quot;);
+    }
+}</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Javaの「ファイル名と <code>public</code> クラス名を一致させる」という決まりが、Kotlinにはありません。ファイル名は <code>main.kt</code> のように小文字で構いません。</li>
+<li>関数をクラスの外（トップレベル）に置けます。入口を入れるためだけのクラスを作らずに済みます。</li>
+<li><code>package</code> 宣言があり、フォルダ構成と合わせる点はJavaと同じです。違うのは行末の <code>;</code> が要らないことです。Swiftには <code>package</code> 宣言そのものがありません。</li>
+<li>実行の設定名が <code>MainKt</code> になるのは、Kotlinが <code>main.kt</code> から <code>MainKt</code> というクラスを作ってバイトコードに落としているからです。クラスを書かなくても、JVMの上ではクラスになっています。</li>
+</ul></div>
+<div class="note"><p class="box-title">大文字と小文字</p><p>ファイル名は <code>main.kt</code>、パッケージ名は <code>ex01</code> です。<code>Main.kt</code> や <code>Ex01</code> ではありません。Kotlinは大文字と小文字を区別します。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-2"><span><code>src/ex01/main.kt</code> を作り、IntelliJ IDEA のRunで <code>Hello, Kotlin!</code> を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-3">次へ：val と var →</a></div>
+
+</section><section id="step-3" aria-labelledby="title-3">
+<p class="step-meta">STEP 03 · 目安 20分</p>
+<h2 id="title-3">変数を宣言する（val と var）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>val</code> と <code>var</code> を使い分け、型注釈を省いて書きます。</p></div>
+<p class="file">変更するファイル：src/ex01/main.kt</p>
+<p>Kotlinの変数宣言は、キーワードが2つあります。</p>
+<table><thead><tr><th>キーワード</th><th>意味</th></tr></thead><tbody>
+<tr><td><code>val</code></td><td>再代入禁止。あとから別の値を入れるとコンパイルエラーになります。</td></tr>
+<tr><td><code>var</code></td><td>再代入可能。あとから別の値を入れられます。</td></tr>
+</tbody></table>
+<h3>① ファイル全体を、次の内容に置き換える</h3>
+<div class="code-head">main.kt · 全体を置き換える</div>
+<pre id="code-valvar" tabindex="0"><code>package ex01
+
+fun main() {
+    val number1 = 1
+    var name = &quot;Yamada&quot;
+    name = &quot;Tanaka&quot;
+
+    println(number1)
+    println(name)
+}</code></pre>
+<h3>② 実行結果</h3>
+<div class="code-head">Runの結果</div>
+<pre tabindex="0"><code>1
+Tanaka</code></pre>
+<h3>③ Java / Swift ではどう書くか</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val number1 = 1
+var name = &quot;Yamada&quot;
+name = &quot;Tanaka&quot;</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>final int number1 = 1;
+String name = &quot;Yamada&quot;;
+name = &quot;Tanaka&quot;;</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let number1 = 1
+var name = &quot;Yamada&quot;
+name = &quot;Tanaka&quot;</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li><code>val</code> キーワードで宣言した変数は再代入禁止です。再代入するとコンパイルエラーになります。Javaの <code>final</code>、Swiftの <code>let</code> にあたります。</li>
+<li><code>var</code> キーワードで宣言した変数は再代入可能です。Swiftの <code>var</code> と同じです。</li>
+<li>Javaは「再代入できる」のが既定で、<code>final</code> を足して止めます。KotlinとSwiftは逆で、宣言のキーワードそのもので分けます。<strong>迷ったらまず <code>val</code> で書き、再代入が要るときだけ <code>var</code> にする</strong>のがKotlinの書き方です。</li>
+<li>Swiftと同様に型推論が効くため、変数宣言時の型の指定は省略できます。<code>val number1: Int = 1</code> と書くこともできますが、右辺から決まるときは書きません。</li>
+<li>Swiftと同様に文末のセミコロン（<code>;</code>）が不要です。</li>
+</ul></div>
+<div class="note"><p class="box-title">Javaの var と、Kotlinの var は別物</p><p>Java 10以降にもローカル変数の <code>var</code> があります。ただしJavaの <code>var</code> は「型を書かない」という意味で、再代入できるかどうかとは関係ありません（<code>final var</code> と書けます）。</p><p>Kotlinの <code>var</code> は「再代入できる」という意味で、型を書くかどうかとは関係ありません（<code>var name: String = &quot;Yamada&quot;</code> と書けます）。つづりが同じでも、分けている軸が違います。</p></div>
+<div class="task"><p class="box-title">押す前に予想する</p><p><code>println(name)</code> では、<code>Yamada</code> と <code>Tanaka</code> のどちらが出るでしょうか。予想してから、Runで確かめましょう。</p><details><summary>確かめたあとに答えを見る</summary><p><code>Tanaka</code> が出ます。JavaやSwiftと同じで、その行より上で最後に代入された値が入っています。</p></details></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-3"><span><code>val</code> と <code>var</code> で2行を出せた。<code>val</code> が Javaの <code>final</code>・Swiftの <code>let</code> にあたることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-4">次へ：数の型 →</a></div>
+
+</section><section id="step-4" aria-labelledby="title-4">
+<p class="step-meta">STEP 04 · 目安 15分</p>
+<h2 id="title-4">数の型を確かめる（Int・Double・Float）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>Int</code>・<code>Double</code>・<code>Float</code> をリテラルの書き方で作り分け、<code>println</code> で出します。</p></div>
+<p class="file">変更するファイル：src/ex01/main.kt</p>
+<table><thead><tr><th>型</th><th>リテラルの書き方</th><th>意味</th></tr></thead><tbody>
+<tr><td><code>Int</code></td><td><code>1</code></td><td>整数。既定の整数型です。</td></tr>
+<tr><td><code>Double</code></td><td><code>2.0</code></td><td>小数点を書くと、この型になります。既定の浮動小数点型です。</td></tr>
+<tr><td><code>Float</code></td><td><code>3.0f</code></td><td>うしろに <code>f</code> を付けると、この型になります。</td></tr>
+</tbody></table>
+<h3>① 追加する場所を見つける</h3>
+<div class="code-head">場所の目印 · この枠は入力しません</div>
+<pre tabindex="0"><code>    val number1 = 1
+    // ① この位置に、次の2行を追加します。
+    var name = &quot;Yamada&quot;
+    name = &quot;Tanaka&quot;
+
+    println(number1)
+    // ② この位置に、次の2行を追加します。
+    println(name)</code></pre>
+<h3>② 値の行に2行追加する</h3>
+<div class="code-head">追加① · val number1 = 1 の下</div>
+<pre id="code-types" tabindex="0"><code>val number2 = 2.0 // Double
+val number3 = 3.0f // Float</code></pre>
+<h3>③ 表示の行に2行追加する</h3>
+<div class="code-head">追加② · println(number1) の下</div>
+<pre id="code-types-print" tabindex="0"><code>println(number2)
+println(number3)</code></pre>
+<p>貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。</p>
+<h3>④ 実行結果</h3>
+<div class="code-head">Runの結果 · この4行が出れば成功</div>
+<pre tabindex="0"><code>1
+2.0
+3.0
+Tanaka</code></pre>
+<p><code>3.0f</code> と書いたのに、出るのは <code>3.0</code> です。<code>f</code> はリテラルの型を決める目印で、値そのものには入っていません。Javaで <code>System.out.println(3.0f)</code> としたときと同じ結果です。</p>
+<h3>⑤ Java / Swift ではどう書くか（型）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val number1 = 1    // Int
+val number2 = 2.0  // Double
+val number3 = 3.0f // Float</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>final int number1 = 1;       // プリミティブ型
+final double number2 = 2.0;  // プリミティブ型
+final float number3 = 3.0f;  // プリミティブ型
+
+final Integer boxed = number1; // ラッパークラス</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let number1 = 1          // Int
+let number2 = 2.0        // Double
+let number3: Float = 3.0 // Float</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li><strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。</li>
+<li>だから、Javaで書くときに考えていた「ここは <code>int</code> か <code>Integer</code> か」「リストに入れるからボクシングされる」といった判断が、宣言のときには要りません。</li>
+<li>型の名前はSwiftと同じく <code>Int</code> / <code>Double</code> / <code>Float</code> で、大文字で始まります。Javaの <code>int</code> のように小文字の型はありません。</li>
+<li>小数のリテラルが既定で <code>Double</code> になる点は、KotlinもSwiftも同じです。</li>
+<li>Swiftには <code>3.0f</code> という書き方がありません。Swiftで <code>Float</code> にしたいときは <code>let number3: Float = 3.0</code> のように型注釈で指定します。Kotlinはこの点ではJavaと同じく、接尾辞の <code>f</code> が使えます。</li>
+</ul></div>
+<h3>⑥ Java / Swift ではどう書くか（出力）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>println(number1)
+print(number1)</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>System.out.println(number1);
+System.out.print(number1);</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>print(number1)
+print(number1, terminator: &quot;&quot;)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li><code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。</li>
+<li>改行するのが <code>println</code>、改行しないのが <code>print</code> です。Javaの <code>System.out.println</code> と <code>System.out.print</code> の対応と同じです。</li>
+<li>Swiftの <code>print</code> は既定で改行するので、名前は同じでも、はたらきはKotlinの <code>println</code> のほうです。改行しないときは <code>terminator</code> を渡します。ここは読み替えが要ります。</li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-4"><span>4行を出せた。KotlinにJavaのようなプリミティブ型とラッパークラスの区別がないことを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-5">次へ：ミニ練習 →</a></div>
+
+</section><section id="step-5" aria-labelledby="title-5">
+<p class="step-meta">STEP 05 · 目安 10分</p>
+<h2 id="title-5">ミニ練習</h2>
+
+<p>ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。</p>
+<h3>練習A · 変数を1つ足す（必須・3分）</h3>
+<div class="task"><p class="box-title">やること</p><p><code>val</code> の変数を1つと、それを出す <code>println</code> を1行足して、出力を5行にします。値も型も自分で決めます。型注釈は書かずに、変数名にマウスを重ねて、推論された型を確かめましょう。</p></div>
+<details><summary>試したあと：確かめること</summary><p><code>4</code> と書けば <code>Int</code>、<code>4.5</code> と書けば <code>Double</code>、<code>4.5f</code> と書けば <code>Float</code> です。リテラルの書き方だけで型が決まっていることを、画面で確かめてください。</p></details>
+<h3>練習B · 再代入して、コンパイルエラーを起こす（必須・4分）</h3>
+<div class="task"><p class="box-title">やること</p><p><code>name = &quot;Tanaka&quot;</code> の次の行に <code>number1 = 5</code> と書き足します。Runを押す前に、その行に出たエラーメッセージを読んでください。</p><p>読むのは次の3つです。<strong>どの行か・何をしようとしたと言っているか・どう直せと言っているか。</strong></p></div>
+<details><summary>試したあと：答えと理由</summary><p>書き足した行が赤くなり、<code>Val cannot be reassigned</code> と出ます。Runしても実行されません。<code>number1</code> は <code>val</code> で宣言したので、再代入できないからです。</p><p>これは <strong>コンパイル時</strong> に止まるエラーです。実行してから気づく種類のものではありません。確かめたら、書き足した行を消して元に戻します。</p></details>
+<h3>同じ間違いを、JavaとSwiftでしたとき</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val number1 = 1
+number1 = 5 // Val cannot be reassigned</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>final int number1 = 1;
+number1 = 5; // cannot assign a value to final variable</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let number1 = 1
+number1 = 5 // cannot assign to value: 'number1' is a 'let' constant</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>3つとも、コンパイル時に止まります。止まる条件も同じで、言い回しが違うだけです。</li>
+<li>Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>Val</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong></li>
+<li>直し方は2つです。宣言を <code>var</code> に変えるか、再代入をやめるか。ここでは再代入をやめて元に戻します。</li>
+</ul></div>
+<h3>最後の3分 · 元に戻し、記録する</h3>
+<ol><li>練習Aで足した2行を消します。</li><li>練習Bで書き足した <code>number1 = 5</code> の行を消します。</li><li>Runし、STEP 00 のゴールと同じ4行に戻ったことを確かめます。</li><li>「JavaやSwiftならこう書くところを、Kotlinでは＿＿と書く」という形で、気づいたことを1つメモします。</li></ol>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-5"><span>練習A・Bを試し、エラーメッセージを読んで原因を言えた。最後に元の4行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-6">次へ：完成 →</a></div>
+
+</section><section id="step-6" aria-labelledby="title-6">
+<p class="step-meta">STEP 06 · 目安 10分</p>
+<h2 id="title-6">完成</h2>
+
+<h3>① 完成チェック</h3>
+<p>Runし、コンソールの出力を上から順に見ます。</p>
+<table><thead><tr><th>行</th><th>出る内容</th><th>理由</th></tr></thead><tbody>
+<tr><td>1行目</td><td><code>1</code></td><td><code>val number1 = 1</code>（<code>Int</code>）の値を出している。</td></tr>
+<tr><td>2行目</td><td><code>2.0</code></td><td><code>val number2 = 2.0</code>（<code>Double</code>）の値を出している。</td></tr>
+<tr><td>3行目</td><td><code>3.0</code></td><td><code>val number3 = 3.0f</code>（<code>Float</code>）の値を出している。<code>f</code> は出ない。</td></tr>
+<tr><td>4行目</td><td><code>Tanaka</code></td><td><code>var name</code> に再代入した値を出している。</td></tr>
+</tbody></table>
+<p>表のとおりになったら、先生に画面を見せ、<code>val</code> の行と <code>var</code> の行を指さして説明します。</p>
+<details><summary>入力したコードと照合する</summary>
+<p>ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex01</code> も忘れずに入れます。</p>
+<div class="code-head">main.kt · 完成コード</div>
+<pre id="code-final-kotlin" tabindex="0"><code>package ex01
+
+fun main() {
+    val number1 = 1
+    val number2 = 2.0 // Double
+    val number3 = 3.0f // Float
+    var name = &quot;Yamada&quot;
+    name = &quot;Tanaka&quot;
+
+    println(number1)
+    println(number2)
+    println(number3)
+    println(name)
+}</code></pre>
+</details>
+<h3>② 同じ4行を、JavaとSwiftで出すと</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>package ex01
+
+fun main() {
+    val number1 = 1
+    val number2 = 2.0 // Double
+    val number3 = 3.0f // Float
+    var name = &quot;Yamada&quot;
+    name = &quot;Tanaka&quot;
+
+    println(number1)
+    println(number2)
+    println(number3)
+    println(name)
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>package ex01;
+
+public class Main {
+    public static void main(String[] args) {
+        final int number1 = 1;
+        final double number2 = 2.0;
+        final float number3 = 3.0f;
+        String name = &quot;Yamada&quot;;
+        name = &quot;Tanaka&quot;;
+
+        System.out.println(number1);
+        System.out.println(number2);
+        System.out.println(number3);
+        System.out.println(name);
+    }
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let number1 = 1
+let number2 = 2.0
+let number3: Float = 3.0
+var name = &quot;Yamada&quot;
+name = &quot;Tanaka&quot;
+
+print(number1)
+print(number2)
+print(number3)
+print(name)</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinで省いたのは、入口を包むクラス、型注釈、行末の <code>;</code>、<code>System.out</code> の4つです。処理そのものはJavaと同じです。</li>
+<li>Swiftとの差は、入口の <code>fun main()</code> と <code>package</code> 宣言、そして <code>Float</code> リテラルの書き方だけです。</li>
+<li>「短く書ける」というのは、書かなかったぶんをコンパイラが補っているということです。<strong>Javaで書いていたことが消えたわけではありません。</strong></li>
+</ul></div>
+<h3>③ 保存された場所を確かめる</h3>
+<p>IntelliJ IDEA は、書いたコードを自動でファイルに保存します。保存の操作は要りません。</p>
+<ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。</li><li>その中の <code>Kotlin</code> フォルダを開き、<code>HelloKotlin</code> フォルダがあることを確かめます。</li></ol>
+<p>この <code>Documents/Kotlin/HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。</p>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-6"><span>完成チェックを行い、先生に画面を見せた。保存されたフォルダの場所も確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="goal"><p class="box-title">この単元のまとめ</p><p><strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。</p></div>
+
+</section>
+<section id="sample-project" aria-labelledby="sample-title">
+<p class="step-meta">REFERENCE · 最初の授業から使える見本</p>
+<h2 id="sample-title">完成プロジェクトを開いて比べる</h2>
+<p>授業は、自分で新規作成したプロジェクトで進めます。完成版は、動作確認とコード比較のための見本です。見本は、教科書といっしょに配られた<strong>教材のフォルダ</strong>に、そのまま開ける形で入っています。ダウンロードも展開も要りません。</p>
+<h3>① 見本の場所を確かめる</h3>
+<ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。教材のフォルダをダブルクリックで開きます。名前は <code>kotlin-student-materials-</code> のうしろに日付が付いた形で、日付は配られた回によって変わります。いま読んでいるこの教科書が入っているフォルダです。</li><li>その中の <code>samples</code> フォルダを開きます。<code>HelloKotlin</code> フォルダが見本です。場所を確かめるだけで、移動はしません。</li></ol>
+<table><thead><tr><th>使うもの</th><th>フォルダの場所（ユーザ名と教材のフォルダは、自分のものに読み替える）</th></tr></thead><tbody>
+<tr><td>授業で作るプロジェクト</td><td><code>/Users/ユーザ名/Documents/Kotlin/HelloKotlin</code></td></tr>
+<tr><td>完成版の見本</td><td><code>/Users/ユーザ名/Documents/教材のフォルダ/samples/HelloKotlin</code></td></tr>
+</tbody></table>
+<h3>② IntelliJ IDEA で開く</h3>
+<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、上のメニューから <strong>File → Open</strong> を選びます。プロジェクトを1つも開いていないときは、最初の画面（Welcome画面）の <strong>Open</strong> をクリックします。</li><li>①で確かめた <code>samples</code> の中の <code>HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>New Window</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src → ex01 → main.kt</code> の順に開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の <strong>▶</strong> を押します。</li></ol>
+<h3>③ 今のステップの部分だけを比べる</h3>
+<p>たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。</p>
+<p>見終わったら、授業で作っている <code>Documents/Kotlin/HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。</p>
+<p>教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a href="downloads/HelloKotlin.zip" download>HelloKotlin.zip</a>）。展開してできた <code>HelloKotlin</code> フォルダを、②と同じように開きます。</p>
+</section>
+<section id="help" aria-labelledby="help-title"><p class="step-meta">HELP · 困ったらここ</p><h2 id="help-title">止まった場所から、一緒に直す</h2>
+<p>赤くなっている最初の行を見ます。<strong>2分考えても分からなければ</strong>、先生に「ステップ番号・ファイル名・画面」を見せましょう。</p>
+<table><thead><tr><th>困ったこと</th><th>最初に確認すること</th></tr></thead><tbody>
+<tr><td>Playgroundで何も出ない</td><td><code>fun main()</code> があるか確認する。<code>println</code> の1行だけでは実行されません。</td></tr>
+<tr><td>New Project の画面に Kotlin がない</td><td>左の一覧で、いちばん上の <strong>New Project</strong> を選んでいるか確認する。<strong>Generators</strong> の中の項目ではありません。</td></tr>
+<tr><td>Build system に IntelliJ がない</td><td><strong>Language</strong> が <strong>Kotlin</strong> になっているか確認する。直らなければ画面を先生に見せる。</td></tr>
+<tr><td>JDK の一覧が空</td><td><strong>Download JDK</strong> を選ぶ。ダウンロードに時間がかかるので、始めたことを先生に伝える。</td></tr>
+<tr><td>緑の三角（▶）が出ない</td><td><code>fun main()</code> のつづりを1文字ずつ確認する。<code>main</code> は小文字で、うしろの <code>()</code> も必要。ファイルが <code>src</code> の中にあるかも確認する。</td></tr>
+<tr><td><code>package ex01</code> の行が赤い</td><td>ファイルの場所が <code>src/ex01/</code> か確認する。フォルダ名とパッケージ名を合わせる点はJavaと同じです。</td></tr>
+<tr><td><code>Unresolved reference</code> と出る</td><td>名前のつづりを確認する。<code>println</code>・<code>number1</code>・<code>name</code> の大文字と小文字も区別する。</td></tr>
+<tr><td><code>Val cannot be reassigned</code> と出る</td><td><code>val</code> で宣言した変数に再代入していないか確認する。STEP 05 の練習B以外では書きません。</td></tr>
+<tr><td>Runしても何も出ない</td><td>画面の下の <strong>Run</strong> ウィンドウが開いているか確認する。閉じていたら <strong>View → Tool Windows → Run</strong> で開く。</td></tr>
+<tr><td>出るけれど、内容が違う</td><td><code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。</td></tr>
+<tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>
+<tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>Location</strong> の入力を先生に見せる。</td></tr>
+</tbody></table>
+<p>一度にいくつも直すと、何が変わったか分かりにくくなります。1か所直して、もう一度Runしましょう。</p></section>
+<section id="references"><h2>もっと知りたいとき</h2><p>授業はこの教科書だけで進められます。次の公式資料は、あとから調べたい人向けです（英語で書かれています）。</p><ul>
+<li><a href="https://kotlinlang.org/docs/comparison-to-java.html">Kotlin公式：Comparison to Java</a></li>
+<li><a href="https://kotlinlang.org/docs/basic-syntax.html">Kotlin公式：Basic syntax</a></li>
+<li><a href="https://kotlinlang.org/docs/basic-types.html">Kotlin公式：Basic types</a></li>
+<li><a href="https://kotlinlang.org/docs/numbers.html">Kotlin公式：Numbers</a></li>
+<li><a href="https://kotlinlang.org/docs/home.html">Kotlin公式：ドキュメントの入口</a></li>
+<li><a href="https://www.jetbrains.com/help/idea/get-started-with-kotlin.html">IntelliJ IDEA公式：Get started with Kotlin</a></li>
+</ul></section>
+<footer class="footer"><p>教材の対象：K01HelloKotlin / IntelliJ IDEA 2026.3 EAP<br>この単元では画像を使いません。画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
+</main></div>
+<p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
+</body></html>

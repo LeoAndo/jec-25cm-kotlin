@@ -1,0 +1,385 @@
+# AGENTS.md — このリポジトリで作業するAIエージェントへの指示
+
+このファイルは、全エージェント（Claude Code・Codex・Cursor・Antigravity・Devin など）に共通の、ただ1つの指示書です。`CLAUDE.md` はこのファイルを読み込むだけにしてあります。
+
+- **ルールはここに書く。** オーナー（LeoAndo）から新しいルールや方針を受け取ったら、エージェント固有の記憶（Claude Codeのmemory、Cursorのrules、DevinのKnowledgeなど）ではなく、このファイルか `README.md` を直すPRにする。固有の記憶は、ほかのエージェントから読めない。
+- **教材の方針は `README.md` にある。** 「基本方針」「授業用教科書の基本方針」「単元の範囲の決め方」「完成コードの書き方」は、教材を触る前に読む。ここには重複して書かない。例外は§11で、READMEの「完成コードの書き方」を、このリポジトリの実物のコードを引いて具体化してある。
+- **受講生像だけは、ここにも書く。** 下の「受講生像と、教材の書き方」は教材の全判断の前提になるので、READMEを開く前にここで読めるようにしてある。
+- **単元ごとの判断は教員用ガイドにある。** `teacher/<スラッグ>/index.html` の「この単元の教材方針」に、何を意図的に外したか、なぜその書き方にしたかが理由つきで書いてある。その単元を触る前に読む。
+- issue・PR・コミットメッセージは日本語で書く。
+
+この授業は **Kotlin演習（JEC / 25CM）、1コマ90分 × 全15コマ**。単元は2系統ある。
+
+| 系統 | 単元番号 | IDE | プロジェクト | 実行のしかた |
+| --- | --- | --- | --- | --- |
+| 純Kotlin | `K01`〜 | IntelliJ IDEA | `HelloKotlin`（`HelloKotlin/src/exNN/*.kt`。Gradleを使わない） | `fun main()` を実行してコンソール出力を見る |
+| Android | `A01`〜 | Android Studio | `A01HelloAndroid` `A02CalcGame` `A03GithubSearch` `A04FunnyCamera`（Gradle） | エミュレータ `jec_25cm_kotlin_Pixel 9a` で動かす |
+
+2系統あることが、この運用のほとんどの分岐の理由になっている。**どちらの系統の作業かを先に決めてから読み進める。**
+
+## 受講生像と、教材の書き方
+
+**受講生は Java と Swift を学習済みで、Kotlinを初めて書く。** 「Kotlin初学者」とは「Kotlinという言語を初めて書く経験者」という意味で、プログラミングの入門者ではない。教材を1文でも書く前に、この前提を思い出すこと。
+
+- **概念そのものの説明はしない。** 変数・条件分岐・繰り返し・クラスが何かは書かない。書くのは、**Kotlinでの書き方と、Java／Swiftとの違いと、違う理由**。
+- **教科書の各STEPには、JavaかSwift（または両方）との比較を必ず置く。** 比較がないSTEPは未完成とみなす。比較する相手がないKotlin独自の機能（`by lazy` など）は比較を省かず、「Java／Swiftでは同じことをどう書くか、あるいは書けないか」を示す。
+- **用語に読みがなは振らない。** 代わりに、Kotlin固有の用語（プライマリコンストラクタ、スマートキャスト、拡張関数、委譲プロパティ）には**Java／Swiftでの対応物**を添える。
+- **「1単元で導入する新概念は1つまで」の「新概念」は、JavaにもSwiftにもないものを指す。** `if` や `for` のように書き方だけが違うものは数えない（READMEの「単元の範囲の決め方」）。
+- **予習も復習もしない前提で、前から順に読めば進める**という構成の原則と、**本文からほかの単元へ送らない**という原則は、いままでどおり守る（READMEの「授業用教科書の基本方針」）。
+- この比較方式は、前年度（2025年度）の配布資料PDFの書き方を引き継いだもの。資料の各節と `HelloKotlin/src/exNN/` の対応表はREADMEの「前年度の教材との関係」にある。**PDF自体はリポジトリにcommitしない**（置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables/`。§2のPoC置き場と同じ）。
+
+## 1. 作業の単位
+
+**1 issue = 1 ブランチ = 1 worktree = 1 セッション = 1 PR。**
+
+- 1つのセッションで、2つ目のissueや別の単元の作業を始めない。頼まれたら、別のセッション（別のworktree）で行うことを提案する。
+- 例外：同じ種類の `size:XS` のissueは、1つのPRでまとめて閉じてよい（`Closes #<番号1>, closes #<番号2>`）。
+- 新しい単元は「完成プロジェクト」と「教材一式（教科書＋教員用ガイド＋登録）」の2つのissueに分ける。1つにまとめると `size:XL` になり、1セッションに収まらない（§6）。
+
+## 2. 作業場所
+
+- ローカルのcloneは1つだけにする。cloneした場所そのもの（mainチェックアウト）は、オーナーとIntelliJ IDEA／Android Studioが使う。常に `main` のままにして、そこではブランチを切り替えず、コミットもしない。
+- エージェントは必ずworktreeで作業する。ツールが自動で作るworktree（Claude Codeの `.claude/worktrees/` など）はそのまま使ってよい。手動で作るときは、mainチェックアウトの外に作る（次のコマンドはmainチェックアウトで実行する）。
+
+  ```sh
+  git fetch origin --prune
+  git worktree add ../jec-25cm-kotlin.worktrees/issue-<番号>-<slug> -b issue-<番号>-<slug> origin/main
+  ```
+
+- `git stash` は使わない。stashは全worktreeで共有されるので、ほかのセッションの変更を取り出してしまう。退避したいときはWIPコミットにする。
+- **Android単元**：worktreeには `local.properties` がない（Git管理外のため）。ビルドは環境変数 `ANDROID_HOME` で通す。未設定なら、コマンドの前に付ける。`local.properties` は作ってもコミットしない。
+
+  ```sh
+  cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
+  ```
+
+- **純Kotlin単元**：`HelloKotlin` はGradleプロジェクトではないので、コマンドラインのビルドがない。**IntelliJ IDEA で `HelloKotlin` を開き、対象の `exNN/main.kt` の `fun main()` を実行して、Runツールウィンドウの出力を目で確かめる。** `.idea/` はGit管理外（リポジトリ直下の `.gitignore`）なので、worktreeで初めて開いたときはJDKとKotlinの設定を聞かれる。これは正常で、設定ファイルはコミットしない。
+- **commitしないPoC成果物は、リポジトリの外に置く。** 置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables`。なければ作る。
+
+  ```sh
+  mkdir -p ~/Documents/jec-25cm-kotlin-verification-deliverables
+  ```
+
+  ここに置くのは、検証のために撮った大量のスクリーンショット、検証結果をまとめただけのHTML、配布予定のないPoCプロジェクト、コンソール出力を貼っただけのログなど、commitするとリポジトリが重くなるもの。リポジトリの外なので `.gitignore` は要らない。worktreeの中に作ると、`git clean` やworktreeの削除で消える。
+- この置き場のバックアップは取らない。消えて困るものは置かない。教材として配布するスクリーンショットは、ここではなく `docs/<スラッグ>/images/` にcommitする。
+
+## 3. 着手から後片付けまで
+
+1. `git fetch origin --prune` してから、issueを読む（`gh issue view <番号>`）。
+2. 重複着手がないことを確認する。`gh pr list --state open` と `git branch -r` に `issue-<番号>-` があれば、誰かが作業中。マージ済みのブランチはGitHubが自動で消すので、リモートにブランチがあること自体が作業中の目印になる。issue本文に「#NN とは同時に進めない」と相手の番号が挙がっていたら、その番号についても同じ確認をする。
+   - **リモートだけでは足りない。ローカルのブランチとworktreeも見る。** 手順4のとおりすぐpushしても、ブランチを作ってからpushするまでの数十秒は、リモートに何も出ない。まとめて起動された並行セッションは、全員が同時にこの窓に入る。
+
+     ```sh
+     git branch -vv | grep "issue-<番号>-"
+     git worktree list
+     ```
+
+     ローカルのcloneは1つだけなので（§2）、worktreeとローカルブランチは全セッションで共有される。まだpushされていない別セッションのブランチも、この2つには出る。
+   - **見つけたら、先に着手した側を優先し、あとから来た側が降りる。** どちらが先かは `git reflog show --date=iso <ブランチ名>` で分かる。reflogは新しい順に出るので、作成時刻は末尾の `Created from` の行を見る（手順4でブランチ名を直していると、その上に `renamed` の行が載る）。降りるときは、自分が出してしまった目印を全部片付ける。worktreeを消し（`git worktree remove <パス>`）、その外からローカルブランチを消し（コミット済みなら `git branch -D`）、pushしていればリモートも消す（`git push -d origin issue-<番号>-<slug>`）。手順9がworktreeとローカルブランチの削除を書いているのは「マージ後」なので、降りるときは自分で3つとも消す。ローカルに残すと、この確認が、やめた作業を作業中と誤判定する。
+3. 共有ファイル（§4）を触るissueなら、共有ファイルを触るPRがほかに開いていないことを確認する（`gh pr list --state open --label area:shared`）。
+4. `origin/main` からブランチ `issue-<番号>-<slug>` を作り、**コミットがなくてもすぐ `git push -u origin issue-<番号>-<slug>` する。** 調査の長いissueでは最初のコミットまで時間がかかることがあり、その間、手順2で見える「作業中」の目印が何も出ない。エージェント名（`claude/`、`codex/`）は付けない。ツールが別の名前でブランチを作っていたら、pushする前に `git branch -m issue-<番号>-<slug>` で直す。
+5. 最初のコミットをpushしたら、すぐDraft PRを開く（本文に `Closes #<番号>`）。このときの本文はひな形でよく、完成版に仕上げるのはDraftのうちにする（§8）。Draft PRは「作業中」の目印で、利用制限などで別のエージェントに交代するときの引き継ぎ先にもなる。進み具合はセッションの中ではなく、pushしたコミットとPR本文のチェックリストに残す。
+6. **編集を始める直前と、pushの直前に、もう一度 `git fetch origin --prune` する。** 調査やsubagentの待ち時間が長いと、その間に `origin/main` が進み、同じファイルを触るPRが先にマージされていることがある。あわせて手順2・3の確認もやり直す。手順2のローカルのブランチとworktreeも、そのたびに見る。着手したときは未pushだった別セッションが、ここで初めて見えることがある。このとき、手順4で出した自分のブランチ・worktree・PRは数えない（`issue-<自分の番号>-` と自分のPR番号を除いて見る）。
+   - まだコミットがなければ、`git merge --ff-only origin/main` で追従してから編集する。
+   - コミット済みで、`origin/main` が自分と同じファイルを変えていたら、試しにマージして（作業ツリーは変わらない）、衝突の有無とマージ後のファイルの形を確かめる。
+
+     ```sh
+     if T=$(git merge-tree --write-tree HEAD origin/main); then
+       git show "${T}:teacher/hello-kotlin/index.html"   # 衝突なし。マージ後の形を確認する
+     else
+       echo "$T"                                        # 衝突あり。競合したファイルが出る
+     fi
+     ```
+
+     衝突があると終了コードが1になり、`$T` はtree IDだけでなく競合情報も含む複数行になる。そのまま `git show "${T}:..."` に渡すと `invalid object name` で失敗するので、終了コードで分ける。
+
+     zshでは `git show $T:teacher/...` と書くと `:t` が修飾子と解釈されて失敗するので、`"${T}:..."` と波かっこで囲む。
+   - push前ならrebaseしてよい。push済みなら履歴は書き換えず（§5）、必要なら `git merge origin/main` する。
+7. issueの「触る範囲」の外は触らない。範囲外で気付いたことは§6の手順でissueにする。
+8. コミットは§5、検証は§7の手順で行う。検証が済んだらDraftを外す。レビュー対応は§8。
+9. マージ後はworktreeを消す（`git worktree remove <パス>`）。ローカルブランチは `git branch -d` で消す。マージせずに作業をやめたときは、手順4で出した目印のブランチも消す（`git push -d origin issue-<番号>-<slug>`）。GitHubが自動で消すのはマージ済みのブランチだけなので、残すとほかのセッションが作業中と誤解する。
+
+## 4. 並行してよい範囲
+
+| 触る場所 | 並行 |
+| --- | --- |
+| Android単元ごとの場所だけ（`A0NXxx/` と、その単元の `docs/<スラッグ>/`・`teacher/<スラッグ>/`） | 別の単元のissueとは並行してよい。同じ単元のissue同士は直列 |
+| 純Kotlin単元ごとの場所だけ（例：`HelloKotlin/src/ex02/`、`docs/<スラッグ>/`、`teacher/<スラッグ>/`） | 別の `exNN/` のissueとは並行してよい。ただし下の注意を読む |
+| 共有ファイル：リポジトリ直下のファイル（`README.md`、`AGENTS.md`、`CLAUDE.md`、`.gitignore`）、`config/`、`scripts/`、`docs/common/`、`docs/assets/`、`.github/`、`skills/` | 同時に開くPRは1本まで（ラベル `area:shared`） |
+| 対訳カタログ：`i18n/<言語>/`（§12） | 別の言語のissueとは並行してよい。単元や共有ファイルのissueとも並行してよい。同じ言語のissue同士は直列（ラベル `area:i18n`） |
+
+- **純Kotlin系は、単元が別でもプロジェクトが1つ（`HelloKotlin`）であることに注意する。** `HelloKotlin/src/exNN/` の中だけなら並行してよいが、次の2つは単元をまたいで共有される。
+  - `HelloKotlin/.gitignore` とプロジェクト直下。ここを触るissueは共有ファイル扱いにする。
+  - 配布ZIP `docs/hello-kotlin/downloads/HelloKotlin.zip`。`config/teaching-materials.json` では、複数のK単元が同じ `archive` を指す。どのK単元に `exNN` を足しても、このZIPの中身が変わる。**並行する2本のPRが両方このZIPを作り直すと、バイナリなのでマージで必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
+- 新しい単元の登録（§9）は必ず共有ファイルに当たる。2つの単元を同時に登録しない。登録のPRは、既存の全単元の教科書のサイドバーも触る（§9の手順6）。`<div class="resources">` は全体で1行なので、ほかの単元のPRが同じ行を触っていると、先にマージされた側と衝突する。相手のPRが開いているあいだは、手順6では分からない（比べる相手が `origin/main` だけのため）。相手がマージされたあとの§3の手順6で確かめ、両方の変更を残す。
+- 教科書 `docs/<スラッグ>/index.html` から他単元へのリンクは、topbarとサイドバーの2か所にある。どちらも本文ではなく導線で、手順やコードを他単元へ送るものではない（READMEの「授業用教科書の基本方針」が禁じているのは、本文から送ること）。サイドバーに先の単元へのリンクがあっても、方針違反ではない。
+  - **サイドバー**（`<div class="resources">` の1行）には、どの単元でも全単元を単元番号順に並べる。位置は「完成プロジェクトを開く」のあと、「共通：…」の前。いま開いている単元だけはリンクにせず、現在地として書く（K01なら `<span aria-current="page">K01：HelloKotlin</span>`）。表示名は、`projects[].name` を番号と残りに分けて全角コロンでつないだ形にする。項目の中に別のタグは入れない。`scripts/check-teaching-materials.py` が、`config/teaching-materials.json` の `projects` の並びと、リンク先・表示名まで照合する。単元を足して1冊でも直し忘れると、CIが落ちる。位置は検査されない。
+  - **2系統の並び順は「K→A」。** 検査は、`projects` に最初に現れた接頭辞の順で並んでいること、同じ接頭辞の中では番号が昇順であることを見る。**一度Aに変わったあとでKに戻るとエラーになる。** あとからK単元を足すときは、A単元の前に入れる。
+  - **topbar** は、直前の単元へのリンク1つだけにする（K01はなし）。こちらは検査されない。単元を挿入したときや、並行して作った単元をマージしたあとは、次の単元のtopbarが直前の単元を指しているかを目で確かめる。指す先が実在するかぎりリンク切れにはならないので、CIでは検出できない。
+
+## 5. コミットのしかた
+
+- `git add -A` と `git add .` は使わない。パスを明示する。
+- **コミットの直前に必ず `git diff --cached --name-only` を見て、意図したファイルだけがstageされていることを確認する。** IntelliJ IDEA と Android Studio が新規ファイルを自動でstageすることがあり、パスを明示して `git add` しても無関係なファイルが紛れ込む。このリポジトリで特に紛れやすいのは次の3つ。
+
+  | 混入するもの | 出どころ |
+  | --- | --- |
+  | `.idea/`、`*.iml` | IntelliJ IDEA で `HelloKotlin` を開いたとき |
+  | `out/`、`.kotlin` | `fun main()` を実行したとき（`HelloKotlin/.gitignore` が無視する） |
+  | `local.properties`、`.gradle/`、`build/` | Android Studio でGradle同期したとき |
+
+- 混入に気付いたら、push前なら `git rm --cached` して `--amend` する。push済みなら別コミットで `git rm --cached` する（履歴は書き換えない）。
+- PRタイトルは、学生が読んで分かる日本語にする。学生向けリリースノートに載るため（READMEの「リリースノートとフィードバックの扱い」）。
+
+## 6. 気付いた別課題はissueにする
+
+- 今のissueの完了条件に含まれるもの、PRを正しくするために必要なものは、そのPRで直す。
+- それ以外は、その場で直さずにissueにする。今のPRには混ぜない。
+- 起票の前に既存のissueを検索する（closedも含める）。検索語は1つずつ指定する。`OR` でつなぐと、リポジトリの絞り込みが外れて他人のリポジトリのissueが返る。
+
+  ```sh
+  gh issue list --state all --search "<語>"
+  ```
+
+- ラベルは `size:*` を1つ、`area:*` を当てはまるだけ付ける。本文は次の書式にする。
+
+  ```markdown
+  ## 背景
+  ## 目的
+  ## 再現条件（不具合でなければ「対象」）
+  ## 完了条件
+  ## 見積（基準：Claude Code / Opus 5 / effort high、2026-09-23）
+  - サイズ：S（同種の既存issueと比べて決めた）
+  - 推奨構成：軽い構成で可（判断の要らない機械的な修正）
+  - 人間の確認：XS（差分の目視のみ）
+  - 触る範囲：HelloKotlin/src/ex02/ と docs/<スラッグ>/ のみ（共有ファイルなし）
+  ```
+
+  サイズの根拠には、**実在する既存のissue・PRの番号だけ**を書く。思い当たる番号がなければ、番号を書かずに「同種の既存issueと比べて決めた」と書く。存在しない番号を書くと、あとから根拠をたどれない。
+- issueを分割・統合してクローズしたら、そのissueを「同時に進めない」相手として挙げているほかのissueの本文も直す。参照先が古いままだと、§3の手順2どおりに相手の状況を調べても、実際に作業中のissueに気付けない。
+
+### 見積の基準
+
+サイズは時間ではなく、**基準の構成で1セッション（1コンテキスト）に収まるか**で決める。基準の構成は `Claude Code / Opus 5 / effort high、2026-09-23`。差分の行数では決めない（Androidプロジェクトのひな形でファイル数が膨らむため）。過去のissue・PRと比べて「あれと同じくらい」と決めると、モデルの世代が変わっても使える。
+
+| サイズ | 定義と、このリポジトリでの例 |
+| --- | --- |
+| `size:XS` | 1ファイル、判断不要、ビルドも実行確認も要らない。例：教科書の誤記を1か所直す、READMEのリンクを1本直す、`teacher/` のコメントを足す |
+| `size:S` | 1単元に閉じた数ファイルの変更。検査スクリプトか、1回の実行・ビルドで確認できる。例：`HelloKotlin/src/exNN` を1つ足す、既存の教科書にSTEPを1つ書き足す、Android単元の文言を直して `assembleDebug` を通す |
+| `size:M` | 複数の単元や共有ファイルにまたがり、全体の照合が要る。例：`scripts/` のロジックを変える、`config/teaching-materials.json` のスキーマを変える、`docs/common/` にページを足す、全教科書のサイドバーを機械的に直す |
+| `size:L` | 単元の完成プロジェクト1つ、または教材一式（教科書＋教員用ガイド＋登録）1単元ぶん。1セッションの上限。例：`A0NXxx/` を新規に作る、K単元の教科書を1冊書いて登録まで済ませる |
+| `size:XL` | 1セッションに収まらない。見積値ではなく分割の合図。このまま着手しない。例：完成プロジェクトと教材一式を1つのPRにまとめる、2つの単元を同時に登録する |
+
+- **推奨構成**は、その作業に足りる最小のモデルとエフォートを書く。判断の要らない機械的な修正（XS・S）は軽い構成でよい。教材の設計判断が要る作業は、最上位のモデルと高いエフォートにする。
+- ClaudeとCodexのエフォート段階は同じ尺度ではないので、換算係数は作らない。基準は見出しの1構成に固定し、ほかのエージェントについては「この作業に使える／使えない」だけを書く。基準の構成を変えるときは、この節の書式例と日付を直す。
+- **人間の確認**は、オーナーの確認にかかる手間を書く。XS＝差分の目視のみ、S＝IntelliJ IDEAでの実行かエミュレータでの動作確認、M＝複数の単元やファイルの確認、L＝教科書の通読。
+- PR本文の最後に実績を1行で残す。見積と実績がずれたら、上の表の例を直す。
+
+  ```markdown
+  実績：Claude Code / Opus 5 / high、1セッション、レビュー往復2回
+  ```
+
+## 7. 検証
+
+- 教材・設定・スクリプトを触ったら、次の4つを通す。**3つ目と4つ目はGit管理下のファイルだけを見るので、新しいファイルは先に `git add` しておく。**
+
+  ```sh
+  python3 scripts/check-teaching-materials.py
+  python3 -m unittest discover -s scripts -p 'test_*.py'
+  python3 scripts/localize-student-materials.py check
+  python3 scripts/package-student-materials.py
+  ```
+
+  それぞれが見ているもの：1つ目は `config/teaching-materials.json` と教材の照合（コマ数の合計、サイドバーの並び、スニペットのバイト一致、ZIPの内容一致、指定AVD名の表記）、2つ目はスクリプト自身のテスト、3つ目は教科書HTMLから翻訳用の文を取り出せるか（§12の禁止事項を行番号つきで落とす）、4つ目は配布ZIPが最後まで組み立つか。
+- **Android単元**を触ったら、その単元をビルドする（§2）。画面に関わる変更は、エミュレータ `jec_25cm_kotlin_Pixel 9a` で確認する。教科書のスクリーンショットもこのエミュレータで撮る。
+- **純Kotlin単元**を触ったら、IntelliJ IDEA でその `exNN` の `fun main()` を実行し、コンソール出力が教科書に書いたとおりかを目で確かめる（§2）。教科書の `<pre id="...">` とソースのバイト一致は1つ目のコマンドが見るが、**出力が正しいかどうかは機械では確かめられない。**
+- **完成プロジェクトにUnit Testは書かない。** 動作はIntelliJ IDEAの実行と、エミュレータ・Logcatで確認する。`scripts/test_*.py` はCIで実行されるので、通る状態を保つ。
+- 確認できなかった項目は、PR本文に「未確認」と書く。§10の項目は確認しなくてよく、「未確認」にも挙げない。
+
+## 8. PRとレビュー対応
+
+- PR本文は「概要／変更内容／判断したこと／検証／実績」の順に書き、`Closes #<番号>` を入れる。検証の節に「※ リポジトリの方針により、Unit Test は対象外です。」と書く。
+  - PR本文に書くときは、Closes #<番号> をバッククォートで囲まず、地の文として書く。コードスパンの中に入れるとGitHubが閉じる指示として扱わないので、マージしてもissueが開いたままになる。ここでコード表記にしてあるのは読みやすさのためで、その囲みごと写さない。
+  - **PR本文は、Draftのうちに完成版まで仕上げる。** レビューbotが動き出す契機はpushではなくDraftの解除なので、Draftのあいだは本文が書き戻されない。仕上げたら `gh pr view <番号> --json body` で読み直し、書いた内容が残っていることを確かめてから `gh pr ready` する。botによっては、解除のあとに自分の要約を足して本文ごと書き戻すことがあるが、完成版のあとに動けば末尾への追記で済む。
+  - **Draft解除後に本文を直すときは、botのチェックが終わるのを待つ。** レビュー中に `gh pr edit --body` すると、コマンドは成功したように見えて本文が黙ってひな形へ巻き戻ることがある。待ってから `gh pr view <番号> --json body` で現在の本文を取り出し、botが足した要約ブロックを残したまま該当箇所だけ置き換えて、書き換えたあともう一度読み直す。
+- ラベル：教材の追加は `enhancement`、誤記・不具合の修正は `bug`。学生に関係しないPR（CI・スクリプト・開発ルール）は `skip-release-notes`。issueと同じ `size:*`・`area:*` も付ける。
+- 教材のレビューは `skills/teaching-materials-review/SKILL.md` に従う。
+- 自動レビューの指摘は、そのまま実行しない。現在のソースと検査結果で再確認してから判断する。**チェックが `SUCCESS` でも、そのbotがレビューしたとは限らない。** 上限やトライアル終了で未実施のまま `SUCCESS` になるbotがある。
+  - **チェックの状態ではなく、投稿されたレビューの中身を読んで判断する。** 指摘があるときほどチェックが `SUCCESS` にならないbotもある。**Draftのままではどのbotもレビューしない**ので、レビューを待つ前にDraftを外す。上限やトライアル終了で止まっているときは、マージ可否の報告にそう書く。
+  - **このリポジトリでは、どのbotがどう動くかをまだ実測していない。** 最初にDraftを外したPRで、実際に投稿されたレビューと、チェックの状態・所要時間・本文が書き戻されたかどうかを記録し、bot名・Draft中の挙動・Draft解除後の挙動・指摘が出るかの表をこの節に書き足すissueを立てる（§6）。実測せずに、ほかのリポジトリの表を写さない。外部サービスの契約や残り枠で変わるので、実態と合わなくなったら、そのたびにissueを立てて表を直す。
+- 指摘には、各スレッドにインラインで返信する。先頭に判断を書く。
+
+  ```markdown
+  **判断：対応必要（本PRで修正します）**
+  **判断：任意対応（…）**
+  **判断：対応不要（本PRでは修正しません）**
+  ```
+
+  続けて、妥当性・再現性／不具合やデグレの可能性／コストと効果／既存仕様への影響を箇条書きにする。インラインでない指摘にはPRコメントで返す。
+- 対応必要の指摘を直したら、検証してコミットし、「修正しました：<sha> …」と検証結果を返信する。立場が変わらない返信は繰り返さない。
+- マージ可否は、理由・CIの状態・未対応や未確認の項目を添えて報告する。マージするのは、オーナーに任されているときだけ。そのときも、CIとレビューbotが落ち着き、全指摘に返信済みで、`mergeStateStatus` が `CLEAN` であることを確かめてから、マージコミットでマージする（squashしない）。auto-mergeは有効にしない。
+
+## 9. 新しい単元を追加するとき
+
+`docs/<スラッグ>/` を作るだけでは足りない。次のすべてに登録する。手順は `skills/add-teaching-unit/SKILL.md` にもある。
+
+1. 完成プロジェクト。純Kotlin系は `HelloKotlin/src/exNN/`（§11の8。`exNN` の番号は前年度資料の節に対応させる）、Android系は `A0NXxx/`。**1つの単元が複数の `exNN` を扱ってよい**（K03なら `ex03` `ex05` `ex06`）。
+2. `docs/<スラッグ>/index.html`、`images/`、`downloads/<Project>.zip`。ZIPは次で作る。
+
+   ```sh
+   python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip
+   ```
+
+   `--project` と `--output` はどちらも必須で、既定値はない。純Kotlin系は全K単元が同じZIPを共有する（§4）。
+3. `teacher/<スラッグ>/index.html` と `teacher/<スラッグ>/code/`（STEPごとの照合コード。`NN-ファイル名.拡張子` の形式）。「この単元の教材方針」の節を必ず置き、何を意図的に外したかを理由つきで書く。
+4. `config/teaching-materials.json`：`scan_roots`、指定AVD名の `required_in`（Android単元だけ。教科書と教員用ガイドの両方）、`projects`。
+   - `projects` は単元番号順の位置に足す（サイドバーの検査がこの並びを基準にする。§4）。**K→Aの順を崩さない。**
+   - `kind` は `"kotlin-console"` か `"android"` のどちらか。ほかの値はエラーになる。
+   - **`kind` によって、扱うパッケージの書き方が違う。**
+     - `"kotlin-console"`：**`packages`（配列）** に、その単元で扱う演習を並べる。1つだけでも `["ex01"]` と配列で書く。`package`（単数）は書かない。**1つの単元で複数の `exNN` をまとめてよい**（例：`"packages": ["ex03", "ex05", "ex06"]`）。
+     - `"android"`：いままでどおり **`package`（文字列）** にKotlinパッケージ名（`jp.ac.jec.…`）を書く。`packages` は書かない。
+     - 書き間違えると `scripts/check-teaching-materials.py` が設定エラーとして落とす。`packages` に書いた演習の完成コードが `sources` に1つもないときも落ちる（書いたのに足し忘れる事故を捕まえるため）。
+   - `sessions` は、その単元に割くコマ数。**`projects` の `sessions` の合計が `course.total_sessions`（15）を超えるとエラー。** 未満は、まだ単元化していないだけなので通る。
+   - `snippets` は `<pre id="…">` とソースをバイト単位で照合するので、コードは手で写さずソースから生成する。
+5. `README.md`：教科書リンク、完成プロジェクトのリンク、教員用リンク、15コマ計画表、フォルダ表。
+6. 単元どうしのリンク（§4）。サイドバーは、**既存の全単元の教科書**に新しい単元へのリンクを単元番号順の位置へ足し、新しい単元の教科書には全単元を並べる（自単元は `<span aria-current="page">`）。1冊でも直し忘れると、`scripts/check-teaching-materials.py` が落ちる。topbarは、新しい単元に直前の単元へのリンクを置く。単元を途中に挿入したときは、次の単元のtopbarも新しい単元へ付け替える。topbarは検査されないので、目で確かめる。既存の教科書のサイドバーは、issueの「触る範囲」に挙がっていなくても、登録に必要な変更なので同じPRで直す（§6）。
+7. GitHubのラベル `area:K<NN>` または `area:A<NN>`。
+8. 翻訳の対象は `docs/` のHTMLから自動で見つかる。新単元のPRでは日本語だけを追加し、`python3 scripts/localize-student-materials.py check` で文を取り出せることを確かめる（§7）。翻訳そのものは日常のPRでは行わない（§12）。
+
+### 配布スクリプトへの追記は不要
+
+**`scripts/package-student-materials.py` と `scripts/release-student-materials.py` には、単元を足しても何も書かない。** どちらも単元の一覧を `config/teaching-materials.json` の `projects` から読む。完成プロジェクトZIPの再生成も、`はじめに.txt` の単元一覧も、リリースノートの単元一覧も、上の手順4だけで自動的に付いてくる。
+
+参照にした Androidプログラミング1 のリポジトリでは、この3か所が配布スクリプトに直書きしてあり、単元を足すたびに `config` と2つのスクリプトの計3か所を同じ順序で直す必要があった。**単元一覧が3か所に散っていること自体が、直し忘れの原因になっていた。** このリポジトリでは、単元の一覧が正しいかどうかを `config/teaching-materials.json` の1か所だけで判断できるようにしてある。**スクリプトに単元名や単元番号を直書きしない**（配布ZIPの名前や見出しのような、単元に依存しない固定値は直書きでよい）。
+
+## 10. 対象外
+
+次の項目は、レビューで指摘しない。botに指摘されたら「対応不要」と返信する。検証もしない。
+
+- 完成プロジェクトのUnit Test（§7、§11の5）。テストしやすくするためのリファクタリングもしない。
+- Windows。教員も学生もmacOSで、CIはubuntu（READMEの「開発環境：教員」「開発環境：学生」）。
+- ダークテーマ。確認は既定のライトテーマだけで行う。直書きの色もそのままにする。
+- タブレット・フォルダブル対応、画面回転と横画面。
+
+## 11. 完成コードの書き方（Kotlin）
+
+READMEの「完成コードの書き方（全単元共通）」を、このリポジトリの実物のコードで具体化したもの。教材のコードを書くとき・レビューするときは、ここを基準にする。
+
+1. **Viewの取得は `findViewById` を使う。ViewBindingもComposeも使わない。** `onCreate` の冒頭にまとめる。型は `findViewById<T>()` の型引数か、変数の宣言側で見せる。
+
+   ```kotlin
+   // A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/MainActivity.kt
+   editQuery = findViewById(R.id.edit_query)   // 宣言は private lateinit var editQuery: TextInputEditText
+   val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+   ```
+
+   ```kotlin
+   // A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/MainActivity.kt
+   findViewById<Button>(R.id.btn_take_picture).setOnClickListener { takeScreenshot() }
+   ```
+
+   命名は `txtXxx` / `edtXxx` / `btnXxx` / `imgXxx` / `recyclerView` など、部品の種類が名前から分かる形にする。**リスナを付けるためだけに使うViewは、変数に入れずその場でつないでよい**（2つ目の例）。ViewBindingを使わない理由は、Androidが初めての受講生が「XMLに書いたidとKotlinの変数がどうつながっているか」を1行で追えるようにするため。自動生成のクラスが間に入ると、その対応が見えなくなる。受講生はJavaとSwiftを書けるが、Androidの画面のしくみは初めてなので、ここだけは遠回りをしない。
+
+2. **`@SuppressLint` で警告を隠さない。警告の原因そのものを消す。** このリポジトリに `@SuppressLint` は1つもない。
+
+   `A04FunnyCamera` は、画像を指でドラッグさせるために `setOnTouchListener` を使うと `ClickableViewAccessibility` の警告が出る。これを抑制する代わりに、`AppCompatImageView` を継承したViewを作り、`onTouchEvent()` と `performClick()` をオーバーライドしてある。
+
+   ```kotlin
+   // A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/DraggableImageView.kt
+   class DraggableImageView(context: Context, attrs: AttributeSet?) :
+       AppCompatImageView(context, attrs) {
+
+       override fun onTouchEvent(event: MotionEvent): Boolean {
+           when (event.actionMasked) {
+               // …（省略）…
+               MotionEvent.ACTION_UP -> performClick() // （アクセシビリティ対応）
+           }
+           return true
+       }
+
+       /**
+        * onTouchEventをオーバーライドしたViewは、performClickもオーバーライドする必要がある
+        * (オーバーライドしないとLintがアクセシビリティの警告 ClickableViewAccessibility を出す)
+        */
+       override fun performClick(): Boolean {
+           return super.performClick()
+       }
+   }
+   ```
+
+   レイアウトからは `<jp.ac.jec.a04funnycamera.DraggableImageView android:id="@+id/iv_character" …>` として使う。`@SuppressLint` を1つ許すと、学生は「警告は消せばよい」と覚える。**警告は、まだ書けていないコードの在りかを示している**ので、そこを書くのが教材になる。
+
+3. **ユーザーに伝えることは `Snackbar`（または `Toast`）で画面に出す。`Log.d` で済ませない。**
+
+   ```kotlin
+   // A04FunnyCamera：保存の結果を画面に出す
+   val message = if (isSaved) "保存しました" else "保存に失敗しました"
+   Snackbar.make(findViewById(R.id.main), message, Snackbar.LENGTH_SHORT).show()
+   ```
+
+   ```kotlin
+   // A03GithubSearch：同じ役目を Toast でまとめてある
+   private fun showMessage(message: String) {
+       Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+   }
+   ```
+
+   学生は、アプリを動かしているときLogcatを見ていない。`Log.d` だけだと「押しても何も起きない」アプリになり、自分の書いたコードが動いたかどうかを確かめられない。Logcatは、`A04FunnyCamera` のカメラ権限の可否や保存先URIのように、**学生が中身を確かめるための補助として扱う単元でだけ**使う。
+
+4. **1単元で導入する新概念は1つまで。** 画面（Android系）またはコンソールの出力（純Kotlin系）で、効果が目に見える形にする。見えない変更は、学生には「何も起きなかった」と同じ。
+
+5. **完成プロジェクトにUnit Testは書かない。** テストしやすくするためのリファクタリングもしない（§10）。`scripts/test_*.py` はCIで動くので、通る状態を保つ（§7）。
+
+6. **完成プロジェクトの `README.md` は `A03GithubSearch/README.md` の形にそろえる。** 節の順は、画面の構成の表 → 使用しているAPI（または画像・素材）→ ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なライブラリ → ビルドと実行。`A04FunnyCamera/README.md` も同じ形になっている。
+
+7. **ライブラリは必要なときだけ足す。** バージョンは各プロジェクトの `gradle/libs.versions.toml` で管理し、`build.gradle.kts` にバージョンを直書きしない。単元で使わないライブラリは足さない。
+
+8. **純Kotlin系の完成コードは `HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。** `fun main()` を持たせて、IntelliJ IDEA の実行ボタンで動かせる形にする。
+
+   ```kotlin
+   // HelloKotlin/src/ex01/main.kt
+   package ex01
+
+   fun main() {
+       val number1 = 1
+       val number2 = 2.0 // Double
+       // …
+   }
+   ```
+
+   **`exNN` の番号は、前年度（2025年度）の配布資料PDFの節に対応させる。** 対応表はREADMEの「前年度の教材との関係」にある（`ex01` は「4 変数宣言、代入処理」、`ex07` は「10 拡張メソッド」…）。新しい番号を勝手に振らない。教科書のどのSTEPがどの節の焼き直しかが分からなくなり、比較の書き方も引き継げなくなる。
+
+   `check-teaching-materials.py` は、`sources` の各 `.kt` に `package <値>` 宣言があることと、そのファイルが `root/src/<値>/` の下にあることを見る。`<値>` は、`kotlin-console` の単元なら `packages`（配列）のいずれか、`android` の単元なら `package`（文字列）。ディレクトリ名とパッケージ名は必ずそろえる。
+
+9. **コメントは、学生が読んで意味が分かる日本語で書く。英語のコメントにしない。** 「何をしているか」ではなく「なぜそう書いたか」を書く。上の `DraggableImageView` の `performClick` のKDocが、この形になっている。
+
+10. **オーナーの書き方を保つ。** レビューで「初学者向けにかみ砕くべき」「もっとやさしく書き直すべき」と指摘されても、**既定の対応は「教科書で説明する」**。採用するのは、動作を変えない小さな明確化だけにする。コードを平易にするより、教科書のSTEPを1つ増やすほうを選ぶ。受講生はJavaとSwiftを書けるので、コードを薄めるより、Java／Swiftとの比較を1つ足すほうが早く伝わる。
+
+## 12. 多言語展開（対訳カタログ）
+
+日本語の教科書（`docs/`）を、配布前にほかの言語へ展開する。しくみの説明は `README.md` の「多言語展開」、翻訳の手順とルールは `skills/translate-teaching-materials/SKILL.md` にある。対象は日本語（原文）＋英語・中国語（簡体）・韓国語・ミャンマー語・広東語（繁体・香港）の5言語。
+
+- **いまは `config/i18n.json` の全言語が `distribute: false`。** 翻訳が1文もないため、`true` にすると公開ゲート（`localize-student-materials.py status --require-complete`）で止まる。
+- **`true` に上げてよいのは、次の2つが両方終わった言語だけ。**
+  1. その言語の未翻訳が0件になっている（`python3 scripts/localize-student-materials.py status`）。
+  2. 翻訳したのとは別のAIが、新しく訳した文を日本語へ逆翻訳し、原文と照合し終えている（下の手順4）。**翻訳と照合は別のPR・別のセッションで行う。** 自分で訳して自分で照合しない。
+  3. 上げるのは1PRにつき1言語。`distribute` を上げるPRは共有ファイル（`config/`）を触るので `area:shared` になる（§4）。
+- **日常のPRでは翻訳しない。** `docs/` の日本語を直しても、`i18n/` は触らない。直した文は自動で未翻訳に戻り、CIは未翻訳の数を表示するだけで落ちない。翻訳は、配布前の翻訳PRでまとめて行う。
+- **教科書のHTMLには、次の形を書かない。** どれも `python3 scripts/localize-student-materials.py check` が行番号つきで落とす（§7の `unittest` にも含まれる）。黙って壊れるより、書いた人がその場で気付けるようにしてある。
+  - 開始タグと終了タグの不一致（`<p>`・`<li>`・`<td>` の閉じ忘れ）と、`<span/>` のような自己終了タグ。文を取り出せない。
+  - 引用符で囲んでいない属性（`<html lang=ja>`、`href=images/x.png`）。値の終わりが決まらず、書き換えた結果が壊れる。
+  - 文の途中のHTMLコメント（`<p>あいう<!-- メモ -->えお</p>`）。訳文で置き換えるとコメントが消え、前後の文字が連結される。段落の外に書く。
+  - `/` で始まるルート相対のリンク（`href="/docs/assets/textbook.css"`）。GitHub Pagesがリポジトリ名の下にあるので日本語版でも使えない。
+  - 文の途中の要素に付けた `translate="no"`（`<span translate="no">`）。その文が断片に割れて訳せなくなる。
+- **訳してほしくない文字は、`<code>` で囲む。** `<code>`・`<kbd>`・`<pre>` の中身は、どの言語でも日本語版のまま出る。Java／Swiftとの比較ブロックのコードも `<pre>` の中なので、どの言語版でもそのまま出る。言語名のラベルだけは文になるので、`<p class="compare-lang" translate="no">Java</p>` のように**ブロック要素に** `translate="no"` を付けて外す（文の途中の要素には付けない。下の禁止事項）。Kotlinのキーワード（`val` `var` `fun main`）、IDEのメニュー名、指定AVD名、パッケージ名はここに入れる。段落や表のセルを丸ごと訳の対象から外したいときは、その要素（`<p>`・`<td>`・`<div>` など、文の区切りになる要素）に `translate="no"` を付ける。
+- **各言語のHTMLはコミットしない。** コミットするのは `i18n/<言語>/` の対訳カタログと `glossary.md`（用語集）だけ。確認用のページは `dist/i18n-preview/` に作る（`dist/` はGit管理の対象外）。
+- **カタログの `source` は手で書き換えない。** 訳を直すときは `translation` だけを直す。並べ替えと、使わなくなった訳の削除は、`sync` と `merge` が行う。
+- 翻訳のPRには `area:i18n` を付ける。学生用ZIPに入るまでは `skip-release-notes` も付ける。
+
+### 配布準備のissueと翻訳PR
+
+1. 配布準備のissueを起票し、対象の版・言語・未翻訳の件数を書く。§6の書式とサイズ見積を使い、`area:i18n` と `size:*` を付ける。翻訳PRにも同じラベルと `enhancement` を付ける。まだ配布対象でない言語だけのPRには `skip-release-notes` も付ける。
+2. 最新のmainで `python3 scripts/localize-student-materials.py status` を実行する。翻訳用skillに従い、未翻訳の文だけを訳す。Actionsで翻訳APIを呼ぶ処理やSecretは追加しない。
+3. **翻訳PRを開いてから学生向けの公開が終わるまでは、`docs/` を触るPRをマージしない。** 翻訳PRの本文に、この期間と対象の版を書く。日本語の変更が入った場合は最新のmainを取り込み、差分だけを訳し直す。
+4. 翻訳したのとは別のAIが、新しく訳した文を日本語へ逆翻訳し、原文と照合する。意味の違い・訳し落とし・足しすぎ・操作順・用語集との不一致を確かめる。PR本文には担当と照合範囲、指摘への対応を残す。全体を訳し直す必要はない。
+5. §7の4つの検証に加え、`python3 scripts/localize-student-materials.py status --require-complete` を通す。ZIPの入口 `index.html` から配布対象の言語を開き、リンク・コードのコピー・共通資料からの戻り先を確認する。
