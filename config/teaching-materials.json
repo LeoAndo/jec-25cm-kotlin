@@ -1,0 +1,53 @@
+{
+  "course": {
+    "name": "Kotlin演習",
+    "total_sessions": 15,
+    "minutes_per_session": 90
+  },
+  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin"],
+  "terms": [
+    {
+      "name": "指定AVD名",
+      "canonical": "jec_25cm_kotlin_Pixel 9a",
+      "forbidden": ["jec_25cm_kotlin_Pixel_9a"],
+      "applies_to": ["android"],
+      "required_in": [
+        "teacher/hello-kotlin/index.html",
+        "docs/common/setup.html"
+      ]
+    }
+  ],
+  "registration": {
+    "targets": [
+      { "path": "README.md", "requires": ["student_doc", "teacher_doc", "archive"] }
+    ]
+  },
+  "project_layout": {
+    "gitignore_reference": {
+      "kotlin-console": "K01HelloKotlin/.gitignore",
+      "android": "A01HelloAndroid/.gitignore"
+    },
+    "untracked_parts": [".idea", ".gradle", ".kotlin", "build", "out"],
+    "untracked_names": ["local.properties"]
+  },
+  "projects": [
+    {
+      "name": "K01HelloKotlin",
+      "kind": "kotlin-console",
+      "root": "K01HelloKotlin",
+      "packages": ["ex01"],
+      "sessions": 6,
+      "docs": ["docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"],
+      "sources": ["K01HelloKotlin/src/ex01/main.kt"],
+      "snippets": [
+        { "html": "docs/hello-kotlin/index.html", "id": "code-final-kotlin",
+          "source": "K01HelloKotlin/src/ex01/main.kt" }
+      ],
+      "mirrors": [
+        { "source": "K01HelloKotlin/src/ex01/main.kt",
+          "copy": "teacher/hello-kotlin/code/01-main.kt" }
+      ],
+      "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip"
+    }
+  ]
+}

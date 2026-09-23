@@ -32,3 +32,13 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# 教材の配布物（スクリプトの出力）
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS Finder
+.DS_Store
