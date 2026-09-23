@@ -14,7 +14,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 
-**いま教科書があるのはK01だけで、その中身も2コマ目ぶん（`ex01`・`ex02`）までです。** K01の3コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
+**いま教科書があるのはK01だけで、その中身も3コマ目ぶん（`ex01`・`ex02`・`ex03`）までです。** K01の4コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
 
 ### 開き方
 
@@ -52,7 +52,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 K01の6コマがどの演習をどの順で扱うかは、前年度資料の節と `ex01`〜`ex11` の対応表のとおりです（下の「前年度の教材との関係」）。
 
-**いま教科書に書けているのは、2コマ目ぶん（`ex01`・`ex02`）までです。** 3コマ目以降（`ex03` 以降）は、その回を作る今後のissueで、**新しい教科書を作るのではなく、同じ `docs/hello-kotlin/index.html` にSTEPを足していきます。** `config/teaching-materials.json` の `packages` も、いまは `["ex01", "ex02"]` だけです。`ex03` 以降をここに足すのは、その回の教科書を書くissueのときです（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
+**いま教科書に書けているのは、3コマ目ぶん（`ex01`・`ex02`・`ex03`）までです。** 4コマ目以降（`ex04` 以降）は、その回を作る今後のissueで、**新しい教科書を作るのではなく、同じ `docs/hello-kotlin/index.html` にSTEPを足していきます。** `config/teaching-materials.json` の `packages` も、いまは `["ex01", "ex02", "ex03"]` だけです。`ex04` 以降をここに足すのは、その回の教科書を書くissueのときです（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
 
 **純Kotlin系の単元は K01 の1つだけです。** K02以降は作りません。プロジェクトも `K01HelloKotlin` という1つのIntelliJ IDEAプロジェクトだけで、回を重ねるごとに `src/exNN/` のパッケージを足していきます。**単元ごとに別プロジェクトにしないのは、次の理由からです。**
 

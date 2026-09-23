@@ -35,24 +35,29 @@
       "name": "K01HelloKotlin",
       "kind": "kotlin-console",
       "root": "K01HelloKotlin",
-      "packages": ["ex01", "ex02"],
+      "packages": ["ex01", "ex02", "ex03"],
       "sessions": 6,
       "docs": ["docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"],
       "sources": [
         "K01HelloKotlin/src/ex01/main.kt",
-        "K01HelloKotlin/src/ex02/main.kt"
+        "K01HelloKotlin/src/ex02/main.kt",
+        "K01HelloKotlin/src/ex03/main.kt"
       ],
       "snippets": [
         { "html": "docs/hello-kotlin/index.html", "id": "code-final-kotlin",
           "source": "K01HelloKotlin/src/ex01/main.kt" },
         { "html": "docs/hello-kotlin/index.html", "id": "code-final-ex02",
-          "source": "K01HelloKotlin/src/ex02/main.kt" }
+          "source": "K01HelloKotlin/src/ex02/main.kt" },
+        { "html": "docs/hello-kotlin/index.html", "id": "code-final-ex03",
+          "source": "K01HelloKotlin/src/ex03/main.kt" }
       ],
       "mirrors": [
         { "source": "K01HelloKotlin/src/ex01/main.kt",
           "copy": "teacher/hello-kotlin/code/01-main.kt" },
         { "source": "K01HelloKotlin/src/ex02/main.kt",
-          "copy": "teacher/hello-kotlin/code/02-main.kt" }
+          "copy": "teacher/hello-kotlin/code/02-main.kt" },
+        { "source": "K01HelloKotlin/src/ex03/main.kt",
+          "copy": "teacher/hello-kotlin/code/03-main.kt" }
       ],
       "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip"
     }

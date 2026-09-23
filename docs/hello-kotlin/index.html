@@ -29,18 +29,25 @@
 <li><a href="#step-9">09　String と String?</a></li>
 <li><a href="#step-10">10　安全呼び出し ?.</a></li>
 <li><a href="#step-11">11　ミニ練習</a></li>
-<li><a href="#step-12">12　完成</a></li></ol></nav>
-<div class="progress"><span data-progress-label>0 / 13 ステップ確認済み</span><progress value="0" max="13" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
+<li><a href="#step-12">12　完成</a></li></ol>
+<p class="eyebrow">3コマ目 · STEP 13〜18</p>
+<ol><li><a href="#step-13">13　3コマ目のゴール</a></li>
+<li><a href="#step-14">14　ex03 を作る</a></li>
+<li><a href="#step-15">15　戻り値のある関数</a></li>
+<li><a href="#step-16">16　戻り値のない関数</a></li>
+<li><a href="#step-17">17　ミニ練習</a></li>
+<li><a href="#step-18">18　完成</a></li></ol></nav>
+<div class="progress"><span data-progress-label>0 / 19 ステップ確認済み</span><progress value="0" max="19" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
 <div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
 </div></aside>
 <main id="main">
-<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · この教科書は2コマ目まで</span><span>予習なしで始められる</span></div></div>
+<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · この教科書は3コマ目まで</span><span>予習なしで始められる</span></div></div>
 <section id="step-0" aria-labelledby="title-0">
 <p class="step-meta">STEP 00 · 目安 5分</p>
 <h2 id="title-0">この単元のゴール</h2>
 
 <p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>です。</p>
-<p>この教科書は、その6コマぶんを<strong>1冊に順に積み上げていきます</strong>。いま入っているのは<strong>1コマ目（STEP 00〜06）と2コマ目（STEP 07〜12）</strong>で、回を重ねるごとに、うしろへSTEPが増えていきます。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。</p>
+<p>この教科書は、その6コマぶんを<strong>1冊に順に積み上げていきます</strong>。いま入っているのは<strong>1コマ目（STEP 00〜06）と2コマ目（STEP 07〜12）と3コマ目（STEP 13〜18）</strong>で、回を重ねるごとに、うしろへSTEPが増えていきます。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。</p>
 <p>6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>、<code>ex02</code> …とパッケージを足していきます。この教科書も1冊のままで、回ごとにSTEPが増えていきます。</p>
 <p>みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。</p>
 <ol><li><strong>Kotlinではどう書くのか</strong>。</li><li><strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。</li></ol>
@@ -104,7 +111,7 @@ Tanaka</code></pre>
 <p>プロジェクトは <strong>自分で新規作成</strong>します。1コマ目の STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。</p>
 <p><a href="#sample-project">完成プロジェクト</a>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。</p>
 <div class="note"><p class="box-title">この教科書の進め方</p><p>書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。</p><p>分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。</p></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>1コマ目のゴールの4行を指させた。KotlinがJVM言語であること、入口が <code>fun main()</code> であることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>1コマ目に出す4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）を、上のゴールで確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-1">次へ：Playgroundで動かす →</a></div>
 
 </section><section id="step-1" aria-labelledby="title-1">
@@ -144,7 +151,7 @@ Tanaka</code></pre>
 <li>Swiftのように「トップレベルに書いた文がそのまま上から実行される」わけでもありません。Kotlinの入口は、常に <code>fun main()</code> です。</li>
 </ul></div>
 <div class="note"><p class="box-title">Playgroundの短所</p><p>実行結果が出るまでに時間がかかります。サーバー側でコンパイルして実行しているためです。</p><p>コード補完がほとんど効きません。型を確かめたり、候補から選んだりする書き方ができません。</p><p>この2つがあるので、この先は統合開発環境を使います。Playgroundは、短いコードを人に見せるときや、あとで文法を思い出したいときに使ってください。</p></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-1"><span>Playgroundで <code>Hello, Kotlin!</code> を出せた。<code>fun main()</code> が要る理由を言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-1"><span>Playgroundで <code>Hello, Kotlin!</code> を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-2">次へ：プロジェクトを作る →</a></div>
 
 </section><section id="step-2" aria-labelledby="title-2">
@@ -322,7 +329,7 @@ name = &quot;Tanaka&quot;</code></pre></div>
 </ul></div>
 <div class="note"><p class="box-title">Javaの var と、Kotlinの var は別物</p><p>Java 10以降にもローカル変数の <code>var</code> があります。ただしJavaの <code>var</code> は「型を書かない」という意味で、再代入できるかどうかとは関係ありません（<code>final var</code> と書けます）。</p><p>Kotlinの <code>var</code> は「再代入できる」という意味で、型を書くかどうかとは関係ありません（<code>var name: String = &quot;Yamada&quot;</code> と書けます）。つづりが同じでも、分けている軸が違います。</p></div>
 <div class="task"><p class="box-title">押す前に予想する</p><p><code>println(name)</code> では、<code>Yamada</code> と <code>Tanaka</code> のどちらが出るでしょうか。予想してから、Runで確かめましょう。</p><details><summary>確かめたあとに答えを見る</summary><p><code>Tanaka</code> が出ます。JavaやSwiftと同じで、その行より上で最後に代入された値が入っています。</p></details></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-3"><span><code>val</code> と <code>var</code> で2行を出せた。<code>val</code> が Javaの <code>final</code>・Swiftの <code>let</code> にあたることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-3"><span><code>val</code> と <code>var</code> で2行を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-4">次へ：数の型 →</a></div>
 
 </section><section id="step-4" aria-labelledby="title-4">
@@ -399,7 +406,7 @@ print(number1, terminator: &quot;&quot;)</code></pre></div>
 <li>改行するのが <code>println</code>、改行しないのが <code>print</code> です。Javaの <code>System.out.println</code> と <code>System.out.print</code> の対応と同じです。</li>
 <li>Swiftの <code>print</code> は既定で改行するので、名前は同じでも、はたらきはKotlinの <code>println</code> のほうです。改行しないときは <code>terminator</code> を渡します。ここは読み替えが要ります。</li>
 </ul></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-4"><span>4行を出せた。KotlinにJavaのようなプリミティブ型とラッパークラスの区別がないことを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-4"><span>4行を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-5">次へ：ミニ練習 →</a></div>
 
 </section><section id="step-5" aria-labelledby="title-5">
@@ -428,9 +435,9 @@ number1 = 5 // cannot assign to value: 'number1' is a 'let' constant</code></pre
 <li>Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>'val'</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong></li>
 <li>直し方は2つです。宣言を <code>var</code> に変えるか、再代入をやめるか。ここでは再代入をやめて元に戻します。</li>
 </ul></div>
-<h3>最後の3分 · 元に戻し、記録する</h3>
-<ol><li>練習Aで足した2行を消します。</li><li>練習Bで書き足した <code>number1 = 5</code> の行を消します。</li><li>Runし、STEP 00 のゴールと同じ4行に戻ったことを確かめます。</li><li>「JavaやSwiftならこう書くところを、Kotlinでは＿＿と書く」という形で、気づいたことを1つメモします。</li></ol>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-5"><span>練習A・Bを試し、エラーメッセージを読んで原因を言えた。最後に元の4行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<h3>最後の3分 · 元に戻す</h3>
+<ol><li>練習Aで足した2行を消します。</li><li>練習Bで書き足した <code>number1 = 5</code> の行を消します。</li><li>Runし、STEP 00 のゴールと同じ4行に戻ったことを確かめます。</li></ol>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-5"><span>練習A・Bを試し、赤い波線が出た行を確かめた。最後に元の4行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-6">次へ：完成 →</a></div>
 
 </section><section id="step-6" aria-labelledby="title-6">
@@ -554,14 +561,14 @@ print(name)</code></pre></div>
 <pre tabindex="0"><code>5
 null
 6</code></pre>
-<p>2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>を説明できるようになるのが、この回のゴールです。</p>
+<p>2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>は、STEP 10 で確かめます。</p>
 
 <h3>この90分の進み方</h3>
 <table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
 <tr><td>前半（約35分）</td><td>STEP 07〜09</td><td><code>ex02</code> を作り、<code>String</code> と <code>String?</code> の違いを、わざと出したコンパイルエラーで確かめる。</td></tr>
 <tr><td>後半（約55分）</td><td>STEP 10〜12</td><td>安全呼び出し <code>?.</code> を書き、3行の出力を完成させる。</td></tr>
 </tbody></table>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-7"><span>ゴールの3行を指させた。Kotlinが <code>null</code> を入れられる型と入れられない型を分けること、それがSwiftのオプショナルに近いことを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-7"><span>2コマ目に出す3行（<code>5</code> / <code>null</code> / <code>6</code>）を、上のゴールで確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-8">次へ：ex02 を作る →</a></div>
 
 </section><section id="step-8" aria-labelledby="title-8">
@@ -775,7 +782,7 @@ print(name2.count)    // エラー
 print(name2?.count)   // 警告なし。これが必要</code></pre></div>
 </div>
 <p><strong>ここはSwiftと違うところです。</strong> Swiftは代入しても型が <code>String?</code> のままなので、<code>?.</code> かアンラップがいつでも要ります。Kotlinは、代入した内容から「ここではもう <code>null</code> ではない」と判断して、型を絞り込みます。</p></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>3行を出せた。2行目に <code>null</code> と出る理由を、<code>?.</code> のはたらきで説明できた。<code>?.</code> が返す型が <code>Int?</code> であることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>3行を出せた。<code>?.</code> が返す型が <code>Int?</code> であることを、マウスを重ねて確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-11">次へ：ミニ練習 →</a></div>
 
 </section><section id="step-11" aria-labelledby="title-11">
@@ -811,9 +818,9 @@ let length = name3.count
 <li><strong><code>?.</code> は「安全に書くための心がけ」ではなく、「書かないと通らない」しくみです。</strong> ここがJavaといちばん違うところです。</li>
 </ul></div>
 
-<h3>最後の3分 · 元に戻し、記録する</h3>
-<ol><li>練習Aで足した2行を消します。</li><li><code>?.</code> が元どおりになっていることを確かめます。</li><li>Runし、STEP 10 と同じ3行に戻ったことを確かめます。</li><li>「JavaならNullPointerExceptionになるところを、Kotlinでは＿＿で止まる」という形で、気づいたことを1つメモします。</li></ol>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>練習A・Bを試し、<code>?.</code> の有無で何が変わるかを言えた。最後に元の3行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<h3>最後の3分 · 元に戻す</h3>
+<ol><li>練習Aで足した2行を消します。</li><li><code>?.</code> が元どおりになっていることを確かめます。</li><li>Runし、STEP 10 と同じ3行に戻ったことを確かめます。</li></ol>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>練習A・Bを試し、<code>?.</code> を <code>.</code> にした行が赤くなることを確かめた。最後に元の3行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-12">次へ：完成 →</a></div>
 
 </section><section id="step-12" aria-labelledby="title-12">
@@ -905,6 +912,414 @@ let length2: Int? = name2?.count</code></pre></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-12"><span>完成チェックを行い、先生に画面を見せた。<code>ex01</code> と <code>ex02</code> が同じプロジェクトに並んでいることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="goal"><p class="box-title">この回のまとめ</p><p><strong><code>?</code> を付けた型だけが <code>null</code> を持てる → 呼ぶときは <code>?.</code> を付ける → 返ってくるのも <code>?</code> の付いた型。</strong><br>Javaでは実行時に <code>NullPointerException</code> で気づいていたことを、Kotlinでは書いている最中に見つけられます。Swiftのオプショナルで知っている考え方が、そのまま使えます。</p></div>
 
+</section><section id="step-13" aria-labelledby="title-13">
+<p class="step-meta">STEP 13 · 3コマ目 · 目安 5分</p>
+<h2 id="title-13">3コマ目のゴール（関数）</h2>
+
+<p>ここからが<strong>3コマ目</strong>です。使うプロジェクトは1コマ目・2コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex03</code> パッケージを足して、その中に書きます。すでにある <code>ex01</code> と <code>ex02</code> は、そのまま残します。</p>
+<p>この回の主題は <strong>関数の宣言</strong> です。やることはJavaのメソッド、Swiftの関数とまったく同じですが、<strong>書く順番と記号が、JavaともSwiftとも違います。</strong> 何を書くかではなく、どこに何を書くかを覚える回です。</p>
+
+<h3>この回で出てくるKotlinの言葉</h3>
+<table><thead><tr><th>Kotlinの言葉</th><th>Javaでの対応</th><th>Swiftでの対応</th></tr></thead><tbody>
+<tr><td><code>fun</code></td><td>キーワードなし（修飾子と戻り値の型で始める）</td><td><code>func</code></td></tr>
+<tr><td>引数 <code>a: Int</code></td><td><code>int a</code>（型が先、名前があと）</td><td><code>a: Int</code>（名前が先、型があと）</td></tr>
+<tr><td>戻り値 <code>: Int</code></td><td>メソッド名の前の <code>int</code></td><td><code>-&gt; Int</code></td></tr>
+<tr><td>戻り値を書かない</td><td><code>void</code> と書く</td><td><code>-&gt; Void</code> を省く</td></tr>
+<tr><td><code>return</code></td><td><code>return</code></td><td><code>return</code></td></tr>
+<tr><td>トップレベル関数</td><td>クラスの <code>static</code> メソッド</td><td>グローバル関数</td></tr>
+</tbody></table>
+
+<h3>同じ関数を3つの言語で書く</h3>
+<p>2つの <code>Int</code> を受け取って、足した <code>Int</code> を返す関数です。中身は3つとも同じで、違うのは形だけです。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>fun sum(a: Int, b: Int): Int {
+    return a + b
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>static int sum(int a, int b) {
+    return a + b;
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>func sum(a: Int, b: Int) -&gt; Int {
+    return a + b
+}</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinは <code>fun</code> で始めます。Swiftの <code>func</code> にあたります。Javaには、この位置に置くキーワードがありません。</li>
+<li>引数は、Kotlinが <code>a: Int</code>、Swiftも <code>a: Int</code>、Javaだけが <code>int a</code> です。<strong>KotlinとSwiftは名前が先で、Javaは型が先です。</strong></li>
+<li>戻り値の型は、Kotlinがかっこのうしろの <code>: Int</code>、Swiftがかっこのうしろの <code>-&gt; Int</code>、Javaがメソッド名の前の <code>int</code> です。<strong>3つとも位置か記号が違います。</strong></li>
+<li>値を返す <code>return</code> は、JavaともSwiftとも同じ書き方です。行末に <code>;</code> が要らない点は、1コマ目・2コマ目と同じです。</li>
+</ul>
+<p>並びと位置は STEP 15 で1つずつ確かめます。ここでは「3つとも違う形になる」ことだけ見ておきます。</p></div>
+
+<h3>3コマ目のゴール（コンソールに出る2行）</h3>
+<div class="code-head">Runの結果 · この2行が出れば完成</div>
+<pre tabindex="0"><code>3
+3</code></pre>
+<p>同じ <code>3</code> が2行出ます。<strong>1行目と2行目では、<code>3</code> を出している場所が違います。</strong> どちらがどこで出しているのかは、STEP 16 で確かめます。</p>
+
+<h3>この90分の進み方</h3>
+<table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
+<tr><td>前半（約40分）</td><td>STEP 13〜15</td><td><code>ex03</code> を作り、戻り値のある関数 <code>sum</code> を書いて1行目を出す。</td></tr>
+<tr><td>後半（約50分）</td><td>STEP 16〜18</td><td>戻り値のない関数 <code>sum2</code> を足し、2行の出力を完成させる。</td></tr>
+</tbody></table>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>3コマ目に出す2行（<code>3</code> / <code>3</code>）を、上のゴールで確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-14">次へ：ex03 を作る →</a></div>
+
+</section><section id="step-14" aria-labelledby="title-14">
+<p class="step-meta">STEP 14 · 3コマ目 · 目安 5分</p>
+<h2 id="title-14">ex03 パッケージと main.kt を作る</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex03</code> パッケージと、その中の <code>main.kt</code> を作ります。</p></div>
+<p><strong>STEP 08 と同じ操作です。</strong>違うのは、パッケージ名が <code>ex02</code> ではなく <code>ex03</code> になることだけです。手順は、下にもう一度すべて書きます。</p>
+
+<h3>① プロジェクトを開き直す</h3>
+<ol>
+<li>IntelliJ IDEA を開きます。<code>K01HelloKotlin</code> がすでに開いていれば、そのまま使います。</li>
+<li>開いていないときは、ホーム画面の左側に並ぶ、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> をクリックします。</li>
+<li>一覧に無いときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選び、<code>書類</code>（<code>Documents</code>）の中の <code>Kotlin</code> フォルダにある <code>K01HelloKotlin</code> フォルダを選んで開きます。</li>
+<li>左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> と <code>ex02</code> があることを確かめます。どちらも消しません。</li>
+</ol>
+
+<h3>② ex03 パッケージを作る</h3>
+<ol>
+<li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。</li>
+<li>名前に <code>ex03</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex03</code> ができます。すべて小文字で、記号は入れません。</li>
+</ol>
+
+<h3>③ main.kt を作る</h3>
+<ol>
+<li>できた <code>ex03</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でも <code>ex02</code> でもなく、<code>ex03</code> を右クリックします。</strong></li>
+<li>名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。</li>
+<li>できた <code>main.kt</code> の1行目に <code>package ex03</code> が入っていることを確かめます。</li>
+</ol>
+<div class="note"><p class="box-title">1行目が <code>package ex03</code> になっていないとき</p><p>ファイルが <code>ex03</code> の中ではなく、<code>src</code> の直下か、<code>ex01</code>・<code>ex02</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex03</code> を右クリックしたかどうかが分かれ目です。</p></div>
+
+<h3>④ Java / Swift ではどう書くか（パッケージと、関数を置く場所）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>// src/ex03/main.kt
+package ex03
+
+fun main() {
+}
+
+// 関数はファイルの直下に置ける
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>// src/ex03/Main.java
+package ex03;
+
+public class Main {
+    public static void main(String[] args) {
+    }
+
+    // メソッドはクラスの中にしか置けない
+    static int sum(int a, int b) {
+        return a + b;
+    }
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>// Main.swift
+// package 宣言はない
+
+// 関数はファイルの直下に置ける
+func sum(a: Int, b: Int) -&gt; Int {
+    return a + b
+}</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>KotlinもJavaも、ファイルの先頭に <code>package</code> を書き、フォルダの構成と合わせます。違うのは行末の <code>;</code> が要らないことだけです。</li>
+<li>Swiftには、ファイルの先頭に書く <code>package</code> 宣言がありません。同じターゲットの中のファイルは、宣言なしで互いを見られます。</li>
+<li><strong>Kotlinは、関数をファイルの直下に書けます。</strong> これを<strong>トップレベル関数</strong>と呼びます。1コマ目から書いている <code>fun main()</code> が、その1つめです。Swiftのグローバル関数と同じ置き方です。</li>
+<li>Javaは、メソッドを必ずクラスの中に置きます。<strong>この回で書く <code>sum</code> も、Javaならクラスの中の <code>static</code> メソッドにあたります。</strong></li>
+<li><code>ex01</code>・<code>ex02</code>・<code>ex03</code> は別のパッケージなので、どれにも <code>main.kt</code> があり、どれにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。</li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-14"><span><code>src/ex03/main.kt</code> を作り、1行目が <code>package ex03</code> になっていることを確かめた。<code>ex01</code> と <code>ex02</code> も残っている。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-15">次へ：戻り値のある関数 →</a></div>
+
+</section><section id="step-15" aria-labelledby="title-15">
+<p class="step-meta">STEP 15 · 3コマ目 · 目安 30分</p>
+<h2 id="title-15">戻り値のある関数（fun sum）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>fun</code> で関数を宣言し、引数を <code>名前: 型</code>、戻り値を末尾の <code>: 型</code> で書きます。<code>return</code> で返した値を <code>main</code> で受け取り、1行目の <code>3</code> を出します。</p></div>
+<p class="file">変更するファイル：src/ex03/main.kt</p>
+
+<h3>① ファイル全体を、次の内容にする</h3>
+<div class="code-head">src/ex03/main.kt · 全体を置き換える</div>
+<pre id="code-sum" tabindex="0"><code>package ex03
+
+fun main() {
+    val ret = sum(1, 2)
+    println(ret)
+}
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}</code></pre>
+<p><code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。</p>
+
+<h3>② 実行結果</h3>
+<div class="code-head">Runの結果</div>
+<pre tabindex="0"><code>3</code></pre>
+<p><code>sum(1, 2)</code> が <code>3</code> を返し、その値が <code>ret</code> に入り、<code>println(ret)</code> が出しています。<strong><code>sum</code> の中には <code>println</code> がありません。</strong> 出しているのは <code>main</code> のほうです。</p>
+
+<h3>③ Java / Swift ではどう書くか（関数の宣言）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+val ret = sum(1, 2)</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>static int sum(int a, int b) {
+    return a + b;
+}
+
+final int ret = sum(1, 2);</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>func sum(a: Int, b: Int) -&gt; Int {
+    return a + b
+}</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>やっていることは3つとも同じです。<strong>違うのは、同じ部品をどの順番に並べるかだけです。</strong></li>
+<li>Kotlinの <code>fun</code> は、Swiftの <code>func</code> にあたります。Javaには対応する語がなく、修飾子（<code>static</code>）と戻り値の型から始まります。</li>
+<li>Kotlinの呼び出しは <code>sum(1, 2)</code> で、Javaと同じ形です。受け取った値を <code>val</code> に入れるところも、Javaの <code>final</code> 付きの変数と同じです。</li>
+</ul></div>
+
+<h3>④ 引数は「名前: 型」 — Swiftと同じ並び、Javaと逆</h3>
+<table><thead><tr><th>言語</th><th>引数の書き方</th><th>先に書くもの</th></tr></thead><tbody>
+<tr><td>Kotlin</td><td><code>a: Int</code></td><td>名前</td></tr>
+<tr><td>Java</td><td><code>int a</code></td><td>型</td></tr>
+<tr><td>Swift</td><td><code>a: Int</code></td><td>名前</td></tr>
+</tbody></table>
+<p><strong>Javaの並びで <code>fun sum(Int a, Int b)</code> と書くと、通りません。</strong> Runする前に赤い波線が出て、引数に型が書かれていない、というおおよそその意味のメッセージが出ます。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言は覚えなくて構いません。読み替えるのは<strong>「名前と型の順番が逆になっている」</strong>の1つだけです。</p>
+<div class="note"><p class="box-title">なぜKotlinは名前を先に書くのか</p>
+<p>1コマ目で書いた変数の宣言を思い出してください。Kotlinは <code>val number1: Int = 1</code> と書き、<strong>名前が先、型があと</strong>でした。関数の引数も、同じ並びにそろえてあります。</p>
+<p>この並びだと、<strong>型を省いても形が崩れません。</strong> <code>val number1 = 1</code> のように、うしろの <code>: Int</code> を取るだけで済みます。Javaの <code>int number1 = 1;</code> は先頭が型なので、そこを省くと何も残りません。<strong>型を省ける言語は、型をうしろに置くほうが都合がよいのです。</strong> Swiftが同じ並びなのも、同じ理由です。</p>
+<p>ただし、<strong>関数の引数の型だけは省けません。</strong> 呼ぶ側が何を渡してよいか決まらなくなるからです。ここはSwiftも同じです。</p></div>
+
+<h3>⑤ 戻り値は末尾に「: 型」 — 3言語で位置か記号が違う</h3>
+<table><thead><tr><th>言語</th><th>宣言の1行目</th><th>戻り値の型を書く場所</th></tr></thead><tbody>
+<tr><td>Kotlin</td><td><code>fun sum(a: Int, b: Int): Int {</code></td><td>かっこのうしろに <code>: Int</code></td></tr>
+<tr><td>Java</td><td><code>static int sum(int a, int b) {</code></td><td>メソッド名の前に <code>int</code></td></tr>
+<tr><td>Swift</td><td><code>func sum(a: Int, b: Int) -&gt; Int {</code></td><td>かっこのうしろに <code>-&gt; Int</code></td></tr>
+</tbody></table>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li><strong>KotlinとSwiftは場所が同じで、記号だけが違います。</strong> Kotlinは <code>:</code>、Swiftは <code>-&gt;</code> です。Swiftの書き方で <code>fun sum(a: Int, b: Int) -&gt; Int</code> と書くと、Kotlinでは通りません。</li>
+<li>Kotlinが <code>:</code> を使うのは、<strong>変数の型注釈と同じ記号にそろえるため</strong>です。<code>val ret: Int</code> と <code>fun sum(…): Int</code> で、「<code>:</code> のうしろが型」という読み方が1つで済みます。</li>
+<li>Javaだけが、名前より前に型を書きます。引数の <code>int a</code> と同じで、<strong>Javaは型を先に書く言語だから</strong>です。</li>
+<li>Kotlinでは、<code>: Int</code> と書いたら <code>return</code> で必ず値を返します。返さずに <code>}</code> まで進むと、<code>return</code> が足りない、というおおよそその意味のエラーになり、Runできません。</li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-15"><span><code>sum</code> を書いて <code>3</code> を出せた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-16">次へ：戻り値のない関数 →</a></div>
+
+</section><section id="step-16" aria-labelledby="title-16">
+<p class="step-meta">STEP 16 · 3コマ目 · 目安 20分</p>
+<h2 id="title-16">戻り値のない関数（fun sum2）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p>戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。</p></div>
+<p class="file">変更するファイル：src/ex03/main.kt</p>
+
+<h3>① ファイル全体を、次の内容にする</h3>
+<div class="code-head">src/ex03/main.kt · 全体を置き換える</div>
+<pre id="code-sum2" tabindex="0"><code>package ex03
+
+fun main() {
+    val ret = sum(1, 2)
+    println(ret)
+    sum2(1, 2)
+}
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun sum2(a: Int, b: Int) {
+    println(a + b)
+}</code></pre>
+<p>足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。</p>
+
+<h3>② 実行結果</h3>
+<div class="code-head">Runの結果 · この2行が出れば成功</div>
+<pre tabindex="0"><code>3
+3</code></pre>
+<table><thead><tr><th>行</th><th>出る内容</th><th>出している場所</th></tr></thead><tbody>
+<tr><td>1行目</td><td><code>3</code></td><td><code>sum</code> が返した値を、<code>main</code> の <code>println(ret)</code> が出している。</td></tr>
+<tr><td>2行目</td><td><code>3</code></td><td><code>sum2</code> の中の <code>println(a + b)</code> が出している。<code>main</code> は受け取っていない。</td></tr>
+</tbody></table>
+<p>同じ <code>3</code> でも、<strong>出している場所が違います。</strong> <code>sum</code> は計算結果を返すだけで出力せず、<code>sum2</code> は計算結果を返さずに、関数の中で出力します。</p>
+
+<h3>③ Java / Swift ではどう書くか（戻り値がないとき）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>// かっこのうしろに何も書かない
+fun sum2(a: Int, b: Int) {
+    println(a + b)
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>// void は省けない
+static void sum2(int a, int b) {
+    System.out.println(a + b);
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>// -&gt; Void を省いた形
+func sum2(a: Int, b: Int) {
+    print(a + b)
+}</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li><strong>Kotlinは、戻り値がないときに何も書きません。</strong> Swiftも <code>-&gt; Void</code> を省けるので、書き上がりは同じ形になります。</li>
+<li>Javaだけは <code>void</code> を必ず書きます。<strong>メソッド名の前に必ず何かを置く文法だから</strong>です。前を空にはできないので、「無い」ことを表す語が要ります。</li>
+<li>KotlinとSwiftは、戻り値の型をかっこの<strong>うしろ</strong>に置きます。うしろは、書かなければそこで終わるだけです。だから「無い」ことを表す語を用意しなくて済みます。<strong>書く位置の違いが、そのまま省けるかどうかの違いになっています。</strong></li>
+</ul></div>
+
+<h3>④ 何も書かないとき、Kotlinは何を返しているのか</h3>
+<p>Kotlinには、戻り値がないことを表す <code>Unit</code> という型があります。<code>sum2</code> のように何も書かなかった関数は、<code>Unit</code> を返す関数として扱われます。<code>fun sum2(a: Int, b: Int): Unit</code> と書いても同じ意味ですが、<strong>ふつうは書きません。</strong>省くのが既定の書き方です。</p>
+<div class="task"><p class="box-title">画面で確かめる</p><p><code>main</code> の中の <code>sum2(1, 2)</code> を <code>val ret2 = sum2(1, 2)</code> に書き換え、その下に <code>println(ret2)</code> を1行足してRunします。確かめたら、足した行を消し、<code>sum2(1, 2)</code> の形に戻します。</p><details><summary>確かめたあとに答えを見る</summary><p>出力は3行になり、3行目に <code>kotlin.Unit</code> と出ます。<strong>「何も返さない」ように見える関数も、値を1つ返しています。</strong>ふだんはその値を受け取らないので、目に見えないだけです。</p><p>Javaの <code>void</code> は型ではないので、<code>int x = sum2(1, 2);</code> のように結果を変数へ入れることはできません。Swiftの <code>Void</code> は空のタプル <code>()</code> の別名で、Kotlinの <code>Unit</code> と同じ発想です。<strong>Javaだけが「値が無い」を型の外側で表しています。</strong></p></details></div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>書くときに覚えるのは1つだけです。<strong>戻り値がなければ、かっこのうしろには何も書かない。</strong></li>
+<li><code>: Unit</code> と書いても動きますが、この教材では書きません。<strong>Kotlinのふつうの書き方は、省いた形です。</strong></li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-16"><span>2行を出せた。<code>val ret2 = sum2(1, 2)</code> に書き換えて <code>kotlin.Unit</code> が出ることを確かめ、元の形に戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-17">次へ：ミニ練習 →</a></div>
+
+</section><section id="step-17" aria-labelledby="title-17">
+<p class="step-meta">STEP 17 · 3コマ目 · 目安 15分</p>
+<h2 id="title-17">ミニ練習</h2>
+
+<p>ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。<strong>エラーのメッセージは、文言ではなく意味だけを読みます。</strong>言い回しは IntelliJ IDEA と Kotlin のバージョンで変わります。</p>
+
+<h3>練習A · 引数を3つに増やす（必須・6分）</h3>
+<div class="task"><p class="box-title">やること</p><p><code>sum</code> の引数を3つに増やします。<code>fun sum(a: Int, b: Int, c: Int): Int</code> にし、中身も <code>return a + b + c</code> に書き換えます。<strong><code>main</code> の <code>sum(1, 2)</code> はそのままにして</strong>、Runを押す前にその行を見てください。</p></div>
+<details><summary>試したあと：答えと理由</summary><p><code>sum(1, 2)</code> の行に赤い波線が出て、Runできません。3つ必要な引数に2つしか渡していないので、<strong>足りない引数がある</strong>、というおおよそその意味のメッセージが出ます。</p><p>呼び出しを <code>sum(1, 2, 3)</code> に直すとRunでき、1行目が <code>6</code> になります。確かめたら、宣言も呼び出しも元の2つに戻します。</p><p>Javaでも同じ間違いはコンパイルエラーになります。<strong>引数の数が合っているかは、KotlinもJavaもSwiftも、動かす前に確かめてくれます。</strong></p></details>
+
+<h3>練習B · 戻り値の型を変える（必須・4分）</h3>
+<div class="task"><p class="box-title">やること</p><p><code>sum</code> の戻り値の型を <code>: Int</code> から <code>: String</code> に書き換えます。中身の <code>return a + b</code> はそのままにして、Runを押す前にその行を見てください。</p></div>
+<details><summary>試したあと：答えと理由</summary><p><code>return a + b</code> の行に赤い波線が出て、Runできません。<code>a + b</code> は <code>Int</code> なのに、<code>String</code> を返すと宣言しているからです。<strong>宣言した型と、返している型が合っていない</strong>、というおおよそその意味のメッセージが出ます。</p><p><strong>末尾に書いた <code>: 型</code> は、飾りではなく約束です。</strong> Kotlinは、その約束が守られているかを、書いている最中に確かめます。Javaの <code>static String sum(...)</code>、Swiftの <code>-&gt; String</code> でも、同じように止まります。確かめたら <code>: Int</code> に戻します。</p></details>
+
+<h3>練習C · return を消す（必須・2分）</h3>
+<div class="task"><p class="box-title">やること</p><p><code>sum</code> の中の <code>return</code> だけを消して、<code>a + b</code> の1行にします。Runを押す前に、関数の閉じかっこ <code>}</code> のあたりを見てください。</p></div>
+<details><summary>試したあと：答えと理由</summary><p>赤い波線が出て、Runできません。<code>: Int</code> と宣言したのに値を返していないので、<strong><code>return</code> が足りない</strong>、というおおよそその意味のメッセージが出ます。</p><p>直し方は2つです。<code>return</code> を書き戻すか、<code>: Int</code> のほうを消して <code>sum2</code> と同じ「戻り値のない関数」にするかです。ここでは <code>return</code> を書き戻します。</p></details>
+
+<h3>同じ3つの間違いを、JavaとSwiftでしたとき</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>fun sum(a: Int, b: Int): Int {
+    a + b
+}
+// コンパイルエラー。Runできない</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>static int sum(int a, int b) {
+    a + b;
+}
+// コンパイルエラー。実行できない</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>func sum(a: Int, b: Int) -&gt; Int {
+    a + b
+}
+// Swiftは1行だけなら return を省ける</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>引数の数・戻り値の型・<code>return</code> の有無は、<strong>3つの言語すべてが動かす前に確かめます。</strong> ここはKotlinで新しく覚えることではありません。</li>
+<li>ただし <code>return</code> の省略だけは違います。<strong>Swiftは、本体が1つの式だけなら <code>return</code> を省けます。</strong> Kotlinは、かっこ <code>{ }</code> で本体を書いた関数では省けません。<code>: Int</code> と宣言したら、<code>return</code> で返します。</li>
+<li>2コマ目と同じで、<strong>覚えるのはメッセージの文言ではなく、どの行が赤くなったかと、その意味です。</strong></li>
+</ul></div>
+
+<h3>最後の3分 · 元に戻す</h3>
+<ol><li>練習A・B・Cで書き換えたところを、すべて元に戻します。</li><li><code>fun sum(a: Int, b: Int): Int</code> と <code>return a + b</code>、<code>sum(1, 2)</code> の3か所を確かめます。</li><li>Runし、STEP 16 と同じ2行に戻ったことを確かめます。</li></ol>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-17"><span>練習A・B・Cを試し、引数の数・戻り値の型・<code>return</code> が合っていないと動かせないことを確かめた。最後に元の2行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-18">次へ：完成 →</a></div>
+
+</section><section id="step-18" aria-labelledby="title-18">
+<p class="step-meta">STEP 18 · 3コマ目 · 目安 15分</p>
+<h2 id="title-18">完成</h2>
+
+<h3>① 完成チェック</h3>
+<p>Runし、コンソールの出力を上から順に見ます。</p>
+<table><thead><tr><th>行</th><th>出る内容</th><th>理由</th></tr></thead><tbody>
+<tr><td>1行目</td><td><code>3</code></td><td><code>sum(1, 2)</code> が返した値が <code>ret</code> に入り、<code>main</code> の <code>println(ret)</code> が出している。</td></tr>
+<tr><td>2行目</td><td><code>3</code></td><td><code>sum2(1, 2)</code> は計算結果を返さず、<code>sum2</code> の中の <code>println(a + b)</code> が出している。</td></tr>
+</tbody></table>
+<p>表のとおりになったら、先生に画面を見せ、<strong><code>: Int</code> と書いた場所と、何も書かなかった場所</strong>を指さして説明します。</p>
+<details><summary>入力したコードと照合する</summary>
+<p>ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex03</code> も忘れずに入れます。</p>
+<div class="code-head">main.kt · 完成コード</div>
+<pre id="code-final-ex03" tabindex="0"><code>package ex03
+
+fun main() {
+    val ret = sum(1, 2)
+    println(ret)
+    sum2(1, 2)
+}
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun sum2(a: Int, b: Int) {
+    println(a + b)
+}</code></pre>
+</details>
+
+<h3>② Javaの完成コードと、Swiftの関数宣言を比べる</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>package ex03
+
+fun main() {
+    val ret = sum(1, 2)
+    println(ret)
+    sum2(1, 2)
+}
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun sum2(a: Int, b: Int) {
+    println(a + b)
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>package ex03;
+
+public class Main {
+    public static void main(String[] args) {
+        final int ret = sum(1, 2);
+        System.out.println(ret);
+        sum2(1, 2);
+    }
+
+    static int sum(int a, int b) {
+        return a + b;
+    }
+
+    static void sum2(int a, int b) {
+        System.out.println(a + b);
+    }
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>// 呼び出しの引数ラベルはこの回では扱わないため、宣言だけを並べる
+func sum(a: Int, b: Int) -&gt; Int {
+    return a + b
+}
+
+func sum2(a: Int, b: Int) {
+    print(a + b)
+}</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Javaで増えたのは、<strong>入口を包むクラスと、<code>void</code> と、行末の <code>;</code> の3つ</strong>です。処理そのものは同じです。</li>
+<li>Kotlinは <code>sum</code> も <code>sum2</code> もファイルの直下に置けます。Javaは、どちらもクラスの中の <code>static</code> メソッドにします。<strong>1コマ目から <code>fun main()</code> をクラスなしで書けていたのと、同じしくみです。</strong></li>
+<li>Swiftの2つの宣言は、Kotlinと形がよく似ています。<strong>宣言の先頭行で違うのは <code>fun</code> と <code>func</code>、そして戻り値の <code>: Int</code> と <code>-&gt; Int</code> の2か所です。</strong>本体の出力は、1コマ目と同じく <code>println</code> と <code>print</code> の違いがあります。</li>
+<li>戻り値のない <code>sum2</code> は、Kotlinでも Swift でもかっこのうしろが空です。<strong>Javaだけが <code>void</code> を書きます。</strong></li>
+</ul></div>
+
+<h3>③ ex01・ex02・ex03 が並んでいることを確かめる</h3>
+<ol>
+<li>左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることを確かめます。</li>
+<li><code>ex01</code> と <code>ex02</code> の <code>main.kt</code> を開きます。前の回に書いたコードが、そのまま残っています。</li>
+<li><code>fun main()</code> が3つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。</li>
+</ol>
+<p>プロジェクトは <code>K01HelloKotlin</code> の1つだけを使い続けます。回を重ねるごとに <code>src</code> の下のパッケージが増えていくので、前に書いたコードをいつでも開いて見返せます。</p>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-18"><span>完成チェックを行い、先生に画面を見せた。<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が同じプロジェクトに並んでいることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="goal"><p class="box-title">この回のまとめ</p><p><strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の型は3つの言語で書く位置か記号が違います。書く順番や記号が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。</p></div>
+
 </section>
 <section id="sample-project" aria-labelledby="sample-title">
 <p class="step-meta">REFERENCE · 最初の授業から使える見本</p>
@@ -939,6 +1354,9 @@ let length2: Int? = name2?.count</code></pre></div>
 <tr><td>出るけれど、内容が違う</td><td><code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。</td></tr>
 <tr><td><code>String</code> の変数に <code>null</code> を入れた行が赤い</td><td><code>?</code> の付かない型には <code>null</code> を入れられません。<code>null</code> を入れたいなら型を <code>String?</code> にし、入れないなら値を文字列に戻す（STEP 09）。</td></tr>
 <tr><td><code>String?</code> の変数を使った行が赤い</td><td><code>?.</code> になっているか確認する。<code>name2.count()</code> ではなく <code>name2?.count()</code> です（STEP 10）。</td></tr>
+<tr><td><code>fun</code> を書いた行が赤い</td><td>引数が <code>名前: 型</code> の順になっているか確認する。Javaの <code>int a</code> の並びでは通りません（STEP 15）。</td></tr>
+<tr><td><code>return</code> について指摘が出る</td><td>かっこのうしろに <code>: Int</code> と書いたなら、<code>return</code> で値を返します。返さないなら <code>: Int</code> のほうを消します（STEP 15・STEP 17）。</td></tr>
+<tr><td><code>sum(1, 2)</code> の行が赤い</td><td>渡している引数の数と型が、宣言した <code>fun sum(a: Int, b: Int)</code> と合っているか確認する（STEP 17）。</td></tr>
 <tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>
 <tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。</td></tr>
 </tbody></table>
@@ -948,11 +1366,12 @@ let length2: Int? = name2?.count</code></pre></div>
 <li><a href="https://kotlinlang.org/docs/basic-syntax.html">Kotlin公式：Basic syntax</a></li>
 <li><a href="https://kotlinlang.org/docs/basic-types.html">Kotlin公式：Basic types</a></li>
 <li><a href="https://kotlinlang.org/docs/null-safety.html">Kotlin公式：Null safety</a></li>
+<li><a href="https://kotlinlang.org/docs/functions.html">Kotlin公式：Functions</a></li>
 <li><a href="https://kotlinlang.org/docs/numbers.html">Kotlin公式：Numbers</a></li>
 <li><a href="https://kotlinlang.org/docs/home.html">Kotlin公式：ドキュメントの入口</a></li>
 <li><a href="https://www.jetbrains.com/help/idea/get-started-with-kotlin.html">IntelliJ IDEA公式：Get started with Kotlin</a></li>
 </ul></section>
-<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・この教科書は2コマ目まで） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
+<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・この教科書は3コマ目まで） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
 </main></div>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
 </body></html>
