@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>提出課題とAPKの作り方 | Kotlin演習</title>
+<link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
+<body class="plain"><a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../hello-kotlin/index.html" data-back>もとのページへ戻る</a></header>
+<main id="main"><div class="hero"><p class="eyebrow">KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート</p><h1>提出課題と<br>APKの作り方</h1><p class="lede">この授業の提出課題の説明です。自分で作ったAndroidアプリを1つ選び、アレンジを加えて、APKというファイルにして提出します。</p></div>
+
+<section id="assignment"><h2>1. 提出課題</h2>
+<p>この資料を使うのは、<strong>後半のAndroidの単元が終わってから</strong>です。前半のIntelliJ IDEAの単元だけが済んだ時点では、まだ進められません。提出する時期は、先生の案内に従ってください。</p>
+<div class="goal"><p class="box-title">提出するもの</p><p><strong>APKファイルを1つ。</strong>提出先は、<strong>先生が案内する場所</strong>です。</p></div>
+<table><thead><tr><th>すること</th><th>内容</th></tr></thead><tbody>
+<tr><td>選ぶ</td><td>後半のAndroidの単元で<strong>自分が作ったプロジェクト</strong>から、好きなものを<strong>1つ</strong>選びます。</td></tr>
+<tr><td>アレンジする</td><td>選んだ1つに、自分なりの変更を加えます。文字の色を変えるだけでも構いません。</td></tr>
+<tr><td>APKにする</td><td>アレンジしたプロジェクトから、<strong>APK</strong>を作ります。アプリを1つのファイルにまとめたものです。</td></tr>
+<tr><td>提出する</td><td>できたAPKを、先生が案内する提出先に出します。</td></tr>
+</tbody></table>
+<h3>進め方</h3>
+<div class="flow"><strong>2. 1つ選ぶ</strong><span>→</span><strong>3. コピーを取る</strong><span>→</span><strong>4. アレンジする</strong><span>→</span><strong>5. APKを作る</strong><span>→</span><strong>6. 名前を変える</strong><span>→</span><strong>7. 提出する</strong></div>
+<p>番号は、下の見出しの番号と同じです。選ぶアプリは1つなので、2から7までを上から順に1回ずつ行えば終わります。</p>
+<div class="note"><p class="box-title">完成プロジェクト（見本）をそのまま出しても、提出にはなりません</p><p>教材のフォルダの <code>samples</code> に入っている完成プロジェクトは、先生が作った見本です。提出するのは、<strong>自分で作ったプロジェクトにアレンジを加えたもの</strong>です。見本をそのままAPKにして出しても、提出として数えません。</p></div></section>
+
+<section id="choose"><h2>2. アプリを1つ選ぶ</h2>
+<p>Finderで <strong>書類 → Kotlin</strong> を開きます。この授業で自分が作ったプロジェクトのフォルダが並んでいます。この中から1つ選びます。</p>
+<p>選べるのは、<strong>後半のAndroidの単元で、Android Studio で作ったプロジェクト</strong>です。どの単元のものでも構いません。気に入っているもの、もっと変えてみたいものを選んでください。</p>
+<div class="note"><p class="box-title">前半の <code>HelloKotlin</code> は選べません</p><p>前半の単元で IntelliJ IDEA を使って作った <code>HelloKotlin</code> は、結果を文字で出すコンソールのプログラムです。スマートフォンにインストールするアプリではないので、<strong>APKを作る仕組みがありません</strong>。提出課題の対象は、Android Studio で作ったプロジェクトだけです。</p></div>
+<div class="note"><p class="box-title"><code>samples</code> フォルダの中のものは、選べません</p><p>教材のフォルダの <code>samples</code> に入っているのは、先生が作った完成プロジェクト（見本）です。選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。</p></div>
+<p>最後まで作れていない単元も、教科書を見ながら完成させれば選べます。選べるものが1つもないときは、先生に相談してください。</p></section>
+
+<section id="backup"><h2>3. アレンジの前に、コピーを取っておく</h2>
+<p>アレンジを始めると、どこを変えたか分からなくなったり、アプリが動かなくなったりすることがあります。そうなっても<strong>元に戻せるように</strong>、先にプロジェクトをまるごとコピーしておきます。</p>
+<p>ここでは、選んだプロジェクトの名前を <code>A01HelloAndroid</code> として説明します。自分が選んだプロジェクトの名前に読み替えてください。</p>
+<ol>
+<li>Android Studioで、そのプロジェクトのウィンドウを閉じます。</li>
+<li>Finderで <strong>書類 → Kotlin</strong> を開きます。</li>
+<li>アレンジするプロジェクトのフォルダ（<code>A01HelloAndroid</code>）を右クリックします。</li>
+<li>出てきたメニューから <strong>複製</strong> を選びます。</li>
+</ol>
+<div class="check"><p class="box-title">成功の目印</p><p>同じ場所に <code>A01HelloAndroidのコピー</code> というフォルダができている。</p></div>
+<p>コピーのほうは、<strong>開かずにそのまま置いておきます。</strong>アレンジするのは、元の名前のほう（<code>A01HelloAndroid</code>）です。</p>
+<div class="note"><p class="box-title">コピーに時間がかかることがあります</p><p>Androidのプロジェクトには、ビルドのときに作られたファイルが入っています。そのぶんフォルダが大きいので、複製に少し時間がかかります。終わるまで待ってください。</p></div>
+<h3>元に戻したいとき</h3>
+<p>アレンジの途中で動かなくなり、直せなくなったら、コピーからやり直せます。</p>
+<ol>
+<li>Android Studioで、そのプロジェクトのウィンドウを閉じます。</li>
+<li>Finderで <strong>書類 → Kotlin</strong> を開きます。</li>
+<li>動かなくなったほうのフォルダを1回クリックして選び、<kbd>Enter</kbd> を押します。名前を変えられるようになるので、<code>A01HelloAndroid_old</code> に変えます。</li>
+<li>同じように、<code>A01HelloAndroidのコピー</code> の名前を <code>A01HelloAndroid</code> に変えます。</li>
+<li>Android Studioの <strong>Open</strong> から <code>A01HelloAndroid</code> を開き直します。</li>
+<li>もう一度アレンジを始める前に、上の「複製」の手順で、コピーを取り直します。</li>
+</ol>
+<p>動かなくなったほうは、消さずに名前を変えるだけにしておくと、あとで見比べられます。</p></section>
+
+<section id="arrange"><h2>4. アレンジする</h2>
+<p><strong>どこを、どれだけ変えるかは自由です。</strong>「何か所以上」という決まりはありません。文字の色を1か所変えるだけでも、アレンジです。JavaとSwiftを書いてきた人なら、処理そのものを足すところまでやっても構いません。下の表は、左から右へいくほど手が込んだものになっています。</p>
+<h3>変えられるものの例</h3>
+<table><thead><tr><th>変えるもの</th><th>変える場所</th><th>書き方の例</th></tr></thead><tbody>
+<tr><td>文字の色</td><td><code>activity_main.xml</code> の、文字を出す部品（<code>TextView</code> など）</td><td><code>android:textColor="#FF0000"</code></td></tr>
+<tr><td>画面の背景の色</td><td><code>activity_main.xml</code> の、いちばん外側の部品</td><td><code>android:background="#FFF4D5"</code></td></tr>
+<tr><td>ボタンの色</td><td><code>activity_main.xml</code> の <code>Button</code></td><td><code>android:backgroundTint="#008000"</code></td></tr>
+<tr><td>ボタンや見出しの文言</td><td><code>activity_main.xml</code> の <code>android:text</code></td><td><code>android:text="ここをおして！"</code></td></tr>
+<tr><td>画面に出すメッセージ</td><td><code>MainActivity.kt</code> の、<code>" "</code> で囲まれた文字列</td><td><code>Snackbar.make(view, "アレンジしました！", Snackbar.LENGTH_SHORT).show()</code></td></tr>
+<tr><td>数値</td><td><code>MainActivity.kt</code> の中の数字</td><td>問題の数、待ち時間、増やす量など</td></tr>
+<tr><td>処理を足す</td><td><code>MainActivity.kt</code></td><td>押した回数を数える、値によって出す文字を変える、ボタンをもう1つ足して動かす、など</td></tr>
+</tbody></table>
+<p>これは例です。表にないところを変えても構いません。</p>
+<div class="note"><p class="box-title">ボタンの色は <code>android:background</code> では変わりません</p><p>ボタンに <code>android:background</code> を書いても、色は変わらず、角の丸みだけがなくなります。ボタンの色を変えるときは、<code>android:backgroundTint</code> を使います。</p></div>
+<div class="note"><p class="box-title">変えると動かなくなりやすいところ</p><p>次の3つは、<strong>変えてはいけないわけではありません。</strong>ただ、1か所変えると、ほかの場所も合わせて直す必要があり、ビルドが通らなくなったり、アプリが起動しなくなったりすることがあります。</p><ul><li>クラスの名前（<code>MainActivity</code> など）</li><li>パッケージ名（<code>jp.ac.jec.</code> で始まる名前）</li><li><code>AndroidManifest.xml</code> の中身</li></ul><p>変えてみたいときは、手順3のコピーがあることを確かめてから始めてください。</p></div>
+<h3>例：ボタンの文言と、メッセージを変える</h3>
+<p>やり方を1つ示します。ボタンに出ている文字と、ボタンを押したときに出るメッセージを、両方変えます。</p>
+<p>まず、ボタンの文言です。<code>app → res → layout → activity_main.xml</code> を開き、エディタ右上の <strong>Code</strong> を選んで、変えたい <code>Button</code> を探します。</p>
+<div class="code-head">activity_main.xml · 変える前</div><pre tabindex="0"><code>        android:text="おす" /&gt;</code></pre>
+<div class="code-head">activity_main.xml · 変えたあと</div><pre tabindex="0"><code>        android:text="ここをおして！" /&gt;</code></pre>
+<p><code>/&gt;</code> は「この部品の設定はここまで」という印です。<code>" "</code> の中だけを書き換えれば、ほかの行は触りません。</p>
+<p>次に、メッセージです。<code>app → java → jp.ac.jec.（プロジェクトごとの名前） → MainActivity.kt</code> を開きます。</p>
+<div class="code-head">MainActivity.kt · 変える前</div><pre tabindex="0"><code>        val button: Button = findViewById(R.id.button)
+        button.setOnClickListener { view -&gt;
+            Snackbar.make(view, "こんにちは", Snackbar.LENGTH_SHORT).show()
+        }</code></pre>
+<div class="code-head">MainActivity.kt · 変えたあと</div><pre tabindex="0"><code>        val button: Button = findViewById(R.id.button)
+        button.setOnClickListener { view -&gt;
+            Snackbar.make(view, "アレンジしました！", Snackbar.LENGTH_SHORT).show()
+        }</code></pre>
+<p>変えたのは <code>" "</code> の中の文字だけです。<code>R.id.button</code> や変数の名前は、自分のプロジェクトに合わせて読み替えてください。行の並びが自分のコードと少し違っていても、<code>" "</code> の中を書き換えるところは同じです。</p>
+<details><summary>もう一歩：押した回数を数える</summary><p>処理を足すアレンジの例です。押すたびに1ずつ増える数を持たせ、その数をメッセージに入れます。</p><p>まず、<code>MainActivity</code> クラスの中、<code>onCreate</code> の手前に1行足します。</p><div class="code-head">MainActivity.kt · クラスの中に足す</div><pre tabindex="0"><code>    private var tapCount = 0</code></pre><p>Javaの <code>private int tapCount = 0;</code>、Swiftの <code>private var tapCount = 0</code> と同じものです。Kotlinでは、書き換える変数を <code>var</code>、書き換えない変数を <code>val</code> で宣言します。型は <code>0</code> から推論されるので <code>Int</code> と書く必要はありません。</p><p>次に、ボタンを押したときの処理を2行にします。</p><div class="code-head">MainActivity.kt · 変えたあと</div><pre tabindex="0"><code>        button.setOnClickListener { view -&gt;
+            tapCount++
+            Snackbar.make(view, "${tapCount}回目", Snackbar.LENGTH_SHORT).show()
+        }</code></pre><p><code>"${tapCount}回目"</code> は、文字列の中に値を差し込む書き方です。Swiftの <code>"\(tapCount)回目"</code> と同じ役目で、Javaの <code>tapCount + "回目"</code> のように <code>+</code> でつなぐ必要はありません。</p></details>
+<h3>変えたら、すぐRunして確かめる</h3>
+<p>1か所変えたら <strong>Run ▶</strong> を押し、エミュレータで見た目と動きを確かめます。使うエミュレータは、授業で作った <code>jec_25cm_kotlin_Pixel 9a</code> です。まとめて変えてからRunすると、動かなくなったときに、どこが原因か分からなくなります。</p>
+<div class="check"><p class="box-title">成功の目印</p><p>アレンジしたところが、エミュレータの画面で確かめられる。アプリが、アレンジの前と同じように最後まで動く。</p></div></section>
+
+<section id="build"><h2>5. APKを作る</h2>
+<p><strong>APK</strong>は、Androidにアプリをインストールするためのファイルです。アプリのコードと画像と設定が、1つのファイルにまとまっています。提出するのは、このファイルです。</p>
+<div class="goal"><p class="box-title">用意するもの</p><p>アレンジが終わり、エミュレータでの動作確認が済んだ、自分のプロジェクト。</p></div>
+<div class="note"><p class="box-title">作るのはデバッグ用のAPKです。署名は要りません</p><p>APKには、開発中に使う<strong>デバッグ用</strong>と、ストアで配るための<strong>リリース用</strong>があります。提出するのはデバッグ用です。デバッグ用には Android Studio が自動で印を付けるので、<strong>署名（signing）の作業は行いません</strong>。メニューにある <strong>Generate Signed App Bundle / APK</strong> は、この授業では使いません。</p></div>
+<p>手順は次のとおりです。Android Studio は、授業の基準である <strong>Panda 2</strong> のメニュー名で書いています。</p>
+<ol>
+<li>提出するプロジェクトが開いていることを確認します。ほかのプロジェクトのウィンドウが開いているときは、閉じておくと間違えません。</li>
+<li><strong>Run ▶</strong> を押し、アレンジしたところを含めて、アプリが動くことを確かめます。</li>
+<li>上の <strong>Build</strong> メニューを開きます。</li>
+<li><strong>Build App Bundle(s) / APK(s)</strong> にカーソルを合わせ、出てきた中から <strong>Build APK(s)</strong> を選びます。</li>
+<li>画面の下に進み具合が出ます。終わるまで待ちます。はじめの1回は数分かかることがあります。</li>
+<li>右下に完了の通知が出ます。<strong>locate</strong> をクリックすると、できたファイルの場所がFinderで開きます。</li>
+</ol>
+<div class="check"><p class="box-title">成功の目印</p><p>右下の通知に <code>APK(s) generated successfully</code> のような文が出て、<strong>locate</strong> のリンクがある。</p></div>
+<div class="note"><p class="box-title">Runを押す操作とは別です</p><p><strong>Run ▶</strong> は、アプリをエミュレータに入れて動かす操作です。提出するファイルは作られません。提出するときは、かならず <strong>Build</strong> メニューからAPKを作ります。項目が見つからない場合は、メニューを開いたまま先生に見せてください。</p></div>
+<details><summary>教員と一緒に：メニューが見つからない場合</summary><p>プロジェクト直下のTerminalで、次のコマンドでもデバッグ用のAPKを作れます。実行する場所に <code>gradlew</code> があることを確認します。</p><div class="code-head">Terminal · プロジェクト直下</div><pre tabindex="0"><code>./gradlew :app:assembleDebug</code></pre><p><code>BUILD SUCCESSFUL</code> と出れば成功です。できるファイルの場所は、メニューから作ったときと同じです。</p></details></section>
+
+<section id="rename"><h2>6. ファイルを見つけて、名前を変える</h2>
+<div class="note"><p class="box-title">APKのファイル名は、どのアプリでも同じです</p><p>できあがるファイルは、どのプロジェクトでも <code>app-debug.apk</code> という名前になります。この名前のままでは、提出先の一覧で、誰のどのアプリなのか分かりません。<strong>作ったらすぐ名前を変えます。</strong></p></div>
+<h3>ファイルを見つける</h3>
+<p>手順5の完了通知で <strong>locate</strong> をクリックすると、Finderでその場所が開きます。通知を消してしまったときは、Finderで <strong>書類 → Kotlin → 自分のプロジェクト名</strong> の順に開き、そこから <strong>app → build → outputs → apk → debug</strong> の順に進みます。</p>
+<div class="code-head"><code>A01HelloAndroid</code> の場合の保存場所</div><pre tabindex="0"><code>A01HelloAndroid/app/build/outputs/apk/debug/app-debug.apk</code></pre>
+<ol>
+<li><code>app-debug.apk</code> があることを確認します。</li>
+<li>Finderの更新日時を見て、今作ったファイルか確認します。日付が古いときは、別のプロジェクトのものです。</li>
+<li><code>app-debug.apk</code> を選んで <kbd>⌘ C</kbd> を押し、<strong>書類</strong> など分かりやすい場所を開いて <kbd>⌘ V</kbd> を押します。コピーなので、元の場所のファイルは残ります。</li>
+</ol>
+<div class="note"><p class="box-title">同じフォルダに <code>output-metadata.json</code> もあります</p><p>ビルドの情報が書かれたファイルで、提出には使いません。提出するのは、名前が <code>.apk</code> で終わるファイルだけです。</p></div>
+<h3>名前を変える</h3>
+<p>コピーしたファイルを1回クリックして選び、<kbd>Enter</kbd> を押すと、名前を変えられます。次の形にします。</p>
+<div class="code-head">提出用のファイル名の形</div><pre tabindex="0"><code>学籍番号_氏名_プロジェクト名.apk</code></pre>
+<p><code>学籍番号</code>・<code>氏名</code>・<code>プロジェクト名</code> は、それぞれ自分のものに置き換えます。区切りには半角の <code>_</code> を使い、<code>.apk</code> の部分はそのまま残します。<strong>ファイル名の付け方は、先生の案内に従ってください。</strong>案内が別の形なら、そちらを優先します。</p>
+<div class="check"><p class="box-title">成功の目印</p><p>名前を変えたAPKが1つあり、ファイル名から、自分のものだと分かる。</p></div></section>
+
+<section id="submit"><h2>7. Google Classroomに提出する</h2>
+<p>提出先は <strong>Google Classroom</strong> です。この授業の教材も Google Classroom で配られているので、同じクラスを開きます。</p>
+<ol>
+<li>ブラウザで Google Classroom を開き、この授業の<strong>クラス</strong>を選びます。</li>
+<li>上の <strong>授業</strong> タブを開き、先生が出した<strong>提出課題</strong>をクリックします。</li>
+<li>右側の <strong>追加または作成</strong> をクリックし、<strong>ファイル</strong> を選びます。</li>
+<li>手順6で名前を変えたAPKを1つ選んで、アップロードします。</li>
+<li>アップロードしたファイル名が <code>学籍番号_氏名_プロジェクト名.apk</code> の形になっていることを確認します。違っていたら、いったん削除して、名前を直してから入れ直します。</li>
+<li><strong>提出</strong> をクリックし、表示が <strong>提出済み</strong> に変わったことを確認します。</li>
+</ol>
+<div class="note"><p class="box-title">アップロードしただけでは提出になりません</p><p>ファイルを追加した状態と、提出した状態は別です。<strong>提出</strong> を押して、表示が <strong>提出済み</strong> に変わるところまで進めてください。押し忘れていると、先生の画面では「未提出」のままです。</p></div>
+<div class="check"><p class="box-title">成功の目印</p><p>課題の画面に自分のAPKが1つ表示され、<strong>提出済み</strong> になっている。</p></div>
+<p>提出したあとでアプリを直したときは、<strong>動作確認 → APKを作り直す → 名前を変える</strong> の順でやり直します。Google Classroomでは <strong>提出を取り消す</strong> をクリックすると、ファイルを入れ替えて出し直せます。締め切りを過ぎている場合は、先に先生に相談してください。</p>
+<p>画面の表示がここに書いてあるものと違うときは、その画面のまま先生に見せてください。</p></section>
+
+<section id="trouble"><h2>8. うまくいかないとき</h2>
+<table><thead><tr><th>起きたこと</th><th>やってみること</th></tr></thead><tbody>
+<tr><td>アレンジしたらエラーが出て、直せない</td><td>その画面のまま先生に見せる。やり直すときは、手順3の「元に戻したいとき」を見る。</td></tr>
+<tr><td>ボタンの色が変わらない</td><td><code>android:background</code> ではなく、<code>android:backgroundTint</code> を使う。</td></tr>
+<tr><td>ビルドが通らない（赤い文字が出る）</td><td>画面の下に出ている赤い文字の中から、ファイル名と行番号を探し、その行を見直す。直せないときは、その画面のまま先生に見せる。</td></tr>
+<tr><td><strong>Build APK(s)</strong> が見つからない</td><td>Android Studio の版が違うと、メニュー名が少し違うことがある。手順5の「メニューが見つからない場合」を、先生と一緒に行う。</td></tr>
+<tr><td>完了の通知を消してしまい、APKの場所が分からない</td><td>Finderで <strong>書類 → Kotlin → 自分のプロジェクト名 → app → build → outputs → apk → debug</strong> の順に開く。</td></tr>
+<tr><td>Android Studio の左の一覧に <code>build</code> フォルダが見えない</td><td>左上の表示の切り替えが <strong>Android</strong> になっている。<strong>Project</strong> に変えると出る。Finderから探しても構わない。</td></tr>
+<tr><td><code>app-debug.apk</code> がない・更新日時が古い</td><td>別のプロジェクトを開いたままAPKを作っていないか確認する。提出するプロジェクトを開き直し、手順5からやり直す。</td></tr>
+<tr><td>APKのファイルサイズが小さすぎる気がする</td><td>デバッグ用のAPKは数MB程度になる。極端に小さいときは、作り直して更新日時を確かめる。</td></tr>
+<tr><td>提出先が分からない</td><td>先生に確認する。この資料では決めていない。</td></tr>
+<tr><td>提出できるアプリが1つもない</td><td>先生に相談する。</td></tr>
+</tbody></table>
+<p>表にないことが起きたら、その画面のまま先生に見せてください。</p></section>
+
+<section><h2>公式資料</h2><ul>
+<li><a href="https://developer.android.com/studio/run?hl=ja">Android Developers：アプリのビルドと実行</a>（手順4・手順5）</li>
+<li><a href="https://developer.android.com/build/building-cmdline?hl=ja">Android Developers：コマンドラインからアプリをビルドする</a>（手順5）</li>
+<li><a href="https://support.google.com/edu/classroom/answer/6020285?hl=ja">Google Classroom ヘルプ：課題を提出する</a></li>
+</ul>
+<p>公式資料は、この教材より詳しい代わりに、授業で使わない話も多く含みます。授業中は、まずこの資料と先生の案内を見てください。</p></section>
+
+<footer class="footer"><p><a href="../hello-kotlin/index.html" data-back>← もとのページへ戻る</a></p><p>対象：macOS / Android Studio Panda 2 · この資料では画像を使いません。画面の場所は、本文の手順と表でたどります。 · 確認日：2026年9月23日</p></footer></main>
+<p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>

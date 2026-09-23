@@ -43,6 +43,10 @@
         { "html": "docs/hello-kotlin/index.html", "id": "code-final-kotlin",
           "source": "HelloKotlin/src/ex01/main.kt" }
       ],
+      "mirrors": [
+        { "source": "HelloKotlin/src/ex01/main.kt",
+          "copy": "teacher/hello-kotlin/code/01-main.kt" }
+      ],
       "archive": "docs/hello-kotlin/downloads/HelloKotlin.zip"
     }
   ]

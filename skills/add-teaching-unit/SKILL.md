@@ -13,7 +13,7 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
 
 | 系統 | `kind` | 完成プロジェクト | IDE | 単元名の例 |
 | --- | --- | --- | --- | --- |
-| 純Kotlin | `kotlin-console` | `HelloKotlin/src/exNN/` | IntelliJ IDEA | `K02NullAndString` |
+| 純Kotlin | `kotlin-console` | `HelloKotlin/src/exNN/` | IntelliJ IDEA | `K02NullSafety` |
 | Android | `android` | `A0NXxx/` | Android Studio | `A02CalcGame` |
 
 ## 1. 完成プロジェクト
@@ -50,7 +50,8 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
 
 - `docs/<スラッグ>/index.html`。既存の教科書と同じHTMLの型を使う（`.skip` → `.topbar` → `.shell` → `.sidebar` → `main#main`、STEPは `<section id="step-N">`）。
 - サイドバーの `.progress` の `max` と `data-progress-label` の総数を、STEP数に合わせる。
-- **本文に単元名（`K02NullAndString` のような `projects[].name`）の表記を必ず入れる。** `check_project` がこれを探す。
+- **本文に単元名（`K02NullSafety` のような `projects[].name`）の表記を必ず入れる。** `check_project` がこれを探す。
+- **Android単元は、単元名に加えて `package` の値（`jp.ac.jec.…`）も、教科書と教員用ガイドの本文に書く**（`check_project` が両方を探す）。純Kotlin系は単元名だけでよい（`packages` の `ex01` は短くて本文に偶然現れるため、検査の対象になっていない）。
 - `docs/<スラッグ>/downloads/<Project>.zip` を作る。
 
   ```sh
@@ -75,7 +76,7 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
 - `teacher/<スラッグ>/index.html`。既存の教員用ガイドと同じ型にする。
 - **「この単元の教材方針」の節を必ず置く。** 何を意図的に外したかを、理由つきで書く。
 - `teacher/<スラッグ>/code/` に、STEPごとの照合コードを `NN-ファイル名.拡張子` の形式で置く（`01-main.kt`、`03-MainActivity.kt` など）。
-- 本文に単元名の表記を入れる（`check_project` は `docs` に挙げた両方のHTMLを見る）。
+- 本文に単元名の表記を入れる（`check_project` は `docs` に挙げた両方のHTMLを見る）。**Android単元は、教科書と同じく `package` の値（`jp.ac.jec.…`）も本文に書く。**
 
 ## 4. `config/teaching-materials.json`
 
@@ -92,9 +93,11 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
     { "html": "docs/null-safety/index.html", "id": "code-final-kotlin",
       "source": "HelloKotlin/src/ex02/main.kt" }
   ],
-  "archive": "docs/null-safety/downloads/HelloKotlin.zip"
+  "archive": "docs/hello-kotlin/downloads/HelloKotlin.zip"
 }
 ```
+
+`archive` が K01 と同じパスなのは、**純Kotlin系のプロジェクトが `HelloKotlin` の1つだけで、中身も1つしかない**ためである。`package-student-materials.py` は `(root, archive)` の重複を除いた組ごとにZIPを作るので、同じパスを指していれば `package-project.py` の呼び出しも1回で済む。単元ごとに別の `archive` を書くと、中身が同じZIPが単元の数だけ増える。
 
 **純Kotlin系は `packages`（配列）、Android系は `package`（文字列）。** 書き分けを取り違えると設定エラーになる。1コマで複数の演習を扱う単元は、`"packages": ["ex03", "ex05", "ex06"]` のように並べ、`sources` にもそれぞれの `main.kt` を挙げる。`packages` に書いたのに `sources` が無いと落ちる。
 
@@ -122,7 +125,7 @@ Android単元は `kind: "android"` にし、`root` をプロジェクトのデ�
 
 サイドバーの `<div class="resources">` に並ぶ単元は、**configの `projects` の順・リンク先・表示名まで**照合される。1冊でも直し忘れると検査が落ちる。
 
-- 表示名は `<番号>：<ラベル>`。`K02NullAndString` なら `K02：NullAndString`。
+- 表示名は `<番号>：<ラベル>`。`K02NullSafety` なら `K02：NullSafety`。
 - ほかの単元は `<a href="../<スラッグ>/index.html">`、**自単元は `<span aria-current="page">`**。
 - 単元の項目は、**文字だけの `<a>` か `<span>`**。中に `<strong>` などの別タグを入れない。
 - 「困ったとき」「完成プロジェクトを開く」と共通資料へのリンクは、単元として数えない。共通資料へのリンクには `?from=<自分のスラッグ>` を付ける。
@@ -130,19 +133,19 @@ Android単元は `kind: "android"` にし、`root` をプロジェクトのデ�
 **既存の K01 の教科書（`docs/hello-kotlin/index.html`）に K02 を足す**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../null-and-string/index.html">K02：NullAndString</a><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../null-safety/index.html">K02：NullSafety</a><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a></div>
 ```
 
-**新しい K02 の教科書（`docs/null-and-string/index.html`）には、全単元を並べる**
+**新しい K02 の教科書（`docs/null-safety/index.html`）には、全単元を並べる**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><span aria-current="page">K02：NullAndString</span><a href="../common/setup.html?from=null-and-string">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><span aria-current="page">K02：NullSafety</span><a href="../common/setup.html?from=null-safety">共通：はじめの準備</a></div>
 ```
 
 **Android単元（A01）を足したときは、K系のうしろに並べる**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><a href="../null-and-string/index.html">K02：NullAndString</a><span aria-current="page">A01：HelloAndroid</span><a href="../common/setup.html?from=hello-android">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><a href="../null-safety/index.html">K02：NullSafety</a><span aria-current="page">A01：HelloAndroid</span><a href="../common/setup.html?from=hello-android">共通：はじめの準備</a></div>
 ```
 
 **topbar は、直前の単元へのリンク1つ。** ブランドは `JEC / Kotlin演習` にそろえる。

@@ -17,7 +17,7 @@
 
 **Android系の基準バージョンは Android Studio Panda 2。** 教科書の手順・画面・生成される設定は、すべて Panda 2 を前提に書く。ひな形は `Panda2KotlinEmptyViewsActivity`（AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36）にある。教員の開発マシンには Quail 4 が入っているので、**自分の手元の Android Studio で作ったプロジェクトを、そのまま完成プロジェクトにしない。** 新しい完成プロジェクトは、ひな形と同じ構成になっているかを `app/build.gradle.kts`・`gradle/libs.versions.toml`・`gradle/wrapper/gradle-wrapper.properties` の3つで確かめる。
 
-既存の `A01HelloAndroid`〜`A04FunnyCamera` は Quail 4 の構成のままで、基準と一致していない。**この不一致の扱いが決まるまで、Android系の単元の教科書は書かない**（READMEの「教員が確認に使うプロジェクト」の「未解決」を読む）。
+`A01HelloAndroid`〜`A04FunnyCamera` は、ひな形と同じ構成にそろえてある（2026-09-23 に 4つとも `./gradlew assembleDebug` が通り、エミュレータでの起動とA03の通信まで確認した）。**そろえる対象はバージョン番号だけではない。** `buildTypes` のDSL（`optimization { enable = false }` は AGP 9.4 の書き方で、9.1.1 では通らない）、R8のkeepルールの置き場（`keepRules/rules.keep` か `proguard-rules.pro` か）、`gradle-daemon-jvm.properties` の toolchain、`gradle.properties` の `configuration-cache` も版によって変わる。**8か所の一覧はREADMEの「教員が確認に使うプロジェクト」にある。**
 
 2系統あることが、この運用のほとんどの分岐の理由になっている。**どちらの系統の作業かを先に決めてから読み進める。**
 
@@ -30,6 +30,7 @@
 - **用語に読みがなは振らない。** 代わりに、Kotlin固有の用語（プライマリコンストラクタ、スマートキャスト、拡張関数、委譲プロパティ）には**Java／Swiftでの対応物**を添える。
 - **「1単元で導入する新概念は1つまで」の「新概念」は、JavaにもSwiftにもないものを指す。** `if` や `for` のように書き方だけが違うものは数えない（READMEの「単元の範囲の決め方」）。
 - **予習も復習もしない前提で、前から順に読めば進める**という構成の原則と、**本文からほかの単元へ送らない**という原則は、いままでどおり守る（READMEの「授業用教科書の基本方針」）。
+- **Android系の単元の教科書は、「アレンジできる場所」が分かる形で終わらせる。** 最後のSTEPまで進めた学生が、**どこを変えると、画面や動きの何が変わるか**を、その単元のコードの中で見つけられるようにする。挙げるのは、その単元で扱った範囲で変えられるもの（文字・色・数値・問題数など）だけで、新しい概念やAPIをここで足さない（新概念は1単元1つまで。READMEの「単元の範囲の決め方」）。提出課題が「自分で作ったAndroidアプリを1つ選んでアレンジし、APKで出す」形なので、単元の終わりが、そのときの手がかりになる（READMEの「提出課題」「授業用教科書の基本方針」の11）。例は挙げるが、正解は決めない。純Kotlin系（`K01`〜）はコンソールアプリで提出の対象外なので、この形は求めない。
 - この比較方式は、前年度（2025年度）の配布資料PDFの書き方を引き継いだもの。資料の各節と `HelloKotlin/src/exNN/` の対応表はREADMEの「前年度の教材との関係」にある。**PDF自体はリポジトリにcommitしない**（置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables/`。§2のPoC置き場と同じ）。
 
 ## 1. 作業の単位
@@ -186,7 +187,7 @@
 
 ## 7. 検証
 
-- 教材・設定・スクリプトを触ったら、次の4つを通す。**3つ目と4つ目はGit管理下のファイルだけを見るので、新しいファイルは先に `git add` しておく。**
+- 教材・設定・スクリプトを触ったら、次の4つを通す。**4つ目は配布物に入れるファイルを `git ls-files -- docs` で選ぶので、新しいファイルは先に `git add` しておく。** 未追跡のままだと、エラーにならずに配布物から抜け落ちる。**3つ目は `docs/` 配下のHTMLをファイルシステムから直接読むので、未追跡のHTMLも検査の対象になる**（`git add` の前でも、禁止事項を書いていれば行番号つきで落ちる）。
 
   ```sh
   python3 scripts/check-teaching-materials.py
@@ -229,14 +230,16 @@
 `docs/<スラッグ>/` を作るだけでは足りない。次のすべてに登録する。手順は `skills/add-teaching-unit/SKILL.md` にもある。
 
 1. 完成プロジェクト。純Kotlin系は `HelloKotlin/src/exNN/`（§11の8。`exNN` の番号は前年度資料の節に対応させる）、Android系は `A0NXxx/`。**1つの単元が複数の `exNN` を扱ってよい**（K03なら `ex03` `ex05` `ex06`）。
-2. `docs/<スラッグ>/index.html`、`images/`、`downloads/<Project>.zip`。ZIPは次で作る。
+2. `docs/<スラッグ>/index.html`、`images/`（画像を使う単元だけ）、`downloads/<Project>.zip`。ZIPは次で作る。
 
    ```sh
    python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip
    ```
 
    `--project` と `--output` はどちらも必須で、既定値はない。純Kotlin系は全K単元が同じZIPを共有する（§4）。
+   - **`images/` を作るのは、スクリーンショットを撮れるAndroid系の単元だけ**（`skills/add-teaching-unit/SKILL.md` と同じ条件）。純Kotlin系（`K01`〜）は文章と表と手順で説明し、画像を使わないので `images/` も作らない（`docs/hello-kotlin/` には実際にない）。「ここに画像を入れる」のようなプレースホルダも置かない。
 3. `teacher/<スラッグ>/index.html` と `teacher/<スラッグ>/code/`（STEPごとの照合コード。`NN-ファイル名.拡張子` の形式）。「この単元の教材方針」の節を必ず置き、何を意図的に外したかを理由つきで書く。
+   - **教科書（手順2）と教員用ガイドの本文には、単元名（`projects[].name`）の表記を必ず入れる。** `scripts/check-teaching-materials.py` の `check_project` が、`docs` に挙げたHTMLを1つずつ開いて探す。**Android系（`kind` が `"android"`）の単元は、単元名に加えて `package` の値（`jp.ac.jec.…`）も本文に書く。両方を探すので、どちらか一方でも欠けている教科書・教員用ガイドがあると落ちる。** 純Kotlin系（`kind` が `"kotlin-console"`）は単元名だけでよい（`packages` の `ex01` のような短い語は本文に偶然現れるため、検査の対象にしていない）。
 4. `config/teaching-materials.json`：`scan_roots`、指定AVD名の `required_in`（Android単元だけ。教科書と教員用ガイドの両方）、`projects`。
    - `projects` は単元番号順の位置に足す（サイドバーの検査がこの並びを基準にする。§4）。**K→Aの順を崩さない。**
    - `kind` は `"kotlin-console"` か `"android"` のどちらか。ほかの値はエラーになる。
@@ -250,6 +253,7 @@
 6. 単元どうしのリンク（§4）。サイドバーは、**既存の全単元の教科書**に新しい単元へのリンクを単元番号順の位置へ足し、新しい単元の教科書には全単元を並べる（自単元は `<span aria-current="page">`）。1冊でも直し忘れると、`scripts/check-teaching-materials.py` が落ちる。topbarは、新しい単元に直前の単元へのリンクを置く。単元を途中に挿入したときは、次の単元のtopbarも新しい単元へ付け替える。topbarは検査されないので、目で確かめる。既存の教科書のサイドバーは、issueの「触る範囲」に挙がっていなくても、登録に必要な変更なので同じPRで直す（§6）。
 7. GitHubのラベル `area:K<NN>` または `area:A<NN>`。
 8. 翻訳の対象は `docs/` のHTMLから自動で見つかる。新単元のPRでは日本語だけを追加し、`python3 scripts/localize-student-materials.py check` で文を取り出せることを確かめる（§7）。翻訳そのものは日常のPRでは行わない（§12）。
+9. **Android系の単元を足したときは、`docs/common/apk.html` の「アプリを1つ選ぶ」の説明が古くなっていないかを確かめる。** 提出課題は、学生自身が作ったAndroidアプリを1つ選んでアレンジし、APKにして出す形（READMEの「提出課題」）。Android単元が増えると、学生が選べるアプリの本数と顔ぶれが変わるので、単元名を挙げている箇所と、本数に触れている箇所が古くなる。古くなっていたら、この登録のPRで一緒に直す（`docs/common/` は共有ファイル。§4）。純Kotlin系（`K01`〜）を足したときは、コンソールアプリで提出の対象外なので、直す必要はない。READMEの「提出課題」の本数の根拠（Android系に使えるコマ数とアプリの本数）も、同じときに読み直す。
 
 ### 配布スクリプトへの追記は不要
 
@@ -265,6 +269,7 @@
 - Windows。教員も学生もmacOSで、CIはubuntu（READMEの「開発環境：教員」「開発環境：学生」）。
 - ダークテーマ。確認は既定のライトテーマだけで行う。直書きの色もそのままにする。
 - タブレット・フォルダブル対応、画面回転と横画面。
+- **提出課題のAPKの署名（リリースビルド）。** 学生が提出するのは**デバッグビルドのAPK**で、署名鍵の作成・リリースビルド・ストアへの公開は授業の範囲外とする（READMEの「提出課題」、学生向けの手順は `docs/common/apk.html`）。「このAPKはストアに出せない」「署名されていない」「鍵の作り方も書くべき」という指摘は、仕様どおりなので「対応不要」と返信する。教材にも、署名の手順は書かない。
 
 ## 11. 完成コードの書き方（Kotlin）
 

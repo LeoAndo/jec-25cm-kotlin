@@ -1116,6 +1116,250 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self.assertIn("HelloKotlin/local.properties:1", errors[0])
             self.assertIn("Git管理してはいけないファイルです", errors[0])
 
+    # ------------------------------------------------------------------
+    # 用語をどの系統に求めるか（terms[].applies_to）
+    #
+    # 指定AVD名のように、Android系でしか使わない用語がある。それを純Kotlin系の
+    # 教科書にまで required_in で求めると、書きようのない表記を迫ることになる。
+    # applies_to を書かない用語は、これまでどおり両方の系統に求める。
+    # ------------------------------------------------------------------
+
+    KOTLIN_DOCS = ["docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"]
+    ANDROID_DOCS = ["docs/hello-android/index.html", "teacher/hello-android/index.html"]
+
+    def _term(self, required_in: list[str], **extra) -> dict:
+        term = {"name": "指定AVD名", "canonical": self.AVD, "forbidden": [],
+                "required_in": required_in}
+        term.update(extra)
+        return term
+
+    def _applies_to_errors(self, root: Path, terms: list[dict]) -> list[str]:
+        """純Kotlin系とAndroid系を1単元ずつ置いて、required_in の不足だけを返す。"""
+        self._minimal_config(
+            root,
+            [self._project(), self._sidebar_project("A01HelloAndroid", "hello-android")],
+            terms=terms,
+            registration={"targets": []},
+        )
+        return [error for error in CHECKER.validate(root)
+                if "terms.required_inにありません" in error]
+
+    def test_term_for_android_requires_android_documents(self):
+        """applies_to がAndroid系なら、Android単元の教材を required_in に求める。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            errors = self._applies_to_errors(
+                root, [self._term(self.KOTLIN_DOCS, applies_to=["android"])])
+            self.assertEqual(len(errors), 2, errors)
+            self.assertIn("config/teaching-materials.json:1", errors[0])
+            self.assertIn("A01HelloAndroidのdocs/hello-android/index.htmlが", errors[0])
+            self.assertIn("A01HelloAndroidのteacher/hello-android/index.htmlが", errors[1])
+
+    def test_term_for_android_does_not_require_kotlin_documents(self):
+        """同じ設定でも、純Kotlin系の教材は required_in に無くてよい。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            errors = self._applies_to_errors(
+                root, [self._term(self.ANDROID_DOCS, applies_to=["android"])])
+            self.assertEqual(errors, [])
+
+    def test_term_without_applies_to_requires_every_kind(self):
+        """applies_to を書かない用語は、両方の系統に求める（後方互換）。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            errors = self._applies_to_errors(root, [self._term(self.ANDROID_DOCS)])
+            self.assertEqual(len(errors), 2, errors)
+            self.assertIn("K01HelloKotlinのdocs/hello-kotlin/index.htmlが", errors[0])
+            self.assertIn("K01HelloKotlinのteacher/hello-kotlin/index.htmlが", errors[1])
+
+    def test_term_with_empty_applies_to_requires_no_kind(self):
+        """applies_to が空配列なら、どの系統にも求めない。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            errors = self._applies_to_errors(root, [self._term([], applies_to=[])])
+            self.assertEqual(errors, [])
+
+    def test_terms_are_judged_one_by_one(self):
+        """用語が2つあるとき、applies_to は用語ごとに効く。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            errors = self._applies_to_errors(root, [
+                # Android系にだけ求める用語。Android単元の教材は required_in にある。
+                self._term(self.ANDROID_DOCS, applies_to=["android"]),
+                # 両方の系統に求める用語。純Kotlin系の教材が required_in にない。
+                self._term(self.ANDROID_DOCS, name="授業名"),
+            ])
+            self.assertEqual(len(errors), 2, errors)
+            self.assertTrue(all("K01HelloKotlin" in error for error in errors), errors)
+
+    # ------------------------------------------------------------------
+    # 教材に置いた複製コード（check_mirrors）
+    #
+    # teacher/<スラッグ>/code/ は完成プロジェクトのソースの複製。完成コードだけを
+    # 直すと複製が古いまま静かに残るので、バイト単位で照合する。
+    # ------------------------------------------------------------------
+
+    MIRROR = [{"source": "HelloKotlin/src/ex01/main.kt",
+               "copy": "teacher/hello-kotlin/code/01-main.kt"}]
+
+    def _mirror_errors(self, root: Path, **overrides) -> list[str]:
+        """複製コードについてのエラーだけを返す。"""
+        self._minimal_config(root, [self._project(**overrides)])
+        return [error for error in CHECKER.validate(root) if "複製コード" in error]
+
+    def test_mirror_identical_to_the_source_is_accepted(self):
+        """複製コードが元ファイルと1バイトも違わなければ、何も言わない。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "teacher/hello-kotlin/code/01-main.kt", self.KOTLIN_SOURCE)
+            self.assertEqual(self._mirror_errors(root, mirrors=self.MIRROR), [])
+
+    def test_mirror_differing_by_one_byte_is_rejected(self):
+        """完成コードだけ直して、複製コードが古いまま残った状態を検出する。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "teacher/hello-kotlin/code/01-main.kt",
+                        self.KOTLIN_SOURCE.replace("こんにちは", "おはよう"))
+            errors = self._mirror_errors(root, mirrors=self.MIRROR)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("teacher/hello-kotlin/code/01-main.kt:1", errors[0])
+            self.assertIn("内容が一致しません: HelloKotlin/src/ex01/main.kt", errors[0])
+
+    def test_mirror_without_copy_is_rejected(self):
+        """複製コードを置き忘れた状態を検出する。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            errors = self._mirror_errors(root, mirrors=self.MIRROR)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("teacher/hello-kotlin/code/01-main.kt:1", errors[0])
+            self.assertIn("複製コードがありません", errors[0])
+
+    def test_mirror_without_source_is_rejected(self):
+        """元ファイルのパスを書き間違えた状態を検出する。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write(root, "teacher/hello-kotlin/code/01-main.kt", self.KOTLIN_SOURCE)
+            errors = self._mirror_errors(root, mirrors=self.MIRROR)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("HelloKotlin/src/ex01/main.kt:1", errors[0])
+            self.assertIn("複製コードの元ファイルがありません", errors[0])
+
+    def test_project_without_mirrors_is_accepted(self):
+        """mirrors を書かない単元では、何も照合しない（後方互換）。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            # 複製の置き場所には、わざと中身の違うファイルを置いてある。
+            self._write(root, "teacher/hello-kotlin/code/01-main.kt", "fun main() {}\n")
+            self.assertEqual(self._mirror_errors(root), [])
+
+    # ------------------------------------------------------------------
+    # 設定の必須キー（check_config）
+    #
+    # キーを書き忘れたときに、Pythonのトレースバックではなく日本語のエラーを出す。
+    # トレースバックのままだと、設定のどこを直せばよいか分からない。
+    # ------------------------------------------------------------------
+
+    def _full_config(self) -> dict:
+        """必須キーがそろった設定。ここから1つずつ落として試す。"""
+        return {
+            "scan_roots": [],
+            "terms": [],
+            "registration": {"targets": [{"path": "README.md", "requires": []}]},
+            "projects": [self._project()],
+        }
+
+    def test_missing_top_level_key_is_reported_in_japanese(self):
+        """scan_roots・terms・projects の書き忘れを、日本語のエラーにする。"""
+        for key in ("scan_roots", "terms", "projects"):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                config = self._full_config()
+                del config[key]
+                self._write_config(root, config)
+                self.assertEqual(
+                    CHECKER.validate(root),
+                    [f"config/teaching-materials.json:1: 設定に{key}がありません"])
+
+    def test_missing_project_key_is_reported_in_japanese(self):
+        """単元の設定のキーの書き忘れを、日本語のエラーにする。"""
+        for key in ("name", "root", "docs", "snippets", "archive"):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                config = self._full_config()
+                del config["projects"][0][key]
+                self._write_config(root, config)
+                errors = CHECKER.validate(root)
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("config/teaching-materials.json:1", errors[0])
+                self.assertIn(f"に{key}がありません", errors[0])
+
+    def test_missing_registration_target_key_is_reported_in_japanese(self):
+        """registration.targets の項目のキーの書き忘れを、日本語のエラーにする。"""
+        for key in ("path", "requires"):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                config = self._full_config()
+                del config["registration"]["targets"][0][key]
+                self._write_config(root, config)
+                self.assertEqual(CHECKER.validate(root), [
+                    "config/teaching-materials.json:1: "
+                    f"registration.targets[0]に{key}がありません"])
+
+    def test_missing_mirror_key_is_reported_in_japanese(self):
+        """mirrors の項目のキーの書き忘れを、日本語のエラーにする。"""
+        for key in ("source", "copy"):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                config = self._full_config()
+                config["projects"][0]["mirrors"] = [
+                    {name: value for name, value in self.MIRROR[0].items() if name != key}]
+                self._write_config(root, config)
+                errors = CHECKER.validate(root)
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(f"のmirrors[0]に{key}がありません", errors[0])
+
+    def test_missing_nested_setting_key_is_reported_in_japanese(self):
+        """registration と project_layout の中のキーの書き忘れも、日本語のエラーにする。"""
+        cases = [
+            ("registration", "registrationにtargetsがありません"),
+            ("project_layout", "project_layoutにgitignore_referenceがありません"),
+        ]
+        for key, message in cases:
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                config = self._full_config()
+                config[key] = {"メモ": "キーを書き忘れた設定"}
+                self._write_config(root, config)
+                self.assertEqual(CHECKER.validate(root),
+                                 [f"config/teaching-materials.json:1: {message}"])
+
+    def test_project_without_teacher_document_is_reported_in_japanese(self):
+        """docs は学生向けと教員用の2つ。1つしか書かなくてもトレースバックにしない。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = self._full_config()
+            config["projects"][0]["docs"] = ["docs/hello-kotlin/index.html"]
+            self._write_config(root, config)
+            errors = CHECKER.validate(root)
+            self.assertEqual(len(errors), 1, errors)
+            self.assertIn("config/teaching-materials.json:1", errors[0])
+            self.assertIn("学生向けの教科書と教員用ガイドを2つ書いてください", errors[0])
+
+    def test_complete_config_reaches_the_other_checks(self):
+        """必須キーがそろっていれば、入口で引き返さずに本体の検査へ進む。"""
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write_config(root, self._full_config())
+            errors = CHECKER.validate(root)
+            # 教材の実体が1つも無いので、本体の検査が言う。入口の検査は何も言わない。
+            self.assertTrue(
+                any("完成プロジェクトZIPがありません" in error for error in errors), errors)
+            self.assertEqual([error for error in errors if "設定に" in error], [])
+
 
 if __name__ == "__main__":
     unittest.main()

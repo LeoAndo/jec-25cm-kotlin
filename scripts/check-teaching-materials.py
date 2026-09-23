@@ -25,6 +25,11 @@ IGNORED_PARTS = {".git", ".gradle", ".idea", ".kotlin", "__pycache__", "build", 
 IGNORED_ARCHIVE_PARTS = {".gradle", ".idea", ".kotlin", "build", "out"}
 # 単元の種類。純Kotlin系はIntelliJ IDEAのコンソールアプリ、Android系はAndroid Studioのアプリ。
 KINDS = ("android", "kotlin-console")
+# 設定に無いまま検査へ進むと、日本語のエラーではなくPythonのトレースバックになるキー。
+REQUIRED_CONFIG_KEYS = ("scan_roots", "terms", "projects")
+REQUIRED_PROJECT_KEYS = ("name", "root", "docs", "snippets", "archive")
+REQUIRED_MIRROR_KEYS = ("source", "copy")
+REQUIRED_TARGET_KEYS = ("path", "requires")
 # Kotlinのpackage宣言。Javaと違ってセミコロンが付かない。
 PACKAGE_DECLARATION = re.compile(r"^package\s+([\w.]+)\s*$", re.MULTILINE)
 
@@ -89,6 +94,51 @@ def archive_sources(root: Path, project_root: str) -> set[str]:
 def add(errors: list[str], root: Path, path: Path | str, line: int, message: str) -> None:
     shown = path if isinstance(path, str) else display(root, path)
     errors.append(f"{shown}:{line}: {message}")
+
+
+def check_config(config: dict) -> list[str]:
+    """検査に必ず要る設定のキーがそろっているか確かめる。
+
+    書き忘れたまま検査へ進むと、日本語のエラーではなくPythonのトレースバックが出て、
+    設定のどこを直せばよいか分からなくなる。入口で日本語にして引き返すための検査。
+    書かなくてよいキー（course・registration・project_layout・mirrors など）は求めない。
+    """
+    shown = CONFIG.as_posix()
+    errors = [f"{shown}:1: 設定に{key}がありません"
+              for key in REQUIRED_CONFIG_KEYS if key not in config]
+    if errors:
+        return errors  # 以降の検査は、この3つがそろっている前提で書いてある。
+    registration = config.get("registration")
+    if registration:
+        if "targets" not in registration:
+            errors.append(f"{shown}:1: registrationにtargetsがありません")
+        else:
+            for index, target in enumerate(registration["targets"]):
+                for key in REQUIRED_TARGET_KEYS:
+                    if key not in target:
+                        errors.append(
+                            f"{shown}:1: registration.targets[{index}]に{key}がありません")
+    layout = config.get("project_layout")
+    if layout and "gitignore_reference" not in layout:
+        errors.append(f"{shown}:1: project_layoutにgitignore_referenceがありません")
+    for index, project in enumerate(config["projects"]):
+        label = f"projects[{index}]"
+        if isinstance(project.get("name"), str) and project["name"]:
+            label += f"（{project['name']}）"
+        for key in REQUIRED_PROJECT_KEYS:
+            if key not in project:
+                errors.append(f"{shown}:1: {label}に{key}がありません")
+        # docs は「学生向け・教員用」の順に2つ。あとで docs[1] まで読むので、ここで数も確かめる。
+        docs = project.get("docs")
+        if isinstance(docs, list) and len(docs) < 2:
+            errors.append(f"{shown}:1: {label}のdocsには、"
+                          f"学生向けの教科書と教員用ガイドを2つ書いてください: {docs!r}")
+        for mirror_index, mirror in enumerate(project.get("mirrors", [])):
+            for key in REQUIRED_MIRROR_KEYS:
+                if key not in mirror:
+                    errors.append(
+                        f"{shown}:1: {label}のmirrors[{mirror_index}]に{key}がありません")
+    return errors
 
 
 def check_course(root: Path, config: dict, errors: list[str]) -> None:
@@ -358,6 +408,32 @@ def check_project(root: Path, project: dict, errors: list[str]) -> None:
     except (BadZipFile, OSError) as error:
         add(errors, root, archive_path, 1, f"ZIPを読み込めません: {error}")
 
+
+
+def check_mirrors(root: Path, project: dict, errors: list[str]) -> None:
+    """教材に置いた複製コードが、完成プロジェクトのソースと1バイトも違わないか確かめる。
+
+    教員用ガイドの teacher/<スラッグ>/code/ は、完成プロジェクトを開かなくても
+    授業中にコードを見せられるように置いた複製である。
+    完成コードだけを直すと、複製が古いまま静かに残るので、ここで捕まえる。
+    照合するのは mirrors を書いた単元だけで、書かない単元では何もしない。
+    """
+    for mirror in project.get("mirrors", []):
+        source_path = root / mirror["source"]
+        copy_path = root / mirror["copy"]
+        if not source_path.is_file():
+            add(errors, root, mirror["source"], 1, "複製コードの元ファイルがありません")
+            continue
+        if not copy_path.is_file():
+            add(errors, root, mirror["copy"], 1, "複製コードがありません")
+            continue
+        try:
+            if copy_path.read_bytes() != source_path.read_bytes():
+                add(errors, root, copy_path, 1,
+                    f"複製コードと元ファイルの内容が一致しません: {mirror['source']}"
+                    "（元ファイルからコピーし直してください）")
+        except OSError as error:
+            add(errors, root, copy_path, 1, f"複製コードを読み込めません: {error}")
 
 
 class SectionTexts(HTMLParser):
@@ -676,6 +752,10 @@ def validate(root: Path) -> list[str]:
         config = json.loads(read(config_path))
     except (OSError, json.JSONDecodeError) as error:
         return [f"{CONFIG}:1: 設定ファイルを読み込めません: {error}"]
+    # 必須のキーが無いまま先へ進むとトレースバックになる。日本語のエラーにして引き返す。
+    missing = check_config(config)
+    if missing:
+        return missing
     errors: list[str] = []
     check_course(root, config, errors)
     check_terms(root, config, errors)
@@ -684,6 +764,7 @@ def validate(root: Path) -> list[str]:
     check_project_layout(root, config, errors)
     for project in config["projects"]:
         check_project(root, project, errors)
+        check_mirrors(root, project, errors)
         check_downloads(root, project, errors)
     return errors
 

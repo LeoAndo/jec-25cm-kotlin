@@ -22,7 +22,7 @@
 <li><a href="#step-5">05　ミニ練習</a></li>
 <li><a href="#step-6">06　完成</a></li></ol></nav>
 <div class="progress"><span data-progress-label>0 / 7 ステップ確認済み</span><progress value="0" max="7" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
 </div></aside>
 <main id="main">
 <div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>90分 × 1コマ目安</span><span>予習なしで始められる</span></div></div>
@@ -39,7 +39,7 @@
 <table><thead><tr><th>Kotlinの特徴</th><th>中身</th><th>すでに知っていることとの関係</th></tr></thead><tbody>
 <tr><td>記述量が少ない</td><td>同じ処理でも、Javaより短く書ける。</td><td>省けた部分はコンパイラが補っています。何が省かれたのかを、この単元で1つずつ確かめます。</td></tr>
 <tr><td>Javaとの相互運用</td><td>JavaのコードからKotlinを、KotlinのコードからJavaを呼べる。</td><td>全部をKotlinに書き換えなくても混在させられます。古いAndroidアプリにJavaが残っているのはこのためです。</td></tr>
-<tr><td>Null安全</td><td>nullを入れられる型と、入れられない型を、言語が区別する。</td><td>Swiftのオプショナルと同じ発想です。次の単元で扱います。</td></tr>
+<tr><td>Null安全</td><td>nullを入れられる型と、入れられない型を、言語が区別する。</td><td>Swiftのオプショナルと同じ発想です。</td></tr>
 <tr><td>Javaの資産が使える</td><td>Java用のライブラリやフレームワークをそのまま使える。</td><td>JVM言語だからです。Kotlin用に作り直されるのを待つ必要はありません。</td></tr>
 </tbody></table>
 
@@ -336,11 +336,11 @@ print(number1, terminator: &quot;&quot;)</code></pre></div>
 <details><summary>試したあと：確かめること</summary><p><code>4</code> と書けば <code>Int</code>、<code>4.5</code> と書けば <code>Double</code>、<code>4.5f</code> と書けば <code>Float</code> です。リテラルの書き方だけで型が決まっていることを、画面で確かめてください。</p></details>
 <h3>練習B · 再代入して、コンパイルエラーを起こす（必須・4分）</h3>
 <div class="task"><p class="box-title">やること</p><p><code>name = &quot;Tanaka&quot;</code> の次の行に <code>number1 = 5</code> と書き足します。Runを押す前に、その行に出たエラーメッセージを読んでください。</p><p>読むのは次の3つです。<strong>どの行か・何をしようとしたと言っているか・どう直せと言っているか。</strong></p></div>
-<details><summary>試したあと：答えと理由</summary><p>書き足した行が赤くなり、<code>Val cannot be reassigned</code> と出ます。Runしても実行されません。<code>number1</code> は <code>val</code> で宣言したので、再代入できないからです。</p><p>これは <strong>コンパイル時</strong> に止まるエラーです。実行してから気づく種類のものではありません。確かめたら、書き足した行を消して元に戻します。</p></details>
+<details><summary>試したあと：答えと理由</summary><p>書き足した行が赤くなり、<code>'val' cannot be reassigned</code> と出ます。Runしても実行されません。<code>number1</code> は <code>val</code> で宣言したので、再代入できないからです。</p><p>これは <strong>コンパイル時</strong> に止まるエラーです。実行してから気づく種類のものではありません。確かめたら、書き足した行を消して元に戻します。</p></details>
 <h3>同じ間違いを、JavaとSwiftでしたとき</h3>
 <div class="compare">
 <div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val number1 = 1
-number1 = 5 // Val cannot be reassigned</code></pre></div>
+number1 = 5 // 'val' cannot be reassigned</code></pre></div>
 <div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>final int number1 = 1;
 number1 = 5; // cannot assign a value to final variable</code></pre></div>
 <div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let number1 = 1
@@ -349,7 +349,7 @@ number1 = 5 // cannot assign to value: 'number1' is a 'let' constant</code></pre
 <div class="note"><p class="box-title">POINT</p>
 <ul>
 <li>3つとも、コンパイル時に止まります。止まる条件も同じで、言い回しが違うだけです。</li>
-<li>Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>Val</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong></li>
+<li>Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>'val'</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong></li>
 <li>直し方は2つです。宣言を <code>var</code> に変えるか、再代入をやめるか。ここでは再代入をやめて元に戻します。</li>
 </ul></div>
 <h3>最後の3分 · 元に戻し、記録する</h3>
@@ -472,7 +472,7 @@ print(name)</code></pre></div>
 <tr><td>緑の三角（▶）が出ない</td><td><code>fun main()</code> のつづりを1文字ずつ確認する。<code>main</code> は小文字で、うしろの <code>()</code> も必要。ファイルが <code>src</code> の中にあるかも確認する。</td></tr>
 <tr><td><code>package ex01</code> の行が赤い</td><td>ファイルの場所が <code>src/ex01/</code> か確認する。フォルダ名とパッケージ名を合わせる点はJavaと同じです。</td></tr>
 <tr><td><code>Unresolved reference</code> と出る</td><td>名前のつづりを確認する。<code>println</code>・<code>number1</code>・<code>name</code> の大文字と小文字も区別する。</td></tr>
-<tr><td><code>Val cannot be reassigned</code> と出る</td><td><code>val</code> で宣言した変数に再代入していないか確認する。STEP 05 の練習B以外では書きません。</td></tr>
+<tr><td><code>'val' cannot be reassigned</code> と出る</td><td><code>val</code> で宣言した変数に再代入していないか確認する。STEP 05 の練習B以外では書きません。</td></tr>
 <tr><td>Runしても何も出ない</td><td>画面の下の <strong>Run</strong> ウィンドウが開いているか確認する。閉じていたら <strong>View → Tool Windows → Run</strong> で開く。</td></tr>
 <tr><td>出るけれど、内容が違う</td><td><code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。</td></tr>
 <tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>

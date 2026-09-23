@@ -9,14 +9,15 @@
 
 <section id="flow"><h2>この資料の流れ</h2>
 <div class="flow"><strong>① 教材を受け取る</strong><span>→</span><strong>② 使うものを確かめる</strong><span>→</span><strong>③ ブラウザで動かす</strong><span>→</span><strong>④ プロジェクトを作る</strong><span>→</span><strong>⑤ 実行して結果を読む</strong><span>→</span><strong>⑥ 後半の準備を知る</strong></div>
-<p>番号は、下の見出しの番号と同じです。③はブラウザだけで終わります。④で1行だけTerminalを使い、そのあとはIntelliJ IDEAの画面で操作します。うまくいかないときは、いちばん下の「7. うまくいかないとき」を見てください。</p>
+<p>番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。③はブラウザだけで終わります。④で1行だけTerminalを使い、そのあとはIntelliJ IDEAの画面で操作します。うまくいかないときは、いちばん下の「7. うまくいかないとき」を見てください。</p>
 <div class="note"><p class="box-title">JavaやSwiftとの違いだけを書いています</p><p>この資料は、エディタの使い方そのものは説明しません。書いてあるのは、<strong>Kotlinのプロジェクトの作り方</strong>と、<strong>IntelliJ IDEAでの実行のしかた</strong>だけです。JavaやSwiftで同じことをやってきた経験は、そのまま使えます。</p></div>
 <div class="goal"><p class="box-title">この準備が終わると</p><p>ブラウザとIntelliJ IDEAの両方で、Kotlinのプログラムを実行し、その結果を読めるようになります。ここまでできれば、第1単元の教科書を開いて始められます。</p></div></section>
 
 <section id="materials"><h2>1. 教材を受け取り、「書類」に置く</h2>
-<p>授業で使う教科書は、ZIPファイル1つにまとめて配られます。ダウンロードして、置き場所を決めるところまでを行います。</p>
+<p>授業で使う教科書は、ZIPファイル1つにまとめて <strong>Google Classroom</strong> で配られます。ダウンロードして、置き場所を決めるところまでを行います。</p>
 <ol>
-<li>先生が指定した場所から、教材のZIPファイルを<strong>ダウンロード</strong>します。</li>
+<li>ブラウザで <strong>Google Classroom</strong> を開き、この授業のクラスを選びます。先生が投稿した教材のお知らせに、ZIPファイルが添付されています。</li>
+<li>添付されたZIPファイルをクリックして、<strong>ダウンロード</strong>します。</li>
 <li>Finderを開き、左側の <strong>ダウンロード</strong> をクリックします。</li>
 <li>いちばん上に、今ダウンロードしたものがあります。次の2つのどちらかです。</li>
 </ol>
@@ -28,11 +29,13 @@
 <div class="code-head">ZIPファイルの名前の例</div><pre tabindex="0"><code>kotlin-student-materials-2026-09-23.zip</code></pre>
 <div class="code-head">展開してできるフォルダの名前の例</div><pre tabindex="0"><code>kotlin-student-materials-2026-09-23</code></pre>
 <p>日付の部分は、先生が配った教材がいつのものかを表します。配られた回によって変わるので、上と同じ日付でなくても構いません。</p>
+<div class="note"><p class="box-title">新しい教材が配られたとき</p><p>Google Classroomに新しい教材が投稿されたら、同じ手順でダウンロードします。<strong>前の教材のフォルダは消さず、別のフォルダとして残しておきます。</strong>日付が名前に入っているので、同じ場所に置いても混ざりません。自分が作ったプロジェクトは <code>書類</code> の <code>Kotlin</code> フォルダにあり、教材とは別なので、教材を入れ替えても消えません。</p></div>
 <ol start="4">
 <li>このフォルダを、Finderの左側の <strong>書類</strong> へドラッグして移動します。</li>
 <li>移動した先のフォルダをダブルクリックして開き、中身を確認します。</li>
 </ol>
-<div class="check"><p class="box-title">成功の目印</p><p>「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>index.html</code>、<code>はじめに.txt</code>、<code>VERSION.json</code> がある。</p></div>
+<div class="check"><p class="box-title">成功の目印</p><p>「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルの、合わせて<strong>4つ</strong>がある。</p></div>
+<div class="note"><p class="box-title">4つより多いことがあります</p><p>この教材は、いまは日本語だけで配られています。日本語以外の言語でも読めるようになると、読む言語を選ぶための入口のファイルが増えることがあります。<strong>4つより多い分には、そのまま先へ進んで構いません。</strong>足りないときだけ、先に進まずに先生に見せてください。</p></div>
 <h3>どの版（バージョン）の教材かを見分ける</h3>
 <p>教材は、授業の進み方に合わせて新しい版が配られます。手もとのものがどの版かは、次の2か所で分かります。</p>
 <table><thead><tr><th>見る場所</th><th>分かること</th></tr></thead><tbody>
@@ -44,18 +47,22 @@
 <div class="note"><p class="box-title">ダウンロードしたものが見つからない・名前が少し違う</p><p>同じ教材を2回ダウンロードすると、名前のうしろに <code>(1)</code> や <code>-2</code> が付くことがあります。このときは<strong>古いほうを開いてしまう</strong>ことがあり、画面には何のエラーも出ません。名前にそういう印が付いていたら、自分で判断せず先生に見せてください。</p></div></section>
 
 <section id="tools"><h2>2. 使うものを確かめる</h2>
-<p>この授業は、1コマ90分で、全15コマあります。前半（1コマ目から6コマ目）と後半（7コマ目から15コマ目）で、使うアプリが変わります。授業で使うMacには、どちらもあらかじめ入っています。</p>
+<p>この授業は、1コマ90分で、全15コマあります。前半（1コマ目から6コマ目）と後半（7コマ目から15コマ目）で、使うアプリが変わります。<strong>学校から貸し出されているMacには、IntelliJ IDEA と Android Studio の両方があらかじめ入っています。</strong>自分で入れる作業はありません。</p>
 <table><thead><tr><th>使うもの</th><th>いつ使うか</th><th>何をするか</th></tr></thead><tbody>
 <tr><td>ブラウザ（Kotlin Playground）</td><td>最初の1回だけ</td><td>準備なしでKotlinのコードを実行し、動くことを確かめます。</td></tr>
 <tr><td>IntelliJ IDEA</td><td>前半</td><td>Kotlinのプログラムを書いて、結果を<strong>文字で</strong>確かめます。スマートフォンの画面は作りません。</td></tr>
 <tr><td>Android Studio</td><td>後半</td><td>Kotlinでスマートフォンのアプリを作り、<strong>画面で</strong>確かめます。</td></tr>
 </tbody></table>
-<p>教員が教材の確認に使っている版は、次のとおりです。自分のMacの版が少し違っても、多くの操作はそのまま進められます。版は、それぞれのWelcome画面の左上に出ます。</p>
-<table><thead><tr><th>アプリ</th><th>教員が確認に使っている版</th></tr></thead><tbody>
-<tr><td>IntelliJ IDEA</td><td><code>2026.3</code></td></tr>
-<tr><td>Android Studio</td><td><code>Quail 4 | 2026.1.4</code></td></tr>
+<h3>2つとも開けることを確かめる</h3>
+<p><strong>Launchpad</strong> を開くか、Finderの <strong>アプリケーション</strong> フォルダを見て、<strong>IntelliJ IDEA</strong> と <strong>Android Studio</strong> の2つがあることを確かめます。前半で使うのは IntelliJ IDEA だけですが、いま両方あることを見ておくと、後半で慌てずに済みます。</p>
+<div class="check"><p class="box-title">ここで止まって、確認</p><label><input type="checkbox" data-check="tools"><span>アプリケーションフォルダに <strong>IntelliJ IDEA</strong> と <strong>Android Studio</strong> の2つがある。</span></label><p>どちらかが見つからないときは、自分で入れようとせず、その画面のまま先生に知らせてください。</p></div>
+<h3>版（バージョン）について</h3>
+<p>IntelliJ IDEA も Android Studio も、版がいくつも公開されています。<strong>貸与されたMacに入っている版をそのまま使ってください。</strong>自分で新しい版を探して入れ直す必要はありません。版が少し違っても、多くの操作はそのまま進められます。いま使っている版は、それぞれのWelcome画面の左上に出ます。</p>
+<table><thead><tr><th>アプリ</th><th>この教材での扱い</th></tr></thead><tbody>
+<tr><td>IntelliJ IDEA</td><td>版は指定しません。教員は <code>2026.3 EAP</code> で教材を確認しています。</td></tr>
+<tr><td>Android Studio</td><td>後半の教科書は、授業の基準である <code>Panda 2</code> の画面とメニュー名で書いています。</td></tr>
 </tbody></table>
-<div class="note"><p class="box-title">版が違った・アプリが見つからない</p><p>版が違うと、ボタンの名前や並びが教科書と少し違うことがあります。探しても見つからないときは、自分で設定を変えず、その画面のまま先生に見せてください。IntelliJ IDEA そのものが見つからない場合も、先生に知らせてください。</p></div></section>
+<div class="note"><p class="box-title">版が違った・アプリが見つからない</p><p>版が違うと、ボタンの名前や並びが教科書と少し違うことがあります。探しても見つからないときは、自分で設定を変えたり入れ直したりせず、その画面のまま先生に見せてください。</p></div></section>
 
 <section id="playground"><h2>3. ブラウザだけで動かす（Kotlin Playground）</h2>
 <p><strong>Kotlin Playground</strong> は、JetBrainsが公開しているWebサービスです。アプリの用意も、プロジェクトの作成もせずに、ブラウザのページ上で <code>fun main()</code> をそのまま実行できます。最初の1回は、ここでKotlinのコードが動くことを確かめます。</p>
@@ -167,6 +174,7 @@ Process finished with exit code 0</code></pre>
 <table><thead><tr><th>出たもの・起きたこと</th><th>やってみること</th></tr></thead><tbody>
 <tr><td>Kotlin Playground の <strong>Run</strong> を押しても、何も出ない</td><td>実行はサーバ側で行われるので、数秒から十数秒かかる。待っても出ないときは、ページを開き直してもう一度実行する。</td></tr>
 <tr><td>Kotlin Playground でコード補完が出ない</td><td>Playgroundには補完がない。手順4に進んで IntelliJ IDEA を使う。</td></tr>
+<tr><td>Macに IntelliJ IDEA が見つからない</td><td>貸与されたMacには入っているはずなので、自分で入れようとせず、先生に知らせる。</td></tr>
 <tr><td>Welcome画面に <code>New Project</code> が見あたらない</td><td>すでにプロジェクトが開いている。そのウィンドウを閉じるか、<strong>File → New → Project…</strong> を使う。</td></tr>
 <tr><td><code>Language</code> の一覧に <code>Kotlin</code> が出ない</td><td>左の一覧で <strong>New Project</strong> 以外が選ばれていないか確かめる。それでも出ないときは先生に知らせる。</td></tr>
 <tr><td><code>JDK</code> の欄が <code>&lt;No JDK&gt;</code> のまま</td><td>欄を開いて一覧から選び直す。候補が1つも出ないときは先生に知らせる。</td></tr>
