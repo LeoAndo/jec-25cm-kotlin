@@ -15,6 +15,10 @@
 | 純Kotlin | `K01`〜 | IntelliJ IDEA | `HelloKotlin`（`HelloKotlin/src/exNN/*.kt`。Gradleを使わない） | `fun main()` を実行してコンソール出力を見る |
 | Android | `A01`〜 | Android Studio | `A01HelloAndroid` `A02CalcGame` `A03GithubSearch` `A04FunnyCamera`（Gradle） | エミュレータ `jec_25cm_kotlin_Pixel 9a` で動かす |
 
+**Android系の基準バージョンは Android Studio Panda 2。** 教科書の手順・画面・生成される設定は、すべて Panda 2 を前提に書く。ひな形は `Panda2KotlinEmptyViewsActivity`（AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36）にある。教員の開発マシンには Quail 4 が入っているので、**自分の手元の Android Studio で作ったプロジェクトを、そのまま完成プロジェクトにしない。** 新しい完成プロジェクトは、ひな形と同じ構成になっているかを `app/build.gradle.kts`・`gradle/libs.versions.toml`・`gradle/wrapper/gradle-wrapper.properties` の3つで確かめる。
+
+既存の `A01HelloAndroid`〜`A04FunnyCamera` は Quail 4 の構成のままで、基準と一致していない。**この不一致の扱いが決まるまで、Android系の単元の教科書は書かない**（READMEの「教員が確認に使うプロジェクト」の「未解決」を読む）。
+
 2系統あることが、この運用のほとんどの分岐の理由になっている。**どちらの系統の作業かを先に決めてから読み進める。**
 
 ## 受講生像と、教材の書き方

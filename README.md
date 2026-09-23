@@ -89,8 +89,8 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 | フォルダ | 役割 |
 | --- | --- |
-| `Panda2KotlinEmptyViewsActivity` | **Android Studio Panda 2** の Kotlin / Empty Views Activity のひな形（学生には配布しません）。出発点のコードと設定を教員が確認するために置いています。AGP 9.1.1／Gradle 9.3.1／targetSdk 36 |
-| `Quail4KotlinEmptyViewsActivity` | 上と同じ設定を **Android Studio Quail 4** で作ったひな形（学生には配布しません）。版の違いによる差分を確認するための比較用。AGP 9.4.1／Gradle 9.6.0／targetSdk 37。完成プロジェクト（`A01`〜`A04`）はこちらと同じ構成です |
+| `Panda2KotlinEmptyViewsActivity` | **授業の基準バージョン Android Studio Panda 2** の Kotlin / Empty Views Activity のひな形（学生には配布しません）。学生が New Project で作る出発点は、これと同じ形になります。AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36 |
+| `Quail4KotlinEmptyViewsActivity` | 上と同じ設定を、基準より新しい **Android Studio Quail 4** で作ったひな形（学生には配布しません）。基準との差分を確認するための比較用。AGP 9.4.1／Gradle 9.6.0／compileSdk 37／targetSdk 37 |
 | `HelloKotlin` | 純Kotlin系（K01〜K06）の完成プロジェクト。Gradleを使わないIntelliJ IDEAプロジェクトで、演習ごとに `src/exNN/main.kt` を持つ（`exNN` は前年度資料の節に対応）。配布用ZIPを教科書に同梱し、初回から学生も参照可能 |
 | `A01HelloAndroid` | 完成プロジェクト。TextViewとButton、Snackbar・Toast・Logcatでの結果の出し分けを扱う。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 | `A02CalcGame` | 完成プロジェクト。Chronometerで時間を計りながら計算問題に答えるゲーム。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
@@ -98,6 +98,10 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 | `A04FunnyCamera` | 完成プロジェクト。CameraXのプレビューにキャラクターを重ね、合成した画像を保存する。中身の説明は [`A04FunnyCamera/README.md`](A04FunnyCamera/README.md) にある。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 
 2つのひな形は、Android Studioの版が変わったときに、New Projectウィザードが生成するコードや設定がどう変わるかを見るために置いています。教材のスクリーンショットや手順が古くなっていないかは、この2つを見比べて確かめます。単元ではないので `config/teaching-materials.json` には登録せず、学生用ZIPにも入りません。
+
+**授業の基準バージョンは Android Studio Panda 2 です。** Android系の単元の教科書は、Panda 2 の New Project ウィザードの画面と、Panda 2 が生成する設定を前提に書きます。スクリーンショットも Panda 2 で撮ります。教員の開発マシンには Quail 4 が入っていますが（下の「開発環境：教員」）、教材の基準は Panda 2 です。
+
+> **未解決：完成プロジェクトの版が基準と合っていません。** `A01HelloAndroid`〜`A04FunnyCamera` は、いずれも Quail 4 で作られた構成（AGP 9.4.1／Gradle 9.6.0／compileSdk 37／targetSdk 37）になっています。基準の Panda 2 は AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36 なので、**学生が Panda 2 で作ったプロジェクトと、配布する完成プロジェクトの設定が一致しません。** Panda 2 で `samples/A01HelloAndroid` を開いたときに、AGPの版が新しすぎて開けない可能性があります。Android系の単元を教科書にする前に、(a) 完成プロジェクトを Panda 2 の構成に合わせる、(b) 基準を Quail 4 に上げる、(c) 参照リポジトリのように「ちがうAndroid Studioのバージョンで進めるとき」の共通資料で読み替えを案内する、のどれを採るかを決める必要があります。**この判断が済むまで、Android系の単元の教科書は書きません。**
 
 教員用ガイドとSTEPごとの照合用コードは `teacher/<スラッグ>/` にまとめます（いまあるのは `teacher/hello-kotlin` だけです）。完成版の見本は、配布物の `samples` フォルダに展開済みで入っています。学生が自分で置き場所を作ったり、ZIPを展開したりする必要はありません。
 
