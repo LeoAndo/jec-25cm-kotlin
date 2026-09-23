@@ -24,7 +24,7 @@ EXCLUDED = {".git", ".idea", ".gradle", ".kotlin", "build", "local.properties", 
 
 
 def split_unit(name):
-    """K01HelloKotlin を ("K01", "HelloKotlin") に分ける。"""
+    """K01HelloKotlin を ("K01", "K01HelloKotlin") に分ける。"""
     match = re.match(r"^([KA]\d+)(.*)$", name)
     return (match.group(1), match.group(2)) if match else (name, name)
 
@@ -44,7 +44,7 @@ def load_projects():
 def archive_targets(projects):
     """完成プロジェクトZIPを作る (プロジェクト, 出力先) の組を、重複なく返す。
 
-    純Kotlin系は複数の単元が同じ HelloKotlin を指すので、そのままでは同じZIPを何度も作ってしまう。
+    純Kotlin系は複数の単元が同じ K01HelloKotlin を指すので、そのままでは同じZIPを何度も作ってしまう。
     """
     targets = []
     for project in projects:

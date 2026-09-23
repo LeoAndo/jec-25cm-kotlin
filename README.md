@@ -9,10 +9,10 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 ## 教科書一覧
 
 - [K01：HelloKotlin — Kotlinを動かしてみよう](docs/hello-kotlin/index.html)
-- [完成プロジェクト（初回から参照可能）](docs/hello-kotlin/downloads/HelloKotlin.zip)
+- [完成プロジェクト（初回から参照可能）](docs/hello-kotlin/downloads/K01HelloKotlin.zip)
 - [共通資料：授業を始めるまでの準備（教材の受け取りから最初の実行まで）](docs/common/setup.html)
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
-- [教員用：HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
+- [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 
 **いま教科書があるのはK01だけです。** K02以降と、A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、単元ごとに今後のissueで行います。
 
@@ -26,7 +26,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 学生には [最新の教材リリース](https://github.com/LeoAndo/jec-25cm-kotlin/releases/latest) の Assets にあるZIPを案内します（初回公開後から利用可能）。ファイル名には `kotlin-student-materials-2026-09-23.zip` のように版の日付が入り、展開してできるフォルダも同じ名前になります。ダウンロードフォルダでどの版か分かり、別の版を同じ場所に展開しても混ざりません。
 
-展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。IntelliJ IDEA か Android Studio の Open で `samples/HelloKotlin` のように選ぶだけで開け、初回から参考資料として使えます（各教科書からZIPでも受け取れます）。
+展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。IntelliJ IDEA か Android Studio の Open で `samples/K01HelloKotlin` のように選ぶだけで開け、初回から参考資料として使えます（各教科書からZIPでも受け取れます）。
 
 学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダの中身は `docs` / `samples` / `はじめに.txt` / `VERSION.json` の4つで、言語を選ぶ入口はありません。`config/i18n.json` の5言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダと、教員が確認に使うひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
@@ -53,7 +53,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 | 11–13 | A03 GithubSearch | Web APIと一覧表示 | `A03GithubSearch` |
 | 14–15 | A04 FunnyCamera | カメラと画像の合成 | `A04FunnyCamera` |
 
-純Kotlin系（K01〜K06）は、`HelloKotlin` という1つのIntelliJ IDEAプロジェクトの中で、演習ごとに `src/exNN/` のパッケージを分けて書きます。**1つの単元が複数の `exNN` を扱うことがあります**（K03なら `ex03` `ex05` `ex06`）。Android系（A01〜A04）は、単元ごとに別のAndroid Studioプロジェクトを作ります。
+純Kotlin系（K01〜K06）は、`K01HelloKotlin` という1つのIntelliJ IDEAプロジェクトの中で、演習ごとに `src/exNN/` のパッケージを分けて書きます。**1つの単元が複数の `exNN` を扱うことがあります**（K03なら `ex03` `ex05` `ex06`）。Android系（A01〜A04）は、単元ごとに別のAndroid Studioプロジェクトを作ります。
 
 **K03やK05のように、1コマで複数の文法項目を扱う回があります。** 「1単元で導入する新概念は1つまで」（「基本方針」1、「単元の範囲の決め方」1）との関係は、下の「単元の範囲の決め方（全単元共通）」の「純Kotlin系（K01〜K06）での新概念の数え方」にまとめています。
 
@@ -70,7 +70,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 | 提出するもの | アレンジを加えたアプリのAPK（デバッグビルド） |
 | 提出先・締め切り | 授業で教員が案内します |
 
-- **純Kotlin系（`HelloKotlin`）は対象外です。** IntelliJ IDEA で `fun main()` を実行するコンソールアプリで、Androidアプリではないため、APKにできません。選べるのはAndroid系の単元で作ったアプリだけです。
+- **純Kotlin系（`K01HelloKotlin`）は対象外です。** IntelliJ IDEA で `fun main()` を実行するコンソールアプリで、Androidアプリではないため、APKにできません。選べるのはAndroid系の単元で作ったアプリだけです。
 - **配布している完成プロジェクト（見本）をそのまま出しても、提出にはなりません。** 提出するのは、学生自身が授業で作ったプロジェクトに、学生自身がアレンジを加えたものです。完成プロジェクトは動作確認とコード比較のための参考資料という位置づけを変えません（「学生への配布」）。
 - **提出先のサービス名と締め切りは、このREADMEには書きません。** 年度や運用で変わるため、教材側で断定せず、授業で教員が案内します。
 - 提出するのはデバッグビルドのAPKです。署名鍵の作成・リリースビルド・ストアへの公開は、この授業では扱いません。
@@ -83,7 +83,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 2025年度の「Kotlin演習」では、`2025-01_Kotlin演習_Kotlinプログラミングの基本.pdf` という配布資料を使いました。この資料は冒頭で「Kotlinを最短で習得できるように他言語（Java, Swift）と比較しながら解説したい」と宣言し、最後まで **「プログラミング」→「プログラム実行結果」→「他言語との比較」→「POINT」** という同じ型で書かれています。**今年のHTML教科書は、この型と比較方式を引き継ぎます。**
 
-資料の各節と `HelloKotlin/src/exNN/` の演習は、次のように対応しています。15コマ計画の `演習` 列は、この対応表を指しています。
+資料の各節と `K01HelloKotlin/src/exNN/` の演習は、次のように対応しています。15コマ計画の `演習` 列は、この対応表を指しています。
 
 | 前年度資料の節 | 内容 | 対応する演習 |
 | --- | --- | --- |
@@ -114,7 +114,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 | --- | --- |
 | `Panda2KotlinEmptyViewsActivity` | **授業の基準バージョン Android Studio Panda 2** の Kotlin / Empty Views Activity のひな形（学生には配布しません）。学生が New Project で作る出発点は、これと同じ形になります。AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36 |
 | `Quail4KotlinEmptyViewsActivity` | 上と同じ設定を、基準より新しい **Android Studio Quail 4** で作ったひな形（学生には配布しません）。基準との差分を確認するための比較用。AGP 9.4.1／Gradle 9.6.0／compileSdk 37／targetSdk 37 |
-| `HelloKotlin` | 純Kotlin系（K01〜K06）の完成プロジェクト。Gradleを使わないIntelliJ IDEAプロジェクトで、演習ごとに `src/exNN/main.kt` を持つ（`exNN` は前年度資料の節に対応）。配布用ZIPを教科書に同梱し、初回から学生も参照可能 |
+| `K01HelloKotlin` | 純Kotlin系（K01〜K06）の完成プロジェクト。Gradleを使わないIntelliJ IDEAプロジェクトで、演習ごとに `src/exNN/main.kt` を持つ（`exNN` は前年度資料の節に対応）。配布用ZIPを教科書に同梱し、初回から学生も参照可能 |
 | `A01HelloAndroid` | 完成プロジェクト。TextViewとButton、Snackbar・Toast・Logcatでの結果の出し分けを扱う。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 | `A02CalcGame` | 完成プロジェクト。Chronometerで時間を計りながら計算問題に答えるゲーム。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 | `A03GithubSearch` | 完成プロジェクト。GitHubの検索APIをKtorで呼び、結果をRecyclerViewで一覧表示する。中身の説明は [`A03GithubSearch/README.md`](A03GithubSearch/README.md) にある。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
@@ -155,7 +155,7 @@ cd jec-25cm-kotlin
 完成コードを変更したときは、このリポジトリ直下で次を実行し、配布用ZIPも更新します。
 
 ```sh
-python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip
+python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip
 ```
 
 学生用ZIPを作成するときは、完成プロジェクトのZIPをまとめて再生成し、HTMLのリンク確認も行います。
@@ -186,14 +186,14 @@ ZIPにはGitで管理しているプロジェクトのファイルを収録し�
 3. `student-materials-ready-…` の成果物をダウンロードし、教材ZIPと `release-notes.md` を確認します。成果物の保存期間は30日です。GitHub Releasesの下書きはこの時点では作りません。
 4. 公開したいタイミングで、以下の手動公開を実行します。
 
-追加のSecretは不要です。リポジトリのGitHub Actionsが有効で、ワークフローの `contents: write` を許可するポリシーになっている必要があります。教材のパッケージ化にAndroid SDKは不要です。このワークフローではAndroidアプリのビルド・実機動作までは検証しません。純Kotlin系の `HelloKotlin` も、コンパイルはせずファイルを収録するだけです。
+追加のSecretは不要です。リポジトリのGitHub Actionsが有効で、ワークフローの `contents: write` を許可するポリシーになっている必要があります。教材のパッケージ化にAndroid SDKは不要です。このワークフローではAndroidアプリのビルド・実機動作までは検証しません。純Kotlin系の `K01HelloKotlin` も、コンパイルはせずファイルを収録するだけです。
 
 #### 手動公開
 
 1. 配布準備のissueを起票し、`config/i18n.json` で `distribute: true` の言語の未翻訳を確認します。エージェントが [翻訳用skill](skills/translate-teaching-materials/SKILL.md) に従って差分だけを訳し、翻訳PRを作ります。翻訳はエージェントのセッションで行い、Actionsから翻訳APIは呼びません。
 2. **翻訳PRを開いてから公開するまでは、`docs/` を触るPRをマージしません。** 別のAIが逆翻訳を原文と照合し、検査と配布ZIPの確認を済ませて翻訳PRをマージします。日本語の変更が先に入った場合は、最新のmainで差分を訳し直します。
 3. **Actions → Student materials → Run workflow** を開きます。ブランチに **main** を選び、**publish** にチェックを入れます。**allow_untranslated** はオフのままにします。
-4. **student_notes** に学生向けの案内を日本語で入力します。例：`HelloKotlin STEP 4の説明を修正。すでに完成している人はやり直し不要。`
+4. **student_notes** に学生向けの案内を日本語で入力します。例：`K01HelloKotlin STEP 4の説明を修正。すでに完成している人はやり直し不要。`
 5. **Run workflow** を押します。配布対象の言語に未翻訳があると公開前に失敗し、Summaryに言語・ページ別の件数が出ます。差分翻訳を反映してから新しく実行してください。成功すると、Releasesに教材ZIP・チェックサム・リリースノートが掲載されます。
 6. 公開された個別リリースURLを授業で案内します。ここで `docs/` を触るPRのマージを再開します。
 
@@ -206,7 +206,7 @@ ZIPにはGitで管理しているプロジェクトのファイルを収録し�
 #### リリースノートとフィードバックの扱い
 
 - GitHubの自動生成ノートに、前回公開した教材からのPR一覧を載せます。初回は過去の変更を含みます。直接mainへコミットした変更も、折りたたみのコミット一覧で確認できます。
-- PRタイトルは学生が読んで分かる日本語にします。例：`HelloKotlin：STEP 4の変数の説明を修正`。
+- PRタイトルは学生が読んで分かる日本語にします。例：`K01HelloKotlin：STEP 4の変数の説明を修正`。
 - PRに `enhancement` を付けると「教材の追加」、`bug` は「誤記・不具合の修正」、それ以外は「その他の更新」に分類されます。`skip-release-notes` はPR一覧から除外しますが、コミット一覧には残ります。
 - 自動生成はPRタイトルなどをまとめる機能です。修正内容をAIが解釈して学生への影響ややり直しの要否を書く機能ではないため、その案内は公開時の `student_notes` に記入します。
 - フィードバックは「教材の版・単元/STEP・起きたこと」で集めます。授業を進められない不具合は修正後すぐに手動公開し、誤字や説明の補足はまとめて公開する運用がおすすめです。
@@ -383,7 +383,7 @@ Non-Bundled Plugins:
 
 # 授業用教科書の基本方針
 
-1. 各単元で、学生自身が毎回IDEからプロジェクトを新規作成し、修正箇所を確認しながらハンズオン形式で進めます。純Kotlin系は `HelloKotlin` プロジェクトの中に演習ごとのパッケージ（`src/exNN/`）を作り、Android系は単元ごとにAndroid Studioプロジェクトを作ります。公開する完成版は動作確認・コード比較の参考資料とします。
+1. 各単元で、学生自身が毎回IDEからプロジェクトを新規作成し、修正箇所を確認しながらハンズオン形式で進めます。純Kotlin系は `K01HelloKotlin` プロジェクトの中に演習ごとのパッケージ（`src/exNN/`）を作り、Android系は単元ごとにAndroid Studioプロジェクトを作ります。公開する完成版は動作確認・コード比較の参考資料とします。
 2. **各STEPに、JavaかSwift（または両方）との比較を必ず置きます。** 受講生はJavaとSwiftを書けるので、いちばん短い説明は「あなたが知っているあの書き方が、Kotlinではこうなる」です。比較は、Kotlinを先頭にした横並びの比較ブロック（`<div class="compare">`）で見せます。比較する相手がないKotlin独自の機能（`by lazy` など）は、比較を省かずに「Java／Swiftでは同じことをどう書くか、あるいは書けないか」を示します。
 3. **概念そのものの説明はしません。** 変数とは何か、繰り返しとは何かは書きません。書くのは、Kotlinでの書き方と、Java／Swiftとの違い、そして**なぜ違うのか**です。理由まで書くのは、書き方の暗記ではなく、次に似た場面で自分で判断できるようにするためです。
 4. **用語に読みがなは振りません。** 受講生は用語を知っています。代わりに、Kotlin固有の用語（プライマリコンストラクタ、スマートキャスト、拡張関数、委譲プロパティなど）には、**Java／Swiftでの対応物**を添えます（例：拡張関数はSwiftのextensionと同じ発想、`by lazy` はSwiftの `lazy var` に近い）。
@@ -444,6 +444,6 @@ Non-Bundled Plugins:
 5. **完成プロジェクトにUnit Testは書かない。** テストしやすくするためのリファクタリングもしません。教材を検査する `scripts/test_*.py` はCIで動くので、通る状態を保ちます。
 6. 完成プロジェクトの `README.md` は、[`A03GithubSearch/README.md`](A03GithubSearch/README.md) の形にそろえます（画面の構成の表 → 使用しているAPI → ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なライブラリ → ビルドと実行）。
 7. **ライブラリは必要なときだけ足す。** バージョンは `gradle/libs.versions.toml` で管理します。
-8. 純Kotlin系の完成コードは `HelloKotlin/src/exNN/` に置き、ファイルの先頭に `package exNN` を書きます。`fun main()` を持たせて、IntelliJ IDEAの実行ボタンで動かせる形にします。**`exNN` の番号は、前年度資料の節に対応させます**（対応表は上の「前年度の教材との関係」）。新しい番号を勝手に振らず、その節の演習として置きます。1つの単元が複数の `exNN` を扱うこともあります。
+8. 純Kotlin系の完成コードは `K01HelloKotlin/src/exNN/` に置き、ファイルの先頭に `package exNN` を書きます。`fun main()` を持たせて、IntelliJ IDEAの実行ボタンで動かせる形にします。**`exNN` の番号は、前年度資料の節に対応させます**（対応表は上の「前年度の教材との関係」）。新しい番号を勝手に振らず、その節の演習として置きます。1つの単元が複数の `exNN` を扱うこともあります。
 9. コメントは、学生が読んで意味が分かる日本語で書きます。英語のコメントにはしません。
 10. **ここに書いた書き方を保ちます。** レビューで「初学者向けにかみ砕くべき」と指摘されても、既定の対応は「教科書で説明する」です。採用するのは、動作を変えない小さな明確化だけにします。受講生はJavaとSwiftを書けるので、コードを薄めるより、Java／Swiftとの比較を1つ足すほうが早く伝わります。

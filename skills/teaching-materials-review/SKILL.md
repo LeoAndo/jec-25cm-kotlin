@@ -11,7 +11,7 @@ description: Review teaching materials against Kotlin console and Android projec
 
 | 系統 | `config/teaching-materials.json` の `kind` | 完成プロジェクト | 動かし方 |
 | --- | --- | --- | --- |
-| 純Kotlin（`K01`〜） | `kotlin-console` | `HelloKotlin/src/exNN/` | IntelliJ IDEA で `fun main()` を実行 |
+| 純Kotlin（`K01`〜） | `kotlin-console` | `K01HelloKotlin/src/exNN/` | IntelliJ IDEA で `fun main()` を実行 |
 | Android（`A01`〜） | `android` | `A01HelloAndroid` など | Android Studio、エミュレータ `jec_25cm_kotlin_Pixel 9a` |
 
 ## 必須確認
@@ -35,7 +35,7 @@ description: Review teaching materials against Kotlin console and Android projec
 
 **純Kotlin単元（`kind: "kotlin-console"`）**
 
-- `sources` の各 `.kt` が `HelloKotlin/src/<package>/` の下にあり、先頭に `package <package>`（セミコロンなし）が書いてあること。
+- `sources` の各 `.kt` が `K01HelloKotlin/src/<package>/` の下にあり、先頭に `package <package>`（セミコロンなし）が書いてあること。
 - `fun main()` があり、IntelliJ IDEA の実行ボタンで動かせる形であること。Gradleは使わない。
 - IntelliJ IDEA で実行し、**Runツールウィンドウのコンソール出力**が教科書に書いてある出力と一致すること。出力の行数・順番・型の見え方（`2.0` と `3.0` など）まで見る。
 - レビュワーがIntelliJ IDEAを開けない場合は、出力の照合を「未確認項目」として総括コメントに残す。推測で「一致した」と書かない。
@@ -64,7 +64,7 @@ description: Review teaching materials against Kotlin console and Android projec
 5. **完成プロジェクトにUnit Testは書かない。** テストしやすくするためのリファクタリングもしない。テストの追加や、そのための構造変更を求める指摘は「対応不要」とする。`scripts/test_*.py` はCIで動くので、通る状態を保つ。
 6. **完成プロジェクトの `README.md` は `A03GithubSearch/README.md` の形**（画面の構成の表 → 使用しているAPI → ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なライブラリ → ビルドと実行）にそろえる。
 7. **ライブラリは必要なときだけ足す。** バージョンは `gradle/libs.versions.toml` で管理する。
-8. 純Kotlin系の完成コードは `HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。
+8. 純Kotlin系の完成コードは `K01HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。
 9. コメントは、学生が読んで意味が分かる**日本語**で書く。英語のコメントは指摘する。
 10. **オーナーの書き方を保つ。** 「初学者向けに書き直すべき」という指摘の既定の対応は「教科書で説明する」。採用するのは、動作を変えない小さな明確化だけにする。
 

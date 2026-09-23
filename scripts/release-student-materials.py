@@ -21,7 +21,7 @@ MATERIALS_CONFIG = "config/teaching-materials.json"
 
 
 def split_unit(name):
-    """K01HelloKotlin を ("K01", "HelloKotlin") に分ける。"""
+    """K01HelloKotlin を ("K01", "K01HelloKotlin") に分ける。"""
     match = re.match(r"^([KA]\d+)(.*)$", name)
     return (match.group(1), match.group(2)) if match else (name, name)
 

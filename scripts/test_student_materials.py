@@ -39,30 +39,30 @@ print("教材整合性チェック: テスト用", file=sys.stderr)
 raise SystemExit({status})
 '''
 
-# 単元の一覧は config/teaching-materials.json から読む。K01とK02は同じ HelloKotlin を指すので、
-# 完成プロジェクトZIPを作る組は「HelloKotlin」と「A01HelloAndroid」の2つになる。
+# 単元の一覧は config/teaching-materials.json から読む。K01とK02は同じ K01HelloKotlin を指すので、
+# 完成プロジェクトZIPを作る組は「K01HelloKotlin」と「A01HelloAndroid」の2つになる。
 FIXTURE_PROJECTS = [
     {
         "name": "K01HelloKotlin",
         "kind": "kotlin-console",
-        "root": "HelloKotlin",
+        "root": "K01HelloKotlin",
         "packages": ["ex01"],
         "sessions": 1,
         "docs": ["docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"],
-        "sources": ["HelloKotlin/src/ex01/main.kt"],
+        "sources": ["K01HelloKotlin/src/ex01/main.kt"],
         "snippets": [],
-        "archive": "docs/hello-kotlin/downloads/HelloKotlin.zip",
+        "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip",
     },
     {
         "name": "K02NullSafety",
         "kind": "kotlin-console",
-        "root": "HelloKotlin",
+        "root": "K01HelloKotlin",
         "packages": ["ex02"],
         "sessions": 1,
         "docs": ["docs/null-safety/index.html", "teacher/null-safety/index.html"],
-        "sources": ["HelloKotlin/src/ex02/main.kt"],
+        "sources": ["K01HelloKotlin/src/ex02/main.kt"],
         "snippets": [],
-        "archive": "docs/hello-kotlin/downloads/HelloKotlin.zip",
+        "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip",
     },
     {
         "name": "A01HelloAndroid",
@@ -102,20 +102,20 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         for name, text in {
             "docs/common/setup.html": page("はじめの準備", '<a href="../hello-kotlin/index.html">第1単元へ</a>'),
             "docs/hello-kotlin/index.html": page("K01 HelloKotlin",
-                                                 '<a href="downloads/HelloKotlin.zip">完成プロジェクト</a>'
+                                                 '<a href="downloads/K01HelloKotlin.zip">完成プロジェクト</a>'
                                                  '<a href="../common/setup.html">はじめの準備</a>'),
-            "docs/hello-kotlin/downloads/HelloKotlin.zip": "stale ZIP",
+            "docs/hello-kotlin/downloads/K01HelloKotlin.zip": "stale ZIP",
             "docs/null-safety/index.html": page("K02 NullSafety",
-                                                    '<a href="../hello-kotlin/downloads/HelloKotlin.zip">完成プロジェクト</a>'),
+                                                    '<a href="../hello-kotlin/downloads/K01HelloKotlin.zip">完成プロジェクト</a>'),
             "docs/hello-android/index.html": page("A01 HelloAndroid",
                                                   '<a href="downloads/A01HelloAndroid.zip">完成プロジェクト</a>'),
             "docs/hello-android/downloads/A01HelloAndroid.zip": "stale ZIP",
             "docs/.DS_Store": "finder settings",
             "teacher/hello-kotlin/index.html": "teacher only",
-            "HelloKotlin/src/ex01/main.kt": "package ex01\n\nfun main() {\n}\n",
-            "HelloKotlin/src/ex02/main.kt": "package ex02\n\nfun main() {\n}\n",
-            "HelloKotlin/.idea/misc.xml": "IDE settings",
-            "HelloKotlin/out/production/HelloKotlin/ex01/MainKt.class": "build output",
+            "K01HelloKotlin/src/ex01/main.kt": "package ex01\n\nfun main() {\n}\n",
+            "K01HelloKotlin/src/ex02/main.kt": "package ex02\n\nfun main() {\n}\n",
+            "K01HelloKotlin/.idea/misc.xml": "IDE settings",
+            "K01HelloKotlin/out/production/K01HelloKotlin/ex01/MainKt.class": "build output",
             "A01HelloAndroid/MainActivity.kt": "original source",
             "A01HelloAndroid/gradlew": "#!/bin/sh",
             "A01HelloAndroid/.idea/misc.xml": "IDE settings",
@@ -167,7 +167,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
                   '<script src="../assets/textbook.js" defer></script></head>'
                   '<body data-progress-key="jec-test-v1"><main><section id="step1"><h1>日本語の見出し</h1>'
                   '<p>訳した文</p><p>未翻訳の文<strong>も残す</strong></p>'
-                  '<a href="downloads/HelloKotlin.zip">完成プロジェクト</a>'
+                  '<a href="downloads/K01HelloKotlin.zip">完成プロジェクト</a>'
                   '<input type="checkbox" data-check="step1"><pre><code>日本語のコード</code></pre>'
                   '</section></main></body></html>')
         (self.root / "docs/hello-kotlin/index.html").write_text(source, encoding="utf-8")
@@ -187,7 +187,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
     def test_shared_project_is_packaged_once(self):
         """同じ完成プロジェクトを指す単元が複数あっても、ZIPは1回だけ作る。
 
-        純Kotlin系は K01・K02… が同じ HelloKotlin を指すので、重複を除かないと
+        純Kotlin系は K01・K02… が同じ K01HelloKotlin を指すので、重複を除かないと
         同じZIPを何度も作り直すことになる。
         """
         calls = []
@@ -201,7 +201,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             packager.build(self.root / "dist")
         packaged = [call for call in calls if any("package-project.py" in part for part in call)]
         self.assertEqual([call[call.index("--project") + 1] for call in packaged],
-                         ["HelloKotlin", "A01HelloAndroid"])
+                         ["K01HelloKotlin", "A01HelloAndroid"])
 
     def test_instructions_list_every_registered_unit(self):
         """はじめに.txt の単元一覧は config/teaching-materials.json から作る。"""
@@ -223,7 +223,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         textbook = self.root / "docs/functions/index.html"
         textbook.parent.mkdir(parents=True)
         textbook.write_text(page("K03 Functions",
-                                 '<a href="../hello-kotlin/downloads/HelloKotlin.zip">完成プロジェクト</a>'),
+                                 '<a href="../hello-kotlin/downloads/K01HelloKotlin.zip">完成プロジェクト</a>'),
                             encoding="utf-8")
         self.git("add", "config/teaching-materials.json", "docs/functions/index.html")
         self.assertEqual(self.package().returncode, 0)
@@ -271,7 +271,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertIn('<span lang="ja">未翻訳の文<strong>も残す</strong></span>', english)
             self.assertIn('<title lang="ja">はじめの準備</title>', english)
             self.assertIn('<pre><code>日本語のコード</code></pre>', english)
-            self.assertIn('href="../../hello-kotlin/downloads/HelloKotlin.zip"', english)
+            self.assertIn('href="../../hello-kotlin/downloads/K01HelloKotlin.zip"', english)
             self.assertIn('src="../../assets/textbook.js"', english)
             # 入口は共通資料。言語を選んだ先が「はじめの準備」になる。
             self.assertIn('href="docs/en/common/setup.html"', entrance)
@@ -336,7 +336,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
 
     def test_student_contents_regeneration_and_repeatable_zip(self):
         (self.root / "docs/untracked.txt").write_text("not for distribution", encoding="utf-8")
-        (self.root / "HelloKotlin/src/ex01/main.kt").write_text("package ex01\n\nfun main() {\n    println(1)\n}\n", encoding="utf-8")
+        (self.root / "K01HelloKotlin/src/ex01/main.kt").write_text("package ex01\n\nfun main() {\n    println(1)\n}\n", encoding="utf-8")
         result = self.package()
         self.assertEqual(result.returncode, 0, result.stderr)
         prefix = f"{FIXTURE_STEM}/"
@@ -345,9 +345,9 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertFalse(any("teacher" in name or ".DS_Store" in name or "untracked" in name for name in names))
             self.assertIn(prefix + "はじめに.txt", names)
             self.assertIn(prefix + "VERSION.json", names)
-            data = archive.read(prefix + "docs/hello-kotlin/downloads/HelloKotlin.zip")
+            data = archive.read(prefix + "docs/hello-kotlin/downloads/K01HelloKotlin.zip")
             with ZipFile(io.BytesIO(data)) as project:
-                self.assertEqual(project.read("HelloKotlin/src/ex01/main.kt").decode(),
+                self.assertEqual(project.read("K01HelloKotlin/src/ex01/main.kt").decode(),
                                  "package ex01\n\nfun main() {\n    println(1)\n}\n")
                 self.assertFalse(any(".idea" in name or "/out/" in name for name in project.namelist()))
             data = archive.read(prefix + "docs/hello-android/downloads/A01HelloAndroid.zip")
@@ -365,7 +365,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         prefix = f"{FIXTURE_STEM}/"
         bundled_total = 0
         with ZipFile(self.archive) as archive:
-            for archive_name in ("docs/hello-kotlin/downloads/HelloKotlin.zip",
+            for archive_name in ("docs/hello-kotlin/downloads/K01HelloKotlin.zip",
                                  "docs/hello-android/downloads/A01HelloAndroid.zip"):
                 data = archive.read(prefix + archive_name)
                 with ZipFile(io.BytesIO(data)) as project:
@@ -380,7 +380,7 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertEqual(len(bundled), bundled_total)
             # 配布物の書き出しは権限を644にそろえるが、gradlew の実行権限だけは引き継ぐ。
             self.assertEqual(archive.getinfo(prefix + "samples/A01HelloAndroid/gradlew").external_attr >> 16, 0o100755)
-            self.assertEqual(archive.getinfo(prefix + "samples/HelloKotlin/src/ex01/main.kt").external_attr >> 16, 0o100644)
+            self.assertEqual(archive.getinfo(prefix + "samples/K01HelloKotlin/src/ex01/main.kt").external_attr >> 16, 0o100644)
 
     def test_asset_name_and_folder_carry_the_release_date(self):
         self.assertEqual(self.package().returncode, 0)
@@ -445,7 +445,7 @@ class StudentReleaseTest(unittest.TestCase):
         if "/git/matching-refs/" in path:
             return []
         if path.endswith("/generate-notes"):
-            return {"body": "* HelloKotlinの説明を修正 #2"}
+            return {"body": "* K01HelloKotlinの説明を修正 #2"}
         raise AssertionError(f"Unexpected API: {path}")
 
     def incomplete_report(self):
@@ -468,7 +468,7 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("- `K01 HelloKotlin：docs/hello-kotlin/index.html`", text)
         self.assertIn("- `K02 NullSafety：docs/null-safety/index.html`", text)
         self.assertIn("- `A01 HelloAndroid：docs/hello-android/index.html`", text)
-        self.assertIn("`samples/HelloKotlin`", text)
+        self.assertIn("`samples/K01HelloKotlin`", text)
         self.assertIn("IntelliJ IDEA", text)
 
     def test_download_guidance_covers_every_configured_language(self):
@@ -599,7 +599,7 @@ class StudentReleaseTest(unittest.TestCase):
         text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
         self.assertIn(f"**{self.asset}**", text)
         self.assertIn("STEP 4の説明修正。やり直し不要。", text)
-        self.assertIn("HelloKotlinの説明を修正 #2", text)
+        self.assertIn("K01HelloKotlinの説明を修正 #2", text)
         self.assertIn("直接修正", text)
         payload = self.api.call_args.args[1]
         self.assertEqual(payload["target_commitish"], self.metadata["revision"])

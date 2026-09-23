@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="JavaとSwiftを書ける人のためのKotlin入門。Playgroundと IntelliJ IDEA で、val・var・型推論・数の型を、他言語との差分で確かめる授業用教科書。">
-<title>HelloKotlin — Kotlinを書き始める | Kotlin演習</title>
+<title>K01HelloKotlin — Kotlinを書き始める | Kotlin演習</title>
 <link rel="stylesheet" href="../assets/textbook.css">
 <script src="../assets/textbook.js" defer></script>
 </head>
@@ -87,10 +87,10 @@ Tanaka</code></pre>
 <p>この4行を出すまでを、7つのステップに分けて進みます。</p>
 <h3>1コマ（90分）の進み方</h3>
 <table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
-<tr><td>前半（約35分）</td><td>STEP 00〜02</td><td>Playgroundで1行動かし、IntelliJ IDEA に <code>HelloKotlin</code> プロジェクトを作る。</td></tr>
+<tr><td>前半（約35分）</td><td>STEP 00〜02</td><td>Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。</td></tr>
 <tr><td>後半（約55分）</td><td>STEP 03〜06</td><td><code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。</td></tr>
 </tbody></table>
-<p>この授業では、毎回、<strong>自分でプロジェクトを新規作成</strong>します。今回は STEP 02 から <code>HelloKotlin</code> を作ります。</p>
+<p>この授業では、毎回、<strong>自分でプロジェクトを新規作成</strong>します。今回は STEP 02 から <code>K01HelloKotlin</code> を作ります。</p>
 <p><a href="#sample-project">完成プロジェクト</a>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。</p>
 <div class="note"><p class="box-title">この教科書の進め方</p><p>書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。</p><p>分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>今日のゴールの4行を指させた。KotlinがJVM言語であること、入口が <code>fun main()</code> であることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
@@ -140,7 +140,7 @@ Tanaka</code></pre>
 <p class="step-meta">STEP 02 · 目安 20分</p>
 <h2 id="title-2">IntelliJ IDEAでプロジェクトを作る</h2>
 
-<div class="goal"><p class="box-title">このステップのゴール</p><p>IntelliJ IDEA で <code>HelloKotlin</code> プロジェクトを作り、その中に <code>ex01</code> パッケージと <code>main.kt</code> を用意して実行します。</p></div>
+<div class="goal"><p class="box-title">このステップのゴール</p><p>IntelliJ IDEA で <code>K01HelloKotlin</code> プロジェクトを作り、その中に <code>ex01</code> パッケージと <code>main.kt</code> を用意して実行します。</p></div>
 <p>授業では <strong>IntelliJ IDEA 2026.3 EAP</strong> とMacを使います。最初の準備にはインターネット接続が必要です。IntelliJ IDEA をまだ入れていない人は、<a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a> を先に見てください。</p>
 <h3>① 保存する場所を用意する</h3>
 <ol><li>Finderの <strong>移動 → ホーム</strong> を開き、ホームフォルダの名前（自分のユーザ名）を確認します。</li><li>その中の <strong>書類（Documents）</strong> を開きます。<code>Kotlin</code> フォルダがなければ、<strong>ファイル → 新規フォルダ</strong> で作り、名前を <code>Kotlin</code> にします。</li></ol>
@@ -148,15 +148,15 @@ Tanaka</code></pre>
 <ol><li>IntelliJ IDEA を開き、<strong>New Project</strong> をクリックします。別のプロジェクトが開いていたら、上のメニューから <strong>File → New → Project</strong> を選びます。</li><li>開いた画面の左の一覧で、いちばん上の <strong>New Project</strong> が選ばれていることを確認します。下のほうにある <strong>Generators</strong> の項目は選びません。</li></ol>
 <h3>③ 表のとおりに入力する</h3>
 <table><thead><tr><th>画面の項目</th><th>入力・選択する内容</th></tr></thead><tbody>
-<tr><td>Name</td><td><code>HelloKotlin</code></td></tr>
+<tr><td>Name</td><td><code>K01HelloKotlin</code></td></tr>
 <tr><td>Location</td><td><code>/Users/ユーザ名/Documents/Kotlin</code><br>「ユーザ名」を、自分のMacのユーザ名に読み替えます。</td></tr>
 <tr><td>Language</td><td><strong>Kotlin</strong></td></tr>
 <tr><td>Build system</td><td><strong>IntelliJ</strong>。<strong>Gradle</strong> と <strong>Maven</strong> は選びません。ビルドツールを使わない、いちばん軽い構成です。</td></tr>
 <tr><td>JDK</td><td>一覧から選びます。授業で使うものは先生が指定します。一覧が空のときは <strong>Download JDK</strong> を選びます。</td></tr>
 <tr><td>Add sample code</td><td>チェックを<strong>外す</strong>。</td></tr>
 </tbody></table>
-<div class="note"><p class="box-title">Create を押す前に、保存先を確認</p><p><strong>Name</strong> と <strong>Location</strong> を合わせた場所にプロジェクトができます。ユーザ名が <code>cmstudent</code> の場合は <code>/Users/cmstudent/Documents/Kotlin/HelloKotlin</code> です。<code>ユーザ名</code> という文字をそのまま入力しません。</p><p>保存先の最後が <code>Documents/Kotlin/HelloKotlin</code> になっていることを確認します。すでに同名のプロジェクトがあるときは、先生に画面を見せます。</p></div>
-<ol start="3"><li><strong>Create</strong> をクリックします。</li><li>左のプロジェクト一覧に <code>HelloKotlin</code> と、その中の <code>src</code> フォルダが出ます。<code>src</code> がソースルートです。</li></ol>
+<div class="note"><p class="box-title">Create を押す前に、保存先を確認</p><p><strong>Name</strong> と <strong>Location</strong> を合わせた場所にプロジェクトができます。ユーザ名が <code>cmstudent</code> の場合は <code>/Users/cmstudent/Documents/Kotlin/K01HelloKotlin</code> です。<code>ユーザ名</code> という文字をそのまま入力しません。</p><p>保存先の最後が <code>Documents/Kotlin/K01HelloKotlin</code> になっていることを確認します。すでに同名のプロジェクトがあるときは、先生に画面を見せます。</p></div>
+<ol start="3"><li><strong>Create</strong> をクリックします。</li><li>左のプロジェクト一覧に <code>K01HelloKotlin</code> と、その中の <code>src</code> フォルダが出ます。<code>src</code> がソースルートです。</li></ol>
 <div class="note"><p class="box-title">Main.kt ができていたとき</p><p><strong>Add sample code</strong> のチェックを外し忘れると、<code>src</code> の中に <code>Main.kt</code> ができます。そのファイルを右クリックし、<strong>Delete</strong> で消してから次へ進みます。</p></div>
 <h3>④ ex01 パッケージと main.kt を作る</h3>
 <ol><li>左のプロジェクト一覧で <code>src</code> を右クリックし、<strong>New → Package</strong> を選びます。</li><li>名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。</li><li>できた <code>ex01</code> を右クリックし、<strong>New → Kotlin Class/File</strong> を選びます。</li><li>名前に <code>main</code> と入力し、下の一覧から <strong>File</strong> を選んで <kbd>Return</kbd> を押します。</li><li><code>ex01</code> の中に <code>main.kt</code> ができ、エディタに <code>package ex01</code> の1行が出ます。</li></ol>
@@ -439,8 +439,8 @@ print(name)</code></pre></div>
 </ul></div>
 <h3>③ 保存された場所を確かめる</h3>
 <p>IntelliJ IDEA は、書いたコードを自動でファイルに保存します。保存の操作は要りません。</p>
-<ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。</li><li>その中の <code>Kotlin</code> フォルダを開き、<code>HelloKotlin</code> フォルダがあることを確かめます。</li></ol>
-<p>この <code>Documents/Kotlin/HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。</p>
+<ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。</li><li>その中の <code>Kotlin</code> フォルダを開き、<code>K01HelloKotlin</code> フォルダがあることを確かめます。</li></ol>
+<p>この <code>Documents/Kotlin/K01HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。</p>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-6"><span>完成チェックを行い、先生に画面を見せた。保存されたフォルダの場所も確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="goal"><p class="box-title">この単元のまとめ</p><p><strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。</p></div>
 
@@ -450,17 +450,17 @@ print(name)</code></pre></div>
 <h2 id="sample-title">完成プロジェクトを開いて比べる</h2>
 <p>授業は、自分で新規作成したプロジェクトで進めます。完成版は、動作確認とコード比較のための見本です。見本は、教科書といっしょに配られた<strong>教材のフォルダ</strong>に、そのまま開ける形で入っています。ダウンロードも展開も要りません。</p>
 <h3>① 見本の場所を確かめる</h3>
-<ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。教材のフォルダをダブルクリックで開きます。名前は <code>kotlin-student-materials-</code> のうしろに日付が付いた形で、日付は配られた回によって変わります。いま読んでいるこの教科書が入っているフォルダです。</li><li>その中の <code>samples</code> フォルダを開きます。<code>HelloKotlin</code> フォルダが見本です。場所を確かめるだけで、移動はしません。</li></ol>
+<ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。教材のフォルダをダブルクリックで開きます。名前は <code>kotlin-student-materials-</code> のうしろに日付が付いた形で、日付は配られた回によって変わります。いま読んでいるこの教科書が入っているフォルダです。</li><li>その中の <code>samples</code> フォルダを開きます。<code>K01HelloKotlin</code> フォルダが見本です。場所を確かめるだけで、移動はしません。</li></ol>
 <table><thead><tr><th>使うもの</th><th>フォルダの場所（ユーザ名と教材のフォルダは、自分のものに読み替える）</th></tr></thead><tbody>
-<tr><td>授業で作るプロジェクト</td><td><code>/Users/ユーザ名/Documents/Kotlin/HelloKotlin</code></td></tr>
-<tr><td>完成版の見本</td><td><code>/Users/ユーザ名/Documents/教材のフォルダ/samples/HelloKotlin</code></td></tr>
+<tr><td>授業で作るプロジェクト</td><td><code>/Users/ユーザ名/Documents/Kotlin/K01HelloKotlin</code></td></tr>
+<tr><td>完成版の見本</td><td><code>/Users/ユーザ名/Documents/教材のフォルダ/samples/K01HelloKotlin</code></td></tr>
 </tbody></table>
 <h3>② IntelliJ IDEA で開く</h3>
-<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、上のメニューから <strong>File → Open</strong> を選びます。プロジェクトを1つも開いていないときは、最初の画面（Welcome画面）の <strong>Open</strong> をクリックします。</li><li>①で確かめた <code>samples</code> の中の <code>HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>New Window</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src → ex01 → main.kt</code> の順に開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の <strong>▶</strong> を押します。</li></ol>
+<ol><li>フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、上のメニューから <strong>File → Open</strong> を選びます。プロジェクトを1つも開いていないときは、最初の画面（Welcome画面）の <strong>Open</strong> をクリックします。</li><li>①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。</li><li>開き方を聞かれたら <strong>New Window</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。</li><li>左の一覧で <code>src → ex01 → main.kt</code> の順に開きます。</li><li>動きを見たいときは、<code>fun main()</code> の左の <strong>▶</strong> を押します。</li></ol>
 <h3>③ 今のステップの部分だけを比べる</h3>
 <p>たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。</p>
-<p>見終わったら、授業で作っている <code>Documents/Kotlin/HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。</p>
-<p>教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a href="downloads/HelloKotlin.zip" download>HelloKotlin.zip</a>）。展開してできた <code>HelloKotlin</code> フォルダを、②と同じように開きます。</p>
+<p>見終わったら、授業で作っている <code>Documents/Kotlin/K01HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。</p>
+<p>教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a href="downloads/K01HelloKotlin.zip" download>K01HelloKotlin.zip</a>）。展開してできた <code>K01HelloKotlin</code> フォルダを、②と同じように開きます。</p>
 </section>
 <section id="help" aria-labelledby="help-title"><p class="step-meta">HELP · 困ったらここ</p><h2 id="help-title">止まった場所から、一緒に直す</h2>
 <p>赤くなっている最初の行を見ます。<strong>2分考えても分からなければ</strong>、先生に「ステップ番号・ファイル名・画面」を見せましょう。</p>
@@ -476,7 +476,7 @@ print(name)</code></pre></div>
 <tr><td>Runしても何も出ない</td><td>画面の下の <strong>Run</strong> ウィンドウが開いているか確認する。閉じていたら <strong>View → Tool Windows → Run</strong> で開く。</td></tr>
 <tr><td>出るけれど、内容が違う</td><td><code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。</td></tr>
 <tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>
-<tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>Location</strong> の入力を先生に見せる。</td></tr>
+<tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>Location</strong> の入力を先生に見せる。</td></tr>
 </tbody></table>
 <p>一度にいくつも直すと、何が変わったか分かりにくくなります。1か所直して、もう一度Runしましょう。</p></section>
 <section id="references"><h2>もっと知りたいとき</h2><p>授業はこの教科書だけで進められます。次の公式資料は、あとから調べたい人向けです（英語で書かれています）。</p><ul>

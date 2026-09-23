@@ -79,13 +79,13 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         project = {
             "name": "K01HelloKotlin",
             "kind": "kotlin-console",
-            "root": "HelloKotlin",
+            "root": "K01HelloKotlin",
             "packages": ["ex01"],
             "sessions": 1,
             "docs": ["docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"],
-            "sources": ["HelloKotlin/src/ex01/main.kt"],
+            "sources": ["K01HelloKotlin/src/ex01/main.kt"],
             "snippets": [],
-            "archive": "docs/hello-kotlin/downloads/HelloKotlin.zip",
+            "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip",
         }
         project.update(overrides)
         if "package" in overrides:
@@ -156,22 +156,22 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
 
     def _kotlin_console_repository(self, root: Path) -> dict:
         """純Kotlin系の、検査を通る最小のリポジトリを作る。"""
-        self._write(root, "HelloKotlin/.gitignore", self.KOTLIN_IGNORE)
-        self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
-        self._git_add(root, "HelloKotlin")
+        self._write(root, "K01HelloKotlin/.gitignore", self.KOTLIN_IGNORE)
+        self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+        self._git_add(root, "K01HelloKotlin")
         self._write(root, "docs/hello-kotlin/index.html", self._textbook(
             "K01HelloKotlin", [("hello-kotlin", "K01HelloKotlin")], "hello-kotlin",
             snippet=("code-final-kotlin", self.KOTLIN_SOURCE)))
         self._write(root, "teacher/hello-kotlin/index.html", self._teacher_doc("K01HelloKotlin"))
-        self._archive(root, "docs/hello-kotlin/downloads/HelloKotlin.zip",
-                      ["HelloKotlin/.gitignore", "HelloKotlin/src/ex01/main.kt"])
+        self._archive(root, "docs/hello-kotlin/downloads/K01HelloKotlin.zip",
+                      ["K01HelloKotlin/.gitignore", "K01HelloKotlin/src/ex01/main.kt"])
         self._write(root, "README.md", self._readme(
             "docs/hello-kotlin/index.html",
             "teacher/hello-kotlin/index.html",
-            "docs/hello-kotlin/downloads/HelloKotlin.zip"))
+            "docs/hello-kotlin/downloads/K01HelloKotlin.zip"))
         config = {
             "course": {"name": "Kotlin演習", "total_sessions": 15, "minutes_per_session": 90},
-            "scan_roots": ["README.md", "docs", "teacher", "HelloKotlin"],
+            "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin"],
             "terms": [{
                 "name": "指定AVD名",
                 "canonical": self.AVD,
@@ -185,14 +185,14 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
                 {"path": "README.md", "requires": ["student_doc", "teacher_doc", "archive"]},
             ]},
             "project_layout": {
-                "gitignore_reference": {"kotlin-console": "HelloKotlin/.gitignore"},
+                "gitignore_reference": {"kotlin-console": "K01HelloKotlin/.gitignore"},
                 "untracked_parts": [".idea", ".gradle", ".kotlin", "build", "out"],
                 "untracked_names": ["local.properties"],
             },
             "projects": [self._project(snippets=[{
                 "html": "docs/hello-kotlin/index.html",
                 "id": "code-final-kotlin",
-                "source": "HelloKotlin/src/ex01/main.kt",
+                "source": "K01HelloKotlin/src/ex01/main.kt",
             }])],
         }
         self._write_config(root, config)
@@ -272,22 +272,22 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """完成コードのpackage宣言が、packagesのどれとも違えば検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", "package ex02\n\nfun main() {}\n")
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", "package ex02\n\nfun main() {}\n")
             self._minimal_config(root, [self._project()])
             errors = [error for error in CHECKER.validate(root) if "package宣言" in error]
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/src/ex01/main.kt:1", errors[0])
+            self.assertIn("K01HelloKotlin/src/ex01/main.kt:1", errors[0])
             self.assertIn("K01HelloKotlinのpackagesにありません: 'ex02'（packagesはex01）", errors[0])
 
     def test_kotlin_console_source_without_package_is_rejected(self):
         """package宣言そのものが無い場合も検出する。IntelliJ IDEAで実行できなくなる。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", "fun main() {}\n")
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", "fun main() {}\n")
             self._minimal_config(root, [self._project()])
             errors = [error for error in CHECKER.validate(root) if "package宣言" in error]
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/src/ex01/main.kt:1", errors[0])
+            self.assertIn("K01HelloKotlin/src/ex01/main.kt:1", errors[0])
             self.assertIn("Kotlinのpackage宣言がありません", errors[0])
             self.assertIn("K01HelloKotlinのpackages（ex01）", errors[0])
 
@@ -295,12 +295,12 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """完成コードが src/<パッケージ>/ の直下になければ検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/main.kt", self.KOTLIN_SOURCE)
-            self._minimal_config(root, [self._project(sources=["HelloKotlin/src/main.kt"])])
+            self._write(root, "K01HelloKotlin/src/main.kt", self.KOTLIN_SOURCE)
+            self._minimal_config(root, [self._project(sources=["K01HelloKotlin/src/main.kt"])])
             errors = [error for error in CHECKER.validate(root) if "置き場所" in error]
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/src/main.kt:1", errors[0])
-            self.assertIn("完成コードの置き場所がHelloKotlin/src/ex01/ではありません", errors[0])
+            self.assertIn("K01HelloKotlin/src/main.kt:1", errors[0])
+            self.assertIn("完成コードの置き場所がK01HelloKotlin/src/ex01/ではありません", errors[0])
 
     def test_kotlin_console_source_in_subfolder_of_package_is_rejected(self):
         """src/<パッケージ>/ の下にフォルダを作って置いた状態も検出する。
@@ -310,12 +310,12 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/sub/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/sub/main.kt", self.KOTLIN_SOURCE)
             self._minimal_config(root, [self._project(
-                sources=["HelloKotlin/src/ex01/sub/main.kt"])])
+                sources=["K01HelloKotlin/src/ex01/sub/main.kt"])])
             errors = [error for error in CHECKER.validate(root) if "置き場所" in error]
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("完成コードの置き場所がHelloKotlin/src/ex01/ではありません", errors[0])
+            self.assertIn("完成コードの置き場所がK01HelloKotlin/src/ex01/ではありません", errors[0])
 
     def test_kotlin_console_document_does_not_require_package(self):
         """ex01 のような短い語は本文に偶然現れるので、純Kotlin系では表記を求めない。"""
@@ -352,24 +352,24 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """1つの単元で2つの演習を扱う形。どちらの完成コードもそろっていれば何も言わない。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
-            self._write(root, "HelloKotlin/src/ex02/main.kt",
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex02/main.kt",
                         self.KOTLIN_SOURCE.replace("package ex01", "package ex02"))
             errors = self._packages_errors(root, self._project(
                 name="K03FunctionAndFlow",
                 packages=["ex01", "ex02"],
-                sources=["HelloKotlin/src/ex01/main.kt", "HelloKotlin/src/ex02/main.kt"]))
+                sources=["K01HelloKotlin/src/ex01/main.kt", "K01HelloKotlin/src/ex02/main.kt"]))
             self.assertEqual(errors, [])
 
     def test_kotlin_console_package_without_source_is_rejected(self):
         """packages に書いたのに、その演習の完成コードを足し忘れた状態を検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
             errors = self._packages_errors(root, self._project(
                 name="K03FunctionAndFlow",
                 packages=["ex01", "ex02"],
-                sources=["HelloKotlin/src/ex01/main.kt"]))
+                sources=["K01HelloKotlin/src/ex01/main.kt"]))
             self.assertEqual(len(errors), 1, errors)
             self.assertIn("config/teaching-materials.json:1", errors[0])
             self.assertIn("K03FunctionAndFlowのpackagesに書いたex02の完成コードが、"
@@ -379,15 +379,15 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """packages に無いパッケージを宣言した完成コードを検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
-            self._write(root, "HelloKotlin/src/ex03/main.kt",
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex03/main.kt",
                         self.KOTLIN_SOURCE.replace("package ex01", "package ex03"))
             errors = self._packages_errors(root, self._project(
                 name="K03FunctionAndFlow",
                 packages=["ex01", "ex02"],
-                sources=["HelloKotlin/src/ex01/main.kt", "HelloKotlin/src/ex03/main.kt"]))
+                sources=["K01HelloKotlin/src/ex01/main.kt", "K01HelloKotlin/src/ex03/main.kt"]))
             self.assertEqual(len(errors), 2, errors)
-            self.assertIn("HelloKotlin/src/ex03/main.kt:1", errors[0])
+            self.assertIn("K01HelloKotlin/src/ex03/main.kt:1", errors[0])
             self.assertIn("K03FunctionAndFlowのpackagesにありません: 'ex03'"
                           "（packagesはex01、ex02）", errors[0])
             # ex02 は、これで完成コードが1つも無いことになる。
@@ -424,7 +424,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """純Kotlin系に package（単数）を書いたら設定エラーにする。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
             project = self._project(package="ex01")
             self.assertNotIn("packages", project)
             errors = self._packages_errors(root, project)
@@ -520,9 +520,9 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
                 name=f"K0{index}Unit",
                 packages=[f"ex0{index}"],
                 sessions=value,
-                sources=[f"HelloKotlin/src/ex0{index}/main.kt"],
+                sources=[f"K01HelloKotlin/src/ex0{index}/main.kt"],
                 docs=[f"docs/u{index}/index.html", f"teacher/u{index}/index.html"],
-                archive=f"docs/u{index}/downloads/HelloKotlin.zip",
+                archive=f"docs/u{index}/downloads/K01HelloKotlin.zip",
             )
             for index, value in enumerate(sessions, 1)
         ]
@@ -593,7 +593,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         self._minimal_config(
             root,
             [self._project()],
-            scan_roots=["README.md", "HelloKotlin"],
+            scan_roots=["README.md", "K01HelloKotlin"],
             terms=[{"name": "t", "canonical": "Kotlin演習", "forbidden": [], "required_in": [
                 "docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"]}],
             registration={"targets": [{"path": "README.md", "requires": requires}]},
@@ -603,7 +603,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """READMEから単元のリンクが1つでも抜けたら検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/.gitignore", self.KOTLIN_IGNORE)
+            self._write(root, "K01HelloKotlin/.gitignore", self.KOTLIN_IGNORE)
             # 完成プロジェクトZIPへのリンクだけ書いていない。
             self._registration_root(root, self._readme(
                 "docs/hello-kotlin/index.html", "teacher/hello-kotlin/index.html"),
@@ -611,17 +611,17 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             errors = [error for error in CHECKER.validate(root) if "への参照がありません" in error]
             self.assertEqual(len(errors), 1, errors)
             self.assertIn("README.md:1", errors[0])
-            self.assertIn("docs/hello-kotlin/downloads/HelloKotlin.zip", errors[0])
+            self.assertIn("docs/hello-kotlin/downloads/K01HelloKotlin.zip", errors[0])
 
     def test_guidance_line_is_no_longer_required(self):
         """配布スクリプトは単元一覧をconfigから読むので、案内文の1行は求めない。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/.gitignore", self.KOTLIN_IGNORE)
+            self._write(root, "K01HelloKotlin/.gitignore", self.KOTLIN_IGNORE)
             readme = self._readme(
                 "docs/hello-kotlin/index.html",
                 "teacher/hello-kotlin/index.html",
-                "docs/hello-kotlin/downloads/HelloKotlin.zip")
+                "docs/hello-kotlin/downloads/K01HelloKotlin.zip")
             self.assertNotIn("K01 HelloKotlin：", readme)
             self._registration_root(root, readme, ["student_doc", "teacher_doc", "archive"])
             errors = [error for error in CHECKER.validate(root) if "への参照がありません" in error]
@@ -660,10 +660,10 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """表記揺れの検査は .kt も見る。純Kotlin系の完成コードは scan_roots の中にある。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt",
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt",
                         '// jec_25cm_kotlin_Pixel_9a で動かす\nfun main() {}\n')
             self._write_config(root, {
-                "scan_roots": ["HelloKotlin"],
+                "scan_roots": ["K01HelloKotlin"],
                 "terms": [{
                     "name": "指定AVD名",
                     "canonical": self.AVD,
@@ -674,7 +674,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             })
             errors = CHECKER.validate(root)
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/src/ex01/main.kt:1", errors[0])
+            self.assertIn("K01HelloKotlin/src/ex01/main.kt:1", errors[0])
 
     def test_missing_scan_root_is_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -716,11 +716,11 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._kotlin_console_repository(root)
-            self._write(root, "HelloKotlin/src/ex01/main.kt",
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt",
                         self.KOTLIN_SOURCE.replace("こんにちは", "おはよう"))
             errors = [error for error in CHECKER.validate(root) if "ZIP" in error]
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("内容が一致しません: HelloKotlin/src/ex01/main.kt", errors[0])
+            self.assertIn("内容が一致しません: K01HelloKotlin/src/ex01/main.kt", errors[0])
 
     def test_snippet_must_match_the_source(self):
         """教科書に貼った完成コードが、実際のファイルと1バイトでも違えば検出する。"""
@@ -732,7 +732,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
                 snippet=("code-final-kotlin", self.KOTLIN_SOURCE.replace("こんにちは", "おはよう"))))
             errors = [error for error in CHECKER.validate(root) if "code-final-kotlin" in error]
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/src/ex01/main.ktが一致しません", errors[0])
+            self.assertIn("K01HelloKotlin/src/ex01/main.ktが一致しません", errors[0])
 
     # ------------------------------------------------------------------
     # 教材のフォルダから学生がコピーするファイル（check_downloads）
@@ -866,7 +866,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
     # サイドバー（check_sidebar_units）
     # ------------------------------------------------------------------
 
-    # 純Kotlin系2単元 → Android系1単元。K系はどれも HelloKotlin プロジェクトを共有する。
+    # 純Kotlin系2単元 → Android系1単元。K系はどれも K01HelloKotlin プロジェクトを共有する。
     SIDEBAR_UNITS = [("K01One", "one"), ("K02Two", "two"), ("A01Three", "three")]
 
     def _sidebar(self, current: str, order: list[str] | None = None, link_self: bool = False) -> str:
@@ -887,11 +887,11 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """サイドバーの検査に必要なだけの単元設定を作る。"""
         if name.startswith("K"):
             return self._project(
-                name=name, kind="kotlin-console", root="HelloKotlin",
+                name=name, kind="kotlin-console", root="K01HelloKotlin",
                 packages=[f"ex{name[1:3]}"],
-                sources=[f"HelloKotlin/src/ex{name[1:3]}/main.kt"],
+                sources=[f"K01HelloKotlin/src/ex{name[1:3]}/main.kt"],
                 docs=[f"docs/{folder}/index.html", f"teacher/{folder}/index.html"],
-                archive=f"docs/{folder}/downloads/HelloKotlin.zip")
+                archive=f"docs/{folder}/downloads/K01HelloKotlin.zip")
         return self._project(
             name=name, kind="android", root=name, package=f"jp.ac.jec.{name.lower()}",
             sources=[f"{name}/app/src/main/java/MainActivity.kt"],
@@ -1055,9 +1055,9 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             root = Path(temporary)
             self._layout_root(
                 root,
-                {"kotlin-console": "HelloKotlin/.gitignore",
+                {"kotlin-console": "K01HelloKotlin/.gitignore",
                  "android": "A01HelloAndroid/.gitignore"},
-                {"HelloKotlin": self.KOTLIN_IGNORE,
+                {"K01HelloKotlin": self.KOTLIN_IGNORE,
                  "A01HelloAndroid": self.ANDROID_IGNORE,
                  # Android系なのに、純Kotlin系の .gitignore をコピーしてしまった。
                  "A02CalcGame": self.KOTLIN_IGNORE},
@@ -1076,12 +1076,12 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self._layout_root(
                 root,
                 "A01HelloAndroid/.gitignore",
-                {"HelloKotlin": self.KOTLIN_IGNORE,
+                {"K01HelloKotlin": self.KOTLIN_IGNORE,
                  "A01HelloAndroid": self.ANDROID_IGNORE},
                 [self._project(), self._sidebar_project("A01HelloAndroid", "hello-android")])
             errors = self._layout_errors(root)
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/.gitignore:1", errors[0])
+            self.assertIn("K01HelloKotlin/.gitignore:1", errors[0])
             self.assertIn("A01HelloAndroid/.gitignoreと内容が異なります", errors[0])
 
     def test_missing_gitignore_reference_for_kind_is_rejected(self):
@@ -1091,7 +1091,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self._layout_root(
                 root,
                 {"android": "A01HelloAndroid/.gitignore"},
-                {"HelloKotlin": self.KOTLIN_IGNORE, "A01HelloAndroid": self.ANDROID_IGNORE},
+                {"K01HelloKotlin": self.KOTLIN_IGNORE, "A01HelloAndroid": self.ANDROID_IGNORE},
                 [self._project(), self._sidebar_project("A01HelloAndroid", "hello-android")])
             errors = self._layout_errors(root)
             self.assertEqual(len(errors), 1, errors)
@@ -1102,18 +1102,18 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """純Kotlin系は複数の単元が1つのプロジェクトを共有する。同じ指摘を単元の数だけ出さない。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/local.properties", "sdk.dir=/dev/null\n")
+            self._write(root, "K01HelloKotlin/local.properties", "sdk.dir=/dev/null\n")
             self._layout_root(
                 root,
-                {"kotlin-console": "HelloKotlin/.gitignore"},
-                {"HelloKotlin": self.KOTLIN_IGNORE},
+                {"kotlin-console": "K01HelloKotlin/.gitignore"},
+                {"K01HelloKotlin": self.KOTLIN_IGNORE},
                 [self._project(name="K01One", packages=["ex01"],
-                               sources=["HelloKotlin/src/ex01/main.kt"]),
+                               sources=["K01HelloKotlin/src/ex01/main.kt"]),
                  self._project(name="K02Two", packages=["ex02"],
-                               sources=["HelloKotlin/src/ex02/main.kt"])])
+                               sources=["K01HelloKotlin/src/ex02/main.kt"])])
             errors = self._layout_errors(root)
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/local.properties:1", errors[0])
+            self.assertIn("K01HelloKotlin/local.properties:1", errors[0])
             self.assertIn("Git管理してはいけないファイルです", errors[0])
 
     # ------------------------------------------------------------------
@@ -1199,7 +1199,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
     # 直すと複製が古いまま静かに残るので、バイト単位で照合する。
     # ------------------------------------------------------------------
 
-    MIRROR = [{"source": "HelloKotlin/src/ex01/main.kt",
+    MIRROR = [{"source": "K01HelloKotlin/src/ex01/main.kt",
                "copy": "teacher/hello-kotlin/code/01-main.kt"}]
 
     def _mirror_errors(self, root: Path, **overrides) -> list[str]:
@@ -1211,7 +1211,7 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """複製コードが元ファイルと1バイトも違わなければ、何も言わない。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
             self._write(root, "teacher/hello-kotlin/code/01-main.kt", self.KOTLIN_SOURCE)
             self.assertEqual(self._mirror_errors(root, mirrors=self.MIRROR), [])
 
@@ -1219,19 +1219,19 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
         """完成コードだけ直して、複製コードが古いまま残った状態を検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
             self._write(root, "teacher/hello-kotlin/code/01-main.kt",
                         self.KOTLIN_SOURCE.replace("こんにちは", "おはよう"))
             errors = self._mirror_errors(root, mirrors=self.MIRROR)
             self.assertEqual(len(errors), 1, errors)
             self.assertIn("teacher/hello-kotlin/code/01-main.kt:1", errors[0])
-            self.assertIn("内容が一致しません: HelloKotlin/src/ex01/main.kt", errors[0])
+            self.assertIn("内容が一致しません: K01HelloKotlin/src/ex01/main.kt", errors[0])
 
     def test_mirror_without_copy_is_rejected(self):
         """複製コードを置き忘れた状態を検出する。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
             errors = self._mirror_errors(root, mirrors=self.MIRROR)
             self.assertEqual(len(errors), 1, errors)
             self.assertIn("teacher/hello-kotlin/code/01-main.kt:1", errors[0])
@@ -1244,14 +1244,14 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self._write(root, "teacher/hello-kotlin/code/01-main.kt", self.KOTLIN_SOURCE)
             errors = self._mirror_errors(root, mirrors=self.MIRROR)
             self.assertEqual(len(errors), 1, errors)
-            self.assertIn("HelloKotlin/src/ex01/main.kt:1", errors[0])
+            self.assertIn("K01HelloKotlin/src/ex01/main.kt:1", errors[0])
             self.assertIn("複製コードの元ファイルがありません", errors[0])
 
     def test_project_without_mirrors_is_accepted(self):
         """mirrors を書かない単元では、何も照合しない（後方互換）。"""
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._write(root, "HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
+            self._write(root, "K01HelloKotlin/src/ex01/main.kt", self.KOTLIN_SOURCE)
             # 複製の置き場所には、わざと中身の違うファイルを置いてある。
             self._write(root, "teacher/hello-kotlin/code/01-main.kt", "fun main() {}\n")
             self.assertEqual(self._mirror_errors(root), [])

@@ -518,7 +518,7 @@ def check_downloads(root: Path, project: dict, errors: list[str]) -> None:
 
 
 def _split_unit(name: str) -> tuple[str, str]:
-    """K01HelloKotlin を ("K01", "HelloKotlin") に分ける。
+    """K01HelloKotlin を ("K01", "K01HelloKotlin") に分ける。
 
     単元は2系統ある。K は純Kotlin系（IntelliJ IDEA）、A は Android系。
     """

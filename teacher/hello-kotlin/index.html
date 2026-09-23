@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="ja">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>教員用ガイド HelloKotlin | Kotlin演習</title>
+<title>教員用ガイド K01HelloKotlin | Kotlin演習</title>
 <link rel="stylesheet" href="../../docs/assets/textbook.css"><script src="../../docs/assets/textbook.js" defer></script></head>
 <body class="plain"><a class="skip" href="#main">本文へ移動</a>
-<header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../../docs/hello-kotlin/index.html">HelloKotlinの教科書へ戻る</a></header>
-<main id="main"><div class="hero"><p class="eyebrow">KOTLIN演習 / 共通資料・授業サポート</p><h1>教員用ガイド<br>HelloKotlin</h1><p class="lede">受講生は Java と Swift を学習済みです。この単元は「プログラミングの入門」ではなく、<strong>Java / Swift との差分の説明</strong>に時間を使います。1コマ90分、単元 K01HelloKotlin の1コマで完結させます。</p></div>
+<header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../../docs/hello-kotlin/index.html">K01HelloKotlinの教科書へ戻る</a></header>
+<main id="main"><div class="hero"><p class="eyebrow">KOTLIN演習 / 共通資料・授業サポート</p><h1>教員用ガイド<br>K01HelloKotlin</h1><p class="lede">受講生は Java と Swift を学習済みです。この単元は「プログラミングの入門」ではなく、<strong>Java / Swift との差分の説明</strong>に時間を使います。1コマ90分、単元 K01HelloKotlin の1コマで完結させます。</p></div>
 
 <section><h2>1. 授業前の準備</h2>
 <ul><li><strong>受講生像を全員の教員で共有します。</strong>受講生は Java と Swift を学習済みで、変数・型・条件分岐・繰り返し・クラスといった概念そのものの説明は不要です。説明するのは <strong>Kotlinでの書き方</strong>と、<strong>Java / Swift との違い</strong>、そして<strong>違う理由</strong>の3つです。</li>
@@ -13,24 +13,24 @@
 <li>学生のMacで <code>docs/hello-kotlin/index.html</code> をブラウザで開けることを確認します。教材そのものにCDN・Webフォントは使いません。</li>
 <li><strong>Kotlin Playground（<a href="https://play.kotlinlang.org/">https://play.kotlinlang.org/</a>）が、学内のネットワークとブラウザで開けることを授業前に確かめます。</strong>STEP 01でここから始めます。開けない教室では、STEP 01を教員の画面の実演だけにして、STEP 02のIntelliJ IDEAへ進みます。</li>
 <li>IntelliJ IDEA と、Kotlinを動かすJDKを事前にそろえます。初回ダウンロードは下表の授業時間に含めません。<strong>授業で使うJDKの版を1つ決めて板書します。</strong>教科書では「先生が指定します」としか書いていません。</li>
-<li>学生の作成先を <code>/Users/ユーザ名/Documents/Kotlin/プロジェクト名</code> に統一します。本人のユーザ名と、末尾が <code>Documents/Kotlin/HelloKotlin</code> になっていることを確認します。</li>
-<li>完成版の <code>HelloKotlin</code> を開き、<code>src/ex01/main.kt</code> を <strong>Run</strong> して、コンソールに <code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code> の4行が出ることを確認します。</li>
+<li>学生の作成先を <code>/Users/ユーザ名/Documents/Kotlin/プロジェクト名</code> に統一します。本人のユーザ名と、末尾が <code>Documents/Kotlin/K01HelloKotlin</code> になっていることを確認します。</li>
+<li>完成版の <code>K01HelloKotlin</code> を開き、<code>src/ex01/main.kt</code> を <strong>Run</strong> して、コンソールに <code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code> の4行が出ることを確認します。</li>
 <li>はじめて授業を受ける学生には、<a href="../../docs/common/setup.html">共通資料：授業を始めるまでの準備</a>を先に開かせます。</li>
 <li>本日の停止位置を板書します。</li></ul>
 <h3>完成版を公開して進める</h3>
 <p><strong>各単元で、学生自身が毎回IDEからプロジェクトを新規作成することを固定方針とします。</strong>完成版は、動く状態の確認と、自分のコードとの比較に使います。見本を読むときは今のステップの部分を指定します。理解は、STEP 05の小変更と、「Javaならどう書くか」を口で言わせることで確認します。</p>
-<p>見本は、配布する教材のフォルダの <code>samples/HelloKotlin</code> に、展開済みで入っています。学生はダウンロードも展開もせず、IntelliJ IDEA の <strong>Open</strong> で選ぶだけで開けます。学生が作る場所は <code>Documents/Kotlin/HelloKotlin</code> です。<a href="../../docs/hello-kotlin/index.html#sample-project">学生向けの完成版の開き方</a>を初回に案内します。</p>
+<p>見本は、配布する教材のフォルダの <code>samples/K01HelloKotlin</code> に、展開済みで入っています。学生はダウンロードも展開もせず、IntelliJ IDEA の <strong>Open</strong> で選ぶだけで開けます。学生が作る場所は <code>Documents/Kotlin/K01HelloKotlin</code> です。<a href="../../docs/hello-kotlin/index.html#sample-project">学生向けの完成版の開き方</a>を初回に案内します。</p>
 <h3>教材コードの基準となる環境</h3>
 <p>以下はこのリポジトリの設定値です。「最新バージョン」の指定ではありません。新規作成した環境と差がある場合は、授業前に教員が確認します。</p>
 <table><thead><tr><th>項目</th><th>値・確認先</th></tr></thead><tbody>
-<tr><td>単元 / プロジェクト</td><td>K01HelloKotlin / <code>HelloKotlin</code>（パッケージ <code>ex01</code>）</td></tr>
+<tr><td>単元 / プロジェクト</td><td>K01HelloKotlin / <code>K01HelloKotlin</code>（パッケージ <code>ex01</code>）</td></tr>
 <tr><td>ブラウザで使うもの</td><td>Kotlin Playground（<a href="https://play.kotlinlang.org/">https://play.kotlinlang.org/</a>）。STEP 01だけで使います。</td></tr>
 <tr><td>IDE</td><td>IntelliJ IDEA 2026.3 EAP（Build #IU-263.5153.40）</td></tr>
 <tr><td>Kotlinプラグイン</td><td>263.5153.40-IJ</td></tr>
 <tr><td>プロジェクトの作り方（Build system）</td><td><strong>IntelliJ</strong>。GradleもMavenも使いません。</td></tr>
 <tr><td>JDK</td><td>教員環境の Runtime version は 25。授業で使う版は事前に決めて板書します。</td></tr>
-<tr><td>完成コード</td><td><a href="../../HelloKotlin/src/ex01/main.kt">HelloKotlin/src/ex01/main.kt</a></td></tr>
-<tr><td>配布用ZIP</td><td><code>docs/hello-kotlin/downloads/HelloKotlin.zip</code></td></tr>
+<tr><td>完成コード</td><td><a href="../../K01HelloKotlin/src/ex01/main.kt">K01HelloKotlin/src/ex01/main.kt</a></td></tr>
+<tr><td>配布用ZIP</td><td><code>docs/hello-kotlin/downloads/K01HelloKotlin.zip</code></td></tr>
 <tr><td>指定AVD</td><td>jec_25cm_kotlin_Pixel 9a。後半のAndroid系の単元で使うもので、<strong>この単元では使いません</strong>。名前を変えたエミュレータを作らせないでください。</td></tr>
 </tbody></table>
 <p>この単元は画面のないコンソールアプリです。エミュレータもAndroid SDKも不要で、Macとブラウザと IntelliJ IDEA だけで完結します。</p>
@@ -42,9 +42,9 @@
 <tr><td>各STEPに <strong>Java / Swift との比較</strong>を必ず置く</td><td>受講生は概念を知っていて、知らないのは書き方だけ。概念から説明すると、知っている話を聞く時間になり、90分が足りなくなる。前年度の資料も同じ方針で書かれている。</td><td>教科書の比較ブロックを読ませたあと、「Javaなら何行になるか」を口で言わせる。教員は違いの<strong>理由</strong>（なぜKotlinはそう決めたか）を1文で足す。</td></tr>
 <tr><td>導入の最初だけ <strong>Kotlin Playground</strong> を使い、STEP 02からは IntelliJ IDEA に移る</td><td>環境構築で最初の10分を失うと、比較に使う時間がなくなる。ブラウザなら全員が同じ画面で1行目を動かせる。一方でPlaygroundはコード補完が効かず実行も遅いので、学習の本体には向かない。</td><td>詳しくは「4. Playground と IntelliJ IDEA の使い分け」を参照。Playgroundは10分で切り上げる。</td></tr>
 <tr><td>Build system に <strong>Gradle ではなく IntelliJ</strong> を選ばせる</td><td>この単元で見せたいのは <code>val</code> / <code>var</code> と型推論の差分だけ。Gradleを入れると、設定ファイル・同期待ち・依存関係の説明が増え、比較の時間を食う。Gradleは後半のAndroid系の単元で扱う。</td><td>STEP 02の表で <strong>Build system</strong> を <code>IntelliJ</code> と指定している。HELPに「Build system に IntelliJ がない」の行を置いている。</td></tr>
-<tr><td>学生にも <code>src/ex01/</code> パッケージを作らせ、<code>package ex01</code> を書かせる</td><td>リポジトリの完成プロジェクト <code>HelloKotlin</code> は、純Kotlin系の単元を <code>src/exNN/</code> で分ける構成にしている。学生の手元も同じ形にしておくと、見本と1対1で比べられ、行き先を言葉で指定できる。</td><td>STEP 02で作らせる。Javaのパッケージと同じ考え方だと1文で伝え、Kotlinではフォルダ構成と一致させなくてもよいという細部には触れない。</td></tr>
+<tr><td>学生にも <code>src/ex01/</code> パッケージを作らせ、<code>package ex01</code> を書かせる</td><td>リポジトリの完成プロジェクト <code>K01HelloKotlin</code> は、純Kotlin系の単元を <code>src/exNN/</code> で分ける構成にしている。学生の手元も同じ形にしておくと、見本と1対1で比べられ、行き先を言葉で指定できる。</td><td>STEP 02で作らせる。Javaのパッケージと同じ考え方だと1文で伝え、Kotlinではフォルダ構成と一致させなくてもよいという細部には触れない。</td></tr>
 <tr><td><code>val</code> の再代入エラーを、STEP 05の練習Bで<strong>わざと出させる</strong></td><td>Javaの <code>final</code>、Swiftの <code>let</code> を知っているので、説明より「自分の画面に出たエラー文」のほうが対応付けが早い。STEP 03は <code>val</code> と <code>var</code> の書き分けに使い、エラーを出すのは書き分けを一度書いたあとにする。</td><td>STEP 05の練習Bで <code>number1 = 5</code> を書き足させ、<code>&#39;val&#39; cannot be reassigned</code> を確認させてから消させる。あわせて「<code>val</code> は再代入禁止であって、中身が変わらない保証ではない」ことを口で言う。</td></tr>
-<tr><td>型を明示せず（<code>val number1: Int = 1</code> と書かせず）、型推論のままにする</td><td>完成コード <code>HelloKotlin/src/ex01/main.kt</code> がその形であり、教材と完成版をバイト単位で一致させているため。Swiftの型推論を知っている受講生には、書かないほうが差分が見えやすい。</td><td>STEP 04で「名前にマウスを重ねると、決まった型が出る」と案内し、Swiftと効き方が違う場面（<code>Float</code>）だけを取り上げる。</td></tr>
+<tr><td>型を明示せず（<code>val number1: Int = 1</code> と書かせず）、型推論のままにする</td><td>完成コード <code>K01HelloKotlin/src/ex01/main.kt</code> がその形であり、教材と完成版をバイト単位で一致させているため。Swiftの型推論を知っている受講生には、書かないほうが差分が見えやすい。</td><td>STEP 04で「名前にマウスを重ねると、決まった型が出る」と案内し、Swiftと効き方が違う場面（<code>Float</code>）だけを取り上げる。</td></tr>
 <tr><td>コメント <code>// Double</code> / <code>// Float</code> を完成コードに残す</td><td>完成プロジェクトの書き方をそのまま教材にしているため。型推論に任せた行がどの型になったかを、後から読み返す手がかりになる。</td><td>STEP 04で「型推論の結果をコメントで補っている」とだけ説明する。KDocの書き方は扱わない。</td></tr>
 </tbody></table>
 <h3>この単元で意図的に扱わないこと</h3>
@@ -63,7 +63,7 @@
 <tr><td>Gradle・依存ライブラリの追加</td><td>コンソールアプリに追加するライブラリがない。ライブラリは必要なときだけ足す。</td><td>Android系の単元</td></tr>
 <tr><td>Unit Test</td><td>完成プロジェクトにUnit Testは書かない方針のため。テストしやすくするためのリファクタリングもしない。</td><td>扱わない</td></tr>
 </tbody></table>
-<div class="note"><p class="box-title">完成コードを説明するときの注意</p><p><code>val number1 = 1</code> から <code>println(name)</code> までの並び順、<code>// Double</code> / <code>// Float</code> のコメント、<code>3.0f</code> の <code>f</code> は変えません。教科書のSTEP 06の完成コードは、<code>scripts/check-teaching-materials.py</code> が <code>HelloKotlin/src/ex01/main.kt</code> とバイト単位で照合します。片方だけを直すと検査が落ちます。<code>teacher/hello-kotlin/code/01-main.kt</code> は検査の対象外なので、完成プロジェクトを直したときは手で合わせてください。</p></div>
+<div class="note"><p class="box-title">完成コードを説明するときの注意</p><p><code>val number1 = 1</code> から <code>println(name)</code> までの並び順、<code>// Double</code> / <code>// Float</code> のコメント、<code>3.0f</code> の <code>f</code> は変えません。教科書のSTEP 06の完成コードは、<code>scripts/check-teaching-materials.py</code> が <code>K01HelloKotlin/src/ex01/main.kt</code> とバイト単位で照合します。片方だけを直すと検査が落ちます。<code>teacher/hello-kotlin/code/01-main.kt</code> は検査の対象外なので、完成プロジェクトを直したときは手で合わせてください。</p></div>
 </section>
 
 <section><h2>3. 90分の進め方</h2>
@@ -75,7 +75,7 @@
 <tr><td>STEP 03 <code>val</code> と <code>var</code></td><td>20分</td><td>Javaの <code>final</code>、Swiftの <code>let</code> との対応表を先に見せる。<strong>「<code>val</code> は再代入禁止。中身が変わらないという意味ではない」</strong>を口で言う。<code>println(name)</code> に <code>Yamada</code> と <code>Tanaka</code> のどちらが出るかを予想させてからRunさせる。</td><td>コンソールに <code>1</code> と <code>Tanaka</code> の2行。<code>val</code> がJavaの <code>final</code>・Swiftの <code>let</code> にあたると言えた。</td></tr>
 <tr><td>STEP 04 数の型</td><td>15分</td><td>追加する2か所を指さして確認する。<code>val number3: Float = 3.0</code> が通らないことを教員の画面で実演し、Swiftとの効き方の違いを示す。</td><td>コンソールに4行。<code>f</code> の付け忘れがない。</td></tr>
 <tr><td>STEP 05 ミニ練習</td><td>10分</td><td>練習A（3分）で <code>val</code> の変数と <code>println</code> を1行ずつ足させ、推論された型をマウスで確かめさせる。練習B（4分）で <code>number1 = 5</code> を書き足させ、<code>&#39;val&#39; cannot be reassigned</code> を読ませる。最後の3分で、足した行を消して元の4行へ戻させる。</td><td>練習A・Bを試し、エラーメッセージの意味を言えた。書き足した行が消えていて、出力が4行に戻っている。</td></tr>
-<tr><td>STEP 06 完成</td><td>10分</td><td>4行の表を読み合わせ、<code>val</code> の行と <code>var</code> の行を指させる。同じ処理をJavaで書くと何行になるかを並べて比べる。</td><td>保存先 <code>Documents/Kotlin/HelloKotlin</code> を言える。</td></tr>
+<tr><td>STEP 06 完成</td><td>10分</td><td>4行の表を読み合わせ、<code>val</code> の行と <code>var</code> の行を指させる。同じ処理をJavaで書くと何行になるかを並べて比べる。</td><td>保存先 <code>Documents/Kotlin/K01HelloKotlin</code> を言える。</td></tr>
 </tbody></table>
 <p>合計90分です。ここには個別支援の時間を別に取っていません。クラスの進み具合に応じて、STEP 01の10分とSTEP 05の10分から先に削ります。<strong>STEP 03とSTEP 04の比較の時間は削りません。</strong>ここがこの単元の本体です。</p>
 <p>遅れている学生は、<strong>STEP 02（IntelliJ IDEA で自分のコードが動く）までの到達を優先</strong>します。ここまで届けば、次回の冒頭5分でSTEP 03から再開できます。進みが速い学生には、<code>val</code> の行を <code>var</code> に変えたら警告が出るか、という確認を渡します。</p>
@@ -117,7 +117,7 @@
 <section><h2>6. 机間巡視の確認項目</h2>
 <p>見回りのときに、この順で画面を見ます。上から3つは全員、残りは気になる学生だけで構いません。</p>
 <table><thead><tr><th>見る場所</th><th>OKの状態</th><th>NGのときの声かけ</th></tr></thead><tbody>
-<tr><td>ウィンドウのタイトルと保存先</td><td><code>Documents/Kotlin/HelloKotlin</code> で終わっている。</td><td>「フォルダはどこにありますか」と聞き、Finderで開かせる。</td></tr>
+<tr><td>ウィンドウのタイトルと保存先</td><td><code>Documents/Kotlin/K01HelloKotlin</code> で終わっている。</td><td>「フォルダはどこにありますか」と聞き、Finderで開かせる。</td></tr>
 <tr><td><code>main.kt</code> の1行目</td><td><code>package ex01</code> と書いてある。</td><td>「ファイルはどのフォルダに入っていますか」と聞き、<code>src/ex01/</code> へ移動させる。</td></tr>
 <tr><td>行末</td><td>セミコロンが1つもない。</td><td>「Javaの癖が残っていませんか」と聞く。消しても動くことを実行して見せる。</td></tr>
 <tr><td><code>fun main()</code> の位置</td><td>クラスの中に入っていない。</td><td>「このファイルに <code>class</code> はありますか」と聞く。</td></tr>
@@ -136,7 +136,7 @@
 <tr><td>Swiftのように <code>val number3: Float = 3.0</code> と書いたらどうなる？</td><td>エラーになる、と答える。<code>3.0f</code> と書く必要があることを示せれば十分。</td></tr>
 <tr><td>行末のセミコロンは必要？</td><td>不要、と答える。Swiftと同じだと対応付けられれば十分。</td></tr>
 <tr><td><code>main</code> はクラスの中に書く？</td><td>不要、と答える。Javaとの違いとして言えれば十分。</td></tr>
-<tr><td>自分のプロジェクトはどこにある？</td><td><code>Documents/Kotlin/HelloKotlin</code> と言う、またはFinderで開く。</td></tr>
+<tr><td>自分のプロジェクトはどこにある？</td><td><code>Documents/Kotlin/K01HelloKotlin</code> と言う、またはFinderで開く。</td></tr>
 </tbody></table>
 </section>
 
@@ -150,7 +150,7 @@
 <tr><td>4 変数宣言、代入処理</td><td><strong>STEP 03・STEP 04</strong>。PDFのPOINT（<code>val</code> は再代入禁止、<code>var</code> は再代入可能、Swiftと同様に型推論が効く、Swiftと同様にセミコロン不要）が、そのままこの単元の要点です。</td></tr>
 </tbody></table>
 <h3>PDFの各節と演習パッケージの対応</h3>
-<p><code>HelloKotlin/src/exNN</code> は、PDFの各節の演習に対応しています。単元化は今後のissueで順に行います。</p>
+<p><code>K01HelloKotlin/src/exNN</code> は、PDFの各節の演習に対応しています。単元化は今後のissueで順に行います。</p>
 <table><thead><tr><th>PDFの節</th><th>演習</th><th>予定している単元</th></tr></thead><tbody>
 <tr><td>4 変数宣言、代入処理</td><td><code>ex01</code></td><td>K01 HelloKotlin（この単元）</td></tr>
 <tr><td>5 Null許容の変数宣言と安全な呼び出し</td><td><code>ex02</code></td><td>K02 NullSafety</td></tr>
@@ -171,7 +171,7 @@
 <tr><td>STEP 04完了（完成）</td><td><a href="code/01-main.kt">01-main.kt</a></td><td><code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code> の4行</td></tr>
 </tbody></table>
 <p>STEP 05は完成コードを一時的に変える練習なので、照合用コードは置いていません。元に戻したあとはSTEP 04完了と同じ内容になります。</p>
-<p><a href="code/01-main.kt">01-main.kt</a> は <a href="../../HelloKotlin/src/ex01/main.kt">HelloKotlin/src/ex01/main.kt</a> と同じ内容です。片方だけを直さないでください。</p>
+<p><a href="code/01-main.kt">01-main.kt</a> は <a href="../../K01HelloKotlin/src/ex01/main.kt">K01HelloKotlin/src/ex01/main.kt</a> と同じ内容です。片方だけを直さないでください。</p>
 <h3>到達度の確認</h3>
 <table><thead><tr><th>観点</th><th>授業内で確認する証拠</th></tr></thead><tbody>
 <tr><td>操作できる</td><td>学生自身が <strong>Run</strong> を押し、コンソールの4行を見せる。</td></tr>
@@ -184,15 +184,15 @@
 </section>
 
 <section><h2>9. 教材の保守と確認</h2>
-<ul><li><code>HelloKotlin/src/ex01/main.kt</code> を変更したら、教科書STEP 06の完成コードと <code>teacher/hello-kotlin/code/01-main.kt</code> を<strong>同時に</strong>直します。教科書の完成コードは <code>scripts/check-teaching-materials.py</code> がバイト単位で照合するので、直し忘れると検査が落ちます。<code>teacher/hello-kotlin/code/01-main.kt</code> は検査の対象外で、自動では守られません。手で合わせてください。</li>
+<ul><li><code>K01HelloKotlin/src/ex01/main.kt</code> を変更したら、教科書STEP 06の完成コードと <code>teacher/hello-kotlin/code/01-main.kt</code> を<strong>同時に</strong>直します。教科書の完成コードは <code>scripts/check-teaching-materials.py</code> がバイト単位で照合するので、直し忘れると検査が落ちます。<code>teacher/hello-kotlin/code/01-main.kt</code> は検査の対象外で、自動では守られません。手で合わせてください。</li>
 <li>完成コードを変更したら、配布用ZIPも作り直します。</li>
 <li>この単元では画像を使いません。文章と表と手順だけで進みます。画面の名前が変わったときは、教科書STEP 02の表とHELPの表を先に直します。</li>
 <li>教科書のSTEPの区切り・見出し・目安時間を変えたときは、この教員用ガイドの「3. 90分の進め方」と「8. 遅れた学生の再開地点と到達度の確認」も同時に直します。</li>
 <li>Java / Swift との比較を足すときは、<strong>Kotlinを先頭（左端）</strong>に置きます。比較のコードは翻訳の対象外なので、どの言語版の教材でもそのまま表示されます。</li>
 <li>印刷時は補足・解答も展開されます。解答を配布したくない場合は、ブラウザで授業中に開く方式を使ってください。</li>
-<li>純Kotlin系の次の単元を作るときは、同じ <code>HelloKotlin</code> プロジェクトに <code>src/ex02/</code> のようにパッケージを足します。登録は単元ごとに今後のissueで行います。</li></ul>
+<li>純Kotlin系の次の単元を作るときは、同じ <code>K01HelloKotlin</code> プロジェクトに <code>src/ex02/</code> のようにパッケージを足します。登録は単元ごとに今後のissueで行います。</li></ul>
 <div class="code-head">配布用ZIPを作り直す</div>
-<pre tabindex="0"><code>python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip</code></pre>
+<pre tabindex="0"><code>python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip</code></pre>
 <div class="code-head">教材の検証（リポジトリ直下で実行する）</div>
 <pre tabindex="0"><code>python3 scripts/check-teaching-materials.py
 python3 -m unittest discover -s scripts -p &#39;test_*.py&#39;
@@ -206,7 +206,7 @@ python3 scripts/package-student-materials.py</code></pre>
 <p>この授業の提出課題は、<strong>自分で作ったAndroidアプリを1つ選び、アレンジを加えて、APKというファイルにして提出する</strong>ことです。提出するのは1つだけです。新しいアプリを一から作らせるのではなく、授業で自分の手で動かしたアプリを1つ選ばせ、そこに自分で決めた変更を加えさせます。</p>
 <p><strong>この単元 K01HelloKotlin は、提出課題の対象にはなりません。</strong>純Kotlinのコンソールアプリで、Androidアプリではないためです。学生から「これを提出するのですか」と聞かれたら、そう答えてください。提出の対象になるのは、後半のAndroid系の単元（<code>A01</code>〜）で自分が作ったアプリです。</p>
 <table><thead><tr><th>学生からの質問</th><th>答え方</th></tr></thead><tbody>
-<tr><td>今日作った <code>HelloKotlin</code> を提出するのか</td><td>提出しない。この単元に提出物はない。純Kotlinのコンソールアプリなので、APKにならない。</td></tr>
+<tr><td>今日作った <code>K01HelloKotlin</code> を提出するのか</td><td>提出しない。この単元に提出物はない。純Kotlinのコンソールアプリなので、APKにならない。</td></tr>
 <tr><td>何を提出するのか</td><td>後半のAndroid系の単元で自分が作ったアプリから1つ選び、アレンジを加えてAPKにする。</td></tr>
 <tr><td>そのまま出してよいのか</td><td>アレンジを加えたものを出す。どこを変えたかを自分の言葉で説明できるようにしておく。</td></tr>
 <tr><td>いつ案内があるのか</td><td>Android系の単元に入ってから、共通資料を使って案内する。今日は「あとで案内する」で足りる。</td></tr>
@@ -215,5 +215,5 @@ python3 scripts/package-student-materials.py</code></pre>
 <p><strong>提出先と締め切りは、共通資料には書いていません。教員が授業で案内します。</strong>年度やクラスで変わるため、教材には書かない方針です。</p>
 </section>
 
-<footer class="footer"><p><a href="../../docs/hello-kotlin/index.html">← HelloKotlinの教科書へ戻る</a></p><p>対象：K01HelloKotlin / macOS / Kotlin Playground + IntelliJ IDEA 2026.3 EAP</p></footer></main>
+<footer class="footer"><p><a href="../../docs/hello-kotlin/index.html">← K01HelloKotlinの教科書へ戻る</a></p><p>対象：K01HelloKotlin / macOS / Kotlin Playground + IntelliJ IDEA 2026.3 EAP</p></footer></main>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>

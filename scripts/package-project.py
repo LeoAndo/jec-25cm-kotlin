@@ -4,8 +4,8 @@
 どちらも「Git管理下のファイルだけを、IDEの設定とビルド出力を除いてZIPにする」で同じなので、
 プロジェクト名を引数で受け取る1つのスクリプトにしている。
 
-  python3 scripts/package-project.py --project HelloKotlin \\
-      --output docs/hello-kotlin/downloads/HelloKotlin.zip
+  python3 scripts/package-project.py --project K01HelloKotlin \\
+      --output docs/hello-kotlin/downloads/K01HelloKotlin.zip
 """
 
 import argparse
@@ -70,7 +70,7 @@ def package(project, output):
 def main():
     # 既定値は持たせない。単元が増えたときに、既定の単元だけ静かに作り直す事故を防ぐ。
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project", required=True, help="ZIPにするプロジェクトのフォルダ（例：HelloKotlin）")
+    parser.add_argument("--project", required=True, help="ZIPにするプロジェクトのフォルダ（例：K01HelloKotlin）")
     parser.add_argument("--output", type=Path, required=True, help="書き出すZIPのパス")
     args = parser.parse_args()
     package(args.project, args.output.resolve())

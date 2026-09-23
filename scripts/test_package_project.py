@@ -26,7 +26,7 @@ class PackageProjectTest(unittest.TestCase):
         self.root = self.parent / "source"
         (self.root / "scripts").mkdir(parents=True)
         copy2(SCRIPT, self.root / "scripts" / SCRIPT.name)
-        self.output = self.root / "docs/hello-kotlin/downloads/HelloKotlin.zip"
+        self.output = self.root / "docs/hello-kotlin/downloads/K01HelloKotlin.zip"
         self.output.parent.mkdir(parents=True)
         self.output.write_bytes(b"previous archive")
 
@@ -40,7 +40,7 @@ class PackageProjectTest(unittest.TestCase):
     def run_package(self, *args, env=None):
         """独立したPythonプロセスで配布スクリプトを実行する。"""
         if not args:
-            args = ("--project", "HelloKotlin", "--output", str(self.output))
+            args = ("--project", "K01HelloKotlin", "--output", str(self.output))
         return subprocess.run(
             [sys.executable, str(self.root / "scripts" / SCRIPT.name), *args],
             cwd=self.root, env=env, capture_output=True, text=True,
@@ -78,38 +78,38 @@ class PackageProjectTest(unittest.TestCase):
         単元が増えたときに、既定の単元だけを静かに作り直す事故を防ぐための確認。
         """
         self.git("init")
-        result = self.run_package("--project", "HelloKotlin")
+        result = self.run_package("--project", "K01HelloKotlin")
         self.assert_rejected(result, "--output")
         self.assert_rejected(self.run_package("--output", str(self.output)), "--project")
 
     def test_tracked_sources_only_and_repeatable_archive(self):
         """編集済みの管理対象と実行権限を保持し、ローカル状態を除外する。"""
         self.git("init")
-        project = self.root / "HelloKotlin"
+        project = self.root / "K01HelloKotlin"
         for name in [
             "src/ex01/main.kt", "run.sh", "local.properties",
             ".idea/misc.xml", ".gradle/cache", ".kotlin/cache", "build/classes",
-            "out/production/HelloKotlin/ex01/MainKt.class",
+            "out/production/K01HelloKotlin/ex01/MainKt.class",
         ]:
             path = project / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("original")
         (project / "run.sh").chmod(0o744)
         (project / "src/ex01/main.kt").chmod(0o600)
-        self.git("add", "HelloKotlin")
+        self.git("add", "K01HelloKotlin")
         (project / "src/ex01/main.kt").write_text("edited")
         (project / "untracked.txt").write_text("not for distribution")
         result = self.run_package()
         self.assertEqual(result.returncode, 0, result.stderr)
         with ZipFile(self.output) as archive:
             self.assertEqual(archive.namelist(), [
-                "HelloKotlin/run.sh",
-                "HelloKotlin/src/ex01/main.kt",
+                "K01HelloKotlin/run.sh",
+                "K01HelloKotlin/src/ex01/main.kt",
             ])
-            self.assertEqual(archive.read("HelloKotlin/src/ex01/main.kt"), b"edited")
-            mode = archive.getinfo("HelloKotlin/run.sh").external_attr >> 16
+            self.assertEqual(archive.read("K01HelloKotlin/src/ex01/main.kt"), b"edited")
+            mode = archive.getinfo("K01HelloKotlin/run.sh").external_attr >> 16
             self.assertEqual(mode, 0o100755)
-            source_mode = archive.getinfo("HelloKotlin/src/ex01/main.kt").external_attr >> 16
+            source_mode = archive.getinfo("K01HelloKotlin/src/ex01/main.kt").external_attr >> 16
             self.assertEqual(source_mode, 0o100644)
         first = self.output.read_bytes()
         self.assertEqual(self.run_package().returncode, 0)
@@ -121,15 +121,15 @@ class PackageProjectTest(unittest.TestCase):
         純Kotlin系はGradleを使わないので、ビルド出力は build ではなく out に出る。
         """
         self.git("init")
-        project = self.root / "HelloKotlin"
-        for name in ["src/ex01/main.kt", "out/production/HelloKotlin/ex01/MainKt.class"]:
+        project = self.root / "K01HelloKotlin"
+        for name in ["src/ex01/main.kt", "out/production/K01HelloKotlin/ex01/MainKt.class"]:
             path = project / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("original")
-        self.git("add", "-f", "HelloKotlin")
+        self.git("add", "-f", "K01HelloKotlin")
         self.assertEqual(self.run_package().returncode, 0)
         with ZipFile(self.output) as archive:
-            self.assertEqual(archive.namelist(), ["HelloKotlin/src/ex01/main.kt"])
+            self.assertEqual(archive.namelist(), ["K01HelloKotlin/src/ex01/main.kt"])
 
 
 if __name__ == "__main__":

@@ -13,14 +13,14 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
 
 | 系統 | `kind` | 完成プロジェクト | IDE | 単元名の例 |
 | --- | --- | --- | --- | --- |
-| 純Kotlin | `kotlin-console` | `HelloKotlin/src/exNN/` | IntelliJ IDEA | `K02NullSafety` |
+| 純Kotlin | `kotlin-console` | `K01HelloKotlin/src/exNN/` | IntelliJ IDEA | `K02NullSafety` |
 | Android | `android` | `A0NXxx/` | Android Studio | `A02CalcGame` |
 
 ## 1. 完成プロジェクト
 
 **純Kotlin単元（`kotlin-console`）**
 
-- `HelloKotlin/src/exNN/` にファイルを置く。ファイルの先頭に `package exNN` を書く（Kotlinなのでセミコロンなし）。
+- `K01HelloKotlin/src/exNN/` にファイルを置く。ファイルの先頭に `package exNN` を書く（Kotlinなのでセミコロンなし）。
 - `fun main()` を持たせ、IntelliJ IDEA の実行ボタンで動かせる形にする。Gradleは使わない。
 - IntelliJ IDEA で実行し、Runツールウィンドウのコンソール出力を確かめる。教科書に書く出力と、1文字ずつ照合する。
 
@@ -55,11 +55,11 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
 - `docs/<スラッグ>/downloads/<Project>.zip` を作る。
 
   ```sh
-  python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip
+  python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip
   python3 scripts/package-project.py --project A02CalcGame --output docs/calc-game/downloads/A02CalcGame.zip
   ```
 
-  **純Kotlin単元のプロジェクトは `HelloKotlin` の1つだけ**なので、K02以降の `archive` は K01 と同じ `docs/hello-kotlin/downloads/HelloKotlin.zip` を指す。ZIPを作り直すのは1回でよい。
+  **純Kotlin単元のプロジェクトは `K01HelloKotlin` の1つだけ**なので、K02以降の `archive` は K01 と同じ `docs/hello-kotlin/downloads/K01HelloKotlin.zip` を指す。ZIPを作り直すのは1回でよい。
 - `docs/<スラッグ>/images/` は、**スクリーンショットを撮れるAndroid単元でだけ**使う。純Kotlin単元は、文章と表と手順で説明し、画像を使わない。「ここに画像を入れる」のようなプレースホルダも置かない。スクリーンショットは指定AVD `jec_25cm_kotlin_Pixel 9a` で撮る。
 - コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` がバイト単位で照合するので、手で写して直さない。
 - 教科書の中から**ほかの単元へ本文で送らない**（共通資料へのリンクはサイドバーと明示の導線だけ）。
@@ -84,20 +84,20 @@ description: Add a new teaching unit to this Kotlin course repository - the comp
 {
   "name": "K02NullSafety",
   "kind": "kotlin-console",
-  "root": "HelloKotlin",
+  "root": "K01HelloKotlin",
   "packages": ["ex02"],
   "sessions": 1,
   "docs": ["docs/null-safety/index.html", "teacher/null-safety/index.html"],
-  "sources": ["HelloKotlin/src/ex02/main.kt"],
+  "sources": ["K01HelloKotlin/src/ex02/main.kt"],
   "snippets": [
     { "html": "docs/null-safety/index.html", "id": "code-final-kotlin",
-      "source": "HelloKotlin/src/ex02/main.kt" }
+      "source": "K01HelloKotlin/src/ex02/main.kt" }
   ],
-  "archive": "docs/hello-kotlin/downloads/HelloKotlin.zip"
+  "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip"
 }
 ```
 
-`archive` が K01 と同じパスなのは、**純Kotlin系のプロジェクトが `HelloKotlin` の1つだけで、中身も1つしかない**ためである。`package-student-materials.py` は `(root, archive)` の重複を除いた組ごとにZIPを作るので、同じパスを指していれば `package-project.py` の呼び出しも1回で済む。単元ごとに別の `archive` を書くと、中身が同じZIPが単元の数だけ増える。
+`archive` が K01 と同じパスなのは、**純Kotlin系のプロジェクトが `K01HelloKotlin` の1つだけで、中身も1つしかない**ためである。`package-student-materials.py` は `(root, archive)` の重複を除いた組ごとにZIPを作るので、同じパスを指していれば `package-project.py` の呼び出しも1回で済む。単元ごとに別の `archive` を書くと、中身が同じZIPが単元の数だけ増える。
 
 **純Kotlin系は `packages`（配列）、Android系は `package`（文字列）。** 書き分けを取り違えると設定エラーになる。1コマで複数の演習を扱う単元は、`"packages": ["ex03", "ex05", "ex06"]` のように並べ、`sources` にもそれぞれの `main.kt` を挙げる。`packages` に書いたのに `sources` が無いと落ちる。
 
@@ -105,7 +105,7 @@ Android単元は `kind: "android"` にし、`root` をプロジェクトのデ�
 
 直すのは次の4か所。
 
-1. `scan_roots`：新しいディレクトリが既存の `scan_roots`（`README.md` / `docs` / `teacher` / `HelloKotlin`）の下に入らない場合だけ足す。Android単元を足したときは、そのプロジェクトのディレクトリを足す。
+1. `scan_roots`：新しいディレクトリが既存の `scan_roots`（`README.md` / `docs` / `teacher` / `K01HelloKotlin`）の下に入らない場合だけ足す。Android単元を足したときは、そのプロジェクトのディレクトリを足す。
 2. `terms[].required_in`：その単元の教科書・教員用ガイドで正式表記を使うなら足す（指定AVD名など）。用語に `applies_to` が書いてあると、その系統の単元にだけ表記が求められる。指定AVD名は `applies_to: ["android"]` なので、**Android単元を足したときは、その教科書と教員用ガイドを `required_in` に足す**。純Kotlin単元はエミュレータを使わないので足さない。
 3. `projects`：**単元番号順の位置に足す。** 並び順は「最初に現れた接頭辞の順（K → A）」で、同じ接頭辞の中は番号の昇順。**一度Aに変わったあとでKに戻すとエラー**になる。サイドバーの検査がこの並びを基準にする。
 4. `sessions`：正の整数。**`projects` の `sessions` の合計が `course.total_sessions`（15）を超えるとエラー**になる。15コマ計画表の割り当てと合わせる。

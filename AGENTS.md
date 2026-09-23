@@ -12,7 +12,7 @@
 
 | 系統 | 単元番号 | IDE | プロジェクト | 実行のしかた |
 | --- | --- | --- | --- | --- |
-| 純Kotlin | `K01`〜 | IntelliJ IDEA | `HelloKotlin`（`HelloKotlin/src/exNN/*.kt`。Gradleを使わない） | `fun main()` を実行してコンソール出力を見る |
+| 純Kotlin | `K01`〜 | IntelliJ IDEA | `K01HelloKotlin`（`K01HelloKotlin/src/exNN/*.kt`。Gradleを使わない） | `fun main()` を実行してコンソール出力を見る |
 | Android | `A01`〜 | Android Studio | `A01HelloAndroid` `A02CalcGame` `A03GithubSearch` `A04FunnyCamera`（Gradle） | エミュレータ `jec_25cm_kotlin_Pixel 9a` で動かす |
 
 **Android系の基準バージョンは Android Studio Panda 2。** 教科書の手順・画面・生成される設定は、すべて Panda 2 を前提に書く。ひな形は `Panda2KotlinEmptyViewsActivity`（AGP 9.1.1／Gradle 9.3.1／compileSdk 36／targetSdk 36）にある。教員の開発マシンには Quail 4 が入っているので、**自分の手元の Android Studio で作ったプロジェクトを、そのまま完成プロジェクトにしない。** 新しい完成プロジェクトは、ひな形と同じ構成になっているかを `app/build.gradle.kts`・`gradle/libs.versions.toml`・`gradle/wrapper/gradle-wrapper.properties` の3つで確かめる。
@@ -31,7 +31,7 @@
 - **「1単元で導入する新概念は1つまで」の「新概念」は、JavaにもSwiftにもないものを指す。** `if` や `for` のように書き方だけが違うものは数えない（READMEの「単元の範囲の決め方」）。
 - **予習も復習もしない前提で、前から順に読めば進める**という構成の原則と、**本文からほかの単元へ送らない**という原則は、いままでどおり守る（READMEの「授業用教科書の基本方針」）。
 - **Android系の単元の教科書は、「アレンジできる場所」が分かる形で終わらせる。** 最後のSTEPまで進めた学生が、**どこを変えると、画面や動きの何が変わるか**を、その単元のコードの中で見つけられるようにする。挙げるのは、その単元で扱った範囲で変えられるもの（文字・色・数値・問題数など）だけで、新しい概念やAPIをここで足さない（新概念は1単元1つまで。READMEの「単元の範囲の決め方」）。提出課題が「自分で作ったAndroidアプリを1つ選んでアレンジし、APKで出す」形なので、単元の終わりが、そのときの手がかりになる（READMEの「提出課題」「授業用教科書の基本方針」の11）。例は挙げるが、正解は決めない。純Kotlin系（`K01`〜）はコンソールアプリで提出の対象外なので、この形は求めない。
-- この比較方式は、前年度（2025年度）の配布資料PDFの書き方を引き継いだもの。資料の各節と `HelloKotlin/src/exNN/` の対応表はREADMEの「前年度の教材との関係」にある。**PDF自体はリポジトリにcommitしない**（置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables/`。§2のPoC置き場と同じ）。
+- この比較方式は、前年度（2025年度）の配布資料PDFの書き方を引き継いだもの。資料の各節と `K01HelloKotlin/src/exNN/` の対応表はREADMEの「前年度の教材との関係」にある。**PDF自体はリポジトリにcommitしない**（置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables/`。§2のPoC置き場と同じ）。
 
 ## 1. 作業の単位
 
@@ -58,7 +58,7 @@
   cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
   ```
 
-- **純Kotlin単元**：`HelloKotlin` はGradleプロジェクトではないので、コマンドラインのビルドがない。**IntelliJ IDEA で `HelloKotlin` を開き、対象の `exNN/main.kt` の `fun main()` を実行して、Runツールウィンドウの出力を目で確かめる。** `.idea/` はGit管理外（リポジトリ直下の `.gitignore`）なので、worktreeで初めて開いたときはJDKとKotlinの設定を聞かれる。これは正常で、設定ファイルはコミットしない。
+- **純Kotlin単元**：`K01HelloKotlin` はGradleプロジェクトではないので、コマンドラインのビルドがない。**IntelliJ IDEA で `K01HelloKotlin` を開き、対象の `exNN/main.kt` の `fun main()` を実行して、Runツールウィンドウの出力を目で確かめる。** `.idea/` はGit管理外（リポジトリ直下の `.gitignore`）なので、worktreeで初めて開いたときはJDKとKotlinの設定を聞かれる。これは正常で、設定ファイルはコミットしない。
 - **commitしないPoC成果物は、リポジトリの外に置く。** 置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables`。なければ作る。
 
   ```sh
@@ -109,13 +109,13 @@
 | 触る場所 | 並行 |
 | --- | --- |
 | Android単元ごとの場所だけ（`A0NXxx/` と、その単元の `docs/<スラッグ>/`・`teacher/<スラッグ>/`） | 別の単元のissueとは並行してよい。同じ単元のissue同士は直列 |
-| 純Kotlin単元ごとの場所だけ（例：`HelloKotlin/src/ex02/`、`docs/<スラッグ>/`、`teacher/<スラッグ>/`） | 別の `exNN/` のissueとは並行してよい。ただし下の注意を読む |
+| 純Kotlin単元ごとの場所だけ（例：`K01HelloKotlin/src/ex02/`、`docs/<スラッグ>/`、`teacher/<スラッグ>/`） | 別の `exNN/` のissueとは並行してよい。ただし下の注意を読む |
 | 共有ファイル：リポジトリ直下のファイル（`README.md`、`AGENTS.md`、`CLAUDE.md`、`.gitignore`）、`config/`、`scripts/`、`docs/common/`、`docs/assets/`、`.github/`、`skills/` | 同時に開くPRは1本まで（ラベル `area:shared`） |
 | 対訳カタログ：`i18n/<言語>/`（§12） | 別の言語のissueとは並行してよい。単元や共有ファイルのissueとも並行してよい。同じ言語のissue同士は直列（ラベル `area:i18n`） |
 
-- **純Kotlin系は、単元が別でもプロジェクトが1つ（`HelloKotlin`）であることに注意する。** `HelloKotlin/src/exNN/` の中だけなら並行してよいが、次の2つは単元をまたいで共有される。
-  - `HelloKotlin/.gitignore` とプロジェクト直下。ここを触るissueは共有ファイル扱いにする。
-  - 配布ZIP `docs/hello-kotlin/downloads/HelloKotlin.zip`。`config/teaching-materials.json` では、複数のK単元が同じ `archive` を指す。どのK単元に `exNN` を足しても、このZIPの中身が変わる。**並行する2本のPRが両方このZIPを作り直すと、バイナリなのでマージで必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
+- **純Kotlin系は、単元が別でもプロジェクトが1つ（`K01HelloKotlin`）であることに注意する。** `K01HelloKotlin/src/exNN/` の中だけなら並行してよいが、次の2つは単元をまたいで共有される。
+  - `K01HelloKotlin/.gitignore` とプロジェクト直下。ここを触るissueは共有ファイル扱いにする。
+  - 配布ZIP `docs/hello-kotlin/downloads/K01HelloKotlin.zip`。`config/teaching-materials.json` では、複数のK単元が同じ `archive` を指す。どのK単元に `exNN` を足しても、このZIPの中身が変わる。**並行する2本のPRが両方このZIPを作り直すと、バイナリなのでマージで必ず衝突する。** 片方がマージされたあと、§3の手順6でもう一度 `python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip` を実行し直して、自分のPRのZIPを作り直す。ZIPは決め打ちタイムスタンプで作るので、中身が同じなら同じバイト列になる。
 - **`Panda2KotlinEmptyViewsActivity` と `Quail4KotlinEmptyViewsActivity` は単元ではない。** Android StudioのNew Projectウィザードが生成したひな形を、版ごとにそのまま置いてあるものである（Panda 2 と Quail 4）。教材の手順が古くなっていないかを、この2つを見比べて確かめるために置いている。`config/teaching-materials.json` には登録せず、学生用ZIPにも入れない。**中身に手を入れない。** 手を入れると「ウィザードが生成したそのままの形」という価値がなくなり、比較の基準として使えなくなる。版を上げるときは、新しい版のAndroid Studioで作り直したものを別のフォルダとして足す。
 - 新しい単元の登録（§9）は必ず共有ファイルに当たる。2つの単元を同時に登録しない。登録のPRは、既存の全単元の教科書のサイドバーも触る（§9の手順6）。`<div class="resources">` は全体で1行なので、ほかの単元のPRが同じ行を触っていると、先にマージされた側と衝突する。相手のPRが開いているあいだは、手順6では分からない（比べる相手が `origin/main` だけのため）。相手がマージされたあとの§3の手順6で確かめ、両方の変更を残す。
 - 教科書 `docs/<スラッグ>/index.html` から他単元へのリンクは、topbarとサイドバーの2か所にある。どちらも本文ではなく導線で、手順やコードを他単元へ送るものではない（READMEの「授業用教科書の基本方針」が禁じているのは、本文から送ること）。サイドバーに先の単元へのリンクがあっても、方針違反ではない。
@@ -130,8 +130,8 @@
 
   | 混入するもの | 出どころ |
   | --- | --- |
-  | `.idea/`、`*.iml` | IntelliJ IDEA で `HelloKotlin` を開いたとき |
-  | `out/`、`.kotlin` | `fun main()` を実行したとき（`HelloKotlin/.gitignore` が無視する） |
+  | `.idea/`、`*.iml` | IntelliJ IDEA で `K01HelloKotlin` を開いたとき |
+  | `out/`、`.kotlin` | `fun main()` を実行したとき（`K01HelloKotlin/.gitignore` が無視する） |
   | `local.properties`、`.gradle/`、`build/` | Android Studio でGradle同期したとき |
 
 - 混入に気付いたら、push前なら `git rm --cached` して `--amend` する。push済みなら別コミットで `git rm --cached` する（履歴は書き換えない）。
@@ -158,7 +158,7 @@
   - サイズ：S（同種の既存issueと比べて決めた）
   - 推奨構成：軽い構成で可（判断の要らない機械的な修正）
   - 人間の確認：XS（差分の目視のみ）
-  - 触る範囲：HelloKotlin/src/ex02/ と docs/<スラッグ>/ のみ（共有ファイルなし）
+  - 触る範囲：K01HelloKotlin/src/ex02/ と docs/<スラッグ>/ のみ（共有ファイルなし）
   ```
 
   サイズの根拠には、**実在する既存のissue・PRの番号だけ**を書く。思い当たる番号がなければ、番号を書かずに「同種の既存issueと比べて決めた」と書く。存在しない番号を書くと、あとから根拠をたどれない。
@@ -171,7 +171,7 @@
 | サイズ | 定義と、このリポジトリでの例 |
 | --- | --- |
 | `size:XS` | 1ファイル、判断不要、ビルドも実行確認も要らない。例：教科書の誤記を1か所直す、READMEのリンクを1本直す、`teacher/` のコメントを足す |
-| `size:S` | 1単元に閉じた数ファイルの変更。検査スクリプトか、1回の実行・ビルドで確認できる。例：`HelloKotlin/src/exNN` を1つ足す、既存の教科書にSTEPを1つ書き足す、Android単元の文言を直して `assembleDebug` を通す |
+| `size:S` | 1単元に閉じた数ファイルの変更。検査スクリプトか、1回の実行・ビルドで確認できる。例：`K01HelloKotlin/src/exNN` を1つ足す、既存の教科書にSTEPを1つ書き足す、Android単元の文言を直して `assembleDebug` を通す |
 | `size:M` | 複数の単元や共有ファイルにまたがり、全体の照合が要る。例：`scripts/` のロジックを変える、`config/teaching-materials.json` のスキーマを変える、`docs/common/` にページを足す、全教科書のサイドバーを機械的に直す |
 | `size:L` | 単元の完成プロジェクト1つ、または教材一式（教科書＋教員用ガイド＋登録）1単元ぶん。1セッションの上限。例：`A0NXxx/` を新規に作る、K単元の教科書を1冊書いて登録まで済ませる |
 | `size:XL` | 1セッションに収まらない。見積値ではなく分割の合図。このまま着手しない。例：完成プロジェクトと教材一式を1つのPRにまとめる、2つの単元を同時に登録する |
@@ -229,11 +229,11 @@
 
 `docs/<スラッグ>/` を作るだけでは足りない。次のすべてに登録する。手順は `skills/add-teaching-unit/SKILL.md` にもある。
 
-1. 完成プロジェクト。純Kotlin系は `HelloKotlin/src/exNN/`（§11の8。`exNN` の番号は前年度資料の節に対応させる）、Android系は `A0NXxx/`。**1つの単元が複数の `exNN` を扱ってよい**（K03なら `ex03` `ex05` `ex06`）。
+1. 完成プロジェクト。純Kotlin系は `K01HelloKotlin/src/exNN/`（§11の8。`exNN` の番号は前年度資料の節に対応させる）、Android系は `A0NXxx/`。**1つの単元が複数の `exNN` を扱ってよい**（K03なら `ex03` `ex05` `ex06`）。
 2. `docs/<スラッグ>/index.html`、`images/`（画像を使う単元だけ）、`downloads/<Project>.zip`。ZIPは次で作る。
 
    ```sh
-   python3 scripts/package-project.py --project HelloKotlin --output docs/hello-kotlin/downloads/HelloKotlin.zip
+   python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip
    ```
 
    `--project` と `--output` はどちらも必須で、既定値はない。純Kotlin系は全K単元が同じZIPを共有する（§4）。
@@ -344,10 +344,10 @@ READMEの「完成コードの書き方（全単元共通）」を、このリ�
 
 7. **ライブラリは必要なときだけ足す。** バージョンは各プロジェクトの `gradle/libs.versions.toml` で管理し、`build.gradle.kts` にバージョンを直書きしない。単元で使わないライブラリは足さない。
 
-8. **純Kotlin系の完成コードは `HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。** `fun main()` を持たせて、IntelliJ IDEA の実行ボタンで動かせる形にする。
+8. **純Kotlin系の完成コードは `K01HelloKotlin/src/exNN/` に置き、ファイル先頭に `package exNN` を書く。** `fun main()` を持たせて、IntelliJ IDEA の実行ボタンで動かせる形にする。
 
    ```kotlin
-   // HelloKotlin/src/ex01/main.kt
+   // K01HelloKotlin/src/ex01/main.kt
    package ex01
 
    fun main() {
