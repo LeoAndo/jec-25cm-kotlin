@@ -1361,17 +1361,19 @@ class TeachingMaterialsCheckTest(unittest.TestCase):
             self.assertEqual([error for error in errors if "設定に" in error], [])
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
-class ProgressKeyTest(TeachingMaterialsCheckTest):
+class ProgressKeyTest(unittest.TestCase):
     """チェック欄のあるページが、自分用の記録キーを持っているかの検査。
 
     docs/assets/textbook.js は、そのページで見つかった data-check だけを
     localStorage へ書き戻す。2つのページが同じキーを使うと、あとから開いた側が
     もう一方の記録を消す。
     """
+
+    def _write(self, root: Path, name: str, text: str) -> Path:
+        path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+        return path
 
     def _page(self, key: str | None, checks: int) -> str:
         body = "<body>" if key is None else f'<body data-progress-key="{key}">'
@@ -1412,3 +1414,6 @@ class ProgressKeyTest(TeachingMaterialsCheckTest):
             self._write(root, "docs/hello-kotlin/index.html", self._page("jec-kotlin-hellokotlin-v1", 2))
             self._write(root, "docs/common/setup.html", self._page("jec-kotlin-setup-v1", 1))
             self.assertEqual(self._check(root), [])
+
+if __name__ == "__main__":
+    unittest.main()
