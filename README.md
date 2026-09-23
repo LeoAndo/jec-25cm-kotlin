@@ -14,7 +14,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 
-**いま教科書があるのはK01だけで、その中身も1コマ目ぶん（`ex01`）までです。** K01の2コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
+**いま教科書があるのはK01だけで、その中身も2コマ目ぶん（`ex01`・`ex02`）までです。** K01の3コマ目以降は、同じ `docs/hello-kotlin/index.html` にSTEPを足して書き足します。A01〜A04のAndroid系の単元は、下の「15コマ計画」に予定として載せています。教科書・教員用ガイド・`config/teaching-materials.json` への登録は、今後のissueで行います。
 
 ### 開き方
 
@@ -52,7 +52,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 K01の6コマがどの演習をどの順で扱うかは、前年度資料の節と `ex01`〜`ex11` の対応表のとおりです（下の「前年度の教材との関係」）。
 
-**いま教科書に書けているのは、1コマ目ぶん（`ex01`）までです。** 2コマ目以降（`ex02` 以降）は、その回を作る今後のissueで、**新しい教科書を作るのではなく、同じ `docs/hello-kotlin/index.html` にSTEPを足していきます。** `config/teaching-materials.json` の `packages` も、いまは `["ex01"]` だけです。`ex02` 以降をここに足すのは、その回の教科書を書くissueのときです（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
+**いま教科書に書けているのは、2コマ目ぶん（`ex01`・`ex02`）までです。** 3コマ目以降（`ex03` 以降）は、その回を作る今後のissueで、**新しい教科書を作るのではなく、同じ `docs/hello-kotlin/index.html` にSTEPを足していきます。** `config/teaching-materials.json` の `packages` も、いまは `["ex01", "ex02"]` だけです。`ex03` 以降をここに足すのは、その回の教科書を書くissueのときです（`packages` に書いた演習の完成コードがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。
 
 **純Kotlin系の単元は K01 の1つだけです。** K02以降は作りません。プロジェクトも `K01HelloKotlin` という1つのIntelliJ IDEAプロジェクトだけで、回を重ねるごとに `src/exNN/` のパッケージを足していきます。**単元ごとに別プロジェクトにしないのは、次の理由からです。**
 
@@ -371,9 +371,44 @@ Non-Bundled Plugins:
 # 開発環境：学生
 
 - 学生の端末は **macOS** を前提にします。Windowsは対象外です。
-- 前半の純Kotlin系（K01）は **IntelliJ IDEA**、後半のAndroid系（A01〜）は **Android Studio** を使います。どちらも学生自身の端末に入れてもらいます。準備の手順は [共通資料：授業を始めるまでの準備](docs/common/setup.html) にあります。
+- 前半の純Kotlin系（K01）は **IntelliJ IDEA**、後半のAndroid系（A01〜）は **Android Studio** を使います。**学校から貸し出しているMacには、どちらもインストール済みです。** 学生が自分で入れる作業はありません。準備の手順は [共通資料：授業を始めるまでの準備](docs/common/setup.html) にあります。
 - Android系の単元では、エミュレータ `jec_25cm_kotlin_Pixel 9a` を使います。教科書に載せるスクリーンショットも、このエミュレータで撮ります。
-- **このクラスの端末・バージョンのアンケートはまだ実施していません。** 回答が集まったら、ここに表として記録します（回答は匿名化し、教員による補完・推測は本文と分けて書きます）。学生のIDEが教員環境より新しい版だと、ウィザードの画面やひな形のコードが教材と食い違うことがあるため、把握しておきたい項目です。
+
+## アンケート：普段授業で使っているパソコン
+
+「普段授業で利用しているパソコンの Android Studio・Xcode・MacBook のバージョン」を聞き、**4件の回答**を得ました。**回答したのは一部の学生で、母数は分かりません。**下の表は回答のままで、教員による読み取りは次の節に分けて書きます。
+
+| 回答日 | Android Studio | Xcode | macOS |
+| --- | --- | --- | --- |
+| 2026-09-16 | `2026.1` | 27 | macOS 27 Golden Gate バージョン27.0 |
+| 2026-09-17 | `panda2` | 26.4 | tahoe ver.26.4.1 |
+| 2026-09-18 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4 | macOS Tahoe 26.5.2 |
+| 2026-09-21 | `Android Studio Panda 2 \| 2025.3` | Xcode Version 26.5 | macOS Tahoe バージョン 26.5.1 |
+
+Xcode と macOS の欄も聞いていますが、この授業では使いません（Kotlinの前半は IntelliJ IDEA、後半は Android Studio とエミュレータ）。ほかの科目と共通のアンケートです。
+
+### 回答の読み取り
+
+- **2026-09-16 の `2026.1` は、Android Studio Quail 4 です。** 製品名が書かれていなかったため本人に聞き直し、**2026-09-23 に確定**しました。推測ではありません。
+- **2026-09-21 の `2025.3` は、Panda 2 のバージョン番号**です。教員環境の Panda 2 と同じ版と読めます。
+- 2026-09-17 の `panda2` も Panda 2 です。
+
+### 教員環境・教材の基準とのバージョン差
+
+**回答した4人のうち2人が、教材の基準（Android Studio Panda 2）より新しい版を使っています。**
+
+| 回答日 | Android Studio | 基準との差 |
+| --- | --- | --- |
+| 2026-09-16 | Quail 4 | **2世代先** |
+| 2026-09-17 | Panda 2 | 一致 |
+| 2026-09-18 | Panda 3（2025.3.3） | 1パッチ先 |
+| 2026-09-21 | Panda 2（2025.3） | 一致 |
+
+**割合は結論にできません。** 母数が分からないので、「半分が新しい版」とは言えません。ただし1人でも基準より新しい版を使っている以上、読み替えの案内は要ります。
+
+- **Quail 4 で進めると、教科書と食い違うところが実測で分かっています。** リポジトリにある2つのひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）を突き合わせた結果、`buildTypes` の書き方（`isMinifyEnabled` ＋ `proguardFiles` ↔ `optimization { enable = false }`）と、R8のkeepルールの置き場（`app/proguard-rules.pro` ↔ `app/src/main/keepRules/rules.keep`）が違います。どちらも New Project ウィザードが生成する形そのものなので、学生が自分で作ったプロジェクトと教科書のコードを並べて見比べられなくなります。詳細は「教員が確認に使うプロジェクト」の表にあります。
+- **Panda 3（2025.3.3）の差分は実測していません。** Panda 2 とはパッチ1つぶんの差なので、上の食い違いは出ない見込みですが、確かめてはいません。ひな形も置いていません。
+- 読み替えの案内を共通資料にする作業は、[issue #5](https://github.com/LeoAndo/jec-25cm-kotlin/issues/5) で進めます。**Android系の単元の教科書はまだ無いので、いまの時点で学生が困ることはありません。**
 
 # 基本方針
 

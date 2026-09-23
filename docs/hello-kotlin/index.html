@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="JavaとSwiftを書ける人のためのKotlin入門。Playgroundと IntelliJ IDEA で、val・var・型推論・数の型を、他言語との差分で確かめる授業用教科書。">
+<meta name="description" content="JavaとSwiftを書ける人のためのKotlin入門。Playgroundと IntelliJ IDEA で、val・var・型推論・数の型・Null安全を、他言語との差分で確かめる授業用教科書。">
 <title>K01HelloKotlin — Kotlinを書き始める | Kotlin演習</title>
 <link rel="stylesheet" href="../assets/textbook.css">
 <script src="../assets/textbook.js" defer></script>
@@ -14,23 +14,33 @@
 <div class="shell">
 <aside class="sidebar"><div class="sidebar-inner">
 <p class="eyebrow">CONTENTS / 学習の順番</p>
-<nav aria-label="学習ステップ"><ol><li><a href="#step-0">00　この単元のゴール</a></li>
+<nav aria-label="学習ステップ">
+<p class="eyebrow">1コマ目 · STEP 00〜06</p>
+<ol><li><a href="#step-0">00　この単元のゴール</a></li>
 <li><a href="#step-1">01　Playgroundで動かす</a></li>
 <li><a href="#step-2">02　プロジェクトを作る</a></li>
 <li><a href="#step-3">03　val と var</a></li>
 <li><a href="#step-4">04　数の型</a></li>
 <li><a href="#step-5">05　ミニ練習</a></li>
-<li><a href="#step-6">06　完成</a></li></ol></nav>
-<div class="progress"><span data-progress-label>0 / 7 ステップ確認済み</span><progress value="0" max="7" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
+<li><a href="#step-6">06　完成</a></li></ol>
+<p class="eyebrow">2コマ目 · STEP 07〜12</p>
+<ol><li><a href="#step-7">07　2コマ目のゴール</a></li>
+<li><a href="#step-8">08　ex02 を作る</a></li>
+<li><a href="#step-9">09　String と String?</a></li>
+<li><a href="#step-10">10　安全呼び出し ?.</a></li>
+<li><a href="#step-11">11　ミニ練習</a></li>
+<li><a href="#step-12">12　完成</a></li></ol></nav>
+<div class="progress"><span data-progress-label>0 / 13 ステップ確認済み</span><progress value="0" max="13" aria-label="学習の進み具合"></progress><span class="muted">自分用のチェックです。</span></div>
 <div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
 </div></aside>
 <main id="main">
-<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · 今日は1コマ目</span><span>予習なしで始められる</span></div></div>
+<div class="hero"><span class="unit">01</span><p class="eyebrow">HELLO KOTLIN</p><h1>Kotlinを<br>書き始める</h1><p class="lede">JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。</p><div class="tags"><span>Kotlin / IntelliJ IDEA</span><span>Java・Swift経験者向け</span><span>全6コマ · この教科書は2コマ目まで</span><span>予習なしで始められる</span></div></div>
 <section id="step-0" aria-labelledby="title-0">
 <p class="step-meta">STEP 00 · 目安 5分</p>
 <h2 id="title-0">この単元のゴール</h2>
 
-<p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>で、今日はその<strong>1コマ目</strong>です。</p>
+<p>この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>です。</p>
+<p>この教科書は、その6コマぶんを<strong>1冊に順に積み上げていきます</strong>。いま入っているのは<strong>1コマ目（STEP 00〜06）と2コマ目（STEP 07〜12）</strong>で、回を重ねるごとに、うしろへSTEPが増えていきます。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。</p>
 <p>6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>、<code>ex02</code> …とパッケージを足していきます。この教科書も1冊のままで、回ごとにSTEPが増えていきます。</p>
 <p>みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。</p>
 <ol><li><strong>Kotlinではどう書くのか</strong>。</li><li><strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。</li></ol>
@@ -79,22 +89,22 @@ print(name)</code></pre></div>
 <tr><td><code>Int</code> / <code>Double</code> / <code>Float</code></td><td><code>int</code> / <code>double</code> / <code>float</code> とそのラッパークラス</td><td><code>Int</code> / <code>Double</code> / <code>Float</code></td></tr>
 </tbody></table>
 
-<h3>今日のゴール（コンソールに出る4行）</h3>
+<h3>1コマ目のゴール（コンソールに出る4行）</h3>
 <div class="code-head">Runの結果 · この4行が出れば完成</div>
 <pre tabindex="0"><code>1
 2.0
 3.0
 Tanaka</code></pre>
-<p>この4行を出すまでを、7つのステップに分けて進みます。</p>
-<h3>今日の1コマ（90分）の進み方</h3>
+<p>この4行を出すまでを、STEP 00 から STEP 06 までの7つのステップに分けて進みます。</p>
+<h3>1コマ目（90分）の進み方</h3>
 <table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
 <tr><td>前半（約35分）</td><td>STEP 00〜02</td><td>Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。</td></tr>
 <tr><td>後半（約55分）</td><td>STEP 03〜06</td><td><code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。</td></tr>
 </tbody></table>
-<p>プロジェクトは <strong>自分で新規作成</strong>します。今日は STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。</p>
+<p>プロジェクトは <strong>自分で新規作成</strong>します。1コマ目の STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。</p>
 <p><a href="#sample-project">完成プロジェクト</a>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。</p>
 <div class="note"><p class="box-title">この教科書の進め方</p><p>書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。</p><p>分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。</p></div>
-<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>今日のゴールの4行を指させた。KotlinがJVM言語であること、入口が <code>fun main()</code> であることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-0"><span>1コマ目のゴールの4行を指させた。KotlinがJVM言語であること、入口が <code>fun main()</code> であることを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-1">次へ：Playgroundで動かす →</a></div>
 
 </section><section id="step-1" aria-labelledby="title-1">
@@ -508,7 +518,375 @@ print(name)</code></pre></div>
 <ol><li>Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。</li><li>その中の <code>Kotlin</code> フォルダを開き、<code>K01HelloKotlin</code> フォルダがあることを確かめます。</li></ol>
 <p>この <code>Documents/Kotlin/K01HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。</p>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-6"><span>完成チェックを行い、先生に画面を見せた。保存されたフォルダの場所も確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
-<div class="goal"><p class="box-title">この単元のまとめ</p><p><strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。</p></div>
+<div class="goal"><p class="box-title">1コマ目のまとめ</p><p><strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。</p></div>
+
+</section><section id="step-7" aria-labelledby="title-7">
+<p class="step-meta">STEP 07 · 2コマ目 · 目安 5分</p>
+<h2 id="title-7">2コマ目のゴール（Null安全）</h2>
+
+<p>ここからが<strong>2コマ目</strong>です。使うプロジェクトは1コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex02</code> パッケージを足して、その中に書きます。1コマ目に書いた <code>ex01</code> は、そのまま残します。</p>
+<p>この回の主題は <strong>Null安全</strong> です。Kotlinは、<code>null</code> を入れられる型と、入れられない型を、言語のしくみとして分けます。Swiftのオプショナルに近い考え方で、Javaとはいちばん差が大きいところです。</p>
+
+<h3>この回で出てくるKotlinの言葉</h3>
+<table><thead><tr><th>Kotlinの言葉</th><th>Javaでの対応</th><th>Swiftでの対応</th></tr></thead><tbody>
+<tr><td><code>String</code>（<code>?</code> なし）</td><td><code>String</code>（<code>null</code> を入れられる）</td><td><code>String</code></td></tr>
+<tr><td><code>String?</code></td><td>対応物なし</td><td><code>String?</code>（オプショナル）</td></tr>
+<tr><td><code>?.</code>（安全呼び出し）</td><td><code>if (name != null)</code> で囲む、または <code>Optional</code></td><td><code>?.</code>（オプショナルチェイン）</td></tr>
+<tr><td><code>null</code></td><td><code>null</code></td><td><code>nil</code></td></tr>
+<tr><td><code>count()</code>（文字数）</td><td><code>length()</code></td><td><code>count</code></td></tr>
+</tbody></table>
+
+<h3>同じ「nullかもしれない文字列」を3つの言語で書く</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>var name2: String? = null</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>String name2 = null;</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>var name2: String? = nil</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>KotlinとSwiftは、<strong>型そのものに「<code>null</code> が入るかどうか」を書きます。</strong> <code>String</code> と <code>String?</code> は別の型です。</li>
+<li>Javaには、この区別がありません。どの参照型にも <code>null</code> を入れられるので、「入らない」ことを型で表せません。</li>
+<li>Kotlinの <code>null</code> は、Swiftの <code>nil</code> にあたります。書く文字が違うだけで、役目は同じです。</li>
+</ul></div>
+
+<h3>2コマ目のゴール（コンソールに出る3行）</h3>
+<div class="code-head">Runの結果 · この3行が出れば完成</div>
+<pre tabindex="0"><code>5
+null
+6</code></pre>
+<p>2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>を説明できるようになるのが、この回のゴールです。</p>
+
+<h3>この90分の進み方</h3>
+<table><thead><tr><th>時間</th><th>進めるステップ</th><th>やること</th></tr></thead><tbody>
+<tr><td>前半（約35分）</td><td>STEP 07〜09</td><td><code>ex02</code> を作り、<code>String</code> と <code>String?</code> の違いを、わざと出したコンパイルエラーで確かめる。</td></tr>
+<tr><td>後半（約55分）</td><td>STEP 10〜12</td><td>安全呼び出し <code>?.</code> を書き、3行の出力を完成させる。</td></tr>
+</tbody></table>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-7"><span>ゴールの3行を指させた。Kotlinが <code>null</code> を入れられる型と入れられない型を分けること、それがSwiftのオプショナルに近いことを言えた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-8">次へ：ex02 を作る →</a></div>
+
+</section><section id="step-8" aria-labelledby="title-8">
+<p class="step-meta">STEP 08 · 2コマ目 · 目安 5分</p>
+<h2 id="title-8">ex02 パッケージと main.kt を作る</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex02</code> パッケージと、その中の <code>main.kt</code> を作ります。</p></div>
+<p><strong>STEP 02 の⑥と同じ操作です。</strong>違うのは、パッケージ名が <code>ex01</code> ではなく <code>ex02</code> になることだけです。手順は、下にもう一度すべて書きます。</p>
+
+<h3>① プロジェクトを開き直す</h3>
+<ol>
+<li>IntelliJ IDEA を開きます。<code>K01HelloKotlin</code> がすでに開いていれば、そのまま使います。</li>
+<li>開いていないときは、ホーム画面の左側に並ぶ、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> をクリックします。</li>
+<li>一覧に無いときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選び、<code>書類</code>（<code>Documents</code>）の中の <code>Kotlin</code> フォルダにある <code>K01HelloKotlin</code> フォルダを選んで開きます。</li>
+<li>左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> があることを確かめます。<code>ex01</code> は消しません。</li>
+</ol>
+
+<h3>② ex02 パッケージを作る</h3>
+<ol>
+<li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。</li>
+<li>名前に <code>ex02</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex02</code> ができます。すべて小文字で、記号は入れません。</li>
+</ol>
+
+<h3>③ main.kt を作る</h3>
+<ol>
+<li>できた <code>ex02</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でもなく、<code>ex02</code> を右クリックします。</strong></li>
+<li>名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。</li>
+<li>できた <code>main.kt</code> の1行目に <code>package ex02</code> が入っていることを確かめます。</li>
+</ol>
+<div class="note"><p class="box-title">1行目が <code>package ex02</code> になっていないとき</p><p>ファイルが <code>ex02</code> の中ではなく、<code>src</code> の直下か <code>ex01</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex02</code> を右クリックしたかどうかが分かれ目です。</p></div>
+
+<h3>④ Java / Swift ではどう書くか（パッケージ）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>// src/ex02/main.kt
+package ex02
+
+fun main() {
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>// src/ex02/Main.java
+package ex02;
+
+public class Main {
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>// Main.swift
+// ファイルの先頭に書く
+// package 宣言はない</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>KotlinもJavaも、ファイルの先頭に <code>package</code> を書き、フォルダの構成と合わせます。違うのは行末の <code>;</code> が要らないことだけです。</li>
+<li>Swiftには、ファイルの先頭に書く <code>package</code> 宣言がありません。同じターゲットの中のファイルは、宣言なしで互いを見られます。</li>
+<li><code>ex01</code> と <code>ex02</code> は別のパッケージなので、どちらにも <code>main.kt</code> があり、どちらにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。</li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-8"><span><code>src/ex02/main.kt</code> を作り、1行目が <code>package ex02</code> になっていることを確かめた。<code>ex01</code> も残っている。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-9">次へ：String と String? →</a></div>
+
+</section><section id="step-9" aria-labelledby="title-9">
+<p class="step-meta">STEP 09 · 2コマ目 · 目安 25分</p>
+<h2 id="title-9">nullを入れられない型と、入れられる型（String と String?）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>String</code> と <code>String?</code> を書き分けます。<code>?</code> の付かない型に <code>null</code> を入れると、Runする前に止められることを、自分の画面で確かめます。</p></div>
+<p class="file">変更するファイル：src/ex02/main.kt</p>
+<table><thead><tr><th>型</th><th>入れられる値</th></tr></thead><tbody>
+<tr><td><code>String</code></td><td>文字列だけ。<code>null</code> は入れられません。</td></tr>
+<tr><td><code>String?</code></td><td>文字列か、<code>null</code> のどちらか。</td></tr>
+</tbody></table>
+<p>型の最後に <code>?</code> を1文字足すかどうかだけで、別の型になります。</p>
+
+<h3>① ファイル全体を、次の内容にする</h3>
+<div class="code-head">src/ex02/main.kt · 全体を置き換える</div>
+<pre id="code-nullable" tabindex="0"><code>package ex02
+
+fun main() {
+    val name1: String = &quot;Saito&quot;
+    println(name1.count())
+
+    var name2: String? = null
+}</code></pre>
+<p>ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。</p>
+
+<h3>② 実行結果</h3>
+<div class="code-head">Runの結果</div>
+<pre tabindex="0"><code>5</code></pre>
+<p><code>Saito</code> は5文字なので <code>5</code> が出ます。<code>count()</code> は、文字列の文字数を返すKotlinの関数です。Javaの <code>length()</code>、Swiftの <code>count</code> にあたります。</p>
+<div class="note"><p class="box-title">name2 の行が薄い色になっていても大丈夫</p><p><code>var name2: String? = null</code> は宣言しただけで、まだどこからも使っていません。IntelliJ IDEA が「使っていない」ことを薄い色で知らせることがありますが、STEP 10 で使うので、消さずにそのままにします。</p></div>
+
+<h3>③ Java / Swift ではどう書くか（nullを入れられるか）</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val name1: String = &quot;Saito&quot;
+// val name1: String = null  ← 通らない
+var name2: String? = null    // ? を付ければ入る</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>String name1 = &quot;Saito&quot;;
+String name2 = null;         // どの参照型にも入る
+// 型では止められない</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let name1: String = &quot;Saito&quot;
+// let name1: String = nil   ← 通らない
+var name2: String? = nil     // ? を付ければ入る</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinは、型の最後に <code>?</code> が付いていなければ <code>null</code> を代入できません。<strong>コンパイルエラーになり、Runできません。</strong></li>
+<li>Swiftも同じ分け方です。<code>nil</code> を入れられるのは <code>String?</code> だけで、<code>String</code> には入れられません。<strong>KotlinのNull安全は、Swiftのオプショナルとほぼ同じ発想です。</strong></li>
+<li>Javaは、どの参照型にも <code>null</code> を入れられます。<code>String name = null;</code> はそのまま通り、<code>name.length()</code> を呼んだ瞬間に <code>NullPointerException</code> になります。</li>
+<li>つまり<strong>Javaでは動かすまで分からないことが、KotlinとSwiftではコンパイル時に分かります。</strong> 同じ間違いに気づく時刻が、実行時から書いている最中に移ります。</li>
+<li>Javaにも <code>Optional</code> や <code>@Nullable</code> はありますが、どちらも型そのものの決まりではありません。<code>String</code> の変数に <code>null</code> が入ることを、言語が止めてくれるわけではありません。</li>
+</ul></div>
+
+<h3>④ わざとコンパイルエラーを出す（必須）</h3>
+<div class="task"><p class="box-title">やること</p>
+<p><code>val name1: String = &quot;Saito&quot;</code> の <code>&quot;Saito&quot;</code> を <code>null</code> に書き換えます。Runを押す前に、その行を見てください。</p>
+<p>見るのは次の3つです。<strong>どの行が赤くなったか・IDEが何を止めていると言っているか・どう直せと言っているか。</strong></p>
+<details><summary>試したあとに開く：何が起きたか</summary>
+<p>書き換えた行に赤い波線が出て、この型には <code>null</code> を代入できない、という<strong>おおよそその意味のメッセージ</strong>が出ます。Runしても実行されません。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言を覚える必要はありません。<strong>赤い波線が出たら、<code>?</code> の付いていない型に <code>null</code> を入れようとしている</strong>と読み替えてください。</p>
+<p>直し方は2つです。型を <code>String?</code> に変えるか、<code>null</code> をやめて文字列に戻すか。ここでは <code>&quot;Saito&quot;</code> に戻し、赤い波線が消えることを確かめます。</p>
+</details></div>
+
+<h3>⑤ 同じ間違いを、JavaとSwiftでしたとき</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val name1: String = null
+// コンパイルエラー。Runできない</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>String name1 = null;
+// ここは通る
+int length = name1.length();
+// 実行時に NullPointerException</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let name1: String = nil
+// コンパイルエラー。ビルドできない</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>KotlinとSwiftは、<strong>書いている最中</strong>に止まります。プログラムは1度も動きません。</li>
+<li>Javaは、<strong>動かしてその行に着いたとき</strong>に落ちます。通らなかった経路の <code>null</code> は、そのまま残ります。</li>
+<li>どちらも間違いは見つかりますが、<strong>見つかる時刻が違います。</strong> Kotlinが型に <code>?</code> を持ち込んだのは、この時刻を早めるためです。</li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-9"><span><code>String</code> と <code>String?</code> を書き分けて <code>5</code> を出せた。<code>?</code> の付かない型に <code>null</code> を入れるとRunできないことを、自分の画面で確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-10">次へ：安全呼び出し ?. →</a></div>
+
+</section><section id="step-10" aria-labelledby="title-10">
+<p class="step-meta">STEP 10 · 2コマ目 · 目安 25分</p>
+<h2 id="title-10">安全呼び出し（?.）</h2>
+
+<div class="goal"><p class="box-title">このステップのゴール</p><p><code>?.</code> を使って、<code>null</code> かもしれない変数のメソッドを呼びます。3行の出力を完成させます。</p></div>
+<p class="file">変更するファイル：src/ex02/main.kt</p>
+
+<h3>① ?. は何をするか</h3>
+<table><thead><tr><th>書き方</th><th><code>name2</code> が <code>null</code> のとき</th><th><code>name2</code> に文字列が入っているとき</th></tr></thead><tbody>
+<tr><td><code>name2?.count()</code></td><td><code>count()</code> を呼ばずに <code>null</code> を返す</td><td><code>count()</code> を呼んで、その結果を返す</td></tr>
+<tr><td><code>name2.count()</code></td><td colspan="2">コンパイルエラー。<code>String?</code> には、そのままメソッドを呼べません</td></tr>
+</tbody></table>
+<p><strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。</p>
+
+<h3>② ファイル全体を、次の内容にする</h3>
+<div class="code-head">src/ex02/main.kt · 全体を置き換える</div>
+<pre id="code-safe-call" tabindex="0"><code>package ex02
+
+fun main() {
+    val name1: String = &quot;Saito&quot;
+    println(name1.count())
+
+    var name2: String? = null
+    println(name2?.count())
+    name2 = &quot;Tanaka&quot;
+    println(name2?.count())
+}</code></pre>
+
+<h3>③ 実行結果</h3>
+<div class="code-head">Runの結果 · この3行が出れば成功</div>
+<pre tabindex="0"><code>5
+null
+6</code></pre>
+<table><thead><tr><th>行</th><th>出る内容</th><th>理由</th></tr></thead><tbody>
+<tr><td>1行目</td><td><code>5</code></td><td><code>name1</code> は <code>String</code> で、<code>Saito</code> の5文字。<code>?</code> が付いていないので <code>?.</code> も要らない。</td></tr>
+<tr><td>2行目</td><td><code>null</code></td><td><code>name2</code> が <code>null</code> なので、<code>count()</code> は呼ばれず <code>null</code> が返り、<code>println</code> がそれを出している。</td></tr>
+<tr><td>3行目</td><td><code>6</code></td><td><code>name2</code> に <code>Tanaka</code> を代入したので、<code>count()</code> が呼ばれて6が返る。</td></tr>
+</tbody></table>
+
+<h3>④ ?. が返す型は Int ではなく Int?</h3>
+<p><code>count()</code> は <code>Int</code> を返します。しかし <code>name2?.count()</code> 全体の型は <code>Int?</code> です。<code>name2</code> が <code>null</code> のときは <code>count()</code> が呼ばれず <code>null</code> が返るので、「<code>Int</code> か <code>null</code> のどちらか」になるからです。</p>
+<div class="task"><p class="box-title">画面で確かめる</p><p><code>fun main()</code> のいちばん最後の行の下に <code>val length = name2?.count()</code> と1行足し、<code>length</code> にマウスを重ねて、出てくる型を読みます。確かめたら、足した行を消します。</p><details><summary>確かめたあとに答えを見る</summary><p><code>Int?</code> と出ます。<code>Int</code> ではありません。<strong><code>null</code> が返る可能性が、そのまま型に出ています。</strong> Swiftの <code>name2?.count</code> も同じで、結果は <code>Int?</code> です。</p></details></div>
+
+<h3>⑤ Java / Swift ではどう書くか</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>var name2: String? = null
+val length: Int? = name2?.count()</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>String name2 = null;
+Integer length =
+    (name2 != null) ? name2.length() : null;</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>var name2: String? = nil
+let length: Int? = name2?.count</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinの <code>?.</code> は、Swiftのオプショナルチェイン <code>?.</code> と<strong>ほぼ同じ</strong>です。書く記号も、<code>null</code> のときに呼ばないところも、返る型が <code>Int?</code> になるところも同じです。違うのは、Kotlinの <code>count()</code> が関数で、Swiftの <code>count</code> がプロパティであることくらいです。</li>
+<li>Javaには <code>?.</code> がありません。<code>if (name2 != null)</code> で囲むか、<code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> のように書きます。</li>
+<li><strong>Javaの書き方は、囲むことを書く人が忘れないという前提の上に立っています。</strong> 忘れても書けてしまい、実行して初めて <code>NullPointerException</code> になります。</li>
+<li>Kotlinでは、<code>?.</code> を忘れたコードは<strong>コンパイルエラー</strong>になります。<code>String?</code> の変数に <code>count()</code> をそのまま呼ぶ行は、Runできません。<strong>忘れられないのが、<code>if</code> で囲む書き方との違いです。</strong></li>
+</ul></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>3行を出せた。2行目に <code>null</code> と出る理由を、<code>?.</code> のはたらきで説明できた。<code>?.</code> が返す型が <code>Int?</code> であることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-11">次へ：ミニ練習 →</a></div>
+
+</section><section id="step-11" aria-labelledby="title-11">
+<p class="step-meta">STEP 11 · 2コマ目 · 目安 15分</p>
+<h2 id="title-11">ミニ練習</h2>
+
+<p>ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。</p>
+
+<h3>練習A · String? の変数をもう1つ足す（必須・7分）</h3>
+<div class="task"><p class="box-title">やること</p><p><code>fun main()</code> のいちばん最後の行（3つめの <code>println</code>）の下に、<code>String?</code> の変数を1つ足します。名前も値も自分で決めます。まず <code>null</code> を入れ、<code>?.count()</code> を付けた <code>println</code> を1行足して、出力を4行にします。Runして結果を見たら、こんどは <code>null</code> のかわりに好きな文字列を入れて、もう一度Runします。</p></div>
+<details><summary>試したあと：確かめること</summary><p><code>null</code> を入れたときは <code>null</code> と出ます。文字列を入れたときは、その文字列の文字数が出ます。自分が入れた文字列を数えて、出た数と合っているか確かめましょう。<strong>同じ1行が、入っている値によって数を出したり <code>null</code> を出したりします。</strong>これが <code>?.</code> のはたらきです。</p></details>
+
+<h3>練習B · ?. を . にしてみる（必須・5分）</h3>
+<div class="task"><p class="box-title">やること</p><p>練習Aで足した行の <code>?.</code> を <code>.</code> に書き換えます。Runを押す前に、その行を見てください。</p></div>
+<details><summary>試したあと：答えと理由</summary><p>その行に赤い波線が出て、Runできません。<code>String?</code> の変数には、メソッドをそのまま呼べないからです。メッセージの文言はバージョンで変わるので、覚えなくて構いません。<strong>読み替えるのは「<code>?</code> の付いた型を、<code>?</code> なしで扱おうとしている」の1つだけです。</strong></p><p>確かめたら <code>?.</code> に戻し、赤い波線が消えることを確かめます。</p></details>
+
+<h3>同じことを、JavaとSwiftでしたとき</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val name3: String? = null
+val length = name3.count()
+// コンパイルエラー。Runできない</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>String name3 = null;
+int length = name3.length();
+// 通る。実行時に NullPointerException</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let name3: String? = nil
+let length = name3.count
+// コンパイルエラー。ビルドできない</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>KotlinとSwiftは、<code>?</code> の付いた型にそのままメソッドを呼ぶコードを、コンパイル時に止めます。</li>
+<li>Javaは止めません。<code>null</code> かどうかを確かめるのは、書く人の仕事です。</li>
+<li><strong><code>?.</code> は「安全に書くための心がけ」ではなく、「書かないと通らない」しくみです。</strong> ここがJavaといちばん違うところです。</li>
+</ul></div>
+
+<h3>最後の3分 · 元に戻し、記録する</h3>
+<ol><li>練習Aで足した2行を消します。</li><li><code>?.</code> が元どおりになっていることを確かめます。</li><li>Runし、STEP 10 と同じ3行に戻ったことを確かめます。</li><li>「JavaならNullPointerExceptionになるところを、Kotlinでは＿＿で止まる」という形で、気づいたことを1つメモします。</li></ol>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>練習A・Bを試し、<code>?.</code> の有無で何が変わるかを言えた。最後に元の3行へ戻した。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="next"><a href="#step-12">次へ：完成 →</a></div>
+
+</section><section id="step-12" aria-labelledby="title-12">
+<p class="step-meta">STEP 12 · 2コマ目 · 目安 15分</p>
+<h2 id="title-12">完成</h2>
+
+<h3>① 完成チェック</h3>
+<p>Runし、コンソールの出力を上から順に見ます。</p>
+<table><thead><tr><th>行</th><th>出る内容</th><th>理由</th></tr></thead><tbody>
+<tr><td>1行目</td><td><code>5</code></td><td><code>val name1: String</code> には <code>null</code> が入らないので、<code>?.</code> なしで <code>count()</code> を呼べる。</td></tr>
+<tr><td>2行目</td><td><code>null</code></td><td><code>var name2: String?</code> が <code>null</code> のとき、<code>?.</code> が <code>count()</code> を呼ばずに <code>null</code> を返している。</td></tr>
+<tr><td>3行目</td><td><code>6</code></td><td>同じ <code>name2?.count()</code> でも、文字列が入っていれば <code>count()</code> が呼ばれる。</td></tr>
+</tbody></table>
+<p>表のとおりになったら、先生に画面を見せ、<code>?</code> を書いた場所と <code>?.</code> を書いた場所を指さして説明します。</p>
+<details><summary>入力したコードと照合する</summary>
+<p>ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex02</code> も忘れずに入れます。</p>
+<div class="code-head">main.kt · 完成コード</div>
+<pre id="code-final-ex02" tabindex="0"><code>package ex02
+
+fun main() {
+    val name1: String = &quot;Saito&quot;
+    println(name1.count())
+
+    var name2: String? = null
+    println(name2?.count())
+    name2 = &quot;Tanaka&quot;
+    println(name2?.count())
+}</code></pre>
+</details>
+
+<h3>② 同じ3行を、JavaとSwiftで出すと</h3>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>package ex02
+
+fun main() {
+    val name1: String = &quot;Saito&quot;
+    println(name1.count())
+
+    var name2: String? = null
+    println(name2?.count())
+    name2 = &quot;Tanaka&quot;
+    println(name2?.count())
+}</code></pre></div>
+<div class="compare-item" data-lang="Java"><p class="compare-lang" translate="no">Java</p><pre><code>package ex02;
+
+public class Main {
+    public static void main(String[] args) {
+        final String name1 = &quot;Saito&quot;;
+        int length = name1.length();
+        System.out.println(length);
+
+        String name2 = null;
+        printLength(name2);
+        name2 = &quot;Tanaka&quot;;
+        printLength(name2);
+    }
+
+    static void printLength(String s) {
+        if (s == null) {
+            System.out.println(&quot;null&quot;);
+        } else {
+            System.out.println(s.length());
+        }
+    }
+}</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>let name1: String = &quot;Saito&quot;
+print(name1.count)
+
+var name2: String? = nil
+// ?. の書き方はKotlinと同じ
+let length1: Int? = name2?.count
+name2 = &quot;Tanaka&quot;
+let length2: Int? = name2?.count</code></pre></div>
+</div>
+<div class="note"><p class="box-title">POINT</p>
+<ul>
+<li>Kotlinの <code>println(name2?.count())</code> の1行が、Javaでは <code>if</code> と <code>else</code> に分かれます。2回出てくるので、ここでは <code>printLength</code> というメソッドにまとめました。<strong>Javaでは「<code>null</code> のとき何を出すか」も自分で書きます。</strong> Kotlinは <code>?.</code> が <code>null</code> を返し、<code>println</code> がそれをそのまま出します。</li>
+<li>Swiftの書き方はKotlinとほぼ同じです。ただし<strong>実行時の形が違います。</strong> Swiftの <code>String?</code> はオプショナルという入れ物に包まれた別の値なので、そのまま表示すると包まれていることが分かる形で出ます。Kotlinの <code>String?</code> は、実行時には文字列そのものか <code>null</code> かのどちらかで、包む入れ物がありません。だから <code>println(name2?.count())</code> は、数か <code>null</code> をそのまま出します。</li>
+<li>Kotlinの <code>?</code> と <code>?.</code> は、<strong>コンパイラのための印</strong>です。実行時の値が増えるわけではありません。ここがSwiftのオプショナルと似て見えて、中身が違うところです。</li>
+</ul></div>
+
+<h3>③ ex01 と ex02 が並んでいることを確かめる</h3>
+<ol>
+<li>左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code> と <code>ex02</code> が並んでいることを確かめます。</li>
+<li><code>ex01</code> の <code>main.kt</code> を開きます。1コマ目に書いたコードが、そのまま残っています。</li>
+<li><code>fun main()</code> が2つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。</li>
+</ol>
+<p>プロジェクトは <code>K01HelloKotlin</code> の1つだけを使い続けます。回を重ねるごとに <code>src</code> の下のパッケージが増えていくので、前に書いたコードをいつでも開いて見返せます。</p>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-12"><span>完成チェックを行い、先生に画面を見せた。<code>ex01</code> と <code>ex02</code> が同じプロジェクトに並んでいることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
+<div class="goal"><p class="box-title">この回のまとめ</p><p><strong><code>?</code> を付けた型だけが <code>null</code> を持てる → 呼ぶときは <code>?.</code> を付ける → 返ってくるのも <code>?</code> の付いた型。</strong><br>Javaでは実行時に <code>NullPointerException</code> で気づいていたことを、Kotlinでは書いている最中に見つけられます。Swiftのオプショナルで知っている考え方が、そのまま使えます。</p></div>
 
 </section>
 <section id="sample-project" aria-labelledby="sample-title">
@@ -542,6 +920,8 @@ print(name)</code></pre></div>
 <tr><td>実行しても何も出ない</td><td>画面の下の <strong>実行</strong> ツールウィンドウが開いているか確認する。閉じていたら <strong>表示 → ツールウィンドウ → 実行</strong> で開く。</td></tr>
 <tr><td><code>プロセスは終了コード 1 で終了しました</code> と出る</td><td><code>0</code> 以外の数で終わったときは、途中で異常が起きています。その上に出ている赤い文字を、上から読む。</td></tr>
 <tr><td>出るけれど、内容が違う</td><td><code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。</td></tr>
+<tr><td><code>String</code> の変数に <code>null</code> を入れた行が赤い</td><td><code>?</code> の付かない型には <code>null</code> を入れられません。<code>null</code> を入れたいなら型を <code>String?</code> にし、入れないなら値を文字列に戻す（STEP 09）。</td></tr>
+<tr><td><code>String?</code> の変数を使った行が赤い</td><td><code>?.</code> になっているか確認する。<code>name2.count()</code> ではなく <code>name2?.count()</code> です（STEP 10）。</td></tr>
 <tr><td>赤い波線が消えない</td><td>全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。</td></tr>
 <tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。</td></tr>
 </tbody></table>
@@ -550,11 +930,12 @@ print(name)</code></pre></div>
 <li><a href="https://kotlinlang.org/docs/comparison-to-java.html">Kotlin公式：Comparison to Java</a></li>
 <li><a href="https://kotlinlang.org/docs/basic-syntax.html">Kotlin公式：Basic syntax</a></li>
 <li><a href="https://kotlinlang.org/docs/basic-types.html">Kotlin公式：Basic types</a></li>
+<li><a href="https://kotlinlang.org/docs/null-safety.html">Kotlin公式：Null safety</a></li>
 <li><a href="https://kotlinlang.org/docs/numbers.html">Kotlin公式：Numbers</a></li>
 <li><a href="https://kotlinlang.org/docs/home.html">Kotlin公式：ドキュメントの入口</a></li>
 <li><a href="https://www.jetbrains.com/help/idea/get-started-with-kotlin.html">IntelliJ IDEA公式：Get started with Kotlin</a></li>
 </ul></section>
-<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・今日は1コマ目） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
+<footer class="footer"><p>教材の対象：K01HelloKotlin（全6コマ・この教科書は2コマ目まで） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。</p><p>チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。</p></footer>
 </main></div>
 <p class="sr-only" role="status" aria-live="polite" data-copy-status></p>
 </body></html>
