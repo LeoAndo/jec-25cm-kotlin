@@ -152,8 +152,8 @@ def build(output_dir):
     timestamp = subprocess.check_output(["git", "show", "-s", "--format=%ct", "HEAD"], cwd=ROOT, text=True).strip()
     published = datetime.fromtimestamp(int(timestamp), timezone(timedelta(hours=9)))
     version = f"materials-{published:%Y.%m.%d}-{revision[:12]}"
-    # 学生のダウンロードフォルダで版を見分けられるよう、版タグと同じ日付を名前に入れる。
-    stem = f"{ASSET_STEM}-{published:%Y-%m-%d}"
+    # 同日の別版も見分けられるよう、版タグと同じ日付・コミットIDを名前に入れる。
+    stem = f"{ASSET_STEM}-{published:%Y-%m-%d}-{revision[:12]}"
     asset_name = f"{stem}.zip"
 
     # リポジトリ内の古いZIPをそのまま配布せず、現在の完成コードを反映する。
