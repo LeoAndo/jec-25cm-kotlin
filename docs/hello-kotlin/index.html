@@ -708,7 +708,7 @@ int length = name1.length();
 <h3>① ?. は何をするか</h3>
 <table><thead><tr><th>書き方</th><th><code>name2</code> が <code>null</code> のとき</th><th><code>name2</code> に文字列が入っているとき</th></tr></thead><tbody>
 <tr><td><code>name2?.count()</code></td><td><code>count()</code> を呼ばずに <code>null</code> を返す</td><td><code>count()</code> を呼んで、その結果を返す</td></tr>
-<tr><td><code>name2.count()</code></td><td colspan="2">コンパイルエラー。<code>String?</code> には、そのままメソッドを呼べません</td></tr>
+<tr><td><code>name2.count()</code></td><td>コンパイルエラー。<code>String?</code> には、そのままメソッドを呼べません</td><td>呼べます。文字列を代入した行より後では、Kotlinが型を <code>String</code> として扱い直すためです（スマートキャスト）</td></tr>
 </tbody></table>
 <p><strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。</p>
 
@@ -756,8 +756,25 @@ let length: Int? = name2?.count</code></pre></div>
 <li>Kotlinの <code>?.</code> は、Swiftのオプショナルチェイン <code>?.</code> と<strong>ほぼ同じ</strong>です。書く記号も、<code>null</code> のときに呼ばないところも、返る型が <code>Int?</code> になるところも同じです。違うのは、Kotlinの <code>count()</code> が関数で、Swiftの <code>count</code> がプロパティであることくらいです。</li>
 <li>Javaには <code>?.</code> がありません。<code>if (name2 != null)</code> で囲むか、<code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> のように書きます。</li>
 <li><strong>Javaの書き方は、囲むことを書く人が忘れないという前提の上に立っています。</strong> 忘れても書けてしまい、実行して初めて <code>NullPointerException</code> になります。</li>
-<li>Kotlinでは、<code>?.</code> を忘れたコードは<strong>コンパイルエラー</strong>になります。<code>String?</code> の変数に <code>count()</code> をそのまま呼ぶ行は、Runできません。<strong>忘れられないのが、<code>if</code> で囲む書き方との違いです。</strong></li>
+<li>Kotlinでは、<code>null</code> が入っているかもしれない位置で <code>?.</code> を忘れると、<strong>コンパイルエラー</strong>になります。Runできないので、忘れたまま先へ進めません。<strong>忘れられないのが、<code>if</code> で囲む書き方との違いです。</strong></li>
+<li><strong>ただし「常にエラー」ではありません。</strong> 文字列を代入した行より後では、Kotlinがその変数を <code>String</code> として扱い直すので（スマートキャスト）、<code>name2.count()</code> と書いても通ります。<strong>この教材の完成コードは3回とも <code>?.</code> でそろえてあります</strong>ので、3つ目には次の注意が出ます。</li>
 </ul></div>
+<div class="note"><p class="box-title">3つ目の <code>?.</code> に、黄色い警告が出ます</p>
+<p>完成コードの最後の行 <code>println(name2?.count())</code> に、IntelliJ IDEA が警告を出します。<strong>間違いではありません。</strong> 直前の行で文字列を代入しているので、Kotlinはこの位置の <code>name2</code> を <code>String</code> として扱っています。<code>null</code> でないと分かっている相手に <code>?.</code> を付けているため、「その <code>?.</code> は要りません」と教えてくれています。</p>
+<p>この教材では、<strong>3回とも同じ書き方にそろえたいので、警告が出るまま残します。</strong> 消したいときは、最後の行だけ <code>println(name2.count())</code> にすれば警告は消えます。出力はどちらでも <code>6</code> です。</p>
+<div class="compare">
+<div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>var name2: String? = null
+name2 = &quot;Tanaka&quot;
+// 代入より後は String として扱われる
+println(name2.count())   // 通る（6）
+println(name2?.count())  // 通るが「?. は要らない」と警告</code></pre></div>
+<div class="compare-item" data-lang="Swift"><p class="compare-lang" translate="no">Swift</p><pre><code>var name2: String? = nil
+name2 = &quot;Tanaka&quot;
+// 代入しても String? のまま。扱い直さない
+print(name2.count)    // エラー
+print(name2?.count)   // 警告なし。これが必要</code></pre></div>
+</div>
+<p><strong>ここはSwiftと違うところです。</strong> Swiftは代入しても型が <code>String?</code> のままなので、<code>?.</code> かアンラップがいつでも要ります。Kotlinは、代入した内容から「ここではもう <code>null</code> ではない」と判断して、型を絞り込みます。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>3行を出せた。2行目に <code>null</code> と出る理由を、<code>?.</code> のはたらきで説明できた。<code>?.</code> が返す型が <code>Int?</code> であることも確かめた。</span></label><p>できたらチェックします。できないときは、この画面を先生に見せましょう。</p></div>
 <div class="next"><a href="#step-11">次へ：ミニ練習 →</a></div>
 
