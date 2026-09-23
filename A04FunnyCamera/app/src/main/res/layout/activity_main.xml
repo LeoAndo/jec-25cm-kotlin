@@ -12,7 +12,7 @@
         android:layout_height="match_parent" />
 
     <!-- 指でドラッグして動かせるキャラクター -->
-    <ImageView
+    <jp.ac.jec.a04funnycamera.DraggableImageView
         android:id="@+id/iv_character"
         android:layout_width="200dp"
         android:layout_height="200dp"

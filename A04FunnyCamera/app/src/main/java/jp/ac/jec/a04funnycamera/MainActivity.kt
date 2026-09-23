@@ -1,14 +1,12 @@
 package jp.ac.jec.a04funnycamera
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -45,7 +43,11 @@ class MainActivity : AppCompatActivity() {
                 startCamera()
             } else {
                 Log.w(TAG, "全ての権限を許可しないとアプリが正常に動作しません")
-                showMessage("全ての権限を許可しないとアプリが正常に動作しません")
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    "全ての権限を許可しないとアプリが正常に動作しません",
+                    Snackbar.LENGTH_LONG
+                ).show()
             }
         }
 
@@ -71,37 +73,12 @@ class MainActivity : AppCompatActivity() {
         // Camera機能を使うために権限リクエストを行う
         requestPermissions.launch(arrayOf(Manifest.permission.CAMERA))
 
-        setupDragCharacter()
         findViewById<Button>(R.id.btn_take_picture).setOnClickListener { takeScreenshot() }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         saveExecutor.shutdown()
-    }
-
-    /**
-     * キャラクターを指でドラッグして移動できるようにする
-     */
-    @SuppressLint("ClickableViewAccessibility")
-    private fun setupDragCharacter() {
-        // タッチした位置とキャラクター左上の差分
-        var offsetX = 0f
-        var offsetY = 0f
-        characterView.setOnTouchListener { view, event ->
-            when (event.actionMasked) {
-                MotionEvent.ACTION_DOWN -> {
-                    offsetX = view.x - event.rawX
-                    offsetY = view.y - event.rawY
-                }
-
-                MotionEvent.ACTION_MOVE -> {
-                    view.x = event.rawX + offsetX
-                    view.y = event.rawY + offsetY
-                }
-            }
-            true
-        }
     }
 
     /**
@@ -141,7 +118,7 @@ class MainActivity : AppCompatActivity() {
     private fun takeScreenshot() {
         // プレビューに表示中のカメラ映像を取得する (カメラ起動前はnull)
         val previewBitmap = previewView.bitmap ?: run {
-            showMessage("カメラの準備ができていません")
+            Log.d(TAG, "カメラの準備ができていません")
             return
         }
 
@@ -154,7 +131,8 @@ class MainActivity : AppCompatActivity() {
         saveExecutor.execute {
             val isSaved = saveBitmap(screenshot)
             runOnUiThread {
-                showMessage(if (isSaved) "保存しました" else "保存に失敗しました")
+                val message = if (isSaved) "保存しました" else "保存に失敗しました"
+                Snackbar.make(findViewById(R.id.main), message, Snackbar.LENGTH_SHORT).show()
             }
         }
     }
@@ -193,10 +171,6 @@ class MainActivity : AppCompatActivity() {
             contentResolver.delete(uri, null, null)
             false
         }
-    }
-
-    private fun showMessage(message: String) {
-        Snackbar.make(findViewById<View>(R.id.main), message, Snackbar.LENGTH_SHORT).show()
     }
 
     companion object {
