@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ちがうAndroid Studioのバージョンで進めるとき | Kotlin演習</title>
+<link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
+<body class="plain"><a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../hello-android/index.html" data-back>もとのページへ戻る</a></header>
+<main id="main"><div class="hero"><p class="eyebrow">KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート</p>
+<h1>ちがうAndroid Studioの<br>バージョンで進めるとき</h1>
+<p class="lede">Androidの教科書はPanda 2を基準にしています。Quail 4・Panda 3を使う人は、作り始める前にこのページで、自分の版と進め方を確かめます。</p>
+<p>対象は後半のAndroid単元です。前半のK01HelloKotlinで使うIntelliJ IDEAの設定は変えません。</p>
+<nav aria-label="このページの内容"><ol><li><a href="#policy">版を確かめる・サポートの範囲</a></li><li><a href="#baseline">新規作成で合わせる項目</a></li><li><a href="#a01">A01の読み替え</a></li><li><a href="#differences">生成される設定の違い</a></li><li><a href="#stuck">止まったとき</a></li><li><a href="#verified">確かめた範囲</a></li></ol></nav></div>
+
+<section id="policy"><h2>1. 版を確かめる・サポートの範囲</h2>
+<p>Welcome画面、またはmacOSの <strong>Android Studio → About Android Studio</strong> で、製品名と版を見ます。<code>Panda 2</code>・<code>Panda 3</code>・<code>Quail 4</code> の名前まで確認します。</p>
+<table><thead><tr><th>使っている版</th><th>進め方</th></tr></thead><tbody>
+<tr><td>Panda 2 / 2025.3.2</td><td>授業の基準です。教科書の手順どおり進めます。作成日でライブラリの版が変わるため、A01のSTEP 01にある設定の照合も行います。</td></tr>
+<tr><td>Quail 4 / 2026.1.4</td><td>このページのA01の読み替えに従います。下の表と設定が一致し、同期・Runが通る範囲で進めます。表にない違いやエラーは先生に見せます。</td></tr>
+<tr><td>Panda 3 / 2025.3.3</td><td><strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。</td></tr>
+<tr><td>上記以外・版が分からない</td><td>新規作成や設定の変更を始める前に先生へ相談します。この資料で動作を確認した範囲には含みません。</td></tr>
+</tbody></table>
+<p>授業ではmacOSを使います。見た目や項目の位置だけの違いは、次の表の選択内容で合わせます。必要な項目が見つからない、同期が赤い、Runできない場合は、設定を次々と変更せず先生と確認します。基準のPanda 2へ切り替えるかも、その場で決めます。</p>
+</section>
+
+<section id="baseline"><h2>2. 新規作成で合わせる項目</h2>
+<p>New Projectの画面では、位置より<strong>選ぶ内容</strong>を合わせます。A01では次のとおりです。</p>
+<table><thead><tr><th>項目</th><th>A01で選ぶ内容</th></tr></thead><tbody>
+<tr><td>テンプレート</td><td>Phone and Tablet → <strong>Empty Views Activity</strong>。ViewsのないEmpty Activityは選びません。</td></tr>
+<tr><td>Name / Package name</td><td><code>A01HelloAndroid</code> / <code>jp.ac.jec.a01helloandroid</code></td></tr>
+<tr><td>Save location</td><td>自分の <code>Documents/Kotlin/A01HelloAndroid</code>。末尾のプロジェクト名まで含めます。</td></tr>
+<tr><td>Language</td><td><strong>Kotlin</strong></td></tr>
+<tr><td>Minimum SDK</td><td><strong>API 31（Android 12）</strong>。下のtargetSdkとは別の項目です。</td></tr>
+<tr><td>Build configuration language</td><td><strong>Kotlin DSL（build.gradle.kts）</strong></td></tr>
+</tbody></table>
+<p>実行先の表示名は、版が違っても <code>jec_25cm_kotlin_Pixel 9a</code> です。Device Managerに既にあれば、その端末を使います。なければA01のSTEP 02で先生が指定するシステムイメージを使って作ります。実機が接続されている場合も、Runの実行先が指定AVDになっているか確かめます。</p>
+<div class="note"><p class="box-title">POINT：IDEの版とプロジェクトの設定は別</p><p>Quail 4でPanda 2の完成見本をOpenしても、見本のAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、配布された設定を保って照合します。</p></div>
+</section>
+
+<section id="a01"><h2>3. Quail 4でのA01の読み替え</h2>
+<p>対象は <code>A01HelloAndroid</code> のSTEP 00〜13です。先生に版を見せたあと、次の表を手元に置いて進めます。</p>
+<table><thead><tr><th>教科書の場所</th><th>Quail 4で行うこと</th></tr></thead><tbody>
+<tr><td>STEP 01：New Project</td><td>上の6項目で自分のプロジェクトを作ります。画面の順序が違っても、Empty Views Activity・Kotlin・API 31・Kotlin DSLを合わせます。</td></tr>
+<tr><td>STEP 01：libs.versions.toml全文の置き換え</td><td><strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。</td></tr>
+<tr><td>STEP 02〜03：端末・初回Run</td><td>指定AVDを選び、生成直後の <code>Hello World!</code> を確かめます。SDKやJDKのダウンロード中は進行表示を確認します。</td></tr>
+<tr><td>STEP 04：activity_main.xml</td><td>教科書のXML全文を使います。<code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> のidを変えません。</td></tr>
+<tr><td>STEP 05〜10：Kotlinの処理を追加</td><td>教科書と同じコードを入力します。生成された余白処理は残し、<code>onCreate</code> の中へ追加します。文字変更・Snackbar・Toast・Logcatの確認結果は同じです。</td></tr>
+<tr><td>STEP 11〜13：全文照合・アレンジ</td><td>教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体を完成見本から上書きしません。文字と余白のアレンジは同じ場所です。</td></tr>
+</tbody></table>
+<p>完成見本は <code>samples/A01HelloAndroid</code> です。別ウィンドウで開いて比べ、入力を続けるときは自分の <code>Documents/Kotlin/A01HelloAndroid</code> へ戻ります。完成見本は自分の提出作品として扱いません。</p>
+</section>
+
+<section id="differences"><h2>4. 生成される設定の違い</h2>
+<p>左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材のひな形・完成版、Quail 4列は比較用ひな形の実測値です。</p>
+<table><thead><tr><th>見る場所</th><th>Panda 2：教材の基準</th><th>Quail 4：保つ設定</th></tr></thead><tbody>
+<tr><td><code>gradle/libs.versions.toml</code></td><td>AGP 9.1.1、coreKtx 1.17.0、<code>androidx.activity:activity</code> 1.13.0</td><td>AGP 9.4.1、coreKtx 1.19.0、<code>androidx.activity:activity-ktx</code> 1.13.0</td></tr>
+<tr><td><code>app/build.gradle.kts</code> のcompileSdk</td><td><code>release(36) { minorApiLevel = 1 }</code></td><td><code>release(37)</code></td></tr>
+<tr><td>同じファイルのtargetSdk</td><td><code>36</code></td><td><code>37</code></td></tr>
+<tr><td>同じファイルのbuildTypes → release</td><td><code>isMinifyEnabled = false</code> と <code>proguardFiles(...)</code></td><td><code>optimization { enable = false }</code></td></tr>
+<tr><td>R8のkeepルールのファイル</td><td><code>app/proguard-rules.pro</code></td><td><code>app/src/main/keepRules/rules.keep</code></td></tr>
+<tr><td><code>gradle/wrapper/gradle-wrapper.properties</code> のdistributionUrl</td><td><code>gradle-9.3.1-bin.zip</code></td><td><code>gradle-9.6.0-bin.zip</code></td></tr>
+<tr><td><code>gradle/gradle-daemon-jvm.properties</code> のtoolchainVersion</td><td><code>21</code></td><td><code>25</code></td></tr>
+<tr><td><code>gradle.properties</code></td><td>configuration-cacheの指定なし</td><td><code>org.gradle.configuration-cache=true</code></td></tr>
+</tbody></table>
+<p>Quail 4の <code>app/build.gradle.kts</code> では、依存の名前も <code>libs.androidx.activity.ktx</code> です。Panda 2のカタログへ丸ごと置き換えると、この名前も合わなくなります。表にない版が生成された場合は、自分で表の数値へ直さず先生と確認します。</p>
+<p><code>app/src/main/AndroidManifest.xml</code> のActivityに、Quail 4では <code>android:windowSoftInputMode="adjustResize"</code> も生成されています。A01の作業ではそのまま残します。Kotlinの <code>MainActivity.kt</code> はパッケージ名を除いて、生成直後のXMLは全文が、2つのひな形で一致していました。</p>
+<h3>JDKの21と25で、Kotlinの書き方は変わるか</h3>
+<p><code>toolchainVersion</code> はアプリを組み立てるGradleを動かすJava実行環境の指定です。学生が書くKotlinの文法の版ではありません。Java側の <code>compileOptions</code> は、どちらのひな形も <code>JavaVersion.VERSION_11</code> です。Swiftでも、IDEを動かす環境の版と、ソースで使う言語の設定を分けて考えるのと同じです。</p>
+<p>必要なJDKがMacにない場合、設定されたダウンロード先から取得することがあります。<code>Downloading</code> などの進行表示が出ていれば待ちます。赤いエラーで止まったら、JDKの数字を変更せず、その表示を先生に見せます。</p>
+</section>
+
+<section id="stuck"><h2>5. 止まったとき</h2>
+<table><thead><tr><th>画面で起きたこと</th><th>すること</th></tr></thead><tbody>
+<tr><td>ボタンの位置やメニュー名が違う</td><td>選択内容を2節で照合。Empty Views Activityなど必要な項目が見つからなければ先生に見せます。</td></tr>
+<tr><td><code>optimization</code> や <code>activity.ktx</code> が赤い</td><td>Panda 2とQuail 4の設定を混ぜた可能性があります。最近置き換えたファイルとエラーを先生に見せます。片方ずつ版を下げて試しません。</td></tr>
+<tr><td>Gradle同期やSDK・JDKの取得が失敗した</td><td>エラーの先頭を表示し、先生に見せます。通信・必要なSDK・プロジェクトの生成版を確認します。</td></tr>
+<tr><td>ビルドは通るが、A01の画面が違う・閉じる</td><td>XMLのidとKotlinのR.id、指定AVDを確認します。直らなければSTEP番号とLogcatの赤い行を先生に見せます。</td></tr>
+<tr><td>Panda 2へ切り替えることになった</td><td>自作プロジェクトを消さずに残します。先生と保存先を分け、Panda 2で作った新しいプロジェクトへ、自分のXMLとKotlinを照合して移します。Quail 4のGradle設定は持ち込みません。</td></tr>
+</tbody></table>
+<p>相談するときは <strong>Studioの製品名と版・教材のVERSION.jsonにある版・単元とSTEP番号・エラーの先頭</strong>を見せます。実習時間内に原因を切り分けられない場合もあるため、止まった時点で声をかけてください。</p>
+<p>教材の開き方は <a href="setup.html" data-keep-from>共通：はじめの準備</a>、提出時の作業は <a href="apk.html" data-keep-from>共通：提出課題とAPK</a> にあります。</p>
+</section>
+
+<section id="verified"><h2>6. 確かめた範囲</h2>
+<table><thead><tr><th>区分</th><th>内容</th></tr></thead><tbody>
+<tr><td>ファイルの照合</td><td>2026年9月24日、教材のPanda 2とQuail 4のKotlinひな形を比較しました。表の値はそのファイルに基づきます。作成日によって値が変わる場合があります。</td></tr>
+<tr><td>Quail 4構成でのビルド</td><td>ひな形を別の検証用フォルダに複製し、設定を保ったまま、生成直後とA01のSTEP 04・05・08・09・10〜11に相当するコードで <code>assembleDebug</code> の成功を確認しました。検証コピーではパッケージ名だけをひな形に合わせています。</td></tr>
+<tr><td>Quail 4構成での実行</td><td>上の検証コピーの完成コードを指定AVD <code>jec_25cm_kotlin_Pixel 9a</code>（API 37.1）で実行し、文字変更、1のSnackbar、2のToast、起動時とクリック後のLogcatを確認しました。</td></tr>
+<tr><td>ここでは未確認</td><td>Quail 4の現在のIDE画面のメニュー位置、Panda 3、ほかのStudio版、今後教材化するA02以降の段階別コード。これらも確認済みとは扱いません。</td></tr>
+</tbody></table>
+<p>Quail 4の設定に書き換えた完成見本を配ることはしません。配布する完成見本と教科書本文の基準はPanda 2です。</p>
+</section>
+<section><h2>公式資料</h2><ul><li><a href="https://developer.android.com/studio/projects/create-project">Android Studio：プロジェクトの作成</a></li><li><a href="https://developer.android.com/build/agp-upgrade-assistant">AGP Upgrade Assistantが変更する設定</a></li><li><a href="https://docs.gradle.org/current/userguide/gradle_daemon.html#sec:daemon_jvm_criteria">Gradle DaemonのJVM選択</a></li></ul></section>
+<footer class="footer"><p><a href="../hello-android/index.html" data-back>← もとのページへ戻る</a></p><p>対象：macOS / 基準：Android Studio Panda 2 / 確認日：2026年9月24日</p></footer>
+</main><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
