@@ -4,7 +4,7 @@
     "total_sessions": 15,
     "minutes_per_session": 90
   },
-  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid", "A02CalcGame"],
+  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid", "A02CalcGame", "A03GithubSearch"],
   "terms": [
     {
       "name": "指定AVD名",
@@ -18,7 +18,9 @@
         "docs/hello-android/index.html",
         "teacher/hello-android/index.html",
         "docs/calc-game/index.html",
-        "teacher/calc-game/index.html"
+        "teacher/calc-game/index.html",
+        "docs/github-search/index.html",
+        "teacher/github-search/index.html"
       ]
     }
   ],
@@ -204,6 +206,129 @@
         }
       ],
       "archive": "docs/calc-game/downloads/A02CalcGame.zip"
+    },
+    {
+      "name": "A03GithubSearch",
+      "kind": "android",
+      "root": "A03GithubSearch",
+      "package": "jp.ac.jec.a03githubsearch",
+      "layout": "A03GithubSearch/app/src/main/res/layout/activity_main.xml",
+      "sessions": 3,
+      "docs": [
+        "docs/github-search/index.html",
+        "teacher/github-search/index.html"
+      ],
+      "sources": [
+        "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/MainActivity.kt",
+        "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/GithubApi.kt",
+        "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/GithubSearchResponse.kt",
+        "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/RepositoryAdapter.kt"
+      ],
+      "snippets": [
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-libs",
+          "source": "A03GithubSearch/gradle/libs.versions.toml"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-root-gradle",
+          "source": "A03GithubSearch/build.gradle.kts"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-app-gradle",
+          "source": "A03GithubSearch/app/build.gradle.kts"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-manifest",
+          "source": "A03GithubSearch/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-layout",
+          "source": "A03GithubSearch/app/src/main/res/layout/activity_main.xml"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-stage-04",
+          "source": "teacher/github-search/code/04-MainActivity.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-models",
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/GithubSearchResponse.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-row",
+          "source": "A03GithubSearch/app/src/main/res/layout/list_item.xml"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-adapter",
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/RepositoryAdapter.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-stage-10",
+          "source": "teacher/github-search/code/10-MainActivity.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-api",
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/GithubApi.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "id": "code-main",
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/MainActivity.kt"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "A03GithubSearch/gradle/libs.versions.toml",
+          "copy": "teacher/github-search/code/02-libs.versions.toml"
+        },
+        {
+          "source": "A03GithubSearch/build.gradle.kts",
+          "copy": "teacher/github-search/code/02-root-build.gradle.kts"
+        },
+        {
+          "source": "A03GithubSearch/app/build.gradle.kts",
+          "copy": "teacher/github-search/code/02-app-build.gradle.kts"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/AndroidManifest.xml",
+          "copy": "teacher/github-search/code/02-AndroidManifest.xml"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/res/layout/activity_main.xml",
+          "copy": "teacher/github-search/code/03-activity_main.xml"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/GithubSearchResponse.kt",
+          "copy": "teacher/github-search/code/07-GithubSearchResponse.kt"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/res/layout/list_item.xml",
+          "copy": "teacher/github-search/code/08-list_item.xml"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/RepositoryAdapter.kt",
+          "copy": "teacher/github-search/code/09-RepositoryAdapter.kt"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/GithubApi.kt",
+          "copy": "teacher/github-search/code/13-GithubApi.kt"
+        },
+        {
+          "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/MainActivity.kt",
+          "copy": "teacher/github-search/code/14-MainActivity.kt"
+        }
+      ],
+      "archive": "docs/github-search/downloads/A03GithubSearch.zip"
     }
   ]
 }
