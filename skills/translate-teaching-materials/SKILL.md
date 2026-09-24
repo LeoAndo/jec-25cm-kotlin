@@ -13,7 +13,7 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 - **日本語版が正。** 日本語の教科書（`docs/`）は、翻訳の都合で書き換えない。原文が曖昧で訳せないときは、推測で訳さず、PR本文に挙げる。
 - **訳すのは、未翻訳の文だけ。** 日本語の文を直すと、その文は自動で未翻訳に戻る（古い訳は外れ、学生には日本語で表示される）。変わっていない文の訳は触らない。
 - 言語の一覧は `config/i18n.json`、言語ごとの用語集は `i18n/<言語>/glossary.md` にある。
-- この授業では、学生の使うIDEが**IntelliJ IDEA（純Kotlin単元）と Android Studio（Android単元）の2つ**ある。どちらも英語表示である。
+- この授業では、学生の使うIDEが**IntelliJ IDEA（純Kotlin単元）と Android Studio（Android単元）の2つ**ある。**表示の言語は、教科書によって違う。** Android系の教科書は、英語表示の Android Studio で書いてある。K01の教科書は、日本語表示の IntelliJ IDEA で書いてある（教科書の足もとにそう書いてある）。IntelliJ IDEA は日本語・韓国語・中国語の言語パックを同梱していて、Macの言語に合わせて表示が変わることがある。
 
 | 学生の母国語 | コード | 書き方 |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 検査はしないが、必ず守るもの：
 
 - ファイル名、フォルダ名、パス、パッケージ名（`ex01`、`jp.ac.jec.…`）、クラス名、関数名、id、プロジェクト名（`K01HelloKotlin`、`A01HelloAndroid`）。
-- **IDEの画面に出る言葉。** 学生のIntelliJ IDEAとAndroid Studioは英語表示なので、原文が英語で書いているもの（**New Project**、**Run**、**Logcat**、**Project**、**Build**）は、どの言語でも英語のまま残す。訳が要るときは、うしろにかっこで添える。
+- **IDEの画面に出る言葉。** 原文が英語で書いているもの（**New Project**、**Run**、**Logcat**、**Project**、**Build**）は、どの言語でも英語のまま残す。訳が要るときは、うしろにかっこで添える。**原文が日本語で書いているIDEのメニュー名**（K01の **新規 → パッケージ**、**ファイル → 開く…** など）は、下のmacOSの画面に出る言葉と同じく日本語のまま残し、その言語で表示したIDEの名前をかっこで添える（英語なら **新規 → パッケージ** (New → Package)）。添える名前は、実際のIDEの表示で確かめる。
 - **macOSの画面に出る言葉。** 原文が日本語で書いているメニュー名やフォルダ名（**移動 → ホーム**、**書類**）は、日本語のまま残し、その言語での名前をかっこで添える。学生のMacの表示言語は、学生ごとに違うためである。
 
   ```text
