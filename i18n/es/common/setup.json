@@ -163,16 +163,16 @@
       "translation": "Lo que deberías ver"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルの、合わせて<strong>4つ</strong>がある。",
-      "translation": "Al abrir la carpeta dentro de 「書類」 (Documentos), se encuentran <strong>cuatro elementos</strong> en total: dos carpetas llamadas <code>docs</code> y <code>samples</code>, y dos archivos llamados <code>はじめに.txt</code> y <code>VERSION.json</code>."
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
+      "translation": "Al abrir la carpeta dentro de 「書類」 (Documentos), se encuentran dos carpetas llamadas <code>docs</code> y <code>samples</code>, y dos archivos llamados <code>はじめに.txt</code> y <code>VERSION.json</code>. En las versiones que incluyen traducciones, también está <code>index.html</code>, la página para elegir el idioma, con lo que hay <strong>cinco elementos</strong> en total."
     },
     {
-      "source": "4つより多いことがあります",
-      "translation": "Puede haber más de cuatro elementos"
+      "source": "<code>index.html</code> があるとき",
+      "translation": "Si la carpeta contiene <code>index.html</code>"
     },
     {
-      "source": "教材のフォルダに <code>index.html</code> がある場合は、そのファイルをブラウザで開き、読む言語を選びます。言語を選ぶ入口がない版では、このページをそのまま読み進めます。<strong>4つより多い分には、そのまま先へ進んで構いません。</strong>足りないときだけ、先に進まずに先生に見せてください。",
-      "translation": "Si la carpeta de materiales contiene <code>index.html</code>, abre ese archivo en tu navegador y elige el idioma en el que deseas leer. En las versiones sin selector de idioma, continúa leyendo directamente esta página. <strong>Si hay más de cuatro elementos, puedes continuar sin problemas.</strong> Solo si falta alguno, detente y avisa a tu docente antes de continuar."
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "Abre <code>index.html</code> en tu navegador y elige el idioma en el que deseas leer. Si vas a leer en japonés, puedes continuar leyendo directamente esta página. En las versiones que no incluyen <code>index.html</code>, continúa leyendo directamente esta página. <strong>Solo si falta alguno de los cuatro elementos anteriores</strong>, detente y muéstraselo a tu docente antes de continuar."
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",

@@ -159,5 +159,22 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 
 ## 照合の記録
 
-最初の翻訳は #80（共通：はじめの準備、217文）で実施。逆翻訳による照合待ち。
+### 共通：はじめの準備（`docs/common/setup.html`）
 
+- 原文の版：`7785786`（`docs/common/setup.html` のSHA256 `5a0d0200d398842c8b85640ca843b08ff78fea97fcc81dcd3b8ca7278d1bab10`。ほかの言語の `e2b5e5d` と同じ内容）
+- 照合範囲：217文すべて。同じ原文でほかの7ページのカタログに入った44文は、そのページでの役割（表の見出しなど）だけを見た。
+- 担当：翻訳は Antigravity / Gemini 3.8 Flash (High)（#80）。逆翻訳による照合は Claude Code / Opus 5.5（訳し戻しは、原文を見ない Claude Code の subagent / Opus 5.5、2026-09-25）。照合後の修正は Claude Code / Opus 5.5。修正した文の照合し直しは、別のモデル（Antigravity / Gemini）で行う（照合待ち）。
+- 照合の全文：PR #94 のコメント。
+- #90（2026-09-25）で原文の3文が変わった。原文の版：`134ec7a`（`docs/common/setup.html` のSHA256 `8e94def17d654d9a8a737dcb8100e8a2559890ac4ce5a5bbc9e0e791f13a7ed0`）。旧訳の3文（`178884106356`・`ecd84e748028`・`ef494d8c2da8`）はカタログから消えた。新しい3文（`a8be9db61ff2`・`edaa4d1af5f4`・`0425e93c10a7`）は Claude Code / Opus 5.5 が訳し、上の照合し直しの範囲に入れた。
+
+| ID | 原文 | 指摘 | 対応 |
+| --- | --- | --- | --- |
+| `57788987ffb1` | 移動した先のフォルダを… | 要修正：carpeta de destino は「書類」そのものと読める | la carpeta que acabas de mover にした（PR #94） |
+| `9eb121868fa3` | アプリケーションフォルダに… | 要修正：確認欄の文だけ、Finderの表示名の日本語が落ちている | アプリケーション (Aplicaciones) にした（PR #94。071と同じ形） |
+| `828d4cec1f3c`（K01の `td`） | 場所 | 要修正：K01では日本語表示の IntelliJ IDEA の画面の項目名 | `i18n/es/hello-kotlin/index.json` の `overrides` で 場所 (Ubicación) にした（PR #94）。準備ガイドとA02〜A04の表の見出しは Ubicación のまま |
+| `51d7d6a9e0ee`（K01の `th`） | 使うもの | 要修正：K01では列の中身がプロジェクトで、Herramienta は合わない | `i18n/es/hello-kotlin/index.json` の `overrides` で Lo que usarás にした（PR #94）。準備ガイドは Herramienta のまま |
+| `72487ce81901`・`5c85b7d753dd`・`517fd4b8ada6`・`655af778cbe1`・`dee7449392f0` | 自分が作ったプロジェクトは…／準備なしで…／…それが入口になります／…時間がかかります／…ビルドツールを挟まない… | 任意：不自然な言い回し、表の列の人称、指す語の曖昧さ、1人称複数 | 採用（PR #94）。Los proyectos que creaste、Ejecutas… verificas…、esa función、tarda en、usarás／que no usa una herramienta de compilación aparte |
+| `d207d4a66067`・`685b29533b7b` | …同じプログラムを動かせます／実行したいファイル… | 任意：correr と ejecutar が混ざる | ejecutar にそろえた（PR #94） |
+| `f2fa84e375bf`・`0453f6c464a9`・`8e35209c2b3d` | …覚えておいてください／…つまずいたところは…／候補が1つも出ない… | 任意：memoriza は強い、te trabaste は口語、candidato は不自然 | 採用（PR #94）。ten presente、tuviste dificultades、ninguna opción |
+| `ef494d8c2da8` | …足りないときだけ、先に進まずに先生に見せてください。 | 任意：avisa（知らせる）を、ほかの「見せる」と同じ muéstraselo に | #90 で原文が変わり、旧訳は消えた。新しい文 `0425e93c10a7` で muéstraselo にした |
+| `0126fdc18f43` | …<code>Pixel</code> と <code>9a</code> の間は半角スペース… | 任意：espacio de ancho medio は全角・半角を知らない人に通じにくい | 採らない。この表の訳語どおりで、訳し戻しの担当は原文を見ずに「半角のスペース」と読めた。「半角スペース」の行の「要確認」は残す |
