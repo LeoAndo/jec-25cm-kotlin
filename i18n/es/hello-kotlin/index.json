@@ -30,5 +30,17 @@
       "source": "使うもの",
       "translation": "Herramienta"
     }
+  ],
+  "overrides": [
+    {
+      "source": "場所",
+      "where": "td",
+      "translation": "場所 (Ubicación)"
+    },
+    {
+      "source": "使うもの",
+      "where": "th",
+      "translation": "Lo que usarás"
+    }
   ]
 }

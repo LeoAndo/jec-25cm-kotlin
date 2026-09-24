@@ -148,7 +148,7 @@
     },
     {
       "source": "Google Classroomに新しい教材が投稿されたら、同じ手順でダウンロードします。<strong>前の教材のフォルダは消さず、別のフォルダとして残しておきます。</strong>日付と末尾の英数字が名前に入っているので、別の版は同じ場所に置いても混ざりません。自分が作ったプロジェクトは <code>書類</code> の <code>Kotlin</code> フォルダにあり、教材とは別なので、教材を入れ替えても消えません。",
-      "translation": "Cuando se publiquen materiales nuevos en Google Classroom, descárgalos siguiendo el mismo procedimiento. <strong>No borres la carpeta de los materiales anteriores; consérvala como una carpeta separada.</strong> Como el nombre incluye la fecha y los caracteres alfanuméricos finales, las diferentes versiones no se mezclarán aunque estén en el mismo lugar. Tus proyectos creados están en la carpeta <code>Kotlin</code> dentro de <code>書類</code> (Documentos) y son independientes de los materiales, por lo que no se borrarán al reemplazar los materiales."
+      "translation": "Cuando se publiquen materiales nuevos en Google Classroom, descárgalos siguiendo el mismo procedimiento. <strong>No borres la carpeta de los materiales anteriores; consérvala como una carpeta separada.</strong> Como el nombre incluye la fecha y los caracteres alfanuméricos finales, las diferentes versiones no se mezclarán aunque estén en el mismo lugar. Los proyectos que creaste están en la carpeta <code>Kotlin</code> dentro de <code>書類</code> (Documentos) y son independientes de los materiales, por lo que no se borrarán al reemplazar los materiales."
     },
     {
       "source": "このフォルダを、Finderの左側の <strong>書類</strong> へドラッグして移動します。",
@@ -156,7 +156,7 @@
     },
     {
       "source": "移動した先のフォルダをダブルクリックして開き、中身を確認します。",
-      "translation": "Haz doble clic en la carpeta de destino para abrirla y verifica su contenido."
+      "translation": "Haz doble clic en la carpeta que acabas de mover para abrirla y verifica su contenido."
     },
     {
       "source": "成功の目印",
@@ -260,7 +260,7 @@
     },
     {
       "source": "準備なしでKotlinのコードを実行し、動くことを確かめます。",
-      "translation": "Ejecuta código de Kotlin sin ninguna preparación previa y verifica que funcione."
+      "translation": "Ejecutas código de Kotlin sin ninguna preparación previa y verificas que funcione."
     },
     {
       "source": "前半",
@@ -292,7 +292,7 @@
     },
     {
       "source": "アプリケーションフォルダに <strong>IntelliJ IDEA</strong> と <strong>Android Studio</strong> の2つがある。",
-      "translation": "En la carpeta Aplicaciones están tanto <strong>IntelliJ IDEA</strong> como <strong>Android Studio</strong>."
+      "translation": "En la carpeta アプリケーション (Aplicaciones) están tanto <strong>IntelliJ IDEA</strong> como <strong>Android Studio</strong>."
     },
     {
       "source": "どちらかが見つからないときは、自分で入れようとせず、その画面のまま先生に知らせてください。",
@@ -420,7 +420,7 @@
     },
     {
       "source": "Kotlinは、<code>main</code> をクラスの中に入れる必要がありません。ファイルの一番外側に <code>fun</code> で書けば、それが入口になります。",
-      "translation": "En Kotlin no es necesario colocar <code>main</code> dentro de una clase. Si lo escribes con <code>fun</code> en el nivel más externo del archivo, este se convierte en el punto de entrada."
+      "translation": "En Kotlin no es necesario colocar <code>main</code> dentro de una clase. Si lo escribes con <code>fun</code> en el nivel más externo del archivo, esa función se convierte en el punto de entrada."
     },
     {
       "source": "言語",
@@ -448,7 +448,7 @@
     },
     {
       "source": "Playgroundには2つの弱点があります。<strong>コード補完が効きません</strong>。そして、<strong>実行結果が出るまでに時間がかかります</strong>（実行はサーバ側で行われるためです）。授業で書く量になると、この2つがそのまま手間になります。動くことを確かめたら、次の手順4からは IntelliJ IDEA に移ってください。",
-      "translation": "Playground tiene dos desventajas: <strong>no cuenta con autocompletado de código</strong> y <strong>toma tiempo en mostrar la salida</strong> (debido a que la ejecución se realiza en el servidor). Con la cantidad de código que escribirás en clase, estos dos puntos se vuelven una molestia. Una vez que confirmes que funciona, pasa a IntelliJ IDEA a partir del paso 4."
+      "translation": "Playground tiene dos desventajas: <strong>no cuenta con autocompletado de código</strong> y <strong>tarda en mostrar la salida</strong> (debido a que la ejecución se realiza en el servidor). Con la cantidad de código que escribirás en clase, estos dos puntos se vuelven una molestia. Una vez que confirmes que funciona, pasa a IntelliJ IDEA a partir del paso 4."
     },
     {
       "source": "4. IntelliJ IDEA でKotlinのプロジェクトを作る",
@@ -512,7 +512,7 @@
     },
     {
       "source": "ほかに <code>Maven</code> と <code>Gradle</code> が並んでいます。前半の授業では外部のライブラリを使わないので、ビルドツールを挟まない <code>IntelliJ</code> のままにしてください。後半のAndroidの単元では、Android Studioが <code>Gradle</code> を使います。そちらは自分で選ぶ必要がありません。",
-      "translation": "También aparecen <code>Maven</code> y <code>Gradle</code>. Como en las clases de la primera mitad no usaremos bibliotecas externas, déjalo en <code>IntelliJ</code> para trabajar sin herramientas de compilación intermedias. En las unidades de Android de la segunda mitad, Android Studio usará <code>Gradle</code>; allí no tendrás que elegirlo tú."
+      "translation": "También aparecen <code>Maven</code> y <code>Gradle</code>. Como en las clases de la primera mitad no usarás bibliotecas externas, déjalo en <code>IntelliJ</code>, que no usa una herramienta de compilación aparte. En las unidades de Android de la segunda mitad, Android Studio usará <code>Gradle</code>; allí no tendrás que elegirlo tú."
     },
     {
       "source": "<strong>Create</strong> をクリックします。新しいウィンドウが開きます。",
@@ -640,7 +640,7 @@
     },
     {
       "source": "一度実行すると、その実行の設定が記憶され、ウィンドウの右上の実行ボタン（▶）から同じプログラムを動かせます。別のファイルを開いているときでも、動くのは記憶されたほうです。違うファイルを実行したいときは、そのファイルの行番号のとなりの緑の三角を使ってください。",
-      "translation": "Una vez que ejecutas el programa, esa configuración de ejecución queda guardada y puedes correr el mismo programa desde el botón de ejecución (▶) en la esquina superior derecha de la ventana. Incluso si tienes abierto otro archivo, lo que se ejecutará será lo que quedó guardado. Cuando quieras ejecutar un archivo diferente, usa el triángulo verde junto al número de línea de ese archivo."
+      "translation": "Una vez que ejecutas el programa, esa configuración de ejecución queda guardada y puedes ejecutar el mismo programa desde el botón de ejecución (▶) en la esquina superior derecha de la ventana. Incluso si tienes abierto otro archivo, lo que se ejecutará será lo que quedó guardado. Cuando quieras ejecutar un archivo diferente, usa el triángulo verde junto al número de línea de ese archivo."
     },
     {
       "source": "ここまでできたら、前半の準備は終わりです。次の授業からは、教科書を開くところから始められます。",
@@ -660,7 +660,7 @@
     },
     {
       "source": "この準備の段階では、<strong>エミュレータを作る必要はありません</strong>。作り方は、後半の <a1>A01：HelloAndroidのSTEP 02</a1> で先生と確認します。ここでは、使う端末の名前だけ覚えておいてください。",
-      "translation": "En esta etapa de preparación, <strong>no es necesario crear un emulador</strong>. El procedimiento de creación lo revisarás con el docente en el <a1>STEP 02 de A01：HelloAndroid</a1> en la segunda mitad. Por ahora, solo memoriza el nombre del dispositivo que vas a usar."
+      "translation": "En esta etapa de preparación, <strong>no es necesario crear un emulador</strong>. El procedimiento de creación lo revisarás con el docente en el <a1>STEP 02 de A01：HelloAndroid</a1> en la segunda mitad. Por ahora, solo ten presente el nombre del dispositivo que vas a usar."
     },
     {
       "source": "決めるもの",
@@ -700,7 +700,7 @@
     },
     {
       "source": "前半で覚えた書き方は、そのまま使います。違うのは、結果が文字で出るか、スマートフォンの画面に出るかです。前半でつまずいたところは、後半に入る前に先生に聞いておいてください。",
-      "translation": "La forma de escribir que aprendiste en la primera mitad se utiliza tal cual. La diferencia radica en si el resultado aparece en texto o en la pantalla de un celular. Si te trabaste con algo en la primera mitad, pregúntale a tu docente antes de entrar a la segunda."
+      "translation": "La forma de escribir que aprendiste en la primera mitad se utiliza tal cual. La diferencia radica en si el resultado aparece en texto o en la pantalla de un celular. Si tuviste dificultades con algo en la primera mitad, pregúntale a tu docente antes de entrar a la segunda."
     },
     {
       "source": "完成プロジェクト（先生が作った見本）の開き方",
@@ -768,7 +768,7 @@
     },
     {
       "source": "欄を開いて一覧から選び直す。候補が1つも出ないときは先生に知らせる。",
-      "translation": "Abre el campo y vuelve a seleccionar una opción de la lista. Si no aparece ningún candidato, avisa a tu docente."
+      "translation": "Abre el campo y vuelve a seleccionar una opción de la lista. Si no aparece ninguna opción, avisa a tu docente."
     },
     {
       "source": "プロジェクトが <code>Documents/Kotlin</code> の中にできていない",
@@ -792,7 +792,7 @@
     },
     {
       "source": "前回の実行設定が記憶されている。実行したいファイルの行番号のとなりの緑の三角から実行し直す。",
-      "translation": "Quedó guardada la configuración de ejecución anterior. Vuelve a ejecutar desde el triángulo verde junto al número de línea del archivo que deseas correr."
+      "translation": "Quedó guardada la configuración de ejecución anterior. Vuelve a ejecutar desde el triángulo verde junto al número de línea del archivo que deseas ejecutar."
     },
     {
       "source": "<code>Process finished with exit code 1</code> が出る",
