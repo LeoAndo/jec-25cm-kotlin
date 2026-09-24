@@ -16,7 +16,7 @@
     },
     {
       "source": "もとのページへ戻る",
-      "translation": "မူလစာမျက်နှာသို့ ပြန်သွားရန်"
+      "translation": "မူလဖွင့်ထားသော စာမျက်နှာသို့ ပြန်သွားရန်"
     },
     {
       "source": "KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート",
@@ -312,7 +312,7 @@
     },
     {
       "source": "この教材での扱い",
-      "translation": "ဤသင်ခန်းစာတွင် အသုံးပြုပုံ"
+      "translation": "ဤသင်ခန်းစာတွင် ဗားရှင်းကို သတ်မှတ်ပုံ"
     },
     {
       "source": "版は指定しません。教員は <code>2026.3 EAP</code> で教材を確認しています。",
@@ -708,7 +708,7 @@
     },
     {
       "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",
-      "translation": "အဆင့် 1 တွင် 「書類」 (စာရွက်စာတမ်းများ) ၌ ထားခဲ့သော သင်ခန်းစာဖိုင်တွဲအတွင်းရှိ <code>samples</code> ထဲတွင် ပြီးစီးပြီးသော project များကို <strong>တိုက်ရိုက်ဖွင့်နိုင်သည့်ပုံစံ</strong>ဖြင့် ထည့်ထားပါသည်။ ဒေါင်းလုဒ်လုပ်ရန်၊ ဖိုင်ဖြည်ရန် မလိုပါ။ ရှေ့ပိုင်း Kotlin project များအတွက် IntelliJ IDEA ၏ <strong>Open</strong>၊ နောက်ပိုင်း Android project များအတွက် Android Studio ၏ <strong>Open</strong> ကို သုံးပြီး <code>samples</code> ထဲရှိ ဖိုင်တွဲကို ရွေးပါ။"
+      "translation": "အဆင့် 1 တွင် 「書類」 (စာရွက်စာတမ်းများ) ၌ ထားခဲ့သော သင်ခန်းစာဖိုင်တွဲအတွင်းရှိ <code>samples</code> ထဲတွင် ပြီးစီးပြီးသော project များကို <strong>တိုက်ရိုက်ဖွင့်နိုင်သည့်ပုံစံ</strong>ဖြင့် ထည့်ထားပါသည်။ ဒေါင်းလုဒ်လုပ်ရန်၊ ဖိုင်ဖြည်ရန် မလိုပါ။ ရှေ့ပိုင်း Kotlin project အတွက် IntelliJ IDEA ၏ <strong>Open</strong>၊ နောက်ပိုင်း Android project များအတွက် Android Studio ၏ <strong>Open</strong> ကို သုံးပြီး <code>samples</code> ထဲရှိ ဖိုင်တွဲကို ရွေးပါ။"
     },
     {
       "source": "7. うまくいかないとき",
@@ -864,7 +864,7 @@
     },
     {
       "source": "← もとのページへ戻る",
-      "translation": "← မူလစာမျက်နှာသို့ ပြန်သွားရန်"
+      "translation": "← မူလဖွင့်ထားသော စာမျက်နှာသို့ ပြန်သွားရန်"
     },
     {
       "source": "対象：macOS / ブラウザ / IntelliJ IDEA / Android Studio · 確認日：2026年9月23日",
