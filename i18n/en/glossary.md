@@ -57,6 +57,13 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 保存先 | save location | |
 | 権限 / 許可・拒否 | permission / allow・deny | エミュレータのダイアログの表示名は英語（**While using the app** など） |
 | Preview（A04） | Preview | CameraX の `Preview` を指すので大文字のまま。一般の「プレビュー」は preview |
+| プライマリコンストラクタ | primary constructor | 定義する文では日本語を添える |
+| バッキングフィールド | backing field | 同上 |
+| スマートキャスト | smart cast | 同上 |
+| 拡張関数 / レシーバ型 | extension function / receiver type | 同上 |
+| 名前付き引数 / 既定引数 | named argument / default argument | Swift の引数ラベルは argument label |
+| ラムダ式 / 委譲プロパティ | lambda expression / delegated property | 同上 |
+| 使うもの（表の見出し） | Tool（setup）/ What you use（K01） | K01の完成プロジェクトの表だけ、カタログの `overrides` で訳し分ける |
 | Google Classroom の表示 | 授業 (Classwork)、追加または作成 (Add or create)、提出 (Turn in)、提出済み (Turned in)、提出を取り消す (Unsubmit) | 学生の画面の言語が分からないので、日本語を残して英語の表示名を添える |
 
 ## 書き方の決まり
