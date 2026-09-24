@@ -66,6 +66,9 @@ LANGUAGE_CODE = re.compile(r"[A-Za-z]{2,3}(?:-[A-Za-z0-9]+)*")
 DIRECTIONS = ("ltr", "rtl")
 # 未翻訳の文は日本語のまま出すので、その部分の書字方向は左から右になる。
 FALLBACK_DIRECTION = "ltr"
+# 向きを変える見えない文字（LRM・RLM・ALM・埋め込み・上書き・分離）。訳文に書くときは &lrm; のように、
+# 目に見える書き方にする（2026-09-25 オーナー決定）。そのまま入れると、レビューで見落とし、コピーにも紛れ込む。
+BIDI_CONTROLS = re.compile("[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]")
 
 
 class LocalizeError(ValueError):
@@ -480,6 +483,8 @@ def validate(source: str, translation: str, terms: list, han: bool = False) -> l
     errors = []
     if translation != normalize(translation):
         errors.append("訳文の前後か途中に、余分な空白や改行があります")
+    if BIDI_CONTROLS.search(translation):
+        errors.append("訳文に、向きを変える見えない文字（U+200E など）がそのまま入っています（&lrm; のように書く）")
     # <code>・<kbd> の中身は原文のまま残すので、そこに書かれた < や & は見ない
     # （中身が原文と同じかどうかは、このあと _protected_contents で照合する）。
     rest = ENTITY.sub("", plain_text(translation))
