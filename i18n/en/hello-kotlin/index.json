@@ -984,7 +984,7 @@
     },
     {
       "source": "関数をクラスの外（トップレベル）に置けます。入口を入れるためだけのクラスを作らずに済みます。",
-      "translation": "You can put functions outside a class, at the top level (トップレベル). You do not have to create a class just to hold the entry point."
+      "translation": "You can put functions outside a class (at the top level). You do not have to create a class just to hold the entry point."
     },
     {
       "source": "<code>package</code> 宣言があり、フォルダ構成と合わせる点はJavaと同じです。違うのは行末の <code>;</code> が要らないことです。Swiftには <code>package</code> 宣言そのものがありません。",
