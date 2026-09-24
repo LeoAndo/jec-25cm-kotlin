@@ -289,7 +289,7 @@ python3 scripts/package-student-materials.py
 - **コミットするのは、翻訳済みのHTMLではなく対訳カタログです。** `i18n/<言語>/<ページ>.json` に、原文と訳文の対を文単位で置きます。各言語のHTMLは、カタログから作ります（リポジトリにはコミットしません）。コード・リンク・STEPの番号は日本語版からそのまま引き継ぐので、どの言語でも同じ位置に同じものが出ます。
 - **日本語の文を直すと、その文は自動で未翻訳に戻ります。** 未翻訳の文は日本語のまま表示されます。古い訳が学生に届くことはありません。
 - `<pre>` のコード、`<code>` の中身、IntelliJ IDEAやAndroid Studioの画面に出る言葉、学生が打ち込む日本語は訳しません。授業は日本語で進むので、翻訳は読んで理解するための補助という位置づけです。
-- **アラビア語は右から左に書きます**（[#78](https://github.com/LeoAndo/jec-25cm-kotlin/issues/78)）。`config/i18n.json` で `"dir": "rtl"` にした言語は、翻訳ページの `<html>` に `dir="rtl"` が付き、未翻訳の日本語には `dir="ltr"` が付きます。コード・キー・英字の画面の名前は、右から左のページでも左から右のまま出ます。左から右の言語のページのHTMLは変わりません。そのため、教科書のCSS（`docs/assets/textbook.css`）には左右を決め打ちした指定（`border-left`・`padding-left`・`text-align: left` など）を書かず、論理プロパティ（`border-inline-start`・`padding-inline-start`・`text-align: start` など）で書きます。
+- **アラビア語は右から左に書きます**（[#78](https://github.com/LeoAndo/jec-25cm-kotlin/issues/78)）。`config/i18n.json` で `"dir": "rtl"` にした言語は、翻訳ページの `<html>` に `dir="rtl"` が付き、未翻訳の日本語には `dir="ltr"` が付きます。コード・キー・英字の画面の名前は、右から左のページでも左から右のまま出ます。左から右の言語のページの本文のHTMLは変わりません（言語の切り替えと、言語を選ぶ入口のリンクには、どの言語にも `dir` が付きます。見た目は変わりません）。そのため、教科書のCSS（`docs/assets/textbook.css`）には左右を決め打ちした指定（`border-left`・`padding-left`・`text-align: left` など）を書かず、論理プロパティ（`border-inline-start`・`padding-inline-start`・`text-align: start` など）で書きます。
 
 配布対象の言語があるZIPには、入口の `index.html` と `はじめに.txt` に各言語の案内を入れます。教科書の冒頭にある言語リンクで同じページ・STEPへ移動できます。翻訳ページには「AIによる翻訳／日本語版が正／疑問は先生へ」の注記と日本語版へのリンクが付きます。コード・CSS・JS・完成版ZIPは日本語版と共有します。未翻訳の文は日本語のまま、`lang="ja"` を付けて表示します。
 
