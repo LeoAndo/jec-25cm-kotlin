@@ -2603,16 +2603,1803 @@
       "translation": "<strong>Start with <code>fun</code> → write parameters as <code>名前: 型</code> (name: type) → write the return type after the parentheses as <code>: 型</code> (: type) → write nothing if there is none.</strong><br>The parameter order is the same as Swift and the reverse of Java, and the return type differs in position or symbol among the three languages. Only the order and the symbols differ; what you do is exactly the same as with Java methods and Swift functions."
     },
     {
+      "source": "STEP 19 · 4コマ目 · 目安 5分",
+      "translation": "STEP 19 · Lesson 4 · About 5 min"
+    },
+    {
+      "source": "4コマ目のゴール（条件式・繰り返し・クラス）",
+      "translation": "Lesson 4 goals (conditionals, loops, classes)"
+    },
+    {
+      "source": "4コマ目は、<strong>条件式 → 繰り返し → クラス</strong>の順に書きます。Java・Swiftで知っている処理を、Kotlinの記号と宣言へ置き換えます。番号は前年度資料との対応なので、今日は <code>ex05</code> → <code>ex06</code> → <code>ex04</code> の順です。番号を付け替える必要はありません。",
+      "translation": "In Lesson 4, you write <strong>conditionals → loops → classes</strong>, in that order. You rewrite things you already know from Java and Swift with Kotlin's symbols and declarations. The numbers follow last year's materials, so today's order is <code>ex05</code> → <code>ex06</code> → <code>ex04</code>. You do not need to renumber them."
+    },
+    {
+      "source": "① 自分のプロジェクトを開く",
+      "translation": "① Open your project"
+    },
+    {
+      "source": "IntelliJ IDEA を開き、最近のプロジェクトから <code>K01HelloKotlin</code> を選びます。",
+      "translation": "Open IntelliJ IDEA and select <code>K01HelloKotlin</code> from the recent projects."
+    },
+    {
+      "source": "見つからなければ<strong>開く</strong>から <code>Documents/Kotlin/K01HelloKotlin</code> を選びます。新規プロジェクトは作りません。",
+      "translation": "If you cannot find it, use <strong>開く</strong> (Open) to select <code>Documents/Kotlin/K01HelloKotlin</code>. Do not create a new project."
+    },
+    {
+      "source": "左の <code>src</code> を開きます。これまでの <code>ex01</code>〜<code>ex03</code> は消さずに残します。今日書く3本は、過去の演習のコードを呼びません。",
+      "translation": "Open <code>src</code> on the left. Keep <code>ex01</code>–<code>ex03</code> from earlier lessons; do not delete them. The three programs you write today do not call code from earlier exercises."
+    },
+    {
+      "source": "② 今日の出力を確かめる",
+      "translation": "② Check today's output"
+    },
+    {
+      "source": "実行するファイル",
+      "translation": "File to run"
+    },
+    {
+      "source": "完成時の出力（上から順）",
+      "translation": "Output of the completed code (top to bottom)"
+    },
+    {
+      "source": "③ Java・Swiftとの違いを見る",
+      "translation": "③ See the differences from Java and Swift"
+    },
+    {
+      "source": "これは書き方の見取り図です。<code>flag</code>、<code>persons</code>、<code>Person</code> の宣言は、このあと各STEPで書きます。",
+      "translation": "This is an overview of how each part is written. You write the declarations of <code>flag</code>, <code>persons</code>, and <code>Person</code> in the STEPs that follow."
+    },
+    {
+      "source": "Kotlinの <code>if</code> はJavaと同じく条件を丸かっこで囲み、<code>for</code> はSwiftと同じく <code>in</code> を使います。インスタンスを作るときにJavaの <code>new</code> は書きません。Swiftの引数ラベルと違い、上のKotlinの呼び出しは値だけを順に渡しています。",
+      "translation": "Kotlin's <code>if</code> puts the condition in parentheses, as in Java, and its <code>for</code> uses <code>in</code>, as in Swift. You do not write Java's <code>new</code> when creating an instance. Unlike Swift's argument labels, the Kotlin call above passes only the values, in order."
+    },
+    {
+      "source": "目安",
+      "translation": "Approx. time"
+    },
+    {
+      "source": "19 再開とゴール",
+      "translation": "19 Resuming and goals"
+    },
+    {
+      "source": "5分",
+      "translation": "5 min"
+    },
+    {
+      "source": "20 条件式",
+      "translation": "20 Conditionals"
+    },
+    {
+      "source": "20分",
+      "translation": "20 min"
+    },
+    {
+      "source": "21 繰り返し",
+      "translation": "21 Loops"
+    },
+    {
+      "source": "22 クラス",
+      "translation": "22 Classes"
+    },
+    {
+      "source": "30分",
+      "translation": "30 min"
+    },
+    {
+      "source": "23 ミニ練習",
+      "translation": "23 Mini practice"
+    },
+    {
+      "source": "12分",
+      "translation": "12 min"
+    },
+    {
+      "source": "24 完成",
+      "translation": "24 Finished code"
+    },
+    {
+      "source": "3分",
+      "translation": "3 min"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> の <code>src</code> が開いていて、今日の3つの出力を上の表で確かめた。",
+      "translation": "<code>src</code> in <code>K01HelloKotlin</code> is open, and today's three outputs are confirmed in the table above."
+    },
+    {
+      "source": "合わなければ、ファイル名と出力を先生に見せましょう。",
+      "translation": "If something does not match, show your teacher the file name and the output."
+    },
+    {
+      "source": "次へ：ex05 と条件式 →",
+      "translation": "Next: ex05 and conditionals →"
+    },
+    {
+      "source": "STEP 20 · 4コマ目 · 目安 20分",
+      "translation": "STEP 20 · Lesson 4 · About 20 min"
+    },
+    {
+      "source": "ex05 を作る：if と文字列の比較",
+      "translation": "Create ex05: if and string comparison"
+    },
+    {
+      "source": "① ex05 を作り、2つの条件を書く",
+      "translation": "① Create ex05 and write two conditions"
+    },
+    {
+      "source": "左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex05</code> と入力します。",
+      "translation": "In the <strong>プロジェクト</strong> (Project) tool window on the left, right-click <code>src</code>, select <strong>新規 → パッケージ</strong> (New → Package), and enter <code>ex05</code>."
+    },
+    {
+      "source": "できた <code>ex05</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。",
+      "translation": "Right-click the new <code>ex05</code> and select <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File). Set the name to <code>main</code> and the kind to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "<code>src/ex05/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex05</code> が2行にならないようにします。",
+      "translation": "Open <code>src/ex05/main.kt</code> and replace its contents with the completed code below. Make sure the <code>package ex05</code> line at the top does not appear twice."
+    },
+    {
+      "source": "このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。",
+      "translation": "Run it with the ▷ to the left of <code>fun main()</code> in this file. Do not confuse it with the run button of an earlier exercise."
+    },
+    {
+      "source": "src/ex05/main.kt · ファイル全体",
+      "translation": "src/ex05/main.kt · Whole file"
+    },
+    {
+      "source": "② 実行結果を見る",
+      "translation": "② Look at the output"
+    },
+    {
+      "source": "<code>flag</code> は <code>true</code> なので上の <code>if</code> は最初のブロックへ進みます。下の比較は <code>\"Tanaka\"</code> と <code>\"yamada\"</code> で文字が違うため、<code>else</code> の行が出ます。",
+      "translation": "Because <code>flag</code> is <code>true</code>, the first <code>if</code> goes into its first block. In the second comparison, <code>\"Tanaka\"</code> and <code>\"yamada\"</code> have different characters, so the <code>else</code> line is printed."
+    },
+    {
+      "source": "③ Java・Swiftと条件の書き方を比べる",
+      "translation": "③ Compare how conditions are written in Java and Swift"
+    },
+    {
+      "source": "Kotlinで文字列の内容を比べるのは <code>==</code> です。Javaの <code>String.equals</code> にあたり、Javaの参照比較の <code>==</code> とは役割が違います。Kotlinの <code>==</code> は等価性の比較を <code>equals</code> に結び付けています。",
+      "translation": "In Kotlin, you compare the contents of strings with <code>==</code>. It corresponds to Java's <code>String.equals</code>, and its role differs from Java's <code>==</code>, which compares references. Kotlin's <code>==</code> ties equality comparison to <code>equals</code>."
+    },
+    {
+      "source": "Swiftの文字列も <code>==</code> で内容を比べます。Kotlinでは <code>if (条件)</code> の丸かっこが必要です。",
+      "translation": "Swift also compares string contents with <code>==</code>. In Kotlin, the parentheses around the condition in <code>if (条件)</code> are required."
+    },
+    {
+      "source": "大文字・小文字も比較の対象です。<code>\"Tanaka\"</code> と <code>\"tanaka\"</code> は別の文字列です。",
+      "translation": "The comparison is case-sensitive. <code>\"Tanaka\"</code> and <code>\"tanaka\"</code> are different strings."
+    },
+    {
+      "source": "Kotlinの <code>if</code> は値を返す式としても使えますが、この完成コードは分岐した先で出力する形です。値を受け取る形や <code>when</code> はここでは増やしません。",
+      "translation": "Kotlin's <code>if</code> can also be used as an expression that returns a value, but this completed code prints inside each branch. This step does not add the form that receives the value, or <code>when</code>."
+    },
+    {
+      "source": "④ 条件を1か所だけ変える",
+      "translation": "④ Change the condition in one place"
+    },
+    {
+      "source": "<code>val flag = true</code> を <code>val flag = false</code> にして実行します。1行目が <code>flag is false</code> に変わり、2行目は変わりません。確かめたら <code>true</code> に戻して、完成時の2行をもう一度出します。",
+      "translation": "Change <code>val flag = true</code> to <code>val flag = false</code> and run it. The first line changes to <code>flag is false</code>, and the second line stays the same. After checking, change it back to <code>true</code> and print the two lines of the completed code again."
+    },
+    {
+      "source": "<code>flag</code> の変更で1行目だけが変わり、戻すと <code>flag is true</code> / <code>string is not Tanaka</code> の2行になった。",
+      "translation": "Changing <code>flag</code> changes only the first line, and after changing it back, the output is the two lines <code>flag is true</code> / <code>string is not Tanaka</code>."
+    },
+    {
+      "source": "次へ：ex06 と繰り返し →",
+      "translation": "Next: ex06 and loops →"
+    },
+    {
+      "source": "STEP 21 · 4コマ目 · 目安 20分",
+      "translation": "STEP 21 · Lesson 4 · About 20 min"
+    },
+    {
+      "source": "ex06 を作る：listOf と for",
+      "translation": "Create ex06: listOf and for"
+    },
+    {
+      "source": "① ex06 を作り、リストの要素を出す",
+      "translation": "① Create ex06 and print the list's elements"
+    },
+    {
+      "source": "左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex06</code> と入力します。",
+      "translation": "In the <strong>プロジェクト</strong> (Project) tool window on the left, right-click <code>src</code>, select <strong>新規 → パッケージ</strong> (New → Package), and enter <code>ex06</code>."
+    },
+    {
+      "source": "できた <code>ex06</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。",
+      "translation": "Right-click the new <code>ex06</code> and select <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File). Set the name to <code>main</code> and the kind to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "<code>src/ex06/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex06</code> が2行にならないようにします。",
+      "translation": "Open <code>src/ex06/main.kt</code> and replace its contents with the completed code below. Make sure the <code>package ex06</code> line at the top does not appear twice."
+    },
+    {
+      "source": "src/ex06/main.kt · ファイル全体",
+      "translation": "src/ex06/main.kt · Whole file"
+    },
+    {
+      "source": "<code>listOf</code> に並べた文字列が、同じ順で1行ずつ出ます。<code>persons</code> は文字列のリスト <code>List&lt;String&gt;</code>、その中から取り出す <code>person</code> は <code>String</code> です。",
+      "translation": "The strings listed in <code>listOf</code> are printed one per line, in the same order. <code>persons</code> is a list of strings, <code>List&lt;String&gt;</code>, and each <code>person</code> taken from it is a <code>String</code>."
+    },
+    {
+      "source": "③ Javaの拡張for・Swiftのfor-inと比べる",
+      "translation": "③ Compare with Java's enhanced for and Swift's for-in"
+    },
+    {
+      "source": "Kotlinの <code>listOf(...)</code> は読み取り用の <code>List</code> を作る関数です。ここでは要素の追加・削除をせず、並べたものを順に読みます。",
+      "translation": "Kotlin's <code>listOf(...)</code> is a function that creates a read-only <code>List</code>. Here you do not add or remove elements; you only read the listed items in order."
+    },
+    {
+      "source": "Javaの拡張forの <code>:</code> が、Kotlinでは <code>in</code> です。Swiftも <code>in</code> を使いますが、Kotlinは <code>for (...)</code> と丸かっこで囲みます。",
+      "translation": "The <code>:</code> in Java's enhanced for is <code>in</code> in Kotlin. Swift also uses <code>in</code>, but Kotlin puts it in parentheses: <code>for (...)</code>."
+    },
+    {
+      "source": "<code>person</code> に <code>val</code> や <code>String</code> は書きません。<code>persons</code> の要素型から <code>String</code> が決まるためです。要素型を明示するなら <code>for (person: String in persons)</code> ですが、この回は省いた形でそろえます。",
+      "translation": "Do not write <code>val</code> or <code>String</code> for <code>person</code>. Its type, <code>String</code>, comes from the element type of <code>persons</code>. To state the element type explicitly, you would write <code>for (person: String in persons)</code>, but this lesson consistently uses the form without it."
+    },
+    {
+      "source": "<code>val persons</code> の <code>val</code> は変数への再代入禁止です。リストの変更操作を公開するかどうかとは別の話で、ここでは <code>listOf</code> の読み取り用の型だけを使います。",
+      "translation": "The <code>val</code> in <code>val persons</code> means the variable cannot be reassigned. That is a separate matter from whether the list exposes operations that change it; here you use only the read-only type from <code>listOf</code>."
+    },
+    {
+      "source": "④ 要素の順と出力の順を照合する",
+      "translation": "④ Match the element order with the output order"
+    },
+    {
+      "source": "<code>listOf</code> の中で <code>\"tanaka\"</code> と <code>\"sato\"</code> の位置を入れ替えて実行します。出力が <code>sato</code> / <code>yamada</code> / <code>tanaka</code> になります。確かめたら元の順へ戻します。",
+      "translation": "Swap the positions of <code>\"tanaka\"</code> and <code>\"sato\"</code> inside <code>listOf</code> and run it. The output becomes <code>sato</code> / <code>yamada</code> / <code>tanaka</code>. After checking, put them back in the original order."
+    },
+    {
+      "source": "<code>ex06/main.kt</code> を実行すると、<code>tanaka</code> / <code>yamada</code> / <code>sato</code> の順に3行出た。",
+      "translation": "Running <code>ex06/main.kt</code> prints three lines in the order <code>tanaka</code> / <code>yamada</code> / <code>sato</code>."
+    },
+    {
+      "source": "次へ：ex04 とクラス →",
+      "translation": "Next: ex04 and classes →"
+    },
+    {
+      "source": "STEP 22 · 4コマ目 · 目安 30分",
+      "translation": "STEP 22 · Lesson 4 · About 30 min"
+    },
+    {
+      "source": "ex04 を作る：クラスとプライマリコンストラクタ",
+      "translation": "Create ex04: classes and primary constructors"
+    },
+    {
+      "source": "① ex04 を作り、クラスから値を取り出す",
+      "translation": "① Create ex04 and get values out of a class"
+    },
+    {
+      "source": "左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex04</code> と入力します。",
+      "translation": "In the <strong>プロジェクト</strong> (Project) tool window on the left, right-click <code>src</code>, select <strong>新規 → パッケージ</strong> (New → Package), and enter <code>ex04</code>."
+    },
+    {
+      "source": "できた <code>ex04</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。",
+      "translation": "Right-click the new <code>ex04</code> and select <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File). Set the name to <code>main</code> and the kind to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "<code>src/ex04/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex04</code> が2行にならないようにします。",
+      "translation": "Open <code>src/ex04/main.kt</code> and replace its contents with the completed code below. Make sure the <code>package ex04</code> line at the top does not appear twice."
+    },
+    {
+      "source": "src/ex04/main.kt · ファイル全体",
+      "translation": "src/ex04/main.kt · Whole file"
+    },
+    {
+      "source": "<code>Person(\"Yamada\", 20)</code> で渡した値を、<code>yamada.name</code> と <code>yamada.age</code> で読みます。<code>name</code> と <code>age</code> は <strong>プロパティ</strong>です。Javaのフィールドとgetterをまとめた宣言、Swiftの保存用プロパティに対応します。",
+      "translation": "You read the values passed in <code>Person(\"Yamada\", 20)</code> with <code>yamada.name</code> and <code>yamada.age</code>. <code>name</code> and <code>age</code> are <strong>properties</strong>. They correspond to a Java field and getter combined into one declaration, and to a stored property in Swift."
+    },
+    {
+      "source": "③ コンストラクタの置き場所を比べる",
+      "translation": "③ Compare where the constructor goes"
+    },
+    {
+      "source": "クラス名の直後にある <code>(val name: String, val age: Int)</code> は、<strong>プライマリコンストラクタ</strong>です。Javaのコンストラクタ、Swiftの <code>init</code> が受け取る引数にあたります。",
+      "translation": "The <code>(val name: String, val age: Int)</code> right after the class name is the <strong>primary constructor</strong> (プライマリコンストラクタ). It corresponds to the parameters that a Java constructor or Swift's <code>init</code> receives."
+    },
+    {
+      "source": "ここでの <code>val</code> は「受け取った値を、読み取り専用のプロパティとして持つ」という宣言でもあります。Javaのフィールド・代入・getterをそれぞれ書く手間をまとめています。",
+      "translation": "The <code>val</code> here also declares \"keep the received value as a read-only property.\" It saves you from writing a field, an assignment, and a getter separately, as in Java."
+    },
+    {
+      "source": "Kotlinでインスタンスを作るときは <code>new</code> を書きません。<code>Person(...)</code> というクラス名への呼び出しがコンストラクタ呼び出しです。",
+      "translation": "In Kotlin, you do not write <code>new</code> to create an instance. Calling the class name, as in <code>Person(...)</code>, is the constructor call."
+    },
+    {
+      "source": "本体に書くものがなければ、クラスの <code>{ }</code> も省けます。今日の完成コードが1行なのは、このためです。",
+      "translation": "If the body has nothing in it, you can also omit the class's <code>{ }</code>. That is why today's completed code declares the class in a single line."
+    },
+    {
+      "source": "④ クラスの中へメソッドを一時的に足す（5分）",
+      "translation": "④ Temporarily add a method inside the class (5 min)"
+    },
+    {
+      "source": "最後の <code>class Person...</code> の1行だけを、次の形に置き換えます。関数をクラスの <code>{ }</code> の中へ置く点が、Javaのメソッド・Swiftのインスタンスメソッドと同じです。",
+      "translation": "Replace only the last line, <code>class Person...</code>, with the following. Putting the function inside the class's <code>{ }</code> works the same way as methods in Java and instance methods in Swift."
+    },
+    {
+      "source": "<code>main</code> の <code>println(yamada.age)</code> の次に <code>yamada.greet()</code> を足して実行します。3行目に <code>Yamada</code> が出ます。メソッドの中の <code>name</code> は、そのインスタンスのプロパティです。確認したら呼び出しを消し、クラスも元の1行へ戻します。",
+      "translation": "In <code>main</code>, add <code>yamada.greet()</code> after <code>println(yamada.age)</code> and run it. <code>Yamada</code> appears on the third line. The <code>name</code> inside the method is that instance's property. After checking, delete the call and change the class back to its original single line."
+    },
+    {
+      "source": "⑤ Javaから見える形を確認する（教員と5分）",
+      "translation": "⑤ Check how it looks from Java (5 min with the teacher)"
+    },
+    {
+      "source": "Kotlin/JVMでは、読み取り専用プロパティの値を読むgetterが生成されます。教員が <code>Person</code> のバイトコードをJavaの形で表示し、次の名前を探します。表示用のJavaコードは編集しません。",
+      "translation": "On Kotlin/JVM, a getter is generated to read the value of each read-only property. The teacher displays the bytecode of <code>Person</code> in Java form, and you look for the following names. Do not edit the displayed Java code."
+    },
+    {
+      "source": "Kotlinの宣言・読み取り",
+      "translation": "Kotlin declaration / access"
+    },
+    {
+      "source": "生成されるJava側の形",
+      "translation": "Generated form on the Java side"
+    },
+    {
+      "source": "<code>Person(String, int)</code> コンストラクタ",
+      "translation": "<code>Person(String, int)</code> constructor"
+    },
+    {
+      "source": "<code>val name: String</code> と <code>yamada.name</code>",
+      "translation": "<code>val name: String</code> and <code>yamada.name</code>"
+    },
+    {
+      "source": "保存用フィールドと <code>getName()</code>",
+      "translation": "A storage field and <code>getName()</code>"
+    },
+    {
+      "source": "<code>val age: Int</code> と <code>yamada.age</code>",
+      "translation": "<code>val age: Int</code> and <code>yamada.age</code>"
+    },
+    {
+      "source": "保存用フィールドと <code>getAge()</code>",
+      "translation": "A storage field and <code>getAge()</code>"
+    },
+    {
+      "source": "Javaのgetterを手で書かなくてよい理由は、Kotlinのプロパティ宣言からコンパイラが補っているためです。この完成コードの <code>val</code> プロパティにはsetterは生成されません。",
+      "translation": "You do not have to write Java getters by hand because the compiler adds them from the Kotlin property declarations. No setters are generated for the <code>val</code> properties in this completed code."
+    },
+    {
+      "source": "一時的なメソッドを消して完成コードへ戻し、出力が <code>Yamada</code> / <code>20</code> の2行になった。Java側の <code>getName()</code> と <code>getAge()</code> も画面で確認した。",
+      "translation": "The temporary method is removed, the code is back to the completed code, and the output is two lines: <code>Yamada</code> / <code>20</code>. The Java-side <code>getName()</code> and <code>getAge()</code> have also been checked on screen."
+    },
+    {
+      "source": "STEP 23 · 4コマ目 · 目安 12分",
+      "translation": "STEP 23 · Lesson 4 · About 12 min"
+    },
+    {
+      "source": "ミニ練習：変えた行と出力を対応させる",
+      "translation": "Mini practice: match the lines you change to the output"
+    },
+    {
+      "source": "演習ごとに、開いている <code>main.kt</code> のパッケージ名を確認してから変更します。別のパッケージの出力が出たら、いま開いている <code>fun main()</code> の左の ▷ から実行し直してください。",
+      "translation": "For each exercise, check the package name of the open <code>main.kt</code> before you change it. If output from a different package appears, run it again with the ▷ to the left of the <code>fun main()</code> you have open."
+    },
+    {
+      "source": "① 条件とリストを変える（6分）",
+      "translation": "① Change the condition and the list (6 min)"
+    },
+    {
+      "source": "<code>ex05/main.kt</code> の <code>flag</code> を <code>false</code>、<code>yamada</code> の値を <code>\"Tanaka\"</code> に変えます。出力は <code>flag is false</code> / <code>string is Tanaka</code> の2行です。",
+      "translation": "In <code>ex05/main.kt</code>, change <code>flag</code> to <code>false</code> and the value of <code>yamada</code> to <code>\"Tanaka\"</code>. The output is two lines: <code>flag is false</code> / <code>string is Tanaka</code>."
+    },
+    {
+      "source": "<code>ex06/main.kt</code> の <code>listOf</code> の末尾へ <code>\"suzuki\"</code> を足します。<code>for</code> は変更せず、出力の4行目に <code>suzuki</code> が加わることを確認します。",
+      "translation": "In <code>ex06/main.kt</code>, add <code>\"suzuki\"</code> to the end of <code>listOf</code>. Without changing the <code>for</code>, check that <code>suzuki</code> is added as the fourth line of the output."
+    },
+    {
+      "source": "② val のプロパティへの再代入を試す（3分）",
+      "translation": "② Try reassigning a val property (3 min)"
+    },
+    {
+      "source": "<code>ex04/main.kt</code> の <code>val yamada = Person(...)</code> の直後に <code>yamada.age = 21</code> を足します。その行の赤い波線と、代入が認められないことを確認してから、足した行を消します。エラーの言い回しはIDEやKotlinの版で変わります。",
+      "translation": "In <code>ex04/main.kt</code>, add <code>yamada.age = 21</code> right after <code>val yamada = Person(...)</code>. Check the red squiggly line on that line and that the assignment is not allowed, then delete the line you added. The wording of the error depends on the IDE and Kotlin versions."
+    },
+    {
+      "source": "③ Java・Swiftでも、読み取り専用の値は書き換えられない",
+      "translation": "③ Read-only values cannot be changed in Java and Swift either"
+    },
+    {
+      "source": "<code>yamada</code> という変数が <code>val</code> であることと、<code>age</code> プロパティが <code>val</code> であることは別です。今回 <code>age</code> に代入できないのは、<code>Person</code> の宣言が <code>val age: Int</code> だからです。<code>yamada</code> を <code>var</code> にするだけでは、プロパティの代入は許可されません。",
+      "translation": "The variable <code>yamada</code> being a <code>val</code> and the <code>age</code> property being a <code>val</code> are two separate things. You cannot assign to <code>age</code> here because <code>Person</code> declares it as <code>val age: Int</code>. Changing <code>yamada</code> to <code>var</code> alone does not allow assigning to the property."
+    },
+    {
+      "source": "④ 最後の3分で完成コードへ戻す",
+      "translation": "④ Return to the completed code in the last 3 minutes"
+    },
+    {
+      "source": "<code>ex05</code> は <code>flag = true</code>、<code>yamada = \"yamada\"</code> に戻します。",
+      "translation": "In <code>ex05</code>, change the values back to <code>flag = true</code> and <code>yamada = \"yamada\"</code>."
+    },
+    {
+      "source": "<code>ex06</code> では <code>\"suzuki\"</code> を消し、3人のリストに戻します。",
+      "translation": "In <code>ex06</code>, delete <code>\"suzuki\"</code> so the list has three people again."
+    },
+    {
+      "source": "<code>ex04</code> から <code>yamada.age = 21</code> が消えていることを確かめます。3本をそれぞれ実行し、完成時の出力へ戻ったことを見ます。",
+      "translation": "Check that <code>yamada.age = 21</code> is gone from <code>ex04</code>. Run each of the three programs and check that each shows the completed code's output again."
+    },
+    {
+      "source": "<code>age</code> への代入が拒否された行を消し、3本とも完成時の出力に戻っている。",
+      "translation": "The line where assigning to <code>age</code> was rejected is deleted, and all three programs show the completed code's output again."
+    },
+    {
+      "source": "次へ：4コマ目の完成 →",
+      "translation": "Next: Lesson 4 complete →"
+    },
+    {
+      "source": "STEP 24 · 4コマ目 · 目安 3分",
+      "translation": "STEP 24 · Lesson 4 · About 3 min"
+    },
+    {
+      "source": "4コマ目の完成",
+      "translation": "Lesson 4 complete"
+    },
+    {
+      "source": "① 3本を順に実行する",
+      "translation": "① Run the three programs in order"
+    },
+    {
+      "source": "開いて実行するファイル",
+      "translation": "File to open and run"
+    },
+    {
+      "source": "確認する出力",
+      "translation": "Output to check"
+    },
+    {
+      "source": "3本の出力を1つの <code>main</code> へまとめる必要はありません。パッケージが違うので、それぞれの <code>fun main()</code> から実行します。",
+      "translation": "You do not need to combine the three outputs into one <code>main</code>. Because they are in different packages, run each from its own <code>fun main()</code>."
+    },
+    {
+      "source": "② 書いたコードの差分を見直す",
+      "translation": "② Review the differences in the code you wrote"
+    },
+    {
+      "source": "文字列の内容は <code>==</code>、リストの走査は <code>in</code>、プロパティは <code>インスタンス.名前</code>。知っている処理でも、Java・Swiftと同じ記号になる場所と違う場所があります。",
+      "translation": "String contents: <code>==</code>. Going through a list: <code>in</code>. Properties: <code>インスタンス.名前</code> (instance.name). Even for things you already know, some parts use the same symbols as Java or Swift and some do not."
+    },
+    {
+      "source": "<code>src</code> に <code>ex01</code>〜<code>ex06</code> が並び、以前のコードが残っていることを確認します。今回増えたのはパッケージ3つで、プロジェクトは <code>K01HelloKotlin</code> の1つのままです。",
+      "translation": "Check that <code>ex01</code>–<code>ex06</code> are listed in <code>src</code> and that your earlier code is still there. Today you added three packages; there is still just one project, <code>K01HelloKotlin</code>."
+    },
+    {
+      "source": "3つの実行結果が表と一致し、練習で加えた行が残っていない。<code>src</code> に <code>ex04</code>・<code>ex05</code>・<code>ex06</code> がある。",
+      "translation": "The three outputs match the table, and none of the lines added during practice remain. <code>src</code> contains <code>ex04</code>, <code>ex05</code>, and <code>ex06</code>."
+    },
+    {
+      "source": "次へ：5コマ目を始める →",
+      "translation": "Next: Starting Lesson 5 →"
+    },
+    {
+      "source": "STEP 25 · 5コマ目 · 目安 5分",
+      "translation": "STEP 25 · Lesson 5 · About 5 min"
+    },
+    {
+      "source": "5コマ目を始める",
+      "translation": "Starting Lesson 5"
+    },
+    {
+      "source": "今日のゴール",
+      "translation": "Today's goal"
+    },
+    {
+      "source": "<code>ex08</code> のアクセサ、<code>ex09</code> の <code>data class</code>、<code>ex07</code> の拡張関数を、この順に動かします。演習の番号は前年度資料の節に対応しているため、今日は番号順ではありません。使うプロジェクトは引き続き <code>K01HelloKotlin</code> です。",
+      "translation": "Today you run accessors in <code>ex08</code>, <code>data class</code> in <code>ex09</code>, and extension functions in <code>ex07</code>, in that order. The exercise numbers correspond to sections of last year's materials, so today's order is not numerical. You keep using the <code>K01HelloKotlin</code> project."
+    },
+    {
+      "source": "① 自分のプロジェクトに Foo.kt を作る",
+      "translation": "① Create Foo.kt in your project"
+    },
+    {
+      "source": "IntelliJ IDEA の最近開いたプロジェクトから <code>K01HelloKotlin</code> を開きます。一覧にないときは <strong>開く…</strong> から、<code>書類/Kotlin/K01HelloKotlin</code> を選びます。すでに開いていればそのまま使います。",
+      "translation": "Open <code>K01HelloKotlin</code> from the recently opened projects in IntelliJ IDEA. If it is not in the list, use <strong>開く…</strong> (Open…) to select <code>書類/Kotlin/K01HelloKotlin</code> (書類 is Documents). If it is already open, just keep using it."
+    },
+    {
+      "source": "左の <code>src</code> に <code>ex01</code>〜<code>ex06</code> があることを確かめます。既存のパッケージは残します。",
+      "translation": "Check that <code>src</code> on the left contains <code>ex01</code>–<code>ex06</code>. Keep the existing packages."
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex08</code> を作ります。",
+      "translation": "Right-click <code>src</code> and create <code>ex08</code> with <strong>新規 → パッケージ</strong> (New → Package)."
+    },
+    {
+      "source": "<code>ex08</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。名前は <code>Foo</code>、種類は <strong>ファイル</strong> を選びます。大文字の <code>F</code> から始めます。",
+      "translation": "Right-click <code>ex08</code> and select <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File). Set the name to <code>Foo</code> and the kind to <strong>ファイル</strong> (File). Start the name with a capital <code>F</code>."
+    },
+    {
+      "source": "できた <code>Foo.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "Replace the whole new <code>Foo.kt</code> with the following, and run it with the run button to the left of <code>fun main()</code>."
+    },
+    {
+      "source": "Runツールウィンドウに <code>ex08</code> が1行出ます。別の出力が出たときは、上のツールバーではなく、いま開いた <code>Foo.kt</code> の <code>fun main()</code> の左から実行し直します。",
+      "translation": "One line, <code>ex08</code>, appears in the Run tool window. If different output appears, run it again from the left of <code>fun main()</code> in the <code>Foo.kt</code> you just opened, not from the toolbar at the top."
+    },
+    {
+      "source": "Kotlinのトップレベル関数は、Javaのようにクラスで囲む必要がありません。ファイル名が <code>Foo.kt</code> でも <code>fun main()</code> から実行できます。Swiftのトップレベルに処理を書く形とは、入口を <code>main</code> という関数にするところが違います。",
+      "translation": "Kotlin's top-level functions do not need to be wrapped in a class, as Java requires. Even when the file is named <code>Foo.kt</code>, you can run it from <code>fun main()</code>. Compared with Swift, where you write code directly at the top level, the difference is that the entry point is a function named <code>main</code>."
+    },
+    {
+      "source": "<code>src/ex08/Foo.kt</code> の1行目が <code>package ex08</code> で、Runツールウィンドウに <code>ex08</code> が出ている。",
+      "translation": "The first line of <code>src/ex08/Foo.kt</code> is <code>package ex08</code>, and the Run tool window shows <code>ex08</code>."
+    },
+    {
+      "source": "次へ：アクセサを自分で書く →",
+      "translation": "Next: Write accessors yourself →"
+    },
+    {
+      "source": "STEP 26 · 5コマ目 · 目安 23分",
+      "translation": "STEP 26 · Lesson 5 · About 23 min"
+    },
+    {
+      "source": "アクセサを自分で書く（ex08）",
+      "translation": "Write accessors yourself (ex08)"
+    },
+    {
+      "source": "<code>foo.counter</code> に代入したときと、読んだときに別の処理が走ることを、コンソールの6行で確かめます。Javaのgetter / setter、Swiftのcomputed propertyに対応する書き方です。",
+      "translation": "Use six lines of console output to check that different code runs when you assign to <code>foo.counter</code> and when you read it. This way of writing corresponds to getters / setters in Java and computed properties in Swift."
+    },
+    {
+      "source": "① Foo.kt 全体を次の内容にする",
+      "translation": "① Replace all of Foo.kt with the following"
+    },
+    {
+      "source": "<code>src/ex08/Foo.kt</code> を開き、先ほどの <code>println(\"ex08\")</code> を含めて、ファイル全体を置き換えます。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
+      "translation": "Open <code>src/ex08/Foo.kt</code> and replace the whole file, including the <code>println(\"ex08\")</code> from before. Put both <code>class Foo</code> and <code>fun main()</code> at the top level of the file."
+    },
+    {
+      "source": "src/ex08/Foo.kt · 完成コード",
+      "translation": "src/ex08/Foo.kt · Completed code"
+    },
+    {
+      "source": "<code>fun main()</code> の左からRunします。<code>val foo</code> でも <code>foo.counter</code> に代入できる点に注目してください。固定しているのは <code>foo</code> が参照するオブジェクトで、<code>counter</code> は <code>var</code> です。",
+      "translation": "Run it from the left of <code>fun main()</code>. Notice that you can assign to <code>foo.counter</code> even with <code>val foo</code>. What is fixed is the object that <code>foo</code> refers to; <code>counter</code> is a <code>var</code>."
+    },
+    {
+      "source": "書いた行",
+      "translation": "Line you wrote"
+    },
+    {
+      "source": "起きること",
+      "translation": "What happens"
+    },
+    {
+      "source": "<code>set(value)</code> が呼ばれます。<code>value</code> は <code>-1</code> なので、<code>if (value &gt;= 0)</code> の中には進まず、保存している値は <code>0</code> のままです。",
+      "translation": "<code>set(value)</code> is called. Because <code>value</code> is <code>-1</code>, it does not enter <code>if (value &gt;= 0)</code>, and the stored value stays <code>0</code>."
+    },
+    {
+      "source": "値を読むために <code>get()</code> が呼ばれ、getterの行が出ます。そのあと、返された <code>0</code> を外側の <code>println</code> が出します。",
+      "translation": "<code>get()</code> is called to read the value, and the getter's line is printed. Then the outer <code>println</code> prints the returned <code>0</code>."
+    },
+    {
+      "source": "setterの条件を満たすので <code>field = value</code> が実行され、保存値が <code>10</code> になります。次の読み取りでは <code>10</code> が返ります。",
+      "translation": "The setter's condition is met, so <code>field = value</code> runs and the stored value becomes <code>10</code>. The next read returns <code>10</code>."
+    },
+    {
+      "source": "次は保存値とアクセサだけの比較です。出力用の行は省き、負数を保存しない処理をそろえています。比較用のコードは <code>Foo.kt</code> へ追加しません。",
+      "translation": "The comparison below shows only the stored value and the accessors. The printing lines are left out, and all three share the same logic of not storing negative numbers. Do not add the comparison code to <code>Foo.kt</code>."
+    },
+    {
+      "source": "Kotlinはプロパティの直下に <code>get()</code> / <code>set(value)</code> を置きます。使う側は <code>foo.counter</code> のままで、Javaの <code>getCounter()</code> / <code>setCounter(...)</code> のように呼び分けません。",
+      "translation": "In Kotlin, <code>get()</code> / <code>set(value)</code> go directly under the property. The code that uses it still writes <code>foo.counter</code>, and does not choose between separate calls like Java's <code>getCounter()</code> / <code>setCounter(...)</code>."
+    },
+    {
+      "source": "<code>field</code> は、アクセサの中で保存値そのものを指す名前です。<strong>バッキングフィールド</strong>と呼びます。比較したJavaの <code>counter</code>、Swiftの <code>storedCounter</code> に対応し、Kotlinでは別の保存用プロパティを自分で宣言せずに使えます。<code>field</code> を <code>counter</code> に替えると、アクセサからまた同じアクセサを呼ぶことになるため、置き換えません。",
+      "translation": "<code>field</code> is the name that refers to the stored value itself inside an accessor. It is called the <strong>backing field</strong> (バッキングフィールド). It corresponds to <code>counter</code> in the Java comparison and <code>storedCounter</code> in the Swift comparison; in Kotlin, you can use it without declaring a separate storage property yourself. Do not replace <code>field</code> with <code>counter</code>, because the accessor would then call the same accessor again."
+    },
+    {
+      "source": "<code>var counter = 0</code> の初期化では、このsetterは呼ばれません。出力が <code>setが呼ばれる： -1</code> から始まるのはそのためです。",
+      "translation": "The initialization <code>var counter = 0</code> does not call this setter. That is why the output starts with <code>setが呼ばれる： -1</code> (set is called: -1)."
+    },
+    {
+      "source": "文字列の <code>$value</code> と <code>$field</code> は、その値を文字列へ埋め込む書き方です。Javaの文字列との <code>+</code>、Swiftの <code>\\(値)</code> に対応します。",
+      "translation": "<code>$value</code> and <code>$field</code> in the strings embed those values in the string. They correspond to joining strings with <code>+</code> in Java and to <code>\\(値)</code> (値 = value) in Swift."
+    },
+    {
+      "source": "Runツールウィンドウにsetterとgetterの行が出ており、値だけの行は <code>0</code>、<code>10</code> の順になっている。",
+      "translation": "The Run tool window shows the setter and getter lines, and the value-only lines are <code>0</code> and then <code>10</code>."
+    },
+    {
+      "source": "次へ：data class とスマートキャスト →",
+      "translation": "Next: data class and smart casts →"
+    },
+    {
+      "source": "STEP 27 · 5コマ目 · 目安 35分",
+      "translation": "STEP 27 · Lesson 5 · About 35 min"
+    },
+    {
+      "source": "data class とスマートキャスト（ex09）",
+      "translation": "data class and smart casts (ex09)"
+    },
+    {
+      "source": "同じ値で作った2つのオブジェクトを比較し、<code>data class</code> が生成するメソッドの働きを出力で確かめます。続けて、名前付き引数と既定引数で年齢だけを変えたコピーを作り、型を確かめたあとのスマートキャストを試します。",
+      "translation": "Compare two objects created with the same values, and use the output to check what the methods generated by <code>data class</code> do. Then use named and default arguments to make a copy with only the age changed, and try smart casts after checking a type."
+    },
+    {
+      "source": "① ex09/main.kt を作って実行する（12分）",
+      "translation": "① Create and run ex09/main.kt (12 min)"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex09</code> を作ります。",
+      "translation": "Right-click <code>src</code> and create <code>ex09</code> with <strong>新規 → パッケージ</strong> (New → Package)."
+    },
+    {
+      "source": "<code>ex09</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "Right-click <code>ex09</code>, select <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File), and set the name to <code>main</code> and the kind to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "<code>main.kt</code> 全体を次の内容にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
+      "translation": "Replace all of <code>main.kt</code> with the following. <code>Person</code> and <code>Person2</code> at the end are <strong>outside</strong> the closing brace of <code>main</code>."
+    },
+    {
+      "source": "このファイルの <code>fun main()</code> の左からRunします。",
+      "translation": "Run it from the left of <code>fun main()</code> in this file."
+    },
+    {
+      "source": "src/ex09/main.kt · 完成コード",
+      "translation": "src/ex09/main.kt · Completed code"
+    },
+    {
+      "source": "② 実行結果を上から確かめる",
+      "translation": "② Check the output from the top"
+    },
+    {
+      "source": "出力は8行です。数値や末尾の文字列が実行環境により変わる行もあるため、次の表の内容で照合します。",
+      "translation": "The output has eight lines. Some lines contain numbers or trailing characters that vary by environment, so check them against the table below."
+    },
+    {
+      "source": "確かめる内容",
+      "translation": "What to check"
+    },
+    {
+      "source": "<code>yamada.hashCode()</code> と <code>yamada2.hashCode()</code> が同じ整数になっています。",
+      "translation": "<code>yamada.hashCode()</code> and <code>yamada2.hashCode()</code> show the same integer."
+    },
+    {
+      "source": "<code>tanaka.hashCode()</code> と <code>tanaka2.hashCode()</code> の整数が出ます。特定の数値や、2つが異なることは完成条件にしません。",
+      "translation": "Integers for <code>tanaka.hashCode()</code> and <code>tanaka2.hashCode()</code> appear. Neither a specific number nor the two being different is required for completion."
+    },
+    {
+      "source": "2人とも <code>Person(name=yamada, age=20)</code> と出ます。",
+      "translation": "Both show <code>Person(name=yamada, age=20)</code>."
+    },
+    {
+      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は見本と一致しなくても構いません。",
+      "translation": "Both show <code>ex09.Person2@</code> followed by letters and digits. The letters and digits at the end do not have to match the sample."
+    },
+    {
+      "source": "<code>copyYamada.hashCode:</code> のあとに整数が出ます。",
+      "translation": "An integer appears after <code>copyYamada.hashCode:</code>."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（8分）",
+      "translation": "③ How to write it in Java / Swift (8 min)"
+    },
+    {
+      "source": "<code>data class</code> は、プライマリコンストラクタにある <code>name</code> と <code>age</code> をもとに <code>equals()</code>・<code>hashCode()</code>・<code>toString()</code> などを生成します。Javaの <code>record</code>、Swiftの <code>struct: Hashable</code> による等価比較やハッシュの自動合成に対応する機能です。生成される文字列や数値まで3言語で同じになるわけではありません。",
+      "translation": "<code>data class</code> generates <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and other methods from <code>name</code> and <code>age</code> in the primary constructor. It corresponds to Java's <code>record</code> and to the automatic synthesis of equality and hashing for Swift's <code>struct: Hashable</code>. This does not mean the generated strings and numbers are the same in all three languages."
+    },
+    {
+      "source": "このコードの通常クラス <code>Person2</code> は、これらのメソッドを上書きしていません。そのため、別々に作った2人の <code>equals()</code> は <code>false</code> です。<strong>通常クラスでは値による比較を書けない、という意味ではありません。</strong>",
+      "translation": "The regular class <code>Person2</code> in this code does not override these methods. So <code>equals()</code> for two people created separately is <code>false</code>. <strong>This does not mean you cannot write value-based comparison in a regular class.</strong>"
+    },
+    {
+      "source": "<code>equals()</code> が <code>true</code> なら、<code>hashCode()</code> も同じ値になります。逆向きは成り立たず、ハッシュ値が同じというだけでは等価とは限りません。",
+      "translation": "If <code>equals()</code> is <code>true</code>, <code>hashCode()</code> also returns the same value. The reverse is not true: having the same hash value alone does not mean the objects are equal."
+    },
+    {
+      "source": "<code>component1()</code> と <code>component2()</code> も自動生成され、コンストラクタで並べた順に <code>name</code>、<code>age</code> を返します。今回は完成コードの呼び出し方で確かめます。",
+      "translation": "<code>component1()</code> and <code>component2()</code> are also generated automatically and return <code>name</code> and <code>age</code>, in the order listed in the constructor. Here you check them with the calls in the completed code."
+    },
+    {
+      "source": "Kotlinの <code>data class</code> はクラスです。Swiftの <code>struct</code> と同じ値型になるわけではありません。",
+      "translation": "A Kotlin <code>data class</code> is a class. It is not a value type like Swift's <code>struct</code>."
+    },
+    {
+      "source": "④ copy の名前付き引数と既定引数（7分）",
+      "translation": "④ Named and default arguments of copy (7 min)"
+    },
+    {
+      "source": "<code>val copyYamada = yamada.copy(age = 25)</code> の <code>age = 25</code> は、元の <code>yamada.age</code> への代入ではありません。<strong>名前付き引数</strong>で、<code>copy</code> の <code>age</code> 引数だけに <code>25</code> を渡しています。省いた <code>name</code> は元の <code>yamada.name</code> を使います。",
+      "translation": "The <code>age = 25</code> in <code>val copyYamada = yamada.copy(age = 25)</code> is not an assignment to the original <code>yamada.age</code>. It is a <strong>named argument</strong> (名前付き引数) that passes <code>25</code> only to the <code>age</code> parameter of <code>copy</code>. The omitted <code>name</code> uses the original <code>yamada.name</code>."
+    },
+    {
+      "source": "自動生成される <code>copy</code> の引数は、次の形です。これは宣言部分の説明で、ファイルへ追加するコードではありません。<code>引数名: 型 = 既定値</code> と書かれた引数は、呼び出し側で省けます。",
+      "translation": "The parameters of the automatically generated <code>copy</code> look like this. It only explains the declaration; it is not code to add to your file. A parameter written as <code>引数名: 型 = 既定値</code> (parameter name: type = default value) can be omitted by the caller."
+    },
+    {
+      "source": "<code>yamada.copy(age = 25)</code> を一度 <code>yamada.copy()</code> に変え、Runします。",
+      "translation": "Temporarily change <code>yamada.copy(age = 25)</code> to <code>yamada.copy()</code> and run it."
+    },
+    {
+      "source": "7行目が <code>copyYamada Person(name=yamada, age=20)</code> に変わります。両方の引数を省いたので、名前も年齢も元と同じ値です。",
+      "translation": "Line 7 changes to <code>copyYamada Person(name=yamada, age=20)</code>. Because both arguments are omitted, the name and the age are the same as the original."
+    },
+    {
+      "source": "<code>yamada.copy(age = 25)</code> に戻し、7行目が <code>age=25</code> に戻ることを確かめます。",
+      "translation": "Change it back to <code>yamada.copy(age = 25)</code> and check that line 7 shows <code>age=25</code> again."
+    },
+    {
+      "source": "年齢だけ違うオブジェクトを作る書き方を比べます。",
+      "translation": "Compare how to create an object that differs only in age."
+    },
+    {
+      "source": "Kotlinの名前付き引数は、呼び出す側が任意で付ける <code>age = 25</code> です。Swiftの <code>age: 25</code> は宣言側が決めた<strong>引数ラベル</strong>で、このイニシャライザでは省けません。記号の違いだけではありません。Kotlinの <code>copy</code> では、名前付き引数と既定引数を組み合わせることで、変更する引数だけを指定できます。<code>copy</code> は新しいオブジェクトを返し、元の <code>yamada</code> の年齢は <code>20</code> のままです。",
+      "translation": "A Kotlin named argument, <code>age = 25</code>, is optional and added by the caller. Swift's <code>age: 25</code> is an <strong>argument label</strong> set by the declaration, and it cannot be omitted in this initializer. The difference is more than the symbol. With Kotlin's <code>copy</code>, combining named arguments and default arguments lets you specify only the arguments you change. <code>copy</code> returns a new object, and the age of the original <code>yamada</code> stays <code>20</code>."
+    },
+    {
+      "source": "⑤ 型とnullを確かめてから使う（8分）",
+      "translation": "⑤ Check the type and null before using a value (8 min)"
+    },
+    {
+      "source": "<strong>スマートキャスト</strong>は、条件で確かめた型として、その範囲で同じ変数を使える書き方です。Javaの <code>instanceof</code> によるパターンマッチ、Swiftの <code>as?</code> と <code>if let</code> に対応します。次の2関数を、ファイル末尾の <code>class Person2(...)</code> のあとへ一時的に追加します。",
+      "translation": "A <strong>smart cast</strong> (スマートキャスト) lets you use the same variable, within the scope of a condition, as the type that the condition checked. It corresponds to pattern matching with <code>instanceof</code> in Java, and to <code>as?</code> and <code>if let</code> in Swift. Temporarily add the following two functions after <code>class Person2(...)</code> at the end of the file."
+    },
+    {
+      "source": "次の3行を、<code>main</code> の最後の <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> の<strong>あと、<code>main</code> の閉じかっこの前</strong>に追加してRunします。",
+      "translation": "Add the following three lines after the last line of <code>main</code>, <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code>. Put them <strong>after that line and before the closing brace of <code>main</code></strong>, then run it."
+    },
+    {
+      "source": "元の8行のあとに、次の2行だけが増えます。<code>showName(null)</code> では条件を満たさないため、出力は増えません。",
+      "translation": "Only the following two lines are added after the original eight lines. <code>showName(null)</code> does not meet the condition, so it adds no output."
+    },
+    {
+      "source": "<code>Any</code> は、ここではJavaの <code>Object</code> やSwiftの <code>Any</code> に対応する、広い型として使っています。関数に入った時点では <code>value</code> が <code>Person</code> か分からないため、<code>is Person</code> で確かめます。",
+      "translation": "Here, <code>Any</code> is used as a broad type that corresponds to Java's <code>Object</code> and Swift's <code>Any</code>. When the function starts, it is not known whether <code>value</code> is a <code>Person</code>, so you check with <code>is Person</code>."
+    },
+    {
+      "source": "<code>if (value is Person)</code> の中では、別の変数や明示的なキャストを用意せず、元の名前 <code>value.name</code> で使えます。同じように、<code>if (name != null)</code> の中では <code>name.count()</code> と書けます。Swiftなら後者は <code>if let name = name</code> で取り出す場面です。今回の引数は再代入されないため、条件で確かめた型をその中で使えます。",
+      "translation": "Inside <code>if (value is Person)</code>, you can use it by its original name, as <code>value.name</code>, without a separate variable or an explicit cast. Likewise, inside <code>if (name != null)</code>, you can write <code>name.count()</code>. In Swift, the latter is where you would unwrap it with <code>if let name = name</code>. These parameters are never reassigned, so the type checked in the condition can be used inside the block."
+    },
+    {
+      "source": "確かめたら、追加した3つの呼び出しと <code>showPerson</code>・<code>showName</code> の2関数を削除し、再びRunして出力が8行に戻ることを確かめます。完成コードは①の形で残します。",
+      "translation": "After checking, delete the three calls you added and the two functions <code>showPerson</code> and <code>showName</code>. Run it again and check that the output is back to eight lines. Keep the completed code in the form from ①."
+    },
+    {
+      "source": "<code>ex09</code> の出力が8行に戻っている。1行目が <code>true</code> / <code>false</code>、7行目が <code>Person(name=yamada, age=25)</code> になっている。",
+      "translation": "The output of <code>ex09</code> is back to eight lines. Line 1 shows <code>true</code> / <code>false</code>, and line 7 shows <code>Person(name=yamada, age=25)</code>."
+    },
+    {
+      "source": "次へ：Int に拡張関数を足す →",
+      "translation": "Next: Add an extension function to Int →"
+    },
+    {
+      "source": "STEP 28 · 5コマ目 · 目安 15分",
+      "translation": "STEP 28 · Lesson 5 · About 15 min"
+    },
+    {
+      "source": "Int に拡張関数を足す（ex07）",
+      "translation": "Add an extension function to Int (ex07)"
+    },
+    {
+      "source": "Swiftの <code>extension</code> と同じ発想で、<code>Int</code> に対して呼べる関数を書き、<code>5.plusTen()</code> で <code>15</code> を出します。",
+      "translation": "Using the same idea as Swift's <code>extension</code>, write a function that can be called on an <code>Int</code>, and print <code>15</code> with <code>5.plusTen()</code>."
+    },
+    {
+      "source": "① ex07/main.kt を作って実行する",
+      "translation": "① Create and run ex07/main.kt"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> から <code>ex07</code> を作ります。今日作った <code>ex08</code>・<code>ex09</code> の中には作りません。",
+      "translation": "Right-click <code>src</code> and create <code>ex07</code> from <strong>新規 → パッケージ</strong> (New → Package). Do not create it inside <code>ex08</code> or <code>ex09</code>, which you made today."
+    },
+    {
+      "source": "<code>ex07</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "Right-click <code>ex07</code>, select <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File), and set the name to <code>main</code> and the kind to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。",
+      "translation": "Replace the whole file with the following, and run it from the left of this <code>fun main()</code>."
+    },
+    {
+      "source": "src/ex07/main.kt · 完成コード",
+      "translation": "src/ex07/main.kt · Completed code"
+    },
+    {
+      "source": "<code>5</code> に対して <code>plusTen()</code> を呼び、その戻り値を <code>result</code> に入れて出しています。",
+      "translation": "The code calls <code>plusTen()</code> on <code>5</code>, stores the return value in <code>result</code>, and prints it."
+    },
+    {
+      "source": "Kotlinでは <code>fun Int.plusTen()</code> のように、<strong>対象の型を関数名の前に書く</strong>と拡張関数になります。<code>Int</code> を <strong>レシーバ型</strong>と呼びます。Swiftの <code>extension Int</code> が対象にしている型と同じ役目です。",
+      "translation": "In Kotlin, when you <strong>write the target type before the function name</strong>, as in <code>fun Int.plusTen()</code>, the function becomes an extension function (拡張関数). <code>Int</code> is called the <strong>receiver type</strong> (レシーバ型). It plays the same role as the type that Swift's <code>extension Int</code> targets."
+    },
+    {
+      "source": "本体の <code>this</code> は、呼び出しのドットの左にある値です。<code>5.plusTen()</code> なら <code>5</code> で、Swiftの <code>self</code> に対応します。",
+      "translation": "<code>this</code> in the body is the value to the left of the dot in the call. For <code>5.plusTen()</code>, it is <code>5</code>. It corresponds to Swift's <code>self</code>."
+    },
+    {
+      "source": "Javaには同じ形の拡張関数がありません。比較したJavaでは、対象の値を <code>static</code> メソッドの引数として渡しています。",
+      "translation": "Java has no extension functions of this form. The Java comparison passes the target value as an argument to a <code>static</code> method."
+    },
+    {
+      "source": "<code>Int</code> 自体のソースを書き換えているわけではありません。今回作った <code>plusTen</code> は、<code>ex07</code> のファイルの直下にある関数です。",
+      "translation": "You are not changing the source of <code>Int</code> itself. The <code>plusTen</code> you made is a function at the top level of the <code>ex07</code> file."
+    },
+    {
+      "source": "<code>src/ex07/main.kt</code> の <code>5.plusTen()</code> を実行し、Runツールウィンドウに <code>15</code> が1行出ている。",
+      "translation": "After running <code>5.plusTen()</code> in <code>src/ex07/main.kt</code>, the Run tool window shows one line: <code>15</code>."
+    },
+    {
+      "source": "STEP 29 · 5コマ目 · 目安 9分",
+      "translation": "STEP 29 · Lesson 5 · About 9 min"
+    },
+    {
+      "source": "3つのファイルを1つずつ書き換え、そのファイルの <code>fun main()</code> の左からRunします。試したら、その場で元に戻します。",
+      "translation": "Change the three files one at a time, and run each from the left of that file's <code>fun main()</code>. After trying each change, undo it right away."
+    },
+    {
+      "source": "① 1か所変えてRunする",
+      "translation": "① Change one place and run it"
+    },
+    {
+      "source": "練習",
+      "translation": "Practice"
+    },
+    {
       "source": "変える場所",
       "translation": "Where to change"
+    },
+    {
+      "source": "A · 負数を渡す",
+      "translation": "A · Pass a negative number"
+    },
+    {
+      "source": "<code>ex08/Foo.kt</code> の後半の <code>foo.counter = 10</code> を <code>foo.counter = -5</code> にします。",
+      "translation": "In <code>ex08/Foo.kt</code>, change <code>foo.counter = 10</code> in the second half to <code>foo.counter = -5</code>."
+    },
+    {
+      "source": "B · 引数を省く",
+      "translation": "B · Omit the argument"
+    },
+    {
+      "source": "<code>ex09/main.kt</code> の <code>yamada.copy(age = 25)</code> を <code>yamada.copy()</code> にします。",
+      "translation": "In <code>ex09/main.kt</code>, change <code>yamada.copy(age = 25)</code> to <code>yamada.copy()</code>."
+    },
+    {
+      "source": "C · 呼び出す値を変える",
+      "translation": "C · Change the value it is called on"
+    },
+    {
+      "source": "<code>ex07/main.kt</code> の <code>5.plusTen()</code> を <code>(-3).plusTen()</code> にします。負の値全体に関数を呼ぶため、<code>-3</code> をかっこで囲みます。",
+      "translation": "In <code>ex07/main.kt</code>, change <code>5.plusTen()</code> to <code>(-3).plusTen()</code>. Put <code>-3</code> in parentheses so that the function is called on the whole negative value."
+    },
+    {
+      "source": "② 試したあとに、結果を照合する",
+      "translation": "② After trying, check the results"
+    },
+    {
+      "source": "Aの結果",
+      "translation": "Result of A"
+    },
+    {
+      "source": "4行目が <code>setが呼ばれる： -5</code> になり、そのあとのgetterが読む値と最後の値は <code>0</code> です。負数を2回渡しても保存値は初期値のままです。確かめたら <code>foo.counter = 10</code> に戻し、最後の値が <code>10</code> に戻ったことを確かめます。",
+      "translation": "Line 4 becomes <code>setが呼ばれる： -5</code> (set is called: -5). The value the getter reads after that, and the last value, are <code>0</code>. Even after passing a negative number twice, the stored value stays at its initial value. After checking, change it back to <code>foo.counter = 10</code> and check that the last value is <code>10</code> again."
+    },
+    {
+      "source": "Bの結果",
+      "translation": "Result of B"
+    },
+    {
+      "source": "7行目が <code>copyYamada Person(name=yamada, age=20)</code> になります。<code>copy()</code> は元と同じ値を持つ新しい <code>Person</code> を返します。確かめたら <code>copy(age = 25)</code> に戻し、7行目が <code>age=25</code> に戻ったことを確かめます。",
+      "translation": "Line 7 becomes <code>copyYamada Person(name=yamada, age=20)</code>. <code>copy()</code> returns a new <code>Person</code> with the same values as the original. After checking, change it back to <code>copy(age = 25)</code> and check that line 7 shows <code>age=25</code> again."
+    },
+    {
+      "source": "Cの結果",
+      "translation": "Result of C"
+    },
+    {
+      "source": "<code>7</code> が出ます。<code>this</code> が <code>-3</code> なので、<code>-3 + 10</code> の結果です。確かめたら <code>5.plusTen()</code> に戻し、<code>15</code> が出ることを確かめます。",
+      "translation": "<code>7</code> is printed. Because <code>this</code> is <code>-3</code>, it is the result of <code>-3 + 10</code>. After checking, change it back to <code>5.plusTen()</code> and check that <code>15</code> is printed."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（練習C）",
+      "translation": "③ How to write it in Java / Swift (Practice C)"
+    },
+    {
+      "source": "STEP 28で比較した関数を使うと、呼び出しは次の形になります。",
+      "translation": "With the functions compared in STEP 28, the calls take the following form."
+    },
+    {
+      "source": "KotlinとSwiftは、呼び出す値をドットの左に置けます。Javaの比較例では同じ値を引数に渡します。書き方が違っても、関数に渡る数は <code>-3</code> で、足す数は <code>10</code> のままです。",
+      "translation": "In Kotlin and Swift, you can put the value you call the function on to the left of the dot. The Java example passes the same value as an argument. The syntax differs, but the number passed to the function is still <code>-3</code>, and the number added is still <code>10</code>."
+    },
+    {
+      "source": "練習後に3か所を元へ戻し、<code>ex08</code> の最後が <code>10</code>、<code>ex09</code> のコピーが <code>age=25</code>、<code>ex07</code> が <code>15</code> になっている。",
+      "translation": "After the practice, the three spots are changed back: the last value in <code>ex08</code> is <code>10</code>, the copy in <code>ex09</code> has <code>age=25</code>, and <code>ex07</code> shows <code>15</code>."
+    },
+    {
+      "source": "次へ：5コマ目の完成 →",
+      "translation": "Next: Lesson 5 complete →"
+    },
+    {
+      "source": "STEP 30 · 5コマ目 · 目安 3分",
+      "translation": "STEP 30 · Lesson 5 · About 3 min"
+    },
+    {
+      "source": "5コマ目の完成",
+      "translation": "Lesson 5 complete"
+    },
+    {
+      "source": "① 最後の3分 · 完成した3本を実行する",
+      "translation": "① The last 3 minutes · Run the three finished programs"
+    },
+    {
+      "source": "左のプロジェクトツールウィンドウから、次の3ファイルを順に開きます。それぞれの <code>fun main()</code> の左からRunし、下の表と照合します。",
+      "translation": "Open the following three files in order from the Project tool window on the left. Run each one with the run button to the left of its <code>fun main()</code>, and check the output against the table below."
+    },
+    {
+      "source": "② 完成チェック",
+      "translation": "② Completion check"
+    },
+    {
+      "source": "ファイル",
+      "translation": "File"
     },
     {
       "source": "画面で確かめること",
       "translation": "What to check on screen"
     },
     {
+      "source": "出力は6行。値だけの行が <code>0</code>、<code>10</code> の順。",
+      "translation": "The output has 6 lines. The value-only lines show <code>0</code>, then <code>10</code>."
+    },
+    {
+      "source": "出力は8行。1行目は <code>true</code> / <code>false</code>、7行目のコピーは <code>Person(name=yamada, age=25)</code>。一時的に足した2関数と呼び出しは残っていない。",
+      "translation": "The output has 8 lines. Line 1 shows <code>true</code> / <code>false</code>, and the copy on line 7 is <code>Person(name=yamada, age=25)</code>. The two functions you added temporarily and their calls are no longer there."
+    },
+    {
+      "source": "出力は <code>15</code> の1行。",
+      "translation": "The output is one line: <code>15</code>."
+    },
+    {
+      "source": "<code>src</code> の中",
+      "translation": "Inside <code>src</code>"
+    },
+    {
+      "source": "<code>ex01</code>〜<code>ex09</code> の9パッケージが同じプロジェクトに並んでいる。",
+      "translation": "The nine packages <code>ex01</code>–<code>ex09</code> are listed together in the same project."
+    },
+    {
+      "source": "③ Java / Swift と、呼び出す側の形を比べる",
+      "translation": "③ Compare the calling code with Java / Swift"
+    },
+    {
+      "source": "アクセサの保存処理は、それぞれSTEP 26で比較した形です。",
+      "translation": "For each language, the accessor code that stores the value is the one compared in STEP 26."
+    },
+    {
+      "source": "KotlinとSwiftでは、プロパティを使う側の形を保ったまま、読み書きの処理を定義できます。今日のKotlinの完成コードでは、<code>foo.counter = 10</code> でsetterの行が、<code>println(foo.counter)</code> でgetterの行と値が順に出ます。",
+      "translation": "In Kotlin and Swift, you can define the read and write logic without changing how code uses the property. In today's completed Kotlin code, <code>foo.counter = 10</code> prints the setter line, and <code>println(foo.counter)</code> then prints the getter line and the value, in that order."
+    },
+    {
+      "source": "3ファイルの出力が完成チェックと一致し、<code>src</code> に <code>ex01</code>〜<code>ex09</code> が並んでいる。",
+      "translation": "The output of the three files matches the completion check, and <code>src</code> contains <code>ex01</code>–<code>ex09</code>."
+    },
+    {
+      "source": "次へ：6コマ目を始める →",
+      "translation": "Next: Starting Lesson 6 →"
+    },
+    {
+      "source": "STEP 31 · 6コマ目 · 目安 5分",
+      "translation": "STEP 31 · Lesson 6 · About 5 min"
+    },
+    {
+      "source": "6コマ目を始める",
+      "translation": "Starting Lesson 6"
+    },
+    {
+      "source": "<code>ex10</code> では、リストの各要素を <code>map</code> で変換します。<code>ex11</code> では、<code>by lazy</code> でプロパティを初めて読むときに計算し、2回目には保存した結果を使います。この2本で <code>K01HelloKotlin</code> の11演習がそろいます。",
+      "translation": "In <code>ex10</code>, you transform each element of a list with <code>map</code>. In <code>ex11</code>, you use <code>by lazy</code> to compute a property the first time it is read, and use the saved result the second time. With these two, <code>K01HelloKotlin</code> has all 11 exercises."
+    },
+    {
+      "source": "① 同じプロジェクトに ex10 を作る",
+      "translation": "① Create ex10 in the same project"
+    },
+    {
+      "source": "IntelliJ IDEA の最近開いたプロジェクトから <code>K01HelloKotlin</code> を開きます。一覧にないときは <strong>開く…</strong> から <code>書類/Kotlin/K01HelloKotlin</code> を選びます。すでに開いていればそのまま使います。",
+      "translation": "Open <code>K01HelloKotlin</code> from the recent projects in IntelliJ IDEA. If it is not in the list, use <strong>開く…</strong> (Open…) and select <code>書類/Kotlin/K01HelloKotlin</code> (書類 is Documents). If it is already open, keep using it."
+    },
+    {
+      "source": "左の <code>src</code> に <code>ex01</code>〜<code>ex09</code> があることを確かめます。以前のパッケージは残します。",
+      "translation": "Check that <code>src</code> on the left contains <code>ex01</code>–<code>ex09</code>. Keep the earlier packages."
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex10</code> を作ります。",
+      "translation": "Right-click <code>src</code> and create <code>ex10</code> with <strong>新規 → パッケージ</strong> (New → Package)."
+    },
+    {
+      "source": "<code>ex10</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> から名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "Right-click <code>ex10</code>, choose <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File), set the name to <code>main</code>, and set the type to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "<code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "Replace the whole of <code>main.kt</code> with the following, and run it with the run button to the left of <code>fun main()</code>."
+    },
+    {
+      "source": "Runツールウィンドウに <code>ex10</code> が1行出ます。別の出力が出たときは、いま開いた <code>ex10/main.kt</code> の <code>fun main()</code> の左から実行し直します。",
+      "translation": "The Run tool window shows one line: <code>ex10</code>. If you see different output, run it again with the run button to the left of <code>fun main()</code> in the <code>ex10/main.kt</code> you just opened."
+    },
+    {
+      "source": "Kotlinではファイルの直下に <code>fun main()</code> を置きます。Javaのようにクラスで囲みません。今日もパッケージごとに <code>main</code> があるため、実行するファイルを選びます。",
+      "translation": "In Kotlin, you put <code>fun main()</code> directly at the top level of the file. You do not wrap it in a class as in Java. Today, again, each package has its own <code>main</code>, so choose the file you want to run."
+    },
+    {
+      "source": "<code>src/ex10/main.kt</code> の先頭が <code>package ex10</code> で、Runツールウィンドウに <code>ex10</code> が出ている。",
+      "translation": "<code>src/ex10/main.kt</code> starts with <code>package ex10</code>, and the Run tool window shows <code>ex10</code>."
+    },
+    {
+      "source": "次へ：map でリストの要素を変換する →",
+      "translation": "Next: Transform list elements with map →"
+    },
+    {
+      "source": "STEP 32 · 6コマ目 · 目安 35分",
+      "translation": "STEP 32 · Lesson 6 · About 35 min"
+    },
+    {
+      "source": "map でリストの要素を変換する（ex10）",
+      "translation": "Transform list elements with map (ex10)"
+    },
+    {
+      "source": "同じ名前のリストから、<code>San</code> を付けた文字列のリストと、<code>Person</code> のリストを作ります。JavaのStream APIの <code>map</code>、Swiftの配列の <code>map</code> に対応する書き方です。",
+      "translation": "From the same list of names, create a list of strings with <code>San</code> added and a list of <code>Person</code> objects. This corresponds to <code>map</code> in Java's Stream API and <code>map</code> on Swift arrays."
+    },
+    {
+      "source": "① main.kt 全体を次の内容にする（10分）",
+      "translation": "① Replace the whole main.kt with the following (10 min)"
+    },
+    {
+      "source": "<code>src/ex10/main.kt</code> を開き、先ほどの <code>println(\"ex10\")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
+      "translation": "Open <code>src/ex10/main.kt</code> and replace everything, including the earlier <code>println(\"ex10\")</code>. The <code>data class Person(...)</code> at the end goes outside the closing brace of <code>main</code>."
+    },
+    {
+      "source": "src/ex10/main.kt · 完成コード",
+      "translation": "src/ex10/main.kt · Completed code"
+    },
+    {
+      "source": "変数",
+      "translation": "Variable"
+    },
+    {
+      "source": "型と中身",
+      "translation": "Type and contents"
+    },
+    {
+      "source": "<code>listOf(\"Yamada\", \"Tanaka\")</code> で作った、2つの文字列を順に読む <code>List&lt;String&gt;</code> です。",
+      "translation": "A <code>List&lt;String&gt;</code> made with <code>listOf(\"Yamada\", \"Tanaka\")</code>, for reading its two strings in order."
+    },
+    {
+      "source": "<code>map</code> が各要素へ <code> San</code> を付けた、新しい <code>List&lt;String&gt;</code> です。",
+      "translation": "A new <code>List&lt;String&gt;</code> in which <code>map</code> has added <code> San</code> to each element."
+    },
+    {
+      "source": "各文字列を <code>Person(name)</code> に渡して作った、新しい <code>List&lt;Person&gt;</code> です。",
+      "translation": "A new <code>List&lt;Person&gt;</code> made by passing each string to <code>Person(name)</code>."
+    },
+    {
+      "source": "この <code>Person</code> は、ファイルの最後に宣言した <code>ex10</code> のクラスです。<code>data class</code> が <code>toString()</code> を生成するため、2行目には <code>Person(name=...)</code> という中身が出ます。ほかのパッケージの <code>Person</code> は使いません。",
+      "translation": "This <code>Person</code> is the <code>ex10</code> class declared at the end of the file. Because <code>data class</code> generates <code>toString()</code>, line 2 shows contents in the form <code>Person(name=...)</code>. The <code>Person</code> classes in other packages are not used."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（10分）",
+      "translation": "③ How to write it in Java / Swift (10 min)"
+    },
+    {
+      "source": "まず、文字列から文字列への変換を比べます。比較用のコードは、完成コードへ追加しません。",
+      "translation": "First, compare transforming strings into strings. Do not add the comparison code to the completed code."
+    },
+    {
+      "source": "Kotlinの <code>{ \"$it San\" }</code> は、<code>map</code> に渡す<strong>ラムダ式</strong>です。Javaの <code>name -&gt; name + \" San\"</code>、Swiftのクロージャ <code>{ \"\\($0) San\" }</code> に対応します。",
+      "translation": "Kotlin's <code>{ \"$it San\" }</code> is a <strong>lambda expression</strong> (ラムダ式) passed to <code>map</code>. It corresponds to Java's <code>name -&gt; name + \" San\"</code> and Swift's closure <code>{ \"\\($0) San\" }</code>."
+    },
+    {
+      "source": "<code>it</code> は、引数が1つのラムダで、その引数の名前を省いたときに使える名前です。今回入るのはリストの要素1つで、最初は <code>\"Yamada\"</code>、次は <code>\"Tanaka\"</code> です。Swiftの <code>$0</code> にあたる位置です。",
+      "translation": "<code>it</code> is the name you can use in a lambda with one parameter when you leave out that parameter's name. Here it holds one list element at a time: first <code>\"Yamada\"</code>, then <code>\"Tanaka\"</code>. It takes the place of Swift's <code>$0</code>."
+    },
+    {
+      "source": "文字列の <code>$it</code> は、値を文字列へ埋め込む部分です。Javaの文字列との <code>+</code>、Swiftの <code>\\($0)</code> と比べられます。",
+      "translation": "The <code>$it</code> in the string is the part that embeds the value into the string. Compare it with string concatenation using <code>+</code> in Java, and with <code>\\($0)</code> in Swift."
+    },
+    {
+      "source": "Java例は <code>stream()</code> から <code>map</code> を通し、<code>toList()</code> で結果をリストに集めます。Kotlinでは、この <code>List</code> の <code>map</code> が結果のリストを返します。",
+      "translation": "The Java example goes from <code>stream()</code> through <code>map</code> and collects the results into a list with <code>toList()</code>. In Kotlin, <code>map</code> on this <code>List</code> returns the resulting list."
+    },
+    {
+      "source": "Swiftは文字列を引用符付きで表示するなど、出力の表示形式には違いがあります。比べるのは要素の内容と順番です。",
+      "translation": "The output format differs; for example, Swift prints strings with quotation marks. What you compare is the content and order of the elements."
+    },
+    {
+      "source": "④ ラムダの引数に名前を付ける（10分）",
+      "translation": "④ Name the lambda parameter (10 min)"
+    },
+    {
+      "source": "<code>result</code> を作る行だけを次の形に変えます。型注釈の <code>List&lt;String&gt;</code> は残します。",
+      "translation": "Change only the line that creates <code>result</code> to the following. Keep the type annotation <code>List&lt;String&gt;</code>."
+    },
+    {
+      "source": "Runし、出力が先ほどの2行と同じであることを確かめます。",
+      "translation": "Run it and check that the output is the same two lines as before."
+    },
+    {
+      "source": "確認したら、完成コードの <code>list.map { \"$it San\" }</code> に戻します。",
+      "translation": "After checking, change it back to <code>list.map { \"$it San\" }</code> from the completed code."
+    },
+    {
+      "source": "<code>name -&gt;</code> で引数名を決めると、<code>it</code> の代わりに <code>name</code> を使えます。<code>-&gt;</code> よりうしろが処理で、<strong>最後の式が、その要素を変換した結果</strong>です。完成コードの2本目も同じ形ですが、最後が文字列ではなく <code>Person(name)</code> なので、結果の要素型が変わります。",
+      "translation": "If you name the parameter with <code>name -&gt;</code>, you can use <code>name</code> instead of <code>it</code>. The part after <code>-&gt;</code> is the body, and <strong>the last expression is the result of transforming that element</strong>. The second transformation in the completed code has the same form, but its last expression is <code>Person(name)</code> instead of a string, so the element type of the result changes."
+    },
+    {
+      "source": "Kotlinは <code>{ 引数名 -&gt; 最後の式 }</code>、Swiftは <code>{ 引数名 in 最後の式 }</code> です。Javaの比較例は、矢印の右の式が結果になります。Kotlinのラムダでは、以前書いた <code>fun</code> の本体と異なり、この形で最後の式を結果にできます。<code>return</code> は足しません。",
+      "translation": "Kotlin uses <code>{ 引数名 -&gt; 最後の式 }</code>, and Swift uses <code>{ 引数名 in 最後の式 }</code> (引数名 = parameter name, 最後の式 = last expression). In the Java example, the expression to the right of the arrow is the result. In a Kotlin lambda, unlike the body of a <code>fun</code> you wrote earlier, this form makes the last expression the result. Do not add <code>return</code>."
+    },
+    {
+      "source": "⑤ 元のリストが変わっていないことを確かめる（5分）",
+      "translation": "⑤ Check that the original list has not changed (5 min)"
+    },
+    {
+      "source": "<code>main</code> の最後の <code>println(result2)</code> の次へ、一時的に <code>println(list)</code> を足してRunします。",
+      "translation": "Temporarily add <code>println(list)</code> after the last <code>println(result2)</code> in <code>main</code>, and run it."
+    },
+    {
+      "source": "3行目に <code>[Yamada, Tanaka]</code> が出ます。<code>San</code> を付けたのは変換結果で、元のリストの文字列は変わっていません。",
+      "translation": "Line 3 shows <code>[Yamada, Tanaka]</code>. <code>San</code> was added only in the transformed results; the strings in the original list have not changed."
+    },
+    {
+      "source": "足した <code>println(list)</code> を消してRunし、出力を元の2行に戻します。",
+      "translation": "Delete the <code>println(list)</code> you added and run it, so the output is back to the original two lines."
+    },
+    {
+      "source": "この <code>map</code> は、元の要素を順に読み、各ラムダの結果を新しいリストへ並べます。<code>result</code> と <code>result2</code> は、同じ元の <code>list</code> をそれぞれ読んで作っています。",
+      "translation": "This <code>map</code> reads the original elements in order and puts the result of each lambda call into a new list. <code>result</code> and <code>result2</code> are each made by reading the same original <code>list</code>."
+    },
+    {
+      "source": "出力が <code>[Yamada San, Tanaka San]</code> と、名前が <code>Yamada</code>・<code>Tanaka</code> の <code>Person</code> 2人のリストの2行になっている。",
+      "translation": "The output is two lines: <code>[Yamada San, Tanaka San]</code>, and a list of two <code>Person</code> objects named <code>Yamada</code> and <code>Tanaka</code>."
+    },
+    {
+      "source": "次へ：初めて読むときに計算する →",
+      "translation": "Next: Compute when first read →"
+    },
+    {
+      "source": "STEP 33 · 6コマ目 · 目安 30分",
+      "translation": "STEP 33 · Lesson 6 · About 30 min"
+    },
+    {
+      "source": "初めて読むときに計算する（ex11）",
+      "translation": "Compute when first read (ex11)"
+    },
+    {
+      "source": "<code>foo.bar</code> を2回読んでも、<code>computed!</code> が1回だけ出ることを確かめます。Swiftの <code>lazy var</code> と初回計算の動きは似ています。Kotlinでは <code>by</code> を使い、プロパティの値を用意する処理を別のオブジェクトへ任せます。",
+      "translation": "Check that <code>computed!</code> appears only once, even when you read <code>foo.bar</code> twice. The way it computes on the first read is similar to Swift's <code>lazy var</code>. In Kotlin, you use <code>by</code> to hand the work of providing the property's value to another object."
+    },
+    {
+      "source": "① ex11/main.kt を作る（8分）",
+      "translation": "① Create ex11/main.kt (8 min)"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。",
+      "translation": "Right-click <code>src</code> and create <code>ex11</code> with <strong>新規 → パッケージ</strong> (New → Package)."
+    },
+    {
+      "source": "<code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "Right-click <code>ex11</code>, choose <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin Class/File), set the name to <code>main</code>, and set the type to <strong>ファイル</strong> (File)."
+    },
+    {
+      "source": "src/ex11/main.kt · 完成コード",
+      "translation": "src/ex11/main.kt · Completed code"
+    },
+    {
+      "source": "mainの行",
+      "translation": "Line in main"
+    },
+    {
+      "source": "<code>counter</code> は <code>5.0</code> で初期化されます。この時点では <code>lazy</code> のラムダの中は実行されません。",
+      "translation": "<code>counter</code> is initialized to <code>5.0</code>. At this point, the code inside the <code>lazy</code> lambda does not run."
+    },
+    {
+      "source": "1つ目の <code>println(foo.bar)</code>",
+      "translation": "The first <code>println(foo.bar)</code>"
+    },
+    {
+      "source": "<code>bar</code> を初めて読むためラムダが動き、<code>computed!</code> が出ます。最後の式 <code>counter + 1</code> の結果 <code>6.0</code> が保存され、その値を外側の <code>println</code> が出します。",
+      "translation": "Because <code>bar</code> is read for the first time, the lambda runs and <code>computed!</code> appears. The result of the last expression <code>counter + 1</code>, <code>6.0</code>, is saved, and the outer <code>println</code> prints that value."
+    },
+    {
+      "source": "2つ目の <code>println(foo.bar)</code>",
+      "translation": "The second <code>println(foo.bar)</code>"
+    },
+    {
+      "source": "保存された <code>6.0</code> を使います。ラムダを再実行しないため、<code>computed!</code> は増えません。",
+      "translation": "The saved <code>6.0</code> is used. Because the lambda does not run again, no more <code>computed!</code> lines appear."
+    },
+    {
+      "source": "今回の <code>main</code> のように、同じオブジェクトの値を順に読む場合を比較します。Javaでは、計算済みかどうかと保存値を持つgetterを自分で書きます。",
+      "translation": "Compare reading the same object's value in sequence, as in this <code>main</code>. In Java, you write your own getter that keeps a flag for whether the value has been computed, plus the saved value."
+    },
+    {
+      "source": "<code>by</code> は<strong>委譲</strong>の指定です。Kotlinのプロパティ <code>bar</code> の値を用意して保持する仕事を、<code>lazy { ... }</code> が返すオブジェクトへ任せています。この形のプロパティを<strong>委譲プロパティ</strong>と呼びます。",
+      "translation": "<code>by</code> specifies <strong>delegation</strong> (委譲). The job of providing and holding the value of the Kotlin property <code>bar</code> is handed to the object that <code>lazy { ... }</code> returns. A property in this form is called a <strong>delegated property</strong> (委譲プロパティ)."
+    },
+    {
+      "source": "<code>lazy</code> はKotlinの標準ライブラリの関数です。<code>{ ... }</code> のラムダは、計算する手順として渡します。今回も最後の式 <code>counter + 1</code> がラムダの結果です。",
+      "translation": "<code>lazy</code> is a function in the Kotlin standard library. You pass the <code>{ ... }</code> lambda as the steps for the computation. Here too, the last expression, <code>counter + 1</code>, is the result of the lambda."
+    },
+    {
+      "source": "Swiftの <code>lazy var</code> は、初回まで計算を遅らせ、結果を保持する動きの比較です。<strong>Kotlinの <code>by</code> と同じ委譲の仕組みではありません。</strong>またSwift側は <code>var</code> で再代入できますが、今回のKotlinの <code>bar</code> は <code>val</code> です。",
+      "translation": "Swift's <code>lazy var</code> is shown to compare the behavior: it delays the computation until the first read and keeps the result. <strong>It is not the same delegation mechanism as Kotlin's <code>by</code>.</strong> Also, on the Swift side, <code>var</code> can be reassigned, but Kotlin's <code>bar</code> here is a <code>val</code>."
+    },
+    {
+      "source": "Javaの比較例はgetterの中で計算済みの印と保存値を管理します。Kotlinでは、その処理を <code>lazy</code> が受け持つため、自分で同じフィールドと条件分岐を書かずに済みます。",
+      "translation": "The Java example manages a computed flag and the saved value inside the getter. In Kotlin, <code>lazy</code> takes care of that work, so you do not have to write those fields and the condition yourself."
+    },
+    {
+      "source": "遅らせるのはラムダの中の計算です。<code>Foo()</code> の生成や <code>counter = 5.0</code> まで遅れるわけではありません。",
+      "translation": "What is delayed is the computation inside the lambda. Creating <code>Foo()</code> and <code>counter = 5.0</code> are not delayed."
+    },
+    {
+      "source": "④ bar を読まなければ計算しない（4分）",
+      "translation": "④ If you do not read bar, it is not computed (4 min)"
+    },
+    {
+      "source": "<code>main</code> の2つの <code>println(foo.bar)</code> をいったん消し、代わりに <code>println(foo.counter)</code> を1行書きます。",
+      "translation": "Temporarily delete the two <code>println(foo.bar)</code> lines in <code>main</code>, and write one line, <code>println(foo.counter)</code>, instead."
+    },
+    {
+      "source": "Runすると <code>5.0</code> だけが出て、<code>computed!</code> は出ません。オブジェクトを作っても、<code>bar</code> を読まなければその計算は始まらないことを確かめます。",
+      "translation": "When you run it, only <code>5.0</code> appears, and <code>computed!</code> does not. Check that even after the object is created, the computation does not start unless <code>bar</code> is read."
+    },
+    {
+      "source": "<code>println(foo.counter)</code> を消し、元の <code>println(foo.bar)</code> 2行へ戻します。",
+      "translation": "Delete <code>println(foo.counter)</code> and put back the original two <code>println(foo.bar)</code> lines."
+    },
+    {
+      "source": "⑤ 初回の前後で counter を変える（8分）",
+      "translation": "⑤ Change counter before and after the first read (8 min)"
+    },
+    {
+      "source": "<code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。",
+      "translation": "Leave <code>class Foo</code> as it is, and replace only <code>main</code> with the following."
+    },
+    {
+      "source": "Runすると、次の3行が出ます。",
+      "translation": "Run it, and the following 3 lines appear."
+    },
+    {
+      "source": "初めて読むときの <code>counter</code> は <code>10.0</code> なので、保存される結果は <code>11.0</code> です。そのあと <code>counter</code> を変えても、2回目の <code>bar</code> は保存値を返します。<code>bar</code> は、その時々の <code>counter + 1</code> を毎回計算するgetterとは動きが違います。",
+      "translation": "At the first read, <code>counter</code> is <code>10.0</code>, so the saved result is <code>11.0</code>. Even if you change <code>counter</code> after that, the second read of <code>bar</code> returns the saved value. <code>bar</code> behaves differently from a getter that computes <code>counter + 1</code> from the current value every time."
+    },
+    {
+      "source": "確認したら、追加した <code>foo.counter = ...</code> の2行を消します。Runして、完成コードの <code>computed!</code> / <code>6.0</code> / <code>6.0</code> に戻ることを確かめます。",
+      "translation": "After checking, delete the two <code>foo.counter = ...</code> lines you added. Run it and check that the output is back to <code>computed!</code> / <code>6.0</code> / <code>6.0</code> from the completed code."
+    },
+    {
+      "source": "完成コードへ戻り、<code>computed!</code> が1回、そのあと <code>6.0</code> が2回出ている。",
+      "translation": "The code is back to the completed code, and the output shows <code>computed!</code> once, then <code>6.0</code> twice."
+    },
+    {
+      "source": "STEP 34 · 6コマ目 · 目安 17分",
+      "translation": "STEP 34 · Lesson 6 · About 17 min"
+    },
+    {
+      "source": "ミニ練習：変換する型と、計算する回数",
+      "translation": "Mini practice: The type you transform into, and how many times it is computed"
+    },
+    {
+      "source": "それぞれのファイルを開き、<code>fun main()</code> の左から実行します。エラーは文言を暗記せず、どの行と型の組み合わせで止まったかを確かめます。",
+      "translation": "Open each file and run it with the run button to the left of <code>fun main()</code>. Do not memorize the wording of errors; check which line and which combination of types made it stop."
+    },
+    {
+      "source": "① map の結果の型を確かめる（7分）",
+      "translation": "① Check the result type of map (7 min)"
+    },
+    {
+      "source": "<code>ex10/main.kt</code> の <code>val result2: List&lt;Person&gt;</code> を <code>val result2: List&lt;String&gt;</code> に変えます。右辺の <code>list.map { name -&gt; Person(name) }</code> は変えません。",
+      "translation": "In <code>ex10/main.kt</code>, change <code>val result2: List&lt;Person&gt;</code> to <code>val result2: List&lt;String&gt;</code>. Do not change the right-hand side, <code>list.map { name -&gt; Person(name) }</code>."
+    },
+    {
+      "source": "<code>Person(name)</code> を返す行に赤い波線が出て、実行できないことを確かめます。文字列を要素とする型を指定したのに、ラムダが <code>Person</code> を返しているためです。",
+      "translation": "Check that a red squiggly line appears on the line that returns <code>Person(name)</code>, and that you cannot run the code. This is because you specified a type whose elements are strings, but the lambda returns a <code>Person</code>."
+    },
+    {
+      "source": "<code>List&lt;Person&gt;</code> に戻します。次に、元の <code>listOf(\"Yamada\", \"Tanaka\")</code> の末尾に <code>\"Suzuki\"</code> を足してRunします。",
+      "translation": "Change it back to <code>List&lt;Person&gt;</code>. Next, add <code>\"Suzuki\"</code> to the end of the original <code>listOf(\"Yamada\", \"Tanaka\")</code> and run it."
+    },
+    {
+      "source": "2つの変換処理を変えなくても、どちらの結果も3要素になります。",
+      "translation": "Without changing either transformation, both results now have 3 elements."
+    },
+    {
+      "source": "② Foo をもう1つ作る（7分）",
+      "translation": "② Create another Foo (7 min)"
+    },
+    {
+      "source": "<code>ex11/main.kt</code> の <code>main</code> の中で、2つ目の <code>println(foo.bar)</code> のあとへ次の3行を足します。<code>class Foo</code> の中身は変えません。",
+      "translation": "In <code>main</code> in <code>ex11/main.kt</code>, add the following 3 lines after the second <code>println(foo.bar)</code>. Do not change the contents of <code>class Foo</code>."
+    },
+    {
+      "source": "Runすると、次の6行が出ます。",
+      "translation": "Run it, and the following 6 lines appear."
+    },
+    {
+      "source": "<code>foo</code> と <code>foo2</code> は別のオブジェクトです。それぞれの <code>bar</code> が初回に計算され、そのオブジェクトで再び読むと保存した値が使われます。",
+      "translation": "<code>foo</code> and <code>foo2</code> are separate objects. Each object's <code>bar</code> is computed on its first read, and reading it again on the same object uses the saved value."
+    },
+    {
+      "source": "③ Java / Swift でも別のオブジェクトを作る",
+      "translation": "③ Create another object in Java / Swift too"
+    },
+    {
+      "source": "STEP 33の各言語の <code>Foo</code> を使うと、呼び出しは次の形です。既存の <code>foo</code> を読んだあとに、新しいオブジェクトを読みます。",
+      "translation": "With each language's <code>Foo</code> from STEP 33, the calls take the following form. After reading the existing <code>foo</code>, read the new object."
+    },
+    {
+      "source": "この <code>Foo</code> の <code>bar</code> は、すべての <code>Foo</code> で計算結果を1つだけ共有するものではありません。オブジェクトを2つ作り、それぞれで初めて読むと、<code>computed!</code> も2回になります。",
+      "translation": "The <code>bar</code> of this <code>Foo</code> does not share a single computed result across all <code>Foo</code> objects. If you create two objects and read each one for the first time, <code>computed!</code> also appears twice."
+    },
+    {
+      "source": "④ 最後の3分 · 完成コードへ戻す",
+      "translation": "④ The last 3 minutes · Go back to the completed code"
+    },
+    {
+      "source": "<code>ex10</code> の <code>listOf</code> から <code>\"Suzuki\"</code> を消します。<code>result2</code> の型が <code>List&lt;Person&gt;</code> に戻っていることも確かめます。",
+      "translation": "Remove <code>\"Suzuki\"</code> from <code>listOf</code> in <code>ex10</code>. Also check that the type of <code>result2</code> is back to <code>List&lt;Person&gt;</code>."
+    },
+    {
+      "source": "<code>ex11</code> へ追加した <code>foo2</code> の3行を消します。",
+      "translation": "Delete the 3 lines for <code>foo2</code> that you added to <code>ex11</code>."
+    },
+    {
+      "source": "2本を実行します。<code>ex10</code> は2人を並べた2行、<code>ex11</code> は <code>computed!</code> / <code>6.0</code> / <code>6.0</code> の3行に戻ります。",
+      "translation": "Run both. <code>ex10</code> goes back to 2 lines listing the two people, and <code>ex11</code> goes back to the 3 lines <code>computed!</code> / <code>6.0</code> / <code>6.0</code>."
+    },
+    {
+      "source": "型を変えて止まった行を元に戻し、<code>ex10</code> の各リストが2要素、<code>ex11</code> の出力が3行に戻っている。",
+      "translation": "The line that stopped when you changed the type is restored, each list in <code>ex10</code> has 2 elements, and the output of <code>ex11</code> is back to 3 lines."
+    },
+    {
+      "source": "次へ：K01の完成 →",
+      "translation": "Next: K01 complete →"
+    },
+    {
+      "source": "STEP 35 · 6コマ目 · 目安 3分",
+      "translation": "STEP 35 · Lesson 6 · About 3 min"
+    },
+    {
+      "source": "K01の完成",
+      "translation": "K01 complete"
+    },
+    {
+      "source": "① 最後の3分 · 2本を順に実行する",
+      "translation": "① The last 3 minutes · Run the two programs in order"
+    },
+    {
+      "source": "<code>ex10/main.kt</code> と <code>ex11/main.kt</code> を順に開き、それぞれの <code>fun main()</code> の左からRunします。",
+      "translation": "Open <code>ex10/main.kt</code> and <code>ex11/main.kt</code> in order, and run each one with the run button to the left of its <code>fun main()</code>."
+    },
+    {
+      "source": "1行目は <code>[Yamada San, Tanaka San]</code>。2行目は <code>[Person(name=Yamada), Person(name=Tanaka)]</code>。",
+      "translation": "Line 1 is <code>[Yamada San, Tanaka San]</code>. Line 2 is <code>[Person(name=Yamada), Person(name=Tanaka)]</code>."
+    },
+    {
+      "source": "<code>computed!</code> / <code>6.0</code> / <code>6.0</code> の3行。",
+      "translation": "3 lines: <code>computed!</code> / <code>6.0</code> / <code>6.0</code>."
+    },
+    {
+      "source": "③ ラムダの最後に置いた式を比べる",
+      "translation": "③ Compare the last expression in each lambda"
+    },
+    {
+      "source": "各言語の <code>list</code> は、STEP 32の2人の名前を持つリスト・配列です。",
+      "translation": "In each language, <code>list</code> is the list or array that holds the two names from STEP 32."
+    },
+    {
+      "source": "<code>map</code> では各要素を変換した値を、<code>lazy</code> では初回に計算する値を、ラムダから返しました。Kotlinの今回のラムダでは、最後の式がその結果になります。",
+      "translation": "With <code>map</code>, the lambda returned the transformed value of each element; with <code>lazy</code>, it returned the value computed on the first read. In the Kotlin lambdas used here, the last expression becomes that result."
+    },
+    {
+      "source": "左の <code>src</code> に <code>ex01</code>〜<code>ex11</code> の11パッケージがあることを確かめます。<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> です。6コマで使ったプロジェクトは、最初に作った <code>K01HelloKotlin</code> の1つです。自分で書いたコードを、そのまま残しておきます。",
+      "translation": "Check that <code>src</code> on the left has the 11 packages <code>ex01</code>–<code>ex11</code>. <code>ex08</code> has <code>Foo.kt</code>; the others have <code>main.kt</code>. Across the 6 lessons, you used just one project: <code>K01HelloKotlin</code>, the one you created first. Keep the code you wrote as it is."
+    },
+    {
+      "source": "2本の出力が完成チェックと一致し、<code>src</code> に <code>ex01</code>〜<code>ex11</code> の11パッケージが並んでいる。",
+      "translation": "The output of both programs matches the completion check, and <code>src</code> contains the 11 packages <code>ex01</code>–<code>ex11</code>."
+    },
+    {
+      "source": "次へ：完成プロジェクトを開いて比べる →",
+      "translation": "Next: Open the completed project and compare →"
+    },
+    {
+      "source": "REFERENCE · 最初の授業から使える見本",
+      "translation": "REFERENCE · A sample you can use from the first class"
+    },
+    {
+      "source": "完成プロジェクトを開いて比べる",
+      "translation": "Open the completed project and compare"
+    },
+    {
+      "source": "授業は、自分で新規作成したプロジェクトで進めます。完成版は、動作確認とコード比較のための見本です。見本は、教科書といっしょに配られた<strong>教材のフォルダ</strong>に、そのまま開ける形で入っています。ダウンロードも展開も要りません。",
+      "translation": "In class, you work in the project you created yourself. The completed version is a sample for checking how the code runs and for comparing code. It is in the <strong>materials folder</strong> distributed with the textbook, ready to open. You do not need to download or extract anything."
+    },
+    {
+      "source": "① 見本の場所を確かめる",
+      "translation": "① Find where the sample is"
+    },
+    {
+      "source": "Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。教材のフォルダをダブルクリックで開きます。名前は <code>kotlin-student-materials-</code> のうしろに日付と12文字の英数字が付いた形で、配られた版によって変わります。いま読んでいるこの教科書が入っているフォルダです。",
+      "translation": "Open Finder and click <strong>書類</strong> (<code>Documents</code>) on the left. Double-click the materials folder to open it. Its name is <code>kotlin-student-materials-</code> followed by a date and 12 letters and digits, and it depends on the version you received. It is the folder that contains the textbook you are reading now."
+    },
+    {
+      "source": "その中の <code>samples</code> フォルダを開きます。<code>K01HelloKotlin</code> フォルダが見本です。場所を確かめるだけで、移動はしません。",
+      "translation": "Open the <code>samples</code> folder inside it. The <code>K01HelloKotlin</code> folder is the sample. Just check where it is; do not move it."
+    },
+    {
       "source": "使うもの",
       "translation": "Tool"
+    },
+    {
+      "source": "フォルダの場所（ユーザ名と教材のフォルダは、自分のものに読み替える）",
+      "translation": "Folder location (read ユーザ名 as your user name and 教材のフォルダ as your materials folder)"
+    },
+    {
+      "source": "授業で作るプロジェクト",
+      "translation": "The project you create in class"
+    },
+    {
+      "source": "完成版の見本",
+      "translation": "The completed sample"
+    },
+    {
+      "source": "② IntelliJ IDEA で開く",
+      "translation": "② Open it in IntelliJ IDEA"
+    },
+    {
+      "source": "フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、いちばん上のメニューバーから <strong>ファイル → 開く…</strong> を選びます。プロジェクトを1つも開いていないときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選びます。",
+      "translation": "Bring up the screen for choosing a folder. If your class project is open, choose <strong>ファイル → 開く…</strong> (File → Open…) from the menu bar at the very top. If no project is open, choose <strong>開く…</strong> (Open…) from the menu at the top left of the Home screen."
+    },
+    {
+      "source": "①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。",
+      "translation": "Select and open the <code>K01HelloKotlin</code> folder inside <code>samples</code>, which you found in ①."
+    },
+    {
+      "source": "開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。",
+      "translation": "If you are asked how to open it, choose <strong>新しいウィンドウ</strong> (New Window) so that it opens in a separate window from your class project."
+    },
+    {
+      "source": "左の一覧で <code>src</code> を開き、いまの演習のパッケージを選びます。<code>ex01</code>〜<code>ex11</code> のうち、<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> を開きます。",
+      "translation": "Expand <code>src</code> in the list on the left and select the package for the exercise you are on. Of <code>ex01</code>–<code>ex11</code>, open <code>Foo.kt</code> for <code>ex08</code> and <code>main.kt</code> for the others."
+    },
+    {
+      "source": "動きを見たいときは、<code>fun main()</code> の左の ▷ を押します。",
+      "translation": "To see how it runs, click the ▷ to the left of <code>fun main()</code>."
+    },
+    {
+      "source": "③ 今のステップの部分だけを比べる",
+      "translation": "③ Compare only the part for your current step"
+    },
+    {
+      "source": "たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。5コマ目は、STEP 26なら <code>ex08/Foo.kt</code> の <code>get()</code>・<code>set()</code>、STEP 27なら <code>ex09/main.kt</code> の <code>Person</code>・<code>copy</code>、STEP 28なら <code>ex07/main.kt</code> の <code>plusTen</code> を比べます。6コマ目は、STEP 32なら <code>ex10/main.kt</code> の2つの <code>map</code>、STEP 33なら <code>ex11/main.kt</code> の <code>by lazy</code> と2つの読み取りを比べます。",
+      "translation": "For example, if you get stuck in STEP 04, look at the two lines <code>val number2</code> and <code>val number3</code> in the sample. Compare them with your code character by character, checking the position of <code>.</code> and whether there is an <code>f</code>. In Lesson 5, compare <code>get()</code> and <code>set()</code> in <code>ex08/Foo.kt</code> for STEP 26, <code>Person</code> and <code>copy</code> in <code>ex09/main.kt</code> for STEP 27, and <code>plusTen</code> in <code>ex07/main.kt</code> for STEP 28. In Lesson 6, compare the two <code>map</code> calls in <code>ex10/main.kt</code> for STEP 32, and <code>by lazy</code> and the two reads in <code>ex11/main.kt</code> for STEP 33."
+    },
+    {
+      "source": "見終わったら、授業で作っている <code>Documents/Kotlin/K01HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。",
+      "translation": "When you are done, go back to the window of <code>Documents/Kotlin/K01HelloKotlin</code>, the project you are building in class. Find one place to fix, then run it and check the result. If you are not sure, show both versions of the code to your teacher."
+    },
+    {
+      "source": "教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a1>K01HelloKotlin.zip</a1>）。展開してできた <code>K01HelloKotlin</code> フォルダを、②と同じように開きます。",
+      "translation": "If you do not have the materials folder, you can get the same sample as a ZIP file (<a1>K01HelloKotlin.zip</a1>). Extract it and open the resulting <code>K01HelloKotlin</code> folder in the same way as in ②."
+    },
+    {
+      "source": "HELP · 困ったらここ",
+      "translation": "HELP · Look here if you get stuck"
+    },
+    {
+      "source": "止まった場所から、一緒に直す",
+      "translation": "Fix it together, starting from where you got stuck"
+    },
+    {
+      "source": "赤くなっている最初の行を見ます。<strong>2分考えても分からなければ</strong>、先生に「ステップ番号・ファイル名・画面」を見せましょう。",
+      "translation": "Look at the first line that is red. <strong>If you still cannot figure it out after thinking for 2 minutes</strong>, show your teacher \"the step number, the file name, and your screen.\""
+    },
+    {
+      "source": "困ったこと",
+      "translation": "Problem"
+    },
+    {
+      "source": "最初に確認すること",
+      "translation": "What to check first"
+    },
+    {
+      "source": "Playgroundで何も出ない",
+      "translation": "Nothing appears in Playground"
+    },
+    {
+      "source": "<code>fun main()</code> があるか確認する。<code>println</code> の1行だけでは実行されません。",
+      "translation": "Check that there is a <code>fun main()</code>. A single <code>println</code> line on its own does not run."
+    },
+    {
+      "source": "新規プロジェクトの画面に Kotlin がない",
+      "translation": "Kotlin does not appear on the New Project screen"
+    },
+    {
+      "source": "左の一覧の、見出し <strong>新規プロジェクト</strong> の下を見る。下の <strong>ジェネレーター</strong> の中の項目ではありません。",
+      "translation": "Look under the heading <strong>新規プロジェクト</strong> (New Project) in the list on the left. It is not one of the items under <strong>ジェネレーター</strong> (Generators) further down."
+    },
+    {
+      "source": "ビルドシステムに IntelliJ がない",
+      "translation": "IntelliJ does not appear under Build system"
+    },
+    {
+      "source": "左の一覧で <strong>Kotlin</strong> を選んでいるか確認する。直らなければ画面を先生に見せる。",
+      "translation": "Check that <strong>Kotlin</strong> is selected in the list on the left. If that does not fix it, show your screen to your teacher."
+    },
+    {
+      "source": "JDK の欄が空",
+      "translation": "The JDK field is empty"
+    },
+    {
+      "source": "欄を開いて、出てきたものを選ぶ。何も出てこないときは、先生に画面を見せる。",
+      "translation": "Open the field and select what appears. If nothing appears, show your screen to your teacher."
+    },
+    {
+      "source": "緑の三角（▷）が出ない",
+      "translation": "The green triangle (▷) does not appear"
+    },
+    {
+      "source": "<code>fun main()</code> のつづりを1文字ずつ確認する。<code>main</code> は小文字で、うしろの <code>()</code> も必要。ファイルが <code>src</code> の中にあるかも確認する。",
+      "translation": "Check the spelling of <code>fun main()</code> character by character. <code>main</code> is lowercase, and the <code>()</code> after it is required. Also check that the file is inside <code>src</code>."
+    },
+    {
+      "source": "<code>package ex01</code> の行が赤い",
+      "translation": "The <code>package ex01</code> line is red"
+    },
+    {
+      "source": "ファイルの場所が <code>src/ex01/</code> か確認する。フォルダ名とパッケージ名を合わせる点はJavaと同じです。",
+      "translation": "Check that the file is in <code>src/ex01/</code>. Matching the folder name to the package name works the same as in Java."
+    },
+    {
+      "source": "<code>Unresolved reference</code> と出る",
+      "translation": "<code>Unresolved reference</code> appears"
+    },
+    {
+      "source": "名前のつづりを確認する。<code>println</code>・<code>number1</code>・<code>name</code> の大文字と小文字も区別する。",
+      "translation": "Check the spelling of the name. Uppercase and lowercase letters also matter in <code>println</code>, <code>number1</code>, and <code>name</code>."
+    },
+    {
+      "source": "<code>val</code> に再代入できないというメッセージが出る",
+      "translation": "A message says a <code>val</code> cannot be reassigned"
+    },
+    {
+      "source": "STEP 05 の練習Bでは、変数 <code>number1</code> の <code>val</code> を確認します。STEP 23 の <code>yamada.age = 21</code> では、<code>Person</code> に宣言したプロパティ <code>val age</code> を確認します。<code>val yamada</code> の再代入ではありません。確認後は、練習で追加した代入行を消します。",
+      "translation": "For Practice B in STEP 05, check the <code>val</code> of the variable <code>number1</code>. For <code>yamada.age = 21</code> in STEP 23, check the property <code>val age</code> declared in <code>Person</code>. It is not a reassignment of <code>val yamada</code>. After checking, delete the assignment line you added for the practice."
+    },
+    {
+      "source": "実行しても何も出ない",
+      "translation": "Nothing appears when you run it"
+    },
+    {
+      "source": "画面の下の <strong>実行</strong> ツールウィンドウが開いているか確認する。閉じていたら <strong>表示 → ツールウィンドウ → 実行</strong> で開く。",
+      "translation": "Check that the <strong>実行</strong> (Run) tool window at the bottom of the screen is open. If it is closed, open it with <strong>表示 → ツールウィンドウ → 実行</strong> (View → Tool Windows → Run)."
+    },
+    {
+      "source": "<code>プロセスは終了コード 1 で終了しました</code> と出る",
+      "translation": "<code>プロセスは終了コード 1 で終了しました</code> (Process finished with exit code 1) appears"
+    },
+    {
+      "source": "<code>0</code> 以外の数で終わったときは、途中で異常が起きています。その上に出ている赤い文字を、上から読む。",
+      "translation": "If it ends with a number other than <code>0</code>, something went wrong along the way. Read the red text above it, starting from the top."
+    },
+    {
+      "source": "出るけれど、内容が違う",
+      "translation": "Output appears, but the content is different"
+    },
+    {
+      "source": "<code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。",
+      "translation": "Check what is inside the parentheses of <code>println</code>. If you put a variable name inside <code>&quot; &quot;</code>, the name itself is printed as text."
+    },
+    {
+      "source": "<code>String</code> の変数に <code>null</code> を入れた行が赤い",
+      "translation": "The line that puts <code>null</code> into a <code>String</code> variable is red"
+    },
+    {
+      "source": "<code>?</code> の付かない型には <code>null</code> を入れられません。<code>null</code> を入れたいなら型を <code>String?</code> にし、入れないなら値を文字列に戻す（STEP 09）。",
+      "translation": "You cannot put <code>null</code> into a type without <code>?</code>. If you want to put <code>null</code> in it, change the type to <code>String?</code>; if not, change the value back to a string (STEP 09)."
+    },
+    {
+      "source": "<code>String?</code> の変数を使った行が赤い",
+      "translation": "A line that uses a <code>String?</code> variable is red"
+    },
+    {
+      "source": "STEP 10では <code>name2.count()</code> ではなく <code>name2?.count()</code> と書きます。STEP 27の <code>name.count()</code> は <code>if (name != null)</code> の中なら、そのまま書けます。いま試しているSTEPと条件の位置を確認します。",
+      "translation": "In STEP 10, write <code>name2?.count()</code>, not <code>name2.count()</code>. For <code>name.count()</code> in STEP 27, you can write it as is inside <code>if (name != null)</code>. Check which STEP you are trying and where the condition is."
+    },
+    {
+      "source": "<code>fun</code> を書いた行が赤い",
+      "translation": "The line where you wrote <code>fun</code> is red"
+    },
+    {
+      "source": "引数が <code>名前: 型</code> の順になっているか確認する。Javaの <code>int a</code> の並びでは通りません（STEP 15）。",
+      "translation": "Check that the parameters are in the order <code>名前: 型</code> (name: type). The Java order, as in <code>int a</code>, is not accepted (STEP 15)."
+    },
+    {
+      "source": "<code>return</code> について指摘が出る",
+      "translation": "A problem with <code>return</code> is reported"
+    },
+    {
+      "source": "かっこのうしろに <code>: Int</code> と書いたなら、<code>return</code> で値を返します。返さないなら <code>: Int</code> のほうを消します（STEP 15・STEP 17）。",
+      "translation": "If you wrote <code>: Int</code> after the parentheses, return a value with <code>return</code>. If the function does not return a value, delete the <code>: Int</code> instead (STEP 15 and STEP 17)."
+    },
+    {
+      "source": "<code>sum(1, 2)</code> の行が赤い",
+      "translation": "The <code>sum(1, 2)</code> line is red"
+    },
+    {
+      "source": "渡している引数の数と型が、宣言した <code>fun sum(a: Int, b: Int)</code> と合っているか確認する（STEP 17）。",
+      "translation": "Check that the number and types of the arguments you pass match the declared <code>fun sum(a: Int, b: Int)</code> (STEP 17)."
+    },
+    {
+      "source": "<code>ex08</code> に <code>main.kt</code> がない",
+      "translation": "There is no <code>main.kt</code> in <code>ex08</code>"
+    },
+    {
+      "source": "この演習だけは <code>Foo.kt</code> です。その中の <code>fun main()</code> から実行します（STEP 25・26）。",
+      "translation": "Only this exercise uses <code>Foo.kt</code>. Run it from the <code>fun main()</code> in that file (STEP 25 and 26)."
+    },
+    {
+      "source": "<code>counter</code> の読み書きで同じ出力が続いて止まる",
+      "translation": "Reading or writing <code>counter</code> repeats the same output, then stops"
+    },
+    {
+      "source": "<code>get()</code>・<code>set()</code> の中で保存値を読む・書く場所が <code>field</code> か確認します。そこを <code>counter</code> にすると同じアクセサを呼び直します（STEP 26）。",
+      "translation": "Check that <code>get()</code> and <code>set()</code> read and write the stored value through <code>field</code>. If you use <code>counter</code> there, the same accessor is called again (STEP 26)."
+    },
+    {
+      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が見本と違う",
+      "translation": "The numbers in <code>ex09</code> or the end of <code>Person2@...</code> differ from the sample"
+    },
+    {
+      "source": "通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。",
+      "translation": "For a regular class, the numbers and endings shown by <code>hashCode()</code> and <code>toString()</code> can change from run to run. Check using the number of lines, the comparison results, the names, and the ages in the table in STEP 27."
+    },
+    {
+      "source": "<code>copy(age: 25)</code> が赤い",
+      "translation": "<code>copy(age: 25)</code> is red"
+    },
+    {
+      "source": "Kotlinの名前付き引数は <code>copy(age = 25)</code> です。Swiftの引数ラベルの <code>:</code> とは記号が違います（STEP 27）。",
+      "translation": "In Kotlin, a named argument is written <code>copy(age = 25)</code>. The symbol is different from the <code>:</code> of Swift's argument labels (STEP 27)."
+    },
+    {
+      "source": "<code>value.name</code> や <code>name.count()</code> が赤い",
+      "translation": "<code>value.name</code> or <code>name.count()</code> is red"
+    },
+    {
+      "source": "一時的に書いた関数で、前者は <code>if (value is Person)</code>、後者は <code>if (name != null)</code> の中に置いたか確認します。条件の外では、確かめた型として使えません（STEP 27）。",
+      "translation": "In the functions you wrote temporarily, check that you put the first one inside <code>if (value is Person)</code> and the second one inside <code>if (name != null)</code>. Outside the condition, you cannot use them as the checked type (STEP 27)."
+    },
+    {
+      "source": "<code>plusTen()</code> が見つからない",
+      "translation": "<code>plusTen()</code> cannot be found"
+    },
+    {
+      "source": "<code>ex07/main.kt</code> の <code>main</code> の外に <code>fun Int.plusTen(): Int</code> があるか確認します。呼び出しは <code>5.plusTen()</code> です（STEP 28）。",
+      "translation": "Check that <code>fun Int.plusTen(): Int</code> is outside <code>main</code> in <code>ex07/main.kt</code>. The call is <code>5.plusTen()</code> (STEP 28)."
+    },
+    {
+      "source": "<code>map</code> の <code>Person(name)</code> が赤い",
+      "translation": "<code>Person(name)</code> in <code>map</code> is red"
+    },
+    {
+      "source": "<code>result2</code> の型は <code>List&lt;Person&gt;</code> です。STEP 34の練習で <code>List&lt;String&gt;</code> に変えたままなら、元の型へ戻します。",
+      "translation": "The type of <code>result2</code> is <code>List&lt;Person&gt;</code>. If it is still <code>List&lt;String&gt;</code> from the practice in STEP 34, change it back to the original type."
+    },
+    {
+      "source": "<code>map</code> の中で <code>it</code> が見つからない",
+      "translation": "<code>it</code> cannot be found inside <code>map</code>"
+    },
+    {
+      "source": "<code>name -&gt;</code> と引数名を書いたラムダでは、その名前 <code>name</code> を使います。STEP 32の完成コードと、名前を付ける一時変更を混ぜていないか確認します。",
+      "translation": "In a lambda where you wrote a parameter name, as in <code>name -&gt;</code>, use that name, <code>name</code>. Check that you have not mixed the completed code from STEP 32 with the temporary change that names the parameter."
+    },
+    {
+      "source": "<code>computed!</code> が出ない",
+      "translation": "<code>computed!</code> does not appear"
+    },
+    {
+      "source": "<code>ex11/main.kt</code> で <code>foo.bar</code> を読んでいるか確認します。STEP 33④の <code>println(foo.counter)</code> だけの形では、遅らせた計算は始まりません。",
+      "translation": "Check that <code>ex11/main.kt</code> reads <code>foo.bar</code>. With only <code>println(foo.counter)</code>, as in STEP 33④, the delayed computation does not start."
+    },
+    {
+      "source": "<code>counter</code> を変えたのに <code>bar</code> が変わらない",
+      "translation": "<code>bar</code> does not change even though you changed <code>counter</code>"
+    },
+    {
+      "source": "最初の <code>foo.bar</code> を読む前と後で動きが違います。初回の計算結果は保存され、同じオブジェクトの2回目以降の読み取りに使われます（STEP 33⑤）。",
+      "translation": "The behavior differs before and after the first read of <code>foo.bar</code>. The result of the first computation is saved and used for the second and later reads on the same object (STEP 33⑤)."
+    },
+    {
+      "source": "<code>ex11</code> が6行のまま",
+      "translation": "<code>ex11</code> still shows 6 lines"
+    },
+    {
+      "source": "STEP 34で足した <code>val foo2 = Foo()</code> と、その <code>bar</code> を読む2行が残っていないか確認します。完成コードは1つの <code>foo</code> を使う3行の出力です。",
+      "translation": "Check that <code>val foo2 = Foo()</code>, added in STEP 34, and the two lines that read its <code>bar</code> are not still there. The completed code uses one <code>foo</code> and outputs 3 lines."
+    },
+    {
+      "source": "赤い波線が消えない",
+      "translation": "The red squiggly line does not go away"
+    },
+    {
+      "source": "全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。",
+      "translation": "Check whether full-width spaces or full-width quotation marks (<code>”</code>) have slipped in. Switch to alphanumeric input and retype that line."
+    },
+    {
+      "source": "プロジェクトが見つからない",
+      "translation": "You cannot find your project"
+    },
+    {
+      "source": "Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。",
+      "translation": "In Finder, go to <code>Documents/Kotlin/K01HelloKotlin</code>. If you cannot find it, show your teacher what you entered in <strong>場所</strong> (Location) when you created the project."
+    },
+    {
+      "source": "一度にいくつも直すと、何が変わったか分かりにくくなります。1か所直して、もう一度Runしましょう。",
+      "translation": "If you fix several things at once, it is hard to tell what changed. Fix one place, then run it again."
+    },
+    {
+      "source": "もっと知りたいとき",
+      "translation": "If you want to learn more"
+    },
+    {
+      "source": "授業はこの教科書だけで進められます。次の公式資料は、あとから調べたい人向けです（英語で書かれています）。",
+      "translation": "You can follow the class with this textbook alone. The following official documentation is for anyone who wants to look things up later (it is written in English)."
+    },
+    {
+      "source": "Kotlin公式：Comparison to Java",
+      "translation": "Official Kotlin docs: Comparison to Java"
+    },
+    {
+      "source": "Kotlin公式：Basic syntax",
+      "translation": "Official Kotlin docs: Basic syntax"
+    },
+    {
+      "source": "Kotlin公式：Basic types",
+      "translation": "Official Kotlin docs: Basic types"
+    },
+    {
+      "source": "Kotlin公式：Null safety",
+      "translation": "Official Kotlin docs: Null safety"
+    },
+    {
+      "source": "Kotlin公式：Functions",
+      "translation": "Official Kotlin docs: Functions"
+    },
+    {
+      "source": "Kotlin公式：Numbers",
+      "translation": "Official Kotlin docs: Numbers"
+    },
+    {
+      "source": "Kotlin公式：ドキュメントの入口",
+      "translation": "Official Kotlin docs: Documentation home"
+    },
+    {
+      "source": "IntelliJ IDEA公式：Get started with Kotlin",
+      "translation": "Official IntelliJ IDEA docs: Get started with Kotlin"
+    },
+    {
+      "source": "教材の対象：K01HelloKotlin（全6コマ・11演習） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。",
+      "translation": "Materials for: K01HelloKotlin (6 lessons, 11 exercises) / IntelliJ IDEA 2026.3 EAP<br>The images in STEP 02 were taken on a Mac with IntelliJ IDEA displayed in Japanese. For the other steps, use the instructions and tables in the text to find where things are on the screen."
+    },
+    {
+      "source": "チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。",
+      "translation": "The checks are just for you and are not sent to your teacher. Depending on your browser settings, saving your checks may not work. You can still read the text and code with JavaScript turned off. To print, press ⌘ P. Notes and answers are also expanded when printed (if JavaScript is off, open them manually)."
+    }
+  ],
+  "overrides": [
+    {
+      "source": "使うもの",
+      "where": "th",
+      "translation": "What you use"
     }
   ]
 }
