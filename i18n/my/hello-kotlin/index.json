@@ -30,5 +30,12 @@
       "source": "使うもの",
       "translation": "အသုံးပြုမည့်အရာ"
     }
+  ],
+  "overrides": [
+    {
+      "source": "場所",
+      "where": "td",
+      "translation": "場所 (နေရာ)"
+    }
   ]
 }

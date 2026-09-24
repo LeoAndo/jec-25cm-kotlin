@@ -724,7 +724,7 @@
     },
     {
       "source": "ビルドシステム",
-      "translation": "Build system"
+      "translation": "ビルドシステム (Build system)"
     },
     {
       "source": "<strong>IntelliJ</strong>。<code>Kotlin</code>・<code>Maven</code>・<code>Gradle</code> は選びません。",
@@ -736,7 +736,7 @@
     },
     {
       "source": "サンプルコードの追加",
-      "translation": "Add sample code"
+      "translation": "サンプルコードの追加 (Add sample code)"
     },
     {
       "source": "チェックを<strong>入れたまま</strong>にします。",
@@ -744,7 +744,7 @@
     },
     {
       "source": "コンパクトなプロジェクト構造を使用する",
-      "translation": "Use compact project structure"
+      "translation": "コンパクトなプロジェクト構造を使用する (Use compact project structure)"
     },
     {
       "source": "新規プロジェクトのダイアログ。左の一覧でKotlinが選ばれ、右は名前がK01HelloKotlin、場所が~/Documents/Kotlin、その下にプロジェクトは次に作成されます: ~/Documents/Kotlin/K01HelloKotlinと出ている。ビルドシステムはIntelliJ、JDKの欄、サンプルコードの追加とコンパクトなプロジェクト構造を使用するの両方にチェックが入り、右下に作成ボタンがある",
@@ -4396,6 +4396,11 @@
     }
   ],
   "overrides": [
+    {
+      "source": "場所",
+      "where": "td",
+      "translation": "場所 (Location)"
+    },
     {
       "source": "使うもの",
       "where": "th",

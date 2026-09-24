@@ -30,5 +30,17 @@
       "source": "使うもの",
       "translation": "所需工具"
     }
+  ],
+  "overrides": [
+    {
+      "source": "場所",
+      "where": "td",
+      "translation": "場所（位置）"
+    },
+    {
+      "source": "使うもの",
+      "where": "th",
+      "translation": "要使用的东西"
+    }
   ]
 }
