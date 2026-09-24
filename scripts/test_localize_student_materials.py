@@ -839,9 +839,9 @@ class RepositoryTest(unittest.TestCase):
         self.assertEqual(localize.check(self.settings), [])
 
     # 参照リポジトリにあった「英語の見出しと版の表が、用語集と混ざらない」テストは移植していない。
-    # このリポジトリは翻訳が1文もない状態から始まる（config/i18n.json の distribute は全言語 false）ため、
-    # 英語の訳文が入っていることを前提にした検査は、翻訳を始めるまで成り立たない。
-    # 最初の言語の翻訳を入れるissueで、そのときの単元名に合わせて書き直す。
+    # このリポジトリは翻訳が1文もない状態から始まったため、英語の訳文が入っていることを前提にした
+    # 検査は、翻訳を始めるまで成り立たなかった。英語の全ページの訳が入ったので（2026-09-25、#56）、
+    # 移植は #88 で行う。
 
     def test_code_blocks_are_identical_in_every_language(self):
         # <pre> とソースのバイト一致（check-teaching-materials.py）が、どの言語でも保たれる。
