@@ -74,7 +74,7 @@
 ## 3. 着手から後片付けまで
 
 1. `git fetch origin --prune` してから、issueを読む（`gh issue view <番号>`）。
-2. 重複着手がないことを確認する。`gh pr list --state open` と `git branch -r` に `issue-<番号>-` があれば、誰かが作業中。マージ済みのブランチはGitHubが自動で消すので、リモートにブランチがあること自体が作業中の目印になる。issue本文に「#NN とは同時に進めない」と相手の番号が挙がっていたら、その番号についても同じ確認をする。
+2. 重複着手がないことを確認する。`gh pr list --state open` と `git branch -r` に `issue-<番号>-` があれば、誰かが作業中。マージ済みのブランチはGitHubが自動で消すので（リポジトリ設定の **Automatically delete head branches**。APIでは `delete_branch_on_merge`）、リモートにブランチがあること自体が作業中の目印になる。issue本文に「#NN とは同時に進めない」と相手の番号が挙がっていたら、その番号についても同じ確認をする。
    - **リモートだけでは足りない。ローカルのブランチとworktreeも見る。** 手順4のとおりすぐpushしても、ブランチを作ってからpushするまでの数十秒は、リモートに何も出ない。まとめて起動された並行セッションは、全員が同時にこの窓に入る。
 
      ```sh
@@ -106,6 +106,18 @@
 7. issueの「触る範囲」の外は触らない。範囲外で気付いたことは§6の手順でissueにする。
 8. コミットは§5、検証は§7の手順で行う。検証が済んだらDraftを外す。レビュー対応は§8。
 9. マージ後はworktreeを消す（`git worktree remove <パス>`）。ローカルブランチは `git branch -d` で消す。マージせずに作業をやめたときは、手順4で出した目印のブランチも消す（`git push -d origin issue-<番号>-<slug>`）。GitHubが自動で消すのはマージ済みのブランチだけなので、残すとほかのセッションが作業中と誤解する。
+   - **マージしたのにリモートのブランチが残っていたら、設定を確かめる。** 2026-09-24まではこの設定が無効で、マージしたブランチが残っていた（#47）。`false` なら、オーナーに報告してから自分のブランチを `git push -d` で消す。
+
+     ```sh
+     gh api repos/LeoAndo/jec-25cm-kotlin --jq .delete_branch_on_merge   # true のはず
+     ```
+
+   - **`git branch -d` が `not fully merged` で止まることがある。** リモートのブランチが消えると、`-d` はリモートではなく、いまいるworktreeのHEADと比べる。HEADが古いmainのままだと、マージ済みでも止まる。mainに入っていることを確かめてから `-D` で消す。
+
+     ```sh
+     git fetch origin --prune
+     git merge-base --is-ancestor issue-<番号>-<slug> origin/main && git branch -D issue-<番号>-<slug>
+     ```
 
 ## 4. 並行してよい範囲
 
