@@ -1,0 +1,42 @@
+{
+  "source": "docs/common/other-versions.html",
+  "language": "ko",
+  "entries": [
+    {
+      "source": "本文へ移動",
+      "translation": "본문으로 이동"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / Kotlin 실습"
+    },
+    {
+      "source": "もとのページへ戻る",
+      "translation": "이전 페이지로 돌아가기"
+    },
+    {
+      "source": "KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート",
+      "translation": "KOTLIN PROGRAMMING EXERCISES / 공통 자료·수업 지원"
+    },
+    {
+      "source": "項目",
+      "translation": "항목"
+    },
+    {
+      "source": "見る場所",
+      "translation": "확인할 위치"
+    },
+    {
+      "source": "すること",
+      "translation": "할 일"
+    },
+    {
+      "source": "公式資料",
+      "translation": "공식 자료"
+    },
+    {
+      "source": "← もとのページへ戻る",
+      "translation": "← 이전 페이지로 돌아가기"
+    }
+  ]
+}
