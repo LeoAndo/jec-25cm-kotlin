@@ -11,12 +11,80 @@
       "translation": "JEC / Kotlin exercises"
     },
     {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "0 / 15 steps checked"
+    },
+    {
+      "source": "進捗",
+      "translation": "Progress"
+    },
+    {
+      "source": "目次",
+      "translation": "Table of contents"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "If you get stuck"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Open the completed project"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "Shared: The assignment and the APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "Shared: A different Android Studio version"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "What you will build in this unit"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "Comparison with Java / Swift"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "Stop here and check"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "Check the box when you are done. If you get stuck, show this screen to your teacher."
+    },
+    {
       "source": "項目",
       "translation": "Field"
     },
     {
+      "source": "入力・選択",
+      "translation": "What to enter or select"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · Full file"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · Full file"
+    },
+    {
       "source": "場所",
       "translation": "Location"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "What you see"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "Where to check"
     },
     {
       "source": "公式資料",
