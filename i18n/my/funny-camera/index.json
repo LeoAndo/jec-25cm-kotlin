@@ -1,0 +1,26 @@
+{
+  "source": "docs/funny-camera/index.html",
+  "language": "my",
+  "entries": [
+    {
+      "source": "本文へ移動",
+      "translation": "အဓိကအကြောင်းအရာသို့ သွားရန်"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / Kotlin လေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "項目",
+      "translation": "သတ်မှတ်ရန်အကွက်"
+    },
+    {
+      "source": "場所",
+      "translation": "နေရာ"
+    },
+    {
+      "source": "公式資料",
+      "translation": "တရားဝင်လမ်းညွှန်များ"
+    }
+  ]
+}
