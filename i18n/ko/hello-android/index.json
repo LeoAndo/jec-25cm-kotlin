@@ -1,0 +1,22 @@
+{
+  "source": "docs/hello-android/index.html",
+  "language": "ko",
+  "entries": [
+    {
+      "source": "本文へ移動",
+      "translation": "본문으로 이동"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / Kotlin 실습"
+    },
+    {
+      "source": "項目",
+      "translation": "항목"
+    },
+    {
+      "source": "公式資料",
+      "translation": "공식 자료"
+    }
+  ]
+}
