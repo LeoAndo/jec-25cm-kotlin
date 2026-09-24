@@ -286,7 +286,7 @@ txtMessage = findViewById(R.id.txt_message);</code></pre>
     chronometer.start();
 });</code></pre>
 </div></div>
-<div class="note"><p class="box-title">POINT</p><p>Kotlinの <code>{ _ → … }</code> はJavaのクリック用ラムダに相当します。<code>_</code> は受け取ったViewを使わない印です。<code>start()</code> だけでは基準時刻を設定しないため、その直前に <code>setBase</code> を呼びます。</p></div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinの <code>{ _ -&gt; … }</code> はJavaのクリック用ラムダに相当します。<code>_</code> は受け取ったViewを使わない印です。<code>start()</code> だけでは基準時刻を設定しないため、その直前に <code>setBase</code> を呼びます。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-04"><span>STARTを押すと秒が進み、STARTとRESETが押せない色に変わっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-5"><p class="step-meta">STEP 05 · 9コマ目 · 目安 17分</p><h2>STOPで止め、STARTで再開し、RESETで戻す</h2>
