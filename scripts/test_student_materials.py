@@ -311,9 +311,11 @@ class PackageStudentMaterialsTest(unittest.TestCase):
                     self.assertIn(f'lang="{choice["code"]}" dir="{direction}"', nav)
                 self.assertIn('lang="ja" dir="ltr"', nav)
             entrance = archive.read(prefix + "index.html").decode()
-            self.assertIn('<li lang="ja" dir="ltr">', entrance)
+            # 入口の一覧では、向きをリンクの文字だけに付ける（行ごと右に寄せない）。
+            self.assertRegex(entrance, r'<li lang="ja"><a href="[^"]+" dir="ltr">')
             for language in config["languages"]:
-                self.assertIn(f'<li lang="{language["code"]}" dir="{language.get("dir", "ltr")}">', entrance)
+                self.assertRegex(entrance, rf'<li lang="{language["code"]}"><a href="[^"]+" dir="{language.get("dir", "ltr")}">')
+            self.assertNotIn('<li lang="ar" dir=', entrance)
         # アラビア語は右から左の言語として設定してある（この検査で右から左の出力を必ず通すため）。
         self.assertIn("rtl", [language.get("dir") for language in config["languages"]])
 

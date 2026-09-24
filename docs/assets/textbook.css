@@ -76,6 +76,9 @@ code, pre, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, mon
    文末の ; や ) が行の反対側へ回り込まないようにする。右から左のページ（dir="rtl"）だけに当てる。
    isolate は日本語の文の中で折り返しの位置を変えるので、日本語のページには当てない。 */
 [dir="rtl"] :is(code, pre, kbd) { direction: ltr; unicode-bidi: isolate; }
+/* 右から左のページで、<strong> に英字の画面の名前（File → New → Project…）がそのまま入ると、
+   末尾の … が名前の反対側へ回り込む。中身の最初の文字で向きを決め、周りの文から切り離す。 */
+[dir="rtl"] strong { unicode-bidi: plaintext; }
 code { background: #eef1f3; border-radius: 3px; padding: .13em .3em; font-size: .88em; overflow-wrap: anywhere; }
 pre { background: #192635; color: #edf4fc; border-radius: 0 0 9px 9px; padding: 1.2rem; margin: 0 0 1.2rem; overflow-x: auto; line-height: 1.65; font-size: .82rem; tab-size: 4; }
 pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: normal; }
@@ -118,6 +121,9 @@ summary { cursor: pointer; font-weight: 650; }
 details[open] > summary { margin-bottom: 1rem; }
 .flow { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; padding: 1rem; background: #f0f2ef; border-radius: 8px; font-size: .9rem; }
 .flow strong { background: white; border: 1px solid var(--line); padding: .45rem .8rem; border-radius: 6px; }
+/* 手順の間の矢印（<span>→</span>）は文ではないので訳されない。右から左のページでは、
+   手順が右から左に並ぶので、矢印の左右を反転して並ぶ向きに合わせる。 */
+[dir="rtl"] .flow > span { transform: scaleX(-1); }
 .next { display: flex; justify-content: flex-end; margin: 1.5rem 0 .3rem; }
 .next a, .button-link { background: var(--blue); color: white; text-decoration: none; border-radius: 7px; padding: .55rem 1rem; display: inline-block; font-size: .88rem; }
 .footer { color: var(--muted); padding-top: 2rem; font-size: .78rem; }
