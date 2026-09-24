@@ -40,6 +40,6 @@
 </tbody></table><p>未完了の学生は、最後に画面が一致したSTEPの次から再開する。教科書のチェックを教員へ送る機能はない。完成見本を開いているだけの学生は、自分の保存先へ戻っているか確認する。</p>
 <h3>理解確認に使う短い問い</h3><table><thead><tr><th>問い</th><th>期待する答えと確認操作</th></tr></thead><tbody><tr><td>btn1の表示を変えると何が変わるか</td><td>ボタンとSnackbarの文字。getText()で読んでいるため。XMLの文字だけを変更してRunする。</td></tr><tr><td>val textなのに文字を変えられるのはなぜか</td><td>参照の再代入と、参照先Viewのプロパティ変更は別。クリック後の見出しを見る。</td></tr><tr><td>3でメッセージが出ないのはなぜか</td><td>クリック処理を登録していない。XMLのstyleがあることと動作は別。</td></tr></tbody></table></section>
 <section><h2>6. 照合用コードと保守</h2><ul><li><a href="code/01-libs.versions.toml">01-libs.versions.toml</a>：STEP 01の設定全文。完成版とバイト一致。</li><li><a href="code/04-activity_main.xml">04-activity_main.xml</a>：STEP 04の画面全文。完成版とバイト一致。</li><li><a href="code/05-MainActivity.kt">05-MainActivity.kt</a>：STEP 05終了時の途中コード。通知・Logはまだなく、画面表示とView取得のみ。生成時の記法とは異なる部分があるが、完成版の骨格で照合できる。</li><li><a href="code/11-MainActivity.kt">11-MainActivity.kt</a>：STEP 11の完成全文。完成版とバイト一致。</li></ul>
-<p>完成ソースはA01HelloAndroidにある。変更する場合は教科書の全文、複製、配布ZIPを更新する。configのsessionsは2、K01と合わせて8コマ。サイドバーはK01→A01、A01のtopbarはK01を指す。</p>
+<p>完成ソースはA01HelloAndroidにある。変更する場合は教科書の全文、複製、配布ZIPを更新する。A01のsessionsは2。サイドバーにはconfigに登録された全単元を単元番号順に並べ、A01のtopbarは直前のK01を指す。</p>
 <p>教材の検査4種、assembleDebug、指定AVDのクリックとLogcat、配布物のリンクを確認する。画像は本文で使う4枚だけを収録する。検証専用プロジェクトやログはリポジトリ外に置く。</p></section>
 <footer class="footer"><p>確認日：2026年9月24日 / 対象：A01HelloAndroid、Android Studio Panda 2</p></footer></main><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
