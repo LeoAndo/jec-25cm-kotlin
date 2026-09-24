@@ -163,16 +163,16 @@
       "translation": "What you should see"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルの、合わせて<strong>4つ</strong>がある。",
-      "translation": "The folder inside 「書類」 (Documents) contains <strong>four items</strong>: two folders named <code>docs</code> and <code>samples</code>, and two files named <code>はじめに.txt</code> and <code>VERSION.json</code>."
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
+      "translation": "The folder inside 「書類」 (Documents) contains two folders named <code>docs</code> and <code>samples</code>, and two files named <code>はじめに.txt</code> and <code>VERSION.json</code>. Versions that include translations also contain <code>index.html</code>, the language selection page, for a total of <strong>five items</strong>."
     },
     {
-      "source": "4つより多いことがあります",
-      "translation": "There may be more than four items"
+      "source": "<code>index.html</code> があるとき",
+      "translation": "If the folder contains <code>index.html</code>"
     },
     {
-      "source": "教材のフォルダに <code>index.html</code> がある場合は、そのファイルをブラウザで開き、読む言語を選びます。言語を選ぶ入口がない版では、このページをそのまま読み進めます。<strong>4つより多い分には、そのまま先へ進んで構いません。</strong>足りないときだけ、先に進まずに先生に見せてください。",
-      "translation": "If the materials folder contains <code>index.html</code>, open that file in your browser and choose the language you want to read. If your version does not include a language selection page, continue reading this page. <strong>If there are more than four items, you can continue.</strong> Only stop and show your teacher if any of the four items are missing."
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "Open <code>index.html</code> in your browser and choose the language you want to read. If you are reading in Japanese, you can simply continue reading this page. If your version does not include <code>index.html</code>, continue reading this page. <strong>Only if any of the four items above are missing</strong>, stop and show your teacher before going any further."
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",
