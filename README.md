@@ -12,6 +12,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 - [完成プロジェクト（初回から参照可能）](docs/hello-kotlin/downloads/K01HelloKotlin.zip)
 - [共通資料：授業を始めるまでの準備（教材の受け取りから最初の実行まで）](docs/common/setup.html)
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
+- [共通資料：ちがうAndroid Studioのバージョンで進めるとき](docs/common/other-versions.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 - [A01：HelloAndroid — Kotlinで画面を動かそう](docs/hello-android/index.html)
 - [A01の完成プロジェクト](docs/hello-android/downloads/A01HelloAndroid.zip)
@@ -145,7 +146,7 @@ Android系はA01の教科書がそろっています。以後の単元は「15�
 
 2つのひな形は、Android Studioの版が変わったときに、New Projectウィザードが生成するコードや設定がどう変わるかを見るために置いています。教材のスクリーンショットや手順が古くなっていないかは、この2つを見比べて確かめます。単元ではないので `config/teaching-materials.json` には登録せず、学生用ZIPにも入りません。
 
-**A01の教材と同じ時期に、ほかのAndroid Studioの版で進める共通資料を整備します（issue #5、オーナー決定）。Panda 3は実測せず、互換性を確認済みとしては案内しません。**
+**A01の教材と同じ時期に、[ちがうAndroid Studioの版で進める共通資料](docs/common/other-versions.html)を整備しました（issue #5、オーナー決定）。Panda 3は実測せず、互換性を確認済みとしては案内しません。**
 
 **授業の基準バージョンは Android Studio Panda 2 です。** Android系の単元の教科書は、Panda 2 の New Project ウィザードの画面と、Panda 2 が生成する設定を前提に書きます。スクリーンショットも Panda 2 で撮ります。教員の開発マシンには Quail 4 が入っていますが（下の「開発環境：教員」）、教材の基準は Panda 2 です。
 
@@ -153,7 +154,7 @@ Android系はA01の教科書がそろっています。以後の単元は「15�
 
 | そろえた場所 | Quail 4 が作る形 | Panda 2 の形（現在） |
 | --- | --- | --- |
-| `gradle/libs.versions.toml` | agp 9.4.1／coreKtx 1.10.1／`activity-ktx` | agp 9.1.1／coreKtx 1.17.0／`activity` |
+| `gradle/libs.versions.toml` | agp 9.4.1／coreKtx 1.19.0／`activity-ktx` | agp 9.1.1／coreKtx 1.17.0／`activity` |
 | `app/build.gradle.kts` の compileSdk | `release(37)` | `release(36) { minorApiLevel = 1 }` |
 | `app/build.gradle.kts` の targetSdk | 37 | 36 |
 | `app/build.gradle.kts` の `buildTypes` | `optimization { enable = false }` | `isMinifyEnabled` ＋ `proguardFiles(...)` |
@@ -425,7 +426,7 @@ Xcode と macOS の欄も聞いていますが、この授業では使いませ�
 
 - **Quail 4 で進めると、教科書と食い違うところが実測で分かっています。** リポジトリにある2つのひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）を突き合わせた結果、`buildTypes` の書き方（`isMinifyEnabled` ＋ `proguardFiles` ↔ `optimization { enable = false }`）と、R8のkeepルールの置き場（`app/proguard-rules.pro` ↔ `app/src/main/keepRules/rules.keep`）が違います。どちらも New Project ウィザードが生成する形そのものなので、学生が自分で作ったプロジェクトと教科書のコードを並べて見比べられなくなります。詳細は「教員が確認に使うプロジェクト」の表にあります。
 - **Panda 3（2025.3.3）の差分は実測していません。** Panda 2 とはパッチ1つぶんの差なので、上の食い違いは出ない見込みですが、確かめてはいません。ひな形も置いていません。
-- 読み替えの案内を共通資料にする作業は、[issue #5](https://github.com/LeoAndo/jec-25cm-kotlin/issues/5) で進めます。**Android系の単元の教科書はまだ無いので、いまの時点で学生が困ることはありません。**
+- A01の教科書とあわせて、[共通資料：ちがうAndroid Studioのバージョンで進めるとき](docs/common/other-versions.html)を用意しました。Quail 4ではA01 STEP 01のPanda 2用カタログへ置き換えず、生成設定を保って進めます。設定の実測表、相談する条件、Panda 3が未実測であることをまとめています。
 
 # 基本方針
 
