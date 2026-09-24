@@ -136,7 +136,7 @@
     },
     {
       "source": "実行先の表示名は、版が違っても <code>jec_25cm_kotlin_Pixel 9a</code> です。Device Managerに既にあれば、その端末を使います。なければA01のSTEP 02で先生が指定するシステムイメージを使って作ります。実機が接続されている場合も、Runの実行先が指定AVDになっているか確かめます。",
-      "translation": "The display name of the device to run on is <code>jec_25cm_kotlin_Pixel 9a</code>, even with a different version. If it already exists in Device Manager, use that device. If not, create it in STEP 02 of A01 using the system image your teacher specifies. Even when a physical device is connected, check that the Run target is the designated AVD."
+      "translation": "The display name of the target device is <code>jec_25cm_kotlin_Pixel 9a</code>, even with a different version. If it already exists in Device Manager, use that device. If not, create it in STEP 02 of A01 using the system image your teacher specifies. Even when a physical device is connected, check that the Run target is the designated AVD."
     },
     {
       "source": "POINT：IDEの版とプロジェクトの設定は別",

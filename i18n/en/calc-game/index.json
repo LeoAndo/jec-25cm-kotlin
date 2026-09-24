@@ -3,6 +3,14 @@
   "language": "en",
   "entries": [
     {
+      "source": "A02 CalcGame — 計算ゲームを作ろう | Kotlin演習",
+      "translation": "A02 CalcGame — Build a calculation game | Kotlin exercises"
+    },
+    {
+      "source": "Android Studio Panda 2でA02CalcGameを作る、90分×2コマの教科書。停止・再開するタイマーと10問の採点を、Java・Swiftと比較して学びます。",
+      "translation": "A textbook for building A02CalcGame in Android Studio Panda 2, over two 90-minute lessons. Learn a timer that stops and resumes and the scoring of 10 questions, comparing them with Java and Swift."
+    },
+    {
       "source": "本文へ移動",
       "translation": "Skip to main content"
     },
@@ -11,16 +19,996 @@
       "translation": "JEC / Kotlin exercises"
     },
     {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "0 / 15 steps checked"
+    },
+    {
+      "source": "進捗",
+      "translation": "Progress"
+    },
+    {
+      "source": "目次",
+      "translation": "Table of contents"
+    },
+    {
+      "source": "STEP 00 Android Studioと完成時の画面を確認する",
+      "translation": "STEP 00 Check Android Studio and the finished app's screen"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 Create your own project"
+    },
+    {
+      "source": "STEP 02 エミュレータを選び、画面をXMLで作る",
+      "translation": "STEP 02 Choose the emulator and build the screen in XML"
+    },
+    {
+      "source": "STEP 03 Viewを取得し、経過時間を保存する場所を用意する",
+      "translation": "STEP 03 Get the Views and prepare a place to store the elapsed time"
+    },
+    {
+      "source": "STEP 04 STARTで時間を進める",
+      "translation": "STEP 04 Make the timer run with START"
+    },
+    {
+      "source": "STEP 05 STOPで止め、STARTで再開し、RESETで戻す",
+      "translation": "STEP 05 Stop with STOP, resume with START, and reset with RESET"
+    },
+    {
+      "source": "STEP 06 9コマ目の完成状態を確認する",
+      "translation": "STEP 06 Check the finished state of Lesson 9"
+    },
+    {
+      "source": "STEP 07 10コマ目：前回のプロジェクトを開く",
+      "translation": "STEP 07 Lesson 10: Open the project from last time"
+    },
+    {
+      "source": "STEP 08 問題の状態と、1問を作るメソッドを追加する",
+      "translation": "STEP 08 Add the question state and a method that creates one question"
+    },
+    {
+      "source": "STEP 09 START・STOP・RESETと問題の状態をつなぐ",
+      "translation": "STEP 09 Connect START, STOP, and RESET to the question state"
+    },
+    {
+      "source": "STEP 10 9個の数字ボタンに同じ処理を付ける",
+      "translation": "STEP 10 Attach the same handler to the nine number buttons"
+    },
+    {
+      "source": "STEP 11 採点し、10問で時間と結果を表示する",
+      "translation": "STEP 11 Score the answers and show the time and result after 10 questions"
+    },
+    {
+      "source": "STEP 12 完成コードと照合する",
+      "translation": "STEP 12 Compare with the completed code"
+    },
+    {
+      "source": "STEP 13 アレンジできる場所を試す",
+      "translation": "STEP 13 Try the parts you can customize"
+    },
+    {
+      "source": "STEP 14 10コマ目の完成状態を確認する",
+      "translation": "STEP 14 Check the finished state of Lesson 10"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "If you get stuck"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Open the completed project"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Shared: Getting ready for class"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "Shared: The assignment and the APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "Shared: A different Android Studio version"
+    },
+    {
+      "source": "時間を計って<br>計算ゲームを作ろう",
+      "translation": "Build a timed<br>calculation game"
+    },
+    {
+      "source": "START・STOP・RESETを使って時間を計り、10問の引き算に答えるアプリを作ります。",
+      "translation": "Build an app that measures your time with START, STOP, and RESET while you answer 10 subtraction questions."
+    },
+    {
+      "source": "対象：<code>A02CalcGame</code> / パッケージ：<code>jp.ac.jec.a02calcgame</code><br>9〜10コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "Project: <code>A02CalcGame</code> / Package: <code>jp.ac.jec.a02calcgame</code><br>Lessons 9–10, 90 minutes each / Android Studio Panda 2 / macOS"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "What you will build in this unit"
+    },
+    {
+      "source": "停止中の時間を除いて再開できるタイマー付きの計算ゲーム。前から順に、自分のプロジェクトへコードを書き足します。完成コードと見本は初めから参照できます。",
+      "translation": "A calculation game with a timer that can resume, leaving out the time it was stopped. Work through the steps in order, adding code to your own project. The completed code and the sample are available from the start."
+    },
+    {
+      "source": "STEP 00 · 9コマ目 · 目安 5分",
+      "translation": "STEP 00 · Lesson 9 · About 5 min"
+    },
+    {
+      "source": "Android Studioと完成時の画面を確認する",
+      "translation": "Check Android Studio and the finished app's screen"
+    },
+    {
+      "source": "使うIDEは <strong>Android Studio Panda 2</strong>、作るプロジェクトは <code>A02CalcGame</code> です。9コマ目で計時と停止・再開、10コマ目で10問の出題と採点を作ります。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。",
+      "translation": "The IDE you use is <strong>Android Studio Panda 2</strong>, and the project you create is <code>A02CalcGame</code>. In Lesson 9, you build the timer with stop and resume. In Lesson 10, you build the 10 questions and the scoring. The Java / Swift code in the comparison boxes is for reading; do not paste it into your Kotlin files."
+    },
+    {
+      "source": "FinderのアプリケーションからAndroid Studioを開きます。",
+      "translation": "Open Android Studio from アプリケーション (Applications) in Finder."
+    },
+    {
+      "source": "Welcome画面の版を見ます。違う版の場合は、作り始める前に先生に画面を見せます。",
+      "translation": "Check the version on the Welcome screen. If it is a different version, show your teacher the screen before you start building."
+    },
+    {
+      "source": "ブラウザではこの教科書を開いておきます。",
+      "translation": "Keep this textbook open in your browser."
+    },
+    {
+      "source": "完成すると、STARTで「10から1〜9のどれかを引く問題」が出ます。答えの数字を押すと、正誤にかかわらず次へ進み、10問で正解数と時間が出ます。STOPで休み、STARTで同じ問題から再開できます。",
+      "translation": "When the app is finished, pressing START shows \"a question that subtracts one of the numbers 1 to 9 from 10\". When you press the number for your answer, the game moves on to the next question whether you are right or wrong, and after 10 questions, the number of correct answers and the time appear. You can pause with STOP and resume from the same question with START."
+    },
+    {
+      "source": "完成版を起動した直後。問題欄は空白で、STARTが押せる",
+      "translation": "The finished app right after launch. The question area is blank, and START can be pressed."
+    },
+    {
+      "source": "完成版を起動した直後。問題欄は空白で、STARTが押せる（指定AVDで撮影）",
+      "translation": "The finished app right after launch. The question area is blank, and START can be pressed (taken on the designated AVD)."
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "Comparison with Java / Swift"
+    },
+    {
+      "source": "Androidが画面を準備するときに <code>onCreate</code> を呼びます。Javaのオーバーライドと同じ役割です。今回は <code>main</code> 関数を作りません。",
+      "translation": "Android calls <code>onCreate</code> when it prepares the screen. It has the same role as an override in Java. This time, you do not create a <code>main</code> function."
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "Stop here and check"
+    },
+    {
+      "source": "Android StudioのWelcome画面と、A02の教科書が開いている。",
+      "translation": "The Android Studio Welcome screen and the A02 textbook are open."
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "Check the box when you are done. If you get stuck, show this screen to your teacher."
+    },
+    {
+      "source": "STEP 01 · 9コマ目 · 目安 15分",
+      "translation": "STEP 01 · Lesson 9 · About 15 min"
+    },
+    {
+      "source": "自分のプロジェクトを作る",
+      "translation": "Create your own project"
+    },
+    {
+      "source": "Welcome画面の <strong>New Project</strong> を選びます。プロジェクトが開いている場合は <strong>File → New → New Project…</strong> です。",
+      "translation": "On the Welcome screen, select <strong>New Project</strong>. If a project is open, use <strong>File → New → New Project…</strong>."
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> の順に選びます。<code>Empty Activity</code> はCompose用なので、今回は選びません。",
+      "translation": "Select <strong>Phone and Tablet → Empty Views Activity → Next</strong> in that order. <code>Empty Activity</code> is for Compose, so do not select it this time."
+    },
+    {
+      "source": "次の表のとおり入力して、<strong>Finish</strong> を押します。",
+      "translation": "Fill in the fields as shown in the table below, then click <strong>Finish</strong>."
+    },
+    {
       "source": "項目",
       "translation": "Field"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "What to enter or select"
+    },
+    {
+      "source": "<code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。",
+      "translation": "Replace <code>ユーザ名</code> (user name) with your Mac user name. <strong>Include the project name in Save location.</strong> The first Gradle sync needs a network connection. If your Mac asks for access to 「書類」 (Documents), allow it so your project can be read."
+    },
+    {
+      "source": "授業で使うライブラリの版をそろえる",
+      "translation": "Match the library versions used in class"
+    },
+    {
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "Even with the same Panda 2, the library versions differ depending on when the project was created. Switch the Project tool window on the left to the <strong>Project</strong> view, open <code>gradle → libs.versions.toml</code>, and replace its entire contents with the following. This is not Kotlin code; it is a setting that specifies which components to use and their versions."
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · Full file"
+    },
+    {
+      "source": "表示される <strong>Sync Now</strong> を押します。出ない場合は <strong>File → Sync Project with Gradle Files</strong> で同期します。進行表示が消えるまで待ちます。赤いエラーが残るときは先へ進まず、内容を先生に見せます。",
+      "translation": "Click <strong>Sync Now</strong> when it appears. If it does not appear, sync with <strong>File → Sync Project with Gradle Files</strong>. Wait until the progress indicator disappears. If a red error remains, do not go on; show it to your teacher."
+    },
+    {
+      "source": "この手順はPanda 2用です。別の版で生成したプロジェクトに、この設定だけを入れて版を下げないでください。ほかの設定の書き方も違う場合があります。",
+      "translation": "These steps are for Panda 2. If your project was generated by a different version, do not lower its versions by adding only this setting. Other settings may also be written differently."
+    },
+    {
+      "source": "Kotlinの継承は <code>:</code>、Javaは <code>extends</code> です。Android Studioの設定ファイルと、これから書く <code>MainActivity.kt</code> は別のファイルです。",
+      "translation": "Kotlin uses <code>:</code> for inheritance, and Java uses <code>extends</code>. The Android Studio settings file and the <code>MainActivity.kt</code> that you are about to write are separate files."
+    },
+    {
+      "source": "自分の保存先にA02CalcGameがあり、Gradle同期の赤いエラーが消えている。",
+      "translation": "A02CalcGame is in your save location, and the red Gradle sync errors are gone."
+    },
+    {
+      "source": "STEP 02 · 9コマ目 · 目安 20分",
+      "translation": "STEP 02 · Lesson 9 · About 20 min"
+    },
+    {
+      "source": "エミュレータを選び、画面をXMLで作る",
+      "translation": "Choose the emulator and build the screen in XML"
+    },
+    {
+      "source": "<strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使い、同名の端末を増やしません。",
+      "translation": "Start <code>jec_25cm_kotlin_Pixel 9a</code> from <strong>Tools → Device Manager</strong>. Use the existing device; do not add another device with the same name."
+    },
+    {
+      "source": "端末がなければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong> を選びます。先生が指定したAPI 31以上のイメージを使い、名前を <code>jec_25cm_kotlin_Pixel 9a</code> にして作成・起動します。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code> です。候補が見つからなければ先生に画面を見せます。",
+      "translation": "If there is no device, select <strong>Phone → Pixel 9a</strong> from <strong>+ → Create Virtual Device</strong> (or <strong>Create Device</strong>). Use the image with API 31 or higher that your teacher specifies, name the device <code>jec_25cm_kotlin_Pixel 9a</code>, then create and start it. Apple Silicon uses <code>arm64-v8a</code>, and an Intel Mac uses <code>x86_64</code>. If you cannot find the option, show your teacher the screen."
+    },
+    {
+      "source": "上部で実行設定 <strong>app</strong> と指定AVDを選び、<strong>Run ▶</strong> を押します。まず <code>Hello World!</code> が出ることを確かめます。",
+      "translation": "At the top, select the run configuration <strong>app</strong> and the designated AVD, then click <strong>Run ▶</strong>. First, check that <code>Hello World!</code> appears."
+    },
+    {
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替え、全文を次で置き換えます。",
+      "translation": "Switch the Project tool window on the left to the <strong>Project</strong> view, and open <code>app/src/main/res/layout/activity_main.xml</code>. Switch to <strong>Code</strong> at the top right of the editor, and replace the whole file with the following."
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · Full file"
+    },
+    {
+      "source": "もう一度Runします。上から時間、START・STOP・RESET、空白の問題欄、1〜9の数字が並びます。この段階では、ボタンに処理は付いていません。XMLプレビューに出る問題文は <code>tools:text</code> の見本なので、実行画面では空白です。",
+      "translation": "Run the app again. From top to bottom, you see the time; START, STOP, and RESET; a blank question area; and the numbers 1 to 9. At this stage, the buttons have no handlers. The question text in the XML preview is sample text from <code>tools:text</code>, so it is blank when the app runs."
     },
     {
       "source": "場所",
       "translation": "Location"
     },
     {
+      "source": "指定と効果",
+      "translation": "Setting and effect"
+    },
+    {
+      "source": "外側のLinearLayout",
+      "translation": "The outer LinearLayout"
+    },
+    {
+      "source": "<code>orientation=\"vertical\"</code> で縦に並べる。idは生成コードが参照する <code>main</code> のまま。",
+      "translation": "<code>orientation=\"vertical\"</code> arranges the views vertically. The id stays <code>main</code>, which the generated code refers to."
+    },
+    {
+      "source": "数字の3行",
+      "translation": "The three rows of numbers"
+    },
+    {
+      "source": "<code>orientation=\"horizontal\"</code> で横に並べる。",
+      "translation": "<code>orientation=\"horizontal\"</code> arranges them horizontally."
+    },
+    {
+      "source": "<code>android:enabled=\"false\"</code> で開始前は押せなくする。",
+      "translation": "<code>android:enabled=\"false\"</code> disables them until the game starts."
+    },
+    {
+      "source": "間隔と文字サイズ",
+      "translation": "Spacing and text size"
+    },
+    {
+      "source": "<code>dp</code> は余白などの寸法、<code>sp</code> は文字サイズ。",
+      "translation": "<code>dp</code> is for sizes such as margins, and <code>sp</code> is for text size."
+    },
+    {
+      "source": "XMLの <code>@+id/btn_start</code> を、Kotlinから <code>R.id.btn_start</code> で参照します。",
+      "translation": "Kotlin refers to <code>@+id/btn_start</code> in the XML as <code>R.id.btn_start</code>."
+    },
+    {
+      "source": "Javaでも同じXMLと <code>R.id.btn_start</code> を使います。XML自体をJava用に書き直す必要はありません。",
+      "translation": "Java also uses the same XML and <code>R.id.btn_start</code>. You do not need to rewrite the XML itself for Java."
+    },
+    {
+      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。",
+      "translation": "<code>android:text</code> is used when the app runs, and <code>tools:text</code> is for the editor preview. <code>tools:ignore=\"ButtonStyle\"</code> is a setting for the editor that comes from the completed sample; it does not create any click handling."
+    },
+    {
+      "source": "指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。",
+      "translation": "The designated AVD shows 00:00, the three control buttons, and 1 to 9, and the question area is blank."
+    },
+    {
+      "source": "STEP 03 · 9コマ目 · 目安 15分",
+      "translation": "STEP 03 · Lesson 9 · About 15 min"
+    },
+    {
+      "source": "Viewを取得し、経過時間を保存する場所を用意する",
+      "translation": "Get the Views and prepare a place to store the elapsed time"
+    },
+    {
+      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。",
+      "translation": "Open <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> and replace the whole file with the following. For now, it only connects the screen and Kotlin."
+    },
+    {
+      "source": "MainActivity.kt · STEP 03終了時の全文",
+      "translation": "MainActivity.kt · Full file at the end of STEP 03"
+    },
+    {
+      "source": "Runして同じ画面が出ることを確かめます。<code>elapsedTimeMillis</code> は停止した瞬間までの経過時間をミリ秒で保存する場所です。<code>txtMessage</code> は、次のコマで <code>onCreate</code> の外に書く出題メソッドからも使います。ほかのViewは <code>onCreate</code> の中で使うのでローカル変数にします。",
+      "translation": "Run the app and check that the same screen appears. <code>elapsedTimeMillis</code> is where the elapsed time up to the moment you stop is stored, in milliseconds. <code>txtMessage</code> is also used by the method that shows questions, which you will write outside <code>onCreate</code> in the next lesson. The other Views are used inside <code>onCreate</code>, so make them local variables."
+    },
+    {
+      "source": "<code>lateinit var</code> は「あとで代入する非Nullのプロパティ」です。Javaの後から代入するフィールドに対応しますが、Kotlinでは未代入のまま読むと例外になります。XMLを読み込む <code>setContentView</code> → View取得 → 使用の順を守ります。生成されたインセット処理は画面端との重なりを避けるので残します。",
+      "translation": "<code>lateinit var</code> is \"a non-null property that you assign later\". It corresponds to a Java field that is assigned later, but in Kotlin, reading it before it is assigned throws an exception. Follow the order <code>setContentView</code> (which loads the XML) → get the Views → use them. Keep the generated inset handling; it prevents the content from overlapping the screen edges."
+    },
+    {
+      "source": "5つのView取得に赤い波線がなく、RunするとSTEP 02と同じ画面が出ている。",
+      "translation": "The five lines that get the Views have no red squiggly lines, and running the app shows the same screen as in STEP 02."
+    },
+    {
+      "source": "STEP 04 · 9コマ目 · 目安 15分",
+      "translation": "STEP 04 · Lesson 9 · About 15 min"
+    },
+    {
+      "source": "STARTで時間を進める",
+      "translation": "Make the timer run with START"
+    },
+    {
+      "source": "<code>import</code> の一覧に <code>import android.os.SystemClock</code> があることを確かめます。<code>onCreate</code> の <code>val btnReset</code> の行の後、<code>onCreate</code> を閉じる <code>}</code> の前に、次を追加します。",
+      "translation": "Check that <code>import android.os.SystemClock</code> is in the <code>import</code> list. Add the following after the <code>val btnReset</code> line in <code>onCreate</code>, before the <code>}</code> that closes <code>onCreate</code>."
+    },
+    {
+      "source": "MainActivity.kt · onCreateの末尾へ追加",
+      "translation": "MainActivity.kt · Add at the end of onCreate"
+    },
+    {
+      "source": "RunしてSTARTを押します。<code>00:00</code> から秒が進み、START・RESETが押せなくなり、STOPが押せる色になります。STOPの処理は次のSTEPで書くため、今は止まりません。Android StudioのStop ■でアプリを終了してから次へ進みます。",
+      "translation": "Run the app and press START. The seconds count up from <code>00:00</code>, START and RESET can no longer be pressed, and STOP turns to its enabled color. You write the STOP handling in the next STEP, so the timer does not stop yet. Stop the app with Stop ■ in Android Studio before moving on."
+    },
+    {
+      "source": "<code>SystemClock.elapsedRealtime()</code> は端末起動後の経過ミリ秒です。時計の「何時何分」ではありません。Chronometerは「今の経過ミリ秒 − 基準時刻」を表示するので、初回は今を基準にして0から始めます。",
+      "translation": "<code>SystemClock.elapsedRealtime()</code> is the number of milliseconds since the device booted. It is not the time of day on a clock. Because Chronometer shows \"current elapsed milliseconds − base time\", the first time, it uses the current time as the base and starts from 0."
+    },
+    {
+      "source": "Kotlinの <code>{ _ -&gt; … }</code> はJavaのクリック用ラムダに相当します。<code>_</code> は受け取ったViewを使わない印です。<code>start()</code> だけでは基準時刻を設定しないため、その直前に <code>setBase</code> を呼びます。",
+      "translation": "Kotlin's <code>{ _ -&gt; … }</code> corresponds to a click-listener lambda in Java. <code>_</code> marks that the View passed in is not used. <code>start()</code> alone does not set the base time, so call <code>setBase</code> right before it."
+    },
+    {
+      "source": "STARTを押すと秒が進み、STARTとRESETが押せない色に変わっている。",
+      "translation": "When you press START, the seconds count up, and START and RESET turn to their disabled color."
+    },
+    {
+      "source": "STEP 05 · 9コマ目 · 目安 17分",
+      "translation": "STEP 05 · Lesson 9 · About 17 min"
+    },
+    {
+      "source": "STOPで止め、STARTで再開し、RESETで戻す",
+      "translation": "Stop with STOP, resume with START, and reset with RESET"
+    },
+    {
+      "source": "STARTのリスナを閉じる <code>}</code> の後、<code>onCreate</code> の内側に、STOPとRESETの処理を続けて追加します。STARTのラムダの内側には入れません。",
+      "translation": "After the <code>}</code> that closes the START listener, still inside <code>onCreate</code>, add the STOP and RESET handling one after the other. Do not put them inside the START lambda."
+    },
+    {
+      "source": "MainActivity.kt · STARTのリスナの後へ追加",
+      "translation": "MainActivity.kt · Add after the START listener"
+    },
+    {
+      "source": "Run→STARTで5秒ほど動かし、STOPを押します。",
+      "translation": "Run → START, let the timer run for about 5 seconds, then press STOP."
+    },
+    {
+      "source": "5秒待ちます。表示が進まないことを見ます。",
+      "translation": "Wait 5 seconds. Check that the display does not advance."
+    },
+    {
+      "source": "STARTを押します。停止前の秒数の続きから進みます。",
+      "translation": "Press START. The time continues from the seconds shown before you stopped."
+    },
+    {
+      "source": "STOP→RESETを押します。時間が <code>00:00</code> に戻ります。",
+      "translation": "Press STOP → RESET. The time goes back to <code>00:00</code>."
+    },
+    {
+      "source": "操作",
+      "translation": "Action"
+    },
+    {
+      "source": "計算",
+      "translation": "Calculation"
+    },
+    {
+      "source": "例（ミリ秒）",
+      "translation": "Example (milliseconds)"
+    },
+    {
+      "source": "保存する経過時間 = 今 − 基準時刻",
+      "translation": "Elapsed time to save = now − base time"
+    },
+    {
+      "source": "5秒待ってSTART",
+      "translation": "Wait 5 seconds, then START"
+    },
+    {
+      "source": "新しい基準時刻 = 今 − 保存した経過時間",
+      "translation": "New base time = now − saved elapsed time"
+    },
+    {
+      "source": "再開直後の表示",
+      "translation": "Display right after resuming"
+    },
+    {
+      "source": "今 − 新しい基準時刻",
+      "translation": "Now − new base time"
+    },
+    {
+      "source": "110000 − 105000 = 5000（5秒）",
+      "translation": "110000 − 105000 = 5000 (5 seconds)"
+    },
+    {
+      "source": "<code>stop()</code> は表示の更新を止めますが、基準時刻を書き換えません。STOPで経過時間を保存し、STARTで基準時刻をずらすことで、休んだ時間を除きます。Javaと同じAPIなので <code>getBase()</code>・<code>setEnabled()</code> の書き方をそのまま使えます。",
+      "translation": "<code>stop()</code> stops updating the display, but it does not change the base time. Saving the elapsed time with STOP and shifting the base time with START leaves out the paused time. It is the same API as in Java, so you can write <code>getBase()</code> and <code>setEnabled()</code> just as you would in Java."
+    },
+    {
+      "source": "STOP中は秒が進まず、STARTで続きから進み、STOP→RESETで00:00に戻っている。",
+      "translation": "While stopped, the seconds do not advance; START continues from where the timer stopped; and STOP → RESET brings the time back to 00:00."
+    },
+    {
+      "source": "STEP 06 · 9コマ目 · 目安 3分",
+      "translation": "STEP 06 · Lesson 9 · About 3 min"
+    },
+    {
+      "source": "9コマ目の完成状態を確認する",
+      "translation": "Check the finished state of Lesson 9"
+    },
+    {
+      "source": "最後の3分です。START→STOP→START→STOP→RESETを順に押します。自分のプロジェクトの保存先が <code>Documents/Kotlin/A02CalcGame</code> になっていることも見ます。",
+      "translation": "These are the last 3 minutes. Press START → STOP → START → STOP → RESET in order. Also check that your project is saved in <code>Documents/Kotlin/A02CalcGame</code>."
+    },
+    {
+      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。次回は同じプロジェクトを開きます。",
+      "translation": "At this point, only the time runs. The blank question area and the number buttons that do nothing yet are the finished state for this stage. Next time, you will open the same project."
+    },
+    {
+      "source": "<code>elapsedTimeMillis</code> をクラスのプロパティに置いたので、STOPとSTARTの両方から同じ値を使えます。",
+      "translation": "Because <code>elapsedTimeMillis</code> is a property of the class, both STOP and START can use the same value."
+    },
+    {
+      "source": "Javaでもクラスのフィールドなら、複数のクリック用ラムダから同じ値を読み書きできます。",
+      "translation": "In Java too, if it is a field of the class, several click-listener lambdas can read and write the same value."
+    },
+    {
+      "source": "入力中の場所で迷ったら、<code>onCreate</code> の中にView取得と3つのリスナが並んでいるかを見ます。リスナを互いの内側に入れないことが大切です。",
+      "translation": "If you lose track of where you are typing, check that <code>onCreate</code> contains the lines that get the Views, followed by the three listeners. It is important not to put one listener inside another."
+    },
+    {
+      "source": "停止・再開・リセットが動き、問題欄は空白、MainActivity.ktに3つのリスナが並んでいる。",
+      "translation": "Stop, resume, and reset work, the question area is blank, and MainActivity.kt has the three listeners one after another."
+    },
+    {
+      "source": "STEP 07 · 10コマ目 · 目安 5分",
+      "translation": "STEP 07 · Lesson 10 · About 5 min"
+    },
+    {
+      "source": "10コマ目：前回のプロジェクトを開く",
+      "translation": "Lesson 10: Open the project from last time"
+    },
+    {
+      "source": "Android StudioのWelcome画面の <strong>Open</strong>（開いている場合は <strong>File → Open…</strong>）で、自分の <code>Documents/Kotlin/A02CalcGame</code> を選びます。",
+      "translation": "Use <strong>Open</strong> on the Android Studio Welcome screen (or <strong>File → Open…</strong> if a project is open) to select your own <code>Documents/Kotlin/A02CalcGame</code>."
+    },
+    {
+      "source": "実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。",
+      "translation": "Select the run configuration <strong>app</strong> and <code>jec_25cm_kotlin_Pixel 9a</code>, then run the app."
+    },
+    {
+      "source": "START→STOP→START→STOP→RESETを押し、前回のタイマーを確かめます。",
+      "translation": "Press START → STOP → START → STOP → RESET and check the timer from last time."
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を開きます。<code>elapsedTimeMillis</code> と <code>txtMessage</code> がクラスの内側、<code>onCreate</code> の外側にあることを見ます。",
+      "translation": "Open <code>MainActivity.kt</code>. Check that <code>elapsedTimeMillis</code> and <code>txtMessage</code> are inside the class and outside <code>onCreate</code>."
+    },
+    {
+      "source": "今日も同じプロジェクトに書き足します。Runし直した直後はプロパティが初期値で作られるので、前回の秒数を残す作りではありません。",
+      "translation": "Today, you add to the same project again. Right after you run the app again, the properties are created with their initial values, so the app is not built to keep the seconds from last time."
+    },
+    {
+      "source": "自分のA02CalcGameが開き、停止・再開・リセットが前回と同じように動いている。",
+      "translation": "Your own A02CalcGame is open, and stop, resume, and reset work the same as last time."
+    },
+    {
+      "source": "STEP 08 · 10コマ目 · 目安 15分",
+      "translation": "STEP 08 · Lesson 10 · About 15 min"
+    },
+    {
+      "source": "問題の状態と、1問を作るメソッドを追加する",
+      "translation": "Add the question state and a method that creates one question"
+    },
+    {
+      "source": "<code>class MainActivity</code> の内側、<code>onCreate</code> より前に、次の4行を追加します。前回の <code>elapsedTimeMillis</code> と <code>txtMessage</code> は残します。",
+      "translation": "Add the following four lines inside <code>class MainActivity</code>, before <code>onCreate</code>. Keep <code>elapsedTimeMillis</code> and <code>txtMessage</code> from last time."
+    },
+    {
+      "source": "MainActivity.kt · クラスのプロパティへ追加",
+      "translation": "MainActivity.kt · Add to the class properties"
+    },
+    {
+      "source": "ファイル上部の <code>import</code> 一覧へ <code>import java.util.concurrent.ThreadLocalRandom</code> を追加します。次のメソッドは、<strong>onCreateを閉じる <code>}</code> の後、MainActivityを閉じる最後の <code>}</code> の前</strong>に追加します。",
+      "translation": "Add <code>import java.util.concurrent.ThreadLocalRandom</code> to the <code>import</code> list at the top of the file. Add the following method <strong>after the <code>}</code> that closes onCreate, and before the last <code>}</code> that closes MainActivity</strong>."
+    },
+    {
+      "source": "MainActivity.kt · onCreateの外、クラスの内側へ追加",
+      "translation": "MainActivity.kt · Add outside onCreate, inside the class"
+    },
+    {
+      "source": "<code>nextInt(1, 10)</code> は1を含み、10を含まないので1〜9です。<code>10 - randomNumber</code> の答えも1〜9になります。<code>nowNo</code> は問題番号、<code>correctNo</code> は正解数、<code>answer</code> は現在の答え、<code>isPlaying</code> は数字への回答を受け付ける状態です。",
+      "translation": "<code>nextInt(1, 10)</code> includes 1 but not 10, so it gives 1 to 9. The answer to <code>10 - randomNumber</code> is also 1 to 9. <code>nowNo</code> is the question number, <code>correctNo</code> is the number of correct answers, <code>answer</code> is the current answer, and <code>isPlaying</code> shows whether number answers are accepted."
+    },
+    {
+      "source": "Runしてタイマーが動くことを確かめます。ここでは <code>startQuestion()</code> をまだ呼んでいないため、問題欄は空白です。メソッド名に赤い波線がなければ次へ進みます。",
+      "translation": "Run the app and check that the timer works. <code>startQuestion()</code> is not called yet, so the question area is blank. If the method name has no red squiggly line, go on to the next step."
+    },
+    {
+      "source": "戻り値のないKotlinの <code>fun</code> は、Javaの <code>void</code> メソッドに対応します。Javaの乱数APIはKotlinからもそのまま呼べます。コメントにある別APIの行は実行されません。この授業ではAPI 31から使う実装のまま進めます。",
+      "translation": "A Kotlin <code>fun</code> with no return value corresponds to a Java <code>void</code> method. You can call Java's random number API directly from Kotlin. The line in the comment that uses another API does not run. In this class, keep the implementation that works from API 31."
+    },
+    {
+      "source": "startQuestionと4つのプロパティに赤い波線がなく、タイマーは動き、問題欄はまだ空白である。",
+      "translation": "There are no red squiggly lines on startQuestion or the four properties, the timer works, and the question area is still blank."
+    },
+    {
+      "source": "STEP 09 · 10コマ目 · 目安 10分",
+      "translation": "STEP 09 · Lesson 10 · About 10 min"
+    },
+    {
+      "source": "START・STOP・RESETと問題の状態をつなぐ",
+      "translation": "Connect START, STOP, and RESET to the question state"
+    },
+    {
+      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナを、まとめて次に置き換えます</strong>。View取得の行は残します。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
+      "translation": "In <code>onCreate</code>, <strong>replace all three listeners for START, STOP, and RESET with the following</strong>. Keep the lines that get the Views. START shows a question only the first time, STOP stops accepting answers, and RESET also resets the question number and the number of correct answers."
+    },
+    {
+      "source": "MainActivity.kt · 3つのリスナを置き換える",
+      "translation": "MainActivity.kt · Replace the three listeners"
+    },
+    {
+      "source": "Run→STARTで「1問目: 10 - 数字 =」が出ます。数字は毎回変わるので、画像と同じになる必要はありません。",
+      "translation": "After Run → START, 「1問目: 10 - 数字 =」 (Question 1: 10 - number =) appears. The number changes every time, so it does not have to match the image."
+    },
+    {
+      "source": "STOPを押します。時間と問題がそのまま残ります。",
+      "translation": "Press STOP. The time and the question stay as they are."
+    },
+    {
+      "source": "STARTを押します。問題を作り直さず、同じ1問のまま時間だけが続きます。",
+      "translation": "Press START. The question is not created again; the same question stays, and only the time continues."
+    },
+    {
+      "source": "STOP→RESETで問題が消え、もう一度STARTすると1問目が出ます。",
+      "translation": "STOP → RESET clears the question, and pressing START again shows question 1."
+    },
+    {
+      "source": "完成版をSTOPで止めた例。時間と現在の問題が残る",
+      "translation": "The finished app stopped with STOP. The time and the current question remain."
+    },
+    {
+      "source": "完成版をSTOPで止めた例。時間と現在の問題が残る（指定AVDで撮影）",
+      "translation": "The finished app stopped with STOP. The time and the current question remain (taken on the designated AVD)."
+    },
+    {
+      "source": "<code>answer == 0</code> は「まだ問題がない」という目印です。実際の答えが1〜9だから区別できます。毎回STARTで問題を作ると、STOP前の問題が別の問題へ変わってしまいます。",
+      "translation": "<code>answer == 0</code> is a marker that means \"no question yet\". This works because real answers are 1 to 9. If START created a question every time, the question from before STOP would change into a different one."
+    },
+    {
+      "source": "STARTで1問目が出て、STOP→STARTでも同じ問題が残り、RESETで問題欄が空白になる。",
+      "translation": "START shows question 1, the same question stays after STOP → START, and RESET makes the question area blank."
+    },
+    {
+      "source": "STEP 10 · 10コマ目 · 目安 15分",
+      "translation": "STEP 10 · Lesson 10 · About 15 min"
+    },
+    {
+      "source": "9個の数字ボタンに同じ処理を付ける",
+      "translation": "Attach the same handler to the nine number buttons"
+    },
+    {
+      "source": "<code>import</code> 一覧に <code>import com.google.android.material.snackbar.Snackbar</code> を追加します。RESETのリスナの後、<code>onCreate</code> の内側へ次を追加します。まずは押した数字をSnackbarに出して、ボタンと処理の対応だけを確かめます。",
+      "translation": "Add <code>import com.google.android.material.snackbar.Snackbar</code> to the <code>import</code> list. Add the following after the RESET listener, inside <code>onCreate</code>. For now, show the pressed number in a Snackbar, and just check that each button triggers the handler."
+    },
+    {
+      "source": "MainActivity.kt · RESETのリスナの後へ追加",
+      "translation": "MainActivity.kt · Add after the RESET listener"
+    },
+    {
+      "source": "Run直後に数字を押します。「ゲーム中のみボタンを押せます」が出ます。",
+      "translation": "Right after running the app, press a number. 「ゲーム中のみボタンを押せます」 (You can press the buttons only during the game) appears."
+    },
+    {
+      "source": "STARTを押し、1・5・9を順に押します。それぞれの数字がSnackbarに出ます。まだ採点しないため問題番号は1のままです。",
+      "translation": "Press START, then press 1, 5, and 9 in order. Each number appears in a Snackbar. The answers are not scored yet, so the question number stays at 1."
+    },
+    {
+      "source": "STOPを押してから数字を押します。案内だけが出て、問題は変わりません。",
+      "translation": "Press STOP, then press a number. Only the notice appears, and the question does not change."
+    },
+    {
+      "source": "停止中に数字を押すと出る案内",
+      "translation": "The notice that appears when you press a number while the timer is stopped"
+    },
+    {
+      "source": "停止中に数字を押すと出る案内（指定AVDで撮影）",
+      "translation": "The notice that appears when you press a number while the timer is stopped (taken on the designated AVD)"
+    },
+    {
+      "source": "<code>intArrayOf</code> はJavaの <code>int[]</code>、<code>for (id in …)</code> は拡張for文に対応します。<code>return@setOnClickListener</code> はこのクリック用ラムダだけを終えます。<code>onCreate</code> を終える処理ではありません。ボタンの文字を <code>toString().toInt()</code> で数へ変えるので、数字の表示は1〜9のまま使います。",
+      "translation": "<code>intArrayOf</code> corresponds to Java's <code>int[]</code>, and <code>for (id in …)</code> corresponds to the enhanced for loop. <code>return@setOnClickListener</code> ends only this click-listener lambda. It does not end <code>onCreate</code>. The button text is converted to a number with <code>toString().toInt()</code>, so keep the button labels as 1 to 9."
+    },
+    {
+      "source": "開始前・停止中は案内が出て、実行中は押した1・5・9がSnackbarに出る。",
+      "translation": "Before the start and while stopped, the notice appears; while the game is running, the pressed 1, 5, and 9 appear in a Snackbar."
+    },
+    {
+      "source": "STEP 11 · 10コマ目 · 目安 20分",
+      "translation": "STEP 11 · Lesson 10 · About 20 min"
+    },
+    {
+      "source": "採点し、10問で時間と結果を表示する",
+      "translation": "Score the answers and show the time and result after 10 questions"
+    },
+    {
+      "source": "<code>import</code> 一覧へ <code>import java.util.concurrent.TimeUnit</code> を追加します。前のSTEPで足した <code>val numberButtonIds</code> から <code>for</code> を閉じる <code>}</code> までを、次に置き換えます。押した数字だけを出す仮のSnackbarはなくなります。",
+      "translation": "Add <code>import java.util.concurrent.TimeUnit</code> to the <code>import</code> list. Replace everything from <code>val numberButtonIds</code>, which you added in the previous STEP, through the <code>}</code> that closes <code>for</code> with the following. The temporary Snackbar that only showed the pressed number is removed."
+    },
+    {
+      "source": "MainActivity.kt · 数字ボタンの処理全体を置き換える",
+      "translation": "MainActivity.kt · Replace all of the number button handling"
+    },
+    {
+      "source": "Run→STARTで10問答えます。1問だけ、計算結果と違う数字を押し、残り9問は正しい数字を押してください。最後は「9問正解しました！時間は○秒です」となり、時間が止まります。10問目の正誤も数えた後で終了する順です。",
+      "translation": "Run → START and answer 10 questions. For just one question, press a number that differs from the correct result, and press the correct number for the other nine. At the end, 「9問正解しました！時間は○秒です」 (You got 9 right! Your time is ○ seconds) appears, and the time stops. The 10th answer is also checked before the game ends."
+    },
+    {
+      "source": "1問を誤答し、9問を正答して終了した例",
+      "translation": "An example that ended after one wrong answer and nine correct answers"
+    },
+    {
+      "source": "1問を誤答し、9問を正答して終了した例（指定AVDで撮影）",
+      "translation": "An example that ended after one wrong answer and nine correct answers (taken on the designated AVD)"
+    },
+    {
+      "source": "<code>nowNo &lt;= 9</code> の間は、回答後に番号を増やして次の問題を作ります。10問目では <code>else</code> へ進みます。間違えても次の問題へ進み、正解数だけが増えません。結果の秒数は経過ミリ秒を秒へ変換した整数で、小数部分は切り捨てます。",
+      "translation": "While <code>nowNo &lt;= 9</code>, each answer increases the number and creates the next question. On the 10th question, the code goes to <code>else</code>. A wrong answer also moves on to the next question; only the number of correct answers does not go up. The seconds in the result are the elapsed milliseconds converted to a whole number of seconds; the fraction is dropped."
+    },
+    {
+      "source": "終了後に数字を押すと案内が出て、結果は変わりません。RESET→STARTで1問目からやり直せます。",
+      "translation": "If you press a number after the game ends, the notice appears and the result does not change. RESET → START lets you start over from question 1."
+    },
+    {
+      "source": "KotlinでもJavaと同じ順番で、正解数を更新してから終了を判定します。<code>TimeUnit</code> もJavaのAPIです。画面の時間と結果の秒数は同じ経過時間が元ですが、時間表示は更新間隔があるため、停止の瞬間に1秒程度ずれることがあります。",
+      "translation": "Kotlin uses the same order as Java: it updates the number of correct answers, then checks whether the game has ended. <code>TimeUnit</code> is also a Java API. The time on the screen and the seconds in the result are based on the same elapsed time, but the time display updates at intervals, so the two can differ by about 1 second at the moment of stopping."
+    },
+    {
+      "source": "1問誤答・9問正答で9問正解と表示され、終了後はRESETだけが操作ボタンの中で押せる。",
+      "translation": "With one wrong and nine correct answers, the result shows 9 correct, and after the game ends, RESET is the only control button that can be pressed."
+    },
+    {
+      "source": "STEP 12 · 10コマ目 · 目安 10分",
+      "translation": "STEP 12 · Lesson 10 · About 10 min"
+    },
+    {
+      "source": "完成コードと照合する",
+      "translation": "Compare with the completed code"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> の全文です。自分のファイルと照合します。<code>package</code>・<code>import</code> の一覧、クラスのプロパティ、<code>onCreate</code> 内の4組の処理、外側の <code>startQuestion</code> の順です。",
+      "translation": "This is the full <code>MainActivity.kt</code>. Compare it with your own file. The order is <code>package</code> and the <code>import</code> list, the class properties, the four groups of handling in <code>onCreate</code>, and <code>startQuestion</code> outside it."
+    },
+    {
+      "source": "MainActivity.kt · 完成全文",
+      "translation": "MainActivity.kt · Full completed file"
+    },
+    {
+      "source": "状態",
+      "translation": "State"
+    },
+    {
+      "source": "数字を押すと",
+      "translation": "When you press a number"
+    },
+    {
+      "source": "起動直後・RESET後",
+      "translation": "Right after launch / after RESET"
+    },
+    {
+      "source": "押せる",
+      "translation": "Can be pressed"
+    },
+    {
+      "source": "押せない",
+      "translation": "Cannot be pressed"
+    },
+    {
+      "source": "案内",
+      "translation": "Notice"
+    },
+    {
+      "source": "ゲーム中",
+      "translation": "During the game"
+    },
+    {
+      "source": "採点して次の問題か結果",
+      "translation": "Scored, then the next question or the result"
+    },
+    {
+      "source": "STOP後",
+      "translation": "After STOP"
+    },
+    {
+      "source": "10問終了後",
+      "translation": "After 10 questions"
+    },
+    {
+      "source": "Runして表の4状態を順に確かめます。初回の実行では時間と問題番号が進み、STOP中はどちらも止まります。RESETしたら問題欄と正解数を引き継がず、次のゲームを始めます。",
+      "translation": "Run the app and check the four states in the table in order. The first time you run it, the time and the question number advance, and while stopped, both stop. After RESET, the next game starts without carrying over the question area or the number of correct answers."
+    },
+    {
+      "source": "Javaの <code>setText</code> はKotlinから <code>text =</code> と書けます。完成コードでは <code>getText()</code> や <code>setEnabled()</code> も使っています。同じJavaのViewに対する呼び出しなので、両方の記法の対応を確認します。",
+      "translation": "From Kotlin, you can write Java's <code>setText</code> as <code>text =</code>. The completed code also uses <code>getText()</code> and <code>setEnabled()</code>. They are all calls on the same Java View, so check how the two ways of writing correspond."
+    },
+    {
+      "source": "完成全文と照合でき、起動・ゲーム中・STOP後・終了後で表どおりの動作になる。",
+      "translation": "Your file matches the full completed file, and the app behaves as the table shows at launch, during the game, after STOP, and after the game ends."
+    },
+    {
+      "source": "STEP 13 · 10コマ目 · 目安 12分",
+      "translation": "STEP 13 · Lesson 10 · About 12 min"
+    },
+    {
+      "source": "アレンジできる場所を試す",
+      "translation": "Try the parts you can customize"
+    },
+    {
+      "source": "まず、今の完成状態で一度Runします。その後、次の表から1か所選び、変更→Run→確認の順で試します。例と同じにする必要はありません。1か所ずつ変えると、画面との対応を追えます。",
+      "translation": "First, run the app once in its current finished state. Then choose one place from the table below and try it in this order: change → Run → check. You do not have to use the same values as the examples. If you change one place at a time, you can follow how each change shows up on the screen."
+    },
+    {
+      "source": "変更する場所",
+      "translation": "What to change"
+    },
+    {
+      "source": "例",
+      "translation": "Example"
+    },
+    {
+      "source": "画面・動作への影響",
+      "translation": "Effect on the screen and behavior"
+    },
+    {
+      "source": "XMLのbtn_startの <code>android:text</code>",
+      "translation": "<code>android:text</code> of btn_start in the XML"
+    },
+    {
+      "source": "開始ボタンの文字が変わる。idは変更しない。",
+      "translation": "The text on the start button changes. Do not change the id."
+    },
+    {
+      "source": "XMLの数字の行の <code>android:layout_marginTop</code>",
+      "translation": "<code>android:layout_marginTop</code> of a number row in the XML"
+    },
+    {
+      "source": "その行の上の間隔が広がる。",
+      "translation": "The space above that row gets wider."
+    },
+    {
+      "source": "Kotlinの <code>if (nowNo &lt;= 9)</code>",
+      "translation": "<code>if (nowNo &lt;= 9)</code> in the Kotlin code"
+    },
+    {
+      "source": "5問で終了する。初期値の1はそのまま。",
+      "translation": "The game ends after 5 questions. Leave the initial value of 1 as it is."
+    },
+    {
+      "source": "結果文の文字列",
+      "translation": "The result message string"
+    },
+    {
+      "source": "<code>問正解しました！時間は</code> の言い方を変える",
+      "translation": "Change the wording of <code>問正解しました！時間は</code> (correct! Your time is)"
+    },
+    {
+      "source": "正解数と時間の間の文章が変わる。",
+      "translation": "The text between the number of correct answers and the time changes."
+    },
+    {
+      "source": "5問版なら、1問誤答・4問正答で「4問正解」と表示されるかを見ます。試し終えたら元の値に戻してRunし、完成版の10問で終了する状態を残します。提出用に自分の案を進めるときは、この表を変更箇所の手がかりにできます。",
+      "translation": "For the 5-question version, check that one wrong and four correct answers show 「4問正解」 (4 correct). When you finish trying, put the value back and run the app, so that the finished version, which ends after 10 questions, remains. When you work on your own idea for your submission, you can use this table as a guide to where to make changes."
+    },
+    {
+      "source": "数字ボタンは表示を整数に変換して採点するので、1〜9のまま使います。また、<code>10 - randomNumber</code> と乱数の範囲は一組です。片方だけ変えると、ボタンで答えられない数や、未開始の目印と同じ0が生まれるため、ここでは変えません。",
+      "translation": "The number buttons are scored by converting their labels to integers, so keep them as 1 to 9. Also, <code>10 - randomNumber</code> and the range of the random number are a pair. If you change only one of them, you can get numbers that the buttons cannot answer, or 0, which is the same as the \"not started\" marker, so do not change them here."
+    },
+    {
+      "source": "5問で終える条件が4なのは、1〜4問目への回答後に「次の問題」を作る判定だからです。KotlinとJavaで境界の考え方は同じです。",
+      "translation": "The condition for ending after 5 questions uses 4 because it is the check that creates \"the next question\" after questions 1 to 4 are answered. The boundary works the same way in Kotlin and Java."
+    },
+    {
+      "source": "選んだ変更の効果が画面に現れ、試した後は元の表示と10問で終了する状態に戻っている。",
+      "translation": "The effect of the change you chose appears on the screen, and after trying it, the app is back to the original display and ends after 10 questions."
+    },
+    {
+      "source": "STEP 14 · 10コマ目 · 目安 3分",
+      "translation": "STEP 14 · Lesson 10 · About 3 min"
+    },
+    {
+      "source": "10コマ目の完成状態を確認する",
+      "translation": "Check the finished state of Lesson 10"
+    },
+    {
+      "source": "最後の3分です。自分のアプリで、開始前に数字を押す→START→STOP→START→10問回答→RESETを順に試します。時間や問題の数字は画像と違ってかまいません。",
+      "translation": "These are the last 3 minutes. In your own app, try the following in order: press a number before starting → START → STOP → START → answer 10 questions → RESET. The time and the numbers in the questions can be different from the images."
+    },
+    {
+      "source": "STOPの前後で問題が同じで、休んだ時間は加わらない。",
+      "translation": "The question is the same before and after STOP, and the paused time is not added."
+    },
+    {
+      "source": "10問後に正解数と秒数が出る。",
+      "translation": "After 10 questions, the number of correct answers and the seconds appear."
+    },
+    {
+      "source": "RESET後は <code>00:00</code> と空白の問題欄になり、もう一度1問目から始められる。",
+      "translation": "After RESET, the screen shows <code>00:00</code> and a blank question area, and you can start again from question 1."
+    },
+    {
+      "source": "自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
+      "translation": "Save <code>MainActivity.kt</code> and <code>activity_main.xml</code> in your own project. If you keep customizing, use the table in STEP 13 to check the places to change and their effects as you go."
+    },
+    {
+      "source": "<code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。",
+      "translation": "Count with <code>correctNo++</code>, and show the result on the screen with <code>txtMessage.text = message</code>."
+    },
+    {
+      "source": "Javaでは <code>correctNo++;</code> と <code>txtMessage.setText(message);</code> に対応します。計算した結果をViewへ渡す流れは同じです。",
+      "translation": "In Java, these correspond to <code>correctNo++;</code> and <code>txtMessage.setText(message);</code>. The flow of passing the calculated result to a View is the same."
+    },
+    {
+      "source": "完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
+      "translation": "The completed sample is there for comparing code and behavior. Keep the project you built yourself, and do your customizing in it, checking each place you change."
+    },
+    {
+      "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
+      "translation": "Stop, resume, the result after 10 questions, and reset all work, and your own MainActivity.kt and XML are saved."
+    },
+    {
+      "source": "見えている状態",
+      "translation": "What you see"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "Where to check"
+    },
+    {
+      "source": "Gradle同期が失敗する",
+      "translation": "Gradle sync fails"
+    },
+    {
+      "source": "Panda 2かを見て、STEP 01の設定全文と照合します。ほかの版なら先生に画面を見せます。",
+      "translation": "Check that you are using Panda 2, and compare your settings with the full file in STEP 01. If you have a different version, show your teacher the screen."
+    },
+    {
+      "source": "XMLがない",
+      "translation": "The XML file is missing"
+    },
+    {
+      "source": "作成時にEmpty Views Activityを選んだか確認します。Empty ActivityはCompose用です。",
+      "translation": "Check that you chose Empty Views Activity when creating the project. Empty Activity is for Compose."
+    },
+    {
+      "source": "R.idが赤い",
+      "translation": "R.id is red"
+    },
+    {
+      "source": "XMLのidとKotlinの名前が同じか見ます。XMLの赤いエラーを先に直します。",
+      "translation": "Check that the id in the XML and the name in Kotlin are the same. Fix red errors in the XML first."
+    },
+    {
+      "source": "アプリがすぐ閉じる",
+      "translation": "The app closes right away"
+    },
+    {
+      "source": "View取得がsetContentViewより後か、txtMessageへ代入してから使っているかを確認します。",
+      "translation": "Check that you get the Views after setContentView, and that you assign txtMessage before using it."
+    },
+    {
+      "source": "STARTで大きな時間が出る",
+      "translation": "START shows a large time"
+    },
+    {
+      "source": "start()より前のsetBaseの行とelapsedTimeMillisの初期値を確認します。",
+      "translation": "Check the setBase line before start() and the initial value of elapsedTimeMillis."
+    },
+    {
+      "source": "停止中の時間が加わる",
+      "translation": "Paused time is added"
+    },
+    {
+      "source": "STOPの経過時間保存と、STARTの「今 − 保存した時間」の両方をSTEP 05・09で照合します。",
+      "translation": "Compare both the saving of the elapsed time in STOP and \"now − saved time\" in START with STEP 05 and 09."
+    },
+    {
+      "source": "STOP→STARTで問題が変わる",
+      "translation": "The question changes after STOP → START"
+    },
+    {
+      "source": "startQuestion()がif (answer == 0)の内側にあるか確認します。",
+      "translation": "Check that startQuestion() is inside if (answer == 0)."
+    },
+    {
+      "source": "数字を押すとまだ数字のSnackbarが出る",
+      "translation": "Pressing a number still shows the number in a Snackbar"
+    },
+    {
+      "source": "STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。",
+      "translation": "This is the in-between state of STEP 10. In STEP 11, replace all of the number button handling."
+    },
+    {
+      "source": "かっこが合わない",
+      "translation": "The brackets do not match"
+    },
+    {
+      "source": "STEP 12の全文で、onCreateの終わりとstartQuestionの位置を照合します。",
+      "translation": "Use the full file in STEP 12 to check where onCreate ends and where startQuestion is."
+    },
+    {
+      "source": "配布ZIPを展開したフォルダの <code>samples/A02CalcGame</code> を、Android Studioの <strong>Open</strong> から開きます。<strong>This Window</strong> で自分のプロジェクトと取り違えないよう、開くフォルダ名と保存先を確認します。見本を閉じたら自分の <code>Documents/Kotlin/A02CalcGame</code> を開き直します。",
+      "translation": "Open <code>samples/A02CalcGame</code>, in the folder where you extracted the distributed ZIP, with <strong>Open</strong> in Android Studio. To avoid mixing it up with your own project when you choose <strong>This Window</strong>, check the name of the folder you are opening and its location. After closing the sample, reopen your own <code>Documents/Kotlin/A02CalcGame</code>."
+    },
+    {
+      "source": "教科書だけを受け取った場合は、<a1>A02CalcGame.zip</a1> を保存して展開し、その中の <code>A02CalcGame</code> をOpenします。ZIPそのものや内側の <code>app</code> フォルダは選びません。",
+      "translation": "If you received only the textbook, save <a1>A02CalcGame.zip</a1>, extract it, and open the <code>A02CalcGame</code> inside it with Open. Do not select the ZIP file itself or the <code>app</code> folder inside."
+    },
+    {
+      "source": "Gradle同期を待ち、実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。見本は動作確認と比較用で、そのまま提出するものではありません。",
+      "translation": "Wait for Gradle sync, select the run configuration <strong>app</strong> and <code>jec_25cm_kotlin_Pixel 9a</code>, and run the app. The sample is for checking behavior and comparing; it is not something to submit as is."
+    },
+    {
       "source": "公式資料",
       "translation": "Official documentation"
+    },
+    {
+      "source": "Chronometer：基準時刻とstart・stop",
+      "translation": "Chronometer: Base time, start, and stop"
+    },
+    {
+      "source": "Kotlin：lateinitプロパティ",
+      "translation": "Kotlin: lateinit properties"
+    },
+    {
+      "source": "Kotlin：ラベル付きreturn",
+      "translation": "Kotlin: Labeled returns"
+    },
+    {
+      "source": "ThreadLocalRandom：乱数の範囲",
+      "translation": "ThreadLocalRandom: Range of random numbers"
+    },
+    {
+      "source": "確認日：2026年9月24日 / Android Studio Panda 2 / A02CalcGame",
+      "translation": "Last checked: September 24, 2026 / Android Studio Panda 2 / A02CalcGame"
     }
   ]
 }

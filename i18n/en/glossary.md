@@ -40,6 +40,10 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 赤い波線 | red squiggly line | |
 | 確認日 | Last checked | |
 | 対象（単元の冒頭の行） | Project | 共通資料の足もとの「対象」（環境）は For |
+| 実行先 | target device | Android Studio の表示に合わせる。Xcode との比較では run destination |
+| 部品（画面の） | UI element | |
+| 完成版 | finished app | K01（コンソール）では completed version |
+| 進捗 / 目次（aria-label） | Progress / Table of contents | |
 | Google Classroom の表示 | 授業 (Classwork)、追加または作成 (Add or create)、提出 (Turn in)、提出済み (Turned in)、提出を取り消す (Unsubmit) | 学生の画面の言語が分からないので、日本語を残して英語の表示名を添える |
 
 ## 書き方の決まり
