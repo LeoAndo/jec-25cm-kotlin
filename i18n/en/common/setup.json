@@ -16,7 +16,7 @@
     },
     {
       "source": "もとのページへ戻る",
-      "translation": "Return to the previous page"
+      "translation": "Return to the original page"
     },
     {
       "source": "KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート",
@@ -76,7 +76,7 @@
     },
     {
       "source": "ブラウザとIntelliJ IDEAの両方で、Kotlinのプログラムを実行し、その結果を読めるようになります。ここまでできれば、第1単元の教科書を開いて始められます。",
-      "translation": "You will be able to run Kotlin programs in both a browser and IntelliJ IDEA and read the output. Once you can do this, open the textbook for the first unit and get started."
+      "translation": "You will be able to run Kotlin programs in both a browser and IntelliJ IDEA and read the output. Once you can do this, you can open the textbook for the first unit and get started."
     },
     {
       "source": "1. 教材を受け取り、「書類」に置く",
@@ -864,7 +864,7 @@
     },
     {
       "source": "← もとのページへ戻る",
-      "translation": "← Return to the previous page"
+      "translation": "← Return to the original page"
     },
     {
       "source": "対象：macOS / ブラウザ / IntelliJ IDEA / Android Studio · 確認日：2026年9月23日",

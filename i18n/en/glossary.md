@@ -29,6 +29,7 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 成功の目印 | What you should see | |
 | ここで止まって確認 | Stop here and check | |
 | 公式資料 | Official documentation | |
+| もとのページ | original page | 共通資料の戻りリンク。previous page にしない（直接開くと、直前のページではなく既定の単元へ戻るため） |
 
 ## 書き方の決まり
 
