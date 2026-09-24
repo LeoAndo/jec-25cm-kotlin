@@ -4,7 +4,7 @@
     "total_sessions": 15,
     "minutes_per_session": 90
   },
-  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid"],
+  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid", "A02CalcGame"],
   "terms": [
     {
       "name": "指定AVD名",
@@ -16,7 +16,9 @@
         "docs/common/setup.html",
         "docs/common/other-versions.html",
         "docs/hello-android/index.html",
-        "teacher/hello-android/index.html"
+        "teacher/hello-android/index.html",
+        "docs/calc-game/index.html",
+        "teacher/calc-game/index.html"
       ]
     }
   ],
@@ -150,6 +152,58 @@
         }
       ],
       "archive": "docs/hello-android/downloads/A01HelloAndroid.zip"
+    },
+    {
+      "name": "A02CalcGame",
+      "kind": "android",
+      "root": "A02CalcGame",
+      "package": "jp.ac.jec.a02calcgame",
+      "layout": "A02CalcGame/app/src/main/res/layout/activity_main.xml",
+      "sessions": 2,
+      "docs": [
+        "docs/calc-game/index.html",
+        "teacher/calc-game/index.html"
+      ],
+      "sources": [
+        "A02CalcGame/app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt"
+      ],
+      "snippets": [
+        {
+          "html": "docs/calc-game/index.html",
+          "id": "code-main",
+          "source": "A02CalcGame/app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt"
+        },
+        {
+          "html": "docs/calc-game/index.html",
+          "id": "code-layout",
+          "source": "A02CalcGame/app/src/main/res/layout/activity_main.xml"
+        },
+        {
+          "html": "docs/calc-game/index.html",
+          "id": "code-libs",
+          "source": "A02CalcGame/gradle/libs.versions.toml"
+        },
+        {
+          "html": "docs/calc-game/index.html",
+          "id": "code-stage-03",
+          "source": "teacher/calc-game/code/03-MainActivity.kt"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "A02CalcGame/app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt",
+          "copy": "teacher/calc-game/code/12-MainActivity.kt"
+        },
+        {
+          "source": "A02CalcGame/app/src/main/res/layout/activity_main.xml",
+          "copy": "teacher/calc-game/code/02-activity_main.xml"
+        },
+        {
+          "source": "A02CalcGame/gradle/libs.versions.toml",
+          "copy": "teacher/calc-game/code/01-libs.versions.toml"
+        }
+      ],
+      "archive": "docs/calc-game/downloads/A02CalcGame.zip"
     }
   ]
 }

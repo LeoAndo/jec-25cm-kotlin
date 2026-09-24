@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A02 CalcGame — 計算ゲームを作ろう | Kotlin演習</title>
+<meta name="description" content="Android Studio Panda 2でA02CalcGameを作る、90分×2コマの教科書。停止・再開するタイマーと10問の採点を、Java・Swiftと比較して学びます。">
+<link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
+<body data-progress-key="jec-kotlin-calc-game-v1"><a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../hello-android/index.html">← A01：HelloAndroid</a></header>
+<div class="shell"><aside class="sidebar"><div class="sidebar-inner"><p class="course-label">A02 / Android Studio</p><h2>CalcGame</h2>
+<div class="progress"><p data-progress-label>0 / 15 ステップ確認済み</p><progress max="15" value="0" aria-label="進捗"></progress></div><nav aria-label="目次"><ol><li><a href="#step-0">STEP 00 Android Studioと完成時の画面を確認する</a></li><li><a href="#step-1">STEP 01 自分のプロジェクトを作る</a></li><li><a href="#step-2">STEP 02 エミュレータを選び、画面をXMLで作る</a></li><li><a href="#step-3">STEP 03 Viewを取得し、経過時間を保存する場所を用意する</a></li><li><a href="#step-4">STEP 04 STARTで時間を進める</a></li><li><a href="#step-5">STEP 05 STOPで止め、STARTで再開し、RESETで戻す</a></li><li><a href="#step-6">STEP 06 9コマ目の完成状態を確認する</a></li><li><a href="#step-7">STEP 07 10コマ目：前回のプロジェクトを開く</a></li><li><a href="#step-8">STEP 08 問題の状態と、1問を作るメソッドを追加する</a></li><li><a href="#step-9">STEP 09 START・STOP・RESETと問題の状態をつなぐ</a></li><li><a href="#step-10">STEP 10 9個の数字ボタンに同じ処理を付ける</a></li><li><a href="#step-11">STEP 11 採点し、10問で時間と結果を表示する</a></li><li><a href="#step-12">STEP 12 完成コードと照合する</a></li><li><a href="#step-13">STEP 13 アレンジできる場所を試す</a></li><li><a href="#step-14">STEP 14 10コマ目の完成状態を確認する</a></li></ol></nav><div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><a href="../hello-android/index.html">A01：HelloAndroid</a><span aria-current="page">A02：CalcGame</span><a href="../common/setup.html?from=calc-game">共通：はじめの準備</a><a href="../common/apk.html?from=calc-game">共通：提出課題とAPK</a><a href="../common/other-versions.html?from=calc-game">共通：ちがうAndroid Studioの版</a></div></div></aside>
+<main id="main"><div class="hero"><p class="eyebrow">KOTLIN PROGRAMMING EXERCISES / A02</p><h1>時間を計って<br>計算ゲームを作ろう</h1><p class="lede">START・STOP・RESETを使って時間を計り、10問の引き算に答えるアプリを作ります。</p><p>対象：<code>A02CalcGame</code> / パッケージ：<code>jp.ac.jec.a02calcgame</code><br>9〜10コマ目・各90分 / Android Studio Panda 2 / macOS</p></div>
+<div class="goal"><p class="box-title">この単元で作るもの</p><p>停止中の時間を除いて再開できるタイマー付きの計算ゲーム。前から順に、自分のプロジェクトへコードを書き足します。完成コードと見本は初めから参照できます。</p></div>
+<section id="step-0"><p class="step-meta">STEP 00 · 9コマ目 · 目安 5分</p><h2>Android Studioと完成時の画面を確認する</h2>
+<p>使うIDEは <strong>Android Studio Panda 2</strong>、作るプロジェクトは <code>A02CalcGame</code> です。9コマ目で計時と停止・再開、10コマ目で10問の出題と採点を作ります。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。</p>
+<ol><li>FinderのアプリケーションからAndroid Studioを開きます。</li><li>Welcome画面の版を見ます。違う版の場合は、作り始める前に先生に画面を見せます。</li><li>ブラウザではこの教科書を開いておきます。</li></ol>
+<p>完成すると、STARTで「10から1〜9のどれかを引く問題」が出ます。答えの数字を押すと、正誤にかかわらず次へ進み、10問で正解数と時間が出ます。STOPで休み、STARTで同じ問題から再開できます。</p><figure><img src="images/initial.png" alt="完成版を起動した直後。問題欄は空白で、STARTが押せる" width="270" height="606" loading="lazy"><figcaption>完成版を起動した直後。問題欄は空白で、STARTが押せる（指定AVDで撮影）</figcaption></figure>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Androidが画面を準備するときに <code>onCreate</code> を呼びます。Javaのオーバーライドと同じ役割です。今回は <code>main</code> 関数を作りません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-00"><span>Android StudioのWelcome画面と、A02の教科書が開いている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-1"><p class="step-meta">STEP 01 · 9コマ目 · 目安 15分</p><h2>自分のプロジェクトを作る</h2>
+<ol><li>Welcome画面の <strong>New Project</strong> を選びます。プロジェクトが開いている場合は <strong>File → New → New Project…</strong> です。</li><li><strong>Phone and Tablet → Empty Views Activity → Next</strong> の順に選びます。<code>Empty Activity</code> はCompose用なので、今回は選びません。</li><li>次の表のとおり入力して、<strong>Finish</strong> を押します。</li></ol>
+<table><thead><tr><th>項目</th><th>入力・選択</th></tr></thead><tbody>
+<tr><td>Name</td><td><code>A02CalcGame</code></td></tr>
+<tr><td>Package name</td><td><code>jp.ac.jec.a02calcgame</code></td></tr>
+<tr><td>Save location</td><td><code>/Users/ユーザ名/Documents/Kotlin/A02CalcGame</code></td></tr>
+<tr><td>Language</td><td><code>Kotlin</code></td></tr>
+<tr><td>Minimum SDK</td><td><code>API 31</code>（Android 12）</td></tr>
+<tr><td>Build configuration language</td><td><code>Kotlin DSL (build.gradle.kts)</code></td></tr>
+</tbody></table>
+<p><code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。</p>
+<h3>授業で使うライブラリの版をそろえる</h3>
+<p>同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。</p>
+<div class="code-head">libs.versions.toml · 全文</div><pre id="code-libs" tabindex="0"><code>[versions]
+agp = "9.1.1"
+coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.8.0"
+material = "1.14.0"
+activity = "1.13.0"
+constraintlayout = "2.2.2"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
+</code></pre>
+<p>表示される <strong>Sync Now</strong> を押します。出ない場合は <strong>File → Sync Project with Gradle Files</strong> で同期します。進行表示が消えるまで待ちます。赤いエラーが残るときは先へ進まず、内容を先生に見せます。</p>
+<p>この手順はPanda 2用です。別の版で生成したプロジェクトに、この設定だけを入れて版を下げないでください。ほかの設定の書き方も違う場合があります。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>class MainActivity : AppCompatActivity()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>public class MainActivity extends AppCompatActivity {
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinの継承は <code>:</code>、Javaは <code>extends</code> です。Android Studioの設定ファイルと、これから書く <code>MainActivity.kt</code> は別のファイルです。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-01"><span>自分の保存先にA02CalcGameがあり、Gradle同期の赤いエラーが消えている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-2"><p class="step-meta">STEP 02 · 9コマ目 · 目安 20分</p><h2>エミュレータを選び、画面をXMLで作る</h2>
+<ol><li><strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使い、同名の端末を増やしません。</li><li>端末がなければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong> を選びます。先生が指定したAPI 31以上のイメージを使い、名前を <code>jec_25cm_kotlin_Pixel 9a</code> にして作成・起動します。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code> です。候補が見つからなければ先生に画面を見せます。</li><li>上部で実行設定 <strong>app</strong> と指定AVDを選び、<strong>Run ▶</strong> を押します。まず <code>Hello World!</code> が出ることを確かめます。</li><li>左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替え、全文を次で置き換えます。</li></ol><div class="code-head">activity_main.xml · 全文</div><pre id="code-layout" tabindex="0"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="START"
+        android:textSize="16sp" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="STOP" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:enabled="false"
+        android:text="RESET" /&gt;
+
+    &lt;TextView
+        android:id="@+id/txt_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:text="1問目: 10 - 3 =" /&gt;
+
+    &lt;LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"&gt;
+
+        &lt;Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            tools:ignore="ButtonStyle" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:text="2"
+            tools:ignore="ButtonStyle" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            tools:ignore="ButtonStyle" /&gt;
+
+    &lt;/LinearLayout&gt;
+
+    &lt;LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"&gt;
+
+        &lt;Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            tools:ignore="ButtonStyle" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:text="5"
+            tools:ignore="ButtonStyle" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            tools:ignore="ButtonStyle" /&gt;
+
+    &lt;/LinearLayout&gt;
+
+    &lt;LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"&gt;
+
+        &lt;Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            tools:ignore="ButtonStyle" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:text="8"
+            tools:ignore="ButtonStyle" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            tools:ignore="ButtonStyle" /&gt;
+
+    &lt;/LinearLayout&gt;
+&lt;/LinearLayout&gt;</code></pre>
+
+<p>もう一度Runします。上から時間、START・STOP・RESET、空白の問題欄、1〜9の数字が並びます。この段階では、ボタンに処理は付いていません。XMLプレビューに出る問題文は <code>tools:text</code> の見本なので、実行画面では空白です。</p>
+<table><thead><tr><th>場所</th><th>指定と効果</th></tr></thead><tbody><tr><td>外側のLinearLayout</td><td><code>orientation="vertical"</code> で縦に並べる。idは生成コードが参照する <code>main</code> のまま。</td></tr><tr><td>数字の3行</td><td><code>orientation="horizontal"</code> で横に並べる。</td></tr><tr><td>STOP・RESET</td><td><code>android:enabled="false"</code> で開始前は押せなくする。</td></tr><tr><td>間隔と文字サイズ</td><td><code>dp</code> は余白などの寸法、<code>sp</code> は文字サイズ。</td></tr></tbody></table><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p>XMLの <code>@+id/btn_start</code> を、Kotlinから <code>R.id.btn_start</code> で参照します。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>Javaでも同じXMLと <code>R.id.btn_start</code> を使います。XML自体をJava用に書き直す必要はありません。</p></div></div>
+<div class="note"><p class="box-title">POINT</p><p><code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore="ButtonStyle"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-02"><span>指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-3"><p class="step-meta">STEP 03 · 9コマ目 · 目安 15分</p><h2>Viewを取得し、経過時間を保存する場所を用意する</h2>
+<p><code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。</p><div class="code-head">MainActivity.kt · STEP 03終了時の全文</div><pre id="code-stage-03" tabindex="0"><code>package jp.ac.jec.a02calcgame
+
+import android.os.Bundle
+import android.os.SystemClock
+import android.widget.Button
+import android.widget.Chronometer
+import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class MainActivity : AppCompatActivity() {
+    private var elapsedTimeMillis: Long = 0 // タイマーの経過時間(ms)
+    private lateinit var txtMessage: TextView // メッセージの表示欄。onCreate以外のメソッドからも使うためフィールドにする
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        this.enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -&gt;
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        // Viewのインスタンスを取得する
+        val chronometer: Chronometer = findViewById(R.id.chronometer)
+        txtMessage = findViewById(R.id.txt_message)
+        val btnStart: Button = findViewById(R.id.btn_start)
+        val btnStop: Button = findViewById(R.id.btn_stop)
+        val btnReset: Button = findViewById(R.id.btn_reset)
+
+    }
+}
+</code></pre>
+
+<p>Runして同じ画面が出ることを確かめます。<code>elapsedTimeMillis</code> は停止した瞬間までの経過時間をミリ秒で保存する場所です。<code>txtMessage</code> は、次のコマで <code>onCreate</code> の外に書く出題メソッドからも使います。ほかのViewは <code>onCreate</code> の中で使うのでローカル変数にします。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>private var elapsedTimeMillis: Long = 0
+private lateinit var txtMessage: TextView
+
+// onCreateのsetContentViewより後
+txtMessage = findViewById(R.id.txt_message)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>private long elapsedTimeMillis = 0;
+private TextView txtMessage;
+
+// onCreateのsetContentViewより後
+txtMessage = findViewById(R.id.txt_message);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p><code>lateinit var</code> は「あとで代入する非Nullのプロパティ」です。Javaの後から代入するフィールドに対応しますが、Kotlinでは未代入のまま読むと例外になります。XMLを読み込む <code>setContentView</code> → View取得 → 使用の順を守ります。生成されたインセット処理は画面端との重なりを避けるので残します。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-03"><span>5つのView取得に赤い波線がなく、RunするとSTEP 02と同じ画面が出ている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-4"><p class="step-meta">STEP 04 · 9コマ目 · 目安 15分</p><h2>STARTで時間を進める</h2>
+<p><code>import</code> の一覧に <code>import android.os.SystemClock</code> があることを確かめます。<code>onCreate</code> の <code>val btnReset</code> の行の後、<code>onCreate</code> を閉じる <code>}</code> の前に、次を追加します。</p><div class="code-head">MainActivity.kt · onCreateの末尾へ追加</div><pre tabindex="0"><code>        // Startボタンを押下した時の処理
+        btnStart.setOnClickListener { _ -&gt;
+            chronometer.setBase(SystemClock.elapsedRealtime() - elapsedTimeMillis)
+            chronometer.start()
+            btnStop.setEnabled(true)
+            btnStart.setEnabled(false)
+            btnReset.setEnabled(false)
+        }
+
+</code></pre>
+
+<p>RunしてSTARTを押します。<code>00:00</code> から秒が進み、START・RESETが押せなくなり、STOPが押せる色になります。STOPの処理は次のSTEPで書くため、今は止まりません。Android StudioのStop ■でアプリを終了してから次へ進みます。</p>
+<p><code>SystemClock.elapsedRealtime()</code> は端末起動後の経過ミリ秒です。時計の「何時何分」ではありません。Chronometerは「今の経過ミリ秒 − 基準時刻」を表示するので、初回は今を基準にして0から始めます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>btnStart.setOnClickListener { _ -&gt;
+    chronometer.start()
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>btnStart.setOnClickListener(v -&gt; {
+    chronometer.start();
+});</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinの <code>{ _ → … }</code> はJavaのクリック用ラムダに相当します。<code>_</code> は受け取ったViewを使わない印です。<code>start()</code> だけでは基準時刻を設定しないため、その直前に <code>setBase</code> を呼びます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-04"><span>STARTを押すと秒が進み、STARTとRESETが押せない色に変わっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-5"><p class="step-meta">STEP 05 · 9コマ目 · 目安 17分</p><h2>STOPで止め、STARTで再開し、RESETで戻す</h2>
+<p>STARTのリスナを閉じる <code>}</code> の後、<code>onCreate</code> の内側に、STOPとRESETの処理を続けて追加します。STARTのラムダの内側には入れません。</p><div class="code-head">MainActivity.kt · STARTのリスナの後へ追加</div><pre tabindex="0"><code>        // Stopボタンを押下した時の処理
+        btnStop.setOnClickListener { _ -&gt;
+            chronometer.stop()
+            elapsedTimeMillis = SystemClock.elapsedRealtime() - chronometer.getBase()
+            btnStop.setEnabled(false)
+            btnStart.setEnabled(true)
+            btnReset.setEnabled(true)
+        }
+
+        // Resetボタンを押下した時の処理
+        btnReset.setOnClickListener { _ -&gt;
+            chronometer.stop()
+            chronometer.setBase(SystemClock.elapsedRealtime())
+            btnStop.setEnabled(false)
+            btnStart.setEnabled(true)
+            btnReset.setEnabled(false)
+            txtMessage.text = ""
+            elapsedTimeMillis = 0
+        }
+
+</code></pre>
+
+<ol><li>Run→STARTで5秒ほど動かし、STOPを押します。</li><li>5秒待ちます。表示が進まないことを見ます。</li><li>STARTを押します。停止前の秒数の続きから進みます。</li><li>STOP→RESETを押します。時間が <code>00:00</code> に戻ります。</li></ol>
+<table><thead><tr><th>操作</th><th>計算</th><th>例（ミリ秒）</th></tr></thead><tbody><tr><td>STOP</td><td>保存する経過時間 = 今 − 基準時刻</td><td>105000 − 100000 = 5000</td></tr><tr><td>5秒待ってSTART</td><td>新しい基準時刻 = 今 − 保存した経過時間</td><td>110000 − 5000 = 105000</td></tr><tr><td>再開直後の表示</td><td>今 − 新しい基準時刻</td><td>110000 − 105000 = 5000（5秒）</td></tr></tbody></table><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>elapsedTimeMillis =
+    SystemClock.elapsedRealtime() - chronometer.getBase()
+btnStart.setEnabled(true)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>elapsedTimeMillis =
+    SystemClock.elapsedRealtime() - chronometer.getBase();
+btnStart.setEnabled(true);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p><code>stop()</code> は表示の更新を止めますが、基準時刻を書き換えません。STOPで経過時間を保存し、STARTで基準時刻をずらすことで、休んだ時間を除きます。Javaと同じAPIなので <code>getBase()</code>・<code>setEnabled()</code> の書き方をそのまま使えます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-05"><span>STOP中は秒が進まず、STARTで続きから進み、STOP→RESETで00:00に戻っている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-6"><p class="step-meta">STEP 06 · 9コマ目 · 目安 3分</p><h2>9コマ目の完成状態を確認する</h2>
+<p>最後の3分です。START→STOP→START→STOP→RESETを順に押します。自分のプロジェクトの保存先が <code>Documents/Kotlin/A02CalcGame</code> になっていることも見ます。</p><p>ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。次回は同じプロジェクトを開きます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p><code>elapsedTimeMillis</code> をクラスのプロパティに置いたので、STOPとSTARTの両方から同じ値を使えます。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>Javaでもクラスのフィールドなら、複数のクリック用ラムダから同じ値を読み書きできます。</p></div></div>
+<div class="note"><p class="box-title">POINT</p><p>入力中の場所で迷ったら、<code>onCreate</code> の中にView取得と3つのリスナが並んでいるかを見ます。リスナを互いの内側に入れないことが大切です。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-06"><span>停止・再開・リセットが動き、問題欄は空白、MainActivity.ktに3つのリスナが並んでいる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-7"><p class="step-meta">STEP 07 · 10コマ目 · 目安 5分</p><h2>10コマ目：前回のプロジェクトを開く</h2>
+<ol><li>Android StudioのWelcome画面の <strong>Open</strong>（開いている場合は <strong>File → Open…</strong>）で、自分の <code>Documents/Kotlin/A02CalcGame</code> を選びます。</li><li>実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。</li><li>START→STOP→START→STOP→RESETを押し、前回のタイマーを確かめます。</li><li><code>MainActivity.kt</code> を開きます。<code>elapsedTimeMillis</code> と <code>txtMessage</code> がクラスの内側、<code>onCreate</code> の外側にあることを見ます。</li></ol><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>private var elapsedTimeMillis: Long = 0</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>private long elapsedTimeMillis = 0;</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>今日も同じプロジェクトに書き足します。Runし直した直後はプロパティが初期値で作られるので、前回の秒数を残す作りではありません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-07"><span>自分のA02CalcGameが開き、停止・再開・リセットが前回と同じように動いている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-8"><p class="step-meta">STEP 08 · 10コマ目 · 目安 15分</p><h2>問題の状態と、1問を作るメソッドを追加する</h2>
+<p><code>class MainActivity</code> の内側、<code>onCreate</code> より前に、次の4行を追加します。前回の <code>elapsedTimeMillis</code> と <code>txtMessage</code> は残します。</p><div class="code-head">MainActivity.kt · クラスのプロパティへ追加</div><pre tabindex="0"><code>    private var nowNo = 1 // 今の問題が何問目かのカウント数
+    private var correctNo = 0 // 正解数
+    private var answer = 0 // 計算結果の答え
+    private var isPlaying = false // ゲーム中かどうかのフラグ (Chronometer#mStartedフラグを取得できないため用意)
+</code></pre>
+
+<p>ファイル上部の <code>import</code> 一覧へ <code>import java.util.concurrent.ThreadLocalRandom</code> を追加します。次のメソッドは、<strong>onCreateを閉じる <code>}</code> の後、MainActivityを閉じる最後の <code>}</code> の前</strong>に追加します。</p><div class="code-head">MainActivity.kt · onCreateの外、クラスの内側へ追加</div><pre tabindex="0"><code>    /**
+     * 問題を開始する
+     */
+    private fun startQuestion() {
+        val randomNumber = ThreadLocalRandom.current().nextInt(1, 10)
+        // var randomNumber = RandomGenerator.getDefault().nextInt(1, 10); // API Level 35から利用可能. OSバージョンの分岐は使わない
+        answer = 10 - randomNumber
+        val message = nowNo.toString() + "問目: 10 - " + randomNumber + " ="
+        txtMessage.text = message
+    }</code></pre>
+
+<p><code>nextInt(1, 10)</code> は1を含み、10を含まないので1〜9です。<code>10 - randomNumber</code> の答えも1〜9になります。<code>nowNo</code> は問題番号、<code>correctNo</code> は正解数、<code>answer</code> は現在の答え、<code>isPlaying</code> は数字への回答を受け付ける状態です。</p>
+<p>Runしてタイマーが動くことを確かめます。ここでは <code>startQuestion()</code> をまだ呼んでいないため、問題欄は空白です。メソッド名に赤い波線がなければ次へ進みます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>private fun startQuestion() {
+    val randomNumber = ThreadLocalRandom.current().nextInt(1, 10)
+    answer = 10 - randomNumber
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>private void startQuestion() {
+    int randomNumber = ThreadLocalRandom.current().nextInt(1, 10);
+    answer = 10 - randomNumber;
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>戻り値のないKotlinの <code>fun</code> は、Javaの <code>void</code> メソッドに対応します。Javaの乱数APIはKotlinからもそのまま呼べます。コメントにある別APIの行は実行されません。この授業ではAPI 31から使う実装のまま進めます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-08"><span>startQuestionと4つのプロパティに赤い波線がなく、タイマーは動き、問題欄はまだ空白である。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-9"><p class="step-meta">STEP 09 · 10コマ目 · 目安 10分</p><h2>START・STOP・RESETと問題の状態をつなぐ</h2>
+<p><code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナを、まとめて次に置き換えます</strong>。View取得の行は残します。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。</p><div class="code-head">MainActivity.kt · 3つのリスナを置き換える</div><pre tabindex="0"><code>        // Startボタンを押下した時の処理
+        btnStart.setOnClickListener { _ -&gt;
+            chronometer.setBase(SystemClock.elapsedRealtime() - elapsedTimeMillis)
+            chronometer.start()
+            btnStop.setEnabled(true)
+            btnStart.setEnabled(false)
+            btnReset.setEnabled(false)
+            // 初回開始時だけ問題を作る。STOP後のSTARTでは現在の問題をそのまま再開する
+            if (answer == 0) {
+                startQuestion()
+            }
+            isPlaying = true
+        }
+
+        // Stopボタンを押下した時の処理
+        btnStop.setOnClickListener { _ -&gt;
+            chronometer.stop()
+            elapsedTimeMillis = SystemClock.elapsedRealtime() - chronometer.getBase()
+            btnStop.setEnabled(false)
+            btnStart.setEnabled(true)
+            btnReset.setEnabled(true)
+            isPlaying = false
+        }
+
+        // Resetボタンを押下した時の処理
+        btnReset.setOnClickListener { _ -&gt;
+            chronometer.stop()
+            chronometer.setBase(SystemClock.elapsedRealtime())
+            btnStop.setEnabled(false)
+            btnStart.setEnabled(true)
+            btnReset.setEnabled(false)
+            txtMessage.text = ""
+            elapsedTimeMillis = 0
+            nowNo = 1
+            correctNo = 0
+            answer = 0
+            isPlaying = false
+        }
+
+</code></pre>
+
+<ol><li>Run→STARTで「1問目: 10 - 数字 =」が出ます。数字は毎回変わるので、画像と同じになる必要はありません。</li><li>STOPを押します。時間と問題がそのまま残ります。</li><li>STARTを押します。問題を作り直さず、同じ1問のまま時間だけが続きます。</li><li>STOP→RESETで問題が消え、もう一度STARTすると1問目が出ます。</li></ol><figure><img src="images/paused.png" alt="完成版をSTOPで止めた例。時間と現在の問題が残る" width="270" height="606" loading="lazy"><figcaption>完成版をSTOPで止めた例。時間と現在の問題が残る（指定AVDで撮影）</figcaption></figure>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>if (answer == 0) {
+    startQuestion()
+}
+isPlaying = true</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>if (answer == 0) {
+    startQuestion();
+}
+isPlaying = true;</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p><code>answer == 0</code> は「まだ問題がない」という目印です。実際の答えが1〜9だから区別できます。毎回STARTで問題を作ると、STOP前の問題が別の問題へ変わってしまいます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-09"><span>STARTで1問目が出て、STOP→STARTでも同じ問題が残り、RESETで問題欄が空白になる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-10"><p class="step-meta">STEP 10 · 10コマ目 · 目安 15分</p><h2>9個の数字ボタンに同じ処理を付ける</h2>
+<p><code>import</code> 一覧に <code>import com.google.android.material.snackbar.Snackbar</code> を追加します。RESETのリスナの後、<code>onCreate</code> の内側へ次を追加します。まずは押した数字をSnackbarに出して、ボタンと処理の対応だけを確かめます。</p><div class="code-head">MainActivity.kt · RESETのリスナの後へ追加</div><pre tabindex="0"><code>        // 数字ボタンを押下した時の処理
+        val numberButtonIds = intArrayOf(
+            R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4,
+            R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9
+        )
+        for (id in numberButtonIds) {
+            val btn: Button = findViewById(id)
+            btn.setOnClickListener { v -&gt;
+                if (!isPlaying) {
+                    Snackbar.make(v, "ゲーム中のみボタンを押せます", Snackbar.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                val number = btn.getText().toString().toInt()
+                Snackbar.make(v, number.toString(), Snackbar.LENGTH_SHORT).show()
+            }
+        }
+</code></pre>
+
+<ol><li>Run直後に数字を押します。「ゲーム中のみボタンを押せます」が出ます。</li><li>STARTを押し、1・5・9を順に押します。それぞれの数字がSnackbarに出ます。まだ採点しないため問題番号は1のままです。</li><li>STOPを押してから数字を押します。案内だけが出て、問題は変わりません。</li></ol><figure><img src="images/guard.png" alt="停止中に数字を押すと出る案内" width="270" height="606" loading="lazy"><figcaption>停止中に数字を押すと出る案内（指定AVDで撮影）</figcaption></figure>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val ids = intArrayOf(R.id.btn1, R.id.btn2)
+for (id in ids) {
+    val btn: Button = findViewById(id)
+    btn.setOnClickListener { v -&gt;
+        if (!isPlaying) {
+            return@setOnClickListener
+        }
+    }
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>int[] ids = {R.id.btn1, R.id.btn2};
+for (int id : ids) {
+    Button btn = findViewById(id);
+    btn.setOnClickListener(v -&gt; {
+        if (!isPlaying) {
+            return;
+        }
+    });
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p><code>intArrayOf</code> はJavaの <code>int[]</code>、<code>for (id in …)</code> は拡張for文に対応します。<code>return@setOnClickListener</code> はこのクリック用ラムダだけを終えます。<code>onCreate</code> を終える処理ではありません。ボタンの文字を <code>toString().toInt()</code> で数へ変えるので、数字の表示は1〜9のまま使います。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>開始前・停止中は案内が出て、実行中は押した1・5・9がSnackbarに出る。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-11"><p class="step-meta">STEP 11 · 10コマ目 · 目安 20分</p><h2>採点し、10問で時間と結果を表示する</h2>
+<p><code>import</code> 一覧へ <code>import java.util.concurrent.TimeUnit</code> を追加します。前のSTEPで足した <code>val numberButtonIds</code> から <code>for</code> を閉じる <code>}</code> までを、次に置き換えます。押した数字だけを出す仮のSnackbarはなくなります。</p><div class="code-head">MainActivity.kt · 数字ボタンの処理全体を置き換える</div><pre tabindex="0"><code>        // 数字ボタンを押下した時の処理
+        val numberButtonIds = intArrayOf(
+            R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4,
+            R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9
+        )
+        for (id in numberButtonIds) {
+            val btn: Button = findViewById(id)
+            btn.setOnClickListener { v -&gt;
+                if (!isPlaying) {
+                    Snackbar.make(v, "ゲーム中のみボタンを押せます", Snackbar.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                val number = btn.getText().toString().toInt()
+                if (number == answer) {
+                    correctNo++
+                }
+                if (nowNo &lt;= 9) {
+                    nowNo++
+                    startQuestion()
+                } else {
+                    chronometer.stop()
+                    elapsedTimeMillis = SystemClock.elapsedRealtime() - chronometer.getBase()
+                    val timeSec = TimeUnit.MILLISECONDS.toSeconds(elapsedTimeMillis)
+                    val message =
+                        correctNo.toString() + "問正解しました！時間は" + timeSec + "秒です"
+                    txtMessage.text = message
+                    btnReset.setEnabled(true)
+                    btnStart.setEnabled(false)
+                    btnStop.setEnabled(false)
+                    isPlaying = false
+                }
+            }
+        }</code></pre>
+
+<p>Run→STARTで10問答えます。1問だけ、計算結果と違う数字を押し、残り9問は正しい数字を押してください。最後は「9問正解しました！時間は○秒です」となり、時間が止まります。10問目の正誤も数えた後で終了する順です。</p><figure><img src="images/result.png" alt="1問を誤答し、9問を正答して終了した例" width="270" height="606" loading="lazy"><figcaption>1問を誤答し、9問を正答して終了した例（指定AVDで撮影）</figcaption></figure>
+
+<p><code>nowNo &lt;= 9</code> の間は、回答後に番号を増やして次の問題を作ります。10問目では <code>else</code> へ進みます。間違えても次の問題へ進み、正解数だけが増えません。結果の秒数は経過ミリ秒を秒へ変換した整数で、小数部分は切り捨てます。</p>
+<p>終了後に数字を押すと案内が出て、結果は変わりません。RESET→STARTで1問目からやり直せます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>if (number == answer) {
+    correctNo++
+}
+val timeSec = TimeUnit.MILLISECONDS.toSeconds(elapsedTimeMillis)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>if (number == answer) {
+    correctNo++;
+}
+long timeSec = TimeUnit.MILLISECONDS.toSeconds(elapsedTimeMillis);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>KotlinでもJavaと同じ順番で、正解数を更新してから終了を判定します。<code>TimeUnit</code> もJavaのAPIです。画面の時間と結果の秒数は同じ経過時間が元ですが、時間表示は更新間隔があるため、停止の瞬間に1秒程度ずれることがあります。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>1問誤答・9問正答で9問正解と表示され、終了後はRESETだけが操作ボタンの中で押せる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-12"><p class="step-meta">STEP 12 · 10コマ目 · 目安 10分</p><h2>完成コードと照合する</h2>
+<p><code>MainActivity.kt</code> の全文です。自分のファイルと照合します。<code>package</code>・<code>import</code> の一覧、クラスのプロパティ、<code>onCreate</code> 内の4組の処理、外側の <code>startQuestion</code> の順です。</p><div class="code-head">MainActivity.kt · 完成全文</div><pre id="code-main" tabindex="0"><code>package jp.ac.jec.a02calcgame
+
+import android.os.Bundle
+import android.os.SystemClock
+import android.widget.Button
+import android.widget.Chronometer
+import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
+import java.util.concurrent.ThreadLocalRandom
+import java.util.concurrent.TimeUnit
+
+class MainActivity : AppCompatActivity() {
+    private var nowNo = 1 // 今の問題が何問目かのカウント数
+    private var correctNo = 0 // 正解数
+    private var answer = 0 // 計算結果の答え
+    private var elapsedTimeMillis: Long = 0 // タイマーの経過時間(ms)
+    private var isPlaying = false // ゲーム中かどうかのフラグ (Chronometer#mStartedフラグを取得できないため用意)
+    private lateinit var txtMessage: TextView // メッセージの表示欄。onCreate以外のメソッドからも使うためフィールドにする
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        this.enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -&gt;
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        // Viewのインスタンスを取得する
+        val chronometer: Chronometer = findViewById(R.id.chronometer)
+        txtMessage = findViewById(R.id.txt_message)
+        val btnStart: Button = findViewById(R.id.btn_start)
+        val btnStop: Button = findViewById(R.id.btn_stop)
+        val btnReset: Button = findViewById(R.id.btn_reset)
+
+        // Startボタンを押下した時の処理
+        btnStart.setOnClickListener { _ -&gt;
+            chronometer.setBase(SystemClock.elapsedRealtime() - elapsedTimeMillis)
+            chronometer.start()
+            btnStop.setEnabled(true)
+            btnStart.setEnabled(false)
+            btnReset.setEnabled(false)
+            // 初回開始時だけ問題を作る。STOP後のSTARTでは現在の問題をそのまま再開する
+            if (answer == 0) {
+                startQuestion()
+            }
+            isPlaying = true
+        }
+
+        // Stopボタンを押下した時の処理
+        btnStop.setOnClickListener { _ -&gt;
+            chronometer.stop()
+            elapsedTimeMillis = SystemClock.elapsedRealtime() - chronometer.getBase()
+            btnStop.setEnabled(false)
+            btnStart.setEnabled(true)
+            btnReset.setEnabled(true)
+            isPlaying = false
+        }
+
+        // Resetボタンを押下した時の処理
+        btnReset.setOnClickListener { _ -&gt;
+            chronometer.stop()
+            chronometer.setBase(SystemClock.elapsedRealtime())
+            btnStop.setEnabled(false)
+            btnStart.setEnabled(true)
+            btnReset.setEnabled(false)
+            txtMessage.text = ""
+            elapsedTimeMillis = 0
+            nowNo = 1
+            correctNo = 0
+            answer = 0
+            isPlaying = false
+        }
+
+        // 数字ボタンを押下した時の処理
+        val numberButtonIds = intArrayOf(
+            R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4,
+            R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9
+        )
+        for (id in numberButtonIds) {
+            val btn: Button = findViewById(id)
+            btn.setOnClickListener { v -&gt;
+                if (!isPlaying) {
+                    Snackbar.make(v, "ゲーム中のみボタンを押せます", Snackbar.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                val number = btn.getText().toString().toInt()
+                if (number == answer) {
+                    correctNo++
+                }
+                if (nowNo &lt;= 9) {
+                    nowNo++
+                    startQuestion()
+                } else {
+                    chronometer.stop()
+                    elapsedTimeMillis = SystemClock.elapsedRealtime() - chronometer.getBase()
+                    val timeSec = TimeUnit.MILLISECONDS.toSeconds(elapsedTimeMillis)
+                    val message =
+                        correctNo.toString() + "問正解しました！時間は" + timeSec + "秒です"
+                    txtMessage.text = message
+                    btnReset.setEnabled(true)
+                    btnStart.setEnabled(false)
+                    btnStop.setEnabled(false)
+                    isPlaying = false
+                }
+            }
+        }
+    }
+
+    /**
+     * 問題を開始する
+     */
+    private fun startQuestion() {
+        val randomNumber = ThreadLocalRandom.current().nextInt(1, 10)
+        // var randomNumber = RandomGenerator.getDefault().nextInt(1, 10); // API Level 35から利用可能. OSバージョンの分岐は使わない
+        answer = 10 - randomNumber
+        val message = nowNo.toString() + "問目: 10 - " + randomNumber + " ="
+        txtMessage.text = message
+    }
+}</code></pre>
+
+<table><thead><tr><th>状態</th><th>START</th><th>STOP</th><th>RESET</th><th>数字を押すと</th></tr></thead><tbody><tr><td>起動直後・RESET後</td><td>押せる</td><td>押せない</td><td>押せない</td><td>案内</td></tr><tr><td>ゲーム中</td><td>押せない</td><td>押せる</td><td>押せない</td><td>採点して次の問題か結果</td></tr><tr><td>STOP後</td><td>押せる</td><td>押せない</td><td>押せる</td><td>案内</td></tr><tr><td>10問終了後</td><td>押せない</td><td>押せない</td><td>押せる</td><td>案内</td></tr></tbody></table>
+<p>Runして表の4状態を順に確かめます。初回の実行では時間と問題番号が進み、STOP中はどちらも止まります。RESETしたら問題欄と正解数を引き継がず、次のゲームを始めます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>txtMessage.text = message
+val number = btn.getText().toString().toInt()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>txtMessage.setText(message);
+int number = Integer.parseInt(btn.getText().toString());</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Javaの <code>setText</code> はKotlinから <code>text =</code> と書けます。完成コードでは <code>getText()</code> や <code>setEnabled()</code> も使っています。同じJavaのViewに対する呼び出しなので、両方の記法の対応を確認します。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-12"><span>完成全文と照合でき、起動・ゲーム中・STOP後・終了後で表どおりの動作になる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-13"><p class="step-meta">STEP 13 · 10コマ目 · 目安 12分</p><h2>アレンジできる場所を試す</h2>
+<p>まず、今の完成状態で一度Runします。その後、次の表から1か所選び、変更→Run→確認の順で試します。例と同じにする必要はありません。1か所ずつ変えると、画面との対応を追えます。</p>
+<table><thead><tr><th>変更する場所</th><th>例</th><th>画面・動作への影響</th></tr></thead><tbody><tr><td>XMLのbtn_startの <code>android:text</code></td><td><code>START</code> → <code>はじめる</code></td><td>開始ボタンの文字が変わる。idは変更しない。</td></tr><tr><td>XMLの数字の行の <code>android:layout_marginTop</code></td><td><code>12dp</code> → <code>24dp</code></td><td>その行の上の間隔が広がる。</td></tr><tr><td>Kotlinの <code>if (nowNo &lt;= 9)</code></td><td><code>9</code> → <code>4</code></td><td>5問で終了する。初期値の1はそのまま。</td></tr><tr><td>結果文の文字列</td><td><code>問正解しました！時間は</code> の言い方を変える</td><td>正解数と時間の間の文章が変わる。</td></tr></tbody></table>
+<p>5問版なら、1問誤答・4問正答で「4問正解」と表示されるかを見ます。試し終えたら元の値に戻してRunし、完成版の10問で終了する状態を残します。提出用に自分の案を進めるときは、この表を変更箇所の手がかりにできます。</p>
+<p>数字ボタンは表示を整数に変換して採点するので、1〜9のまま使います。また、<code>10 - randomNumber</code> と乱数の範囲は一組です。片方だけ変えると、ボタンで答えられない数や、未開始の目印と同じ0が生まれるため、ここでは変えません。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>if (nowNo &lt;= 4) {
+    nowNo++
+    startQuestion()
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>if (nowNo &lt;= 4) {
+    nowNo++;
+    startQuestion();
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>5問で終える条件が4なのは、1〜4問目への回答後に「次の問題」を作る判定だからです。KotlinとJavaで境界の考え方は同じです。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>選んだ変更の効果が画面に現れ、試した後は元の表示と10問で終了する状態に戻っている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-14"><p class="step-meta">STEP 14 · 10コマ目 · 目安 3分</p><h2>10コマ目の完成状態を確認する</h2>
+<p>最後の3分です。自分のアプリで、開始前に数字を押す→START→STOP→START→10問回答→RESETを順に試します。時間や問題の数字は画像と違ってかまいません。</p><ul><li>STOPの前後で問題が同じで、休んだ時間は加わらない。</li><li>10問後に正解数と秒数が出る。</li><li>RESET後は <code>00:00</code> と空白の問題欄になり、もう一度1問目から始められる。</li></ul><p>自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p><code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>Javaでは <code>correctNo++;</code> と <code>txtMessage.setText(message);</code> に対応します。計算した結果をViewへ渡す流れは同じです。</p></div></div>
+<div class="note"><p class="box-title">POINT</p><p>完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-14"><span>停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えている状態</th><th>確認する場所</th></tr></thead><tbody>
+<tr><td>Gradle同期が失敗する</td><td>Panda 2かを見て、STEP 01の設定全文と照合します。ほかの版なら先生に画面を見せます。</td></tr>
+<tr><td>XMLがない</td><td>作成時にEmpty Views Activityを選んだか確認します。Empty ActivityはCompose用です。</td></tr>
+<tr><td>R.idが赤い</td><td>XMLのidとKotlinの名前が同じか見ます。XMLの赤いエラーを先に直します。</td></tr>
+<tr><td>アプリがすぐ閉じる</td><td>View取得がsetContentViewより後か、txtMessageへ代入してから使っているかを確認します。</td></tr>
+<tr><td>STARTで大きな時間が出る</td><td>start()より前のsetBaseの行とelapsedTimeMillisの初期値を確認します。</td></tr>
+<tr><td>停止中の時間が加わる</td><td>STOPの経過時間保存と、STARTの「今 − 保存した時間」の両方をSTEP 05・09で照合します。</td></tr>
+<tr><td>STOP→STARTで問題が変わる</td><td>startQuestion()がif (answer == 0)の内側にあるか確認します。</td></tr>
+<tr><td>数字を押すとまだ数字のSnackbarが出る</td><td>STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。</td></tr>
+<tr><td>かっこが合わない</td><td>STEP 12の全文で、onCreateの終わりとstartQuestionの位置を照合します。</td></tr>
+</tbody></table></section>
+<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>配布ZIPを展開したフォルダの <code>samples/A02CalcGame</code> を、Android Studioの <strong>Open</strong> から開きます。<strong>This Window</strong> で自分のプロジェクトと取り違えないよう、開くフォルダ名と保存先を確認します。見本を閉じたら自分の <code>Documents/Kotlin/A02CalcGame</code> を開き直します。</p><p>教科書だけを受け取った場合は、<a href="downloads/A02CalcGame.zip" download>A02CalcGame.zip</a> を保存して展開し、その中の <code>A02CalcGame</code> をOpenします。ZIPそのものや内側の <code>app</code> フォルダは選びません。</p><p>Gradle同期を待ち、実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。見本は動作確認と比較用で、そのまま提出するものではありません。</p></section>
+<section id="references"><h2>公式資料</h2><ul><li><a href="https://developer.android.com/reference/android/widget/Chronometer">Chronometer：基準時刻とstart・stop</a></li><li><a href="https://developer.android.com/reference/android/os/SystemClock">SystemClock：elapsedRealtime</a></li><li><a href="https://kotlinlang.org/docs/properties.html#late-initialized-properties-and-variables">Kotlin：lateinitプロパティ</a></li><li><a href="https://kotlinlang.org/docs/returns.html">Kotlin：ラベル付きreturn</a></li><li><a href="https://developer.android.com/reference/java/util/concurrent/ThreadLocalRandom">ThreadLocalRandom：乱数の範囲</a></li></ul></section>
+<footer class="footer"><p>確認日：2026年9月24日 / Android Studio Panda 2 / A02CalcGame</p></footer></main></div><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>

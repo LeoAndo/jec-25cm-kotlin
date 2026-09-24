@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>教員用ガイド A02CalcGame | Kotlin演習</title><link rel="stylesheet" href="../../docs/assets/textbook.css"><script src="../../docs/assets/textbook.js" defer></script></head>
+<body class="plain"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../../docs/calc-game/index.html">A02CalcGameの教科書へ戻る</a></header><main id="main"><div class="hero"><p class="eyebrow">KOTLIN演習 / 教員用ガイド</p><h1>A02CalcGame<br>授業の進め方</h1><p class="lede">9〜10コマ目、各90分。Java・Swift学習済みの学生が、停止・再開するタイマーと10問の採点をKotlinで組み合わせます。</p><p>パッケージ：<code>jp.ac.jec.a02calcgame</code> / Android Studio Panda 2 / 指定AVD：<code>jec_25cm_kotlin_Pixel 9a</code></p></div>
+<section><h2>1. 授業前の準備</h2><ul>
+<li>Panda 2のEmpty Views Activity、Kotlin、Kotlin DSL、Minimum SDK API 31を確認する。Save locationは学生自身のDocuments/Kotlin/A02CalcGameまで含める。</li>
+<li>初回のGradle同期と指定AVDの起動を教室で確認する。指定AVDが既にある学生はそれを使う。新規作成が必要な学生にはAPI 31以上でCPUに合うシステムイメージを指定しておく。教材画像の実測環境はAPI 37.1・arm64-v8a・ライトテーマ。</li>
+<li>Panda 2でも作成日によって依存の版が変わるため、STEP 01のlibs.versions.toml全文を使う。これは完成プロジェクトと一致する。教員の既定IDEはQuail 4なので、Panda 2の操作確認と混同しない。</li>
+<li>完成版で、START前の数字操作、START、STOP中の数字操作、STARTによる同一問題の再開、10問の結果、RESETを確認する。1問誤答・9問正答なら9問正解になる。</li>
+<li>9コマ目終了時は計時だけが動く。問題欄は空白、数字の処理はない。完成版の画面と比較して未完成の不具合だと扱わない。</li>
+<li>配布物のdocsとsamplesを同じ構成で用意する。見本のA02CalcGameと学生自身のA02CalcGameを保存先で区別する。</li>
+</ul></section>
+<section><h2>2. この単元の教材方針</h2><p>中心は<strong>Chronometerの基準時刻を使い、停止していた時間を除いて再開すること</strong>。9コマ目にタイマーを操作して効果を見て、10コマ目に既習の状態変数・条件分岐・繰り返し・メソッドを使ってゲームへ組み込む。Android側の新しい仕組みは計時に絞る。</p>
+<table><thead><tr><th>判断</th><th>理由</th></tr></thead><tbody>
+<tr><td>Java／Swiftとの対応でKotlinを説明</td><td>変数や繰り返し自体の入門説明はしない。lateinitはJavaの後から代入するフィールド、intArrayOfはint[]、ラベル付きreturnはJavaのラムダ内returnと比べる。</td></tr>
+<tr><td>View取得とリスナは既習の形を再掲</td><td>A01を読み返さず、この教科書だけを前から読んで進めるため。生成時のインセット処理も残し、役割を本文で示す。</td></tr>
+<tr><td>途中コードを段階ごとに用意</td><td>先に完成ファイルを貼ってから読む形にしない。STEP 10の数字のSnackbarは配線確認用で、STEP 11で採点処理に置き換える。</td></tr>
+<tr><td>オーナーの完成コードを保つ</td><td>getBase()・setBase()・setEnabled()、文字列連結、isPlaying、answer == 0を説明する。ViewBinding、状態クラスへの分割、Unit Testのための変更は加えない。</td></tr>
+<tr><td>乱数はThreadLocalRandomの1〜9</td><td>最低API 31で使え、数字ボタンで全解答を入力できる。完成コード中の別APIのコメントは実行されないことだけ説明し、API分岐は追加しない。</td></tr>
+<tr><td>ライフサイクル全体・状態保存を扱わない</td><td>今回は画面を開いたままの計時・回答に集中する。回転・横画面・バックグラウンド復帰へ範囲を広げない。</td></tr>
+<tr><td>アレンジは文字・余白・問題数</td><td>既に出てきた範囲だけで、変更箇所と効果が見える。乱数範囲・引く元の数・数字ラベルを個別に変えると入力範囲や未開始の目印が壊れるため、例にしない。</td></tr>
+</tbody></table><p>Panda 3はオーナー決定により実測しない。Quail 4でのA02の操作・互換性を、このガイドでは確認済みとしない。異なる版は作成前に相談を受け、Panda 2用カタログだけを別の生成構成へ入れない。共通の版資料のA01実測結果をA02へ拡張して案内しない。</p>
+<p>完成コードへのUnit Test、ダークテーマ、タブレット、画面回転、リリースAPKの署名は対象外。Kotlinのコンパイルと、エディタやLintの提案を区別する。警告を消すためのSuppressは追加しない。</p></section>
+<section><h2>3. 90分の進め方</h2><h3>9コマ目（90分）</h3><table><thead><tr><th>時間</th><th>STEP</th><th>確認すること</th></tr></thead><tbody><tr><td>0〜5分</td><td>00 Android Studioと完成時の画面を確認する</td><td>Android StudioのWelcome画面と、A02の教科書が開いている。</td></tr><tr><td>5〜20分</td><td>01 自分のプロジェクトを作る</td><td>自分の保存先にA02CalcGameがあり、Gradle同期の赤いエラーが消えている。</td></tr><tr><td>20〜40分</td><td>02 エミュレータを選び、画面をXMLで作る</td><td>指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。</td></tr><tr><td>40〜55分</td><td>03 Viewを取得し、経過時間を保存する場所を用意する</td><td>5つのView取得に赤い波線がなく、RunするとSTEP 02と同じ画面が出ている。</td></tr><tr><td>55〜70分</td><td>04 STARTで時間を進める</td><td>STARTを押すと秒が進み、STARTとRESETが押せない色に変わっている。</td></tr><tr><td>70〜87分</td><td>05 STOPで止め、STARTで再開し、RESETで戻す</td><td>STOP中は秒が進まず、STARTで続きから進み、STOP→RESETで00:00に戻っている。</td></tr><tr><td>87〜90分</td><td>06 9コマ目の完成状態を確認する</td><td>停止・再開・リセットが動き、問題欄は空白、MainActivity.ktに3つのリスナが並んでいる。</td></tr></tbody></table><h3>10コマ目（90分）</h3><table><thead><tr><th>時間</th><th>STEP</th><th>確認すること</th></tr></thead><tbody><tr><td>0〜5分</td><td>07 10コマ目：前回のプロジェクトを開く</td><td>自分のA02CalcGameが開き、停止・再開・リセットが前回と同じように動いている。</td></tr><tr><td>5〜20分</td><td>08 問題の状態と、1問を作るメソッドを追加する</td><td>startQuestionと4つのプロパティに赤い波線がなく、タイマーは動き、問題欄はまだ空白である。</td></tr><tr><td>20〜30分</td><td>09 START・STOP・RESETと問題の状態をつなぐ</td><td>STARTで1問目が出て、STOP→STARTでも同じ問題が残り、RESETで問題欄が空白になる。</td></tr><tr><td>30〜45分</td><td>10 9個の数字ボタンに同じ処理を付ける</td><td>開始前・停止中は案内が出て、実行中は押した1・5・9がSnackbarに出る。</td></tr><tr><td>45〜65分</td><td>11 採点し、10問で時間と結果を表示する</td><td>1問誤答・9問正答で9問正解と表示され、終了後はRESETだけが操作ボタンの中で押せる。</td></tr><tr><td>65〜75分</td><td>12 完成コードと照合する</td><td>完成全文と照合でき、起動・ゲーム中・STOP後・終了後で表どおりの動作になる。</td></tr><tr><td>75〜87分</td><td>13 アレンジできる場所を試す</td><td>選んだ変更の効果が画面に現れ、試した後は元の表示と10問で終了する状態に戻っている。</td></tr><tr><td>87〜90分</td><td>14 10コマ目の完成状態を確認する</td><td>停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。</td></tr></tbody></table>
+<p>9コマ目はSTOPまで全員でそろえてから再開の式を図示する。ダウンロードが長い学生には教員の画面を見せ、XMLとコードの入力を先に進める。10コマ目は「定義しただけでは問題が出ない」「リスナを登録してから押すと動く」という実行順を、途中状態の画面で確かめる。</p></section>
+<section><h2>4. 机間巡視と躓き</h2><table><thead><tr><th>症状</th><th>確認・対応</th></tr></thead><tbody>
+<tr><td>同期エラー</td><td>Panda 2か、カタログが全文か、最初の原因行を確認する。別版のAGP番号だけを下げない。</td></tr>
+<tr><td>Viewの取得で止まる</td><td>setContentViewより後か、XMLのidと型が合うかを確認する。txtMessageのlateinitは取得前に読まない。</td></tr>
+<tr><td>停止中の時間まで加わる</td><td>STOPの「今 − base」とSTARTの「今 − 保存値」を対にして確認する。stop()はbaseを変えない。</td></tr>
+<tr><td>問題が表示されない</td><td>STEP 08までは正常。STEP 09以降は、START内のifとstartQuestion呼び出し、txtMessageへの代入を確認する。</td></tr>
+<tr><td>再開するたび問題が変わる</td><td>if (answer == 0)の外でstartQuestionを呼んでいないかを見る。</td></tr>
+<tr><td>数字を押すと落ちる</td><td>XMLのボタン表示が整数の1〜9かを見る。toIntは数字以外の文字列を数へ変換できない。</td></tr>
+<tr><td>10問目だけ採点されない</td><td>number == answerの採点が、nowNoの終了分岐より前にあるか確認する。</td></tr>
+<tr><td>RESET後に番号・正解数が残る</td><td>elapsedTimeMillis、nowNo、correctNo、answer、isPlayingと問題欄のリセットをSTEP 09・12で照合する。</td></tr>
+<tr><td>かっこの位置が違う</td><td>onCreateの中のリスナ同士は並列、startQuestionはonCreateの外でクラスの内側。STEP 12の全文と途中コードを使う。</td></tr>
+</tbody></table></section>
+<section><h2>5. 終了時の確認と再開地点</h2><table><thead><tr><th>区切り</th><th>画面で確認すること</th><th>再開地点</th></tr></thead><tbody>
+<tr><td>9コマ目</td><td>START→STOP→STARTで時間が続き、STOP→RESETで00:00。問題欄は空白。</td><td>STEP 07から同じA02CalcGameをOpen。</td></tr>
+<tr><td>10コマ目</td><td>停止中は案内だけ、再開時は同じ問題、10問で正解数と秒数、RESETで空白と00:00。</td><td>アレンジはSTEP 13。提出時は共通APK資料。</td></tr>
+</tbody></table><p>未完了の学生は、最後に画面が一致したSTEPの次から再開する。チェック欄は端末内の進捗で、教員へ送信する機能はない。</p>
+<h3>理解確認に使う短い問い</h3><table><thead><tr><th>問い</th><th>期待する答えと確認操作</th></tr></thead><tbody>
+<tr><td>STOP後にSTARTを押しても問題が変わらないのはなぜか</td><td>answerが1〜9なのでanswer == 0に入らない。同じ式を表示したまま再開する。</td></tr>
+<tr><td>5問版の条件を4にするのはなぜか</td><td>1〜4問目の回答後だけ次問を作り、5問目は結果へ進むため。実際に5回回答して確かめる。</td></tr>
+<tr><td>return@setOnClickListenerは何を終えるか</td><td>その数字のクリック用ラムダ。停止中に押しても採点へ進まないことを画面で確かめる。</td></tr>
+</tbody></table></section>
+<section><h2>6. 照合用コードと保守</h2><ul>
+<li><a href="code/01-libs.versions.toml">01-libs.versions.toml</a>：設定全文。完成版とバイト一致。</li>
+<li><a href="code/02-activity_main.xml">02-activity_main.xml</a>：画面全文。完成版とバイト一致。</li>
+<li><a href="code/03-MainActivity.kt">03-MainActivity.kt</a>：View取得のみ。</li><li><a href="code/04-MainActivity.kt">04-MainActivity.kt</a>：STARTの計時のみ。</li><li><a href="code/05-MainActivity.kt">05-MainActivity.kt</a>：9コマ目終了時。停止・再開・RESET。</li><li><a href="code/08-MainActivity.kt">08-MainActivity.kt</a>：出題メソッドを定義した段階。まだ呼ばない。</li><li><a href="code/09-MainActivity.kt">09-MainActivity.kt</a>：STARTで出題し、停止・再開する段階。</li><li><a href="code/10-MainActivity.kt">10-MainActivity.kt</a>：数字の配線確認用Snackbarがある途中段階。</li><li><a href="code/12-MainActivity.kt">12-MainActivity.kt</a>：完成全文。完成版とバイト一致。</li>
+</ul><p>完成ソースはA02CalcGame。教科書の完成全文・XML・カタログとその複製をconfigで照合する。STEP 03の全文も照合コードと一致させる。変更した場合は配布ZIPを作り直す。</p><p>教材検査4種、assembleDebug、指定AVDの操作、途中コードのビルド、学生用ZIPを展開した後のリンクを確認する。検証用プロジェクトとログはリポジトリ外へ置く。本文で使う4枚の画像だけを配布する。</p></section>
+<footer class="footer"><p>確認日：2026年9月24日 / 対象：A02CalcGame、Panda 2の構成</p></footer></main><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
