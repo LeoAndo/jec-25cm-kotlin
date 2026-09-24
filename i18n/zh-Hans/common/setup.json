@@ -20,7 +20,7 @@
     },
     {
       "source": "KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート",
-      "translation": "KOTLIN PROGRAMMING EXERCISES / 通用资料・课堂支持"
+      "translation": "KOTLIN PROGRAMMING EXERCISES / 通用资料与课堂支持"
     },
     {
       "source": "授業を始めるまでの<br>準備",
@@ -784,7 +784,7 @@
     },
     {
       "source": "<code>fun main() {</code> と閉じかっこが正しく書けているか確かめる。ファイルが <code>src</code> の下にあるかも確かめる。",
-      "translation": "确认 <code>fun main() {</code> 和右括号是否写对，并确认文件位于 <code>src</code> 下。"
+      "translation": "确认 <code>fun main() {</code> 和与之对应的右花括号是否写对，并确认文件位于 <code>src</code> 下。"
     },
     {
       "source": "右上の ▶ を押すと、別のファイルが実行される",
