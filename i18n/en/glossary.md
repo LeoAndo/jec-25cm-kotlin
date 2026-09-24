@@ -44,6 +44,14 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 部品（画面の） | UI element | |
 | 完成版 | finished app | K01（コンソール）では completed version |
 | 進捗 / 目次（aria-label） | Progress / Table of contents | |
+| Null安全 | null safety | 導入する文では null safety (Null安全) |
+| 安全呼び出し | safe call | 定義する文・用語の表では日本語を添える |
+| 戻り値 / 戻り値の型 | return value / return type | |
+| 引数 | parameter / argument | 宣言の側は parameter、呼び出しの側は argument |
+| 型注釈 / 型推論 | type annotation / type inference | |
+| トップレベル関数 | top-level function | 用語の表では トップレベル関数 — top-level function |
+| 再代入 | reassign | |
+| ガター | gutter | 行番号のとなりの ▷ が出る場所 |
 | Google Classroom の表示 | 授業 (Classwork)、追加または作成 (Add or create)、提出 (Turn in)、提出済み (Turned in)、提出を取り消す (Unsubmit) | 学生の画面の言語が分からないので、日本語を残して英語の表示名を添える |
 
 ## 書き方の決まり
