@@ -206,7 +206,7 @@ description: Translate the Japanese student textbooks (docs/**/*.html) into the 
 
 ## `distribute` を `true` にする条件
 
-`config/i18n.json` の `languages[].distribute` が `true` の言語だけが、学生用ZIPに入る。**初期値は全言語 `false`**（翻訳が1文もないため）。次のすべてを満たした言語から、1言語ずつ `true` に上げる。
+`config/i18n.json` の `languages[].distribute` が `true` の言語だけが、学生用ZIPに入る。**言語を足したときの初期値は `false`**（翻訳が1文もないため）。いまは英語だけが `true`（2026-09-25、#56）。次のすべてを満たした言語から、1言語ずつ `true` に上げる。
 
 1. `python3 scripts/localize-student-materials.py status --lang <言語> --require-complete` が通る（その言語の未翻訳が0）。
 2. `python3 scripts/localize-student-materials.py check` が通る。
