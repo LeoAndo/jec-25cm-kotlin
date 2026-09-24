@@ -3,12 +3,24 @@
   "language": "en",
   "entries": [
     {
+      "source": "A03 GithubSearch — GitHubのリポジトリを検索しよう | Kotlin演習",
+      "translation": "A03 GithubSearch — Search GitHub repositories | Kotlin exercises"
+    },
+    {
+      "source": "Android Studio Panda 2で作るGitHub検索アプリ。90分×3コマで、入力画面、固定データの一覧、通信結果の表示へ進みます。",
+      "translation": "A GitHub search app built with Android Studio Panda 2. Over three 90-minute lessons, you move from the input screen to a list of fixed data, then to showing results from the network."
+    },
+    {
       "source": "本文へ移動",
       "translation": "Skip to main content"
     },
     {
       "source": "JEC / Kotlin演習",
       "translation": "JEC / Kotlin exercises"
+    },
+    {
+      "source": "0 / 19 ステップ確認済み",
+      "translation": "0 / 19 steps checked"
     },
     {
       "source": "進捗",
@@ -19,8 +31,80 @@
       "translation": "Table of contents"
     },
     {
+      "source": "STEP 00 完成する検索画面を確認する",
+      "translation": "STEP 00 Check the search screen you will build"
+    },
+    {
       "source": "STEP 01 自分のプロジェクトを作る",
       "translation": "STEP 01 Create your own project"
+    },
+    {
+      "source": "STEP 02 通信と一覧に使う設定をそろえる",
+      "translation": "STEP 02 Prepare the settings for networking and the list"
+    },
+    {
+      "source": "STEP 03 検索画面をXMLで作る",
+      "translation": "STEP 03 Build the search screen in XML"
+    },
+    {
+      "source": "STEP 04 入力とSpinnerをKotlinにつなぐ",
+      "translation": "STEP 04 Connect the input and the Spinner to Kotlin"
+    },
+    {
+      "source": "STEP 05 11コマ目の画面を確認して保存する",
+      "translation": "STEP 05 Check and save the Lesson 11 screen"
+    },
+    {
+      "source": "STEP 06 12コマ目：入力画面から再開する",
+      "translation": "STEP 06 Lesson 12: Resume from the input screen"
+    },
+    {
+      "source": "STEP 07 JSONに対応するdata classを作る",
+      "translation": "STEP 07 Create data classes that match the JSON"
+    },
+    {
+      "source": "STEP 08 一覧の1行をXMLで作る",
+      "translation": "STEP 08 Build one list row in XML"
+    },
+    {
+      "source": "STEP 09 Adapterでデータを1行へ結び付ける",
+      "translation": "STEP 09 Bind data to a row with an Adapter"
+    },
+    {
+      "source": "STEP 10 固定データをRecyclerViewへ渡す",
+      "translation": "STEP 10 Pass fixed data to the RecyclerView"
+    },
+    {
+      "source": "STEP 11 12コマ目の2行を確認して保存する",
+      "translation": "STEP 11 Check and save the two rows from Lesson 12"
+    },
+    {
+      "source": "STEP 12 13コマ目：2行の画面から再開する",
+      "translation": "STEP 12 Lesson 13: Resume from the two-row screen"
+    },
+    {
+      "source": "STEP 13 Ktorで検索APIを呼ぶファイルを作る",
+      "translation": "STEP 13 Create a file that calls the search API with Ktor"
+    },
+    {
+      "source": "STEP 14 入力・通信・一覧をつなぐ",
+      "translation": "STEP 14 Connect the input, networking, and the list"
+    },
+    {
+      "source": "STEP 15 空欄・0件・失敗を画面で確かめる",
+      "translation": "STEP 15 Check empty input, 0 results, and failures on screen"
+    },
+    {
+      "source": "STEP 16 並び順と4つのファイルを照合する",
+      "translation": "STEP 16 Check the sort order and the four files"
+    },
+    {
+      "source": "STEP 17 アレンジできる場所を1つ試す",
+      "translation": "STEP 17 Try one place you can customize"
+    },
+    {
+      "source": "STEP 18 13コマ目の完成状態を確認する",
+      "translation": "STEP 18 Check the finished state of Lesson 13"
     },
     {
       "source": "困ったとき",
@@ -43,24 +127,88 @@
       "translation": "Shared: A different Android Studio version"
     },
     {
+      "source": "GitHubのリポジトリを<br>検索しよう",
+      "translation": "Search GitHub<br>repositories"
+    },
+    {
+      "source": "検索語を送り、届いたJSONをKotlinのデータに変え、一覧に表示します。",
+      "translation": "Send a search term, turn the JSON you receive into Kotlin data, and show it in a list."
+    },
+    {
+      "source": "対象：<code>A03GithubSearch</code> / パッケージ：<code>jp.ac.jec.a03githubsearch</code><br>11〜13コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "Project: <code>A03GithubSearch</code> / Package: <code>jp.ac.jec.a03githubsearch</code><br>Lessons 11–13, 90 min each / Android Studio Panda 2 / macOS"
+    },
+    {
       "source": "この単元で作るもの",
       "translation": "What you will build in this unit"
+    },
+    {
+      "source": "ソート順を選べるGitHub検索アプリ。自分のプロジェクトへ順に書き足し、12コマ目に固定データ、13コマ目に通信の結果を同じ一覧へ表示します。",
+      "translation": "A GitHub search app that lets you choose the sort order. You add to your own project step by step. In Lesson 12, the list shows fixed data, and in Lesson 13, the same list shows results from the network."
+    },
+    {
+      "source": "STEP 00 · 11コマ目 · 目安 5分",
+      "translation": "STEP 00 · Lesson 11 · About 5 min"
+    },
+    {
+      "source": "完成する検索画面を確認する",
+      "translation": "Check the search screen you will build"
+    },
+    {
+      "source": "この単元では <code>A03GithubSearch</code> を作ります。<strong>Android Studio Panda 2</strong> を開き、Welcome画面で版を確認します。違う版なら、作成前に先生に画面を見せます。ブラウザにはこの教科書を開いておきます。比較欄のJava／Swiftは読むためのコードで、Kotlinファイルには貼りません。",
+      "translation": "In this unit, you build <code>A03GithubSearch</code>. Open <strong>Android Studio Panda 2</strong> and check the version on the Welcome screen. If it is a different version, show your teacher the screen before creating the project. Keep this textbook open in your browser. The Java / Swift code in the comparison boxes is only for reading. Do not paste it into your Kotlin files."
+    },
+    {
+      "source": "検索語と並び順を選び、GitHubの公開リポジトリを一覧にするアプリです。行には所有者・リポジトリ名・スター数・フォーク数が出ます。行を押しても別の画面には移動しません。11コマ目は入力画面、12コマ目は通信しない2件の見本、13コマ目は実際の検索へ進みます。",
+      "translation": "This app lets you choose a search term and a sort order, then lists public GitHub repositories. Each row shows the owner, repository name, star count, and fork count. Tapping a row does not open another screen. Lesson 11 covers the input screen, Lesson 12 a two-item sample that does not use the network, and Lesson 13 a real search."
+    },
+    {
+      "source": "kotlinを検索した一例。名前・数・順序は検索時点で変わる",
+      "translation": "An example search for kotlin. Names, numbers, and order change depending on when you search"
+    },
+    {
+      "source": "kotlinを検索した一例。名前・数・順序は検索時点で変わる（指定AVDで撮影）",
+      "translation": "An example search for kotlin. Names, numbers, and order change depending on when you search (taken on the designated AVD)"
     },
     {
       "source": "Java／Swiftとの比較",
       "translation": "Comparison with Java / Swift"
     },
     {
+      "source": "Androidが画面の準備時に <code>onCreate</code> を呼びます。Kotlinの <code>override</code> はJavaのオーバーライドに対応します。今回は <code>main</code> を作りません。",
+      "translation": "Android calls <code>onCreate</code> when it prepares the screen. Kotlin's <code>override</code> corresponds to overriding in Java. This time, you do not write <code>main</code>."
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "Stop here and check"
+    },
+    {
+      "source": "Panda 2のWelcome画面と、A03の教科書が開いている。",
+      "translation": "The Panda 2 Welcome screen and the A03 textbook are open."
     },
     {
       "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
       "translation": "Check the box when you are done. If you get stuck, show this screen to your teacher."
     },
     {
+      "source": "STEP 01 · 11コマ目 · 目安 15分",
+      "translation": "STEP 01 · Lesson 11 · About 15 min"
+    },
+    {
       "source": "自分のプロジェクトを作る",
       "translation": "Create your own project"
+    },
+    {
+      "source": "<strong>New Project</strong>、または <strong>File → New → New Project…</strong> を選びます。",
+      "translation": "Select <strong>New Project</strong>, or <strong>File → New → New Project…</strong>."
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> を選びます。<code>Empty Activity</code> はCompose用です。",
+      "translation": "Select <strong>Phone and Tablet → Empty Views Activity → Next</strong>. <code>Empty Activity</code> is for Compose."
+    },
+    {
+      "source": "次の表を入力して <strong>Finish</strong>。Gradle同期が終わるまで待ちます。",
+      "translation": "Enter the values in the table below and click <strong>Finish</strong>. Wait until the Gradle sync finishes."
     },
     {
       "source": "項目",
@@ -71,20 +219,816 @@
       "translation": "What to enter or select"
     },
     {
+      "source": "<code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。",
+      "translation": "Replace <code>ユーザ名</code> (user name) with your user name on your Mac. Include the project name in Save location. If you are asked for access to 書類 (Documents), allow it so that your save location can be read. If a red sync error does not go away, show your screen to your teacher."
+    },
+    {
+      "source": "左のProjectツールウィンドウは <strong>Project</strong> 表示にします。Kotlinファイルの置き場は <code>app/src/main/java/jp/ac/jec/a03githubsearch/</code>。以後この教科書で「パッケージ」と書いたら、この場所です。",
+      "translation": "In the Project tool window on the left, switch to the <strong>Project</strong> view. Kotlin files go in <code>app/src/main/java/jp/ac/jec/a03githubsearch/</code>. From here on, \"package\" in this textbook means this location."
+    },
+    {
+      "source": "継承はJavaの <code>extends</code> に対してKotlinは <code>:</code>。<code>AppCompatActivity()</code> の括弧は親のコンストラクタを呼ぶ部分です。",
+      "translation": "For inheritance, Java uses <code>extends</code> and Kotlin uses <code>:</code>. The parentheses in <code>AppCompatActivity()</code> call the parent class's constructor."
+    },
+    {
+      "source": "自分の保存先にA03GithubSearchがあり、パッケージ名がjp.ac.jec.a03githubsearchになっている。",
+      "translation": "A03GithubSearch is in your save location, and the package name is jp.ac.jec.a03githubsearch."
+    },
+    {
+      "source": "STEP 02 · 11コマ目 · 目安 20分",
+      "translation": "STEP 02 · Lesson 11 · About 20 min"
+    },
+    {
+      "source": "通信と一覧に使う設定をそろえる",
+      "translation": "Prepare the settings for networking and the list"
+    },
+    {
+      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
+      "translation": "Even with Panda 2, library versions can differ depending on when you create the project. <strong>Replace the whole contents of the following three configuration files first</strong>, then sync. There are two <code>build.gradle.kts</code> files, so check the path. Do not take a setup generated by a different version and only lower its AGP number."
+    },
+    {
+      "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
+      "translation": "First, <code>gradle/libs.versions.toml</code>. Ktor is for networking, serialization for JSON conversion, RecyclerView and CardView for the list, and lifecycle for starting network requests tied to the screen."
+    },
+    {
       "source": "libs.versions.toml · 全文",
       "translation": "libs.versions.toml · Full file"
+    },
+    {
+      "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
+      "translation": "Next, <code>build.gradle.kts</code> at the project root."
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · Full file"
+    },
+    {
+      "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
+      "translation": "Next, <code>app/build.gradle.kts</code>. This is where you enable the serialization plugin and the libraries you use."
+    },
+    {
+      "source": "<strong>Sync Now</strong>、出なければ <strong>File → Sync Project with Gradle Files</strong> を選び、赤いエラーが消えるまで待ちます。AGP 9.1.1はKotlinのビルド機能を内蔵しているので、別の <code>org.jetbrains.kotlin.android</code> は足しません。カタログの <code>kotlin</code> はここではserializationプラグインの版です。",
+      "translation": "Select <strong>Sync Now</strong>, or <strong>File → Sync Project with Gradle Files</strong> if it does not appear, and wait until the red errors are gone. AGP 9.1.1 has Kotlin build support built in, so do not add a separate <code>org.jetbrains.kotlin.android</code>. Here, <code>kotlin</code> in the version catalog is the version of the serialization plugin."
+    },
+    {
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "Next, replace the whole of <code>app/src/main/AndroidManifest.xml</code>. <code>INTERNET</code> goes outside <code>application</code>, and <code>windowSoftInputMode</code> is an attribute of <code>activity</code>. No runtime permission dialog appears for network access."
+    },
+    {
+      "source": "AndroidManifest.xml · 全文",
+      "translation": "AndroidManifest.xml · Full file"
+    },
+    {
+      "source": "次のコマで使う <code>@Serializable</code> は、Swiftの <code>Codable</code> と同じくJSON変換に使います。その変換処理を生成できるように、今回はライブラリだけでなくプラグインも設定します。",
+      "translation": "<code>@Serializable</code>, which you use in the next lesson, is for JSON conversion, like Swift's <code>Codable</code>. So that the conversion code can be generated, you set up the plugin as well as the library this time."
+    },
+    {
+      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
+      "translation": "The three configuration files and the Manifest are saved, and the red Gradle sync errors are gone."
+    },
+    {
+      "source": "STEP 03 · 11コマ目 · 目安 20分",
+      "translation": "STEP 03 · Lesson 11 · About 20 min"
+    },
+    {
+      "source": "検索画面をXMLで作る",
+      "translation": "Build the search screen in XML"
+    },
+    {
+      "source": "<strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使います。",
+      "translation": "Start <code>jec_25cm_kotlin_Pixel 9a</code> from <strong>Tools → Device Manager</strong>. Use the existing device."
+    },
+    {
+      "source": "なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong>。先生指定のAPI 31以上のイメージで作成し、このAVD名にします。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code>。候補がなければ先生に画面を見せます。",
+      "translation": "If it does not exist, go to <strong>＋ → Create Virtual Device</strong> (or <strong>Create Device</strong>) and choose <strong>Phone → Pixel 9a</strong>. Create it with the API 31 or higher image your teacher specifies, and give it this AVD name. Use <code>arm64-v8a</code> on Apple Silicon and <code>x86_64</code> on an Intel Mac. If no option appears, show your teacher the screen."
+    },
+    {
+      "source": "実行設定 <strong>app</strong> と指定AVDで <strong>Run ▶</strong>。まず <code>Hello World!</code> を確認します。",
+      "translation": "Click <strong>Run ▶</strong> with the <strong>app</strong> run configuration and the designated AVD. First, check that <code>Hello World!</code> appears."
+    },
+    {
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
+      "translation": "Open <code>app/src/main/res/layout/activity_main.xml</code>, switch to <strong>Code</strong> at the top right, and replace the whole file."
     },
     {
       "source": "activity_main.xml · 全文",
       "translation": "activity_main.xml · Full file"
     },
     {
+      "source": "外側の <code>FrameLayout</code> は、入力と一覧の上に通信中の印を重ねるための配置です。内側の <code>LinearLayout</code> は縦並び。<code>progress</code> は最初 <code>invisible</code> なので見えません。<code>main</code> のidは生成されたインセット処理が使うため残します。",
+      "translation": "The outer <code>FrameLayout</code> is there so the loading indicator can sit on top of the input and the list. The inner <code>LinearLayout</code> arranges its children vertically. <code>progress</code> is <code>invisible</code> at first, so you cannot see it. Keep the <code>main</code> id, because the generated insets handling uses it."
+    },
+    {
+      "source": "Runすると入力欄・「ソート順」・検索ボタンが出ます。まだSpinnerの選択肢も検索処理も書いていないので、押しても検索結果は出ません。",
+      "translation": "When you Run the app, the input field, 「ソート順」 (Sort order), and the search button appear. You have not written the Spinner options or the search code yet, so pressing the button shows no search results."
+    },
+    {
+      "source": "XMLの <code>@+id/btn_search</code> を、KotlinもJavaも <code>R.id.btn_search</code> で参照します。XMLは画面の形、Kotlinはその動きを担当します。",
+      "translation": "Both Kotlin and Java refer to <code>@+id/btn_search</code> in the XML as <code>R.id.btn_search</code>. XML handles the layout of the screen, and Kotlin handles its behavior."
+    },
+    {
+      "source": "指定AVDに入力欄・ソート順・検索ボタンが出て、一覧と通信中の印は出ていない。",
+      "translation": "The designated AVD shows the input field, ソート順 (Sort order), and the search button, and does not show the list or the loading indicator."
+    },
+    {
+      "source": "STEP 04 · 11コマ目 · 目安 27分",
+      "translation": "STEP 04 · Lesson 11 · About 27 min"
+    },
+    {
+      "source": "入力とSpinnerをKotlinにつなぐ",
+      "translation": "Connect the input and the Spinner to Kotlin"
+    },
+    {
+      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "Replace the whole of <code>MainActivity.kt</code> in the package with the following <strong>in-progress code for Lesson 11</strong>. Include the imports. Before connecting it to the search later, check the input and the options."
+    },
+    {
+      "source": "04-MainActivity.kt · 全文",
+      "translation": "04-MainActivity.kt · Full file"
+    },
+    {
       "source": "場所",
       "translation": "Location"
     },
     {
+      "source": "画面とのつながり",
+      "translation": "How it connects to the screen"
+    },
+    {
+      "source": "Javaで後から代入するフィールドに対応。findViewByIdで代入してから読む。",
+      "translation": "Corresponds to a Java field that is assigned later. Assign it with findViewById before reading it."
+    },
+    {
+      "source": "左が表示文字、右が後でAPIへ送る値。<code>to</code> でPairを作る。",
+      "translation": "The left is the text shown on screen, and the right is the value sent to the API later. <code>to</code> creates a Pair."
+    },
+    {
+      "source": "表示文字だけのリストを作る。<code>it</code> は各Pair。",
+      "translation": "Makes a list of only the display text. <code>it</code> is each Pair."
+    },
+    {
+      "source": "生成したArrayAdapterを設定して、その同じオブジェクトを返す。",
+      "translation": "Configures the newly created ArrayAdapter and returns that same object."
+    },
+    {
+      "source": "前後の空白を除き、nullなら空文字にする。",
+      "translation": "Removes spaces at both ends, and turns null into an empty string."
+    },
+    {
+      "source": "空なら案内、入力があればその文字をToastに出す。まだ通信しない。",
+      "translation": "If the input is empty, shows a prompt; otherwise, shows the entered text in a Toast. No network access yet."
+    },
+    {
+      "source": "RunしてSpinnerを開き、4つの選択肢を確認します。入力欄に <code>kotlin</code> を入れ、必要なら端末の戻る操作でキーボードを閉じて検索を押します。「入力: kotlin」が短く出ます。入力を消すと「検索ワードを入力してください」です。",
+      "translation": "Run the app, open the Spinner, and check the four options. Enter <code>kotlin</code> in the input field, close the keyboard with the device's back action if needed, and press the search button. 「入力: kotlin」 (Input: kotlin) appears briefly. If you clear the input, 「検索ワードを入力してください」 (Please enter a search word) appears."
+    },
+    {
+      "source": "完成版の起動画面。11コマ目も選択肢を作ると同じ形になる",
+      "translation": "The start screen of the completed version. In Lesson 11, the screen looks the same once you create the options"
+    },
+    {
+      "source": "完成版の起動画面。11コマ目も選択肢を作ると同じ形になる（指定AVDで撮影）",
+      "translation": "The start screen of the completed version. In Lesson 11, the screen looks the same once you create the options (taken on the designated AVD)"
+    },
+    {
+      "source": "Kotlinの <code>to</code> はPairを作る関数で、Swiftのタプルに近い役目です。<code>map</code> はSwiftと同じく各要素を変換します。<code>apply</code> の中は作成したAdapterが <code>this</code> になるので、直接そのメソッドを呼べます。",
+      "translation": "Kotlin's <code>to</code> is a function that creates a Pair, and it plays a role similar to a Swift tuple. <code>map</code> transforms each element, just as in Swift. Inside <code>apply</code>, the Adapter you created becomes <code>this</code>, so you can call its methods directly."
+    },
+    {
+      "source": "4つのソート順が選べ、検索を押すと入力した文字、空欄なら入力を促すToastが出る。",
+      "translation": "Four sort orders can be selected. Pressing the search button shows a Toast with the entered text, or a Toast asking for input if the field is empty."
+    },
+    {
+      "source": "STEP 05 · 11コマ目 · 目安 3分",
+      "translation": "STEP 05 · Lesson 11 · About 3 min"
+    },
+    {
+      "source": "11コマ目の画面を確認して保存する",
+      "translation": "Check and save the Lesson 11 screen"
+    },
+    {
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
+      "translation": "These are the last 3 minutes. Clear the search term and press the button to see the prompt, then enter <code>kotlin</code> and press it to see 「入力: kotlin」 (Input: kotlin). The list stays empty, which is correct. Save with <strong>File → Save All</strong>. Next time, you open this same project."
+    },
+    {
+      "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
+      "translation": "Both register the action to run on a click. Right now, <code>search</code> only checks the input. You add the network code in Lesson 13."
+    },
+    {
+      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
+      "translation": "MainActivity.kt is saved, the input-check Toast appears, and the list stays empty."
+    },
+    {
+      "source": "STEP 06 · 12コマ目 · 目安 5分",
+      "translation": "STEP 06 · Lesson 12 · About 5 min"
+    },
+    {
+      "source": "12コマ目：入力画面から再開する",
+      "translation": "Lesson 12: Resume from the input screen"
+    },
+    {
+      "source": "Android StudioのRecent Projects、または <strong>Open</strong> で、自分の <code>A03GithubSearch</code> フォルダを開きます。保存先が <code>Documents/Kotlin/A03GithubSearch</code> であることを確認し、同期を待ちます。指定AVDでRunし、入力した <code>kotlin</code> がToastに出ることを確認します。",
+      "translation": "Open your own <code>A03GithubSearch</code> folder from Recent Projects in Android Studio, or with <strong>Open</strong>. Check that the save location is <code>Documents/Kotlin/A03GithubSearch</code>, and wait for the sync. Run the app on the designated AVD and check that the <code>kotlin</code> you enter appears in a Toast."
+    },
+    {
+      "source": "今日は、通信の代わりにKotlinで書いた固定の2件を一覧へ渡します。GitHubにアクセスせず、一覧を作る部分を動かせます。",
+      "translation": "Today, instead of using the network, you pass two fixed items written in Kotlin to the list. This lets you get the list-building part working without accessing GitHub."
+    },
+    {
+      "source": "後からViewを代入するフィールドの対応です。Kotlinの <code>lateinit</code> は未初期化のまま読むと例外になります。<code>setContentView</code> の後で代入する順を保ちます。",
+      "translation": "This is how the two languages declare a field that gets a View assigned later. In Kotlin, reading a <code>lateinit</code> property before it is initialized throws an exception. Keep the order: assign it after <code>setContentView</code>."
+    },
+    {
+      "source": "自分のA03GithubSearchで、前回の入力確認のToastが出ている。",
+      "translation": "Your own A03GithubSearch shows the input-check Toast from last time."
+    },
+    {
+      "source": "STEP 07 · 12コマ目 · 目安 20分",
+      "translation": "STEP 07 · Lesson 12 · About 20 min"
+    },
+    {
+      "source": "JSONに対応するdata classを作る",
+      "translation": "Create data classes that match the JSON"
+    },
+    {
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "Right-click the package, select <strong>New → Kotlin Class/File</strong>, enter <code>GithubSearchResponse</code> as the name, and choose <strong>File</strong> as the type. Replace the whole of the new <code>GithubSearchResponse.kt</code>. The code below puts three classes in one file."
+    },
+    {
+      "source": "GithubSearchResponse.kt · 全文",
+      "translation": "GithubSearchResponse.kt · Full file"
+    },
+    {
+      "source": "JSONは次のような入れ子です。これは構造を読むための小さな固定例で、実際の検索応答ではありません。<code>items</code> の各要素が1リポジトリ、<code>owner</code> が所有者の情報です。",
+      "translation": "The JSON is nested like this. This is a small fixed example for reading the structure, not a real search response. Each element of <code>items</code> is one repository, and <code>owner</code> holds the owner's information."
+    },
+    {
+      "source": "対応するデータ",
+      "translation": "Matching data"
+    },
+    {
+      "source": "一覧に渡す <code>List&lt;GithubRepository&gt;</code>",
+      "translation": "The <code>List&lt;GithubRepository&gt;</code> passed to the list"
+    },
+    {
+      "source": "所有者名",
+      "translation": "Owner name"
+    },
+    {
+      "source": "JSONの名前をKotlinの <code>stargazersCount</code> に対応付ける",
+      "translation": "Maps the JSON name to <code>stargazersCount</code> in Kotlin"
+    },
+    {
+      "source": "変換処理の生成対象にする。Javaの <code>java.io.Serializable</code> とは別",
+      "translation": "Marks the class so the conversion code is generated for it. Not the same as Java's <code>java.io.Serializable</code>"
+    },
+    {
+      "source": "検索全体の件数。このアプリの画面には表示しない",
+      "translation": "The total number of search results. This app does not show it on screen"
+    },
+    {
+      "source": "Swiftの <code>Codable</code> と同様に、宣言した型へJSONを変換します。名前が違うとき、Swiftは <code>CodingKeys</code>、Kotlinのこのライブラリは <code>@SerialName</code> を使います。<code>data class</code> の <code>==</code> は、ここで宣言したプロパティの値を比較します。",
+      "translation": "Like Swift's <code>Codable</code>, it converts JSON into the types you declare. When the names differ, Swift uses <code>CodingKeys</code>, and this Kotlin library uses <code>@SerialName</code>. <code>==</code> on a <code>data class</code> compares the values of the properties declared here."
+    },
+    {
+      "source": "GithubSearchResponse.ktに3つのdata classがあり、SerializableとSerialNameの赤い波線が消えている。",
+      "translation": "GithubSearchResponse.kt has three data classes, and the red squiggly lines under Serializable and SerialName are gone."
+    },
+    {
+      "source": "STEP 08 · 12コマ目 · 目安 15分",
+      "translation": "STEP 08 · Lesson 12 · About 15 min"
+    },
+    {
+      "source": "一覧の1行をXMLで作る",
+      "translation": "Build one list row in XML"
+    },
+    {
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
+      "translation": "Right-click <code>app/src/main/res/layout</code> and select <strong>New → Layout Resource File</strong>. Set File name to <code>list_item</code> and create the file. You replace the whole file after creating it, so you can leave Root element at its default value. Switch to the Code view and replace the whole file with the following."
+    },
+    {
+      "source": "list_item.xml · 全文",
+      "translation": "list_item.xml · Full file"
+    },
+    {
+      "source": "外側は <code>CardView</code>、内側に4つのTextViewです。<code>tools:text</code> はDesign／Splitプレビューだけの見本文字。Runした画面の文字は次のSTEPのKotlinで設定します。<code>maxLines=\"1\"</code> と <code>ellipsize=\"end\"</code> により、長い名前は末尾が省略されます。",
+      "translation": "The outer element is a <code>CardView</code>, with four TextViews inside. <code>tools:text</code> is sample text shown only in the Design / Split preview. The text on the screen when you Run the app is set in Kotlin in the next STEP. With <code>maxLines=\"1\"</code> and <code>ellipsize=\"end\"</code>, long names are shortened at the end."
+    },
+    {
+      "source": "Javaのgetterと文字列連結に対して、Kotlinはプロパティ参照と文字列テンプレートです。XMLの見本文字はこの代入の代わりにはなりません。",
+      "translation": "Where Java uses a getter and string concatenation, Kotlin uses property access and a string template. The sample text in the XML does not replace this assignment."
+    },
+    {
+      "source": "list_item.xmlのプレビューに4項目が縦に並び、各TextViewのidがコードと一致している。",
+      "translation": "The list_item.xml preview shows the four fields stacked vertically, and the id of each TextView matches the code."
+    },
+    {
+      "source": "STEP 09 · 12コマ目 · 目安 25分",
+      "translation": "STEP 09 · Lesson 12 · About 25 min"
+    },
+    {
+      "source": "Adapterでデータを1行へ結び付ける",
+      "translation": "Bind data to a row with an Adapter"
+    },
+    {
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
+      "translation": "Right-click the package and select <strong>New → Kotlin Class/File</strong>. Enter <code>RepositoryAdapter</code> as the name, choose <strong>File</strong> as the type, and replace the whole file with the following."
+    },
+    {
+      "source": "RepositoryAdapter.kt · 全文",
+      "translation": "RepositoryAdapter.kt · Full file"
+    },
+    {
+      "source": "担当すること",
+      "translation": "What it handles"
+    },
+    {
+      "source": "1行の中の4つのTextViewを保持。画面全体ではなく <code>itemView</code> から探す。",
+      "translation": "Holds the four TextViews in one row. Finds them in <code>itemView</code>, not in the whole screen."
+    },
+    {
+      "source": "必要な行のViewを <code>list_item.xml</code> から作る。",
+      "translation": "Creates the View for a row from <code>list_item.xml</code> when one is needed."
+    },
+    {
+      "source": "その位置のリポジトリを読み、4つの文字へ反映。",
+      "translation": "Reads the repository at that position and sets the four texts."
+    },
+    {
+      "source": "同じリポジトリかをidで、表示内容が同じかを値で判定。",
+      "translation": "Decides whether two items are the same repository by id, and whether the displayed content is the same by value."
+    },
+    {
+      "source": "渡されたリストの差分を扱う親クラス。<code>submitList</code> でリストを渡す。",
+      "translation": "The parent class that handles differences in the list you pass. Pass the list with <code>submitList</code>."
+    },
+    {
+      "source": "<code>inflate(R.layout.list_item, parent, false)</code> は、親に合うレイアウト情報で行を作り、その場では親へ追加しない指定です。行の追加はRecyclerViewが担当します。行を使い回すたび <code>onBindViewHolder</code> で文字を書き直すため、4項目とも代入します。",
+      "translation": "<code>inflate(R.layout.list_item, parent, false)</code> creates the row with layout information that fits the parent, without adding it to the parent at that point. RecyclerView takes care of adding rows. Each time a row is reused, <code>onBindViewHolder</code> rewrites its text, so assign all four fields."
+    },
+    {
+      "source": "<code>companion object</code> はクラス側で使う値を置く場所。<code>object : DiffUtil.ItemCallback&lt;GithubRepository&gt;()</code> は名前のないオブジェクトを作り、2つのメソッドをoverrideしています。まだMainActivityにつないでいないので、Runしても一覧は空です。",
+      "translation": "<code>companion object</code> is where you put values used at the class level. <code>object : DiffUtil.ItemCallback&lt;GithubRepository&gt;()</code> creates an unnamed object and overrides two methods. It is not connected to MainActivity yet, so the list is still empty when you Run the app."
+    },
+    {
+      "source": "Kotlinの <code>==</code> はJavaの参照比較 <code>==</code> とは違い、<code>equals</code> を使う比較です。このdata classではプロパティの値を比べます。idが同じでもスター数が変われば、内容は違うと判定します。",
+      "translation": "Unlike Java's reference comparison <code>==</code>, Kotlin's <code>==</code> compares using <code>equals</code>. For this data class, it compares the property values. Even if the id is the same, the content is treated as different when the star count changes."
+    },
+    {
+      "source": "RepositoryAdapter.ktに赤い波線がなく、id比較と内容比較の2つのメソッドがある。",
+      "translation": "RepositoryAdapter.kt has no red squiggly lines, and it has two methods: one compares ids and one compares content."
+    },
+    {
+      "source": "STEP 10 · 12コマ目 · 目安 22分",
+      "translation": "STEP 10 · Lesson 12 · About 22 min"
+    },
+    {
+      "source": "固定データをRecyclerViewへ渡す",
+      "translation": "Pass fixed data to the RecyclerView"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
+      "translation": "Replace the whole of <code>MainActivity.kt</code> with the following in-progress code for Lesson 12. It keeps the input check from Lesson 11 and adds creating <code>repositoryAdapter</code>, connecting it to the RecyclerView, and passing fixed data with <code>submitList</code>."
+    },
+    {
+      "source": "10-MainActivity.kt · 全文",
+      "translation": "10-MainActivity.kt · Full file"
+    },
+    {
+      "source": "<code>LinearLayoutManager(this)</code> は縦方向の一覧を配置します。<code>this</code> はこのMainActivity。<code>recyclerView.adapter</code> へ同じ <code>repositoryAdapter</code> を渡してから、そのAdapterへリストを送ります。",
+      "translation": "<code>LinearLayoutManager(this)</code> lays out the list vertically. <code>this</code> is this MainActivity. First pass the same <code>repositoryAdapter</code> to <code>recyclerView.adapter</code>, then send the list to that Adapter."
+    },
+    {
+      "source": "Runすると、<code>student / HelloKotlin / 12 / 3</code> と <code>classroom / CalcGame / 5 / 1</code> が表示されます。これらはKotlinに書いた練習用データで、GitHubの検索結果ではありません。検索ボタンは引き続き入力確認のToastだけを出します。",
+      "translation": "When you Run the app, <code>student / HelloKotlin / 12 / 3</code> and <code>classroom / CalcGame / 5 / 1</code> appear. These are practice data written in Kotlin, not GitHub search results. The search button still only shows the input-check Toast."
+    },
+    {
+      "source": "通信せずに固定の2件を表示した12コマ目の途中画面",
+      "translation": "The Lesson 12 in-progress screen, showing two fixed items without using the network"
+    },
+    {
+      "source": "通信せずに固定の2件を表示した12コマ目の途中画面（指定AVDで撮影）",
+      "translation": "The Lesson 12 in-progress screen, showing two fixed items without using the network (taken on the designated AVD)"
+    },
+    {
+      "source": "KotlinはJavaのsetterをプロパティへの代入として書けます。SwiftのTable Viewにもデータを行へ表示する役割がありますが、このアプリではRecyclerViewのAdapterとViewHolderで分担します。",
+      "translation": "In Kotlin, you can write a Java setter call as an assignment to a property. Swift's Table View also shows data in rows, but in this app, the RecyclerView's Adapter and ViewHolder share that work."
+    },
+    {
+      "source": "HelloKotlinとCalcGameの2行に、コードに書いた所有者名・スター数・フォーク数が出ている。",
+      "translation": "The two rows, HelloKotlin and CalcGame, show the owner names, star counts, and fork counts written in the code."
+    },
+    {
+      "source": "STEP 11 · 12コマ目 · 目安 3分",
+      "translation": "STEP 11 · Lesson 12 · About 3 min"
+    },
+    {
+      "source": "12コマ目の2行を確認して保存する",
+      "translation": "Check and save the two rows from Lesson 12"
+    },
+    {
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "These are the last 3 minutes. Compare the four fields in the two rows with the fixed data, and check that the two rows in the list do not change even when you change the input and search. Then use <strong>File → Save All</strong>. There is no network code yet. Next time, you add a file that calls the API to the same project."
+    },
+    {
+      "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
+      "translation": "As with Java generics, <code>&lt;GithubRepository&gt;</code> is the element type. Now you pass fixed values. Next time, you pass a list of the same type, received from the network, to the same Adapter."
+    },
+    {
+      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
+      "translation": "The two rows match the fixed data, and MainActivity.kt, the model, the Adapter, and the two XML files are saved."
+    },
+    {
+      "source": "STEP 12 · 13コマ目 · 目安 5分",
+      "translation": "STEP 12 · Lesson 13 · About 5 min"
+    },
+    {
+      "source": "13コマ目：2行の画面から再開する",
+      "translation": "Lesson 13: Resume from the two-row screen"
+    },
+    {
+      "source": "自分の <code>A03GithubSearch</code> をOpenし、指定AVDでRunします。<code>HelloKotlin</code> と <code>CalcGame</code> の2行を確認します。今日は固定データをAPIの結果に置き換えます。",
+      "translation": "Open your own <code>A03GithubSearch</code> and Run it on the designated AVD. Check the two rows, <code>HelloKotlin</code> and <code>CalcGame</code>. Today, you replace the fixed data with results from the API."
+    },
+    {
+      "source": "<strong>実際の検索は先生の合図で、少人数ずつ行います。</strong>認証なしの検索APIは1分間に10回までです。同じ外部IPで通信する教室では複数の端末がこの枠を共有するため、全員で連打しません。通信待ちの間はコードと固定データの照合を進めます。",
+      "translation": "<strong>Do real searches a few people at a time, when your teacher gives the signal.</strong> Without authentication, the search API allows up to 10 requests per minute. In a classroom where devices share the same external IP, they all share this limit, so do not all press the search button over and over. While you wait to search, keep comparing the code with the fixed data."
+    },
+    {
+      "source": "選んだ位置から、表示ラベルではなくAPI用の値を取り出します。KotlinのPairの <code>second</code> はSwiftのタプルの2番目に対応します。",
+      "translation": "From the selected position, take the value for the API, not the display label. <code>second</code> of a Kotlin Pair corresponds to the second element of a Swift tuple."
+    },
+    {
+      "source": "自分のプロジェクトで固定の2行が出ており、次に追加するGithubApi.ktはまだない。",
+      "translation": "Your project shows the two fixed rows, and GithubApi.kt, which you add next, does not exist yet."
+    },
+    {
+      "source": "STEP 13 · 13コマ目 · 目安 15分",
+      "translation": "STEP 13 · Lesson 13 · About 15 min"
+    },
+    {
+      "source": "Ktorで検索APIを呼ぶファイルを作る",
+      "translation": "Create a file that calls the search API with Ktor"
+    },
+    {
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
+      "translation": "In the package, select <strong>New → Kotlin Class/File</strong>. Enter <code>GithubApi</code> as the name, choose <strong>File</strong> as the type, and replace the whole file."
+    },
+    {
+      "source": "GithubApi.kt · 全文",
+      "translation": "GithubApi.kt · Full file"
+    },
+    {
+      "source": "役割",
+      "translation": "Role"
+    },
+    {
+      "source": "共有する1個のオブジェクト。Javaのstaticメソッドをまとめるクラスに近い呼び出し方。",
+      "translation": "A single shared object. You call it much like a Java class that groups static methods."
+    },
+    {
+      "source": "HTTP通信をするクライアントを1個作る。",
+      "translation": "Creates one client for HTTP communication."
+    },
+    {
+      "source": "<code>ContentNegotiation</code> と <code>json</code>",
+      "translation": "<code>ContentNegotiation</code> and <code>json</code>"
+    },
+    {
+      "source": "受け取ったJSONをdata classへ変換する設定。",
+      "translation": "The setting that converts the received JSON into data classes."
+    },
+    {
+      "source": "data classで宣言していないJSON項目を読み飛ばす。必要な項目が欠けた応答まで成功にする設定ではない。",
+      "translation": "Skips JSON fields that are not declared in the data class. It does not make a response that lacks required fields count as a success."
+    },
+    {
+      "source": "検索語などをURLのパラメータへ渡す。文字列を手でURLへ連結しない。",
+      "translation": "Passes the search term and other values as URL parameters. You do not join strings into the URL by hand."
+    },
+    {
+      "source": "変数の型 <code>GithubSearchResponse</code> に変換して受け取る。",
+      "translation": "Converts the response to the variable's type, <code>GithubSearchResponse</code>, and receives it."
+    },
+    {
+      "source": "全体の件数ではなく、受け取ったリストを返す。",
+      "translation": "Returns the received list, not the total count."
+    },
+    {
+      "source": "送信先は <code>https://api.github.com/search/repositories</code>。<code>q</code> が検索語、<code>sort</code> が並び順、<code>per_page</code> が1回で受け取る上限です。このアプリは先頭ページを最大30件だけ受け取り、スクロールしても次のページは取得しません。APIキーの入力やログインはありません。",
+      "translation": "The request goes to <code>https://api.github.com/search/repositories</code>. <code>q</code> is the search term, <code>sort</code> is the sort order, and <code>per_page</code> is the maximum number of results received per request. This app receives only the first page, up to 30 results, and does not fetch the next page when you scroll. You do not enter an API key or log in."
+    },
+    {
+      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "Saving this file alone does not start any network access. You write the code that calls it in the next STEP."
+    },
+    {
+      "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
+      "translation": "Like a Swift <code>async</code> function, code that waits for a result is written in sequence. In Kotlin, you write <code>suspend</code> on the declaration, and you do not write <code>await</code> at the call site. <code>suspend</code> alone does not move the work to another thread. Here, it lets execution pause while Ktor's network request is waiting."
+    },
+    {
+      "source": "GithubApi.ktのimportとbodyに赤い波線がなく、Runしてもまだ固定の2行が出る。",
+      "translation": "GithubApi.kt has no red squiggly lines on the imports or body, and Run still shows the two fixed rows."
+    },
+    {
+      "source": "STEP 14 · 13コマ目 · 目安 25分",
+      "translation": "STEP 14 · Lesson 13 · About 25 min"
+    },
+    {
+      "source": "入力・通信・一覧をつなぐ",
+      "translation": "Connect the input, networking, and the list"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
+      "translation": "Replace the whole of <code>MainActivity.kt</code> with the following <strong>completed code</strong>. It removes the fixed-data <code>submitList(listOf(…))</code> and calls the network from inside <code>search</code>. The insets handling generated with the project, getting the Views, and building the Spinner stay as they are."
+    },
+    {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · Full file"
+    },
+    {
+      "source": "順番",
+      "translation": "Order"
+    },
+    {
+      "source": "処理",
+      "translation": "Process"
+    },
+    {
+      "source": "入力をtrimし、空ならToastを出して <code>return</code>。通信しない。",
+      "translation": "Trims the input. If it is empty, shows a Toast and exits with <code>return</code>. No network access."
+    },
+    {
+      "source": "選択位置の <code>second</code> をAPI用sortとして取り出す。",
+      "translation": "Takes <code>second</code> of the item at the selected position as the sort value for the API."
+    },
+    {
+      "source": "<code>lifecycleScope.launch</code> の中で <code>setLoading(true)</code>。印を出し検索ボタンを無効にする。",
+      "translation": "Calls <code>setLoading(true)</code> inside <code>lifecycleScope.launch</code>. Shows the indicator and disables the search button."
+    },
+    {
+      "source": "<code>runCatching</code> の中で結果を待つ。成功なら <code>onSuccess</code> で <code>submitList</code>。",
+      "translation": "Waits for the result inside <code>runCatching</code>. On success, <code>onSuccess</code> calls <code>submitList</code>."
+    },
+    {
+      "source": "0件なら空の一覧とToast。失敗なら <code>onFailure</code> で古い一覧を空にしてToast。",
+      "translation": "With 0 results, an empty list and a Toast. On failure, <code>onFailure</code> empties the old list and shows a Toast."
+    },
+    {
+      "source": "<code>setLoading(false)</code> で印を隠し、検索ボタンを有効へ戻す。",
+      "translation": "<code>setLoading(false)</code> hides the indicator and enables the search button again."
+    },
+    {
+      "source": "<code>lifecycleScope</code> は画面に結び付いたコルーチンの開始場所です。<code>launch</code> の内側なら <code>suspend</code> 関数を呼べます。今回は画面を開いたまま操作します。<code>onSuccess</code> の <code>repositories</code>、<code>onFailure</code> の <code>e</code> はラムダの引数です。<code>e.message</code> の詳細文は原因やライブラリの版で変わります。",
+      "translation": "<code>lifecycleScope</code> is where you start coroutines tied to the screen. Inside <code>launch</code>, you can call <code>suspend</code> functions. In this unit, you use the app with the screen kept open. <code>repositories</code> in <code>onSuccess</code> and <code>e</code> in <code>onFailure</code> are lambda parameters. The detail text in <code>e.message</code> varies with the cause and the library version."
+    },
+    {
+      "source": "Runすると起動時の一覧は空になります。合図があったら <code>kotlin</code> を入力し、必要なら端末の戻る操作でキーボードを閉じ、検索を<strong>1回</strong>押します。応答後に4項目の行が並びます。処理が速いと通信中の印は一瞬です。",
+      "translation": "When you Run the app, the list is empty at startup. When your teacher gives the signal, enter <code>kotlin</code>, close the keyboard with the device's back action if needed, and press the search button <strong>once</strong>. After the response, rows with four fields appear. If processing is fast, the loading indicator shows only for a moment."
+    },
+    {
+      "source": "比較欄は成功経路の抜粋です。実際の完成コードは <code>runCatching</code> で例外を結果にまとめ、成功と失敗を分けています。Javaのtry/catchやSwiftのdo/catchで経路を分けるのに対応します。",
+      "translation": "The comparison box shows only an excerpt of the success path. The actual completed code uses <code>runCatching</code> to wrap exceptions into a result, and handles success and failure separately. This corresponds to splitting the paths with try/catch in Java or do/catch in Swift."
+    },
+    {
+      "source": "実検索の結果が4項目の一覧になり、通信後に検索ボタンが押せる色へ戻っている。",
+      "translation": "The real search results appear as a list of rows with four fields, and after the request, the search button is back to its pressable color."
+    },
+    {
+      "source": "STEP 15 · 13コマ目 · 目安 15分",
+      "translation": "STEP 15 · Lesson 13 · About 15 min"
+    },
+    {
+      "source": "空欄・0件・失敗を画面で確かめる",
+      "translation": "Check empty input, 0 results, and failures on screen"
+    },
+    {
+      "source": "以下の通信確認も先生の合図で行います。待ち時間に同じ検索を連打しません。名前・順位・スター数の一致は確認条件にしません。",
+      "translation": "Do the following network checks on your teacher's signal, too. Do not repeat the same search over and over while you wait. Whether names, rankings, and star counts match is not part of the check."
+    },
+    {
+      "source": "操作・状態",
+      "translation": "Action or state"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "What to check on screen"
+    },
+    {
+      "source": "入力をすべて消して検索",
+      "translation": "Clear all input and search"
+    },
+    {
+      "source": "入力を促すToast。通信せず、前の一覧があれば残る。",
+      "translation": "A Toast asking for input. No network access, and any previous list stays."
+    },
+    {
+      "source": "通常の語で検索中",
+      "translation": "While searching for an ordinary word"
+    },
+    {
+      "source": "中央に通信中の印。検索ボタンは押せない。前の一覧は応答まで残る。",
+      "translation": "The loading indicator in the center. The search button cannot be pressed. The previous list stays until the response arrives."
+    },
+    {
+      "source": "<code>jec-a03-no-match-20260924-7d4a9c</code> など一致しにくい語で検索",
+      "translation": "Search for a word unlikely to match, such as <code>jec-a03-no-match-20260924-7d4a9c</code>"
+    },
+    {
+      "source": "本当に0件なら一覧が空になり「検索結果が0件でした」。結果が出たら別の長い語にする。",
+      "translation": "If there are really 0 results, the list becomes empty and 「検索結果が0件でした」 (The search found 0 results) appears. If results appear, try a different long word."
+    },
+    {
+      "source": "教員指定の存在しないユーザー条件で検索",
+      "translation": "Search with a nonexistent-user condition specified by your teacher"
+    },
+    {
+      "source": "例えば <code>user:jec-a03-user-that-does-not-exist-20260924</code>。そのユーザーが存在しなければ検索条件エラーとなり、一覧が空で「検索に失敗しました: …」のToast。",
+      "translation": "For example, <code>user:jec-a03-user-that-does-not-exist-20260924</code>. If that user does not exist, the search condition causes an error: the list is empty, and a Toast shows 「検索に失敗しました: …」 (Search failed: …)."
+    },
+    {
+      "source": "通信完了後",
+      "translation": "After the network request finishes"
+    },
+    {
+      "source": "通信中の印が消え、検索ボタンが使える。",
+      "translation": "The loading indicator disappears, and the search button can be used."
+    },
+    {
+      "source": "失敗用の例は検証時に存在しなかったユーザー名です。授業時にも同じ結果になるとは限らないので、先生が事前確認した条件を使います。ネットワーク設定を変えたり、制限に達するまで連打したりして失敗を作る必要はありません。通信環境や利用制限でも同じ失敗経路に入ります。",
+      "translation": "The failure example uses a user name that did not exist when the materials were tested. The result may not be the same during class, so use the condition your teacher checked in advance. You do not need to cause a failure by changing network settings or by pressing the button repeatedly until you reach the limit. Network problems and usage limits also lead to the same failure path."
+    },
+    {
+      "source": "一覧の0件と通信失敗は別です。0件は正しい応答の空リスト、失敗は通信やJSON変換が完了しなかった場合です。完成コードはHTTPの状態コード別に説明を出し分けていません。長いToastは画面に収まりきらないことがあります。",
+      "translation": "A list with 0 results is different from a network failure. With 0 results, a valid response contains an empty list. A failure is when the network request or the JSON conversion did not complete. The completed code does not show different messages for each HTTP status code. A long Toast may not fit on the screen."
+    },
+    {
+      "source": "Kotlinの <code>if</code> は値を返せるので、Javaの三項演算子の位置に書けます。<code>!</code> で検索ボタンの有効／無効を通信中と逆にしています。",
+      "translation": "Kotlin's <code>if</code> can return a value, so you can write it where Java uses the ternary operator. <code>!</code> makes the search button enabled or disabled, the opposite of whether a request is in progress."
+    },
+    {
+      "source": "空欄の案内、0件の空一覧、失敗の空一覧を確認し、通信後は検索ボタンが使える。",
+      "translation": "The prompt for empty input, the empty list for 0 results, and the empty list for a failure are all checked, and the search button can be used after each request."
+    },
+    {
+      "source": "STEP 16 · 13コマ目 · 目安 15分",
+      "translation": "STEP 16 · Lesson 13 · About 15 min"
+    },
+    {
+      "source": "並び順と4つのファイルを照合する",
+      "translation": "Check the sort order and the four files"
+    },
+    {
+      "source": "Spinnerで「スター数」を選んだだけでは通信しません。先生の合図で検索を1回押し、受け取った行のスター数を上から見ます。APIの既定の降順で、大きい値から並びます。同数の行の順序は固定しません。「フォーク数」も数の降順、「更新日時」は新しい順です。更新日時自体はこの画面には出ません。",
+      "translation": "Selecting 「スター数」 (Star count) in the Spinner does not send a request by itself. On your teacher's signal, press the search button once, and look at the star counts in the received rows from the top. The API sorts in descending order by default, so the largest values come first. Rows with the same count are not in a fixed order. 「フォーク数」 (Fork count) is also in descending order of count, and 「更新日時」 (Last updated) is newest first. The update time itself does not appear on this screen."
+    },
+    {
+      "source": "画面のラベル",
+      "translation": "Label on screen"
+    },
+    {
+      "source": "APIに渡す値",
+      "translation": "Value passed to the API"
+    },
+    {
+      "source": "ベストマッチ",
+      "translation": "ベストマッチ (Best match)"
+    },
+    {
+      "source": "空文字。sortパラメータを送らない。",
+      "translation": "An empty string. The sort parameter is not sent."
+    },
+    {
+      "source": "スター数",
+      "translation": "スター数 (Star count)"
+    },
+    {
+      "source": "フォーク数",
+      "translation": "フォーク数 (Fork count)"
+    },
+    {
+      "source": "更新日時",
+      "translation": "更新日時 (Last updated)"
+    },
+    {
+      "source": "パッケージに <code>MainActivity.kt</code>・<code>GithubSearchResponse.kt</code>・<code>RepositoryAdapter.kt</code>・<code>GithubApi.kt</code> があることを確認します。完成全文は、この教科書内のSTEP 07・09・13・14にあります。XMLはSTEP 03・08、設定はSTEP 02です。",
+      "translation": "Check that the package contains <code>MainActivity.kt</code>, <code>GithubSearchResponse.kt</code>, <code>RepositoryAdapter.kt</code>, and <code>GithubApi.kt</code>. The full completed code is in STEP 07, 09, 13, and 14 of this textbook. The XML is in STEP 03 and 08, and the settings are in STEP 02."
+    },
+    {
+      "source": "画面下に隠れた行は一覧を上へゆっくりスワイプして確認します。行をタップしても画面は変わりません。リポジトリ名をブラウザで開く機能はこの完成版にはありません。",
+      "translation": "To see rows hidden below the screen, slowly swipe the list up. Tapping a row does not change the screen. This completed version has no feature for opening a repository in the browser."
+    },
+    {
+      "source": "Adapterで使うのは内容の <code>==</code>。Kotlinの参照比較は <code>===</code> です。画面の各行はAPIが返したリストから作り、端末内で並べ替え直してはいません。",
+      "translation": "The Adapter uses <code>==</code>, which compares content. Kotlin's reference comparison is <code>===</code>. Each row on screen is made from the list the API returned. The app does not re-sort it on the device."
+    },
+    {
+      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
+      "translation": "When sorted by star count, the values are in descending order, and the four Kotlin files and the two XML files are saved."
+    },
+    {
+      "source": "STEP 17 · 13コマ目 · 目安 12分",
+      "translation": "STEP 17 · Lesson 13 · About 12 min"
+    },
+    {
+      "source": "アレンジできる場所を1つ試す",
+      "translation": "Try one place you can customize"
+    },
+    {
+      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "Choose one of the following, save, and Run. You can check text and padding changes on the screen before searching, or with the fixed data. For changes that need the network, wait for your teacher's signal."
+    },
+    {
       "source": "変える場所",
       "translation": "Where to change"
+    },
+    {
+      "source": "変え方の例",
+      "translation": "Example change"
+    },
+    {
+      "source": "画面で確かめる効果",
+      "translation": "Effect to check on screen"
+    },
+    {
+      "source": "<code>activity_main.xml</code> のボタンの <code>android:text</code>",
+      "translation": "The button's <code>android:text</code> in <code>activity_main.xml</code>"
+    },
+    {
+      "source": "「検索」を「リポジトリ検索」へ",
+      "translation": "Change 「検索」 (Search) to 「リポジトリ検索」 (Repository search)"
+    },
+    {
+      "source": "ボタンの文字が変わる",
+      "translation": "The button text changes"
+    },
+    {
+      "source": "<code>list_item.xml</code> の <code>android:padding</code>",
+      "translation": "<code>android:padding</code> in <code>list_item.xml</code>"
+    },
+    {
+      "source": "<code>4dp</code> を <code>12dp</code> へ",
+      "translation": "Change <code>4dp</code> to <code>12dp</code>"
+    },
+    {
+      "source": "1行の内側の余白が広がる",
+      "translation": "The padding inside each row gets wider"
+    },
+    {
+      "source": "<code>RepositoryAdapter.kt</code> の <code>\"スター数: …\"</code>",
+      "translation": "<code>\"スター数: …\"</code> in <code>RepositoryAdapter.kt</code>"
+    },
+    {
+      "source": "「スター数:」を「Star:」へ",
+      "translation": "Change 「スター数:」 (Star count:) to \"Star:\""
+    },
+    {
+      "source": "値を残したまま見出しが変わる",
+      "translation": "The label changes while the value stays"
+    },
+    {
+      "source": "<code>GithubApi.kt</code> の <code>PER_PAGE</code>",
+      "translation": "<code>PER_PAGE</code> in <code>GithubApi.kt</code>"
+    },
+    {
+      "source": "<code>30</code> を <code>10</code> へ",
+      "translation": "Change <code>30</code> to <code>10</code>"
+    },
+    {
+      "source": "十分な結果がある検索でも1回の一覧は最大10件になる",
+      "translation": "Even for a search with plenty of results, one list shows at most 10 items"
+    },
+    {
+      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "After practicing, change it back and save. You can decide for yourself which customizations to keep for your submission. Leave the ids, the SerialName values for the JSON, and the sort values for the API unchanged. <code>PER_PAGE</code> can be from 1 to 100, but this time, try 30 and 10."
+    },
+    {
+      "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
+      "translation": "Kotlin constants use <code>const val</code>, and Java uses <code>static final</code>. The value you change matches the number of items in the list. It does not change the total number of results found to 10."
+    },
+    {
+      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
+      "translation": "The effect of the change you chose appears on screen, and after practicing, the original value and display are restored and saved."
+    },
+    {
+      "source": "STEP 18 · 13コマ目 · 目安 3分",
+      "translation": "STEP 18 · Lesson 13 · About 3 min"
+    },
+    {
+      "source": "13コマ目の完成状態を確認する",
+      "translation": "Check the finished state of Lesson 13"
+    },
+    {
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "These are the last 3 minutes. Check the four fields in the rows from your search, that the loading indicator is gone, and that the search button can be pressed. Then use <strong>File → Save All</strong>. Check your own save location, which you open next time, and that the four Kotlin files are visible in the Project tool window."
+    },
+    {
+      "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
+      "translation": "This time, you pass the list from the network to the same Adapter as in Lesson 12. Getting the data and showing it in a row are split into separate files."
+    },
+    {
+      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
+      "translation": "The four fields of the search results are shown, the loading indicator is gone, and the source files and XML files are saved."
     },
     {
       "source": "見えている状態",
@@ -99,8 +1043,116 @@
       "translation": "Gradle sync fails"
     },
     {
+      "source": "STEP 02の3つのファイルが正しい場所にあるか、Panda 2かを確認します。最初の原因行を先生に見せます。",
+      "translation": "Check that the three files from STEP 02 are in the right places and that you are using Panda 2. Show your teacher the first line that shows the cause."
+    },
+    {
+      "source": "Serializableが赤い",
+      "translation": "Serializable is red"
+    },
+    {
+      "source": "STEP 02のserializationプラグインと同期、STEP 07のimportを確認します。java.io.Serializableは使いません。",
+      "translation": "Check the serialization plugin and the sync in STEP 02, and the imports in STEP 07. Do not use java.io.Serializable."
+    },
+    {
+      "source": "R.idが赤い／起動直後に閉じる",
+      "translation": "R.id is red / The app closes right after it starts"
+    },
+    {
+      "source": "2つのXMLのidと型、setContentViewの後での取得を照合します。行のViewはitemViewから探します。",
+      "translation": "Compare the ids and types in the two XML files, and check that the Views are found after setContentView. Find the Views in a row from itemView."
+    },
+    {
+      "source": "一覧が空",
+      "translation": "The list is empty"
+    },
+    {
+      "source": "STEP 09までは正常。STEP 10でlayoutManager・adapter・submitListがそろっているか見ます。STEP 14以降は検索後に結果が出ます。",
+      "translation": "This is normal up to STEP 09. In STEP 10, check that layoutManager, adapter, and submitList are all there. From STEP 14 on, results appear after you search."
+    },
+    {
+      "source": "検索しても入力のToastだけ",
+      "translation": "Searching only shows the input Toast"
+    },
+    {
+      "source": "STEP 04・10の途中コードです。STEP 14の完成コードへ進みます。",
+      "translation": "This is the in-progress code from STEP 04 or 10. Move on to the completed code in STEP 14."
+    },
+    {
+      "source": "0件という案内",
+      "translation": "A message saying there are 0 results"
+    },
+    {
+      "source": "通信は成功しています。入力語を確認し、次の検索は先生の合図を待ちます。",
+      "translation": "The network request succeeded. Check the word you entered, and wait for your teacher's signal before the next search."
+    },
+    {
+      "source": "検索に失敗した",
+      "translation": "The search failed"
+    },
+    {
+      "source": "まず連打をやめ、入力条件と回線・利用制限を先生と確認します。何度もRunすることでは制限は解除されません。",
+      "translation": "First, stop pressing the button repeatedly, and check the search condition, the network connection, and the usage limit with your teacher. Running the app again and again does not lift the limit."
+    },
+    {
+      "source": "通信中の印が見えない",
+      "translation": "You cannot see the loading indicator"
+    },
+    {
+      "source": "速い応答では一瞬です。わざと連打せず、STEP 14のsetLoadingと呼び出し順を照合します。",
+      "translation": "With a fast response, it appears only for a moment. Do not press the button repeatedly on purpose. Compare setLoading and the call order with STEP 14."
+    },
+    {
+      "source": "見本と順位・件数が違う",
+      "translation": "Rankings or counts differ from the sample"
+    },
+    {
+      "source": "GitHubのデータは変わります。4項目が表示されるかで確認します。最大30件で、全件取得ではありません。",
+      "translation": "GitHub data changes. Check whether the four fields are shown. The app gets at most 30 results, not all of them."
+    },
+    {
+      "source": "途中から再開したい",
+      "translation": "You want to resume partway through"
+    },
+    {
+      "source": "最後に画面が一致したSTEPの次から進みます。11コマ目末はSTEP 04、12コマ目末はSTEP 10の全文で照合できます。",
+      "translation": "Continue from the STEP after the last one where your screen matched. At the end of Lesson 11, you can compare your code with the full code in STEP 04, and at the end of Lesson 12, with the full code in STEP 10."
+    },
+    {
+      "source": "配布ZIPを展開した中の <code>samples/A03GithubSearch</code> をAndroid Studioの <strong>Open</strong> で開きます。<strong>This Window</strong> を選ぶ前に保存先を確認し、自分の <code>Documents/Kotlin/A03GithubSearch</code> と取り違えないようにします。見本を閉じたら自分の保存先を開き直します。",
+      "translation": "Open <code>samples/A03GithubSearch</code> in the extracted distribution ZIP with <strong>Open</strong> in Android Studio. Before you choose <strong>This Window</strong>, check the location so you do not mix it up with your own <code>Documents/Kotlin/A03GithubSearch</code>. After closing the sample, reopen the project in your own save location."
+    },
+    {
+      "source": "教科書だけを受け取った場合は <a1>A03GithubSearch.zip</a1> を保存して展開し、中の <code>A03GithubSearch</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
+      "translation": "If you received only the textbook, save <a1>A03GithubSearch.zip</a1>, extract it, and Open the <code>A03GithubSearch</code> folder inside. Do not select the ZIP itself or the app folder inside it."
+    },
+    {
+      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。通信には回線が必要で、検索回数の制限も同じです。見本はコードと動作を比べる資料です。",
+      "translation": "After the sync, select the <strong>app</strong> run configuration and <code>jec_25cm_kotlin_Pixel 9a</code>, then Run. Network access needs an internet connection, and the same search limit applies. The sample is for comparing code and behavior."
+    },
+    {
       "source": "公式資料",
       "translation": "Official documentation"
+    },
+    {
+      "source": "GitHub：リポジトリ検索APIと検索の制限",
+      "translation": "GitHub: The repository search API and search limits"
+    },
+    {
+      "source": "GitHub：認証なしのIP単位の制限",
+      "translation": "GitHub: Per-IP limits without authentication"
+    },
+    {
+      "source": "Android：RecyclerViewの役割分担",
+      "translation": "Android: How RecyclerView divides the work"
+    },
+    {
+      "source": "Ktor：JSON変換",
+      "translation": "Ktor: JSON conversion"
+    },
+    {
+      "source": "確認日：2026年9月24日 / Android Studio Panda 2 / A03GithubSearch",
+      "translation": "Last checked: September 24, 2026 / Android Studio Panda 2 / A03GithubSearch"
     }
   ]
 }

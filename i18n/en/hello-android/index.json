@@ -691,6 +691,10 @@
       "translation": "This is the full <code>MainActivity.kt</code>. Compare it with your code: where you added code, the imports, and how the brackets match up. Fix anything missing and click Run. If you are unsure, you can make the whole file match this code."
     },
     {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · Full file"
+    },
+    {
       "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
       "translation": "<code>@Override</code> is an annotation that comes from Java. In Kotlin, it is the <code>override</code> keyword that marks an override; here, the sample's way of writing it is kept as it is. The <code>Insets</code> in the padding code hold values for the four sides. In this unit, you only check what the generated part does; the whole mechanism is not covered."
     },
@@ -881,6 +885,10 @@
     {
       "source": "XMLのidとつづりを合わせます。XML側の赤いエラーも先に直します。別のRをimportしません。",
       "translation": "Make the spelling match the id in the XML. Fix any red errors on the XML side first, too. Do not import a different R."
+    },
+    {
+      "source": "起動直後に閉じる",
+      "translation": "The app closes right after launch"
     },
     {
       "source": "setContentViewより後でViewを取得したか、mainのidを残したか確認します。Logcatの赤い行を先生に見せます。",

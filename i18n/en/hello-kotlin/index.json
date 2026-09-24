@@ -539,6 +539,10 @@
       "translation": "Part of the screen"
     },
     {
+      "source": "役割",
+      "translation": "Role"
+    },
+    {
       "source": "上の言語バージョンのメニュー",
       "translation": "Language version menu at the top"
     },
@@ -2601,6 +2605,10 @@
     {
       "source": "変える場所",
       "translation": "Where to change"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "What to check on screen"
     },
     {
       "source": "使うもの",
