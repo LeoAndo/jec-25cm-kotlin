@@ -236,7 +236,7 @@
     },
     {
       "source": "この授業は、1コマ90分で、全15コマあります。前半（1コマ目から6コマ目）と後半（7コマ目から15コマ目）で、使うアプリが変わります。<strong>学校から貸し出されているMacには、IntelliJ IDEA と Android Studio の両方があらかじめ入っています。</strong>自分で入れる作業はありません。",
-      "translation": "This course has 15 lessons, each lasting 90 minutes. You will use different apps in the first part (lessons 1–6) and the second part (lessons 7–15). <strong>Both IntelliJ IDEA and Android Studio are already installed on the Macs loaned by the school.</strong> You do not need to install them yourself."
+      "translation": "This course has 15 lessons, each lasting 90 minutes. You will use different apps in the first part (Lessons 1–6) and the second part (Lessons 7–15). <strong>Both IntelliJ IDEA and Android Studio are already installed on the Macs loaned by the school.</strong> You do not need to install them yourself."
     },
     {
       "source": "使うもの",
@@ -656,7 +656,7 @@
     },
     {
       "source": "7コマ目からは、<strong>Android Studio</strong> でスマートフォンのアプリを作ります。作ったアプリは、<strong>エミュレータ</strong>（Macの中で動く練習用のAndroid端末）で動かします。",
-      "translation": "Starting in lesson 7, you will use <strong>Android Studio</strong> to build smartphone apps. You will run your apps on an <strong>emulator</strong>, a practice Android device that runs inside your Mac."
+      "translation": "Starting in Lesson 7, you will use <strong>Android Studio</strong> to build smartphone apps. You will run your apps on an <strong>emulator</strong>, a practice Android device that runs inside your Mac."
     },
     {
       "source": "この準備の段階では、<strong>エミュレータを作る必要はありません</strong>。作り方は、後半の <a1>A01：HelloAndroidのSTEP 02</a1> で先生と確認します。ここでは、使う端末の名前だけ覚えておいてください。",
@@ -704,7 +704,7 @@
     },
     {
       "source": "完成プロジェクト（先生が作った見本）の開き方",
-      "translation": "How to open the completed projects (the teacher's examples)"
+      "translation": "How to open the completed projects (the teacher's samples)"
     },
     {
       "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",

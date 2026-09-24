@@ -30,11 +30,42 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | ここで止まって確認 | Stop here and check | |
 | 公式資料 | Official documentation | |
 | もとのページ | original page | 共通資料の戻りリンク。previous page にしない（直接開くと、直前のページではなく既定の単元へ戻るため） |
+| 見本 | sample | 完成見本 → completed sample。教材の `samples` フォルダと、IntelliJ IDEA の **Add sample code** に合わせる |
+| 指定AVD | designated AVD | AVD名 `jec_25cm_kotlin_Pixel 9a` は訳さない。（指定AVDで撮影）→ (taken on the designated AVD) |
+| 完成チェック | completion check | |
+| 困ったとき | If you get stuck | サイドバーのリンク |
+| 完成プロジェクトを開く | Open the completed project | サイドバーのリンク |
+| 共通：はじめの準備 | Shared: Getting ready for class | ほかの共通資料は Shared: The assignment and the APK、Shared: A different Android Studio version |
+| アレンジ | customize / customization | |
+| 赤い波線 | red squiggly line | |
+| 確認日 | Last checked | |
+| 対象（単元の冒頭の行） | Project | 共通資料の足もとの「対象」（環境）は For |
+| Google Classroom の表示 | 授業 (Classwork)、追加または作成 (Add or create)、提出 (Turn in)、提出済み (Turned in)、提出を取り消す (Unsubmit) | 学生の画面の言語が分からないので、日本語を残して英語の表示名を添える |
 
 ## 書き方の決まり
 
 - 操作は命令形、説明と画面で確認する文は現在形で書く。
 - 見出しはsentence caseにする。通常の引用は "…"、実際の日本語UIを囲む「」は保持して意味を添える。
+- 「Nコマ目」は、本文でも見出しでも Lesson N と大文字で書く（Lessons 1–6 のように範囲も同じ）。
+- 確認欄（ここで止まって確認）は、画面で確かめられる状態を現在形で書く。すでに済んだ操作は has been checked / has been shown の形にする。「〜できた」「〜と言えた」のような振り返りの言い方にしない。
+- 教科書が日本語表示のIDEのメニュー名を書いているとき（K01のIntelliJ IDEA）は、`<strong>` の日本語を残し、英語の表示名をかっこで添える（**新規 → パッケージ** (New → Package)）。原文が英語で書いている名前は英語のまま。
+- `<code>` の中に残る日本語（学生が読み替える語、画面に出る語）は、うしろに意味を添える（`(値 = value)`、`(または = or)`、`(Nth time)`）。
+- Kotlin固有の用語を定義する文では、英語のうしろに日本語をかっこで添える（primary constructor (プライマリコンストラクタ)、smart cast (スマートキャスト)）。
+- 全角の記号はASCIIにする（`＋` → `+`、`〜` の範囲 → en dash `–`）。サイドバーの「番号＋全角スペース＋題名」の全角スペースだけは残す。
+
+## 繰り返し出る形
+
+| 日本語 | English |
+| --- | --- |
+| STEP 07 · 2コマ目 · 目安 5分 | STEP 07 · Lesson 2 · About 5 min |
+| 1コマ目 · STEP 00〜06 | Lesson 1 · STEP 00–06 |
+| ミニ練習 / 完成（STEPの題） | Mini practice / Finished code |
+| Nコマ目の完成 / Nコマ目を始める / Nコマ目のゴール（…） | Lesson N complete / Starting Lesson N / Lesson N goals (…) |
+| 次へ：… → | Next: … → |
+| src/ex01/main.kt · 完成コード / · 全体を置き換える / · ファイル全体 | · Completed code / · Replace the whole file / · Whole file |
+| Runの結果 · このN行が出れば成功 | Run output · Success if these N lines appear |
+| N / 36 ステップ確認済み | N / 36 steps checked（`config/i18n.json` の `ui.progress` と同じ） |
+| 練習A/B/C / 演習 | Practice A/B/C / exercise |
 
 ## 照合の記録
 
