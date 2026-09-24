@@ -163,16 +163,16 @@
       "translation": "成功的标志"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルの、合わせて<strong>4つ</strong>がある。",
-      "translation": "打开「書類」（文稿）中的教材文件夹，可以看到 <code>docs</code> 和 <code>samples</code> 两个文件夹，以及 <code>はじめに.txt</code> 和 <code>VERSION.json</code> 两个文件，共<strong>4项</strong>。"
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
+      "translation": "打开「書類」（文稿）中的教材文件夹，可以看到 <code>docs</code> 和 <code>samples</code> 两个文件夹，以及 <code>はじめに.txt</code> 和 <code>VERSION.json</code> 两个文件。包含翻译的版本中还有用于选择语言的入口 <code>index.html</code>，共<strong>5项</strong>。"
     },
     {
-      "source": "4つより多いことがあります",
-      "translation": "也可能超过4项"
+      "source": "<code>index.html</code> があるとき",
+      "translation": "有 <code>index.html</code> 时"
     },
     {
-      "source": "教材のフォルダに <code>index.html</code> がある場合は、そのファイルをブラウザで開き、読む言語を選びます。言語を選ぶ入口がない版では、このページをそのまま読み進めます。<strong>4つより多い分には、そのまま先へ進んで構いません。</strong>足りないときだけ、先に進まずに先生に見せてください。",
-      "translation": "如果教材文件夹中有 <code>index.html</code>，请用浏览器打开该文件，选择阅读语言。如果该版本没有语言选择入口，直接继续阅读本页即可。<strong>超过4项也可以直接继续。</strong>只有缺少内容时，才需要先停下来给老师看。"
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "用浏览器打开 <code>index.html</code>，选择阅读语言。用日语阅读时，也可以直接继续阅读本页。没有 <code>index.html</code> 的版本，直接继续阅读本页即可。<strong>只有上面4项中缺少某项时</strong>，才需要先停下来给老师看。"
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",
