@@ -42,6 +42,7 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | --- | --- | --- |
 | 教材 | materiales | los materiales |
 | 教科書 | libro de texto | |
+| 先生 / 教員 | tu docente | 冠詞の el を付けず、tu docente にそろえる（2026-09-25 オーナー決定、PR #94）。el docente だと冠詞が男性形になる。「先生が作った見本」は los ejemplos creados por tu docente |
 | 単元 | unidad | |
 | 版 | versión | |
 | 完成プロジェクト | proyecto terminado | |
@@ -156,7 +157,3 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 - 確認欄（ここで止まって確認）は、画面で確かめられる状態を現在形で書く（Aparece…、Se muestra…）。「〜できた」「〜と言えた」のような振り返りの言い方にしない。
 - Kotlin固有の用語を定義する文では、訳語のうしろに日本語をかっこで添える（constructor primario (プライマリコンストラクタ)）。
 - 全角の記号はASCIIにする（`＋` → `+`、`〜` の範囲 → en dash `–`）。サイドバーの「番号＋全角スペース＋題名」の全角スペースだけは残す。
-
-## 照合の記録
-
-まだない。最初の翻訳は #80（共通：はじめの準備）で行う。
