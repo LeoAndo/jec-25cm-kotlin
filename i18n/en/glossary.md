@@ -52,6 +52,11 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | トップレベル関数 | top-level function | 用語の表では トップレベル関数 — top-level function |
 | 再代入 | reassign | |
 | ガター | gutter | 行番号のとなりの ▷ が出る場所 |
+| 途中コード / 途中画面 | in-progress code / in-progress screen | |
+| 通信中の印 | loading indicator | |
+| 保存先 | save location | |
+| 権限 / 許可・拒否 | permission / allow・deny | エミュレータのダイアログの表示名は英語（**While using the app** など） |
+| Preview（A04） | Preview | CameraX の `Preview` を指すので大文字のまま。一般の「プレビュー」は preview |
 | Google Classroom の表示 | 授業 (Classwork)、追加または作成 (Add or create)、提出 (Turn in)、提出済み (Turned in)、提出を取り消す (Unsubmit) | 学生の画面の言語が分からないので、日本語を残して英語の表示名を添える |
 
 ## 書き方の決まり
