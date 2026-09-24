@@ -784,7 +784,7 @@
     },
     {
       "source": "<code>fun main() {</code> と閉じかっこが正しく書けているか確かめる。ファイルが <code>src</code> の下にあるかも確かめる。",
-      "translation": "<code>fun main() {</code>와 닫는 괄호를 올바르게 작성했는지 확인합니다. 파일이 <code>src</code> 아래에 있는지도 확인합니다."
+      "translation": "<code>fun main() {</code>와 닫는 중괄호를 올바르게 작성했는지 확인합니다. 파일이 <code>src</code> 아래에 있는지도 확인합니다."
     },
     {
       "source": "右上の ▶ を押すと、別のファイルが実行される",
