@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A01 HelloAndroid — Kotlinで画面を動かそう | Kotlin演習</title>
+<meta name="description" content="Android Studio Panda 2でA01HelloAndroidを作る、90分×2コマの教科書。XMLとKotlinをつなぎ、Java・Swiftと比較して学びます。">
+<link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
+<body data-progress-key="jec-kotlin-hello-android-v1"><a class="skip" href="#main">本文へ移動</a>
+<header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../hello-kotlin/index.html">← K01：HelloKotlin</a></header>
+<div class="shell"><aside class="sidebar"><p class="course-label">A01 / Android Studio</p><h2>HelloAndroid</h2>
+<div class="progress"><p data-progress-label>0 / 14 ステップ確認済み</p><progress max="14" value="0" aria-label="進捗"></progress></div><nav aria-label="目次"><ol><li><a href="#step-0">STEP 00 Android Studioを開く</a></li><li><a href="#step-1">STEP 01 自分のプロジェクトを作る</a></li><li><a href="#step-2">STEP 02 実行するエミュレータを用意する</a></li><li><a href="#step-3">STEP 03 生成されたアプリをRunする</a></li><li><a href="#step-4">STEP 04 XMLで文字とボタンを並べる</a></li><li><a href="#step-5">STEP 05 XMLの部品をKotlinから取得する</a></li><li><a href="#step-6">STEP 06 7コマ目の完成状態を確認する</a></li><li><a href="#step-7">STEP 07 8コマ目：前回のプロジェクトを開く</a></li><li><a href="#step-8">STEP 08 ボタンを押したら文字を変える</a></li><li><a href="#step-9">STEP 09 SnackbarとToastで結果を出す</a></li><li><a href="#step-10">STEP 10 Logcatで処理の順番を見る</a></li><li><a href="#step-11">STEP 11 完成コードと照合する</a></li><li><a href="#step-12">STEP 12 自分で変えられる場所を試す</a></li><li><a href="#step-13">STEP 13 8コマ目の完成状態を確認する</a></li></ol></nav><div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><span aria-current="page">A01：HelloAndroid</span><a href="../common/setup.html?from=hello-android">共通：はじめの準備</a><a href="../common/apk.html?from=hello-android">共通：提出課題とAPK</a></div></aside>
+<main id="main"><div class="hero"><p class="eyebrow">KOTLIN PROGRAMMING EXERCISES / A01</p><h1>Kotlinで<br>画面を動かそう</h1><p class="lede">XMLに置いた部品をKotlinから取得し、ボタンを押した結果を画面に出します。使うIDEはAndroid Studioです。</p><p>対象：<code>A01HelloAndroid</code> / パッケージ：<code>jp.ac.jec.a01helloandroid</code><br>7〜8コマ目・各90分 / Android Studio Panda 2 / macOS</p></div>
+<div class="goal"><p class="box-title">この単元で作るもの</p><p>文字を変更するボタンと、Snackbar・Toastを出すボタンがあるアプリ。各STEPを上から進めます。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。</p></div>
+<section id="step-0"><p class="step-meta">STEP 00 · 7コマ目 · 目安 5分</p><h2>Android Studioを開く</h2>
+<p>今回は <strong>Android Studio</strong> を使います。作るプロジェクトは <code>A01HelloAndroid</code>、実行先は <code>jec_25cm_kotlin_Pixel 9a</code> です。7コマ目で画面を作り、8コマ目でボタンを押したときの動きを書きます。</p>
+<ol><li>Finderの「アプリケーション」から <strong>Android Studio</strong> を開きます。</li><li>Welcome画面の版を見ます。この教科書の基準は <code>Panda 2</code> です。違う版なら、作り始める前に先生に画面を見せます。</li><li>ブラウザには、この教科書を開いたままにします。</li></ol>
+<p>完成すると「テキストを変更する」で見出しが変わり、「1」でSnackbar、「2」でToastが出ます。「3」は見た目を比べるためのボタンで、処理は付けません。</p>
+<figure><img src="images/initial.png" alt="完成版を起動したときの画面" width="270" height="606" loading="lazy"><figcaption>完成版を起動したときの画面（指定AVDで撮影）</figcaption></figure>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Androidでは自分で <code>main</code> を呼びません。Androidが画面を準備するときに <code>onCreate</code> を呼びます。継承したメソッドを置き換える点はJavaと同じです。この比較は読むだけで、まだ入力しません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-00"><span>Android StudioのWelcome画面と、A01の教科書が開いている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-1"><p class="step-meta">STEP 01 · 7コマ目 · 目安 15分</p><h2>自分のプロジェクトを作る</h2>
+<ol><li>Welcome画面の <strong>New Project</strong> を選びます。プロジェクトが開いている場合は <strong>File → New → New Project…</strong> です。</li><li><strong>Phone and Tablet → Empty Views Activity → Next</strong> の順に選びます。<code>Empty Activity</code> はCompose用なので、今回は選びません。</li><li>次の表のとおり入力して、<strong>Finish</strong> を押します。</li></ol>
+<table><thead><tr><th>項目</th><th>入力・選択</th></tr></thead><tbody>
+<tr><td>Name</td><td><code>A01HelloAndroid</code></td></tr>
+<tr><td>Package name</td><td><code>jp.ac.jec.a01helloandroid</code></td></tr>
+<tr><td>Save location</td><td><code>/Users/ユーザ名/Documents/Kotlin/A01HelloAndroid</code></td></tr>
+<tr><td>Language</td><td><code>Kotlin</code></td></tr>
+<tr><td>Minimum SDK</td><td><code>API 31</code>（Android 12）</td></tr>
+<tr><td>Build configuration language</td><td><code>Kotlin DSL (build.gradle.kts)</code></td></tr>
+</tbody></table>
+<p><code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。</p>
+<h3>授業で使うライブラリの版をそろえる</h3>
+<p>同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。</p>
+<div class="code-head">libs.versions.toml · 全文</div><pre id="code-libs" tabindex="0"><code>[versions]
+agp = "9.1.1"
+coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.8.0"
+material = "1.14.0"
+activity = "1.13.0"
+constraintlayout = "2.2.2"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
+</code></pre>
+<p>表示される <strong>Sync Now</strong> を押します。出ない場合は <strong>File → Sync Project with Gradle Files</strong> で同期します。進行表示が消えるまで待ちます。赤いエラーが残るときは先へ進まず、内容を先生に見せます。</p>
+<p>この手順はPanda 2用です。別の版で生成したプロジェクトに、この設定だけを入れて版を下げないでください。ほかの設定の書き方も違う場合があります。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>package jp.ac.jec.a01helloandroid
+
+class MainActivity : AppCompatActivity()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>package jp.ac.jec.a01helloandroid;
+
+public class MainActivity extends AppCompatActivity {
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinの継承は <code>:</code>、Javaは <code>extends</code> です。<code>AppCompatActivity()</code> の <code>()</code> は親のコンストラクタを呼ぶ形です。パッケージ名はファイルの所属を表し、画面に出すアプリ名とは別です。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-01"><span>自分の保存先にA01HelloAndroidがあり、Gradle同期の赤いエラーが消えている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-2"><p class="step-meta">STEP 02 · 7コマ目 · 目安 20分</p><h2>実行するエミュレータを用意する</h2>
+<ol><li><strong>Tools → Device Manager</strong> を開きます。</li><li><code>jec_25cm_kotlin_Pixel 9a</code> が既にあれば、その行の起動ボタンを押します。新しく同名端末を作る必要はありません。</li><li>なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）を選び、Phoneの一覧から <strong>Pixel 9a</strong> を選びます。</li><li>システムイメージは先生が教室で指定したものを選びます。アプリのMinimum SDKはAPI 31なので、それ以上が必要です。画像の授業用端末はAPI 37.1です。画面に候補がなければ、独自に別の機種や版を選ばず先生に見せます。</li><li>ダウンロードが必要なら完了を待ち、端末の名前を <code>jec_25cm_kotlin_Pixel 9a</code> にします。<code>Pixel</code> と <code>9a</code> の間は半角スペースです。</li><li>作成を完了して起動します。Androidのホーム画面が出るまで待ちます。</li></ol>
+<p>MacのCPUに合うイメージを使います。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code> です。見つからない項目や利用規約の画面は先生と確認してください。初回のダウンロードが長い場合は、先生の端末で画面を確認してから、指示されたところまで進めます。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p>Android Studioの実行先でAVDを選びます。Kotlinの文法ではなく、アプリを動かす端末の設定です。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>Javaで同じAndroidアプリを書いても、同じDevice ManagerとAVDを使います。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Swift / iOS</p><p>XcodeでSimulatorを実行先に選ぶ操作に相当します。端末名やOSのイメージはAndroidと別です。</p></div></div>
+<div class="note"><p class="box-title">POINT</p><p>プロジェクト名と端末名は別です。<code>A01HelloAndroid</code> を作り、<code>jec_25cm_kotlin_Pixel 9a</code> で動かします。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-02"><span>指定名のエミュレータにAndroidのホーム画面が出ている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-3"><p class="step-meta">STEP 03 · 7コマ目 · 目安 10分</p><h2>生成されたアプリをRunする</h2>
+<ol><li>上部の実行設定で <strong>app</strong>、実行先で <code>jec_25cm_kotlin_Pixel 9a</code> を選びます。</li><li>緑の <strong>Run ▶</strong> を押し、ビルドとインストールが終わるまで待ちます。</li><li>エミュレータに <code>Hello World!</code> が出たことを確かめます。この段階ではボタンはありません。</li><li>左の表示を <strong>Android</strong> にして、<code>app → kotlin+java（またはjava）→ jp.ac.jec.a01helloandroid → MainActivity</code> を開きます。Project表示なら <code>app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt</code> です。</li></ol>
+<p>この中の <code>setContentView(R.layout.activity_main)</code> が、<code>app/src/main/res/layout/activity_main.xml</code> を画面として使う指定です。上の <code>super.onCreate</code> と、<code>enableEdgeToEdge</code>・<code>ViewCompat.setOnApplyWindowInsetsListener</code> の部分は残します。ステータスバーや画面下端と内容が重ならないための生成コードです。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>setContentView(R.layout.activity_main)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>setContentView(R.layout.activity_main);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>同じAndroid APIを呼ぶので、JavaからKotlinへ変わってもXMLの名前は同じです。<code>R</code> はビルドで作られる参照用の名前で、自分で <code>R</code> というファイルは作りません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-03"><span>生成直後のアプリにHello World!が表示されている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-4"><p class="step-meta">STEP 04 · 7コマ目 · 目安 22分</p><h2>XMLで文字とボタンを並べる</h2>
+<ol><li><code>app → res → layout → activity_main.xml</code> を開きます。</li><li>エディタ右上の <strong>Code</strong> を選びます。アイコンだけの場合は、マウスを重ねてCodeを探します。</li><li>内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。</li></ol>
+<div class="code-head">activity_main.xml · 全文</div><pre id="code-layout" tabindex="0"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;TextView
+        android:id="@+id/text"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" /&gt;
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="テキストを変更する" /&gt;
+
+    &lt;LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"&gt;
+
+        &lt;Button
+            android:id="@+id/btn1"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" /&gt;
+
+        &lt;Button
+            android:id="@+id/btn2"
+            style="@style/Widget.Material3Expressive.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:text="2" /&gt;
+
+        &lt;Button
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" /&gt;
+    &lt;/LinearLayout&gt;
+
+&lt;/LinearLayout&gt;</code></pre>
+<ol start="4"><li>Runを押して、見出し・変更ボタン・1〜3のボタンが出ることを確認します。</li><li>まだ処理は書いていないので、押しても見出しやメッセージは変わりません。</li></ol>
+<figure><img src="images/initial.png" alt="文字と4つのボタンを並べた画面" width="270" height="606" loading="lazy"><figcaption>文字と4つのボタンを並べた画面（指定AVDで撮影）</figcaption></figure>
+<table><thead><tr><th>設定</th><th>この画面での役割</th></tr></thead><tbody><tr><td><code>orientation="vertical"</code></td><td>外側で上から順に並べる。内側のhorizontalは1〜3を横に並べる。</td></tr><tr><td><code>match_parent</code> / <code>wrap_content</code></td><td>親の領域を使う／内容に必要な大きさにする。</td></tr><tr><td><code>gravity="center"</code></td><td>中の部品を中央に置く。</td></tr><tr><td><code>12dp</code></td><td>部品の間隔。密度が違う端末でも大きさをそろえる単位。</td></tr><tr><td><code>style</code></td><td>ライブラリにある見た目を指定する。1〜3の違いもここで作る。</td></tr></tbody></table>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p>見た目はXML、動きはKotlinに書きます。<code>@+id/text</code> が部品に付けた名前です。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>このXMLを変更せずに使えます。XMLはKotlin専用ではありません。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Swift / UIKit</p><p>Storyboardで部品を配置する役割に近いですが、ここではXMLを文字で編集します。接続の方法は次のSTEPで書きます。</p></div></div>
+<div class="note"><p class="box-title">POINT</p><p>外側の <code>android:id="@+id/main"</code> は生成された余白処理が使います。<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> も、次のKotlinの名前と1文字ずつ合わせます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-04"><span>見出しと「テキストを変更する」、1・2・3のボタンが並んでいる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-5"><p class="step-meta">STEP 05 · 7コマ目 · 目安 15分</p><h2>XMLの部品をKotlinから取得する</h2>
+<p><code>MainActivity.kt</code> を開きます。<code>onCreate</code> 内の余白処理を閉じる <code>})</code>（生成直後なら <code>}</code>）のあとに、次の4行を追加します。<code>onCreate</code> を閉じる最後のかっこの手前です。</p>
+<div class="code-head">MainActivity.kt · onCreateの中に追加</div><pre tabindex="0"><code>        val text: TextView = findViewById(R.id.text)
+        val button: Button = findViewById(R.id.button)
+        val btn1: Button = findViewById(R.id.btn1)
+        val btn2: Button = findViewById(R.id.btn2)</code></pre>
+<p><code>TextView</code> と <code>Button</code> が赤くなったら、ファイル上部のimportに次を足します。同じimportは重ねて書きません。</p>
+<div class="code-head">MainActivity.kt · packageのあと</div><pre tabindex="0"><code>import android.widget.Button
+import android.widget.TextView</code></pre>
+<p>Runして同じ画面が出ることを確かめます。<code>findViewById</code> は表示済みの部品を取得するだけなので、まだ押したときの動きはありません。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val text: TextView = findViewById(R.id.text)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>TextView text = findViewById(R.id.text);</code></pre>
+</div></div>
+<p>SwiftのUIKitで <code>IBOutlet</code> をつないでラベルを参照する役割に近い処理です。AndroidではXMLのidを指定して取得します。<code>val</code> は参照の入れ替えを止めますが、参照したViewの文字は変更できます。</p>
+<div class="note"><p class="box-title">POINT</p><p>順番は <code>setContentView</code> → <code>findViewById</code> です。XMLを読み込む前に部品を探さないようにします。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-05"><span>4つのidの参照に赤い波線がなく、Runすると同じ画面が出ている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-6"><p class="step-meta">STEP 06 · 7コマ目 · 目安 3分</p><h2>7コマ目の完成状態を確認する</h2>
+<p>最後の3分です。XMLに <code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> があり、Kotlinに4つの <code>findViewById</code> があることを確認します。Runして、見出しと4つのボタンを見ます。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val btn1: Button = findViewById(R.id.btn1)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>Button btn1 = findViewById(R.id.btn1);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>次回は同じ <code>Documents/Kotlin/A01HelloAndroid</code> を開きます。新規作成はしません。書いた内容はAndroid Studioが保存します。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-06"><span>自分のA01HelloAndroidで見出しと4つのボタンが表示されている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-7"><p class="step-meta">STEP 07 · 8コマ目 · 目安 5分</p><h2>8コマ目：前回のプロジェクトを開く</h2>
+<ol><li>Android Studioの最近使ったプロジェクトから <code>A01HelloAndroid</code> を開きます。なければ <strong>Open</strong> で <code>Documents/Kotlin/A01HelloAndroid</code> を選びます。</li><li>実行先を <code>jec_25cm_kotlin_Pixel 9a</code> にしてRunします。</li><li>見出しと4つのボタンを確認し、<code>MainActivity.kt</code> を開きます。</li></ol>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val button: Button = findViewById(R.id.button)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>Button button = findViewById(R.id.button);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>前回取得した <code>button</code> に、今回はクリックの処理を付けます。部品をもう一度作ったり、同じidをもう一度取得したりはしません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-07"><span>前回の画面が出て、MainActivity.ktに4つのView取得が残っている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-8"><p class="step-meta">STEP 08 · 8コマ目 · 目安 20分</p><h2>ボタンを押したら文字を変える</h2>
+<p><code>onCreate</code> の4つのView取得のあとに、次を足します。まだLogの行は書きません。</p>
+<div class="code-head">MainActivity.kt · View取得のあと</div><pre tabindex="0"><code>        button.setOnClickListener({ v -&gt;
+            text.text = "Hello, Android!"
+        })</code></pre>
+<ol><li>Runします。</li><li>「テキストを変更する」を押します。見出しが <code>Hello, Android!</code> に変わります。</li><li>もう一度押しても同じ文字です。<code>text.text</code> に同じ値を入れているためです。</li></ol>
+<figure><img src="images/changed.png" alt="ボタンを押してHello, Android!に変わった画面" width="270" height="606" loading="lazy"><figcaption>ボタンを押してHello, Android!に変わった画面（指定AVDで撮影）</figcaption></figure>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>button.setOnClickListener({ v -&gt;
+    text.text = "Hello, Android!"
+})</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>button.setOnClickListener(v -&gt; {
+    text.setText("Hello, Android!");
+});</code></pre>
+</div></div>
+<p><code>{ v -&gt; … }</code> はクリックされたときに実行するラムダです。<code>v</code> は押されたViewです。この処理では使いませんが、次のSnackbarで使います。Swiftのボタンのアクションにクロージャを渡す考え方にも対応します。</p>
+<div class="note"><p class="box-title">POINT</p><p>KotlinではJavaの <code>setText</code> を <code>text.text = …</code> と書けます。ラムダは登録した時点では動かず、ボタンが押されたときに動きます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-08"><span>ボタンを押したあと、見出しがHello, Android!になっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-9"><p class="step-meta">STEP 09 · 8コマ目 · 目安 20分</p><h2>SnackbarとToastで結果を出す</h2>
+<p><code>button</code> のクリック処理を閉じる <code>})</code> のあと、<code>onCreate</code> の中に次の2つの処理を足します。上の処理の内側には入れません。</p>
+<div class="code-head">MainActivity.kt · 2つのクリック処理</div><pre tabindex="0"><code>        btn1.setOnClickListener({ v -&gt;
+            val btn1Str = btn1.getText().toString()
+            Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show()
+        })
+        btn2.setOnClickListener({ v -&gt;
+            val btn2Str = btn2.getText().toString()
+            Toast.makeText(this, btn2Str, Toast.LENGTH_SHORT).show()
+        })</code></pre>
+<div class="code-head">MainActivity.kt · importに追加</div><pre tabindex="0"><code>import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar</code></pre>
+<ol><li>Runして「1」を押します。画面下に <code>1</code> のSnackbarが出て、しばらくすると消えます。</li><li>消えてから「2」を押します。<code>2</code> のToastが出ます。OSによりアイコンや形が違う場合があります。</li><li>「3」を押します。処理を登録していないので、メッセージは出ません。</li></ol>
+<figure><img src="images/snackbar.png" alt="1を押したときのSnackbar" width="270" height="606" loading="lazy"><figcaption>1を押したときのSnackbar（指定AVDで撮影）</figcaption></figure>
+<figure><img src="images/toast.png" alt="2を押したときのToast" width="270" height="606" loading="lazy"><figcaption>2を押したときのToast（指定AVDで撮影）</figcaption></figure>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show()
+Toast.makeText(this, btn2Str, Toast.LENGTH_SHORT).show()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show();
+Toast.makeText(this, btn2Str, Toast.LENGTH_SHORT).show();</code></pre>
+</div></div>
+<p><code>getText()</code> は文字の表示内容を返し、<code>toString()</code> で文字列にします。KotlinでもJavaのメソッドをそのまま呼べます。<code>this</code> はこの <code>MainActivity</code>、<code>v</code> は押したボタンです。SnackbarはViewを手がかりに表示先を探し、ToastにはContextとしてActivityを渡します。</p>
+<div class="note"><p class="box-title">POINT</p><p>メッセージを作っただけでは表示されません。最後の <code>.show()</code> まで書きます。利用者に知らせる結果は画面に出し、Logcatだけで済ませません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-09"><span>1のSnackbarと2のToastを確認し、3ではメッセージが出ない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-10"><p class="step-meta">STEP 10 · 8コマ目 · 目安 15分</p><h2>Logcatで処理の順番を見る</h2>
+<p>画面への表示は残したまま、開発中の確認用にLogcatへ文字を出します。上部に <code>import android.util.Log</code> を足します。</p>
+<p>4つのView取得のあと、<code>button.setOnClickListener</code> の前に次の2行を足します。</p>
+<div class="code-head">onCreate · クリック処理の外</div><pre tabindex="0"><code>        val string = text.getText().toString()
+        Log.d("MainActivity", string)</code></pre>
+<p>次は <code>button</code> のクリック処理の中です。<code>text.text = "Hello, Android!"</code> の直後に2行足します。</p>
+<div class="code-head">buttonのクリック処理 · 文字を変えた直後</div><pre tabindex="0"><code>            val updateString = text.getText().toString()
+            Log.d("MainActivity", updateString)</code></pre>
+<ol><li><strong>View → Tool Windows → Logcat</strong> を開きます。</li><li>端末に <code>jec_25cm_kotlin_Pixel 9a</code> を選び、検索欄に <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code> と入力します。</li><li>実行中ならStop（■）で止めてからRunします。最新の <code>Hello World!</code> の行を確認します。</li><li>「テキストを変更する」を押し、最新の <code>Hello, Android!</code> の行を確認します。</li></ol>
+<p>時刻やプロセス番号は毎回変わります。比べるのはメッセージの部分です。過去の実行の行が残っていたら、最新の時刻を見ます。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>Log.d("MainActivity", updateString)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>Log.d("MainActivity", updateString);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>外側のLogは画面の準備時、ラムダ内のLogはクリック時に出ます。Logcatは開発者向けです。アプリを使う人は画面の文字・Snackbar・Toastで結果を見ます。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>最新の起動ログにHello World!、クリック後のログにHello, Android!が出ている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-11"><p class="step-meta">STEP 11 · 8コマ目 · 目安 10分</p><h2>完成コードと照合する</h2>
+<p><code>MainActivity.kt</code> の全文です。追加した処理の位置・import・かっこの対応を、自分のコードと照合します。足りない部分を直してRunします。迷ったときはファイル全体をこのコードにそろえられます。</p>
+<div class="code-head">MainActivity.kt · 全文</div><pre id="code-main" tabindex="0"><code>package jp.ac.jec.a01helloandroid
+
+import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.Insets
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
+
+class MainActivity : AppCompatActivity() {
+    @Override
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), { v, insets -&gt;
+            val systemBars: Insets = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        })
+
+        val text: TextView = findViewById(R.id.text)
+        val button: Button = findViewById(R.id.button)
+        val btn1: Button = findViewById(R.id.btn1)
+        val btn2: Button = findViewById(R.id.btn2)
+
+        val string = text.getText().toString()
+        Log.d("MainActivity", string)
+
+        button.setOnClickListener({ v -&gt;
+            text.text = "Hello, Android!"
+            val updateString = text.getText().toString()
+            Log.d("MainActivity", updateString)
+        })
+
+        btn1.setOnClickListener({ v -&gt;
+            val btn1Str = btn1.getText().toString()
+            Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show()
+        })
+        btn2.setOnClickListener({ v -&gt;
+            val btn2Str = btn2.getText().toString()
+            Toast.makeText(this, btn2Str, Toast.LENGTH_SHORT).show()
+        })
+    }
+}</code></pre>
+<p><code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val string = text.getText().toString()
+text.text = "Hello, Android!"</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>String string = text.getText().toString();
+text.setText("Hello, Android!");</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。見本の <code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに比較します。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-12"><p class="step-meta">STEP 12 · 8コマ目 · 目安 17分</p><h2>自分で変えられる場所を試す</h2>
+<p>ここまでに扱った場所から、1つ選んで変更します。先に元の文字や数値を控え、1か所変えるごとにRunします。次の例と同じにする必要はありません。</p>
+<table><thead><tr><th>変える場所</th><th>例</th><th>変わるもの</th></tr></thead><tbody>
+<tr><td>XMLのTextViewの <code>android:text</code></td><td><code>Hello World!</code> を自分のあいさつにする</td><td>起動時の見出しと起動時のLog。</td></tr>
+<tr><td>Kotlinの <code>text.text = …</code></td><td><code>Hello, Android!</code> を別の言葉にする</td><td>変更ボタンを押したあとの見出しとLog。</td></tr>
+<tr><td>XMLのbtn1・btn2の <code>android:text</code></td><td><code>1</code>・<code>2</code> を短い言葉にする</td><td>ボタンの表示と、そのボタンから出すメッセージ。</td></tr>
+<tr><td>XMLの <code>layout_marginTop</code></td><td><code>12dp</code> を <code>24dp</code> にする</td><td>縦の間隔。</td></tr>
+</tbody></table>
+<p>idやパッケージ名は変えません。たとえばbtn1の文字だけを変えると、<code>getText()</code> がその文字を読むので、Snackbarの文言も一緒に変わります。</p>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val btn1Str = btn1.getText().toString()
+Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>String btn1Str = btn1.getText().toString();
+Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show();</code></pre>
+</div></div>
+<h3>比較できる状態に戻す</h3><p>変えたところを元に戻し、RunしてSTEP 11の動きに戻ることを確かめます。自分のアレンジは、あとで選んで続けられます。提出で使うときは、サイドバーの「共通：提出課題とAPK」に、コピーと提出の手順があります。</p>
+<div class="note"><p class="box-title">POINT</p><p>XMLの初期表示とKotlinで押したあとに代入する文字は別です。どちらを変えたかによって、変化するタイミングが違います。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-12"><span>変更した場所の効果を画面で確かめ、元の文字と間隔に戻っている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-13"><p class="step-meta">STEP 13 · 8コマ目 · 目安 3分</p><h2>8コマ目の完成状態を確認する</h2>
+<p>最後の3分です。Stop→Runで開き直し、次の順に確認します。</p><ol><li>見出しが <code>Hello World!</code>。</li><li>変更ボタンで <code>Hello, Android!</code>。</li><li>「1」でSnackbar、「2」でToast。</li><li>Logcatにも起動時と変更後の文字が出る。</li></ol>
+<h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>text.text = "Hello, Android!"</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>text.setText("Hello, Android!");</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。完成見本をそのまま提出する形にはしません。</p></div>
+<div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="sample-project"><h2>完成プロジェクトを開く</h2><p>見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。</p><p>比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。</p><p>見本のフォルダがない配布形態では、<a href="downloads/A01HelloAndroid.zip">完成プロジェクトZIP</a>を受け取り、展開したフォルダをOpenします。</p></section>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>起きたこと</th><th>確かめる場所</th></tr></thead><tbody>
+<tr><td>activity_main.xmlがない</td><td>Empty ActivityではなくEmpty Views Activityを選んだか確認。作り直す前に先生に見せます。</td></tr>
+<tr><td>Gradle同期が終わらない／赤い</td><td>通信とSTEP 01の設定。別のStudio版なら設定を次々変えず、エラーの先頭を先生に見せます。</td></tr>
+<tr><td>実行先がない</td><td>STEP 02のDevice Managerで指定AVDを起動します。</td></tr>
+<tr><td>R.idが赤い</td><td>XMLのidとつづりを合わせます。XML側の赤いエラーも先に直します。別のRをimportしません。</td></tr>
+<tr><td>起動直後に閉じる</td><td>setContentViewより後でViewを取得したか、mainのidを残したか確認します。Logcatの赤い行を先生に見せます。</td></tr>
+<tr><td>文字が変わらない</td><td>buttonのクリック処理がonCreate内で、ほかのクリック処理の外にあるか確認。Runして最新のコードを端末に入れます。</td></tr>
+<tr><td>Snackbar／Toastが出ない</td><td>1または2を押したか、show()まで書いたか確認。3には処理を付けていません。</td></tr>
+<tr><td>Logcatに出ない</td><td>STEP 10の端末と検索欄を確認し、Stop→Runとクリックをやり直します。</td></tr>
+<tr><td>黄色い注意が出る</td><td>エラーと区別し、該当行を先生に見せます。Suppressで隠しません。未使用のvやXMLの文字を直接書くことへの提案は、教材の完成コードにもある書き方です。</td></tr>
+</tbody></table><p>質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。</p></section>
+<section><h2>公式資料</h2><ul><li><a href="https://developer.android.com/studio/projects/create-project">Android Studio：プロジェクトの作成</a></li><li><a href="https://developer.android.com/studio/run/managing-avds">仮想デバイスの作成と管理</a></li><li><a href="https://developer.android.com/develop/ui/views/notifications/snackbar/showing">Snackbarの表示</a></li><li><a href="https://developer.android.com/studio/debug/logcat">Logcat</a></li></ul></section>
+<footer class="footer"><p>画面は <code>jec_25cm_kotlin_Pixel 9a</code> のライトテーマで確認。時刻・OSの表示は環境によって異なります。確認日：2026年9月24日。</p><p>チェックは自分用で送信されません。JavaScriptが無効でも本文とコードは読めます。印刷は ⌘ P。</p></footer></main></div><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
