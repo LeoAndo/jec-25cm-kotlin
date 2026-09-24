@@ -163,16 +163,16 @@
       "translation": "성공 여부 확인"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルの、合わせて<strong>4つ</strong>がある。",
-      "translation": "「書類」(문서) 안의 폴더를 열면 <code>docs</code>와 <code>samples</code>라는 폴더 두 개, <code>はじめに.txt</code>와 <code>VERSION.json</code>이라는 파일 두 개가 있어 모두 <strong>네 개</strong>입니다."
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
+      "translation": "「書類」(문서) 안의 폴더를 열면 <code>docs</code>와 <code>samples</code>라는 폴더 두 개, <code>はじめに.txt</code>와 <code>VERSION.json</code>이라는 파일 두 개가 있습니다. 번역이 포함된 버전에는 언어를 선택하는 시작 페이지인 <code>index.html</code>도 있어 모두 <strong>다섯 개</strong>입니다."
     },
     {
-      "source": "4つより多いことがあります",
-      "translation": "네 개보다 많을 수도 있습니다"
+      "source": "<code>index.html</code> があるとき",
+      "translation": "<code>index.html</code>이 있을 때"
     },
     {
-      "source": "教材のフォルダに <code>index.html</code> がある場合は、そのファイルをブラウザで開き、読む言語を選びます。言語を選ぶ入口がない版では、このページをそのまま読み進めます。<strong>4つより多い分には、そのまま先へ進んで構いません。</strong>足りないときだけ、先に進まずに先生に見せてください。",
-      "translation": "교재 폴더에 <code>index.html</code>이 있으면 브라우저에서 해당 파일을 열고 읽을 언어를 선택합니다. 언어를 선택하는 시작 페이지가 없는 버전에서는 이 페이지를 그대로 읽어 나갑니다. <strong>네 개보다 많다면 그대로 다음 단계로 진행해도 됩니다.</strong> 부족할 때만 다음 단계로 진행하지 않고 선생님께 보여 드립니다."
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "<code>index.html</code>을 브라우저에서 열고 읽을 언어를 선택합니다. 일본어로 읽을 때는 이 페이지를 그대로 읽어 나가도 됩니다. <code>index.html</code>이 없는 버전에서는 이 페이지를 그대로 읽어 나갑니다. <strong>위의 네 개 중 빠진 것이 있을 때만</strong> 다음 단계로 진행하지 않고 선생님께 보여 드립니다."
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",

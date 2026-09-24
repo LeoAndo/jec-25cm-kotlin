@@ -260,7 +260,7 @@
     },
     {
       "source": "なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）を選び、Phoneの一覧から <strong>Pixel 9a</strong> を選びます。",
-      "translation": "If it does not exist, select <strong>＋ → Create Virtual Device</strong> (or <strong>Create Device</strong>), then select <strong>Pixel 9a</strong> from the Phone list."
+      "translation": "If it does not exist, select <strong>+ → Create Virtual Device</strong> (or <strong>Create Device</strong>), then select <strong>Pixel 9a</strong> from the Phone list."
     },
     {
       "source": "システムイメージは先生が教室で指定したものを選びます。アプリのMinimum SDKはAPI 31なので、それ以上が必要です。画像の授業用端末はAPI 37.1です。画面に候補がなければ、独自に別の機種や版を選ばず先生に見せます。",
