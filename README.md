@@ -43,7 +43,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。IntelliJ IDEA か Android Studio の Open で `samples/K01HelloKotlin` のように選ぶだけで開け、初回から参考資料として使えます（各教科書からZIPでも受け取れます）。
 
-学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。**いまは日本語だけの構成で配布します。** 展開してできたフォルダの中身は `docs` / `samples` / `はじめに.txt` / `VERSION.json` の4つで、言語を選ぶ入口はありません。`config/i18n.json` の8言語がすべて `distribute: false` のためです（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、言語を選ぶ入口の `index.html` がZIPに入り、`はじめに.txt` にも各言語の案内が付きます。`teacher` フォルダと、教員が確認に使うひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
+学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。**日本語と英語の構成で配布します**（英語は2026-09-25に `distribute: true` にした。#56）。展開してできたフォルダの中身は、言語を選ぶ入口の `index.html` と `docs` / `samples` / `はじめに.txt` / `VERSION.json` の5つです。英語の教科書は `docs/en/` に入り、`はじめに.txt` にも英語の案内が付きます。ほかの7言語は `distribute: false` なので入りません（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、その言語も入口と `はじめに.txt` に加わります。`teacher` フォルダと、教員が確認に使うひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
 授業中は教員が指定した版を使います。授業ごとの案内には、内容が固定された個別リリースのURLを使ってください。更新版は別フォルダに展開し、学生自身のプロジェクトは上書きしません。
 
@@ -270,11 +270,11 @@ python3 scripts/package-student-materials.py
 
 日本語で書いた教科書（`docs/`）を、配布前に学生の母国語へ展開します。対象は、日本語のほかに次の8言語です。台湾華語・スペイン語・アラビア語は、2026-09の学生アンケート（母国語の確認）で加えました。
 
-**いまは8言語とも `config/i18n.json` の `distribute` が `false` です。** 翻訳がまだ1文もないため、配布対象にすると公開ゲートで止まります。初回翻訳と、別のAIによる独立した照合まで終わった言語から、その言語だけ `distribute` を `true` に上げてください。配布対象にした言語は、ZIPを作るときに `docs/<言語>/` へ生成されます。対象が0言語のあいだは、言語の入口や翻訳HTMLは追加せず、日本語だけの構成で配布します。
+**いまは英語だけが `config/i18n.json` の `distribute: true` です**（2026-09-25。全ページの翻訳と、別のAIによる照合が済んだ。照合の記録は `i18n/en/glossary.md`）。ほかの7言語は `false` です（翻訳が途中か、まだ始まっていない）。未翻訳のある言語を配布対象にすると、公開ゲートで止まります。初回翻訳と、別のAIによる独立した照合まで終わった言語から、その言語だけ `distribute` を `true` に上げてください。配布対象にした言語は、ZIPを作るときに `docs/<言語>/` へ生成されます。対象が0言語のあいだは、言語の入口や翻訳HTMLは追加せず、日本語だけの構成で配布します。
 
 | 言語 | コード | `distribute` | 書き方 |
 | --- | --- | --- | --- |
-| 英語 | `en` | `false` | |
+| 英語 | `en` | `true` | |
 | 中国語 | `zh-Hans` | `false` | 簡体字 |
 | 韓国語 | `ko` | `false` | |
 | ミャンマー語 | `my` | `false` | Unicode |
