@@ -317,7 +317,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 </code></pre>
-<table><thead><tr><th>場所</th><th>画面とのつながり</th></tr></thead><tbody><tr><td><code>lateinit var</code></td><td>Javaで後から代入するフィールドに対応。findViewByIdで代入してから読む。</td></tr><tr><td><code>SORT_ITEMS</code></td><td>左が表示文字、右が後でAPIへ送る値。toでPairを作る。</td></tr><tr><td><code>map { it.first }</code></td><td>表示文字だけのリストを作る。itは各Pair。</td></tr><tr><td><code>apply { … }</code></td><td>生成したArrayAdapterを設定して、その同じオブジェクトを返す。</td></tr><tr><td><code>trim().orEmpty()</code></td><td>前後の空白を除き、nullなら空文字にする。</td></tr><tr><td><code>search()</code></td><td>空なら案内、入力があればその文字をToastに出す。まだ通信しない。</td></tr></tbody></table>
+<table><thead><tr><th>場所</th><th>画面とのつながり</th></tr></thead><tbody><tr><td><code>lateinit var</code></td><td>Javaで後から代入するフィールドに対応。findViewByIdで代入してから読む。</td></tr><tr><td><code>SORT_ITEMS</code></td><td>左が表示文字、右が後でAPIへ送る値。<code>to</code> でPairを作る。</td></tr><tr><td><code>map { it.first }</code></td><td>表示文字だけのリストを作る。<code>it</code> は各Pair。</td></tr><tr><td><code>apply { … }</code></td><td>生成したArrayAdapterを設定して、その同じオブジェクトを返す。</td></tr><tr><td><code>trim().orEmpty()</code></td><td>前後の空白を除き、nullなら空文字にする。</td></tr><tr><td><code>search()</code></td><td>空なら案内、入力があればその文字をToastに出す。まだ通信しない。</td></tr></tbody></table>
 <p>RunしてSpinnerを開き、4つの選択肢を確認します。入力欄に <code>kotlin</code> を入れ、必要なら端末の戻る操作でキーボードを閉じて検索を押します。「入力: kotlin」が短く出ます。入力を消すと「検索ワードを入力してください」です。</p>
 <figure><img src="images/initial.png" alt="完成版の起動画面。11コマ目も選択肢を作ると同じ形になる" width="270" height="606" loading="lazy"><figcaption>完成版の起動画面。11コマ目も選択肢を作ると同じ形になる（指定AVDで撮影）</figcaption></figure>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val labels = SORT_ITEMS.map { it.first }
