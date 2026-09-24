@@ -259,7 +259,7 @@
 - 対応必要の指摘を直したら、検証してコミットし、「修正しました：<sha> …」と検証結果を返信する。立場が変わらない返信は繰り返さない。
 - マージ可否は、理由・CIの状態・未対応や未確認の項目を添えて報告する。マージするのは、オーナーに任されているときだけ。そのときも、CIとレビューbotが落ち着き、全指摘に返信済みで、`mergeStateStatus` が `CLEAN` であることを確かめてから、マージコミットでマージする（squashしない）。auto-mergeは有効にしない。
 
-### レビューbotの実測（2026-09-23）
+### レビューbotの実測（2026-09-23、2026-09-24）
 
 対象は [PR #1](https://github.com/LeoAndo/jec-25cm-kotlin/pull/1)・[PR #4](https://github.com/LeoAndo/jec-25cm-kotlin/pull/4)・[PR #7](https://github.com/LeoAndo/jec-25cm-kotlin/pull/7)。PR #7は `c36853e` 時点。所要時間と上限は、その時点の契約・残り枠による実測であり、今後の動作を保証するものではない。
 
@@ -272,8 +272,22 @@
 
 - **チェックの `SUCCESS` やレビュー投稿の存在だけで、レビュー済みと判断しない。** チェックの説明・レビュー本文・対象コミットを読む。Devin Reviewの未実施通知やCodeRabbitの上限通知を、指摘なしのレビューと取り違えない。
 - **CodeRabbitが `PENDING` のまま止まると、`mergeStateStatus` が `CLEAN` にならない場合がある。** [PR #1のマージ時点の記録](https://github.com/LeoAndo/jec-25cm-kotlin/pull/1#issuecomment-5793899227)がこの例である。レビュー投稿なしで止まっていることをマージ可否の報告に書き、オーナーに判断を仰ぐ。
-- **BugbotとCodeRabbitはPR本文に要約を追記する。** 本文を変更するときは、チェックが終わってから現在の本文を取り直し、両botの要約ブロックを残して該当箇所だけ変更する。
+- **BugbotとCodeRabbitはPR本文に要約を追記する**（CodeRabbitは、上限で止まっている回は追記しない）。本文を変更するときは、チェックが終わってから現在の本文を取り直し、両botの要約ブロックを残して該当箇所だけ変更する。
 - 契約・上限・動作が変わったら、この表を更新するissueを立てる（§6）。実測せずに、ほかのリポジトリの表を写さない。
+
+#### 2026-09-24の実測（CodeRabbitが上限で止まった回）
+
+対象は [PR #42](https://github.com/LeoAndo/jec-25cm-kotlin/pull/42)（`9ff8668`）・[PR #49](https://github.com/LeoAndo/jec-25cm-kotlin/pull/49)（`268f02b`）。どちらもDraftのうちに本文を仕上げてから解除した。
+
+| bot | Draft中 | Draft解除後 | 実際の指摘 | PR本文への追記 |
+| --- | --- | --- | --- | --- |
+| Cursor Bugbot | PR #42ではチェックなし | PR #42は解除から約3分、PR #49は約2分で `SUCCESS` | 両PRとも指摘なし | 両PRとも `<!-- CURSOR_SUMMARY -->` の要約を追記 |
+| CodeRabbit | `SUCCESS / Review skipped: draft pull request`。PRコメント「Draft PR not reviewed」に「Trigger a manual review」のチェックボックスが付く | 解除とほぼ同時に `SUCCESS / Review rate limited`。同じPRコメントが「Review paused — included plan limit reached」に書き換わり、チェックボックスが2つ付く（下の注意）。次の枠までの待ち時間は、PR #42で26分、PR #49で8分と表示 | 両PRともレビュー投稿なし | なし |
+| Devin Review | PR #42ではチェックなし | 両PRとも `SUCCESS / Full review skipped: trial expired and no credits remaining` | レビュー未実施 | なし |
+| Copilot | PR #42ではレビュー投稿なし | 両PRとも、クォータ上限による未実施通知をレビューとして投稿 | レビュー未実施 | なし |
+
+- **CodeRabbitのコメントにあるチェックボックスは押さない。** 「Run this review for free」はオンデマンドレビューで、2026-09-24の表示では16日間は無料、そのあとは1ファイル0.25ドルかかる。「Ask an admin to make reviews automatic」は管理者への依頼である。どちらも課金や契約に関わるので、使うかどうかはオーナーが決める。Draft中の「Trigger a manual review」も押さない（レビューの枠を使ううえ、Draftを外してからレビューを受けるこの節の進め方と合わない）。
+- 表示された待ち時間が過ぎたあと、自動でレビューが始まるかは未確認。PR #42はオーナーの指示で、PR #49は同じ日の続きの作業として、CodeRabbitを待たずにマージした。この指示はその日の作業に限ったもので、恒久の規則ではない。上限で止まっているときは、これまでどおりマージ可否の報告にそう書き、待つかどうかをオーナーに聞く。
 
 ## 9. 新しい単元を追加するとき
 
