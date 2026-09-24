@@ -1,0 +1,42 @@
+{
+  "source": "docs/common/apk.html",
+  "language": "ar",
+  "entries": [
+    {
+      "source": "本文へ移動",
+      "translation": "الانتقال إلى المحتوى الرئيسي"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / تمارين Kotlin"
+    },
+    {
+      "source": "もとのページへ戻る",
+      "translation": "العودة إلى الصفحة الأصلية"
+    },
+    {
+      "source": "KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート",
+      "translation": "KOTLIN PROGRAMMING EXERCISES / المواد المشتركة ودعم الحصص"
+    },
+    {
+      "source": "すること",
+      "translation": "ما عليك فعله"
+    },
+    {
+      "source": "成功の目印",
+      "translation": "ما يجب أن تراه"
+    },
+    {
+      "source": "やってみること",
+      "translation": "ما تجربه"
+    },
+    {
+      "source": "公式資料",
+      "translation": "الوثائق الرسمية"
+    },
+    {
+      "source": "← もとのページへ戻る",
+      "translation": "→ العودة إلى الصفحة الأصلية"
+    }
+  ]
+}
