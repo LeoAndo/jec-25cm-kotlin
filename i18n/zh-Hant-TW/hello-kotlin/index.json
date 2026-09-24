@@ -1,0 +1,41 @@
+{
+  "source": "docs/hello-kotlin/index.html",
+  "language": "zh-Hant-TW",
+  "entries": [
+    {
+      "source": "本文へ移動",
+      "translation": "跳到主要內容"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / Kotlin 程式實作"
+    },
+    {
+      "source": "項目",
+      "translation": "項目"
+    },
+    {
+      "source": "場所",
+      "translation": "位置"
+    },
+    {
+      "source": "意味",
+      "translation": "意思"
+    },
+    {
+      "source": "言語",
+      "translation": "語言"
+    },
+    {
+      "source": "使うもの",
+      "translation": "要使用的東西"
+    }
+  ],
+  "overrides": [
+    {
+      "source": "場所",
+      "where": "td",
+      "translation": "場所（位置）"
+    }
+  ]
+}
