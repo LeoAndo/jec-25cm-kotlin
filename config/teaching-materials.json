@@ -4,7 +4,7 @@
     "total_sessions": 15,
     "minutes_per_session": 90
   },
-  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin"],
+  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid"],
   "terms": [
     {
       "name": "指定AVD名",
@@ -13,7 +13,9 @@
       "applies_to": ["android"],
       "required_in": [
         "teacher/hello-kotlin/index.html",
-        "docs/common/setup.html"
+        "docs/common/setup.html",
+        "docs/hello-android/index.html",
+        "teacher/hello-android/index.html"
       ]
     }
   ],
@@ -100,6 +102,53 @@
           "copy": "teacher/hello-kotlin/code/11-main.kt" }
       ],
       "archive": "docs/hello-kotlin/downloads/K01HelloKotlin.zip"
+    },
+    {
+      "name": "A01HelloAndroid",
+      "kind": "android",
+      "root": "A01HelloAndroid",
+      "package": "jp.ac.jec.a01helloandroid",
+      "layout": "A01HelloAndroid/app/src/main/res/layout/activity_main.xml",
+      "sessions": 2,
+      "docs": [
+        "docs/hello-android/index.html",
+        "teacher/hello-android/index.html"
+      ],
+      "sources": [
+        "A01HelloAndroid/app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt"
+      ],
+      "snippets": [
+        {
+          "html": "docs/hello-android/index.html",
+          "id": "code-main",
+          "source": "A01HelloAndroid/app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt"
+        },
+        {
+          "html": "docs/hello-android/index.html",
+          "id": "code-layout",
+          "source": "A01HelloAndroid/app/src/main/res/layout/activity_main.xml"
+        },
+        {
+          "html": "docs/hello-android/index.html",
+          "id": "code-libs",
+          "source": "A01HelloAndroid/gradle/libs.versions.toml"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "A01HelloAndroid/app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt",
+          "copy": "teacher/hello-android/code/11-MainActivity.kt"
+        },
+        {
+          "source": "A01HelloAndroid/app/src/main/res/layout/activity_main.xml",
+          "copy": "teacher/hello-android/code/04-activity_main.xml"
+        },
+        {
+          "source": "A01HelloAndroid/gradle/libs.versions.toml",
+          "copy": "teacher/hello-android/code/01-libs.versions.toml"
+        }
+      ],
+      "archive": "docs/hello-android/downloads/A01HelloAndroid.zip"
     }
   ]
 }

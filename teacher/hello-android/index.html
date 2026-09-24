@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>教員用ガイド A01HelloAndroid | Kotlin演習</title><link rel="stylesheet" href="../../docs/assets/textbook.css"><script src="../../docs/assets/textbook.js" defer></script></head>
+<body class="plain"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../../docs/hello-android/index.html">A01HelloAndroidの教科書へ戻る</a></header><main id="main"><div class="hero"><p class="eyebrow">KOTLIN演習 / 教員用ガイド</p><h1>A01HelloAndroid<br>授業の進め方</h1><p class="lede">Java・Swift学習済みの学生が、KotlinでXMLの部品を取得し、クリック時の処理を画面へつなぐ2コマです。7〜8コマ目、各90分。</p><p>パッケージ：<code>jp.ac.jec.a01helloandroid</code> / Android Studio Panda 2 / 指定AVD：<code>jec_25cm_kotlin_Pixel 9a</code></p></div>
+<section><h2>1. 授業前の準備</h2><ul>
+<li>学生のMacでPanda 2のNew ProjectからEmpty Views Activityを選べることを確認する。教員の既定環境はQuail 4なので、操作確認にはPanda 2を明示して起動する。</li>
+<li>配布版のdocsとsamplesを同じ構成で用意する。学生は自分のDocuments/Kotlin/A01HelloAndroidを作る。samplesは比較用で、完成見本をそのまま提出しない。</li>
+<li>Minimum SDKはAPI 31、Kotlin、Kotlin DSL、パッケージjp.ac.jec.a01helloandroid。Save locationはプロジェクト名まで入れる。</li>
+<li>SDKとライブラリの初回ダウンロードが学内ネットワークで通るか、授業前に1台で確認する。ダウンロード待ちが20分を超える場合は、教員の端末で実行結果を見せて、学生はXMLの入力を進める。配布見本を自作として扱わない。</li>
+<li>指定AVDを起動する。表示名は <code>jec_25cm_kotlin_Pixel 9a</code>。内部のAVD識別子は空白が下線になる場合があるが、教科書・Device Managerの表示名は空白を使う。画像の実測環境はAPI 37.1・arm64-v8a・ライトテーマ。学生のシステムイメージは教室の配布環境で確認し、API 31以上かつCPUに合うものを授業前に指定する。</li>
+<li>完成版をRunし、起動時Hello World!、変更後Hello, Android!、「1」のSnackbar、「2」のToast、「3」は表示変化なしを確認する。Logcatの検索条件は <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code>。</li>
+<li>New Projectの生成値は作成日でも変わる。2026-09-24のPanda 2実測ではcoreKtxが1.19.0だった。教科書STEP 01のlibs.versions.toml全文は完成版の1.17.0を含む構成に固定し、configのsnippetsとmirrorsで一致を検査する。ひな形そのものは改変しない。</li>
+</ul></section>
+<section><h2>2. この単元の教材方針</h2>
+<p>中心は<strong>XMLのidを持つViewをKotlinで取得し、画面の操作へつなぐこと</strong>。UI部品・イベント処理はJava／Swiftの既習知識と比較する。Android側の新しい結び付け方を <code>setContentView</code> → <code>findViewById</code> → クリック登録の順で追い、結果を見出し・メッセージで確かめる。APIの一覧を覚えさせる構成にはしない。</p>
+<table><thead><tr><th>判断</th><th>理由</th></tr></thead><tbody>
+<tr><td>ActivityはonCreateの入口と親の呼び出しだけ</td><td>画面を用意する位置が必要なため。ライフサイクル全体・再生成時の状態保持は、画面操作の目的を増やすため扱わない。</td></tr>
+<tr><td>インセットの生成コードを残す</td><td>画面端と内容が重ならないため。各コールバック・Insetsの詳細は導入しない。役割と「残す場所」を本文に書く。</td></tr>
+<tr><td>LinearLayoutを文字で編集</td><td>縦横とidを同じ画面で追えるため。ConstraintLayoutの制約編集、Compose、ViewBindingは扱わない。</td></tr>
+<tr><td>Snackbar・Toastは同じクリック処理の出力先として比較</td><td>呼び方はJavaと同じAPIで、利用者への結果が見える。Snackbarのアクション、独自Toast、通知権限などは加えない。</td></tr>
+<tr><td>Logcatは画面表示と併用</td><td>外側とラムダ内の実行タイミングを観測する補助。利用者への説明をLog.dだけにしない。</td></tr>
+<tr><td>完成ソースのtext・button・btn1・btn2、getText()、括弧付きラムダ、@Overrideを維持</td><td>既存のオーナーの書き方を説明する。命名や記法の整理のために完成ソースを改変しない。Kotlinで必要なのはoverrideキーワードで、注釈を必須だと教えない。</td></tr>
+<tr><td>「3」は見た目の比較用で処理を付けない</td><td>XMLのstyleとクリック処理が別であることを実物で確認できる。未実装の不具合と取り違えないよう本文にも明記する。</td></tr>
+<tr><td>最後は文字と既存の余白の変更</td><td>ここまでに扱った範囲で、変える場所と効果が結び付く。新しいAPIや機能をアレンジの条件にしない。例を正解にしない。</td></tr>
+</tbody></table>
+<p>完成コードへのUnit Testの追加、ダークテーマ、回転・横画面、タブレット対応は対象外。IDEの黄色い提案をSuppressで隠さない。KotlinコンパイルとAndroid Lint／エディタの提案は区別する。XMLの直接の文字列や未使用のラムダ引数について、完成コードを勝手に書き換えず役割を説明する。</p>
+<p>版の読み替えは共通資料のissue #5で扱う。A01本文の基準はPanda 2のままにする。Panda 3はオーナー決定により実測しない。Quail 4との差分は、リポジトリの2つのひな形とREADMEを基準にする。</p></section>
+<section><h2>3. 90分の進め方</h2><h3>7コマ目（90分）</h3><table><thead><tr><th>時間</th><th>STEP</th><th>確認すること</th></tr></thead><tbody><tr><td>0〜5分</td><td>00 Android Studioを開く</td><td>Android StudioのWelcome画面と、A01の教科書が開いている。</td></tr><tr><td>5〜20分</td><td>01 自分のプロジェクトを作る</td><td>自分の保存先にA01HelloAndroidがあり、Gradle同期の赤いエラーが消えている。</td></tr><tr><td>20〜40分</td><td>02 実行するエミュレータを用意する</td><td>指定名のエミュレータにAndroidのホーム画面が出ている。</td></tr><tr><td>40〜50分</td><td>03 生成されたアプリをRunする</td><td>生成直後のアプリにHello World!が表示されている。</td></tr><tr><td>50〜72分</td><td>04 XMLで文字とボタンを並べる</td><td>見出しと「テキストを変更する」、1・2・3のボタンが並んでいる。</td></tr><tr><td>72〜87分</td><td>05 XMLの部品をKotlinから取得する</td><td>4つのidの参照に赤い波線がなく、Runすると同じ画面が出ている。</td></tr><tr><td>87〜90分</td><td>06 7コマ目の完成状態を確認する</td><td>自分のA01HelloAndroidで見出しと4つのボタンが表示されている。</td></tr></tbody></table><h3>8コマ目（90分）</h3><table><thead><tr><th>時間</th><th>STEP</th><th>確認すること</th></tr></thead><tbody><tr><td>0〜5分</td><td>07 8コマ目：前回のプロジェクトを開く</td><td>前回の画面が出て、MainActivity.ktに4つのView取得が残っている。</td></tr><tr><td>5〜25分</td><td>08 ボタンを押したら文字を変える</td><td>ボタンを押したあと、見出しがHello, Android!になっている。</td></tr><tr><td>25〜45分</td><td>09 SnackbarとToastで結果を出す</td><td>1のSnackbarと2のToastを確認し、3ではメッセージが出ない。</td></tr><tr><td>45〜60分</td><td>10 Logcatで処理の順番を見る</td><td>最新の起動ログにHello World!、クリック後のログにHello, Android!が出ている。</td></tr><tr><td>60〜70分</td><td>11 完成コードと照合する</td><td>全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。</td></tr><tr><td>70〜87分</td><td>12 自分で変えられる場所を試す</td><td>変更した場所の効果を画面で確かめ、元の文字と間隔に戻っている。</td></tr><tr><td>87〜90分</td><td>13 8コマ目の完成状態を確認する</td><td>自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。</td></tr></tbody></table><p>7コマ目はメッセージの処理まで急がない。まず画面が出ること、idの参照が通ることをそろえる。8コマ目は全員で文字変更を確認してから、Snackbar・Toast・Logcatへ進む。</p></section>
+<section><h2>4. 机間巡視と躓き</h2><table><thead><tr><th>見るもの</th><th>確認・対応</th></tr></thead><tbody>
+<tr><td>新規作成</td><td>Empty Views Activity、API 31、保存先の末尾、パッケージを確認。Empty Activityには今回のXMLがない。</td></tr>
+<tr><td>同期エラー</td><td>先頭の原因を読む。libs.versions.tomlの全文と生成版を照合。Quail 4のDSLにAGP 9.1.1だけを入れる直し方はしない。</td></tr>
+<tr><td>部品が見つからない</td><td>XMLのmain/text/button/btn1/btn2とR.idを対応させる。setContentViewより前にfindViewByIdを書いていないか確認する。</td></tr>
+<tr><td>かっこが増えた</td><td>生成時の末尾ラムダと、見本の括弧付きラムダの両方は有効。部分追加時に両方の閉じ方を混ぜない。迷う場合はSTEP 11の全文と照合する。</td></tr>
+<tr><td>クリックしても出ない</td><td>クリック処理がonCreate内で並列に並んでいるか、別のクリック処理の内側に入っていないか、show()があるか確認する。</td></tr>
+<tr><td>Logcatの行が多い</td><td>端末・package・tag・levelを絞る。Stop→Run後の最新時刻を見て、クリック前後を区別する。</td></tr>
+<tr><td>黄色い下線</td><td>該当行とIDEの提案を読む。アプリがビルドできない赤いエラーと分ける。@SuppressLintは追加しない。</td></tr>
+</tbody></table></section>
+<section><h2>5. 終了時の確認と再開地点</h2><table><thead><tr><th>区切り</th><th>画面で確認すること</th><th>次の再開位置</th></tr></thead><tbody>
+<tr><td>7コマ目</td><td>Hello World!と4つのボタン。MainActivityには4つのView取得。クリック処理はまだない。</td><td>STEP 07で同じプロジェクトをOpen。</td></tr>
+<tr><td>8コマ目</td><td>起動時Hello World!、変更後Hello, Android!、Snackbarの1、Toastの2、Logcatに2種類の文字。</td><td>アレンジを続けるならSTEP 12。提出時は共通APK資料。</td></tr>
+</tbody></table><p>未完了の学生は、最後に画面が一致したSTEPの次から再開する。教科書のチェックを教員へ送る機能はない。完成見本を開いているだけの学生は、自分の保存先へ戻っているか確認する。</p>
+<h3>理解確認に使う短い問い</h3><table><thead><tr><th>問い</th><th>期待する答えと確認操作</th></tr></thead><tbody><tr><td>btn1の表示を変えると何が変わるか</td><td>ボタンとSnackbarの文字。getText()で読んでいるため。XMLの文字だけを変更してRunする。</td></tr><tr><td>val textなのに文字を変えられるのはなぜか</td><td>参照の再代入と、参照先Viewのプロパティ変更は別。クリック後の見出しを見る。</td></tr><tr><td>3でメッセージが出ないのはなぜか</td><td>クリック処理を登録していない。XMLのstyleがあることと動作は別。</td></tr></tbody></table></section>
+<section><h2>6. 照合用コードと保守</h2><ul><li><a href="code/01-libs.versions.toml">01-libs.versions.toml</a>：STEP 01の設定全文。完成版とバイト一致。</li><li><a href="code/04-activity_main.xml">04-activity_main.xml</a>：STEP 04の画面全文。完成版とバイト一致。</li><li><a href="code/05-MainActivity.kt">05-MainActivity.kt</a>：STEP 05終了時の途中コード。通知・Logはまだなく、画面表示とView取得のみ。生成時の記法とは異なる部分があるが、完成版の骨格で照合できる。</li><li><a href="code/11-MainActivity.kt">11-MainActivity.kt</a>：STEP 11の完成全文。完成版とバイト一致。</li></ul>
+<p>完成ソースはA01HelloAndroidにある。変更する場合は教科書の全文、複製、配布ZIPを更新する。configのsessionsは2、K01と合わせて8コマ。サイドバーはK01→A01、A01のtopbarはK01を指す。</p>
+<p>教材の検査4種、assembleDebug、指定AVDのクリックとLogcat、配布物のリンクを確認する。画像は本文で使う4枚だけを収録する。検証専用プロジェクトやログはリポジトリ外に置く。</p></section>
+<footer class="footer"><p>確認日：2026年9月24日 / 対象：A01HelloAndroid、Android Studio Panda 2</p></footer></main><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
