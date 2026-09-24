@@ -93,5 +93,8 @@ Android Studioでこのディレクトリを開き、`app` の構成で実行し
 ```
 
 - minSdk: 31（Android 12）
-- targetSdk / compileSdk: 37
+- targetSdk: 36
+- compileSdk: 36.1（release 36、minorApiLevel 1）
+- 基準：Android Studio Panda 2、AGP 9.1.1、Gradle 9.3.1
+- 指定AVD：`jec_25cm_kotlin_Pixel 9a`
 - カメラを使うため、実機またはカメラが有効なエミュレーターで実行してください。

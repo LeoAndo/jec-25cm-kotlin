@@ -4,7 +4,7 @@
     "total_sessions": 15,
     "minutes_per_session": 90
   },
-  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid", "A02CalcGame", "A03GithubSearch"],
+  "scan_roots": ["README.md", "docs", "teacher", "K01HelloKotlin", "A01HelloAndroid", "A02CalcGame", "A03GithubSearch", "A04FunnyCamera"],
   "terms": [
     {
       "name": "指定AVD名",
@@ -20,7 +20,9 @@
         "docs/calc-game/index.html",
         "teacher/calc-game/index.html",
         "docs/github-search/index.html",
-        "teacher/github-search/index.html"
+        "teacher/github-search/index.html",
+        "docs/funny-camera/index.html",
+        "teacher/funny-camera/index.html"
       ]
     }
   ],
@@ -329,6 +331,99 @@
         }
       ],
       "archive": "docs/github-search/downloads/A03GithubSearch.zip"
+    },
+    {
+      "name": "A04FunnyCamera",
+      "kind": "android",
+      "root": "A04FunnyCamera",
+      "package": "jp.ac.jec.a04funnycamera",
+      "layout": "A04FunnyCamera/app/src/main/res/layout/activity_main.xml",
+      "sessions": 2,
+      "docs": [
+        "docs/funny-camera/index.html",
+        "teacher/funny-camera/index.html"
+      ],
+      "sources": [
+        "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/MainActivity.kt",
+        "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/DraggableImageView.kt"
+      ],
+      "snippets": [
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-libs",
+          "source": "A04FunnyCamera/gradle/libs.versions.toml"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-root-gradle",
+          "source": "A04FunnyCamera/build.gradle.kts"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-app-gradle",
+          "source": "A04FunnyCamera/app/build.gradle.kts"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-manifest",
+          "source": "A04FunnyCamera/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-draggable",
+          "source": "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/DraggableImageView.kt"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-layout",
+          "source": "A04FunnyCamera/app/src/main/res/layout/activity_main.xml"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-preview-main",
+          "source": "teacher/funny-camera/code/06-MainActivity.kt"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "id": "code-main",
+          "source": "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/MainActivity.kt"
+        }
+      ],
+      "mirrors": [
+        {
+          "source": "A04FunnyCamera/app/src/main/res/drawable/character.png",
+          "copy": "docs/funny-camera/downloads/character.png"
+        },
+        {
+          "source": "A04FunnyCamera/gradle/libs.versions.toml",
+          "copy": "teacher/funny-camera/code/02-libs.versions.toml"
+        },
+        {
+          "source": "A04FunnyCamera/build.gradle.kts",
+          "copy": "teacher/funny-camera/code/02-root-build.gradle.kts"
+        },
+        {
+          "source": "A04FunnyCamera/app/build.gradle.kts",
+          "copy": "teacher/funny-camera/code/02-app-build.gradle.kts"
+        },
+        {
+          "source": "A04FunnyCamera/app/src/main/AndroidManifest.xml",
+          "copy": "teacher/funny-camera/code/03-AndroidManifest.xml"
+        },
+        {
+          "source": "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/DraggableImageView.kt",
+          "copy": "teacher/funny-camera/code/04-DraggableImageView.kt"
+        },
+        {
+          "source": "A04FunnyCamera/app/src/main/res/layout/activity_main.xml",
+          "copy": "teacher/funny-camera/code/05-activity_main.xml"
+        },
+        {
+          "source": "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/MainActivity.kt",
+          "copy": "teacher/funny-camera/code/10-MainActivity.kt"
+        }
+      ],
+      "archive": "docs/funny-camera/downloads/A04FunnyCamera.zip"
     }
   ]
 }

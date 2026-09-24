@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A04 FunnyCamera — カメラにキャラクターを重ねよう | Kotlin演習</title><meta name="description" content="Android Studio Panda 2で作る合成カメラ。90分×2コマで、カメラのプレビュー・ドラッグ・画像の合成と保存を進めます。"><link rel="stylesheet" href="../assets/textbook.css"><script src="../assets/textbook.js" defer></script></head>
+<body data-progress-key="jec-kotlin-funny-camera-v1"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../github-search/index.html">← A03：GithubSearch</a></header><div class="shell"><aside class="sidebar"><div class="sidebar-inner"><p class="course-label">A04 / Android Studio</p><h2>FunnyCamera</h2><div class="progress"><p data-progress-label>0 / 15 ステップ確認済み</p><progress max="15" value="0" aria-label="進捗"></progress></div><nav aria-label="目次"><ol><li><a href="#step-0">STEP 00 今日の画面を先に見る</a></li><li><a href="#step-1">STEP 01 自分のA04プロジェクトを作る</a></li><li><a href="#step-2">STEP 02 カメラのライブラリをそろえる</a></li><li><a href="#step-3">STEP 03 カメラの使用を宣言する</a></li><li><a href="#step-4">STEP 04 金魚を置いてドラッグ用のViewを作る</a></li><li><a href="#step-5">STEP 05 映像・金魚・ボタンを重ねる</a></li><li><a href="#step-6">STEP 06 権限を受け取りプレビューを起動する</a></li><li><a href="#step-7">STEP 07 14コマ目の最後の3分</a></li><li><a href="#step-8">STEP 08 昨日のプロジェクトを開き直す</a></li><li><a href="#step-9">STEP 09 プレビューと金魚を1枚に描く</a></li><li><a href="#step-10">STEP 10 JPEGを保存する完成コードへ進む</a></li><li><a href="#step-11">STEP 11 保存した画像を開いて比べる</a></li><li><a href="#step-12">STEP 12 権限を許可しない場合も確かめる</a></li><li><a href="#step-13">STEP 13 自分の画面へアレンジする</a></li><li><a href="#step-14">STEP 14 15コマ目の最後の3分</a></li></ol></nav><div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><a href="../hello-android/index.html">A01：HelloAndroid</a><a href="../calc-game/index.html">A02：CalcGame</a><a href="../github-search/index.html">A03：GithubSearch</a><span aria-current="page">A04：FunnyCamera</span><a href="../common/setup.html?from=funny-camera">共通：はじめの準備</a><a href="../common/apk.html?from=funny-camera">共通：提出課題とAPK</a><a href="../common/other-versions.html?from=funny-camera">共通：ちがうAndroid Studioの版</a></div></div></aside>
+<main id="main"><div class="hero"><p class="eyebrow">KOTLIN PROGRAMMING EXERCISES / A04</p><h1>カメラにキャラクターを<br>重ねよう</h1><p class="lede">金魚を指で動かし、カメラの映像と組み合わせた1枚を保存します。</p><p>対象：<code>A04FunnyCamera</code> / パッケージ：<code>jp.ac.jec.a04funnycamera</code><br>14〜15コマ目・各90分 / Android Studio Panda 2 / macOS</p></div><div class="goal"><p class="box-title">この単元で作るもの</p><p>カメラの上にキャラクターを重ねるアプリ。14コマ目でプレビューとドラッグ、15コマ目で合成画像の保存へ進みます。</p></div>
+<section id="step-0"><p class="step-meta">STEP 00 · 14コマ目 · 目安 5分</p><h2>今日の画面を先に見る</h2>
+<p>開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。見本の映像はエミュレータ内の仮想の部屋です。</p>
+<figure><img src="images/preview.png" alt="カメラの映像に金魚とTake Pictureボタンが重なる画面" width="270" height="606" loading="lazy"><figcaption>カメラの映像に金魚とTake Pictureボタンが重なる画面（指定AVDで撮影）</figcaption></figure>
+<p>教科書とAndroid Studioを並べます。実行先は <code>jec_25cm_kotlin_Pixel 9a</code>。別のAndroid Studioの版を使っている場合は、作成前に先生へ画面を見せてください。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val title = &quot;A04FunnyCamera&quot;</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>let title = &quot;A04FunnyCamera&quot;</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Swiftのletに対応するKotlinのvalを使います。以後も比較欄のJava／Swiftは読むための見本で、Android Studioに貼るのはKotlinです。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-00"><span>教科書とAndroid Studio Panda 2が開き、指定AVD名が実行先に見える。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-1"><p class="step-meta">STEP 01 · 14コマ目 · 目安 12分</p><h2>自分のA04プロジェクトを作る</h2>
+<ol><li><strong>New Project</strong>、または <strong>File → New → New Project…</strong> を選びます。</li><li><strong>Phone and Tablet → Empty Views Activity → Next</strong> を選びます。<code>Empty Activity</code> はCompose用です。</li><li>次の表を入力して <strong>Finish</strong>。Gradle同期が終わるまで待ちます。</li></ol><table><thead><tr><th>項目</th><th>入力・選択</th></tr></thead><tbody><tr><td>Name</td><td><code>A04FunnyCamera</code></td></tr><tr><td>Package name</td><td><code>jp.ac.jec.a04funnycamera</code></td></tr><tr><td>Save location</td><td><code>/Users/ユーザ名/Documents/Kotlin/A04FunnyCamera</code></td></tr><tr><td>Language</td><td><code>Kotlin</code></td></tr><tr><td>Minimum SDK</td><td><code>API 31</code>（Android 12）</td></tr><tr><td>Build configuration language</td><td><code>Kotlin DSL (build.gradle.kts)</code></td></tr></tbody></table>
+<p><code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。</p>
+<p>左のProjectツールウィンドウは <strong>Project</strong> 表示にします。Kotlinファイルの置き場は <code>app/src/main/java/jp/ac/jec/a04funnycamera/</code>。以後この教科書で「パッケージ」と書いたら、この場所です。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>class MainActivity : AppCompatActivity()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>public class MainActivity extends AppCompatActivity {
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinの : はJavaのextendsに対応します。親のコンストラクタを呼ぶ括弧も残します。Empty Views ActivityならXMLとActivityが組になります。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-01"><span>自分の保存先にA04FunnyCameraができ、MainActivity.ktのpackageがjp.ac.jec.a04funnycameraになっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-2"><p class="step-meta">STEP 02 · 14コマ目 · 目安 15分</p><h2>カメラのライブラリをそろえる</h2>
+<p>次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。</p>
+<p><code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。</p>
+<div class="code-head">libs.versions.toml · 全文</div><pre id="code-libs" tabindex="0"><code>[versions]
+agp = &quot;9.1.1&quot;
+coreKtx = &quot;1.17.0&quot;
+junit = &quot;4.13.2&quot;
+junitVersion = &quot;1.3.0&quot;
+espressoCore = &quot;3.7.0&quot;
+appcompat = &quot;1.8.0&quot;
+material = &quot;1.14.0&quot;
+activity = &quot;1.13.0&quot;
+constraintlayout = &quot;2.2.2&quot;
+camera = &quot;1.4.2&quot;
+lifecycle = &quot;2.9.4&quot;
+
+[libraries]
+androidx-core-ktx = { group = &quot;androidx.core&quot;, name = &quot;core-ktx&quot;, version.ref = &quot;coreKtx&quot; }
+junit = { group = &quot;junit&quot;, name = &quot;junit&quot;, version.ref = &quot;junit&quot; }
+androidx-junit = { group = &quot;androidx.test.ext&quot;, name = &quot;junit&quot;, version.ref = &quot;junitVersion&quot; }
+androidx-espresso-core = { group = &quot;androidx.test.espresso&quot;, name = &quot;espresso-core&quot;, version.ref = &quot;espressoCore&quot; }
+androidx-appcompat = { group = &quot;androidx.appcompat&quot;, name = &quot;appcompat&quot;, version.ref = &quot;appcompat&quot; }
+material = { group = &quot;com.google.android.material&quot;, name = &quot;material&quot;, version.ref = &quot;material&quot; }
+androidx-activity = { group = &quot;androidx.activity&quot;, name = &quot;activity&quot;, version.ref = &quot;activity&quot; }
+androidx-constraintlayout = { group = &quot;androidx.constraintlayout&quot;, name = &quot;constraintlayout&quot;, version.ref = &quot;constraintlayout&quot; }
+androidx-lifecycle-runtime-ktx = { group = &quot;androidx.lifecycle&quot;, name = &quot;lifecycle-runtime-ktx&quot;, version.ref = &quot;lifecycle&quot; }
+camera-camera2 = { module = &quot;androidx.camera:camera-camera2&quot;, version.ref = &quot;camera&quot; }
+camera-core = { module = &quot;androidx.camera:camera-core&quot;, version.ref = &quot;camera&quot; }
+camera-lifecycle = { module = &quot;androidx.camera:camera-lifecycle&quot;, version.ref = &quot;camera&quot; }
+camera-view = { module = &quot;androidx.camera:camera-view&quot;, version.ref = &quot;camera&quot; }
+
+[plugins]
+android-application = { id = &quot;com.android.application&quot;, version.ref = &quot;agp&quot; }
+
+</code></pre>
+<p>プロジェクト直下の <code>build.gradle.kts</code>。</p>
+<div class="code-head">build.gradle.kts · 全文</div><pre id="code-root-gradle" tabindex="0"><code>// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+}</code></pre>
+<p><code>app/build.gradle.kts</code>。こちらはappフォルダの中です。</p>
+<div class="code-head">build.gradle.kts · 全文</div><pre id="code-app-gradle" tabindex="0"><code>plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace = &quot;jp.ac.jec.a04funnycamera&quot;
+    compileSdk {
+        version = release(36) {
+            minorApiLevel = 1
+        }
+    }
+
+    defaultConfig {
+        applicationId = &quot;jp.ac.jec.a04funnycamera&quot;
+        minSdk = 31
+        targetSdk = 36
+        versionCode = 1
+        versionName = &quot;1.0&quot;
+
+        testInstrumentationRunner = &quot;androidx.test.runner.AndroidJUnitRunner&quot;
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile(&quot;proguard-android-optimize.txt&quot;),
+                &quot;proguard-rules.pro&quot;
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.material)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit)
+
+    // TODO STEP01: cameraxライブラリを追加する - START
+    implementation(libs.camera.core)
+    implementation(libs.camera.camera2) // これ追加しないと、実行時エラーになる
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.view)
+    // END
+}</code></pre>
+<p><strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。</p>
+<table><thead><tr><th>依存関係</th><th>使う場所</th></tr></thead><tbody><tr><td>camera-core</td><td>Preview・CameraSelector</td></tr><tr><td>camera-camera2</td><td>CameraXが内部で使う背面カメラの実装</td></tr><tr><td>camera-lifecycle</td><td>Activityにプレビューを結び付ける</td></tr><tr><td>camera-view</td><td>XMLのPreviewView</td></tr><tr><td>lifecycle-runtime-ktx</td><td>保存処理を起動するlifecycleScope</td></tr></tbody></table>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val preview = Preview.Builder().build()</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>Preview preview = new Preview.Builder().build();</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Javaと同じライブラリをKotlinから使えます。Kotlinではnewを書きません。camera-camera2は本文にimportがなくても実行時に必要です。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-02"><span>同期の赤いエラーがなくなり、カタログにCameraXの4つとlifecycleがある。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-3"><p class="step-meta">STEP 03 · 14コマ目 · 目安 10分</p><h2>カメラの使用を宣言する</h2>
+<p><code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>uses-permission</code> はapplicationの外です。</p>
+<div class="code-head">AndroidManifest.xml · 全文</div><pre id="code-manifest" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+
+    &lt;uses-feature
+        android:name=&quot;android.hardware.camera.any&quot;
+        android:required=&quot;true&quot; /&gt;
+
+    &lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+
+    &lt;application
+        android:allowBackup=&quot;true&quot;
+        android:dataExtractionRules=&quot;@xml/data_extraction_rules&quot;
+        android:fullBackupContent=&quot;@xml/backup_rules&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/Theme.A04FunnyCamera&quot;&gt;
+        &lt;activity
+            android:name=&quot;.MainActivity&quot;
+            android:exported=&quot;true&quot;
+            android:windowSoftInputMode=&quot;adjustResize&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<p><code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。テーマ名は生成済みの <code>Theme.A04FunnyCamera</code> と一致させます。</p>
+<p>このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>requestCameraPermission.launch(Manifest.permission.CAMERA)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>requestCameraPermission.launch(Manifest.permission.CAMERA);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>同じAndroid APIをJavaからも呼べます。権限名は文字列の手入力を避け、Manifest.permission.CAMERAを使います。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-03"><span>ManifestにCAMERAの宣言があり、applicationの外に置かれている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-4"><p class="step-meta">STEP 04 · 14コマ目 · 目安 20分</p><h2>金魚を置いてドラッグ用のViewを作る</h2>
+<p><a href="downloads/character.png" download="character.png">金魚の画像 character.png を保存</a>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。</p>
+<p>Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。</p>
+<div class="code-head">DraggableImageView.kt · 全文</div><pre id="code-draggable" tabindex="0"><code>package jp.ac.jec.a04funnycamera
+
+import android.content.Context
+import android.util.AttributeSet
+import android.view.MotionEvent
+import android.view.View
+import androidx.appcompat.widget.AppCompatImageView
+
+/**
+ * 指でドラッグして移動できるImageView
+ *
+ * 親Viewの内側からはみ出さない範囲で移動する
+ */
+class DraggableImageView(context: Context, attrs: AttributeSet?) :
+    AppCompatImageView(context, attrs) {
+
+    // タッチした位置とこのViewの左上の差分
+    private var offsetX = 0f
+    private var offsetY = 0f
+
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        when (event.actionMasked) {
+            MotionEvent.ACTION_DOWN -&gt; {
+                offsetX = x - event.rawX
+                offsetY = y - event.rawY
+            }
+
+            MotionEvent.ACTION_MOVE -&gt; {
+                moveTo(event.rawX + offsetX, event.rawY + offsetY)
+            }
+
+            MotionEvent.ACTION_UP -&gt; performClick() // （アクセシビリティ対応）
+        }
+        return true
+    }
+
+    /**
+     * onTouchEventをオーバーライドしたViewは、performClickもオーバーライドする必要がある
+     * (オーバーライドしないとLintがアクセシビリティの警告 ClickableViewAccessibility を出す)
+     */
+    override fun performClick(): Boolean {
+        return super.performClick()
+    }
+
+    /**
+     * 指定した位置に移動する (親Viewの内側からはみ出さないように位置を補正する)
+     */
+    private fun moveTo(newX: Float, newY: Float) {
+        val parentView = parent as View
+        // 親Viewのpaddingを除いた範囲の左上と右下
+        val minX = parentView.paddingLeft.toFloat()
+        val minY = parentView.paddingTop.toFloat()
+        val maxX = (parentView.width - parentView.paddingRight - width).toFloat()
+        val maxY = (parentView.height - parentView.paddingBottom - height).toFloat()
+
+        // 親Viewがこのviewより小さい場合 (分割画面など) は、coerceInが例外になるため移動しない
+        if (maxX &lt; minX || maxY &lt; minY) return
+
+        // coerceIn: 値を min〜max の範囲に収める
+        x = newX.coerceIn(minX, maxX)
+        y = newY.coerceIn(minY, maxY)
+    }
+}
+</code></pre>
+<table><thead><tr><th>処理</th><th>このコードでしていること</th></tr></thead><tbody><tr><td>ACTION_DOWN</td><td>親内のView位置x/yと、画面上の指の位置rawX/rawYの差を記録する。</td></tr><tr><td>ACTION_MOVE</td><td>指の新しい位置に差を足して、最初につかんだ位置を保つ。</td></tr><tr><td>moveTo</td><td>親のpaddingとViewの大きさを引き、coerceInで端に止める。</td></tr><tr><td>ACTION_UP／performClick</td><td>指を離したときにViewのクリック処理を呼ぶ。警告をSuppressで隠さない。</td></tr></tbody></table>
+<p>まだXMLに配置していないので、この時点では画面は変わりません。次のSTEPでこのクラスをタグ名に使います。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>class DraggableImageView(context: Context, attrs: AttributeSet?) :
+    AppCompatImageView(context, attrs)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>public class DraggableImageView extends AppCompatImageView {
+    public DraggableImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>プライマリコンストラクタは、Javaでクラス本体に書くコンストラクタの引数をクラス名の後へ出す形です。XMLから渡されるContextとAttributeSetを親へ渡します。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-04"><span>drawable/character.pngとDraggableImageView.ktがあり、先頭のpackageとフォルダが一致する。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-5"><p class="step-meta">STEP 05 · 14コマ目 · 目安 10分</p><h2>映像・金魚・ボタンを重ねる</h2>
+<p><code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。</p>
+<div class="code-head">activity_main.xml · 全文</div><pre id="code-layout" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:id=&quot;@+id/main&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;.MainActivity&quot;&gt;
+
+    &lt;androidx.camera.view.PreviewView
+        android:id=&quot;@+id/preview_view&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot; /&gt;
+
+    &lt;!-- 指でドラッグして動かせるキャラクター --&gt;
+    &lt;jp.ac.jec.a04funnycamera.DraggableImageView
+        android:id=&quot;@+id/iv_character&quot;
+        android:layout_width=&quot;200dp&quot;
+        android:layout_height=&quot;200dp&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:contentDescription=&quot;キャラクター&quot;
+        android:scaleType=&quot;fitCenter&quot;
+        android:src=&quot;@drawable/character&quot; /&gt;
+
+    &lt;Button
+        android:id=&quot;@+id/btn_take_picture&quot;
+        android:layout_width=&quot;120dp&quot;
+        android:layout_height=&quot;120dp&quot;
+        android:layout_gravity=&quot;bottom|center_horizontal&quot;
+        android:text=&quot;Take Picture&quot; /&gt;
+&lt;/FrameLayout&gt;
+</code></pre>
+<p>FrameLayoutは後に書いたViewが手前です。PreviewView → 金魚 → ボタンの順なので、金魚を下へ動かすとボタンに隠れる部分があります。XMLのカスタムViewはパッケージ名まで含むクラス名です。<code>@drawable/character</code> に拡張子は付けません。</p>
+<p>この時点のPreviewはカメラ映像を表示しません。XMLの赤い参照が消えたら、STEP 06で起動します。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>characterView = findViewById(R.id.iv_character)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>characterView = findViewById(R.id.iv_character);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>XMLとKotlinの接点はidです。Javaでも同じfindViewByIdを使えます。変数の型ImageViewは、子クラスDraggableImageViewを受け取れます。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-05"><span>XMLのidがpreview_view・iv_character・btn_take_pictureで、drawableの参照が赤くなっていない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-6"><p class="step-meta">STEP 06 · 14コマ目 · 目安 15分</p><h2>権限を受け取りプレビューを起動する</h2>
+<p><code>MainActivity.kt</code> を次の全文に置き換えます。これは<strong>14コマ目の途中コード</strong>です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。</p>
+<div class="code-head">06-MainActivity.kt · 全文</div><pre id="code-preview-main" tabindex="0"><code>package jp.ac.jec.a04funnycamera
+
+import android.Manifest
+import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
+import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.PreviewView
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
+
+/**
+ * カメラのプレビューにキャラクターを重ねて、その画面を画像として保存するActivity
+ *
+ * - キャラクターは指でドラッグして動かせる (DraggableImageView)
+ * - 14コマ目はプレビューと移動を確認する。画像の保存は15コマ目で追加する
+ */
+class MainActivity : AppCompatActivity() {
+    /**
+     * カメラ権限のリクエスト結果を受け取るためのActivityResultLauncher
+     */
+    private val requestCameraPermission =
+        registerForActivityResult(RequestPermission()) { isGranted -&gt;
+            Log.d(TAG, &quot;isGranted: $isGranted&quot;)
+            if (isGranted) {
+                startCamera()
+            } else {
+                Log.w(TAG, &quot;カメラの権限を許可しないとアプリが正常に動作しません&quot;)
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    &quot;カメラの権限を許可しないとアプリが正常に動作しません&quot;,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }
+
+    private lateinit var previewView: PreviewView
+    private lateinit var characterView: ImageView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -&gt;
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        previewView = findViewById(R.id.preview_view)
+        characterView = findViewById(R.id.iv_character)
+
+        // Camera機能を使うために権限リクエストを行う
+        requestCameraPermission.launch(Manifest.permission.CAMERA)
+
+        findViewById&lt;Button&gt;(R.id.btn_take_picture).setOnClickListener {
+            Snackbar.make(findViewById(R.id.main), &quot;プレビューを確認中です&quot;, Snackbar.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Cameraのプレビュー表示を行う
+     */
+    private fun startCamera() {
+        // 現在のプロセスに関連付けられているProcessCameraProviderを取得
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        // イベントリスナーの登録
+        cameraProviderFuture.addListener(Runnable {
+            try {
+                val cameraProvider = cameraProviderFuture.get()
+
+                val preview = Preview.Builder().build()
+                preview.surfaceProvider = previewView.surfaceProvider
+
+                // フロントカメラかバックカメラを指定する
+                val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+                // 再バインドする前にユースケースのバインドを解除する
+                cameraProvider.unbindAll()
+
+                // ユースケース(今回の場合、プレビューのみ)をカメラにバインドする
+                // 背面カメラがない端末では例外が発生する
+                cameraProvider.bindToLifecycle(this, cameraSelector, preview)
+            } catch (e: Exception) {
+                Log.e(TAG, &quot;error: &quot;, e)
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    &quot;カメラを起動できませんでした&quot;,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }, ContextCompat.getMainExecutor(this))
+    }
+
+    companion object {
+        private const val TAG = &quot;MainActivity&quot; // ログ出力時のタグ
+    }
+}
+</code></pre>
+<p>実行設定 <strong>app</strong>、<code>jec_25cm_kotlin_Pixel 9a</code> を選び、<strong>Run ▶</strong>。カメラのダイアログで <strong>While using the app</strong>（アプリの使用中のみ）を選びます。既に許可済みならダイアログは出ません。仮想の部屋が表示されたら、金魚をつかんで上下左右へドラッグします。四辺で金魚のViewが止まります。</p>
+<table><thead><tr><th>つながり</th><th>役割</th></tr></thead><tbody><tr><td>registerForActivityResult</td><td>権限の結果をisGrantedで受け取り、許可ならstartCamera。拒否なら画面に案内。</td></tr><tr><td>getInstance → addListener</td><td>カメラの準備完了後に処理。getMainExecutorで画面を扱うスレッドへ渡す。</td></tr><tr><td>surfaceProvider</td><td>Previewの出力先をXMLのPreviewViewへ接続する。</td></tr><tr><td>DEFAULT_BACK_CAMERA</td><td>背面を選ぶ。指定AVDでは仮想の部屋。</td></tr><tr><td>bindToLifecycle</td><td>このActivityのライフサイクルにプレビューを結び付ける。</td></tr><tr><td>try / catch</td><td>起動失敗をSnackbarで表示する。</td></tr></tbody></table>
+<p>ボタンを1回押すと「プレビューを確認中です」が出ます。プレビューが黒いときは権限の状態を先生と確認し、連打で直そうとしません。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>preview.surfaceProvider = previewView.surfaceProvider</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>preview.setSurfaceProvider(previewView.getSurfaceProvider());</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Javaのgetter／setterをKotlinではプロパティの形で呼べます。cameraProviderFuture.get()は準備完了のリスナ内にあり、ここでPreviewを画面へ接続します。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-06"><span>仮想の部屋と金魚が表示され、金魚を四辺へ動かすと画面の内側で止まる。ボタンから途中段階の案内が出る。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-7"><p class="step-meta">STEP 07 · 14コマ目 · 目安 3分</p><h2>14コマ目の最後の3分</h2>
+<p>ファイルを保存し、金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。</p>
+<p>途中で止まった人は、最後に画面が一致したSTEPを教科書のチェック欄で残します。14コマ目末の全文はSTEP 06です。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val newX = 120f
+val x = newX.coerceIn(0f, 100f)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>float newX = 120f;
+float x = Math.max(0f, Math.min(newX, 100f));</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>coerceInはJavaのMath.minとMath.maxの組に対応します。この数値例の結果は100fです。完成コードでは親の大きさから範囲を計算しています。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-07"><span>自分のA04が開き、プレビュー・金魚の移動・「プレビューを確認中です」の表示がそろっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+
+<section id="step-8"><p class="step-meta">STEP 08 · 15コマ目 · 目安 5分</p><h2>昨日のプロジェクトを開き直す</h2>
+<p>Android Studioの <strong>Open</strong> で、自分の <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。既に開いていればそのまま進みます。同期後に <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。</p>
+<p>金魚が動き、Take Pictureから「プレビューを確認中です」が出る状態が出発点です。違っているときはSTEP 06の全文と照合します。今日はプレビューと金魚を1枚のJPEGへ保存します。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>private lateinit var previewView: PreviewView</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>private PreviewView previewView;</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>lateinitは後で代入する非Nullのプロパティです。Javaのフィールドと同じ位置に置き、setContentViewの後でfindViewByIdから代入して使います。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-08"><span>自分の保存先のA04をRunし、プレビューと途中段階の確認メッセージが出る。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-9"><p class="step-meta">STEP 09 · 15コマ目 · 目安 15分</p><h2>プレビューと金魚を1枚に描く</h2>
+<p>まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。</p>
+<pre tabindex="0"><code>        // プレビューに表示中のカメラ映像を取得する (カメラ起動前はnull)
+        val previewBitmap = previewView.bitmap
+        if (previewBitmap == null) {
+            Log.d(TAG, &quot;カメラの準備ができていません&quot;)
+            return
+        }
+
+        // カメラ映像の上にキャラクターを描画する
+        val screenshot = previewBitmap.copy(Bitmap.Config.ARGB_8888, true)
+        val canvas = Canvas(screenshot)
+        canvas.translate(characterView.x - previewView.x, characterView.y - previewView.y)
+        characterView.draw(canvas)</code></pre>
+<table><thead><tr><th>順序</th><th>画像に起きること</th></tr></thead><tbody><tr><td>bitmap</td><td>プレビューの範囲・大きさのBitmapを取り出す。カメラの最大解像度の写真ではない。</td></tr><tr><td>copy(ARGB_8888, true)</td><td>上から描き込めるコピーを作る。</td></tr><tr><td>Canvas(screenshot)</td><td>描き込み先をそのコピーにする。</td></tr><tr><td>translate</td><td>プレビュー左上を原点にして、金魚のViewの左上へ移動する。</td></tr><tr><td>characterView.draw</td><td>金魚のViewだけを描く。ボタンや画面全体は描かない。</td></tr></tbody></table>
+<p>金魚とPreviewViewは同じ親の子です。<code>characterView.x - previewView.x</code> とyの差で、親内の位置を画像内の位置に変えます。ステータスバーを避けるpaddingがあっても、この差で位置が合います。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val previewBitmap = previewView.bitmap
+if (previewBitmap == null) return</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>Bitmap previewBitmap = previewView.getBitmap();
+if (previewBitmap == null) return;</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>JavaのgetBitmap()をKotlinでは.bitmapと書きます。nullの場合にreturnした後は、Kotlinのスマートキャストで非Nullとして使えます。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-09"><span>MainActivity.ktはまだSTEP 06の状態で、抜粋のbitmap・translate・drawの3か所が教科書に見えている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-10"><p class="step-meta">STEP 10 · 15コマ目 · 目安 25分</p><h2>JPEGを保存する完成コードへ進む</h2>
+<p><code>MainActivity.kt</code> を次の<strong>完成版の全文</strong>へ置き換えます。importも含みます。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。</p>
+<div class="code-head">MainActivity.kt · 全文</div><pre id="code-main" tabindex="0"><code>package jp.ac.jec.a04funnycamera
+
+import android.Manifest
+import android.content.ContentValues
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
+import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.PreviewView
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.IOException
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+/**
+ * カメラのプレビューにキャラクターを重ねて、その画面を画像として保存するActivity
+ *
+ * - キャラクターは指でドラッグして動かせる (DraggableImageView)
+ * - 「Take Picture」ボタンを押すと、カメラ映像とキャラクターを合成した画像を保存する
+ */
+class MainActivity : AppCompatActivity() {
+    /**
+     * カメラ権限のリクエスト結果を受け取るためのActivityResultLauncher
+     */
+    private val requestCameraPermission =
+        registerForActivityResult(RequestPermission()) { isGranted -&gt;
+            Log.d(TAG, &quot;isGranted: $isGranted&quot;)
+            if (isGranted) {
+                startCamera()
+            } else {
+                Log.w(TAG, &quot;カメラの権限を許可しないとアプリが正常に動作しません&quot;)
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    &quot;カメラの権限を許可しないとアプリが正常に動作しません&quot;,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }
+
+    private lateinit var previewView: PreviewView
+    private lateinit var characterView: ImageView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -&gt;
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        previewView = findViewById(R.id.preview_view)
+        characterView = findViewById(R.id.iv_character)
+
+        // Camera機能を使うために権限リクエストを行う
+        requestCameraPermission.launch(Manifest.permission.CAMERA)
+
+        findViewById&lt;Button&gt;(R.id.btn_take_picture).setOnClickListener { takeScreenshot() }
+    }
+
+    /**
+     * Cameraのプレビュー表示を行う
+     */
+    private fun startCamera() {
+        // 現在のプロセスに関連付けられているProcessCameraProviderを取得
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        // イベントリスナーの登録
+        cameraProviderFuture.addListener(Runnable {
+            try {
+                val cameraProvider = cameraProviderFuture.get()
+
+                val preview = Preview.Builder().build()
+                preview.surfaceProvider = previewView.surfaceProvider
+
+                // フロントカメラかバックカメラを指定する
+                val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+                // 再バインドする前にユースケースのバインドを解除する
+                cameraProvider.unbindAll()
+
+                // ユースケース(今回の場合、プレビューのみ)をカメラにバインドする
+                // 背面カメラがない端末では例外が発生する
+                cameraProvider.bindToLifecycle(this, cameraSelector, preview)
+            } catch (e: Exception) {
+                Log.e(TAG, &quot;error: &quot;, e)
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    &quot;カメラを起動できませんでした&quot;,
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }, ContextCompat.getMainExecutor(this))
+    }
+
+    /**
+     * プレビュー画面とキャラクターを合成したスクリーンショットを作成して保存する
+     */
+    private fun takeScreenshot() {
+        // プレビューに表示中のカメラ映像を取得する (カメラ起動前はnull)
+        val previewBitmap = previewView.bitmap
+        if (previewBitmap == null) {
+            Log.d(TAG, &quot;カメラの準備ができていません&quot;)
+            return
+        }
+
+        // カメラ映像の上にキャラクターを描画する
+        val screenshot = previewBitmap.copy(Bitmap.Config.ARGB_8888, true)
+        val canvas = Canvas(screenshot)
+        canvas.translate(characterView.x - previewView.x, characterView.y - previewView.y)
+        characterView.draw(canvas)
+
+        // 画像の保存は時間がかかることがあるため、コルーチンを使ってメインスレッド以外で行う
+        lifecycleScope.launch {
+            val isSaved = withContext(Dispatchers.IO) {
+                saveBitmap(screenshot)
+            }
+            // ここはメインスレッドに戻っているので画面を更新できる
+            val message = if (isSaved) &quot;保存しました&quot; else &quot;保存に失敗しました&quot;
+            Snackbar.make(findViewById(R.id.main), message, Snackbar.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Bitmapを共有ストレージ(Pictures/FunnyCamera)にJPEGで保存する
+     *
+     * @return 保存に成功したらtrue
+     */
+    private fun saveBitmap(bitmap: Bitmap): Boolean {
+        val dateTimeFormatter = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd-HH-mm-ss-SSS&quot;)
+        val fileName = LocalDateTime.now().format(dateTimeFormatter)
+        val contentValues = ContentValues()
+        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
+        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, &quot;image/jpeg&quot;) // ファイル形式はjpeg
+        // 共有ストレージのPicturesディレクトリ配下にFunnyCameraというディレクトリを作成する
+        contentValues.put(MediaStore.Images.Media.RELATIVE_PATH, &quot;Pictures/FunnyCamera&quot;)
+        // 書き込みが終わるまで他のアプリから見えないようにする
+        contentValues.put(MediaStore.MediaColumns.IS_PENDING, 1)
+
+        // 共有ストレージに保存先のファイルを作成する
+        val imageCollection =
+            MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+        val uri = contentResolver.insert(imageCollection, contentValues)
+        if (uri == null) {
+            Log.e(TAG, &quot;保存先のファイルを作成できませんでした&quot;)
+            return false
+        }
+
+        // 作成したファイルにJPEG形式で書き込む
+        var isWritten = false
+        try {
+            val outputStream = contentResolver.openOutputStream(uri)
+            if (outputStream != null) {
+                outputStream.use {
+                    isWritten = bitmap.compress(Bitmap.CompressFormat.JPEG, 95, it)
+                }
+            }
+        } catch (e: IOException) {
+            Log.e(TAG, &quot;error &quot;, e)
+        }
+
+        // 書き込みに失敗したら、作成したファイルを削除する
+        if (!isWritten) {
+            contentResolver.delete(uri, null, null)
+            return false
+        }
+
+        // 書き込み完了。他のアプリから見えるようにする
+        contentValues.clear()
+        contentValues.put(MediaStore.MediaColumns.IS_PENDING, 0)
+        contentResolver.update(uri, contentValues, null, null)
+        Log.d(TAG, &quot;savedUri $uri&quot;)
+        return true
+    }
+
+    companion object {
+        private const val TAG = &quot;MainActivity&quot; // ログ出力時のタグ
+    }
+}
+</code></pre>
+<table><thead><tr><th>保存の順序</th><th>このコードの意味</th></tr></thead><tbody><tr><td>ContentValues</td><td>名前・image/jpeg・Pictures/FunnyCamera・IS_PENDING=1を指定する。</td></tr><tr><td>insert</td><td>MediaStoreに保存先を作る。戻り値のuriがnullならfalse。</td></tr><tr><td>openOutputStream → use</td><td>出力先を開いてJPEGを書き、useの終了時に閉じる。</td></tr><tr><td>compress(..., 95, it)</td><td>JPEG品質95で書き込む。圧縮に成功したかをisWrittenへ保存する。</td></tr><tr><td>失敗ならdelete</td><td>出力先を作ったが書き込めなければ、その作りかけを削除してfalse。</td></tr><tr><td>IS_PENDING=0</td><td>書き込み済みの画像を他のアプリからも見える状態にする。</td></tr></tbody></table>
+<p>保存は <code>lifecycleScope.launch</code> から始め、圧縮・書き込みを <code>withContext(Dispatchers.IO)</code> の中へ置きます。そこを抜けるとメインスレッドへ戻り、trueなら「保存しました」、falseなら「保存に失敗しました」を表示します。Activityが破棄されるとlifecycleScopeのコルーチンはキャンセルされます。</p>
+<p>このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>outputStream.use {
+    isWritten = bitmap.compress(Bitmap.CompressFormat.JPEG, 95, it)
+}</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>try (OutputStream outputStream = resolver.openOutputStream(uri)) {
+    if (outputStream != null) {
+        isWritten = bitmap.compress(Bitmap.CompressFormat.JPEG, 95, outputStream);
+    }
+}</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>useはJavaのtry-with-resourcesと同じく、処理後にcloseします。ラムダのitが開いた出力先です。保存の結果はBooleanで画面側へ返します。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-10"><span>MainActivity.ktにtakeScreenshotとsaveBitmapがあり、ビルドが通ってプレビューを表示できる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-11"><p class="step-meta">STEP 11 · 15コマ目 · 目安 17分</p><h2>保存した画像を開いて比べる</h2>
+<p>仮想の部屋が表示されてから、金魚を下へ動かし、Take Pictureに少し重ねます。ボタンを1回押し、「保存しました」が消えるまで待ちます。</p>
+<figure><img src="images/saved.png" alt="ボタンに金魚を重ねて保存し、保存しましたと出た画面" width="270" height="606" loading="lazy"><figcaption>ボタンに金魚を重ねて保存し、保存しましたと出た画面（指定AVDで撮影）</figcaption></figure>
+<p>エミュレータのホームへ戻り、アプリ一覧から <strong>Files</strong> を開きます。左上メニューの端末内ストレージ（機種名の項目）から <strong>Pictures → FunnyCamera</strong> を開き、今の日時の <code>.jpg</code> を選びます。Filesで端末が出ていなければ、右上メニューの内部ストレージ表示を確認します。写真アプリを使う場合も、端末内のFunnyCameraフォルダを開きます。</p>
+<p>保存画像にはボタンに隠れていた金魚も写ります。ボタン・Snackbar・ステータスバー・画面下のナビゲーションバーは入りません。PreviewViewの映像と金魚だけを描いた結果です。</p>
+<figure><img src="images/composite.jpg" alt="保存したJPEG。下側の金魚全体が写り、ボタンとSnackbarは入らない" width="270" height="555" loading="lazy"><figcaption>指定AVDで保存したJPEG。画面全体ではなくプレビュー範囲が画像になる</figcaption></figure><p>確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、見本と同じ文字列にはなりません。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val fileName = LocalDateTime.now().format(dateTimeFormatter)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>String fileName = LocalDateTime.now().format(dateTimeFormatter);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>Pictures/FunnyCameraに日時の異なるJPEGがあり、金魚が写ってボタンとSnackbarは写っていない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-12"><p class="step-meta">STEP 12 · 15コマ目 · 目安 10分</p><h2>権限を許可しない場合も確かめる</h2>
+<p>作ったファイルを保存します。エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。</p>
+<figure><img src="images/denied.png" alt="カメラを許可せず、権限が必要というSnackbarが出た画面" width="270" height="606" loading="lazy"><figcaption>カメラを許可せず、権限が必要というSnackbarが出た画面（指定AVDで撮影）</figcaption></figure>
+<p>確認後は同じ設定画面で <strong>Allow only while using the app</strong>（アプリの使用中のみ許可）に戻してRunし直します。映像が戻ったら保存を1回確認します。拒否を繰り返すとダイアログが出なくなる場合があるため、設定から戻します。</p>
+<p>準備前のボタンでは <code>previewView.bitmap</code> がnullになり、完成版は保存せずreturnします。この分岐にはSnackbarがなく、Logcatだけに案内が出ます。「保存に失敗しました」はsaveBitmapがfalseを返す別の分岐です。保存失敗のために端末の容量を埋めたり、既存画像を消したりはしません。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val message = if (isSaved) &quot;保存しました&quot; else &quot;保存に失敗しました&quot;</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>String message = isSaved ? &quot;保存しました&quot; : &quot;保存に失敗しました&quot;;</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>Kotlinのifは値を返せます。Javaの三項演算子に対応します。ただしカメラの権限拒否はこの保存結果のifより前で扱います。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-12"><span>拒否時の権限の案内を確認し、許可へ戻した後にプレビューと保存しましたが再び表示される。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-13"><p class="step-meta">STEP 13 · 15コマ目 · 目安 15分</p><h2>自分の画面へアレンジする</h2>
+<p>自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。完成プロジェクトの見本は上書きしません。</p>
+<table><thead><tr><th>場所</th><th>変える値の例</th><th>変わるところ</th></tr></thead><tbody><tr><td>activity_main.xmlのボタン</td><td>android:textを「保存」にする</td><td>画面の文字が変わる。保存画像には文字は入らない。</td></tr><tr><td>activity_main.xmlの金魚</td><td>layout_widthとlayout_heightを200dpから160dpへ</td><td>ドラッグするViewと保存画像内の金魚が小さくなる。</td></tr><tr><td>activity_main.xmlの金魚</td><td>layout_gravityをcenterからtop|center_horizontalへ</td><td>起動直後の位置が変わる。ドラッグ後は動かした位置を使う。</td></tr></tbody></table>
+<p>画像の差し替えをするなら、利用してよい自分の透過PNGを同じ <code>character.png</code> という名前で入れ替えます。今回の500×416程度の大きさにします。大きな原寸画像はメモリを使うため避けます。id・パッケージ・カメラ権限・保存処理の呼び出しは変えません。</p>
+<p>どの値を選ぶかに1つの正解はありません。保存画像まで開き、変えた場所に対応する変化が出るかを確認します。提出するアプリは、自分で作ったAndroidアプリの中から1つ選びます。提出先と締め切りは授業で案内します。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>characterView.x = 120f</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>characterView.setX(120f);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>JavaのsetXに対応するKotlinのxです。ここではAPIを増やさず、既に使っているサイズ・位置・文字を変えて、画面と保存結果の対応を見ます。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>変えた文字・金魚の大きさ・初期位置のいずれかが画面に反映され、保存画像の違いも確認できる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="step-14"><p class="step-meta">STEP 14 · 15コマ目 · 目安 3分</p><h2>15コマ目の最後の3分</h2>
+<p>自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、このページ下の完成プロジェクトを使います。</p>
+<p>提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。</p>
+<h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val isSaved: Boolean = saveBitmap(screenshot)</code></pre>
+</div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>boolean isSaved = saveBitmap(screenshot);</code></pre>
+</div></div>
+<div class="note"><p class="box-title">POINT</p><p>保存結果のBooleanはJavaと同じ役目です。Kotlinでは型名を変数名の後へ書きます。画面に出る文はこの戻り値で変わります。</p>
+</div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-14"><span>自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えている状態</th><th>確認する場所</th></tr></thead><tbody><tr><td>同期が止まる</td><td>Panda 2か、STEP 02の3ファイルが正しい場所にあるかを確認。最初の原因行を先生に見せます。</td></tr><tr><td>characterが赤い</td><td>drawable直下のcharacter.pngとXMLの@drawable/characterを照合。ファイル名の末尾に番号が付いていないか確認します。</td></tr><tr><td>起動直後に閉じる</td><td>カスタムViewの完全なクラス名、パッケージ、コンストラクタの引数2つをSTEP 04・05と照合します。</td></tr><tr><td>プレビューが黒い</td><td>カメラ権限、指定AVDの背面カメラ設定、STEP 06のsurfaceProviderとbindToLifecycleを確認。映像が出るまで保存しません。</td></tr><tr><td>権限のダイアログが出ない</td><td>既に許可しているか、拒否を繰り返している場合があります。設定のアプリ情報からCamera権限を確認し、変更後はRunし直します。</td></tr><tr><td>金魚がボタンに隠れる</td><td>XMLでボタンを後に書いた結果です。保存画像にはボタンが入らず、金魚全体が入ります。</td></tr><tr><td>金魚をつかめない</td><td>ボタンに隠れたところではボタンが先に反応します。見えている金魚の上側をドラッグします。</td></tr><tr><td>押すとプレビューを確認中ですと出る</td><td>STEP 06の途中コードです。STEP 10の完成版で保存処理へ置き換わります。</td></tr><tr><td>押しても保存の案内が出ない</td><td>プレビュー準備前のnull分岐はLogcatのみです。映像が見えてから押します。</td></tr><tr><td>保存に失敗しましたと出る</td><td>空き容量など端末の状態を先生と確認。saveBitmapがfalseを返した結果です。連打しません。</td></tr><tr><td>保存画像が見つからない</td><td>Filesの端末内ストレージでPictures/FunnyCameraを確認。今の端末の日時のjpgを開きます。</td></tr><tr><td>途中から再開したい</td><td>14コマ目末はSTEP 06の全文。15コマ目はSTEP 08から、完成版全文はSTEP 10です。</td></tr></tbody></table>
+</section><section id="sample-project"><h2>完成プロジェクトを開く</h2><p>配布ZIPを展開した中の <code>samples/A04FunnyCamera</code> をAndroid Studioの <strong>Open</strong> で開きます。自分の <code>Documents/Kotlin/A04FunnyCamera</code> と保存先で区別します。見本を閉じたら自分の保存先を開き直します。</p><p>教科書だけを受け取った場合は <a href="downloads/A04FunnyCamera.zip" download>A04FunnyCamera.zip</a> を保存して展開し、中の <code>A04FunnyCamera</code> フォルダをOpenします。ZIP自体や内側のappは選びません。</p><p>同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。カメラの使用を許可して動作を比べます。見本はコードと動作の確認用です。</p></section><section id="references"><h2>公式資料</h2><ul><li><a href="https://developer.android.com/media/camera/camerax/preview">Android：CameraXのプレビュー</a></li><li><a href="https://developer.android.com/reference/androidx/camera/view/PreviewView#getBitmap()">Android：PreviewView.getBitmap</a></li><li><a href="https://developer.android.com/training/permissions/requesting">Android：実行時の権限</a></li><li><a href="https://developer.android.com/training/data-storage/shared/media#add-item">Android：MediaStoreへの追加とIS_PENDING</a></li><li><a href="https://developer.android.com/topic/libraries/architecture/views/coroutines-views#lifecyclescope">Android：ViewsのlifecycleScope</a></li><li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/use.html">Kotlin：use</a></li></ul></section><footer class="footer"><p>確認日：2026年9月24日 / A04FunnyCamera、Panda 2の構成</p></footer></main></div><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
