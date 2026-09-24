@@ -1,0 +1,26 @@
+{
+  "source": "docs/calc-game/index.html",
+  "language": "zh-Hans",
+  "entries": [
+    {
+      "source": "本文へ移動",
+      "translation": "跳转到正文"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / Kotlin练习"
+    },
+    {
+      "source": "項目",
+      "translation": "设置项"
+    },
+    {
+      "source": "場所",
+      "translation": "位置"
+    },
+    {
+      "source": "公式資料",
+      "translation": "官方资料"
+    }
+  ]
+}
