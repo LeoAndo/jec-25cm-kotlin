@@ -20,8 +20,11 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 - [A02：CalcGame — 計算ゲームを作ろう](docs/calc-game/index.html)
 - [A02の完成プロジェクト](docs/calc-game/downloads/A02CalcGame.zip)
 - [教員用：A02CalcGameの授業の進め方・確認項目](teacher/calc-game/index.html)
+- [A03：GithubSearch — GitHubのリポジトリを検索しよう](docs/github-search/index.html)
+- [A03の完成プロジェクト](docs/github-search/downloads/A03GithubSearch.zip)
+- [教員用：A03GithubSearchの授業の進め方・確認項目](teacher/github-search/index.html)
 
-**K01は、全6コマぶん（`ex01`〜`ex11`）の教科書と教員用ガイドがそろっています。** 教科書は `docs/hello-kotlin/index.html` の1冊です。Android系はA01（STEP 00〜13）とA02（STEP 00〜14）の各2コマぶんの教科書・教員用ガイド・配布登録がそろっています。A03〜A04は「15コマ計画」の予定で、今後のissueで教材を作ります。
+**K01は、全6コマぶん（`ex01`〜`ex11`）の教科書と教員用ガイドがそろっています。** 教科書は `docs/hello-kotlin/index.html` の1冊です。Android系はA01（STEP 00〜13）とA02（STEP 00〜14）の各2コマぶんの教科書・教員用ガイド・配布登録がそろっています。A03（STEP 00〜18）の3コマぶんも登録済みです。A04は「15コマ計画」の予定で、今後のissueで教材を作ります。
 
 ### 開き方
 
@@ -54,7 +57,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 | 1–6 | K01 HelloKotlin | Kotlinの文法（前年度資料の §4〜§16 ＝ `ex01`〜`ex11`） | `K01HelloKotlin` |
 | 7–8 | A01 HelloAndroid | KotlinでAndroidアプリを作る | `A01HelloAndroid` |
 | 9–10 | A02 CalcGame | 停止・再開するタイマーと10問の計算ゲーム | `A02CalcGame` |
-| 11–13 | A03 GithubSearch | Web APIと一覧表示 | `A03GithubSearch` |
+| 11–13 | A03 GithubSearch | 入力画面・固定データの一覧・Web API検索 | `A03GithubSearch` |
 | 14–15 | A04 FunnyCamera | カメラと画像の合成 | `A04FunnyCamera` |
 
 K01の授業順は次のとおりです（2026-09-23、オーナー決定）。`exNN` は前年度資料との対応番号なので、授業順に合わせて付け替えません。
@@ -82,7 +85,7 @@ K01の授業順は次のとおりです（2026-09-23、オーナー決定）。`
 
 **K01は6コマあり、1コマで複数の文法項目を扱う回があります。** 「1単元で導入する新概念は1つまで」（「基本方針」1、「単元の範囲の決め方」1）との関係は、下の「単元の範囲の決め方（全単元共通）」の「純Kotlin単元（K01）での新概念の数え方」にまとめています。
 
-`config/teaching-materials.json` の `projects` には、教科書がそろったK01（6コマ）・A01（2コマ）・A02（2コマ）の計10コマを登録しています。計画表にあるA03〜A04は、教科書ができた回のissueで登録します（登録と実ファイルがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。純Kotlin系（`kind` が `"kotlin-console"`）の単元は、扱う演習を **`packages`（配列）** に書きます（1つだけでも `["ex01"]` のように配列にします）。Android系（`kind` が `"android"`）の単元は、いままでどおり **`package`（文字列）** にKotlinパッケージ名を書きます。
+`config/teaching-materials.json` の `projects` には、教科書がそろったK01（6コマ）・A01（2コマ）・A02（2コマ）・A03（3コマ）の計13コマを登録しています。計画表にあるA04は、教科書ができた回のissueで登録します（登録と実ファイルがそろっていないと `scripts/check-teaching-materials.py` が落ちます）。純Kotlin系（`kind` が `"kotlin-console"`）の単元は、扱う演習を **`packages`（配列）** に書きます（1つだけでも `["ex01"]` のように配列にします）。Android系（`kind` が `"android"`）の単元は、いままでどおり **`package`（文字列）** にKotlinパッケージ名を書きます。
 
 ### 提出課題
 
@@ -102,7 +105,7 @@ K01の授業順は次のとおりです（2026-09-23、オーナー決定）。`
 
 **参照元の「Androidプログラミング1」は3つ提出ですが、この授業は1つです。** あちらはAndroidだけを扱う授業なので、学生が作るアプリの本数が多くなります。こちらはKotlinの文法から入るため、全15コマのうちAndroid系に使えるのは9コマ（`A01`〜`A04`）で、学生が授業中に作るAndroidアプリは4本です。母数が4本では、3つ選んでも「選ぶ」余地がほとんど残らず、1本あたりのアレンジも薄くなります。本数ではなくアレンジの中身を見る方針にして、1つに絞ります。
 
-Android系はA01とA02の教科書がそろっています。以後の単元は「15コマ計画」に沿って追加します。提出時期は授業で案内し、その時点までに学生自身が作ったアプリから1つ選びます。
+Android系はA01・A02・A03の教科書がそろっています。以後の単元は「15コマ計画」に沿って追加します。提出時期は授業で案内し、その時点までに学生自身が作ったアプリから1つ選びます。
 
 ### 前年度の教材との関係
 
@@ -144,7 +147,7 @@ Android系はA01とA02の教科書がそろっています。以後の単元は�
 | `K01HelloKotlin` | **純Kotlin単元（K01、1〜6コマ目）の完成プロジェクト。** 純Kotlin系はこの1つだけです。Gradleを使わないIntelliJ IDEAプロジェクトで、演習ごとに `src/exNN/` のパッケージを持つ（`exNN` は前年度資料の節に対応）。**学生への配布対象**で、配布用ZIPを教科書に同梱し、初回から学生も参照可能 |
 | `A01HelloAndroid` | 完成プロジェクト。TextViewとButton、Snackbar・Toast・Logcatでの結果の出し分けを扱う。**教科書・教員用ガイド・学生への配布登録済み** |
 | `A02CalcGame` | 完成プロジェクト。Chronometerで時間を計りながら計算問題に答えるゲーム。**教科書・教員用ガイド・学生への配布登録済み** |
-| `A03GithubSearch` | 完成プロジェクト。GitHubの検索APIをKtorで呼び、結果をRecyclerViewで一覧表示する。中身の説明は [`A03GithubSearch/README.md`](A03GithubSearch/README.md) にある。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
+| `A03GithubSearch` | 完成プロジェクト。GitHubの検索APIをKtorで呼び、結果をRecyclerViewで一覧表示する。中身の説明は [`A03GithubSearch/README.md`](A03GithubSearch/README.md) にある。**教科書・教員用ガイド・学生への配布登録済み** |
 | `A04FunnyCamera` | 完成プロジェクト。CameraXのプレビューにキャラクターを重ね、合成した画像を保存する。中身の説明は [`A04FunnyCamera/README.md`](A04FunnyCamera/README.md) にある。**完成プロジェクトはあるが、教科書はこれから作る（単元化は今後のissue）** |
 
 2つのひな形は、Android Studioの版が変わったときに、New Projectウィザードが生成するコードや設定がどう変わるかを見るために置いています。教材のスクリーンショットや手順が古くなっていないかは、この2つを見比べて確かめます。単元ではないので `config/teaching-materials.json` には登録せず、学生用ZIPにも入りません。
@@ -170,7 +173,7 @@ Android系はA01とA02の教科書がそろっています。以後の単元は�
 
 **Android系の完成プロジェクトを新しく作るときは、`Panda2KotlinEmptyViewsActivity` と上の8か所を突き合わせてください。** 教員の開発マシンには Quail 4 が入っているので、手元で New Project したものをそのまま完成プロジェクトにすると、また Quail 4 の形が混ざります。
 
-教員用ガイドとSTEPごとの照合用コードは `teacher/<スラッグ>/` にまとめます（K01は `teacher/hello-kotlin`、A01は `teacher/hello-android`、A02は `teacher/calc-game`）。完成版の見本は、配布物の `samples` フォルダに展開済みで入っています。学生が自分で置き場所を作ったり、ZIPを展開したりする必要はありません。
+教員用ガイドとSTEPごとの照合用コードは `teacher/<スラッグ>/` にまとめます（K01は `teacher/hello-kotlin`、A01は `teacher/hello-android`、A02は `teacher/calc-game`、A03は `teacher/github-search`）。完成版の見本は、配布物の `samples` フォルダに展開済みで入っています。学生が自分で置き場所を作ったり、ZIPを展開したりする必要はありません。
 
 ### 完成プロジェクトのZIPを更新する（教員用）
 
@@ -187,6 +190,7 @@ cd jec-25cm-kotlin
 python3 scripts/package-project.py --project K01HelloKotlin --output docs/hello-kotlin/downloads/K01HelloKotlin.zip
 python3 scripts/package-project.py --project A01HelloAndroid --output docs/hello-android/downloads/A01HelloAndroid.zip
 python3 scripts/package-project.py --project A02CalcGame --output docs/calc-game/downloads/A02CalcGame.zip
+python3 scripts/package-project.py --project A03GithubSearch --output docs/github-search/downloads/A03GithubSearch.zip
 ```
 
 学生用ZIPを作成するときは、完成プロジェクトのZIPをまとめて再生成し、HTMLのリンク確認も行います。
