@@ -176,6 +176,19 @@ class ValidateTest(unittest.TestCase):
         # 見ないようにしないと、この原文はどう訳しても通らなくなる。
         self.assertEqual(self.problems("<code>R&D</code> を開く。", "Open <code>R&D</code>."), [])
 
+    def test_fullwidth_punctuation_is_rejected_outside_japanese_unless_han(self):
+        """漢字を使わない言語の訳文に残った全角の記号は落とす。日本語を残す文と <code> の中は除く（#89）。"""
+        found = self.problems("<a1>K01：HelloKotlin</a1> へ進む →", "Continue to <a1>K01：HelloKotlin</a1> →")
+        self.assertTrue(any("全角の記号" in problem for problem in found), found)
+        self.assertEqual(self.problems("<a1>K01：HelloKotlin</a1> へ進む →", "Continue to <a1>K01: HelloKotlin</a1> →"), [])
+        # 漢字を使う言語では、全角の記号がその言語の書き方。
+        self.assertEqual(self.problems("<a1>K01：HelloKotlin</a1> へ進む →", "前往 <a1>K01：HelloKotlin</a1> →", han=True), [])
+        # 日本語の画面の言葉を「」で囲む文と、<code> の中の全角の記号は、そのまま。
+        self.assertEqual(self.problems("「保存」を押す", "Press 「保存」 (Save)"), [])
+        self.assertEqual(self.problems("<code>（値）</code> を書く", "Write <code>（値）</code>"), [])
+        # サイドバーの「番号＋全角スペース＋題名」の全角スペースは残す。
+        self.assertEqual(self.problems("00　この単元のゴール", "00　Goals of this unit"), [])
+
     def test_reports_each_kind_of_problem(self):
         cases = (
             ("訳文が空です", "確認", "  "),
@@ -231,6 +244,59 @@ class LocalizeTest(unittest.TestCase):
                 rendered = localize.localize(page_of(source), translations, "en", "docs", self.PAGES, "en")
                 self.assertIn('href="https://developer.android.com/studio?hl=en&amp;x=a%20b#top"', rendered)
                 self.assertNotIn("&amp;amp;", rendered)
+
+    def test_fullwidth_punctuation_outside_translation_units_becomes_ascii_unless_han(self):
+        """かな・漢字を含まない文字は翻訳の単位にならず日本語版のまま出るので、漢字を使わない言語では
+        全角の記号だけをASCIIにする（#89）。訳の対象の文・<code>・<pre>・translate="no" は触らない。"""
+        source = ('<html lang="ja"><body><table><tr><td>Minimum SDK</td><td><strong>API 31</strong>（Android 12）</td></tr>'
+                  '<tr><td>Kotlin DSL（build.gradle.kts）</td><td>AGP 9.1.1、coreKtx 1.17.0、<code>activity</code> 1.13.0</td></tr>'
+                  '</table><ul><li><a href="other/index.html">K01：HelloKotlin</a></li>'
+                  '<li><span aria-current="page">A01：HelloAndroid</span></li></ul>'
+                  '<p>STEP 00〜02・<code>（値）</code>／STOP・RESET</p>'
+                  '<p>「保存」を押す</p><pre>（そのまま）</pre><p translate="no">Java／Swift</p>'
+                  '<img alt="（Android 12）" src="a.png"><img alt="画面（Android 12）" src="b.png"></body></html>')
+        rendered = localize.localize(page_of(source), {}, "en", "docs", self.PAGES, ascii_punctuation=True)
+        self.assertIn("<td><strong>API 31</strong> (Android 12)</td>", rendered)
+        self.assertIn("<td>Kotlin DSL (build.gradle.kts)</td>", rendered)
+        self.assertIn("<td>AGP 9.1.1, coreKtx 1.17.0, <code>activity</code> 1.13.0</td>", rendered)
+        self.assertIn(">K01: HelloKotlin</a>", rendered)
+        self.assertIn(">A01: HelloAndroid</span>", rendered)
+        self.assertIn("<p>STEP 00–02 · <code>（値）</code>/STOP · RESET</p>", rendered)
+        # 未翻訳の文、<pre>、translate="no" は日本語版のまま。
+        self.assertIn("<p>「保存」を押す</p>", rendered)
+        self.assertIn("<pre>（そのまま）</pre>", rendered)
+        self.assertIn('<p translate="no">Java／Swift</p>', rendered)
+        # 属性も同じ（かな・漢字のある属性は訳の対象なので触らない）。
+        self.assertIn('alt="(Android 12)"', rendered)
+        self.assertIn('alt="画面（Android 12）"', rendered)
+        # 訳文の記号は訳した人が決めるので触らない。
+        translated = localize.localize(page_of(source), {"「保存」を押す": "Press 「保存」 (Save)"}, "en", "docs",
+                                       self.PAGES, ascii_punctuation=True)
+        self.assertIn("<p>Press 「保存」 (Save)</p>", translated)
+        # 漢字を使う言語と、指定のないときは、何も変えない。
+        for kwargs in ({"ascii_punctuation": False}, {}):
+            same = localize.localize(page_of(source), {}, "zh-Hans", "docs", self.PAGES, **kwargs)
+            self.assertIn("<td><strong>API 31</strong>（Android 12）</td>", same)
+            self.assertIn(">K01：HelloKotlin</a>", same)
+            self.assertIn('alt="（Android 12）"', same)
+
+    def test_localized_pages_apply_ascii_punctuation_only_to_languages_without_han(self):
+        """置き換えるかどうかは config/i18n.json の han で決まる（漢字を使う言語は日本語版のまま）。"""
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "config").mkdir()
+            (root / "config/i18n.json").write_text(json.dumps({
+                "source_language": "ja", "source_root": "docs", "catalog_root": "i18n",
+                "languages": [{"code": "en", "name": "English", "distribute": True, "ui": ui("Copy")},
+                              {"code": "zh-Hans", "name": "简体中文", "distribute": False, "han": True, "ui": ui("复制")}],
+                "source_ui": ui("コピー"),
+            }, ensure_ascii=False), encoding="utf-8")
+            (root / "docs/unit").mkdir(parents=True)
+            (root / "docs/unit/index.html").write_text(
+                '<html lang="ja"><body><p><a href="index.html">K01：HelloKotlin</a></p></body></html>', encoding="utf-8")
+            settings = localize.load_settings(root)
+            self.assertIn(">K01: HelloKotlin</a>", localize.localized_pages(settings, "en")["docs/en/unit/index.html"])
+            self.assertIn(">K01：HelloKotlin</a>", localize.localized_pages(settings, "zh-Hans")["docs/zh-Hans/unit/index.html"])
 
     def render(self, html, translations, name="docs/unit/index.html"):
         return localize.localize(page_of(html, name), translations, "en", "docs", self.PAGES)
@@ -943,9 +1009,57 @@ class RepositoryTest(unittest.TestCase):
                     self.assertEqual(blocks.findall(text), blocks.findall(original))
                     self.assertIn(f'<html lang="{code}"{direction}>', text)
 
+    def test_languages_without_han_have_no_fullwidth_punctuation_outside_japanese(self):
+        """漢字を使わない言語のページでは、日本語のまま残す文の外に全角の記号が残らない（#89）。
+
+        翻訳の単位にならない文字はページを作るときにASCIIへ置き換え、訳文の全角の記号は check が落とす。
+        漢字を使う言語（han）は、全角の記号がその言語の書き方なので対象にしない。
+        """
+        for code in self.settings.codes():
+            if self.settings.uses_han(code):
+                continue
+            for name, text in localize.localized_pages(self.settings, code, mark_untranslated=True).items():
+                with self.subTest(language=code, page=name):
+                    self.assertEqual(fullwidth_outside_japanese(text, name), [])
+
 
 def posixpath_source(name, code):
     return name.replace(f"docs/{code}/", "docs/", 1)
+
+
+def fullwidth_outside_japanese(text, name):
+    """作ったページで、日本語（かな・漢字）のない文字の連なりに残る全角の記号。
+
+    <code>・<kbd>・<pre>・<script>・translate="no" の中と、日本語のまま残す文（lang="ja"）の中は見ない。
+    文の区切りになる要素ごとに、直接の文字とインラインの子孫の文字をつないで見る（「<strong>保存</strong>」の
+    ように日本語の前後に分かれた記号を、日本語のない文字と取り違えないため）。
+    """
+    found = []
+
+    def skipped(element):
+        return (element.tag in localize.PROTECTED or element.tag in localize.SKIPPED
+                or localize._untranslatable(element) or element.attribute("lang") == "ja")
+
+    def gather(element, pieces):
+        for child in element.children:
+            if isinstance(child, localize.Text):
+                pieces.append(text[child.start:child.end])
+            elif skipped(child):
+                continue
+            elif child.inline:
+                gather(child, pieces)
+            else:
+                walk(child)
+
+    def walk(element):
+        pieces = []
+        gather(element, pieces)
+        content = "".join(pieces)
+        if localize.FULLWIDTH_PUNCTUATION.search(content) and not localize.JAPANESE.search(content):
+            found.append(content.strip())
+
+    walk(localize.parse(text, name))
+    return found
 
 
 if __name__ == "__main__":
