@@ -6,7 +6,7 @@
     {
       "code": "en",
       "name": "English",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "Copy",
         "copy_label": "Copy the code for {title}",
