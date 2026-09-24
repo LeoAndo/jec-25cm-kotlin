@@ -43,8 +43,8 @@
       "translation": "What to submit"
     },
     {
-      "source": "<strong>APKファイルを1つ。</strong>提出先は、<strong>先生が案内する場所</strong>です。",
-      "translation": "<strong>One APK file.</strong> Submit it to <strong>the place your teacher tells you</strong>."
+      "source": "<strong>APKファイルを1つ。</strong>提出先は、この授業の <strong>Google Classroom</strong> です。",
+      "translation": "<strong>One APK file.</strong> Submit it to <strong>Google Classroom</strong> for this class."
     },
     {
       "source": "すること",
@@ -83,8 +83,8 @@
       "translation": "Submit"
     },
     {
-      "source": "できたAPKを、先生が案内する提出先に出します。",
-      "translation": "Submit the APK you built to the place your teacher tells you."
+      "source": "できたAPKを、Google Classroom の課題に出します。",
+      "translation": "Submit the APK you built to the assignment in Google Classroom."
     },
     {
       "source": "進め方",
@@ -239,8 +239,8 @@
       "translation": "If you only rename the one that stopped working instead of deleting it, you can compare the two later."
     },
     {
-      "source": "<strong>どこを、どれだけ変えるかは自由です。</strong>「何か所以上」という決まりはありません。文字の色を1か所変えるだけでも、アレンジです。JavaとSwiftを書いてきた人なら、処理そのものを足すところまでやっても構いません。下の表は、左から右へいくほど手が込んだものになっています。",
-      "translation": "<strong>Where and how much you change is up to you.</strong> There is no rule such as \"at least this many places.\" Changing the text color in just one place is already a customization. If you have written Java and Swift, you may even go as far as adding new logic. In the table below, the changes get more elaborate from left to right."
+      "source": "<strong>どこを、どれだけ変えるかは自由です。</strong>「何か所以上」という決まりはありません。文字の色を1か所変えるだけでも、アレンジです。JavaとSwiftを書いてきた人なら、処理そのものを足すところまでやっても構いません。下の表は、上から下へいくほど手が込んだものになっています。",
+      "translation": "<strong>Where and how much you change is up to you.</strong> There is no rule such as \"at least this many places.\" Changing the text color in just one place is already a customization. If you have written Java and Swift, you may even go as far as adding new logic. In the table below, the changes get more elaborate from top to bottom."
     },
     {
       "source": "変えられるものの例",
@@ -707,8 +707,8 @@
       "translation": "You do not know where to submit"
     },
     {
-      "source": "先生に確認する。この資料では決めていない。",
-      "translation": "Ask your teacher. This guide does not specify it."
+      "source": "Google Classroom で、この授業のクラスの <strong>授業</strong> タブを開く（手順は7）。課題が見つからなければ、先生に確認する。",
+      "translation": "In Google Classroom, open the <strong>授業</strong> (Classwork) tab of this class (step 7). If you cannot find the assignment, ask your teacher."
     },
     {
       "source": "提出できるアプリが1つもない",
