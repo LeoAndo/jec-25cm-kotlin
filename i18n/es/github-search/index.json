@@ -11,16 +11,96 @@
       "translation": "JEC / Ejercicios de Kotlin"
     },
     {
+      "source": "進捗",
+      "translation": "Progreso"
+    },
+    {
+      "source": "目次",
+      "translation": "Índice"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 Crear tu propio proyecto"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "Si tienes problemas"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "Abrir el proyecto terminado"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "Común: Preparación inicial"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "Común: La tarea y el APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "Común: Otra versión de Android Studio"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "Lo que crearás en esta unidad"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "Comparación con Java y Swift"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "Detente aquí y verifica"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "Marca la casilla cuando lo hayas hecho. Si no puedes avanzar, muéstrale esta pantalla a tu docente."
+    },
+    {
+      "source": "自分のプロジェクトを作る",
+      "translation": "Crear tu propio proyecto"
+    },
+    {
       "source": "項目",
       "translation": "Campo"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "Qué ingresar o seleccionar"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · Archivo completo"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · Archivo completo"
     },
     {
       "source": "場所",
       "translation": "Ubicación"
     },
     {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · Archivo completo"
+    },
+    {
       "source": "変える場所",
       "translation": "Dónde cambiarlo"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "Lo que ves"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "Dónde verificar"
+    },
+    {
+      "source": "Gradle同期が失敗する",
+      "translation": "La sincronización de Gradle falla"
     },
     {
       "source": "公式資料",
