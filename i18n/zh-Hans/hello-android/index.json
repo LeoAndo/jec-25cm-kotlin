@@ -160,7 +160,7 @@
     },
     {
       "source": "完成版を起動したときの画面（指定AVDで撮影）",
-      "translation": "启动完成版时的界面（在指定的 AVD 上截取）"
+      "translation": "启动完成版时的界面（在指定的 AVD 上截图）"
     },
     {
       "source": "Javaではどう書くか",
@@ -376,7 +376,7 @@
     },
     {
       "source": "文字と4つのボタンを並べた画面（指定AVDで撮影）",
-      "translation": "排列了文字和4个按钮的界面（在指定的 AVD 上截取）"
+      "translation": "排列了文字和4个按钮的界面（在指定的 AVD 上截图）"
     },
     {
       "source": "設定",
@@ -548,7 +548,7 @@
     },
     {
       "source": "ボタンを押してHello, Android!に変わった画面（指定AVDで撮影）",
-      "translation": "点击按钮后文字变为“Hello, Android!”的界面（在指定的 AVD 上截取）"
+      "translation": "点击按钮后文字变为“Hello, Android!”的界面（在指定的 AVD 上截图）"
     },
     {
       "source": "<code>{ v -&gt; … }</code> はクリックされたときに実行するラムダです。<code>v</code> は押されたViewです。この処理では使いませんが、次のSnackbarで使います。Swiftのボタンのアクションにクロージャを渡す考え方にも対応します。",
@@ -600,7 +600,7 @@
     },
     {
       "source": "1を押したときのSnackbar（指定AVDで撮影）",
-      "translation": "点击“1”时显示的 Snackbar（在指定的 AVD 上截取）"
+      "translation": "点击“1”时显示的 Snackbar（在指定的 AVD 上截图）"
     },
     {
       "source": "2を押したときのToast",
@@ -608,7 +608,7 @@
     },
     {
       "source": "2を押したときのToast（指定AVDで撮影）",
-      "translation": "点击“2”时显示的 Toast（在指定的 AVD 上截取）"
+      "translation": "点击“2”时显示的 Toast（在指定的 AVD 上截图）"
     },
     {
       "source": "<code>getText()</code> は文字の表示内容を返し、<code>toString()</code> で文字列にします。KotlinでもJavaのメソッドをそのまま呼べます。<code>this</code> はこの <code>MainActivity</code>、<code>v</code> は押したボタンです。SnackbarはViewを手がかりに表示先を探し、ToastにはContextとしてActivityを渡します。",

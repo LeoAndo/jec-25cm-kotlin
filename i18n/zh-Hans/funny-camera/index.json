@@ -148,7 +148,7 @@
     },
     {
       "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面（指定AVDで撮影）",
-      "translation": "金鱼和 Take Picture 按钮叠加在相机画面上的界面（在指定的 AVD 上截取）"
+      "translation": "金鱼和 Take Picture 按钮叠加在相机画面上的界面（在指定的 AVD 上截图）"
     },
     {
       "source": "教科書とAndroid Studioを並べます。実行先は <code>jec_25cm_kotlin_Pixel 9a</code>。別のAndroid Studioの版を使っている場合は、作成前に先生へ画面を見せてください。",
@@ -660,7 +660,7 @@
     },
     {
       "source": "ボタンに金魚を重ねて保存し、保存しましたと出た画面（指定AVDで撮影）",
-      "translation": "把金鱼叠在按钮上保存后，显示「保存しました」（已保存）的界面（在指定的 AVD 上截取）"
+      "translation": "把金鱼叠在按钮上保存后，显示「保存しました」（已保存）的界面（在指定的 AVD 上截图）"
     },
     {
       "source": "エミュレータのホームへ戻り、アプリ一覧から <strong>Files</strong> を開きます。左上メニューの端末内ストレージ（指定AVDでは <code>sdk_gphone16k_arm64</code> と表示）から <strong>Pictures → FunnyCamera</strong> を開き、今の日時の <code>.jpg</code> を選びます。Filesで端末が出ていなければ、右上メニューの内部ストレージ表示を確認します。写真アプリを使う場合も、端末内のFunnyCameraフォルダを開きます。画像の上下に操作バーが重なる場合は、画像を1回タップして非表示にします。全画面の案内が出たら <strong>Got it</strong> を押します。",
@@ -708,7 +708,7 @@
     },
     {
       "source": "カメラを許可せず、権限が必要というSnackbarが出た画面（指定AVDで撮影）",
-      "translation": "未允许相机，显示需要权限的 Snackbar 的界面（在指定的 AVD 上截取）"
+      "translation": "未允许相机，显示需要权限的 Snackbar 的界面（在指定的 AVD 上截图）"
     },
     {
       "source": "確認後は同じ設定画面で <strong>Allow only while using the app</strong>（アプリの使用中のみ許可）に戻してRunし直します。映像が戻ったら保存を1回確認します。拒否を繰り返すとダイアログが出なくなる場合があるため、設定から戻します。",

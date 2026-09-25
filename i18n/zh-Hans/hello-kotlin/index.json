@@ -452,7 +452,7 @@
     },
     {
       "source": "前半（約35分）",
-      "translation": "前半部分（约35分钟）"
+      "translation": "前半段（约35分钟）"
     },
     {
       "source": "Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。",
@@ -460,7 +460,7 @@
     },
     {
       "source": "後半（約55分）",
-      "translation": "后半部分（约55分钟）"
+      "translation": "后半段（约55分钟）"
     },
     {
       "source": "<code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。",
@@ -664,7 +664,7 @@
     },
     {
       "source": "IntelliJ IDEA を開きます。最初に出るのがホーム画面です。",
-      "translation": "打开 IntelliJ IDEA。最先显示的是主页界面。"
+      "translation": "打开 IntelliJ IDEA。最先显示的是主界面。"
     },
     {
       "source": "左上の <strong>IntelliJ IDEA Home</strong> をクリックして、メニューを開きます。",
@@ -680,11 +680,11 @@
     },
     {
       "source": "IntelliJ IDEAのホーム画面。左上のIntelliJ IDEA Homeから開いたメニューに、新規…、新規プロジェクト…、開く…が縦に並び、2番目の新規プロジェクト…が青く選ばれている",
-      "translation": "IntelliJ IDEA 的主页界面。从左上角的 IntelliJ IDEA Home 打开的菜单中，纵向排列着 新規…（新建...）、新規プロジェクト…（新建项目...）、開く…（打开...），第2项 新規プロジェクト… 被选中并显示为蓝色"
+      "translation": "IntelliJ IDEA 的主界面。从左上角的 IntelliJ IDEA Home 打开的菜单中，纵向排列着 新規…（新建...）、新規プロジェクト…（新建项目...）、開く…（打开...），第2项 新規プロジェクト… 被选中并显示为蓝色"
     },
     {
       "source": "ホーム画面の左上のメニューから <strong>新規プロジェクト…</strong> を選びます。 <a1>画像を大きく開く</a1>",
-      "translation": "从主页界面左上角的菜单中选择 <strong>新規プロジェクト…</strong>（新建项目...）。 <a1>查看大图</a1>"
+      "translation": "从主界面左上角的菜单中选择 <strong>新規プロジェクト…</strong>（新建项目...）。 <a1>查看大图</a1>"
     },
     {
       "source": "② ダイアログに、表のとおり入力する",
@@ -852,7 +852,7 @@
     },
     {
       "source": "<strong>実行</strong> ツールウィンドウ。最後の行が <code>プロセスは終了コード 0 で終了しました</code> です。 <a1>画像を大きく開く</a1>",
-      "translation": "<strong>実行</strong>（运行）工具窗口。最后一行是 <code>プロセスは終了コード 0 で終了しました</code>（进程已结束，退出代码为 0）。 <a1>放大查看图片</a1>"
+      "translation": "<strong>実行</strong>（运行）工具窗口。最后一行是 <code>プロセスは終了コード 0 で終了しました</code>（进程已结束，退出代码为 0）。 <a1>查看大图</a1>"
     },
     {
       "source": "最後の <code>プロセスは終了コード 0 で終了しました</code> は、<strong>プログラムが最後まで動いて、正常に終わった</strong>という意味です。出力の一部ではありません。",
@@ -884,7 +884,7 @@
     },
     {
       "source": "見本の <code>Main.kt</code> を消します。チェックはそのままで <strong>OK</strong> を押します。 <a1>画像を大きく開く</a1>",
-      "translation": "删除示例 <code>Main.kt</code>。保持勾选不变，点击 <strong>OK</strong>。 <a1>放大查看图片</a1>"
+      "translation": "删除示例 <code>Main.kt</code>。保持勾选不变，点击 <strong>OK</strong>。 <a1>查看大图</a1>"
     },
     {
       "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。",
@@ -896,7 +896,7 @@
     },
     {
       "source": "<code>src</code> を右クリックして <strong>新規 → パッケージ</strong>。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。 <a1>画像を大きく開く</a1>",
-      "translation": "右键点击 <code>src</code>，选择 <strong>新規 → パッケージ</strong>（新建 → 软件包）。注意不要与紧邻其上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 类/文件）弄混。 <a1>放大查看图片</a1>"
+      "translation": "右键点击 <code>src</code>，选择 <strong>新規 → パッケージ</strong>（新建 → 软件包）。注意不要与紧邻其上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 类/文件）弄混。 <a1>查看大图</a1>"
     },
     {
       "source": "名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex01</code> ができます。",
@@ -908,7 +908,7 @@
     },
     {
       "source": "パッケージ名は <code>ex01</code>。すべて小文字で、記号は入れません。 <a1>画像を大きく開く</a1>",
-      "translation": "包名是 <code>ex01</code>。全部小写，不含符号。 <a1>放大查看图片</a1>"
+      "translation": "包名是 <code>ex01</code>。全部小写，不含符号。 <a1>查看大图</a1>"
     },
     {
       "source": "できた <code>ex01</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> ではなく <code>ex01</code> を右クリックします。</strong>",
@@ -920,7 +920,7 @@
     },
     {
       "source": "今度は <code>ex01</code> を右クリックして <strong>新規 → Kotlin ファイル/クラス</strong>。 <a1>画像を大きく開く</a1>",
-      "translation": "这次右键点击 <code>ex01</code>，选择 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）。 <a1>放大查看图片</a1>"
+      "translation": "这次右键点击 <code>ex01</code>，选择 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）。 <a1>查看大图</a1>"
     },
     {
       "source": "名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。",
@@ -932,7 +932,7 @@
     },
     {
       "source": "名前は <code>main</code>、種類は <strong>ファイル</strong>。上から2番目です。 <a1>画像を大きく開く</a1>",
-      "translation": "名称是 <code>main</code>，种类是 <strong>ファイル</strong>（文件），从上往下数第2项。 <a1>放大查看图片</a1>"
+      "translation": "名称是 <code>main</code>，种类是 <strong>ファイル</strong>（文件），从上往下数第2项。 <a1>查看大图</a1>"
     },
     {
       "source": "できた <code>main.kt</code> の1行目に <code>package ex01</code> が入っていることを確かめます。",
@@ -944,7 +944,7 @@
     },
     {
       "source": "1行目の <code>package ex01</code> と、空の <code>fun main()</code> は IntelliJ IDEA が入れたものです。自分で打つ必要はありません。 <a1>画像を大きく開く</a1>",
-      "translation": "第1行的 <code>package ex01</code> 和空的 <code>fun main()</code> 是 IntelliJ IDEA 自动加入的，不需要自己输入。 <a1>放大查看图片</a1>"
+      "translation": "第1行的 <code>package ex01</code> 和空的 <code>fun main()</code> 是 IntelliJ IDEA 自动加入的，不需要自己输入。 <a1>查看大图</a1>"
     },
     {
       "source": "1行目が <code>package ex01</code> になっていないとき",
@@ -1256,7 +1256,7 @@
     },
     {
       "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。",
-      "translation": "从这里开始自己改写代码。顺序是<strong>改1处 → 预测 → 点击 Run</strong>。答案要先试过再打开。"
+      "translation": "从这里开始自己改写代码。顺序是<strong>改一处 → 预测 → 点击 Run</strong>。答案要先试过再打开。"
     },
     {
       "source": "練習A · 変数を1つ足す（必須・3分）",
@@ -1668,7 +1668,7 @@
     },
     {
       "source": "変更するファイル：src/ex02/main.kt",
-      "translation": "要修改的文件：src/ex02/main.kt"
+      "translation": "要更改的文件：src/ex02/main.kt"
     },
     {
       "source": "入れられる値",
@@ -1996,7 +1996,7 @@
     },
     {
       "source": "表のとおりになったら、先生に画面を見せ、<code>?</code> を書いた場所と <code>?.</code> を書いた場所を指さして説明します。",
-      "translation": "与表格一致后，把屏幕给老师看，指着写 <code>?</code> 的位置和写 <code>?.</code> 的位置进行说明。"
+      "translation": "与表格一致后，把画面给老师看，指着写 <code>?</code> 的位置和写 <code>?.</code> 的位置进行说明。"
     },
     {
       "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex02</code> も忘れずに入れます。",
@@ -2040,7 +2040,7 @@
     },
     {
       "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code> と <code>ex02</code> が同じプロジェクトに並んでいることも確かめた。",
-      "translation": "已做完“完成检查”，并把屏幕给老师看过。也已看到 <code>ex01</code> 和 <code>ex02</code> 并列在同一个项目中。"
+      "translation": "已做完“完成检查”，并把画面给老师看过。也已看到 <code>ex01</code> 和 <code>ex02</code> 并列在同一个项目中。"
     },
     {
       "source": "この回のまとめ",
@@ -2248,7 +2248,7 @@
     },
     {
       "source": "変更するファイル：src/ex03/main.kt",
-      "translation": "要修改的文件：src/ex03/main.kt"
+      "translation": "要更改的文件：src/ex03/main.kt"
     },
     {
       "source": "src/ex03/main.kt · 全体を置き換える",
@@ -2452,7 +2452,7 @@
     },
     {
       "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。<strong>エラーのメッセージは、文言ではなく意味だけを読みます。</strong>言い回しは IntelliJ IDEA と Kotlin のバージョンで変わります。",
-      "translation": "从这里开始自己动手改。顺序是<strong>改一处 → 预测 → 点击 Run</strong>。答案要在试过之后再打开。<strong>错误信息只读意思，不读原话。</strong>具体措辞会随 IntelliJ IDEA 和 Kotlin 的版本变化。"
+      "translation": "从这里开始自己改写代码。顺序是<strong>改一处 → 预测 → 点击 Run</strong>。答案要先试过再打开。<strong>错误信息只读意思，不读原话。</strong>具体措辞会随 IntelliJ IDEA 和 Kotlin 的版本变化。"
     },
     {
       "source": "練習A · 引数を3つに増やす（必須・6分）",
@@ -2552,7 +2552,7 @@
     },
     {
       "source": "表のとおりになったら、先生に画面を見せ、<strong><code>: Int</code> と書いた場所と、何も書かなかった場所</strong>を指さして説明します。",
-      "translation": "与表格一致后，把屏幕给老师看，指着<strong>写了 <code>: Int</code> 的位置和什么都没写的位置</strong>进行说明。"
+      "translation": "与表格一致后，把画面给老师看，指着<strong>写了 <code>: Int</code> 的位置和什么都没写的位置</strong>进行说明。"
     },
     {
       "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex03</code> も忘れずに入れます。",
@@ -2596,7 +2596,7 @@
     },
     {
       "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が同じプロジェクトに並んでいることも確かめた。",
-      "translation": "已做完“完成检查”，并把屏幕给老师看过。也已看到 <code>ex01</code>、<code>ex02</code>、<code>ex03</code> 并列在同一个项目中。"
+      "translation": "已做完“完成检查”，并把画面给老师看过。也已看到 <code>ex01</code>、<code>ex02</code>、<code>ex03</code> 并列在同一个项目中。"
     },
     {
       "source": "<strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の型は3つの言語で書く位置か記号が違います。書く順番や記号が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。",

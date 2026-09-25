@@ -168,7 +168,7 @@
     },
     {
       "source": "kotlinを検索した一例。名前・数・順序は検索時点で変わる（指定AVDで撮影）",
-      "translation": "搜索 kotlin 的一个示例。名称、数值和顺序会随搜索时间而变化（截图自指定的 AVD）"
+      "translation": "搜索 kotlin 的一个示例。名称、数值和顺序会随搜索时间而变化（在指定的 AVD 上截图）"
     },
     {
       "source": "Java／Swiftとの比較",
@@ -316,7 +316,7 @@
     },
     {
       "source": "外側の <code>FrameLayout</code> は、入力と一覧の上に通信中の印を重ねるための配置です。内側の <code>LinearLayout</code> は縦並び。<code>progress</code> は最初 <code>invisible</code> なので見えません。<code>main</code> のidは生成されたインセット処理が使うため残します。",
-      "translation": "外侧的 <code>FrameLayout</code> 是为了把加载指示器叠加在输入框和列表上方而做的布局。内侧的 <code>LinearLayout</code> 垂直排列。<code>progress</code> 一开始是 <code>invisible</code>，所以看不见。<code>main</code> 这个 id 会被自动生成的 inset 处理使用，所以要保留。"
+      "translation": "外侧的 <code>FrameLayout</code> 是为了把加载指示器叠加在输入框和列表上方而做的布局。内侧的 <code>LinearLayout</code> 垂直排列。<code>progress</code> 一开始是 <code>invisible</code>，所以看不见。<code>main</code> 这个 id 会被自动生成的边距处理使用，所以要保留。"
     },
     {
       "source": "Runすると入力欄・「ソート順」・検索ボタンが出ます。まだSpinnerの選択肢も検索処理も書いていないので、押しても検索結果は出ません。",
@@ -388,7 +388,7 @@
     },
     {
       "source": "完成版の起動画面。11コマ目も選択肢を作ると同じ形になる（指定AVDで撮影）",
-      "translation": "完成版的启动界面。第11节课做好选项后也是同样的样子（截图自指定的 AVD）"
+      "translation": "完成版的启动界面。第11节课做好选项后也是同样的样子（在指定的 AVD 上截图）"
     },
     {
       "source": "Kotlinの <code>to</code> はPairを作る関数で、Swiftのタプルに近い役目です。<code>map</code> はSwiftと同じく各要素を変換します。<code>apply</code> の中は作成したAdapterが <code>this</code> になるので、直接そのメソッドを呼べます。",
@@ -608,7 +608,7 @@
     },
     {
       "source": "通信せずに固定の2件を表示した12コマ目の途中画面（指定AVDで撮影）",
-      "translation": "不进行网络通信、只显示固定2条数据的第12节课中间界面（截图自指定的 AVD）"
+      "translation": "不进行网络通信、只显示固定2条数据的第12节课中间界面（在指定的 AVD 上截图）"
     },
     {
       "source": "KotlinはJavaのsetterをプロパティへの代入として書けます。SwiftのTable Viewにもデータを行へ表示する役割がありますが、このアプリではRecyclerViewのAdapterとViewHolderで分担します。",
@@ -740,7 +740,7 @@
     },
     {
       "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "把 <code>MainActivity.kt</code> 全文替换为下面的<strong>完成代码</strong>。去掉固定数据的 <code>submitList(listOf(…))</code>，改为在 <code>search</code> 中调用网络通信。创建项目时生成的 inset 处理、获取 View 和组装 Spinner 保持不变。"
+      "translation": "把 <code>MainActivity.kt</code> 全文替换为下面的<strong>完成代码</strong>。去掉固定数据的 <code>submitList(listOf(…))</code>，改为在 <code>search</code> 中调用网络通信。创建项目时生成的边距处理、获取 View 和组装 Spinner 保持不变。"
     },
     {
       "source": "MainActivity.kt · 全文",
