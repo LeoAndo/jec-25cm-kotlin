@@ -648,7 +648,7 @@
     },
     {
       "source": "K01：HelloKotlin へ進む →",
-      "translation": "Continue to K01：HelloKotlin →"
+      "translation": "Continue to K01: HelloKotlin →"
     },
     {
       "source": "6. 後半で使う Android Studio とエミュレータ",
@@ -660,7 +660,7 @@
     },
     {
       "source": "この準備の段階では、<strong>エミュレータを作る必要はありません</strong>。作り方は、後半の <a1>A01：HelloAndroidのSTEP 02</a1> で先生と確認します。ここでは、使う端末の名前だけ覚えておいてください。",
-      "translation": "You <strong>do not need to create an emulator</strong> during this setup. Your teacher will go through the steps with you in <a1>STEP 02 of A01：HelloAndroid</a1> in the second part of the course. For now, just remember the name of the device you will use."
+      "translation": "You <strong>do not need to create an emulator</strong> during this setup. Your teacher will go through the steps with you in <a1>STEP 02 of A01: HelloAndroid</a1> in the second part of the course. For now, just remember the name of the device you will use."
     },
     {
       "source": "決めるもの",

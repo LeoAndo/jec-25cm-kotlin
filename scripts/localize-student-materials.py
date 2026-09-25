@@ -16,6 +16,7 @@
 from __future__ import annotations
 
 import argparse
+import bisect
 from collections import Counter
 from dataclasses import dataclass, field
 import difflib
@@ -56,6 +57,18 @@ BODY = re.compile(r"<body\b[^>]*>", re.I)
 # ひらがな・カタカナ・漢字。「・」（U+30FB）は、英字だけの文にも区切りとして出てくるので含めない。
 JAPANESE = re.compile(r"[\u3041-\u309f\u30a1-\u30fa\u30fc-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uff66-\uff9f\u3005]")
 KANA = re.compile(r"[\u3041-\u309f\u30a1-\u30fa\u30fc-\u30ff\uff66-\uff9f]")
+# 全角の記号 → ASCII の記号。漢字を使わない言語で、翻訳の単位にならない文字に使う（下の ascii_punctuation）。
+# 記号の前後の空白は、置き換えたあとで続いた分を1つにまとめる。全角スペース（U+3000）は、サイドバーの
+# 「番号＋全角スペース＋題名」の形で残す決まりなので入れない。
+ASCII_PUNCTUATION = {
+    "、": ", ", "。": ". ", "，": ", ", "．": ". ", "：": ": ", "；": "; ", "！": "! ", "？": "? ",
+    "（": " (", "）": ") ", "［": " [", "］": "] ", "｛": " {", "｝": "} ", "【": " [", "】": "] ", "〔": " [", "〕": "] ",
+    "「": ' "', "」": '" ', "『": ' "', "』": '" ', "〈": " &lt;", "〉": "&gt; ", "《": " «", "》": "» ",
+    "〜": "–", "～": "–", "・": " · ", "／": "/", "＼": "\\", "＋": "+", "－": "-", "＝": "=", "＜": "&lt;", "＞": "&gt;",
+    "＆": "&amp;", "＂": '"', "＇": "'", "＃": "#", "＄": "$", "％": "%", "＊": "*", "＠": "@", "＾": "^", "＿": "_",
+    "｀": "`", "｜": "|", "〃": '"', "￥": "¥",
+}
+FULLWIDTH_PUNCTUATION = re.compile("[" + "".join(map(re.escape, ASCII_PUNCTUATION)) + "]")
 # 開始タグの属性を1つずつ読むための形。名前だけの属性（値なし）も受ける。
 ATTRIBUTE = re.compile(r"""\s+([^\s/>=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?""")
 # カタログの中のタグ。属性のないタグはそのまま（<strong>）、属性つきのタグは番号つきの目印（<a1>）で書く。
@@ -253,6 +266,21 @@ def normalize(text: str) -> str:
     全角スペースは、その言語の書き方の一部なので、そのまま残す。
     """
     return ASCII_SPACES.sub(" ", text).strip(" \t\r\n\f")
+
+
+def ascii_punctuation(text: str) -> str:
+    """全角の記号を、ASCIIの記号に置き換える（#89）。
+
+    かな・漢字を含まない文字（「（Android 12）」「STOP・RESET」「K01：HelloKotlin」など）は翻訳の単位に
+    ならず、どの言語でも日本語版のまま出る。漢字を使わない言語では、全角の記号だけが日本語の書き方のまま
+    残って訳文の記号と混ざるので、ページを作るときにASCIIの記号へ置き換える（英語などの用語集の
+    「全角の記号はASCIIにする」と同じ形。範囲の 〜 は en dash）。置き換えで空白が続いたところは1つに
+    まとめる（元の改行と字下げは残す）。
+    """
+    if not FULLWIDTH_PUNCTUATION.search(text):
+        return text
+    replaced = FULLWIDTH_PUNCTUATION.sub(lambda match: ASCII_PUNCTUATION[match.group(0)], text)
+    return re.sub(r" {2,}", " ", replaced)
 
 
 def _attribute_spans(raw: str, tag: str) -> dict:
@@ -492,6 +520,10 @@ def validate(source: str, translation: str, terms: list, han: bool = False) -> l
         errors.append("訳文に、原文にない形のタグか「<」があります（文字としての < は &lt; と書く）")
     if "&" in rest:
         errors.append("訳文に「&」がそのまま入っています（&amp; と書く）")
+    if not han and FULLWIDTH_PUNCTUATION.search(rest) and not JAPANESE.search(rest):
+        # 漢字を使わない言語の訳文に、日本語の全角の記号が残っている。日本語の画面の言葉を「」で囲む文のように
+        # 日本語を残す文は、その記号ごと残すので見ない（#89）。
+        errors.append("訳文に全角の記号が残っています（この言語ではASCIIの記号にする。日本語を残す文は除く）")
     missing = Counter(_tags(source)) - Counter(_tags(translation))
     extra = Counter(_tags(translation)) - Counter(_tags(source))
     if missing:
@@ -572,7 +604,8 @@ class Catalog:
 
 class _Localizer:
     def __init__(self, page: Page, translations: dict, language: str, source_root: str, pages: set,
-                 android_docs_hl: str | None = None, *, mark_untranslated: bool = False, direction: str = "ltr"):
+                 android_docs_hl: str | None = None, *, mark_untranslated: bool = False, direction: str = "ltr",
+                 ascii_punctuation: bool = False):
         self.page = page
         catalog = translations if isinstance(translations, Catalog) else Catalog(translations)
         self.translations = catalog.entries
@@ -585,6 +618,7 @@ class _Localizer:
         self.fallback_attributes = {}
         self.android_docs_hl = android_docs_hl
         self.direction = direction
+        self.ascii_punctuation = ascii_punctuation
 
     def translation(self, source: str, where: str) -> str | None:
         return self.overrides.get((source, where), self.translations.get(source))
@@ -611,11 +645,17 @@ class _Localizer:
         page = self.page.name
         values = {}
         for name in _translated_attributes(element):
-            source = normalize(_raw_attribute(text, element, name, page) or "")
+            raw_value = _raw_attribute(text, element, name, page) or ""
+            source = normalize(raw_value)
             translation = self.translation(source, f"{element.tag} {name}")
             if translation is not None:
                 # 値は " で囲む。' も逃がして、訳文の中の文字列が属性に見えないようにする。
                 values[name] = translation.replace('"', "&quot;").replace("'", "&#39;")
+            elif self.ascii_punctuation and not JAPANESE.search(source):
+                # かな・漢字のない属性は訳の対象にならず、そのまま出る。本文と同じく、全角の記号だけをASCIIにする。
+                converted = ascii_punctuation(raw_value).strip(" ")
+                if converted != raw_value:
+                    values[name] = converted.replace('"', "&quot;").replace("'", "&#39;")
         for name in LINK_ATTRIBUTES:
             value = _raw_attribute(text, element, name, page)
             if value is not None:
@@ -699,6 +739,10 @@ class _Localizer:
                     rendered = f'{self._span("ja")}{rendered}</span>'
             replacements.append((segment.start, segment.end, rendered))
         self._start_tags(self.page.root, replacements)
+        if self.ascii_punctuation:
+            ranges = sorted((segment.start, segment.end) for segment in self.page.segments if segment.element is None)
+            self._outside_segments(self.page.root, replacements,
+                                   [start for start, _ in ranges], [end for _, end in ranges])
         parts, position = [], 0
         for start, end, rendered in sorted(replacements):
             parts.extend((text[position:start], rendered))
@@ -742,12 +786,46 @@ class _Localizer:
             if child.tag not in SKIPPED:
                 self._start_tags(child, replacements)
 
+    def _outside_segments(self, element: Element, replacements: list, starts: list, ends: list) -> None:
+        """翻訳の単位にならない文字（かな・漢字を含まない連なり）の全角の記号を、ASCIIの記号にする（#89）。
+
+        訳の対象の文には手を付けない（訳文の記号は訳した人が決め、未翻訳の文は日本語の記号のまま出す）。
+        <code>・<pre> などの中身と translate="no" の要素も、日本語版のまま残す。
+        """
+        children = element.children
+        for index, child in enumerate(children):
+            if isinstance(child, Text):
+                if self._inside_segment(child, starts, ends):
+                    continue
+                raw = self.page.text[child.start:child.end]
+                converted = ascii_punctuation(raw)
+                if converted == raw:
+                    continue
+                # 置き換えで足した空白は、要素の先頭と末尾では要らない（<td>（Android 12）</td> → (Android 12)）。
+                # <strong>API 31</strong>（Android 12） のように隣に要素があるところは、その空白で区切る。
+                if index == 0 and not raw.startswith(" "):
+                    converted = converted.lstrip(" ")
+                if index == len(children) - 1 and not raw.endswith(" "):
+                    converted = converted.rstrip(" ")
+                replacements.append((child.start, child.end, converted))
+            elif child.tag not in PROTECTED and child.tag not in SKIPPED and not _untranslatable(child):
+                self._outside_segments(child, replacements, starts, ends)
+
+    @staticmethod
+    def _inside_segment(node: Text, starts: list, ends: list) -> bool:
+        """文字が、取り出した文（訳の対象）の範囲に掛かっているか。文の範囲は重ならず、start の順に並ぶ。"""
+        index = bisect.bisect_right(starts, node.start) - 1
+        if index >= 0 and ends[index] > node.start:
+            return True
+        return index + 1 < len(starts) and starts[index + 1] < node.end
+
 
 def localize(page: Page, translations: dict, language: str, source_root: str, pages: set,
              android_docs_hl: str | None = None, *, mark_untranslated: bool = False,
-             direction: str = "ltr") -> str:
+             direction: str = "ltr", ascii_punctuation: bool = False) -> str:
     return _Localizer(page, translations, language, source_root, pages, android_docs_hl,
-                      mark_untranslated=mark_untranslated, direction=direction).run()
+                      mark_untranslated=mark_untranslated, direction=direction,
+                      ascii_punctuation=ascii_punctuation).run()
 
 
 # ---------------------------------------------------------------------------
@@ -1274,9 +1352,12 @@ def localized_pages(settings: Settings, code: str, *, mark_untranslated: bool = 
     for name in names:
         page = read_page(settings.root, name)
         translations = read_catalog(settings.catalog_path(code, name))
+        # 漢字を使わない言語では、翻訳の単位にならない文字の全角の記号をASCIIにする（#89）。漢字を使う言語は、
+        # 全角の記号がその言語の書き方なので、日本語版のまま出す。
         result[output_name(name, code, settings.source_root)] = localize(
             page, translations, code, settings.source_root, set(names), android_docs_hl,
-            mark_untranslated=mark_untranslated, direction=settings.direction(code))
+            mark_untranslated=mark_untranslated, direction=settings.direction(code),
+            ascii_punctuation=not settings.uses_han(code))
     return result
 
 
