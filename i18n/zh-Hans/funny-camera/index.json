@@ -160,7 +160,7 @@
     },
     {
       "source": "Swiftのletに対応するKotlinのvalを使います。以後も比較欄のJava／Swiftは読むための見本で、Android Studioに貼るのはKotlinです。",
-      "translation": "使用与 Swift 的 let 对应的 Kotlin 的 val。之后比较栏中的 Java/Swift 也只是供阅读的示例，粘贴到 Android Studio 中的是 Kotlin。"
+      "translation": "使用与 Swift 的 let 对应的 Kotlin 的 val。之后比较栏中的 Java / Swift 也只是供阅读的示例，粘贴到 Android Studio 中的是 Kotlin。"
     },
     {
       "source": "ここで止まって確認",
@@ -332,7 +332,7 @@
     },
     {
       "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
-      "translation": "<a1>保存金鱼图片 character.png</a1>，然后在 Finder 中把它复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code>。如果保存时变成了其他名称，改回 <code>character.png</code>。放在 <strong>drawable</strong> 的正下方。图片是背景透明的500×416像素，与完成版相同。"
+      "translation": "<a1>保存金鱼图片 character.png</a1>，然后在 Finder 中把它复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code>。如果保存时变成了其他名称，改回 <code>character.png</code>。直接放在 <strong>drawable</strong> 文件夹里（不要放进子文件夹）。图片是背景透明的500×416像素，与完成版相同。"
     },
     {
       "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
@@ -468,11 +468,11 @@
     },
     {
       "source": "Javaのgetter／setterをKotlinではプロパティの形で呼べます。cameraProviderFuture.get()は準備完了のリスナ内にあり、ここでPreviewを画面へ接続します。",
-      "translation": "Java 的 getter/setter 在 Kotlin 中可以按属性的形式调用。cameraProviderFuture.get() 位于准备完成的监听器内，在这里把 Preview 连接到界面。"
+      "translation": "Java 的 getter / setter 在 Kotlin 中可以按属性的形式调用。cameraProviderFuture.get() 位于准备完成的监听器内，在这里把 Preview 连接到界面。"
     },
     {
       "source": "仮想の部屋と金魚が表示され、金魚を四辺へ動かすと画面の内側で止まる。ボタンから途中段階の案内が出る。",
-      "translation": "显示出虚拟房间和金鱼，把金鱼移到四条边时会停在界面内侧。按钮会显示中间阶段的提示。"
+      "translation": "显示出虚拟房间和金鱼，把金鱼移到四条边时会停在界面内侧。按下按钮后会显示中间阶段的提示。"
     },
     {
       "source": "STEP 07 · 14コマ目 · 目安 3分",
@@ -532,7 +532,7 @@
     },
     {
       "source": "まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
-      "translation": "首先，阅读下面的合成部分。<strong>不要只粘贴这段摘录</strong>，而是放入 STEP 10 的全文后再点击 Run。<code>previewView.bitmap</code> 取出当前显示在预览中的画面。准备好之前是 null。"
+      "translation": "首先，阅读下面的合成部分。<strong>这段摘录不要粘贴</strong>，等到 STEP 10 放入全文后再点击 Run。<code>previewView.bitmap</code> 取出当前显示在预览中的画面。准备好之前是 null。"
     },
     {
       "source": "順序",
@@ -784,7 +784,7 @@
     },
     {
       "source": "画像の差し替えをするなら、利用してよい自分の透過PNGを同じ <code>character.png</code> という名前で入れ替えます。今回の500×416程度の大きさにします。大きな原寸画像はメモリを使うため避けます。id・パッケージ・カメラ権限・保存処理の呼び出しは変えません。",
-      "translation": "如果要替换图片，把自己有权使用的透明背景 PNG 用同样的名称 <code>character.png</code> 换进去。大小与这次的500×416差不多。尺寸很大的原图会占用内存，要避免。id、包、相机权限、保存处理的调用都不改。"
+      "translation": "如果要替换图片，把自己有权使用的透明背景 PNG 用同样的名称 <code>character.png</code> 换进去。大小要调整到与这次的500×416差不多。尺寸很大的原图会占用内存，要避免。id、包、相机权限、保存处理的调用都不改。"
     },
     {
       "source": "どの値を選ぶかに1つの正解はありません。保存画像まで開き、変えた場所に対応する変化が出るかを確認します。提出するアプリは、自分で作ったAndroidアプリの中から1つ選びます。提出先と締め切りは授業で案内します。",
@@ -844,7 +844,7 @@
     },
     {
       "source": "drawable直下のcharacter.pngとXMLの@drawable/characterを照合。ファイル名の末尾に番号が付いていないか確認します。",
-      "translation": "核对 drawable 正下方的 character.png 与 XML 中的 @drawable/character。确认文件名末尾是否带了编号。"
+      "translation": "核对直接位于 drawable 文件夹中的 character.png 与 XML 中的 @drawable/character。确认文件名末尾是否带了编号。"
     },
     {
       "source": "起動直後に閉じる",

@@ -156,7 +156,7 @@
     },
     {
       "source": "教材のフォルダの <code>samples</code> に入っているのは、先生が作った完成プロジェクト（見本）です。選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。",
-      "translation": "教材文件夹中的 <code>samples</code> 里放的是老师制作的完成项目（示例）。要选的是 <strong>書類（文稿）→ Kotlin</strong> 正下方、自己创建的项目。"
+      "translation": "教材文件夹中的 <code>samples</code> 里放的是老师制作的完成项目（示例）。要选的是直接位于 <strong>書類（文稿）→ Kotlin</strong> 中、自己创建的项目。"
     },
     {
       "source": "最後まで作れていない単元も、教科書を見ながら完成させれば選べます。選べるものが1つもないときは、先生に相談してください。",
@@ -264,7 +264,7 @@
     },
     {
       "source": "<code>activity_main.xml</code> の、文字を出す部品（<code>TextView</code> など）",
-      "translation": "<code>activity_main.xml</code> 中显示文字的部件（如 <code>TextView</code>）"
+      "translation": "<code>activity_main.xml</code> 中显示文字的界面元素（如 <code>TextView</code>）"
     },
     {
       "source": "画面の背景の色",
@@ -272,7 +272,7 @@
     },
     {
       "source": "<code>activity_main.xml</code> の、いちばん外側の部品",
-      "translation": "<code>activity_main.xml</code> 中最外层的部件"
+      "translation": "<code>activity_main.xml</code> 中最外层的界面元素"
     },
     {
       "source": "ボタンの色",
@@ -376,7 +376,7 @@
     },
     {
       "source": "<code>/&gt;</code> は「この部品の設定はここまで」という印です。<code>\" \"</code> の中だけを書き換えれば、ほかの行は触りません。",
-      "translation": "<code>/&gt;</code> 是表示“这个部件的设置到此为止”的标记。只需改写 <code>\" \"</code> 中的内容，其他行不用动。"
+      "translation": "<code>/&gt;</code> 是表示“这个界面元素的设置到此为止”的标记。只需改写 <code>\" \"</code> 中的内容，其他行不用动。"
     },
     {
       "source": "次に、メッセージです。<code>app → java → jp.ac.jec.（プロジェクトごとの名前） → MainActivity.kt</code> を開きます。",
@@ -532,7 +532,7 @@
     },
     {
       "source": "<code>A01HelloAndroid</code> の場合の保存場所",
-      "translation": "<code>A01HelloAndroid</code> 的保存位置"
+      "translation": "以 <code>A01HelloAndroid</code> 为例的保存位置"
     },
     {
       "source": "<code>app-debug.apk</code> があることを確認します。",

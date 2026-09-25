@@ -436,7 +436,7 @@
     },
     {
       "source": "<code>MainActivity.kt</code> を開きます。<code>onCreate</code> 内の余白処理を閉じる <code>})</code>（生成直後なら <code>}</code>）のあとに、次の4行を追加します。<code>onCreate</code> を閉じる最後のかっこの手前です。",
-      "translation": "打开 <code>MainActivity.kt</code>。在 <code>onCreate</code> 内闭合边距处理的 <code>})</code>（刚生成时是 <code>}</code>）之后，添加下面4行。也就是在闭合 <code>onCreate</code> 的最后一个括号之前。"
+      "translation": "打开 <code>MainActivity.kt</code>。在 <code>onCreate</code> 内闭合边距处理的 <code>})</code>（刚生成时是 <code>}</code>）之后，添加下面4行。也就是在闭合 <code>onCreate</code> 的最后一个右花括号之前。"
     },
     {
       "source": "MainActivity.kt · onCreateの中に追加",
@@ -832,7 +832,7 @@
     },
     {
       "source": "自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。",
-      "translation": "自己的应用中4个项目都已确认，可以更改的地方能在 STEP 12 的表格中找到。"
+      "translation": "自己的应用中这4项都已确认，可以更改的地方能在 STEP 12 的表格中找到。"
     },
     {
       "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",

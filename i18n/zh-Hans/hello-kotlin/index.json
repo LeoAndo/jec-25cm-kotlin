@@ -268,7 +268,7 @@
     },
     {
       "source": "6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>〜<code>ex11</code> のパッケージを足していきます。演習番号と授業順が違う回も、教科書のSTEPの順に進めます。",
-      "translation": "这6节课只使用 <code>K01HelloKotlin</code> 这一个项目。每上一节课，就往里面添加 <code>ex01</code>～<code>ex11</code> 这些包。即使某节课的练习编号与上课顺序不一致，也按课本的 STEP 顺序进行。"
+      "translation": "这6节课只使用 <code>K01HelloKotlin</code> 这一个项目。随着课程推进，逐步往里面添加 <code>ex01</code>～<code>ex11</code> 这些包。即使某节课的练习编号与上课顺序不一致，也按课本的 STEP 顺序进行。"
     },
     {
       "source": "みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。",
@@ -636,7 +636,7 @@
     },
     {
       "source": "Playgroundで <code>Hello, Kotlin!</code> を出せた。",
-      "translation": "Playground 中显示了 <code>Hello, Kotlin!</code>。"
+      "translation": "已在 Playground 中输出 <code>Hello, Kotlin!</code>。"
     },
     {
       "source": "次へ：プロジェクトを作る →",
@@ -952,7 +952,7 @@
     },
     {
       "source": "ファイルが <code>ex01</code> の中ではなく <code>src</code> の直下にできています。<code>main.kt</code> を右クリックして削除し、④からやり直します。<code>ex01</code> を右クリックしたかどうかが分かれ目です。",
-      "translation": "文件被创建在了 <code>src</code> 的正下方，而不是 <code>ex01</code> 里面。右键点击 <code>main.kt</code> 删除它，从④重新开始。关键在于是否右键点击了 <code>ex01</code>。"
+      "translation": "文件被直接创建在了 <code>src</code> 下，而不是 <code>ex01</code> 里面。右键点击 <code>main.kt</code> 删除它，从④重新开始。关键在于是否右键点击了 <code>ex01</code>。"
     },
     {
       "source": "この単元は全6コマです。回を重ねるごとに、同じ <code>K01HelloKotlin</code> プロジェクトの <code>src</code> の下に、いまと同じ手順で <code>ex02</code>、<code>ex03</code> …とパッケージを足していきます。プロジェクトを作り直さないので、前の回に書いたコードを、いつでも開いて見返せます。",
@@ -1008,7 +1008,7 @@
     },
     {
       "source": "ウィザードのサンプルをそのまま実行して <code>プロセスは終了コード 0 で終了しました</code> を出し、そのあと <code>src/ex01/main.kt</code> を作って <code>Hello, Kotlin!</code> を出せた。",
-      "translation": "直接运行向导的示例，显示了 <code>プロセスは終了コード 0 で終了しました</code>（进程已结束，退出代码为 0）；之后创建的 <code>src/ex01/main.kt</code> 显示了 <code>Hello, Kotlin!</code>。"
+      "translation": "已原样运行向导的示例并显示 <code>プロセスは終了コード 0 で終了しました</code>（进程已结束，退出代码为 0）；之后已创建 <code>src/ex01/main.kt</code> 并输出 <code>Hello, Kotlin!</code>。"
     },
     {
       "source": "次へ：val と var →",
@@ -1120,7 +1120,7 @@
     },
     {
       "source": "<code>val</code> と <code>var</code> で2行を出せた。",
-      "translation": "用 <code>val</code> 和 <code>var</code> 输出了2行。"
+      "translation": "已用 <code>val</code> 和 <code>var</code> 输出2行。"
     },
     {
       "source": "次へ：数の型 →",
@@ -1240,7 +1240,7 @@
     },
     {
       "source": "4行を出せた。",
-      "translation": "输出了4行。"
+      "translation": "控制台已输出4行。"
     },
     {
       "source": "次へ：ミニ練習 →",
@@ -1628,7 +1628,7 @@
     },
     {
       "source": "ファイルが <code>ex02</code> の中ではなく、<code>src</code> の直下か <code>ex01</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex02</code> を右クリックしたかどうかが分かれ目です。",
-      "translation": "文件没有创建在 <code>ex02</code> 里，而是创建在了 <code>src</code> 的正下方或 <code>ex01</code> 里。右键点击 <code>main.kt</code> 将其删除，从③重新开始。关键在于右键点击的是不是 <code>ex02</code>。"
+      "translation": "文件没有创建在 <code>ex02</code> 里，而是直接创建在了 <code>src</code> 下或 <code>ex01</code> 里。右键点击 <code>main.kt</code> 将其删除，从③重新开始。关键在于右键点击的是不是 <code>ex02</code>。"
     },
     {
       "source": "④ Java / Swift ではどう書くか（パッケージ）",
@@ -1984,7 +1984,7 @@
     },
     {
       "source": "<code>val name1: String</code> には <code>null</code> が入らないので、<code>?.</code> なしで <code>count()</code> を呼べる。",
-      "translation": "<code>val name1: String</code> 不会存入 <code>null</code>，所以不用 <code>?.</code> 就能调用 <code>count()</code>。"
+      "translation": "<code>val name1: String</code> 不能存入 <code>null</code>，所以不用 <code>?.</code> 就能调用 <code>count()</code>。"
     },
     {
       "source": "<code>var name2: String?</code> が <code>null</code> のとき、<code>?.</code> が <code>count()</code> を呼ばずに <code>null</code> を返している。",
@@ -2008,7 +2008,7 @@
     },
     {
       "source": "Kotlinの <code>println(name2?.count())</code> の1行が、Javaでは <code>if</code> と <code>else</code> に分かれます。2回出てくるので、ここでは <code>printLength</code> というメソッドにまとめました。<strong>Javaでは「<code>null</code> のとき何を出すか」も自分で書きます。</strong> Kotlinは <code>?.</code> が <code>null</code> を返し、<code>println</code> がそれをそのまま出します。",
-      "translation": "Kotlin 的 <code>println(name2?.count())</code> 这一行，在 Java 中要分成 <code>if</code> 和 <code>else</code>。因为出现了2次，这里把它归纳成了一个叫 <code>printLength</code> 的方法。<strong>在 Java 中，“为 <code>null</code> 时输出什么”也要自己写。</strong>Kotlin 则由 <code>?.</code> 返回 <code>null</code>，<code>println</code> 把它原样输出。"
+      "translation": "Kotlin 的 <code>println(name2?.count())</code> 这一行，在 Java 中要分成 <code>if</code> 和 <code>else</code>。因为出现了2次，这里把它提取成了一个叫 <code>printLength</code> 的方法。<strong>在 Java 中，“为 <code>null</code> 时输出什么”也要自己写。</strong>Kotlin 则由 <code>?.</code> 返回 <code>null</code>，<code>println</code> 把它原样输出。"
     },
     {
       "source": "Swiftの書き方はKotlinとほぼ同じです。ただし<strong>実行時の形が違います。</strong> Swiftの <code>String?</code> はオプショナルという入れ物に包まれた別の値なので、そのまま表示すると包まれていることが分かる形で出ます。Kotlinの <code>String?</code> は、実行時には文字列そのものか <code>null</code> かのどちらかで、包む入れ物がありません。だから <code>println(name2?.count())</code> は、数か <code>null</code> をそのまま出します。",
@@ -2208,7 +2208,7 @@
     },
     {
       "source": "ファイルが <code>ex03</code> の中ではなく、<code>src</code> の直下か、<code>ex01</code>・<code>ex02</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex03</code> を右クリックしたかどうかが分かれ目です。",
-      "translation": "文件没有创建在 <code>ex03</code> 里，而是创建在了 <code>src</code> 的正下方，或 <code>ex01</code>、<code>ex02</code> 里。右键点击 <code>main.kt</code> 将其删除，从③重新开始。关键在于右键点击的是不是 <code>ex03</code>。"
+      "translation": "文件没有创建在 <code>ex03</code> 里，而是直接创建在了 <code>src</code> 下，或 <code>ex01</code>、<code>ex02</code> 里。右键点击 <code>main.kt</code> 将其删除，从③重新开始。关键在于右键点击的是不是 <code>ex03</code>。"
     },
     {
       "source": "④ Java / Swift ではどう書くか（パッケージと、関数を置く場所）",
@@ -2660,7 +2660,7 @@
     },
     {
       "source": "19 再開とゴール",
-      "translation": "19 重新开始与目标"
+      "translation": "19 继续上节课与目标"
     },
     {
       "source": "5分",
@@ -2772,7 +2772,7 @@
     },
     {
       "source": "Kotlinの <code>if</code> は値を返す式としても使えますが、この完成コードは分岐した先で出力する形です。値を受け取る形や <code>when</code> はここでは増やしません。",
-      "translation": "Kotlin 的 <code>if</code> 也可以作为返回值的表达式使用，但这份完成代码采用的是在分支内输出的形式。接收返回值的形式和 <code>when</code> 在这里不再增加。"
+      "translation": "Kotlin 的 <code>if</code> 也可以作为产生值的表达式使用，但这份完成代码采用的是在分支内输出的形式。接收这个值的形式和 <code>when</code> 在这里不涉及。"
     },
     {
       "source": "④ 条件を1か所だけ変える",
@@ -3328,7 +3328,7 @@
     },
     {
       "source": "Kotlinの名前付き引数は、呼び出す側が任意で付ける <code>age = 25</code> です。Swiftの <code>age: 25</code> は宣言側が決めた<strong>引数ラベル</strong>で、このイニシャライザでは省けません。記号の違いだけではありません。Kotlinの <code>copy</code> では、名前付き引数と既定引数を組み合わせることで、変更する引数だけを指定できます。<code>copy</code> は新しいオブジェクトを返し、元の <code>yamada</code> の年齢は <code>20</code> のままです。",
-      "translation": "Kotlin 的具名参数是由调用方自行选择添加的 <code>age = 25</code>。Swift 的 <code>age: 25</code> 是声明方决定的<strong>参数标签</strong>，在这个初始化器中不能省略。区别不只是符号。在 Kotlin 的 <code>copy</code> 中，把具名参数和默认参数组合起来，就可以只指定要更改的参数。<code>copy</code> 返回新的对象，原来的 <code>yamada</code> 的年龄仍然是 <code>20</code>。"
+      "translation": "Kotlin 的具名参数是由调用方自行选择添加的 <code>age = 25</code>。Swift 的 <code>age: 25</code> 是声明方决定的<strong>参数标签</strong>（引数ラベル），在这个初始化器中不能省略。区别不只是符号。在 Kotlin 的 <code>copy</code> 中，把具名参数和默认参数组合起来，就可以只指定要更改的参数。<code>copy</code> 返回新的对象，原来的 <code>yamada</code> 的年龄仍然是 <code>20</code>。"
     },
     {
       "source": "⑤ 型とnullを確かめてから使う（8分）",
@@ -3460,7 +3460,7 @@
     },
     {
       "source": "C · 呼び出す値を変える",
-      "translation": "C · 更改调用的值"
+      "translation": "C · 更改调用函数的值"
     },
     {
       "source": "<code>ex07/main.kt</code> の <code>5.plusTen()</code> を <code>(-3).plusTen()</code> にします。負の値全体に関数を呼ぶため、<code>-3</code> をかっこで囲みます。",
@@ -3504,7 +3504,7 @@
     },
     {
       "source": "KotlinとSwiftは、呼び出す値をドットの左に置けます。Javaの比較例では同じ値を引数に渡します。書き方が違っても、関数に渡る数は <code>-3</code> で、足す数は <code>10</code> のままです。",
-      "translation": "Kotlin 和 Swift 可以把要调用的值放在点号左边。Java 的比较示例中则把同一个值作为参数传入。写法虽然不同，但传给函数的数仍是 <code>-3</code>，要加的数仍是 <code>10</code>。"
+      "translation": "Kotlin 和 Swift 可以把调用函数的那个值放在点号左边。Java 的比较示例中则把同一个值作为参数传入。写法虽然不同，但传给函数的数仍是 <code>-3</code>，要加的数仍是 <code>10</code>。"
     },
     {
       "source": "練習後に3か所を元へ戻し、<code>ex08</code> の最後が <code>10</code>、<code>ex09</code> のコピーが <code>age=25</code>、<code>ex07</code> が <code>15</code> になっている。",
@@ -3784,7 +3784,7 @@
     },
     {
       "source": "<code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
-      "translation": "右键点击 <code>ex11</code>，通过 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）把名称设为 <code>main</code>，种类设为 <strong>ファイル</strong>（文件）。"
+      "translation": "右键点击 <code>ex11</code>，通过 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）名称填 <code>main</code>，类型选 <strong>ファイル</strong>（文件）。"
     },
     {
       "source": "src/ex11/main.kt · 完成コード",

@@ -44,7 +44,7 @@
     },
     {
       "source": "STEP 03 Viewを取得し、経過時間を保存する場所を用意する",
-      "translation": "STEP 03 获取 View，准备保存经过时间的位置"
+      "translation": "STEP 03 获取 View，准备用来保存经过时间的地方"
     },
     {
       "source": "STEP 04 STARTで時間を進める",
@@ -120,7 +120,7 @@
     },
     {
       "source": "対象：<code>A02CalcGame</code> / パッケージ：<code>jp.ac.jec.a02calcgame</code><br>9〜10コマ目・各90分 / Android Studio Panda 2 / macOS",
-      "translation": "项目：<code>A02CalcGame</code> / 包：<code>jp.ac.jec.a02calcgame</code><br>第9～10节课，每节90分钟 / Android Studio Panda 2 / macOS"
+      "translation": "项目：<code>A02CalcGame</code> / 包名：<code>jp.ac.jec.a02calcgame</code><br>第9～10节课、每节90分钟 / Android Studio Panda 2 / macOS"
     },
     {
       "source": "この単元で作るもの",
@@ -336,7 +336,7 @@
     },
     {
       "source": "Viewを取得し、経過時間を保存する場所を用意する",
-      "translation": "获取 View，准备保存经过时间的位置"
+      "translation": "获取 View，准备用来保存经过时间的地方"
     },
     {
       "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。",
@@ -524,7 +524,7 @@
     },
     {
       "source": "今日も同じプロジェクトに書き足します。Runし直した直後はプロパティが初期値で作られるので、前回の秒数を残す作りではありません。",
-      "translation": "今天也在同一个项目里继续添加。重新 Run 之后，属性会以初始值创建，所以这个应用的设计不会保留上次的秒数。"
+      "translation": "今天也在同一个项目里继续添加。重新点击 Run 之后，属性会以初始值创建，所以这个应用的设计不会保留上次的秒数。"
     },
     {
       "source": "自分のA02CalcGameが開き、停止・再開・リセットが前回と同じように動いている。",
@@ -704,7 +704,7 @@
     },
     {
       "source": "1問誤答・9問正答で9問正解と表示され、終了後はRESETだけが操作ボタンの中で押せる。",
-      "translation": "答错1题、答对9题时，显示答对了9题；结束后，操作按钮中只有 RESET 可以按。"
+      "translation": "答错1题、答对9题时，显示「9問正解」（答对9题）；结束后，操作按钮中只有 RESET 可以按。"
     },
     {
       "source": "STEP 12 · 10コマ目 · 目安 10分",
@@ -768,7 +768,7 @@
     },
     {
       "source": "Javaの <code>setText</code> はKotlinから <code>text =</code> と書けます。完成コードでは <code>getText()</code> や <code>setEnabled()</code> も使っています。同じJavaのViewに対する呼び出しなので、両方の記法の対応を確認します。",
-      "translation": "Java 的 <code>setText</code> 在 Kotlin 中可以写成 <code>text =</code>。完成代码中也用到了 <code>getText()</code> 和 <code>setEnabled()</code>。它们都是对同一个 Java View 的调用，请确认两种写法的对应关系。"
+      "translation": "Java 的 <code>setText</code> 在 Kotlin 中可以写成 <code>text =</code>。完成代码中也用到了 <code>getText()</code> 和 <code>setEnabled()</code>。它们调用的都是 Java 的同一套 View API，请确认两种写法的对应关系。"
     },
     {
       "source": "完成全文と照合でき、起動・ゲーム中・STOP後・終了後で表どおりの動作になる。",
@@ -784,7 +784,7 @@
     },
     {
       "source": "まず、今の完成状態で一度Runします。その後、次の表から1か所選び、変更→Run→確認の順で試します。例と同じにする必要はありません。1か所ずつ変えると、画面との対応を追えます。",
-      "translation": "首先，在当前的完成状态下先 Run 一次。然后从下表中选一处，按更改 → Run → 确认的顺序试试。不必和示例相同。一次只改一处，就能看清它与界面的对应关系。"
+      "translation": "首先，在当前的完成状态下先点击一次 Run。然后从下表中选一处，按更改 → Run → 确认的顺序试试。不必和示例相同。一次只改一处，就能看清它与界面的对应关系。"
     },
     {
       "source": "変更する場所",
@@ -824,7 +824,7 @@
     },
     {
       "source": "結果文の文字列",
-      "translation": "结果语句的字符串"
+      "translation": "结果消息的字符串"
     },
     {
       "source": "<code>問正解しました！時間は</code> の言い方を変える",
@@ -836,7 +836,7 @@
     },
     {
       "source": "5問版なら、1問誤答・4問正答で「4問正解」と表示されるかを見ます。試し終えたら元の値に戻してRunし、完成版の10問で終了する状態を残します。提出用に自分の案を進めるときは、この表を変更箇所の手がかりにできます。",
-      "translation": "如果是5题版，就看答错1题、答对4题时是否显示「4問正解」（答对4题）。试完后改回原来的值并 Run，保留完成版10题结束的状态。为提交作业推进自己的方案时，可以把这个表作为寻找修改位置的线索。"
+      "translation": "如果是5题版，就看答错1题、答对4题时是否显示「4問正解」（答对4题）。试完后改回原来的值并点击 Run，保留完成版10题结束的状态。为提交作业推进自己的方案时，可以把这个表作为寻找修改位置的线索。"
     },
     {
       "source": "数字ボタンは表示を整数に変換して採点するので、1〜9のまま使います。また、<code>10 - randomNumber</code> と乱数の範囲は一組です。片方だけ変えると、ボタンで答えられない数や、未開始の目印と同じ0が生まれるため、ここでは変えません。",
