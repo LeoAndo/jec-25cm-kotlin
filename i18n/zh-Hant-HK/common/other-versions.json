@@ -3,6 +3,10 @@
   "language": "zh-Hant-HK",
   "entries": [
     {
+      "source": "ちがうAndroid Studioのバージョンで進めるとき | Kotlin演習",
+      "translation": "使用不同版本的 Android Studio 時 | Kotlin練習"
+    },
+    {
       "source": "本文へ移動",
       "translation": "跳至正文"
     },
@@ -19,24 +23,392 @@
       "translation": "KOTLIN PROGRAMMING EXERCISES / 共用資料與課堂支援"
     },
     {
+      "source": "ちがうAndroid Studioの<br>バージョンで進めるとき",
+      "translation": "使用不同版本的<br>Android Studio 時"
+    },
+    {
+      "source": "Androidの教科書はPanda 2を基準にしています。Quail 4・Panda 3を使う人は、作り始める前にこのページで、自分の版と進め方を確かめます。",
+      "translation": "Android 的課本以 Panda 2 為基準。使用 Quail 4 或 Panda 3 的人，請在開始製作之前，在本頁確認自己的版本和進行方式。"
+    },
+    {
+      "source": "対象は後半のAndroid単元です。前半のK01HelloKotlinで使うIntelliJ IDEAの設定は変えません。",
+      "translation": "本頁適用於後半部分的 Android 單元。前半部分的 K01HelloKotlin 所用的 IntelliJ IDEA 設定不會更改。"
+    },
+    {
+      "source": "このページの内容",
+      "translation": "本頁內容"
+    },
+    {
+      "source": "版を確かめる・サポートの範囲",
+      "translation": "確認版本與支援範圍"
+    },
+    {
+      "source": "新規作成で合わせる項目",
+      "translation": "建立新專案時要一致的項目"
+    },
+    {
+      "source": "A01の読み替え",
+      "translation": "A01 的對應做法"
+    },
+    {
+      "source": "生成される設定の違い",
+      "translation": "自動產生的設定差異"
+    },
+    {
+      "source": "止まったとき",
+      "translation": "無法繼續時"
+    },
+    {
+      "source": "確かめた範囲",
+      "translation": "已確認的範圍"
+    },
+    {
+      "source": "1. 版を確かめる・サポートの範囲",
+      "translation": "1. 確認版本與支援範圍"
+    },
+    {
+      "source": "Welcome画面、またはmacOSの <strong>Android Studio → About Android Studio</strong> で、製品名と版を見ます。<code>Panda 2</code>・<code>Panda 3</code>・<code>Quail 4</code> の名前まで確認します。",
+      "translation": "在 Welcome 畫面，或 macOS 的 <strong>Android Studio → About Android Studio</strong>，查看產品名稱和版本。連 <code>Panda 2</code>、<code>Panda 3</code>、<code>Quail 4</code> 這些名稱也要確認。"
+    },
+    {
+      "source": "使っている版",
+      "translation": "使用中的版本"
+    },
+    {
+      "source": "進め方",
+      "translation": "進行方式"
+    },
+    {
+      "source": "授業の基準です。教科書の手順どおり進めます。作成日でライブラリの版が変わるため、A01のSTEP 01にある設定の照合も行います。",
+      "translation": "本課程的基準。按課本的步驟進行。程式庫的版本會隨建立日期而變，所以也要進行 A01 的 STEP 01 中的設定核對。"
+    },
+    {
+      "source": "このページのA01の読み替えに従います。下の表と設定が一致し、同期・Runが通る範囲で進めます。表にない違いやエラーは先生に見せます。",
+      "translation": "按照本頁 A01 的對應做法進行。在設定與下表一致、同步和 Run 都成功的範圍內進行。表格以外的分別或錯誤，請給老師看。"
+    },
+    {
+      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
+      "translation": "<strong>未經實際測試。</strong>以 Panda 2 的步驟為起點，但未確認能夠同樣運作。在 A01 的 STEP 00 把版本給老師看，並在替換 STEP 01 的整個設定檔之前先確認。如果畫面或產生的設定不同，請直接給老師看。"
+    },
+    {
+      "source": "上記以外・版が分からない",
+      "translation": "上述以外的版本，或不知道版本"
+    },
+    {
+      "source": "新規作成や設定の変更を始める前に先生へ相談します。この資料で動作を確認した範囲には含みません。",
+      "translation": "在建立新專案或更改設定之前，先與老師商量。這不在本資料已確認運作的範圍內。"
+    },
+    {
+      "source": "授業ではmacOSを使います。見た目や項目の位置だけの違いは、次の表の選択内容で合わせます。必要な項目が見つからない、同期が赤い、Runできない場合は、設定を次々と変更せず先生と確認します。基準のPanda 2へ切り替えるかも、その場で決めます。",
+      "translation": "課堂上使用 macOS。只是外觀或項目位置不同的話，按下表的選擇內容對齊即可。如果找不到需要的項目、同步顯示紅色，或無法 Run，不要接連更改設定，請與老師一起確認。是否改用基準版本 Panda 2，也會當場決定。"
+    },
+    {
+      "source": "2. 新規作成で合わせる項目",
+      "translation": "2. 建立新專案時要一致的項目"
+    },
+    {
+      "source": "New Projectの画面では、位置より<strong>選ぶ内容</strong>を合わせます。A01では次のとおりです。",
+      "translation": "在 New Project 畫面，要對齊的是<strong>選擇的內容</strong>而不是位置。A01 的選擇如下。"
+    },
+    {
       "source": "項目",
       "translation": "設定項目"
+    },
+    {
+      "source": "A01で選ぶ内容",
+      "translation": "A01 要選擇的內容"
+    },
+    {
+      "source": "テンプレート",
+      "translation": "範本"
+    },
+    {
+      "source": "Phone and Tablet → <strong>Empty Views Activity</strong>。ViewsのないEmpty Activityは選びません。",
+      "translation": "Phone and Tablet → <strong>Empty Views Activity</strong>。不要選沒有 Views 的 Empty Activity。"
+    },
+    {
+      "source": "自分の <code>Documents/Kotlin/A01HelloAndroid</code>。末尾のプロジェクト名まで含めます。",
+      "translation": "自己的 <code>Documents/Kotlin/A01HelloAndroid</code>。包括末尾的專案名稱。"
+    },
+    {
+      "source": "<strong>API 31（Android 12）</strong>。下のtargetSdkとは別の項目です。",
+      "translation": "<strong>API 31（Android 12）</strong>。這與下面的 targetSdk 是不同的項目。"
+    },
+    {
+      "source": "実行先の表示名は、版が違っても <code>jec_25cm_kotlin_Pixel 9a</code> です。Device Managerに既にあれば、その端末を使います。なければA01のSTEP 02で先生が指定するシステムイメージを使って作ります。実機が接続されている場合も、Runの実行先が指定AVDになっているか確かめます。",
+      "translation": "即使版本不同，執行目標的顯示名稱仍是 <code>jec_25cm_kotlin_Pixel 9a</code>。如果 Device Manager 已有，就使用該裝置。沒有的話，在 A01 的 STEP 02 用老師指定的系統映像檔建立。即使已連接實體裝置，也要確認 Run 的執行目標是指定的 AVD。"
+    },
+    {
+      "source": "POINT：IDEの版とプロジェクトの設定は別",
+      "translation": "POINT：IDE 的版本和專案的設定是兩回事"
+    },
+    {
+      "source": "Quail 4でPanda 2の完成見本をOpenしても、見本のAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、配布された設定を保って照合します。",
+      "translation": "即使在 Quail 4 用 Open 開啟 Panda 2 的完成版範例，也毋須把範例的 AGP 或 Gradle 改為 Quail 4 的值。關閉建議更新的 AGP Upgrade Assistant，保持派發的設定進行核對。"
+    },
+    {
+      "source": "3. Quail 4でのA01の読み替え",
+      "translation": "3. 在 Quail 4 進行 A01 時的對應做法"
+    },
+    {
+      "source": "対象は <code>A01HelloAndroid</code> のSTEP 00〜13です。先生に版を見せたあと、次の表を手元に置いて進めます。",
+      "translation": "適用於 <code>A01HelloAndroid</code> 的 STEP 00 至 13。把版本給老師看之後，把下表放在手邊進行。"
+    },
+    {
+      "source": "教科書の場所",
+      "translation": "課本的位置"
+    },
+    {
+      "source": "Quail 4で行うこと",
+      "translation": "在 Quail 4 要做的事"
+    },
+    {
+      "source": "上の6項目で自分のプロジェクトを作ります。画面の順序が違っても、Empty Views Activity・Kotlin・API 31・Kotlin DSLを合わせます。",
+      "translation": "按上面的6個項目建立自己的專案。即使畫面的次序不同，也要對齊 Empty Views Activity、Kotlin、API 31、Kotlin DSL。"
+    },
+    {
+      "source": "STEP 01：libs.versions.toml全文の置き換え",
+      "translation": "STEP 01：替換整個 libs.versions.toml"
+    },
+    {
+      "source": "<strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。",
+      "translation": "<strong>不進行這個替換。</strong>把 Quail 4 產生的 <code>gradle/libs.versions.toml</code> 和建置設定作為一組保持不變，並與下面的差異表核對。只放入 Panda 2 的 AGP 9.1.1，會與 Quail 4 的 <code>optimization</code> 寫法不相容。如果已經替換，請給老師看。"
+    },
+    {
+      "source": "STEP 02〜03：端末・初回Run",
+      "translation": "STEP 02 至 03：裝置與首次 Run"
+    },
+    {
+      "source": "指定AVDを選び、生成直後の <code>Hello World!</code> を確かめます。SDKやJDKのダウンロード中は進行表示を確認します。",
+      "translation": "選擇指定的 AVD，確認剛產生的 <code>Hello World!</code>。下載 SDK 或 JDK 期間，留意進度顯示。"
+    },
+    {
+      "source": "教科書のXML全文を使います。<code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> のidを変えません。",
+      "translation": "使用課本的整個 XML。不要更改 <code>main</code>、<code>text</code>、<code>button</code>、<code>btn1</code>、<code>btn2</code> 的 id。"
+    },
+    {
+      "source": "STEP 05〜10：Kotlinの処理を追加",
+      "translation": "STEP 05 至 10：加入 Kotlin 的處理"
+    },
+    {
+      "source": "教科書と同じコードを入力します。生成された余白処理は残し、<code>onCreate</code> の中へ追加します。文字変更・Snackbar・Toast・Logcatの確認結果は同じです。",
+      "translation": "輸入與課本相同的程式碼。保留自動產生的邊距處理，在 <code>onCreate</code> 內加入。更改文字、Snackbar、Toast、Logcat 的確認結果都相同。"
+    },
+    {
+      "source": "STEP 11〜13：全文照合・アレンジ",
+      "translation": "STEP 11 至 13：核對全文與修改"
+    },
+    {
+      "source": "教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体を完成見本から上書きしません。文字と余白のアレンジは同じ場所です。",
+      "translation": "與課本的整個 <code>MainActivity.kt</code> 和 XML 核對。要比較的只是這兩個檔案，不要用完成版範例覆寫 Quail 4 的整套 Gradle 設定。文字和邊距的改動位置相同。"
+    },
+    {
+      "source": "完成見本は <code>samples/A01HelloAndroid</code> です。別ウィンドウで開いて比べ、入力を続けるときは自分の <code>Documents/Kotlin/A01HelloAndroid</code> へ戻ります。完成見本は自分の提出作品として扱いません。",
+      "translation": "完成版範例是 <code>samples/A01HelloAndroid</code>。在另一個視窗開啟來比較，繼續輸入時回到自己的 <code>Documents/Kotlin/A01HelloAndroid</code>。完成版範例不能當作自己的繳交作品。"
+    },
+    {
+      "source": "4. 生成される設定の違い",
+      "translation": "4. 自動產生的設定差異"
+    },
+    {
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材のひな形・完成版、Quail 4列は比較用ひな形の実測値です。",
+      "translation": "把左邊的 Project 工具視窗切換為 <strong>Project</strong> 檢視，便可以開啟以下檔案。這是<strong>用來比對的表格</strong>，不是要改寫的值的清單。Panda 2 一欄是教材的範本和完成版，Quail 4 一欄是用作比較的範本實際測得的值。"
     },
     {
       "source": "見る場所",
       "translation": "查看位置"
     },
     {
+      "source": "Panda 2：教材の基準",
+      "translation": "Panda 2：教材的基準"
+    },
+    {
+      "source": "Quail 4：保つ設定",
+      "translation": "Quail 4：要保持的設定"
+    },
+    {
+      "source": "<code>app/build.gradle.kts</code> のcompileSdk",
+      "translation": "<code>app/build.gradle.kts</code> 的 compileSdk"
+    },
+    {
+      "source": "同じファイルのtargetSdk",
+      "translation": "同一檔案的 targetSdk"
+    },
+    {
+      "source": "同じファイルのbuildTypes → release",
+      "translation": "同一檔案的 buildTypes → release"
+    },
+    {
+      "source": "<code>isMinifyEnabled = false</code> と <code>proguardFiles(...)</code>",
+      "translation": "<code>isMinifyEnabled = false</code> 和 <code>proguardFiles(...)</code>"
+    },
+    {
+      "source": "R8のkeepルールのファイル",
+      "translation": "R8 的 keep 規則檔案"
+    },
+    {
+      "source": "<code>gradle/wrapper/gradle-wrapper.properties</code> のdistributionUrl",
+      "translation": "<code>gradle/wrapper/gradle-wrapper.properties</code> 的 distributionUrl"
+    },
+    {
+      "source": "<code>gradle/gradle-daemon-jvm.properties</code> のtoolchainVersion",
+      "translation": "<code>gradle/gradle-daemon-jvm.properties</code> 的 toolchainVersion"
+    },
+    {
+      "source": "configuration-cacheの指定なし",
+      "translation": "沒有 configuration-cache 的設定"
+    },
+    {
+      "source": "Quail 4の <code>app/build.gradle.kts</code> では、依存の名前も <code>libs.androidx.activity.ktx</code> です。Panda 2のカタログへ丸ごと置き換えると、この名前も合わなくなります。表にない版が生成された場合は、自分で表の数値へ直さず先生と確認します。",
+      "translation": "在 Quail 4 的 <code>app/build.gradle.kts</code> 中，依賴項目的名稱也是 <code>libs.androidx.activity.ktx</code>。如果整個換成 Panda 2 的版本目錄，這個名稱也會對不上。如果產生了表格以外的版本，不要自行改為表格中的數值，請與老師一起確認。"
+    },
+    {
+      "source": "<code>app/src/main/AndroidManifest.xml</code> のActivityに、Quail 4では <code>android:windowSoftInputMode=\"adjustResize\"</code> も生成されています。A01の作業ではそのまま残します。Kotlinの <code>MainActivity.kt</code> はパッケージ名を除いて、生成直後のXMLは全文が、2つのひな形で一致していました。",
+      "translation": "在 Quail 4 中，<code>app/src/main/AndroidManifest.xml</code> 的 Activity 也產生了 <code>android:windowSoftInputMode=\"adjustResize\"</code>。製作 A01 時保持原樣。兩個範本中，Kotlin 的 <code>MainActivity.kt</code> 除套件名稱外都一致，剛產生的 XML 則全文一致。"
+    },
+    {
+      "source": "JDKの21と25で、Kotlinの書き方は変わるか",
+      "translation": "JDK 21 和 25 會令 Kotlin 的寫法不同嗎"
+    },
+    {
+      "source": "<code>toolchainVersion</code> はアプリを組み立てるGradleを動かすJava実行環境の指定です。学生が書くKotlinの文法の版ではありません。Java側の <code>compileOptions</code> は、どちらのひな形も <code>JavaVersion.VERSION_11</code> です。Swiftでも、IDEを動かす環境の版と、ソースで使う言語の設定を分けて考えるのと同じです。",
+      "translation": "<code>toolchainVersion</code> 指定的是執行 Gradle（用來建置應用程式）的 Java 執行環境，不是學生所寫的 Kotlin 語法版本。Java 方面的 <code>compileOptions</code>，兩個範本都是 <code>JavaVersion.VERSION_11</code>。這與 Swift 一樣，執行 IDE 的環境版本，和原始碼所用語言的設定，是分開考慮的。"
+    },
+    {
+      "source": "必要なJDKがMacにない場合、設定されたダウンロード先から取得することがあります。<code>Downloading</code> などの進行表示が出ていれば待ちます。赤いエラーで止まったら、JDKの数字を変更せず、その表示を先生に見せます。",
+      "translation": "如果 Mac 上沒有需要的 JDK，有時會從設定的下載來源取得。如果顯示 <code>Downloading</code> 等進度，請等待。如果因紅色錯誤而停止，不要更改 JDK 的數字，請把該顯示給老師看。"
+    },
+    {
+      "source": "5. 止まったとき",
+      "translation": "5. 無法繼續時"
+    },
+    {
+      "source": "画面で起きたこと",
+      "translation": "畫面上出現的情況"
+    },
+    {
       "source": "すること",
       "translation": "操作"
+    },
+    {
+      "source": "ボタンの位置やメニュー名が違う",
+      "translation": "按鈕的位置或選單名稱不同"
+    },
+    {
+      "source": "選択内容を2節で照合。Empty Views Activityなど必要な項目が見つからなければ先生に見せます。",
+      "translation": "按第2節核對選擇內容。如果找不到 Empty Views Activity 等需要的項目，請給老師看。"
+    },
+    {
+      "source": "<code>optimization</code> や <code>activity.ktx</code> が赤い",
+      "translation": "<code>optimization</code> 或 <code>activity.ktx</code> 顯示紅色"
+    },
+    {
+      "source": "Panda 2とQuail 4の設定を混ぜた可能性があります。最近置き換えたファイルとエラーを先生に見せます。片方ずつ版を下げて試しません。",
+      "translation": "可能混合了 Panda 2 和 Quail 4 的設定。把最近替換的檔案和錯誤給老師看。不要逐個降低版本來試。"
+    },
+    {
+      "source": "Gradle同期やSDK・JDKの取得が失敗した",
+      "translation": "Gradle 同步或取得 SDK、JDK 失敗"
+    },
+    {
+      "source": "エラーの先頭を表示し、先生に見せます。通信・必要なSDK・プロジェクトの生成版を確認します。",
+      "translation": "顯示錯誤的開頭部分，給老師看。確認網絡連線、需要的 SDK，以及產生專案的版本。"
+    },
+    {
+      "source": "ビルドは通るが、A01の画面が違う・閉じる",
+      "translation": "建置成功，但 A01 的畫面不同或應用程式關閉"
+    },
+    {
+      "source": "XMLのidとKotlinのR.id、指定AVDを確認します。直らなければSTEP番号とLogcatの赤い行を先生に見せます。",
+      "translation": "確認 XML 的 id、Kotlin 的 R.id 和指定的 AVD。修不好的話，把 STEP 編號和 Logcat 的紅色行給老師看。"
+    },
+    {
+      "source": "Panda 2へ切り替えることになった",
+      "translation": "決定改用 Panda 2"
+    },
+    {
+      "source": "自作プロジェクトを消さずに残します。先生と保存先を分け、Panda 2で作った新しいプロジェクトへ、自分のXMLとKotlinを照合して移します。Quail 4のGradle設定は持ち込みません。",
+      "translation": "保留自己建立的專案，不要刪除。與老師一起分開儲存位置，把自己的 XML 和 Kotlin 核對後移到用 Panda 2 建立的新專案。不要帶入 Quail 4 的 Gradle 設定。"
+    },
+    {
+      "source": "相談するときは <strong>Studioの製品名と版・教材のVERSION.jsonにある版・単元とSTEP番号・エラーの先頭</strong>を見せます。実習時間内に原因を切り分けられない場合もあるため、止まった時点で声をかけてください。",
+      "translation": "求助時，請出示 <strong>Studio 的產品名稱和版本、教材 VERSION.json 內的版本、單元和 STEP 編號、錯誤的開頭部分</strong>。實習時間內未必能找出原因，所以在無法繼續時請立即告訴老師。"
+    },
+    {
+      "source": "教材の開き方は <a1>共通：はじめの準備</a1>、提出時の作業は <a2>共通：提出課題とAPK</a2> にあります。",
+      "translation": "教材的開啟方法見 <a1>共用：上課前的準備</a1>，繳交時的操作見 <a2>共用：繳交作業與 APK</a2>。"
+    },
+    {
+      "source": "6. 確かめた範囲",
+      "translation": "6. 已確認的範圍"
+    },
+    {
+      "source": "区分",
+      "translation": "分類"
+    },
+    {
+      "source": "内容",
+      "translation": "內容"
+    },
+    {
+      "source": "ファイルの照合",
+      "translation": "檔案核對"
+    },
+    {
+      "source": "2026年9月24日、教材のPanda 2とQuail 4のKotlinひな形を比較しました。表の値はそのファイルに基づきます。作成日によって値が変わる場合があります。",
+      "translation": "2026年9月24日，比較了教材的 Panda 2 和 Quail 4 的 Kotlin 範本。表格中的值以那些檔案為依據。值可能因建立日期而不同。"
+    },
+    {
+      "source": "Quail 4構成でのビルド",
+      "translation": "以 Quail 4 的設定建置"
+    },
+    {
+      "source": "ひな形を別の検証用フォルダに複製し、設定を保ったまま、生成直後とA01のSTEP 04・05・08・09・10〜11に相当するコードで <code>assembleDebug</code> の成功を確認しました。検証コピーではパッケージ名だけをひな形に合わせています。",
+      "translation": "把範本複製到另一個驗證用的資料夾，在保持設定不變的情況下，以剛產生的程式碼，以及相當於 A01 的 STEP 04、05、08、09、10 至 11 的程式碼，確認了 <code>assembleDebug</code> 成功。驗證用的副本只把套件名稱改成與範本一致。"
+    },
+    {
+      "source": "Quail 4構成での実行",
+      "translation": "以 Quail 4 的設定執行"
+    },
+    {
+      "source": "上の検証コピーの完成コードを指定AVD <code>jec_25cm_kotlin_Pixel 9a</code>（API 37.1）で実行し、文字変更、1のSnackbar、2のToast、起動時とクリック後のLogcatを確認しました。",
+      "translation": "把上述驗證用副本的完成程式碼在指定的 AVD <code>jec_25cm_kotlin_Pixel 9a</code>（API 37.1）執行，確認了更改文字、按鈕 1 的 Snackbar、按鈕 2 的 Toast，以及啟動時和按一下之後的 Logcat。"
+    },
+    {
+      "source": "ここでは未確認",
+      "translation": "這裏未確認"
+    },
+    {
+      "source": "Quail 4の現在のIDE画面のメニュー位置、Panda 3、ほかのStudio版、今後教材化するA02以降の段階別コード。これらも確認済みとは扱いません。",
+      "translation": "Quail 4 目前 IDE 畫面的選單位置、Panda 3、其他 Studio 版本，以及日後製成教材的 A02 及之後單元的分階段程式碼。這些都不視為已確認。"
+    },
+    {
+      "source": "Quail 4の設定に書き換えた完成見本を配ることはしません。配布する完成見本と教科書本文の基準はPanda 2です。",
+      "translation": "不會派發改寫成 Quail 4 設定的完成版範例。派發的完成版範例和課本正文都以 Panda 2 為基準。"
     },
     {
       "source": "公式資料",
       "translation": "官方資料"
     },
     {
+      "source": "Android Studio：プロジェクトの作成",
+      "translation": "Android Studio：建立專案"
+    },
+    {
+      "source": "AGP Upgrade Assistantが変更する設定",
+      "translation": "AGP Upgrade Assistant 會更改的設定"
+    },
+    {
+      "source": "Gradle DaemonのJVM選択",
+      "translation": "Gradle Daemon 的 JVM 選擇"
+    },
+    {
       "source": "← もとのページへ戻る",
       "translation": "← 返回原本的頁面"
+    },
+    {
+      "source": "対象：macOS / 基準：Android Studio Panda 2 / 確認日：2026年9月24日",
+      "translation": "適用環境：macOS / 基準：Android Studio Panda 2 / 確認日期：2026年9月24日"
     }
   ]
 }
