@@ -4120,7 +4120,7 @@
     },
     {
       "source": "新規プロジェクトの画面に Kotlin がない",
-      "translation": "Kotlin does not appear on the New Project screen"
+      "translation": "Kotlin does not appear on the 新規プロジェクト (New Project) screen"
     },
     {
       "source": "左の一覧の、見出し <strong>新規プロジェクト</strong> の下を見る。下の <strong>ジェネレーター</strong> の中の項目ではありません。",
@@ -4128,7 +4128,7 @@
     },
     {
       "source": "ビルドシステムに IntelliJ がない",
-      "translation": "IntelliJ does not appear under Build system"
+      "translation": "IntelliJ does not appear under ビルドシステム (Build system)"
     },
     {
       "source": "左の一覧で <strong>Kotlin</strong> を選んでいるか確認する。直らなければ画面を先生に見せる。",
