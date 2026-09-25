@@ -508,7 +508,7 @@
     },
     {
       "source": "<code>Build system</code> は <code>IntelliJ</code> を選びます",
-      "translation": "<code>Build system</code> талбарт <code>IntelliJ</code> сонгоно"
+      "translation": "<code>Build system</code> талбарт <code>IntelliJ</code> сонгоно уу"
     },
     {
       "source": "ほかに <code>Maven</code> と <code>Gradle</code> が並んでいます。前半の授業では外部のライブラリを使わないので、ビルドツールを挟まない <code>IntelliJ</code> のままにしてください。後半のAndroidの単元では、Android Studioが <code>Gradle</code> を使います。そちらは自分で選ぶ必要がありません。",
