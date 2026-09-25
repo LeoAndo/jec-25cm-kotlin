@@ -65,11 +65,13 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | もとのページ | página original | 共通資料の戻りリンク。página anterior にしない（直接開くと、直前のページではなく既定の単元へ戻るため） |
 | 指定AVD | AVD designado | 男性名詞（el AVD）。AVD名 `jec_25cm_kotlin_Pixel 9a` は訳さない |
 | 完成チェック | verificación final | |
-| 困ったとき | Si tienes problemas | サイドバーのリンク |
+| 困ったとき / うまくいかないとき | Si tienes problemas | サイドバーのリンクと、共通資料の「N. うまくいかないとき」の見出し |
 | 完成プロジェクトを開く | Abrir el proyecto terminado | サイドバーのリンク |
 | 共通資料 | material común | |
 | 授業サポート | apoyo para la clase | |
-| 共通：はじめの準備 | Común: Preparación inicial | サイドバーのリンク。`docs/common/setup.html` の見出しの訳とそろえる。要確認 |
+| 共通：はじめの準備 | Común: Preparación inicial | サイドバーのリンクと、共通資料の本文のリンク。`docs/common/setup.html` の見出し（Preparación antes de empezar la clase）の短い言い方 |
+| 共通：提出課題とAPK | Común: La tarea y el APK | 同上。`docs/common/apk.html` の題名は La tarea y cómo crear el APK |
+| 共通：ちがうAndroid Studioの版 | Común: Otra versión de Android Studio | 同上。`docs/common/other-versions.html` の題名は Si usas otra versión de Android Studio |
 | アレンジ | personalizar / personalización | |
 | 赤い波線 | línea ondulada roja | |
 | 確認日 | Última verificación | |
@@ -100,7 +102,36 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 拡張関数 / レシーバ型 | función de extensión / tipo receptor | 同上 |
 | 名前付き引数 / 既定引数 | argumento con nombre / argumento predeterminado | 同上。Swift の引数ラベルは etiqueta de argumento |
 | ラムダ式 / 委譲プロパティ | expresión lambda / propiedad delegada | 同上 |
-| Google Classroom の表示 | 授業 (Trabajo de clase)、追加または作成 (Agregar o crear)、提出 (Entregar)、提出済み (Entregado)、提出を取り消す (Anular entrega) | 学生の画面の言語が分からないので、日本語を残してスペイン語の表示名を添える。要確認 |
+| Google Classroom の表示 | 授業 (Trabajo en clase)、追加または作成 (Agregar o crear)、ファイル (Archivo)、提出 (Entregar)、提出済み (Entregada)、提出を取り消す (Anular la entrega)、未提出 (sin entregar) | 学生の画面の言語が分からないので、日本語を残してスペイン語の表示名を添える。表示名は Google Classroom ヘルプ「Cómo entregar una tarea」（`support.google.com/edu/classroom/answer/6020285?hl=es-419`）で確認した（2026-09-25）。「未提出」は先生の画面に出る語なので、表示名ではなく意味だけを小文字で添える |
+| 提出課題 / 提出する / 提出 | tarea / entregar / entrega | Google Classroom の語にそろえる（tarea、Entregar）。「提出先」は dónde entregar |
+| APK | APK | 男性名詞（el APK、el archivo APK）。「APKを作る」は crear el APK |
+| デバッグ用 / リリース用（APK） | de depuración (debug) / de lanzamiento (release) | Android Studio のビルドの種類の名前を英語でかっこに添える |
+| 署名 | firma (signing) | |
+| コピーを取る | hacer una copia | Finder の **複製** は下の「macOSの画面に出る日本語」 |
+| 元に戻す / 元に戻したいとき | volver al estado original / Si quieres volver al estado original | |
+| ひな形 | proyecto plantilla | New Project ウィザードが生成したままのプロジェクト（`Panda2KotlinEmptyViewsActivity` など）。ウィザードのテンプレート（plantilla）と区別する |
+| 読み替え / 読み替える | adaptación / sustituir por | 「A01の読み替え」は Adaptaciones para A01。「〜に読み替えてください」は Sustitúyelo por … |
+| 照合 / 全文照合 | comparar / comparación completa | |
+| 同期（Gradle） | sincronización | 「同期が赤い」は la sincronización aparece en rojo |
+| 生成される設定 | configuración generada | |
+| 基準 | estándar | 「授業の基準である Panda 2」は Panda 2, que es el estándar de la clase |
+| 止まったとき | Si no puedes avanzar | 男女で形が変わる atascado/a を避ける |
+| 確かめた範囲 | Lo que se verificó | |
+| 内容（表の見出し） | Detalles | |
+| 進め方 | Cómo proceder | |
+| 起きたこと / やってみること | Lo que sucedió / Qué intentar | うまくいかないときの表の見出し |
+| 完了の通知 | notificación de finalización | Build APK(s) のあとに右下に出るもの。**locate** は英語のまま |
+| 更新日時 | fecha de modificación | Finder の表示 |
+| 進み具合 / 進行表示 | progreso / indicador de progreso | |
+| 表示の切り替え（Android / Project） | selector de vista | Android Studio 左上の切り替え。**Android**・**Project** は英語のまま |
+| 赤い文字 | texto en rojo | |
+| システムイメージ | imagen del sistema | |
+| 検証用フォルダ / 検証コピー | carpeta de prueba / copia de prueba | |
+| 段階別コード | código por etapas | |
+| 余白処理 | código para los márgenes | A01 の生成コードが余白を調整する部分 |
+| 手順N / N節 | paso N / sección N | 共通資料の「手順5」は paso 5 |
+| 前半 / 後半 | primera mitad / segunda mitad | |
+| 授業 / この授業 | la clase / esta materia | Google Classroom の「クラス」も clase なので、「この授業のクラス」は la clase de este curso |
 
 ## IntelliJ IDEAの画面に出る日本語（K01。日本語のまま残し、訳をかっこで添える）
 
@@ -130,6 +161,8 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 | ダウンロード | Descargas | Finder |
 | アプリケーション | Aplicaciones | Finder |
 | 移動 → ホーム | Ir → Inicio | Finder のメニュー。要確認 |
+| 複製 | Duplicar | Finder の右クリックのメニュー |
+| （フォルダ名）のコピー | (A01HelloAndroid copia) | **複製** でできるフォルダの名前。`<code>A01HelloAndroidのコピー</code>` の中は日本語のまま残し、スペイン語表示の Mac でできる名前をかっこで添える |
 
 ## 書き方の決まり
 
@@ -157,3 +190,8 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 - 確認欄（ここで止まって確認）は、画面で確かめられる状態を現在形で書く（Aparece…、Se muestra…）。「〜できた」「〜と言えた」のような振り返りの言い方にしない。
 - Kotlin固有の用語を定義する文では、訳語のうしろに日本語をかっこで添える（constructor primario (プライマリコンストラクタ)）。
 - 全角の記号はASCIIにする（`＋` → `+`、`〜` の範囲 → en dash `–`）。サイドバーの「番号＋全角スペース＋題名」の全角スペースだけは残す。
+- Google Classroom の表示名は、日本語のまま残して、上の表のスペイン語の表示名をかっこで添える（`<strong>提出</strong> (Entregar)`）。
+- Finder の経路は、日本語の直後にかっこで訳を添えてから → を続ける（`<strong>書類 (Documentos) → Kotlin</strong>`）。英語版と同じ形。
+- 範囲は en dash でつなぐ（STEP 00–13、STEP 02–03）。
+- 同じページの見出しを本文で引用するときは “…” で囲み、その見出しの訳と1字も違えない（“Si quieres volver al estado original”、“Si no encuentras el menú”）。
+- 手順の並びを示す → はそのまま残す（`<strong>probar que funciona → crear el APK de nuevo → cambiar el nombre</strong>`）。
