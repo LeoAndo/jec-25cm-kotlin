@@ -3,6 +3,14 @@
   "language": "zh-Hans",
   "entries": [
     {
+      "source": "A01 HelloAndroid — Kotlinで画面を動かそう | Kotlin演習",
+      "translation": "A01 HelloAndroid — 用 Kotlin 让界面动起来 | Kotlin练习"
+    },
+    {
+      "source": "Android Studio Panda 2でA01HelloAndroidを作る、90分×2コマの教科書。XMLとKotlinをつなぎ、Java・Swiftと比較して学びます。",
+      "translation": "用 Android Studio Panda 2 制作 A01HelloAndroid 的课本，共2节课，每节90分钟。把 XML 和 Kotlin 连接起来，并与 Java、Swift 比较着学习。"
+    },
+    {
       "source": "本文へ移動",
       "translation": "跳转到正文"
     },
@@ -11,16 +19,916 @@
       "translation": "JEC / Kotlin练习"
     },
     {
+      "source": "0 / 14 ステップ確認済み",
+      "translation": "已确认 0 / 14 个步骤"
+    },
+    {
+      "source": "進捗",
+      "translation": "进度"
+    },
+    {
+      "source": "目次",
+      "translation": "目录"
+    },
+    {
+      "source": "STEP 00 Android Studioを開く",
+      "translation": "STEP 00 打开 Android Studio"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 创建自己的项目"
+    },
+    {
+      "source": "STEP 02 実行するエミュレータを用意する",
+      "translation": "STEP 02 准备用来运行的模拟器"
+    },
+    {
+      "source": "STEP 03 生成されたアプリをRunする",
+      "translation": "STEP 03 点击 Run 运行生成的应用"
+    },
+    {
+      "source": "STEP 04 XMLで文字とボタンを並べる",
+      "translation": "STEP 04 用 XML 排列文字和按钮"
+    },
+    {
+      "source": "STEP 05 XMLの部品をKotlinから取得する",
+      "translation": "STEP 05 从 Kotlin 获取 XML 中的界面元素"
+    },
+    {
+      "source": "STEP 06 7コマ目の完成状態を確認する",
+      "translation": "STEP 06 确认第7节课的完成状态"
+    },
+    {
+      "source": "STEP 07 8コマ目：前回のプロジェクトを開く",
+      "translation": "STEP 07 第8节课：打开上次的项目"
+    },
+    {
+      "source": "STEP 08 ボタンを押したら文字を変える",
+      "translation": "STEP 08 点击按钮后更改文字"
+    },
+    {
+      "source": "STEP 09 SnackbarとToastで結果を出す",
+      "translation": "STEP 09 用 Snackbar 和 Toast 显示结果"
+    },
+    {
+      "source": "STEP 10 Logcatで処理の順番を見る",
+      "translation": "STEP 10 在 Logcat 中查看处理的顺序"
+    },
+    {
+      "source": "STEP 11 完成コードと照合する",
+      "translation": "STEP 11 与完成代码核对"
+    },
+    {
+      "source": "STEP 12 自分で変えられる場所を試す",
+      "translation": "STEP 12 试着更改自己可以改的地方"
+    },
+    {
+      "source": "STEP 13 8コマ目の完成状態を確認する",
+      "translation": "STEP 13 确认第8节课的完成状态"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "打开完成项目"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "通用：提交作业与 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
+      "source": "Kotlinで<br>画面を動かそう",
+      "translation": "用 Kotlin<br>让界面动起来"
+    },
+    {
+      "source": "XMLに置いた部品をKotlinから取得し、ボタンを押した結果を画面に出します。使うIDEはAndroid Studioです。",
+      "translation": "从 Kotlin 获取放在 XML 中的界面元素，并把点击按钮的结果显示在界面上。使用的 IDE 是 Android Studio。"
+    },
+    {
+      "source": "対象：<code>A01HelloAndroid</code> / パッケージ：<code>jp.ac.jec.a01helloandroid</code><br>7〜8コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "项目：<code>A01HelloAndroid</code> / 包名：<code>jp.ac.jec.a01helloandroid</code><br>第7～8节课、每节90分钟 / Android Studio Panda 2 / macOS"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "本单元要制作的东西"
+    },
+    {
+      "source": "文字を変更するボタンと、Snackbar・Toastを出すボタンがあるアプリ。各STEPを上から進めます。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。",
+      "translation": "这个应用有一个更改文字的按钮，以及显示 Snackbar 和 Toast 的按钮。各 STEP 从上到下依次进行。比较栏中的 Java 和 Swift 部分只供阅读，不要粘贴到 Kotlin 文件中。"
+    },
+    {
+      "source": "STEP 00 · 7コマ目 · 目安 5分",
+      "translation": "STEP 00 · 第7节课 · 约5分钟"
+    },
+    {
+      "source": "Android Studioを開く",
+      "translation": "打开 Android Studio"
+    },
+    {
+      "source": "今回は <strong>Android Studio</strong> を使います。作るプロジェクトは <code>A01HelloAndroid</code>、実行先は <code>jec_25cm_kotlin_Pixel 9a</code> です。7コマ目で画面を作り、8コマ目でボタンを押したときの動きを書きます。",
+      "translation": "这次使用 <strong>Android Studio</strong>。要创建的项目是 <code>A01HelloAndroid</code>，运行目标设备是 <code>jec_25cm_kotlin_Pixel 9a</code>。第7节课制作界面，第8节课编写点击按钮时的动作。"
+    },
+    {
+      "source": "Finderの「アプリケーション」から <strong>Android Studio</strong> を開きます。",
+      "translation": "从 Finder 的「アプリケーション」（应用程序）中打开 <strong>Android Studio</strong>。"
+    },
+    {
+      "source": "Welcome画面の版を見ます。この教科書の基準は <code>Panda 2</code> です。違う版なら、作り始める前に先生に画面を見せます。",
+      "translation": "查看 Welcome 界面上的版本。本课本的基准版本是 <code>Panda 2</code>。如果版本不同，在开始创建之前把画面给老师看。"
+    },
+    {
+      "source": "ブラウザには、この教科書を開いたままにします。",
+      "translation": "在浏览器中保持本课本处于打开状态。"
+    },
+    {
+      "source": "完成すると「テキストを変更する」で見出しが変わり、「1」でSnackbar、「2」でToastが出ます。「3」は見た目を比べるためのボタンで、処理は付けません。",
+      "translation": "完成后，点击「テキストを変更する」（更改文本）会更改标题，点击“1”会显示 Snackbar，点击“2”会显示 Toast。“3”是用来比较外观的按钮，不给它添加处理。"
+    },
+    {
+      "source": "完成版を起動したときの画面",
+      "translation": "启动完成版时的界面"
+    },
+    {
+      "source": "完成版を起動したときの画面（指定AVDで撮影）",
+      "translation": "启动完成版时的界面（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "Javaではどう書くか",
+      "translation": "用 Java 怎么写"
+    },
+    {
+      "source": "Androidでは自分で <code>main</code> を呼びません。Androidが画面を準備するときに <code>onCreate</code> を呼びます。継承したメソッドを置き換える点はJavaと同じです。この比較は読むだけで、まだ入力しません。",
+      "translation": "在 Android 中，不需要自己调用 <code>main</code>。Android 在准备界面时会调用 <code>onCreate</code>。重写继承来的方法这一点与 Java 相同。这段比较只需阅读，现在还不要输入。"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "在这里停下来确认"
+    },
+    {
+      "source": "Android StudioのWelcome画面と、A01の教科書が開いている。",
+      "translation": "Android Studio 的 Welcome 界面和 A01 的课本都已打开。"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "做完后勾选。无法继续时，把当前画面给老师看。"
+    },
+    {
+      "source": "STEP 01 · 7コマ目 · 目安 15分",
+      "translation": "STEP 01 · 第7节课 · 约15分钟"
+    },
+    {
+      "source": "自分のプロジェクトを作る",
+      "translation": "创建自己的项目"
+    },
+    {
+      "source": "Welcome画面の <strong>New Project</strong> を選びます。プロジェクトが開いている場合は <strong>File → New → New Project…</strong> です。",
+      "translation": "在 Welcome 界面选择 <strong>New Project</strong>。如果已经打开了项目，则使用 <strong>File → New → New Project…</strong>。"
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> の順に選びます。<code>Empty Activity</code> はCompose用なので、今回は選びません。",
+      "translation": "依次选择 <strong>Phone and Tablet → Empty Views Activity → Next</strong>。<code>Empty Activity</code> 是给 Compose 用的，这次不选。"
+    },
+    {
+      "source": "次の表のとおり入力して、<strong>Finish</strong> を押します。",
+      "translation": "按下表输入，然后点击 <strong>Finish</strong>。"
+    },
+    {
       "source": "項目",
       "translation": "设置项"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "输入与选择"
+    },
+    {
+      "source": "<code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。",
+      "translation": "<code>ユーザ名</code>（用户名）替换成自己在 Mac 上的用户名。<strong>Save location 要包含项目名称。</strong>第一次 Gradle 同步需要网络连接。如果 Mac 询问是否允许访问「書類」（文稿），为了能读取自己的项目，请允许。"
+    },
+    {
+      "source": "授業で使うライブラリの版をそろえる",
+      "translation": "统一课堂上使用的库的版本"
+    },
+    {
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "即使同样是 Panda 2，库的版本也会随创建日期而变化。把左侧的 Project 工具窗口切换为 <strong>Project</strong> 视图，打开 <code>gradle → libs.versions.toml</code>，把全部内容替换为下面的内容。这不是 Kotlin 代码，而是指定所用组件及其版本的设置。"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
+    },
+    {
+      "source": "表示される <strong>Sync Now</strong> を押します。出ない場合は <strong>File → Sync Project with Gradle Files</strong> で同期します。進行表示が消えるまで待ちます。赤いエラーが残るときは先へ進まず、内容を先生に見せます。",
+      "translation": "点击显示出来的 <strong>Sync Now</strong>。如果没有显示，就用 <strong>File → Sync Project with Gradle Files</strong> 同步。等到进度显示消失。如果仍有红色错误，不要继续，把错误内容给老师看。"
+    },
+    {
+      "source": "この手順はPanda 2用です。別の版で生成したプロジェクトに、この設定だけを入れて版を下げないでください。ほかの設定の書き方も違う場合があります。",
+      "translation": "这个步骤是给 Panda 2 用的。不要把这个设置单独放进用其他版本生成的项目里来降低版本。其他设置的写法也可能不同。"
+    },
+    {
+      "source": "Kotlinの継承は <code>:</code>、Javaは <code>extends</code> です。<code>AppCompatActivity()</code> の <code>()</code> は親のコンストラクタを呼ぶ形です。パッケージ名はファイルの所属を表し、画面に出すアプリ名とは別です。",
+      "translation": "Kotlin 的继承用 <code>:</code>，Java 用 <code>extends</code>。<code>AppCompatActivity()</code> 中的 <code>()</code> 是调用父类构造函数的写法。包名表示文件的归属，与界面上显示的应用名称是两回事。"
+    },
+    {
+      "source": "自分の保存先にA01HelloAndroidがあり、Gradle同期の赤いエラーが消えている。",
+      "translation": "自己的保存位置中有 A01HelloAndroid，Gradle 同步的红色错误已经消失。"
+    },
+    {
+      "source": "STEP 02 · 7コマ目 · 目安 20分",
+      "translation": "STEP 02 · 第7节课 · 约20分钟"
+    },
+    {
+      "source": "実行するエミュレータを用意する",
+      "translation": "准备用来运行的模拟器"
+    },
+    {
+      "source": "<strong>Tools → Device Manager</strong> を開きます。",
+      "translation": "打开 <strong>Tools → Device Manager</strong>。"
+    },
+    {
+      "source": "<code>jec_25cm_kotlin_Pixel 9a</code> が既にあれば、その行の起動ボタンを押します。新しく同名端末を作る必要はありません。",
+      "translation": "如果已经有 <code>jec_25cm_kotlin_Pixel 9a</code>，点击该行的启动按钮。不需要再新建一个同名设备。"
+    },
+    {
+      "source": "なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）を選び、Phoneの一覧から <strong>Pixel 9a</strong> を選びます。",
+      "translation": "如果没有，选择 <strong>＋ → Create Virtual Device</strong>（或 <strong>Create Device</strong>），从 Phone 列表中选择 <strong>Pixel 9a</strong>。"
+    },
+    {
+      "source": "システムイメージは先生が教室で指定したものを選びます。アプリのMinimum SDKはAPI 31なので、それ以上が必要です。画像の授業用端末はAPI 37.1です。画面に候補がなければ、独自に別の機種や版を選ばず先生に見せます。",
+      "translation": "系统镜像选择老师在教室指定的那一个。应用的 Minimum SDK 是 API 31，所以需要 API 31 或更高。图片中的课堂用设备是 API 37.1。如果界面上没有可选项，不要自行选择其他机型或版本，把画面给老师看。"
+    },
+    {
+      "source": "ダウンロードが必要なら完了を待ち、端末の名前を <code>jec_25cm_kotlin_Pixel 9a</code> にします。<code>Pixel</code> と <code>9a</code> の間は半角スペースです。",
+      "translation": "如果需要下载，等待下载完成，然后把设备名称设为 <code>jec_25cm_kotlin_Pixel 9a</code>。<code>Pixel</code> 和 <code>9a</code> 之间是半角空格。"
+    },
+    {
+      "source": "作成を完了して起動します。Androidのホーム画面が出るまで待ちます。",
+      "translation": "完成创建并启动。等待 Android 的主屏幕出现。"
+    },
+    {
+      "source": "MacのCPUに合うイメージを使います。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code> です。見つからない項目や利用規約の画面は先生と確認してください。初回のダウンロードが長い場合は、先生の端末で画面を確認してから、指示されたところまで進めます。",
+      "translation": "使用与 Mac 的 CPU 匹配的镜像。Apple Silicon 用 <code>arm64-v8a</code>，Intel Mac 用 <code>x86_64</code>。找不到的选项和使用条款的界面，请与老师确认。如果第一次下载时间很长，先在老师的电脑上确认画面，然后进行到老师指示的地方。"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "与 Java / Swift 的比较"
+    },
+    {
+      "source": "Android Studioの実行先でAVDを選びます。Kotlinの文法ではなく、アプリを動かす端末の設定です。",
+      "translation": "在 Android Studio 的运行目标设备中选择 AVD。这不是 Kotlin 的语法，而是运行应用的设备的设置。"
+    },
+    {
+      "source": "Javaで同じAndroidアプリを書いても、同じDevice ManagerとAVDを使います。",
+      "translation": "即使用 Java 编写同样的 Android 应用，也使用同样的 Device Manager 和 AVD。"
+    },
+    {
+      "source": "XcodeでSimulatorを実行先に選ぶ操作に相当します。端末名やOSのイメージはAndroidと別です。",
+      "translation": "相当于在 Xcode 中把 Simulator 选为运行目标的操作。设备名称和 OS 镜像与 Android 不同。"
+    },
+    {
+      "source": "プロジェクト名と端末名は別です。<code>A01HelloAndroid</code> を作り、<code>jec_25cm_kotlin_Pixel 9a</code> で動かします。",
+      "translation": "项目名称和设备名称是两回事。创建 <code>A01HelloAndroid</code>，在 <code>jec_25cm_kotlin_Pixel 9a</code> 上运行。"
+    },
+    {
+      "source": "指定名のエミュレータにAndroidのホーム画面が出ている。",
+      "translation": "指定名称的模拟器上显示了 Android 的主屏幕。"
+    },
+    {
+      "source": "STEP 03 · 7コマ目 · 目安 10分",
+      "translation": "STEP 03 · 第7节课 · 约10分钟"
+    },
+    {
+      "source": "生成されたアプリをRunする",
+      "translation": "点击 Run 运行生成的应用"
+    },
+    {
+      "source": "上部の実行設定で <strong>app</strong>、実行先で <code>jec_25cm_kotlin_Pixel 9a</code> を選びます。",
+      "translation": "在顶部的运行配置中选择 <strong>app</strong>，在运行目标设备中选择 <code>jec_25cm_kotlin_Pixel 9a</code>。"
+    },
+    {
+      "source": "緑の <strong>Run ▶</strong> を押し、ビルドとインストールが終わるまで待ちます。",
+      "translation": "点击绿色的 <strong>Run ▶</strong>，等待构建和安装完成。"
+    },
+    {
+      "source": "エミュレータに <code>Hello World!</code> が出たことを確かめます。この段階ではボタンはありません。",
+      "translation": "确认模拟器上显示了 <code>Hello World!</code>。这个阶段还没有按钮。"
+    },
+    {
+      "source": "左の表示を <strong>Android</strong> にして、<code>app → kotlin+java（またはjava）→ jp.ac.jec.a01helloandroid → MainActivity</code> を開きます。Project表示なら <code>app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt</code> です。",
+      "translation": "把左侧的视图切换为 <strong>Android</strong>，打开 <code>app → kotlin+java（またはjava）→ jp.ac.jec.a01helloandroid → MainActivity</code>（または 意为“或”）。如果是 Project 视图，则是 <code>app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt</code>。"
+    },
+    {
+      "source": "この中の <code>setContentView(R.layout.activity_main)</code> が、<code>app/src/main/res/layout/activity_main.xml</code> を画面として使う指定です。上の <code>super.onCreate</code> と、<code>enableEdgeToEdge</code>・<code>ViewCompat.setOnApplyWindowInsetsListener</code> の部分は残します。ステータスバーや画面下端と内容が重ならないための生成コードです。",
+      "translation": "其中的 <code>setContentView(R.layout.activity_main)</code> 指定把 <code>app/src/main/res/layout/activity_main.xml</code> 用作界面。上面的 <code>super.onCreate</code>，以及 <code>enableEdgeToEdge</code>、<code>ViewCompat.setOnApplyWindowInsetsListener</code> 的部分要保留。这些是生成的代码，用来避免内容与状态栏或屏幕底部重叠。"
+    },
+    {
+      "source": "同じAndroid APIを呼ぶので、JavaからKotlinへ変わってもXMLの名前は同じです。<code>R</code> はビルドで作られる参照用の名前で、自分で <code>R</code> というファイルは作りません。",
+      "translation": "因为调用的是同样的 Android API，所以从 Java 换成 Kotlin 后，XML 中的名称也不变。<code>R</code> 是构建时生成的、用于引用的名称，不需要自己创建名为 <code>R</code> 的文件。"
+    },
+    {
+      "source": "生成直後のアプリにHello World!が表示されている。",
+      "translation": "刚生成的应用中显示了“Hello World!”。"
+    },
+    {
+      "source": "STEP 04 · 7コマ目 · 目安 22分",
+      "translation": "STEP 04 · 第7节课 · 约22分钟"
+    },
+    {
+      "source": "XMLで文字とボタンを並べる",
+      "translation": "用 XML 排列文字和按钮"
+    },
+    {
+      "source": "<code>app → res → layout → activity_main.xml</code> を開きます。",
+      "translation": "打开 <code>app → res → layout → activity_main.xml</code>。"
+    },
+    {
+      "source": "エディタ右上の <strong>Code</strong> を選びます。アイコンだけの場合は、マウスを重ねてCodeを探します。",
+      "translation": "选择编辑器右上角的 <strong>Code</strong>。如果只显示图标，把鼠标悬停在上面找到 Code。"
+    },
+    {
+      "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
+      "translation": "把全部内容替换为下面的 XML。不要粘贴到 <code>MainActivity.kt</code> 中。"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 全文"
+    },
+    {
+      "source": "Runを押して、見出し・変更ボタン・1〜3のボタンが出ることを確認します。",
+      "translation": "点击 Run，确认显示了标题、更改按钮和按钮1～3。"
+    },
+    {
+      "source": "まだ処理は書いていないので、押しても見出しやメッセージは変わりません。",
+      "translation": "因为还没有编写处理，所以点击后标题不会变，也不会出现消息。"
+    },
+    {
+      "source": "文字と4つのボタンを並べた画面",
+      "translation": "排列了文字和4个按钮的界面"
+    },
+    {
+      "source": "文字と4つのボタンを並べた画面（指定AVDで撮影）",
+      "translation": "排列了文字和4个按钮的界面（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "設定",
+      "translation": "设置"
+    },
+    {
+      "source": "この画面での役割",
+      "translation": "在这个界面中的作用"
+    },
+    {
+      "source": "外側で上から順に並べる。内側のhorizontalは1〜3を横に並べる。",
+      "translation": "外层从上到下依次排列。内层的 horizontal 把按钮1～3横向排列。"
+    },
+    {
+      "source": "親の領域を使う／内容に必要な大きさにする。",
+      "translation": "使用父元素的区域／只占内容所需的大小。"
+    },
+    {
+      "source": "中の部品を中央に置く。",
+      "translation": "把内部的界面元素放在中央。"
+    },
+    {
+      "source": "部品の間隔。密度が違う端末でも大きさをそろえる単位。",
+      "translation": "界面元素之间的间距。这是在屏幕密度不同的设备上也能保持大小一致的单位。"
+    },
+    {
+      "source": "ライブラリにある見た目を指定する。1〜3の違いもここで作る。",
+      "translation": "指定库中提供的外观。按钮1～3的差异也是在这里做出来的。"
+    },
+    {
+      "source": "見た目はXML、動きはKotlinに書きます。<code>@+id/text</code> が部品に付けた名前です。",
+      "translation": "外观写在 XML 中，动作写在 Kotlin 中。<code>@+id/text</code> 是给界面元素起的名称。"
+    },
+    {
+      "source": "このXMLを変更せずに使えます。XMLはKotlin専用ではありません。",
+      "translation": "这个 XML 可以不做更改直接使用。XML 不是 Kotlin 专用的。"
+    },
+    {
+      "source": "Storyboardで部品を配置する役割に近いですが、ここではXMLを文字で編集します。接続の方法は次のSTEPで書きます。",
+      "translation": "作用接近于在 Storyboard 中放置界面元素，不过这里是以文本形式编辑 XML。连接的方法在下一个 STEP 中编写。"
+    },
+    {
+      "source": "外側の <code>android:id=\"@+id/main\"</code> は生成された余白処理が使います。<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> も、次のKotlinの名前と1文字ずつ合わせます。",
+      "translation": "外层的 <code>android:id=\"@+id/main\"</code> 由生成的边距处理使用。<code>text</code>、<code>button</code>、<code>btn1</code>、<code>btn2</code> 也要与接下来 Kotlin 中的名称逐字一致。"
+    },
+    {
+      "source": "見出しと「テキストを変更する」、1・2・3のボタンが並んでいる。",
+      "translation": "标题、「テキストを変更する」（更改文本）以及按钮1、2、3已排列在界面上。"
+    },
+    {
+      "source": "STEP 05 · 7コマ目 · 目安 15分",
+      "translation": "STEP 05 · 第7节课 · 约15分钟"
+    },
+    {
+      "source": "XMLの部品をKotlinから取得する",
+      "translation": "从 Kotlin 获取 XML 中的界面元素"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を開きます。<code>onCreate</code> 内の余白処理を閉じる <code>})</code>（生成直後なら <code>}</code>）のあとに、次の4行を追加します。<code>onCreate</code> を閉じる最後のかっこの手前です。",
+      "translation": "打开 <code>MainActivity.kt</code>。在 <code>onCreate</code> 内闭合边距处理的 <code>})</code>（刚生成时是 <code>}</code>）之后，添加下面4行。也就是在闭合 <code>onCreate</code> 的最后一个右花括号之前。"
+    },
+    {
+      "source": "MainActivity.kt · onCreateの中に追加",
+      "translation": "MainActivity.kt · 在 onCreate 中添加"
+    },
+    {
+      "source": "<code>TextView</code> と <code>Button</code> が赤くなったら、ファイル上部のimportに次を足します。同じimportは重ねて書きません。",
+      "translation": "如果 <code>TextView</code> 和 <code>Button</code> 变红，就在文件顶部的 import 中添加下面的内容。同样的 import 不要重复写。"
+    },
+    {
+      "source": "MainActivity.kt · packageのあと",
+      "translation": "MainActivity.kt · package 之后"
+    },
+    {
+      "source": "Runして同じ画面が出ることを確かめます。<code>findViewById</code> は表示済みの部品を取得するだけなので、まだ押したときの動きはありません。",
+      "translation": "点击 Run，确认显示同样的界面。<code>findViewById</code> 只是获取已经显示的界面元素，所以点击时还没有任何动作。"
+    },
+    {
+      "source": "SwiftのUIKitで <code>IBOutlet</code> をつないでラベルを参照する役割に近い処理です。AndroidではXMLのidを指定して取得します。<code>val</code> は参照の入れ替えを止めますが、参照したViewの文字は変更できます。",
+      "translation": "这个处理的作用，接近于在 Swift 的 UIKit 中连接 <code>IBOutlet</code> 来引用标签。在 Android 中，通过指定 XML 的 id 来获取。<code>val</code> 会阻止替换引用，但所引用的 View 的文字可以更改。"
+    },
+    {
+      "source": "順番は <code>setContentView</code> → <code>findViewById</code> です。XMLを読み込む前に部品を探さないようにします。",
+      "translation": "顺序是 <code>setContentView</code> → <code>findViewById</code>。不要在读入 XML 之前查找界面元素。"
+    },
+    {
+      "source": "4つのidの参照に赤い波線がなく、Runすると同じ画面が出ている。",
+      "translation": "4个 id 的引用没有红色波浪线，点击 Run 后显示同样的界面。"
+    },
+    {
+      "source": "STEP 06 · 7コマ目 · 目安 3分",
+      "translation": "STEP 06 · 第7节课 · 约3分钟"
+    },
+    {
+      "source": "7コマ目の完成状態を確認する",
+      "translation": "确认第7节课的完成状态"
+    },
+    {
+      "source": "最後の3分です。XMLに <code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> があり、Kotlinに4つの <code>findViewById</code> があることを確認します。Runして、見出しと4つのボタンを見ます。",
+      "translation": "这是最后的3分钟。确认 XML 中有 <code>main</code>、<code>text</code>、<code>button</code>、<code>btn1</code>、<code>btn2</code>，Kotlin 中有4个 <code>findViewById</code>。点击 Run，查看标题和4个按钮。"
+    },
+    {
+      "source": "次回は同じ <code>Documents/Kotlin/A01HelloAndroid</code> を開きます。新規作成はしません。書いた内容はAndroid Studioが保存します。",
+      "translation": "下次打开同一个 <code>Documents/Kotlin/A01HelloAndroid</code>。不要新建项目。写好的内容由 Android Studio 保存。"
+    },
+    {
+      "source": "自分のA01HelloAndroidで見出しと4つのボタンが表示されている。",
+      "translation": "自己的 A01HelloAndroid 中显示了标题和4个按钮。"
+    },
+    {
+      "source": "STEP 07 · 8コマ目 · 目安 5分",
+      "translation": "STEP 07 · 第8节课 · 约5分钟"
+    },
+    {
+      "source": "8コマ目：前回のプロジェクトを開く",
+      "translation": "第8节课：打开上次的项目"
+    },
+    {
+      "source": "Android Studioの最近使ったプロジェクトから <code>A01HelloAndroid</code> を開きます。なければ <strong>Open</strong> で <code>Documents/Kotlin/A01HelloAndroid</code> を選びます。",
+      "translation": "从 Android Studio 最近使用的项目中打开 <code>A01HelloAndroid</code>。如果没有，用 <strong>Open</strong> 选择 <code>Documents/Kotlin/A01HelloAndroid</code>。"
+    },
+    {
+      "source": "実行先を <code>jec_25cm_kotlin_Pixel 9a</code> にしてRunします。",
+      "translation": "把运行目标设备设为 <code>jec_25cm_kotlin_Pixel 9a</code>，点击 Run。"
+    },
+    {
+      "source": "見出しと4つのボタンを確認し、<code>MainActivity.kt</code> を開きます。",
+      "translation": "确认标题和4个按钮，然后打开 <code>MainActivity.kt</code>。"
+    },
+    {
+      "source": "前回取得した <code>button</code> に、今回はクリックの処理を付けます。部品をもう一度作ったり、同じidをもう一度取得したりはしません。",
+      "translation": "这次给上次获取的 <code>button</code> 添加点击处理。不要再次创建界面元素，也不要再次获取同一个 id。"
+    },
+    {
+      "source": "前回の画面が出て、MainActivity.ktに4つのView取得が残っている。",
+      "translation": "显示了上次的界面，MainActivity.kt 中还保留着获取4个 View 的代码。"
+    },
+    {
+      "source": "STEP 08 · 8コマ目 · 目安 20分",
+      "translation": "STEP 08 · 第8节课 · 约20分钟"
+    },
+    {
+      "source": "ボタンを押したら文字を変える",
+      "translation": "点击按钮后更改文字"
+    },
+    {
+      "source": "<code>onCreate</code> の4つのView取得のあとに、次を足します。まだLogの行は書きません。",
+      "translation": "在 <code>onCreate</code> 中获取4个 View 的代码之后，添加下面的内容。现在还不写 Log 的行。"
+    },
+    {
+      "source": "MainActivity.kt · View取得のあと",
+      "translation": "MainActivity.kt · 获取 View 之后"
+    },
+    {
+      "source": "Runします。",
+      "translation": "点击 Run。"
+    },
+    {
+      "source": "「テキストを変更する」を押します。見出しが <code>Hello, Android!</code> に変わります。",
+      "translation": "点击「テキストを変更する」（更改文本）。标题会变为 <code>Hello, Android!</code>。"
+    },
+    {
+      "source": "もう一度押しても同じ文字です。<code>text.text</code> に同じ値を入れているためです。",
+      "translation": "再点击一次，文字也一样。因为给 <code>text.text</code> 赋的是同样的值。"
+    },
+    {
+      "source": "ボタンを押してHello, Android!に変わった画面",
+      "translation": "点击按钮后文字变为“Hello, Android!”的界面"
+    },
+    {
+      "source": "ボタンを押してHello, Android!に変わった画面（指定AVDで撮影）",
+      "translation": "点击按钮后文字变为“Hello, Android!”的界面（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "<code>{ v -&gt; … }</code> はクリックされたときに実行するラムダです。<code>v</code> は押されたViewです。この処理では使いませんが、次のSnackbarで使います。Swiftのボタンのアクションにクロージャを渡す考え方にも対応します。",
+      "translation": "<code>{ v -&gt; … }</code> 是被点击时执行的 lambda 表达式。<code>v</code> 是被点击的 View。这个处理中不使用它，但接下来的 Snackbar 会用到。这也对应于 Swift 中把闭包传给按钮动作的思路。"
+    },
+    {
+      "source": "KotlinではJavaの <code>setText</code> を <code>text.text = …</code> と書けます。ラムダは登録した時点では動かず、ボタンが押されたときに動きます。",
+      "translation": "在 Kotlin 中，Java 的 <code>setText</code> 可以写成 <code>text.text = …</code>。lambda 表达式在注册时不会运行，而是在按钮被点击时运行。"
+    },
+    {
+      "source": "ボタンを押したあと、見出しがHello, Android!になっている。",
+      "translation": "点击按钮后，标题变成了“Hello, Android!”。"
+    },
+    {
+      "source": "STEP 09 · 8コマ目 · 目安 20分",
+      "translation": "STEP 09 · 第8节课 · 约20分钟"
+    },
+    {
+      "source": "SnackbarとToastで結果を出す",
+      "translation": "用 Snackbar 和 Toast 显示结果"
+    },
+    {
+      "source": "<code>button</code> のクリック処理を閉じる <code>})</code> のあと、<code>onCreate</code> の中に次の2つの処理を足します。上の処理の内側には入れません。",
+      "translation": "在闭合 <code>button</code> 的点击处理的 <code>})</code> 之后、<code>onCreate</code> 的内部，添加下面2个处理。不要放进上面那个处理的内部。"
+    },
+    {
+      "source": "MainActivity.kt · 2つのクリック処理",
+      "translation": "MainActivity.kt · 2个点击处理"
+    },
+    {
+      "source": "MainActivity.kt · importに追加",
+      "translation": "MainActivity.kt · 添加到 import"
+    },
+    {
+      "source": "Runして「1」を押します。画面下に <code>1</code> のSnackbarが出て、しばらくすると消えます。",
+      "translation": "点击 Run，然后点击“1”。界面底部会出现内容为 <code>1</code> 的 Snackbar，过一会儿就会消失。"
+    },
+    {
+      "source": "消えてから「2」を押します。<code>2</code> のToastが出ます。OSによりアイコンや形が違う場合があります。",
+      "translation": "等它消失后点击“2”。会出现内容为 <code>2</code> 的 Toast。图标和形状可能因 OS 而异。"
+    },
+    {
+      "source": "「3」を押します。処理を登録していないので、メッセージは出ません。",
+      "translation": "点击“3”。因为没有注册处理，所以不会出现消息。"
+    },
+    {
+      "source": "1を押したときのSnackbar",
+      "translation": "点击“1”时显示的 Snackbar"
+    },
+    {
+      "source": "1を押したときのSnackbar（指定AVDで撮影）",
+      "translation": "点击“1”时显示的 Snackbar（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "2を押したときのToast",
+      "translation": "点击“2”时显示的 Toast"
+    },
+    {
+      "source": "2を押したときのToast（指定AVDで撮影）",
+      "translation": "点击“2”时显示的 Toast（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "<code>getText()</code> は文字の表示内容を返し、<code>toString()</code> で文字列にします。KotlinでもJavaのメソッドをそのまま呼べます。<code>this</code> はこの <code>MainActivity</code>、<code>v</code> は押したボタンです。SnackbarはViewを手がかりに表示先を探し、ToastにはContextとしてActivityを渡します。",
+      "translation": "<code>getText()</code> 返回显示的文字内容，再用 <code>toString()</code> 转成字符串。在 Kotlin 中也可以直接调用 Java 的方法。<code>this</code> 是这个 <code>MainActivity</code>，<code>v</code> 是被点击的按钮。Snackbar 以 View 为线索查找显示位置，而 Toast 要把 Activity 作为 Context 传给它。"
+    },
+    {
+      "source": "メッセージを作っただけでは表示されません。最後の <code>.show()</code> まで書きます。利用者に知らせる結果は画面に出し、Logcatだけで済ませません。",
+      "translation": "只创建消息不会显示出来。要一直写到最后的 <code>.show()</code>。要告知使用者的结果应显示在界面上，不能只靠 Logcat。"
+    },
+    {
+      "source": "1のSnackbarと2のToastを確認し、3ではメッセージが出ない。",
+      "translation": "按钮1的 Snackbar 和按钮2的 Toast 都已显示，按钮3不显示消息。"
+    },
+    {
+      "source": "STEP 10 · 8コマ目 · 目安 15分",
+      "translation": "STEP 10 · 第8节课 · 约15分钟"
+    },
+    {
+      "source": "Logcatで処理の順番を見る",
+      "translation": "在 Logcat 中查看处理的顺序"
+    },
+    {
+      "source": "画面への表示は残したまま、開発中の確認用にLogcatへ文字を出します。上部に <code>import android.util.Log</code> を足します。",
+      "translation": "保留界面上的显示，同时为了在开发过程中确认，把文字输出到 Logcat。在顶部添加 <code>import android.util.Log</code>。"
+    },
+    {
+      "source": "4つのView取得のあと、<code>button.setOnClickListener</code> の前に次の2行を足します。",
+      "translation": "在获取4个 View 的代码之后、<code>button.setOnClickListener</code> 之前，添加下面2行。"
+    },
+    {
+      "source": "onCreate · クリック処理の外",
+      "translation": "onCreate · 点击处理之外"
+    },
+    {
+      "source": "次は <code>button</code> のクリック処理の中です。<code>text.text = \"Hello, Android!\"</code> の直後に2行足します。",
+      "translation": "接下来是 <code>button</code> 的点击处理内部。在 <code>text.text = \"Hello, Android!\"</code> 的紧后面添加2行。"
+    },
+    {
+      "source": "buttonのクリック処理 · 文字を変えた直後",
+      "translation": "button 的点击处理 · 紧接在更改文字之后"
+    },
+    {
+      "source": "<strong>View → Tool Windows → Logcat</strong> を開きます。",
+      "translation": "打开 <strong>View → Tool Windows → Logcat</strong>。"
+    },
+    {
+      "source": "端末に <code>jec_25cm_kotlin_Pixel 9a</code> を選び、検索欄に <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code> と入力します。",
+      "translation": "设备选择 <code>jec_25cm_kotlin_Pixel 9a</code>，在搜索栏中输入 <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code>。"
+    },
+    {
+      "source": "実行中ならStop（■）で止めてからRunします。最新の <code>Hello World!</code> の行を確認します。",
+      "translation": "如果正在运行，先用 Stop（■）停止，再点击 Run。确认最新的 <code>Hello World!</code> 那一行。"
+    },
+    {
+      "source": "「テキストを変更する」を押し、最新の <code>Hello, Android!</code> の行を確認します。",
+      "translation": "点击「テキストを変更する」（更改文本），确认最新的 <code>Hello, Android!</code> 那一行。"
+    },
+    {
+      "source": "時刻やプロセス番号は毎回変わります。比べるのはメッセージの部分です。過去の実行の行が残っていたら、最新の時刻を見ます。",
+      "translation": "时间和进程编号每次都会变。要比较的是消息部分。如果还留着以前运行的行，就看最新的时间。"
+    },
+    {
+      "source": "外側のLogは画面の準備時、ラムダ内のLogはクリック時に出ます。Logcatは開発者向けです。アプリを使う人は画面の文字・Snackbar・Toastで結果を見ます。",
+      "translation": "外面的 Log 在准备界面时输出，lambda 表达式内的 Log 在点击时输出。Logcat 是给开发者看的。使用应用的人通过界面上的文字、Snackbar、Toast 来查看结果。"
+    },
+    {
+      "source": "最新の起動ログにHello World!、クリック後のログにHello, Android!が出ている。",
+      "translation": "最新的启动日志中显示了“Hello World!”，点击后的日志中显示了“Hello, Android!”。"
+    },
+    {
+      "source": "STEP 11 · 8コマ目 · 目安 10分",
+      "translation": "STEP 11 · 第8节课 · 约10分钟"
+    },
+    {
+      "source": "完成コードと照合する",
+      "translation": "与完成代码核对"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> の全文です。追加した処理の位置・import・かっこの対応を、自分のコードと照合します。足りない部分を直してRunします。迷ったときはファイル全体をこのコードにそろえられます。",
+      "translation": "这是 <code>MainActivity.kt</code> 的全文。把添加的处理的位置、import、括号的对应，与自己的代码核对。补上不足的部分，然后点击 Run。拿不准时，可以把整个文件改成与这段代码一致。"
+    },
+    {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · 全文"
+    },
+    {
+      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
+      "translation": "<code>@Override</code> 是来自 Java 的注解。在 Kotlin 中表示重写的是 <code>override</code> 关键字，这里原样保留了示例的写法。边距处理中的 <code>Insets</code> 持有4条边的值。本单元只确认生成部分的作用，不涉及整个机制。"
+    },
+    {
+      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。見本の <code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに比較します。",
+      "translation": "XML 的 <code>id</code> 与 Kotlin 的 <code>R.id</code> 一致，是连接成立的条件。示例中的 <code>text</code>、<code>button</code>、<code>btn1</code>、<code>btn2</code> 不改名称，直接比较。"
+    },
+    {
+      "source": "全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。",
+      "translation": "全文已核对，文字更改、Snackbar、Toast、Logcat 各自都正常工作。"
+    },
+    {
+      "source": "STEP 12 · 8コマ目 · 目安 17分",
+      "translation": "STEP 12 · 第8节课 · 约17分钟"
+    },
+    {
+      "source": "自分で変えられる場所を試す",
+      "translation": "试着更改自己可以改的地方"
+    },
+    {
+      "source": "ここまでに扱った場所から、1つ選んで変更します。先に元の文字や数値を控え、1か所変えるごとにRunします。次の例と同じにする必要はありません。",
+      "translation": "从到目前为止接触过的地方中选一处进行更改。先记下原来的文字或数值，每改一处就点击一次 Run。不必与下面的示例相同。"
     },
     {
       "source": "変える場所",
       "translation": "更改的位置"
     },
     {
+      "source": "例",
+      "translation": "示例"
+    },
+    {
+      "source": "変わるもの",
+      "translation": "会改变的内容"
+    },
+    {
+      "source": "XMLのTextViewの <code>android:text</code>",
+      "translation": "XML 中 TextView 的 <code>android:text</code>"
+    },
+    {
+      "source": "<code>Hello World!</code> を自分のあいさつにする",
+      "translation": "把 <code>Hello World!</code> 改成自己的问候语"
+    },
+    {
+      "source": "起動時の見出しと起動時のLog。",
+      "translation": "启动时的标题和启动时的 Log。"
+    },
+    {
+      "source": "Kotlinの <code>text.text = …</code>",
+      "translation": "Kotlin 中的 <code>text.text = …</code>"
+    },
+    {
+      "source": "<code>Hello, Android!</code> を別の言葉にする",
+      "translation": "把 <code>Hello, Android!</code> 改成别的词语"
+    },
+    {
+      "source": "変更ボタンを押したあとの見出しとLog。",
+      "translation": "点击更改按钮后的标题和 Log。"
+    },
+    {
+      "source": "XMLのbtn1・btn2の <code>android:text</code>",
+      "translation": "XML 中 btn1、btn2 的 <code>android:text</code>"
+    },
+    {
+      "source": "<code>1</code>・<code>2</code> を短い言葉にする",
+      "translation": "把 <code>1</code>、<code>2</code> 改成简短的词语"
+    },
+    {
+      "source": "ボタンの表示と、そのボタンから出すメッセージ。",
+      "translation": "按钮上显示的文字，以及从该按钮发出的消息。"
+    },
+    {
+      "source": "XMLの <code>layout_marginTop</code>",
+      "translation": "XML 中的 <code>layout_marginTop</code>"
+    },
+    {
+      "source": "<code>12dp</code> を <code>24dp</code> にする",
+      "translation": "把 <code>12dp</code> 改成 <code>24dp</code>"
+    },
+    {
+      "source": "縦の間隔。",
+      "translation": "纵向的间距。"
+    },
+    {
+      "source": "idやパッケージ名は変えません。たとえばbtn1の文字だけを変えると、<code>getText()</code> がその文字を読むので、Snackbarの文言も一緒に変わります。",
+      "translation": "不要更改 id 和包名。例如，只更改 btn1 的文字时，<code>getText()</code> 会读取那段文字，所以 Snackbar 的文字也会一起改变。"
+    },
+    {
+      "source": "比較できる状態に戻す",
+      "translation": "恢复到可以比较的状态"
+    },
+    {
+      "source": "変えたところを元に戻し、RunしてSTEP 11の動きに戻ることを確かめます。自分のアレンジは、あとで選んで続けられます。提出で使うときは、サイドバーの「共通：提出課題とAPK」に、コピーと提出の手順があります。",
+      "translation": "把改过的地方恢复原状，点击 Run，确认恢复到 STEP 11 的动作。自己的修改，可以以后再选择并继续进行。用于提交时，侧边栏的“通用：提交作业与 APK”中有复制和提交的步骤。"
+    },
+    {
+      "source": "XMLの初期表示とKotlinで押したあとに代入する文字は別です。どちらを変えたかによって、変化するタイミングが違います。",
+      "translation": "XML 中的初始显示和 Kotlin 中在点击后赋值的文字是两回事。改的是哪一个不同，变化出现的时机也不同。"
+    },
+    {
+      "source": "変更した場所の効果を画面で確かめ、元の文字と間隔に戻っている。",
+      "translation": "已在界面上确认所改之处的效果，文字和间距已恢复原状。"
+    },
+    {
+      "source": "STEP 13 · 8コマ目 · 目安 3分",
+      "translation": "STEP 13 · 第8节课 · 约3分钟"
+    },
+    {
+      "source": "8コマ目の完成状態を確認する",
+      "translation": "确认第8节课的完成状态"
+    },
+    {
+      "source": "最後の3分です。Stop→Runで開き直し、次の順に確認します。",
+      "translation": "这是最后的3分钟。用 Stop→Run 重新打开，按下面的顺序确认。"
+    },
+    {
+      "source": "見出しが <code>Hello World!</code>。",
+      "translation": "标题是 <code>Hello World!</code>。"
+    },
+    {
+      "source": "変更ボタンで <code>Hello, Android!</code>。",
+      "translation": "点击更改按钮后变为 <code>Hello, Android!</code>。"
+    },
+    {
+      "source": "「1」でSnackbar、「2」でToast。",
+      "translation": "点击“1”显示 Snackbar，点击“2”显示 Toast。"
+    },
+    {
+      "source": "Logcatにも起動時と変更後の文字が出る。",
+      "translation": "Logcat 中也显示启动时和更改后的文字。"
+    },
+    {
+      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。完成見本をそのまま提出する形にはしません。",
+      "translation": "继续修改时，入口是 STEP 12 的表格。使用自己创建的 <code>Documents/Kotlin/A01HelloAndroid</code>。不能把完成示例原样提交。"
+    },
+    {
+      "source": "自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。",
+      "translation": "自己的应用中这4项都已确认，可以更改的地方能在 STEP 12 的表格中找到。"
+    },
+    {
+      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
+      "translation": "示例已解压在分发的教材文件夹中的 <code>samples/A01HelloAndroid</code>。用 Android Studio 的 <strong>Open</strong> 选择 <code>A01HelloAndroid</code> 文件夹，而不是 <code>app</code>。在另一个窗口中打开，等待 Gradle 同步完成，然后在指定的 AVD 上点击 Run。"
+    },
+    {
+      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
+      "translation": "比较完后，回到自己创建的 <code>Documents/Kotlin/A01HelloAndroid</code>。示例从一开始就可以参考。"
+    },
+    {
+      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
+      "translation": "在没有示例文件夹的分发形式中，领取<a1>完成项目 ZIP</a1>，用 Open 打开解压后的文件夹。"
+    },
+    {
       "source": "起きたこと",
       "translation": "出现的情况"
+    },
+    {
+      "source": "確かめる場所",
+      "translation": "要确认的地方"
+    },
+    {
+      "source": "activity_main.xmlがない",
+      "translation": "没有 activity_main.xml"
+    },
+    {
+      "source": "Empty ActivityではなくEmpty Views Activityを選んだか確認。作り直す前に先生に見せます。",
+      "translation": "确认选的是 Empty Views Activity 而不是 Empty Activity。重新创建之前先给老师看。"
+    },
+    {
+      "source": "Gradle同期が終わらない／赤い",
+      "translation": "Gradle 同步不结束，或显示红色"
+    },
+    {
+      "source": "通信とSTEP 01の設定。別のStudio版なら設定を次々変えず、エラーの先頭を先生に見せます。",
+      "translation": "网络连接和 STEP 01 的设置。如果是其他版本的 Studio，不要接连更改设置，把错误信息的开头给老师看。"
+    },
+    {
+      "source": "実行先がない",
+      "translation": "没有运行目标设备"
+    },
+    {
+      "source": "STEP 02のDevice Managerで指定AVDを起動します。",
+      "translation": "在 STEP 02 的 Device Manager 中启动指定的 AVD。"
+    },
+    {
+      "source": "R.idが赤い",
+      "translation": "R.id 显示红色"
+    },
+    {
+      "source": "XMLのidとつづりを合わせます。XML側の赤いエラーも先に直します。別のRをimportしません。",
+      "translation": "让拼写与 XML 中的 id 一致。XML 一侧的红色错误也要先修正。不要 import 其他的 R。"
+    },
+    {
+      "source": "起動直後に閉じる",
+      "translation": "启动后立即关闭"
+    },
+    {
+      "source": "setContentViewより後でViewを取得したか、mainのidを残したか確認します。Logcatの赤い行を先生に見せます。",
+      "translation": "确认是否在 setContentView 之后获取 View，以及是否保留了 main 的 id。把 Logcat 中的红色行给老师看。"
+    },
+    {
+      "source": "文字が変わらない",
+      "translation": "文字没有变"
+    },
+    {
+      "source": "buttonのクリック処理がonCreate内で、ほかのクリック処理の外にあるか確認。Runして最新のコードを端末に入れます。",
+      "translation": "确认 button 的点击处理是否在 onCreate 内，并且在其他点击处理的外面。点击 Run，把最新的代码装到设备上。"
+    },
+    {
+      "source": "Snackbar／Toastが出ない",
+      "translation": "Snackbar 或 Toast 不显示"
+    },
+    {
+      "source": "1または2を押したか、show()まで書いたか確認。3には処理を付けていません。",
+      "translation": "确认是否点击了1或2，以及是否一直写到了 show()。3没有添加处理。"
+    },
+    {
+      "source": "Logcatに出ない",
+      "translation": "Logcat 中不显示"
+    },
+    {
+      "source": "STEP 10の端末と検索欄を確認し、Stop→Runとクリックをやり直します。",
+      "translation": "确认 STEP 10 的设备和搜索栏，重新做一遍 Stop→Run 和点击。"
+    },
+    {
+      "source": "黄色い注意が出る",
+      "translation": "出现黄色的警告"
+    },
+    {
+      "source": "エラーと区別し、該当行を先生に見せます。Suppressで隠しません。未使用のvやXMLの文字を直接書くことへの提案は、教材の完成コードにもある書き方です。",
+      "translation": "把它与错误区分开，把相应的行给老师看。不要用 Suppress 隐藏。关于未使用的 v，以及直接在 XML 中写文字的提示，教材的完成代码中也是这样写的。"
+    },
+    {
+      "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
+      "translation": "提问时，告知教材文件夹中 <code>VERSION.json</code> 里的版本和 STEP 编号。"
     },
     {
       "source": "公式資料",
@@ -29,6 +937,22 @@
     {
       "source": "Android Studio：プロジェクトの作成",
       "translation": "Android Studio：创建项目"
+    },
+    {
+      "source": "仮想デバイスの作成と管理",
+      "translation": "创建和管理虚拟设备"
+    },
+    {
+      "source": "Snackbarの表示",
+      "translation": "显示 Snackbar"
+    },
+    {
+      "source": "画面は <code>jec_25cm_kotlin_Pixel 9a</code> のライトテーマで確認。時刻・OSの表示は環境によって異なります。確認日：2026年9月24日。",
+      "translation": "界面已在 <code>jec_25cm_kotlin_Pixel 9a</code> 的浅色主题下确认。时间和 OS 的显示因环境而异。确认日期：2026年9月24日。"
+    },
+    {
+      "source": "チェックは自分用で送信されません。JavaScriptが無効でも本文とコードは読めます。印刷は ⌘ P。",
+      "translation": "勾选只供自己使用，不会被发送。即使禁用了 JavaScript，也能阅读正文和代码。打印用 ⌘ P。"
     }
   ]
 }

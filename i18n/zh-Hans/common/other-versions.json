@@ -192,7 +192,7 @@
     },
     {
       "source": "教科書と同じコードを入力します。生成された余白処理は残し、<code>onCreate</code> の中へ追加します。文字変更・Snackbar・Toast・Logcatの確認結果は同じです。",
-      "translation": "输入与课本相同的代码。保留生成的边距处理，添加到 <code>onCreate</code> 中。文字更改、Snackbar、Toast、Logcat 的确认结果相同。"
+      "translation": "输入与课本相同的代码。保留生成的边距处理，把这些代码添加到 <code>onCreate</code> 中。文字更改、Snackbar、Toast、Logcat 的确认结果相同。"
     },
     {
       "source": "STEP 11〜13：全文照合・アレンジ",
