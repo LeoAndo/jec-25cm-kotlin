@@ -368,12 +368,14 @@ class LocalizeTest(unittest.TestCase):
         source = ('<html lang="ja"><body><table><tr><td><code>9</code> → <code>4</code></td>'
                   '<td>5問で終了する。</td><td><code>a → b</code></td><td>getInstance → addListener</td></tr></table>'
                   '<div class="flow"><strong>① 受け取る</strong><span>→</span><strong>② 確かめる</strong></div>'
-                  '<p><code>START</code> を押す → 始まる</p><ul><li><code>12dp</code> → <code>24dp</code></li></ul>'
-                  '</body></html>')
+                  '<p><code>START</code> を押す → 始まる</p><ul><li><code>12dp</code> → <code>24dp</code></li>'
+                  '<li><code>1</code> &rarr; <code>2</code></li></ul></body></html>')
         rtl = localize.localize(page_of(source), {}, "ar", "docs", self.PAGES, direction="rtl")
         self.assertIn('<td><span dir="ltr"><code>9</code> → <code>4</code></span></td>', rtl)
         self.assertIn('<li><span dir="ltr"><code>12dp</code> → <code>24dp</code></span></li>', rtl)
         self.assertIn('<td><span dir="ltr">getInstance → addListener</span></td>', rtl)
+        # 文字参照で書いた矢印も、同じように包む。
+        self.assertIn('<li><span dir="ltr"><code>1</code> &rarr; <code>2</code></span></li>', rtl)
         # 矢印が <code> の中にあるときと、訳の対象の文を含む要素（流れ図・日本語の段落）は包まない。
         self.assertIn('<td><code>a → b</code></td>', rtl)
         self.assertIn('<span>→</span><strong>② 確かめる</strong></div>', rtl)

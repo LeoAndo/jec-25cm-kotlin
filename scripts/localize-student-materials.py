@@ -838,11 +838,14 @@ class _Localizer:
             self._left_to_right_arrows(child, replacements, starts, ends)
 
     def _text_outside_code(self, element: Element) -> str:
-        """<code>・<kbd> などの外にある文字。矢印が <code> の中にあるときは、もともと左から右に並ぶ。"""
+        """<code>・<kbd> などの外にある文字。矢印が <code> の中にあるときは、もともと左から右に並ぶ。
+
+        &rarr; のような文字参照で書いた矢印も同じ矢印として見るので、文字参照を戻してから返す。
+        """
         parts = []
         for node in element.children:
             if isinstance(node, Text):
-                parts.append(self.page.text[node.start:node.end])
+                parts.append(html.unescape(self.page.text[node.start:node.end]))
             elif node.tag not in PROTECTED:
                 parts.append(self._text_outside_code(node))
         return "".join(parts)
