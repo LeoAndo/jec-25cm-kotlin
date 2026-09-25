@@ -3,6 +3,10 @@
   "language": "ar",
   "entries": [
     {
+      "source": "提出課題とAPKの作り方 | Kotlin演習",
+      "translation": "الواجب المطلوب تسليمه وطريقة إنشاء ملف APK | تمارين Kotlin"
+    },
+    {
       "source": "本文へ移動",
       "translation": "الانتقال إلى المحتوى الرئيسي"
     },
@@ -19,24 +23,732 @@
       "translation": "KOTLIN PROGRAMMING EXERCISES / المواد المشتركة ودعم الحصص"
     },
     {
+      "source": "提出課題と<br>APKの作り方",
+      "translation": "الواجب المطلوب تسليمه<br>وطريقة إنشاء ملف APK"
+    },
+    {
+      "source": "この授業の提出課題の説明です。自分で作ったAndroidアプリを1つ選び、アレンジを加えて、APKというファイルにして提出します。",
+      "translation": "هذا شرح للواجب المطلوب تسليمه في هذا المقرر. اختر تطبيق Android واحدا أنشأته بنفسك، وخصّصه، ثم سلّمه على شكل ملف يسمى APK."
+    },
+    {
+      "source": "1. 提出課題",
+      "translation": "1. الواجب المطلوب تسليمه"
+    },
+    {
+      "source": "この資料を使うのは、<strong>後半のAndroidの単元が終わってから</strong>です。前半のIntelliJ IDEAの単元だけが済んだ時点では、まだ進められません。提出する時期は、先生の案内に従ってください。",
+      "translation": "تستخدم هذا الدليل <strong>بعد انتهاء وحدات Android في النصف الثاني</strong>. إذا كنت قد أنهيت وحدة IntelliJ IDEA في النصف الأول فقط، فلا يمكنك المتابعة بعد. أما موعد التسليم، فاتبع فيه تعليمات المعلم."
+    },
+    {
+      "source": "提出するもの",
+      "translation": "ما تسلّمه"
+    },
+    {
+      "source": "<strong>APKファイルを1つ。</strong>提出先は、この授業の <strong>Google Classroom</strong> です。",
+      "translation": "<strong>ملف APK واحد.</strong> يكون التسليم في <strong>Google Classroom</strong> الخاص بهذا المقرر."
+    },
+    {
       "source": "すること",
       "translation": "ما عليك فعله"
+    },
+    {
+      "source": "内容",
+      "translation": "التفاصيل"
+    },
+    {
+      "source": "選ぶ",
+      "translation": "الاختيار"
+    },
+    {
+      "source": "後半のAndroidの単元で<strong>自分が作ったプロジェクト</strong>から、好きなものを<strong>1つ</strong>選びます。",
+      "translation": "من <strong>المشاريع التي أنشأتها بنفسك</strong> في وحدات Android في النصف الثاني، اختر <strong>مشروعا واحدا</strong> يعجبك."
+    },
+    {
+      "source": "アレンジする",
+      "translation": "التخصيص"
+    },
+    {
+      "source": "選んだ1つに、自分なりの変更を加えます。文字の色を変えるだけでも構いません。",
+      "translation": "أضف تغييراتك الخاصة إلى المشروع الذي اخترته. يكفي حتى مجرد تغيير لون النص."
+    },
+    {
+      "source": "APKにする",
+      "translation": "إنشاء ملف APK"
+    },
+    {
+      "source": "アレンジしたプロジェクトから、<strong>APK</strong>を作ります。アプリを1つのファイルにまとめたものです。",
+      "translation": "أنشئ <strong>APK</strong> من المشروع الذي خصّصته. وهو التطبيق مجمّعا في ملف واحد."
+    },
+    {
+      "source": "提出する",
+      "translation": "التسليم"
+    },
+    {
+      "source": "できたAPKを、Google Classroom の課題に出します。",
+      "translation": "سلّم ملف APK الناتج في الواجب على Google Classroom."
+    },
+    {
+      "source": "進め方",
+      "translation": "طريقة المتابعة"
+    },
+    {
+      "source": "2. 1つ選ぶ",
+      "translation": "2. اختيار تطبيق واحد"
+    },
+    {
+      "source": "3. コピーを取る",
+      "translation": "3. أخذ نسخة"
+    },
+    {
+      "source": "4. アレンジする",
+      "translation": "4. التخصيص"
+    },
+    {
+      "source": "5. APKを作る",
+      "translation": "5. إنشاء ملف APK"
+    },
+    {
+      "source": "6. 名前を変える",
+      "translation": "6. تغيير الاسم"
+    },
+    {
+      "source": "7. 提出する",
+      "translation": "7. التسليم"
+    },
+    {
+      "source": "番号は、下の見出しの番号と同じです。選ぶアプリは1つなので、2から7までを上から順に1回ずつ行えば終わります。",
+      "translation": "الأرقام هي نفسها أرقام العناوين أدناه. ولأنك تختار تطبيقا واحدا فقط، تنتهي بتنفيذ الخطوات من 2 إلى 7 مرة واحدة بالترتيب من الأعلى."
+    },
+    {
+      "source": "完成プロジェクト（見本）をそのまま出しても、提出にはなりません",
+      "translation": "تسليم المشروع المكتمل (المثال) كما هو لا يعد تسليما"
+    },
+    {
+      "source": "教材のフォルダの <code>samples</code> に入っている完成プロジェクトは、先生が作った見本です。提出するのは、<strong>自分で作ったプロジェクトにアレンジを加えたもの</strong>です。見本をそのままAPKにして出しても、提出として数えません。",
+      "translation": "المشاريع المكتملة الموجودة في مجلد <code>samples</code> داخل مجلد المواد التعليمية هي أمثلة أعدها المعلم. ما تسلّمه هو <strong>مشروع أنشأته بنفسك وأضفت إليه تخصيصك</strong>. تحويل المثال كما هو إلى APK وتسليمه لا يحتسب تسليما."
+    },
+    {
+      "source": "2. アプリを1つ選ぶ",
+      "translation": "2. اختيار تطبيق واحد"
+    },
+    {
+      "source": "Finderで <strong>書類 → Kotlin</strong> を開きます。この授業で自分が作ったプロジェクトのフォルダが並んでいます。この中から1つ選びます。",
+      "translation": "في Finder، افتح <strong>書類 → Kotlin</strong> (المستندات ← Kotlin). ستجد فيه مجلدات المشاريع التي أنشأتها في هذا المقرر. اختر واحدا منها."
+    },
+    {
+      "source": "この教材には、<code>A01HelloAndroid</code>・<code>A02CalcGame</code>・<code>A03GithubSearch</code>・<code>A04FunnyCamera</code> の教科書が入っています。この4つのうち、自分で作って完成させたアプリが候補です。提出時期までに自分で作ったアプリから選びます。",
+      "translation": "تتضمن هذه المواد التعليمية الكتب المدرسية لكل من <code>A01HelloAndroid</code> و<code>A02CalcGame</code> و<code>A03GithubSearch</code> و<code>A04FunnyCamera</code>. من بين هذه الأربعة، التطبيقات التي أنشأتها وأكملتها بنفسك هي المرشحة. اختر من التطبيقات التي أنشأتها بنفسك حتى موعد التسليم."
+    },
+    {
+      "source": "選べるのは、<strong>後半のAndroidの単元で、Android Studio で作ったプロジェクト</strong>です。どの単元のものでも構いません。気に入っているもの、もっと変えてみたいものを選んでください。",
+      "translation": "يمكنك اختيار <strong>مشروع أنشأته في Android Studio في وحدات Android في النصف الثاني</strong>. لا يهم من أي وحدة. اختر ما يعجبك، أو ما تريد تغييره أكثر."
+    },
+    {
+      "source": "前半の <code>K01HelloKotlin</code> は選べません",
+      "translation": "لا يمكنك اختيار <code>K01HelloKotlin</code> من النصف الأول"
+    },
+    {
+      "source": "前半の単元で IntelliJ IDEA を使って作った <code>K01HelloKotlin</code> は、結果を文字で出すコンソールのプログラムです。スマートフォンにインストールするアプリではないので、<strong>APKを作る仕組みがありません</strong>。提出課題の対象は、Android Studio で作ったプロジェクトだけです。",
+      "translation": "<code>K01HelloKotlin</code> الذي أنشأته باستخدام IntelliJ IDEA في وحدة النصف الأول برنامج لوحدة التحكم يعرض نتائجه نصا. وهو ليس تطبيقا يثبّت على الهاتف الذكي، لذلك <strong>لا توجد فيه آلية لإنشاء APK</strong>. لا يقبل في الواجب إلا المشاريع التي أنشئت في Android Studio."
+    },
+    {
+      "source": "<code>samples</code> フォルダの中のものは、選べません",
+      "translation": "لا يمكنك اختيار ما في مجلد <code>samples</code>"
+    },
+    {
+      "source": "教材のフォルダの <code>samples</code> に入っているのは、先生が作った完成プロジェクト（見本）です。選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。",
+      "translation": "ما في مجلد <code>samples</code> داخل مجلد المواد التعليمية هو مشاريع مكتملة (أمثلة) أعدها المعلم. ما تختاره هو مشروع أنشأته بنفسك، موجود مباشرة داخل <strong>書類 → Kotlin</strong> (المستندات ← Kotlin)."
+    },
+    {
+      "source": "最後まで作れていない単元も、教科書を見ながら完成させれば選べます。選べるものが1つもないときは、先生に相談してください。",
+      "translation": "حتى الوحدة التي لم تكملها يمكنك اختيارها إذا أكملتها بالرجوع إلى الكتاب المدرسي. وإذا لم يكن لديك أي شيء يمكنك اختياره، فاستشر المعلم."
+    },
+    {
+      "source": "3. アレンジの前に、コピーを取っておく",
+      "translation": "3. أخذ نسخة قبل التخصيص"
+    },
+    {
+      "source": "アレンジを始めると、どこを変えたか分からなくなったり、アプリが動かなくなったりすることがあります。そうなっても<strong>元に戻せるように</strong>、先にプロジェクトをまるごとコピーしておきます。",
+      "translation": "عندما تبدأ التخصيص، قد لا تعرف ما الذي غيّرته، أو قد يتوقف التطبيق عن العمل. ولتتمكن من <strong>العودة إلى ما كان</strong> حتى في هذه الحالة، انسخ المشروع كاملا أولا."
+    },
+    {
+      "source": "ここでは、選んだプロジェクトの名前を <code>A01HelloAndroid</code> として説明します。自分が選んだプロジェクトの名前に読み替えてください。",
+      "translation": "نشرح هنا باعتبار أن اسم المشروع الذي اخترته هو <code>A01HelloAndroid</code>. استبدله باسم المشروع الذي اخترته."
+    },
+    {
+      "source": "Android Studioで、そのプロジェクトのウィンドウを閉じます。",
+      "translation": "في Android Studio، أغلق نافذة ذلك المشروع."
+    },
+    {
+      "source": "Finderで <strong>書類 → Kotlin</strong> を開きます。",
+      "translation": "في Finder، افتح <strong>書類 → Kotlin</strong> (المستندات ← Kotlin)."
+    },
+    {
+      "source": "アレンジするプロジェクトのフォルダ（<code>A01HelloAndroid</code>）を右クリックします。",
+      "translation": "انقر بزر الفأرة الأيمن على مجلد المشروع الذي ستخصّصه (<code>A01HelloAndroid</code>)."
+    },
+    {
+      "source": "出てきたメニューから <strong>複製</strong> を選びます。",
+      "translation": "اختر <strong>複製</strong> (تكرار) من القائمة التي تظهر."
     },
     {
       "source": "成功の目印",
       "translation": "ما يجب أن تراه"
     },
     {
+      "source": "同じ場所に <code>A01HelloAndroidのコピー</code> というフォルダができている。",
+      "translation": "يوجد في المكان نفسه مجلد باسم <code>A01HelloAndroidのコピー</code> (نسخة A01HelloAndroid)."
+    },
+    {
+      "source": "コピーのほうは、<strong>開かずにそのまま置いておきます。</strong>アレンジするのは、元の名前のほう（<code>A01HelloAndroid</code>）です。",
+      "translation": "<strong>اترك النسخة كما هي دون فتحها.</strong> ما ستخصّصه هو المجلد ذو الاسم الأصلي (<code>A01HelloAndroid</code>)."
+    },
+    {
+      "source": "コピーに時間がかかることがあります",
+      "translation": "قد يستغرق النسخ بعض الوقت"
+    },
+    {
+      "source": "Androidのプロジェクトには、ビルドのときに作られたファイルが入っています。そのぶんフォルダが大きいので、複製に少し時間がかかります。終わるまで待ってください。",
+      "translation": "يحتوي مشروع Android على ملفات أنشئت أثناء البناء. لذلك يكون المجلد كبيرا، ويستغرق تكراره بعض الوقت. انتظر حتى ينتهي."
+    },
+    {
+      "source": "元に戻したいとき",
+      "translation": "إذا أردت العودة إلى الحالة السابقة"
+    },
+    {
+      "source": "アレンジの途中で動かなくなり、直せなくなったら、コピーからやり直せます。",
+      "translation": "إذا توقف التطبيق عن العمل أثناء التخصيص ولم تستطع إصلاحه، فيمكنك البدء من جديد من النسخة."
+    },
+    {
+      "source": "動かなくなったほうのフォルダを1回クリックして選び、<kbd>Enter</kbd> を押します。名前を変えられるようになるので、<code>A01HelloAndroid_old</code> に変えます。",
+      "translation": "انقر مرة واحدة على مجلد المشروع الذي توقف عن العمل لتحديده، ثم اضغط <kbd>Enter</kbd>. يصبح الاسم قابلا للتعديل، فغيّره إلى <code>A01HelloAndroid_old</code>."
+    },
+    {
+      "source": "同じように、<code>A01HelloAndroidのコピー</code> の名前を <code>A01HelloAndroid</code> に変えます。",
+      "translation": "بالطريقة نفسها، غيّر اسم <code>A01HelloAndroidのコピー</code> (نسخة A01HelloAndroid) إلى <code>A01HelloAndroid</code>."
+    },
+    {
+      "source": "Android Studioの <strong>Open</strong> から <code>A01HelloAndroid</code> を開き直します。",
+      "translation": "أعد فتح <code>A01HelloAndroid</code> من <strong>Open</strong> في Android Studio."
+    },
+    {
+      "source": "もう一度アレンジを始める前に、上の「複製」の手順で、コピーを取り直します。",
+      "translation": "قبل أن تبدأ التخصيص مرة أخرى، خذ نسخة جديدة بخطوات 「複製」 (تكرار) أعلاه."
+    },
+    {
+      "source": "動かなくなったほうは、消さずに名前を変えるだけにしておくと、あとで見比べられます。",
+      "translation": "إذا اكتفيت بتغيير اسم المشروع الذي توقف عن العمل دون حذفه، فيمكنك مقارنة الاثنين لاحقا."
+    },
+    {
+      "source": "<strong>どこを、どれだけ変えるかは自由です。</strong>「何か所以上」という決まりはありません。文字の色を1か所変えるだけでも、アレンジです。JavaとSwiftを書いてきた人なら、処理そのものを足すところまでやっても構いません。下の表は、上から下へいくほど手が込んだものになっています。",
+      "translation": "<strong>أنت حر في اختيار ما تغيّره ومقدار التغيير.</strong> لا توجد قاعدة مثل «عدد أدنى من المواضع». تغيير لون النص في موضع واحد فقط يعدّ تخصيصا. وإذا كنت قد كتبت Java وSwift، فيمكنك أن تصل إلى حد إضافة معالجة جديدة. في الجدول أدناه، تزداد التغييرات تعقيدا كلما نزلت من الأعلى إلى الأسفل."
+    },
+    {
+      "source": "変えられるものの例",
+      "translation": "أمثلة على ما يمكنك تغييره"
+    },
+    {
+      "source": "変えるもの",
+      "translation": "ما تغيّره"
+    },
+    {
+      "source": "変える場所",
+      "translation": "أين تغيّره"
+    },
+    {
+      "source": "書き方の例",
+      "translation": "مثال على الكتابة"
+    },
+    {
+      "source": "文字の色",
+      "translation": "لون النص"
+    },
+    {
+      "source": "<code>activity_main.xml</code> の、文字を出す部品（<code>TextView</code> など）",
+      "translation": "عنصر الواجهة الذي يعرض النص في <code>activity_main.xml</code> (مثل <code>TextView</code>)"
+    },
+    {
+      "source": "画面の背景の色",
+      "translation": "لون خلفية الشاشة"
+    },
+    {
+      "source": "<code>activity_main.xml</code> の、いちばん外側の部品",
+      "translation": "عنصر الواجهة الموجود في أقصى الخارج في <code>activity_main.xml</code>"
+    },
+    {
+      "source": "ボタンの色",
+      "translation": "لون الزر"
+    },
+    {
+      "source": "<code>activity_main.xml</code> の <code>Button</code>",
+      "translation": "<code>Button</code> في <code>activity_main.xml</code>"
+    },
+    {
+      "source": "ボタンや見出しの文言",
+      "translation": "نص الأزرار والعناوين"
+    },
+    {
+      "source": "<code>activity_main.xml</code> の <code>android:text</code>",
+      "translation": "<code>android:text</code> في <code>activity_main.xml</code>"
+    },
+    {
+      "source": "画面に出すメッセージ",
+      "translation": "الرسائل التي تظهر على الشاشة"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> の、<code>\" \"</code> で囲まれた文字列",
+      "translation": "السلاسل النصية المحاطة بـ <code>\" \"</code> في <code>MainActivity.kt</code>"
+    },
+    {
+      "source": "数値",
+      "translation": "الأرقام"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> の中の数字",
+      "translation": "الأرقام داخل <code>MainActivity.kt</code>"
+    },
+    {
+      "source": "問題の数、待ち時間、増やす量など",
+      "translation": "عدد الأسئلة، ومدة الانتظار، ومقدار الزيادة، وغير ذلك"
+    },
+    {
+      "source": "処理を足す",
+      "translation": "إضافة معالجة"
+    },
+    {
+      "source": "押した回数を数える、値によって出す文字を変える、ボタンをもう1つ足して動かす、など",
+      "translation": "عدّ مرات الضغط، أو تغيير النص المعروض بحسب القيمة، أو إضافة زر آخر وجعله يعمل، وغير ذلك"
+    },
+    {
+      "source": "これは例です。表にないところを変えても構いません。",
+      "translation": "هذه مجرد أمثلة. يمكنك تغيير أشياء غير موجودة في الجدول."
+    },
+    {
+      "source": "ボタンの色は <code>android:background</code> では変わりません",
+      "translation": "لا يتغيّر لون الزر باستخدام <code>android:background</code>"
+    },
+    {
+      "source": "ボタンに <code>android:background</code> を書いても、色は変わらず、角の丸みだけがなくなります。ボタンの色を変えるときは、<code>android:backgroundTint</code> を使います。",
+      "translation": "إذا كتبت <code>android:background</code> للزر، فلن يتغيّر اللون، بل تختفي استدارة الزوايا فقط. لتغيير لون الزر، استخدم <code>android:backgroundTint</code>."
+    },
+    {
+      "source": "変えると動かなくなりやすいところ",
+      "translation": "مواضع يسهل أن يتعطل التطبيق عند تغييرها"
+    },
+    {
+      "source": "次の3つは、<strong>変えてはいけないわけではありません。</strong>ただ、1か所変えると、ほかの場所も合わせて直す必要があり、ビルドが通らなくなったり、アプリが起動しなくなったりすることがあります。",
+      "translation": "العناصر الثلاثة التالية <strong>ليست ممنوعة من التغيير.</strong> لكن إذا غيّرت موضعا واحدا، فستحتاج إلى تعديل مواضع أخرى لتتوافق معه، وقد يفشل البناء أو لا يبدأ التطبيق."
+    },
+    {
+      "source": "クラスの名前（<code>MainActivity</code> など）",
+      "translation": "أسماء الأصناف (مثل <code>MainActivity</code>)"
+    },
+    {
+      "source": "パッケージ名（<code>jp.ac.jec.</code> で始まる名前）",
+      "translation": "اسم الحزمة (الاسم الذي يبدأ بـ <code>jp.ac.jec.</code>)"
+    },
+    {
+      "source": "<code>AndroidManifest.xml</code> の中身",
+      "translation": "محتوى <code>AndroidManifest.xml</code>"
+    },
+    {
+      "source": "変えてみたいときは、手順3のコピーがあることを確かめてから始めてください。",
+      "translation": "إذا أردت تجربة تغييرها، فتحقق أولا من وجود النسخة التي أخذتها في الخطوة 3، ثم ابدأ."
+    },
+    {
+      "source": "例：ボタンの文言と、メッセージを変える",
+      "translation": "مثال: تغيير نص الزر والرسالة"
+    },
+    {
+      "source": "やり方を1つ示します。ボタンに出ている文字と、ボタンを押したときに出るメッセージを、両方変えます。",
+      "translation": "نعرض هنا طريقة واحدة. ستغيّر كلا من النص الظاهر على الزر والرسالة التي تظهر عند الضغط عليه."
+    },
+    {
+      "source": "まず、ボタンの文言です。<code>app → res → layout → activity_main.xml</code> を開き、エディタ右上の <strong>Code</strong> を選んで、変えたい <code>Button</code> を探します。",
+      "translation": "أولا، نص الزر. افتح <code>app → res → layout → activity_main.xml</code>، ثم اختر <strong>Code</strong> في أعلى يمين المحرر، وابحث عن <code>Button</code> الذي تريد تغييره."
+    },
+    {
+      "source": "activity_main.xml · 変える前",
+      "translation": "activity_main.xml · قبل التغيير"
+    },
+    {
+      "source": "activity_main.xml · 変えたあと",
+      "translation": "activity_main.xml · بعد التغيير"
+    },
+    {
+      "source": "<code>/&gt;</code> は「この部品の設定はここまで」という印です。<code>\" \"</code> の中だけを書き換えれば、ほかの行は触りません。",
+      "translation": "<code>/&gt;</code> علامة تعني «إعدادات هذا العنصر تنتهي هنا». أعد كتابة ما بين <code>\" \"</code> فقط، ولا تلمس الأسطر الأخرى."
+    },
+    {
+      "source": "次に、メッセージです。<code>app → java → jp.ac.jec.（プロジェクトごとの名前） → MainActivity.kt</code> を開きます。",
+      "translation": "ثانيا، الرسالة. افتح <code>app → java → jp.ac.jec.（プロジェクトごとの名前） → MainActivity.kt</code> (プロジェクトごとの名前 تعني الاسم الخاص بكل مشروع)."
+    },
+    {
+      "source": "MainActivity.kt · 変える前",
+      "translation": "MainActivity.kt · قبل التغيير"
+    },
+    {
+      "source": "MainActivity.kt · 変えたあと",
+      "translation": "MainActivity.kt · بعد التغيير"
+    },
+    {
+      "source": "変えたのは <code>\" \"</code> の中の文字だけです。<code>R.id.button</code> や変数の名前は、自分のプロジェクトに合わせて読み替えてください。行の並びが自分のコードと少し違っていても、<code>\" \"</code> の中を書き換えるところは同じです。",
+      "translation": "لم يتغيّر سوى النص الموجود بين <code>\" \"</code>. استبدل <code>R.id.button</code> وأسماء المتغيّرات بما يناسب مشروعك. حتى لو اختلف ترتيب الأسطر قليلا عن شيفرتك، فإن ما تعيد كتابته بين <code>\" \"</code> هو نفسه."
+    },
+    {
+      "source": "もう一歩：押した回数を数える",
+      "translation": "خطوة إضافية: عدّ مرات الضغط"
+    },
+    {
+      "source": "処理を足すアレンジの例です。押すたびに1ずつ増える数を持たせ、その数をメッセージに入れます。",
+      "translation": "هذا مثال على تخصيص يضيف معالجة. احتفظ بعدد يزيد بمقدار 1 مع كل ضغطة، وأدرج هذا العدد في الرسالة."
+    },
+    {
+      "source": "まず、<code>MainActivity</code> クラスの中、<code>onCreate</code> の手前に1行足します。",
+      "translation": "أولا، أضف سطرا واحدا داخل الصنف <code>MainActivity</code>، قبل <code>onCreate</code> مباشرة."
+    },
+    {
+      "source": "MainActivity.kt · クラスの中に足す",
+      "translation": "MainActivity.kt · أضف داخل الصنف"
+    },
+    {
+      "source": "Javaの <code>private int tapCount = 0;</code>、Swiftの <code>private var tapCount = 0</code> と同じものです。Kotlinでは、書き換える変数を <code>var</code>、書き換えない変数を <code>val</code> で宣言します。型は <code>0</code> から推論されるので <code>Int</code> と書く必要はありません。",
+      "translation": "هذا يعادل <code>private int tapCount = 0;</code> في Java و<code>private var tapCount = 0</code> في Swift. في Kotlin، تعلن المتغيّر الذي ستعيد إسناده بـ <code>var</code>، والمتغيّر الذي لن تعيد إسناده بـ <code>val</code>. ويستنتج النوع من <code>0</code>، فلا حاجة إلى كتابة <code>Int</code>."
+    },
+    {
+      "source": "次に、ボタンを押したときの処理を2行にします。",
+      "translation": "ثانيا، اجعل المعالجة التي تنفّذ عند الضغط على الزر سطرين."
+    },
+    {
+      "source": "<code>\"${tapCount}回目\"</code> は、文字列の中に値を差し込む書き方です。Swiftの <code>\"\\(tapCount)回目\"</code> と同じ役目で、Javaの <code>tapCount + \"回目\"</code> のように <code>+</code> でつなぐ必要はありません。",
+      "translation": "<code>\"${tapCount}回目\"</code> (أي «المرة رقم …») هي طريقة إدراج قيمة داخل سلسلة نصية. وهي تؤدي الدور نفسه الذي يؤديه <code>\"\\(tapCount)回目\"</code> في Swift، ولا حاجة إلى الربط بـ <code>+</code> كما في <code>tapCount + \"回目\"</code> في Java."
+    },
+    {
+      "source": "変えたら、すぐRunして確かめる",
+      "translation": "بعد كل تغيير، اضغط Run فورا وتحقق"
+    },
+    {
+      "source": "1か所変えたら <strong>Run ▶</strong> を押し、エミュレータで見た目と動きを確かめます。使うエミュレータは、授業で作った <code>jec_25cm_kotlin_Pixel 9a</code> です。まとめて変えてからRunすると、動かなくなったときに、どこが原因か分からなくなります。",
+      "translation": "بعد تغيير موضع واحد، اضغط <strong>Run ▶</strong> وتحقق من الشكل والسلوك على المحاكي. المحاكي الذي تستخدمه هو <code>jec_25cm_kotlin_Pixel 9a</code> الذي أنشأته في الحصة. إذا غيّرت عدة مواضع دفعة واحدة ثم ضغطت Run، فلن تعرف سبب المشكلة عندما يتوقف التطبيق عن العمل."
+    },
+    {
+      "source": "アレンジしたところが、エミュレータの画面で確かめられる。アプリが、アレンジの前と同じように最後まで動く。",
+      "translation": "تظهر المواضع التي خصّصتها على شاشة المحاكي. ويعمل التطبيق حتى النهاية كما كان قبل التخصيص."
+    },
+    {
+      "source": "<strong>APK</strong>は、Androidにアプリをインストールするためのファイルです。アプリのコードと画像と設定が、1つのファイルにまとまっています。提出するのは、このファイルです。",
+      "translation": "<strong>APK</strong> هو ملف لتثبيت التطبيق على Android. يجمع شيفرة التطبيق وصوره وإعداداته في ملف واحد. وهذا هو الملف الذي تسلّمه."
+    },
+    {
+      "source": "用意するもの",
+      "translation": "ما تحتاج إلى تجهيزه"
+    },
+    {
+      "source": "アレンジが終わり、エミュレータでの動作確認が済んだ、自分のプロジェクト。",
+      "translation": "مشروعك الذي انتهيت من تخصيصه وتحققت من عمله على المحاكي."
+    },
+    {
+      "source": "作るのはデバッグ用のAPKです。署名は要りません",
+      "translation": "ما تنشئه هو ملف APK لتصحيح الأخطاء. لا حاجة إلى التوقيع"
+    },
+    {
+      "source": "APKには、開発中に使う<strong>デバッグ用</strong>と、ストアで配るための<strong>リリース用</strong>があります。提出するのはデバッグ用です。デバッグ用には Android Studio が自動で印を付けるので、<strong>署名（signing）の作業は行いません</strong>。メニューにある <strong>Generate Signed App Bundle / APK</strong> は、この授業では使いません。",
+      "translation": "لملف APK نوعان: <strong>نسخة تصحيح الأخطاء</strong> (debug) التي تستخدم أثناء التطوير، و<strong>نسخة الإصدار</strong> (release) التي توزّع عبر المتجر. ما تسلّمه هو نسخة تصحيح الأخطاء. ويضع Android Studio علامة تلقائية على نسخة تصحيح الأخطاء، لذلك <strong>لن تقوم بأي عملية توقيع (signing)</strong>. ولن تستخدم في هذا المقرر <strong>Generate Signed App Bundle / APK</strong> الموجود في القائمة."
+    },
+    {
+      "source": "手順は次のとおりです。Android Studio は、授業の基準である <strong>Panda 2</strong> のメニュー名で書いています。",
+      "translation": "الخطوات كما يلي. أسماء قوائم Android Studio مكتوبة وفق <strong>Panda 2</strong>، وهو الإصدار المعتمد في المقرر."
+    },
+    {
+      "source": "提出するプロジェクトが開いていることを確認します。ほかのプロジェクトのウィンドウが開いているときは、閉じておくと間違えません。",
+      "translation": "تحقق من أن المشروع الذي ستسلّمه مفتوح. إذا كانت نوافذ مشاريع أخرى مفتوحة، فأغلقها حتى لا تخلط بينها."
+    },
+    {
+      "source": "<strong>Run ▶</strong> を押し、アレンジしたところを含めて、アプリが動くことを確かめます。",
+      "translation": "اضغط <strong>Run ▶</strong> وتحقق من أن التطبيق يعمل، بما في ذلك المواضع التي خصّصتها."
+    },
+    {
+      "source": "上の <strong>Build</strong> メニューを開きます。",
+      "translation": "افتح قائمة <strong>Build</strong> في الأعلى."
+    },
+    {
+      "source": "<strong>Build App Bundle(s) / APK(s)</strong> にカーソルを合わせ、出てきた中から <strong>Build APK(s)</strong> を選びます。",
+      "translation": "ضع المؤشر على <strong>Build App Bundle(s) / APK(s)</strong>، ثم اختر <strong>Build APK(s)</strong> مما يظهر."
+    },
+    {
+      "source": "画面の下に進み具合が出ます。終わるまで待ちます。はじめの1回は数分かかることがあります。",
+      "translation": "يظهر التقدم في أسفل الشاشة. انتظر حتى ينتهي. قد تستغرق المرة الأولى بضع دقائق."
+    },
+    {
+      "source": "右下に完了の通知が出ます。<strong>locate</strong> をクリックすると、できたファイルの場所がFinderで開きます。",
+      "translation": "يظهر إشعار الاكتمال في أسفل اليمين. انقر <strong>locate</strong> ليفتح موقع الملف الناتج في Finder."
+    },
+    {
+      "source": "右下の通知に <code>APK(s) generated successfully</code> のような文が出て、<strong>locate</strong> のリンクがある。",
+      "translation": "يظهر في الإشعار في أسفل اليمين نص مثل <code>APK(s) generated successfully</code>، ويوجد فيه رابط <strong>locate</strong>."
+    },
+    {
+      "source": "Runを押す操作とは別です",
+      "translation": "هذا يختلف عن الضغط على Run"
+    },
+    {
+      "source": "<strong>Run ▶</strong> は、アプリをエミュレータに入れて動かす操作です。提出するファイルは作られません。提出するときは、かならず <strong>Build</strong> メニューからAPKを作ります。項目が見つからない場合は、メニューを開いたまま先生に見せてください。",
+      "translation": "<strong>Run ▶</strong> عملية تثبّت التطبيق على المحاكي وتشغّله. ولا تنشئ الملف الذي تسلّمه. عند التسليم، أنشئ ملف APK دائما من قائمة <strong>Build</strong>. إذا لم تجد العنصر في القائمة، فاترك القائمة مفتوحة واعرضها على المعلم."
+    },
+    {
+      "source": "教員と一緒に：メニューが見つからない場合",
+      "translation": "مع المعلم: إذا لم تجد عنصر القائمة"
+    },
+    {
+      "source": "プロジェクト直下のTerminalで、次のコマンドでもデバッグ用のAPKを作れます。実行する場所に <code>gradlew</code> があることを確認します。",
+      "translation": "يمكنك أيضا إنشاء ملف APK لتصحيح الأخطاء بالأمر التالي في Terminal في المجلد الرئيسي للمشروع. تحقق من وجود <code>gradlew</code> في المكان الذي تنفّذ فيه الأمر."
+    },
+    {
+      "source": "Terminal · プロジェクト直下",
+      "translation": "Terminal · المجلد الرئيسي للمشروع"
+    },
+    {
+      "source": "<code>BUILD SUCCESSFUL</code> と出れば成功です。できるファイルの場所は、メニューから作ったときと同じです。",
+      "translation": "إذا ظهر <code>BUILD SUCCESSFUL</code>، فقد نجح الأمر. وموقع الملف الناتج هو نفسه كما عند الإنشاء من القائمة."
+    },
+    {
+      "source": "6. ファイルを見つけて、名前を変える",
+      "translation": "6. العثور على الملف وتغيير اسمه"
+    },
+    {
+      "source": "APKのファイル名は、どのアプリでも同じです",
+      "translation": "اسم ملف APK هو نفسه لكل التطبيقات"
+    },
+    {
+      "source": "できあがるファイルは、どのプロジェクトでも <code>app-debug.apk</code> という名前になります。この名前のままでは、提出先の一覧で、誰のどのアプリなのか分かりません。<strong>作ったらすぐ名前を変えます。</strong>",
+      "translation": "يكون اسم الملف الناتج <code>app-debug.apk</code> في كل المشاريع. وبهذا الاسم، لا يمكن معرفة صاحب التطبيق ولا أي تطبيق هو في قائمة التسليم. <strong>غيّر الاسم فور إنشائه.</strong>"
+    },
+    {
+      "source": "ファイルを見つける",
+      "translation": "العثور على الملف"
+    },
+    {
+      "source": "手順5の完了通知で <strong>locate</strong> をクリックすると、Finderでその場所が開きます。通知を消してしまったときは、Finderで <strong>書類 → Kotlin → 自分のプロジェクト名</strong> の順に開き、そこから <strong>app → build → outputs → apk → debug</strong> の順に進みます。",
+      "translation": "انقر <strong>locate</strong> في إشعار الاكتمال في الخطوة 5 ليفتح ذلك الموقع في Finder. إذا أغلقت الإشعار، فافتح في Finder <strong>書類 → Kotlin → 自分のプロジェクト名</strong> (المستندات ← Kotlin ← اسم مشروعك) بهذا الترتيب، ثم تابع منه إلى <strong>app → build → outputs → apk → debug</strong> بهذا الترتيب."
+    },
+    {
+      "source": "<code>A01HelloAndroid</code> の場合の保存場所",
+      "translation": "موقع الحفظ في حالة <code>A01HelloAndroid</code>"
+    },
+    {
+      "source": "<code>app-debug.apk</code> があることを確認します。",
+      "translation": "تحقق من وجود <code>app-debug.apk</code>."
+    },
+    {
+      "source": "Finderの更新日時を見て、今作ったファイルか確認します。日付が古いときは、別のプロジェクトのものです。",
+      "translation": "انظر إلى تاريخ التعديل في Finder، وتحقق من أنه الملف الذي أنشأته للتو. إذا كان التاريخ قديما، فالملف يخص مشروعا آخر."
+    },
+    {
+      "source": "<code>app-debug.apk</code> を選んで <kbd>⌘ C</kbd> を押し、<strong>書類</strong> など分かりやすい場所を開いて <kbd>⌘ V</kbd> を押します。コピーなので、元の場所のファイルは残ります。",
+      "translation": "حدّد <code>app-debug.apk</code> واضغط <kbd>⌘ C</kbd>، ثم افتح مكانا يسهل العثور عليه مثل <strong>書類</strong> (المستندات) واضغط <kbd>⌘ V</kbd>. ولأنها نسخة، يبقى الملف في مكانه الأصلي."
+    },
+    {
+      "source": "同じフォルダに <code>output-metadata.json</code> もあります",
+      "translation": "يوجد في المجلد نفسه أيضا <code>output-metadata.json</code>"
+    },
+    {
+      "source": "ビルドの情報が書かれたファイルで、提出には使いません。提出するのは、名前が <code>.apk</code> で終わるファイルだけです。",
+      "translation": "هو ملف يحتوي على معلومات البناء، ولا يستخدم في التسليم. لا تسلّم إلا الملف الذي ينتهي اسمه بـ <code>.apk</code>."
+    },
+    {
+      "source": "名前を変える",
+      "translation": "تغيير الاسم"
+    },
+    {
+      "source": "コピーしたファイルを1回クリックして選び、<kbd>Enter</kbd> を押すと、名前を変えられます。次の形にします。",
+      "translation": "انقر مرة واحدة على الملف الذي نسخته لتحديده، ثم اضغط <kbd>Enter</kbd> ليصبح الاسم قابلا للتعديل. اجعله بالشكل التالي."
+    },
+    {
+      "source": "提出用のファイル名の形",
+      "translation": "شكل اسم الملف للتسليم"
+    },
+    {
+      "source": "<code>学籍番号</code>・<code>氏名</code>・<code>プロジェクト名</code> は、それぞれ自分のものに置き換えます。区切りには半角の <code>_</code> を使い、<code>.apk</code> の部分はそのまま残します。<strong>ファイル名の付け方は、先生の案内に従ってください。</strong>案内が別の形なら、そちらを優先します。",
+      "translation": "استبدل <code>学籍番号</code> (رقم الطالب) و<code>氏名</code> (الاسم الكامل) و<code>プロジェクト名</code> (اسم المشروع) بما يخصك. استخدم <code>_</code> بنصف العرض (半角) فاصلا بينها، واترك الجزء <code>.apk</code> كما هو. <strong>اتبع تعليمات المعلم في تسمية الملف.</strong> إذا كانت التعليمات بشكل مختلف، فالأولوية لها."
+    },
+    {
+      "source": "名前を変えたAPKが1つあり、ファイル名から、自分のものだと分かる。",
+      "translation": "يوجد ملف APK واحد غيّرت اسمه، ويمكن معرفة أنه ملفك من اسمه."
+    },
+    {
+      "source": "7. Google Classroomに提出する",
+      "translation": "7. التسليم في Google Classroom"
+    },
+    {
+      "source": "提出先は <strong>Google Classroom</strong> です。この授業の教材も Google Classroom で配られているので、同じクラスを開きます。",
+      "translation": "التسليم يكون في <strong>Google Classroom</strong>. ولأن المواد التعليمية لهذا المقرر توزّع أيضا عبر Google Classroom، فافتح الصف نفسه."
+    },
+    {
+      "source": "ブラウザで Google Classroom を開き、この授業の<strong>クラス</strong>を選びます。",
+      "translation": "افتح Google Classroom في المتصفح، واختر <strong>الصف</strong> الخاص بهذا المقرر."
+    },
+    {
+      "source": "上の <strong>授業</strong> タブを開き、先生が出した<strong>提出課題</strong>をクリックします。",
+      "translation": "افتح علامة التبويب <strong>授業</strong> (الواجبات الدراسية) في الأعلى، ثم انقر <strong>الواجب</strong> الذي نشره المعلم."
+    },
+    {
+      "source": "右側の <strong>追加または作成</strong> をクリックし、<strong>ファイル</strong> を選びます。",
+      "translation": "انقر <strong>追加または作成</strong> (إضافة أو إنشاء) على اليمين، ثم اختر <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "手順6で名前を変えたAPKを1つ選んで、アップロードします。",
+      "translation": "اختر ملف APK الواحد الذي غيّرت اسمه في الخطوة 6، ثم ارفعه."
+    },
+    {
+      "source": "アップロードしたファイル名が <code>学籍番号_氏名_プロジェクト名.apk</code> の形になっていることを確認します。違っていたら、いったん削除して、名前を直してから入れ直します。",
+      "translation": "تحقق من أن اسم الملف الذي رفعته بالشكل <code>学籍番号_氏名_プロジェクト名.apk</code>. إذا كان مختلفا، فاحذفه، وصحّح الاسم، ثم أضفه من جديد."
+    },
+    {
+      "source": "<strong>提出</strong> をクリックし、表示が <strong>提出済み</strong> に変わったことを確認します。",
+      "translation": "انقر <strong>提出</strong> (تسليم)، وتحقق من أن الحالة تغيّرت إلى <strong>提出済み</strong> (تم التسليم)."
+    },
+    {
+      "source": "アップロードしただけでは提出になりません",
+      "translation": "الرفع وحده لا يعني التسليم"
+    },
+    {
+      "source": "ファイルを追加した状態と、提出した状態は別です。<strong>提出</strong> を押して、表示が <strong>提出済み</strong> に変わるところまで進めてください。押し忘れていると、先生の画面では「未提出」のままです。",
+      "translation": "حالة إضافة الملف وحالة التسليم مختلفتان. اضغط <strong>提出</strong> (تسليم) وتابع حتى تتغيّر الحالة إلى <strong>提出済み</strong> (تم التسليم). إذا نسيت الضغط، فستبقى الحالة 「未提出」 (لم يتم التسليم) على شاشة المعلم."
+    },
+    {
+      "source": "課題の画面に自分のAPKが1つ表示され、<strong>提出済み</strong> になっている。",
+      "translation": "يظهر ملف APK الخاص بك في شاشة الواجب، والحالة <strong>提出済み</strong> (تم التسليم)."
+    },
+    {
+      "source": "提出したあとでアプリを直したときは、<strong>動作確認 → APKを作り直す → 名前を変える</strong> の順でやり直します。Google Classroomでは <strong>提出を取り消す</strong> をクリックすると、ファイルを入れ替えて出し直せます。締め切りを過ぎている場合は、先に先生に相談してください。",
+      "translation": "إذا أصلحت التطبيق بعد التسليم، فأعد الخطوات بالترتيب: <strong>التحقق من عمل التطبيق ← إعادة إنشاء ملف APK ← تغيير الاسم</strong>. في Google Classroom، انقر <strong>提出を取り消す</strong> (إلغاء الإرسال) لتتمكن من استبدال الملف وتسليمه من جديد. إذا كان الموعد النهائي قد انقضى، فاستشر المعلم أولا."
+    },
+    {
+      "source": "画面の表示がここに書いてあるものと違うときは、その画面のまま先生に見せてください。",
+      "translation": "إذا كان ما يظهر على الشاشة مختلفا عما هو مكتوب هنا، فاترك الشاشة كما هي واعرضها على المعلم."
+    },
+    {
+      "source": "8. うまくいかないとき",
+      "translation": "8. حل المشكلات"
+    },
+    {
+      "source": "起きたこと",
+      "translation": "ما حدث"
+    },
+    {
       "source": "やってみること",
       "translation": "ما تجربه"
+    },
+    {
+      "source": "アレンジしたらエラーが出て、直せない",
+      "translation": "ظهر خطأ بعد التخصيص ولا تستطيع إصلاحه"
+    },
+    {
+      "source": "その画面のまま先生に見せる。やり直すときは、手順3の「元に戻したいとき」を見る。",
+      "translation": "اترك الشاشة كما هي واعرضها على المعلم. وإذا أردت البدء من جديد، فانظر «إذا أردت العودة إلى الحالة السابقة» في الخطوة 3."
+    },
+    {
+      "source": "ボタンの色が変わらない",
+      "translation": "لا يتغيّر لون الزر"
+    },
+    {
+      "source": "<code>android:background</code> ではなく、<code>android:backgroundTint</code> を使う。",
+      "translation": "استخدم <code>android:backgroundTint</code> بدلا من <code>android:background</code>."
+    },
+    {
+      "source": "ビルドが通らない（赤い文字が出る）",
+      "translation": "يفشل البناء (يظهر نص أحمر)"
+    },
+    {
+      "source": "画面の下に出ている赤い文字の中から、ファイル名と行番号を探し、その行を見直す。直せないときは、その画面のまま先生に見せる。",
+      "translation": "ابحث في النص الأحمر الظاهر في أسفل الشاشة عن اسم الملف ورقم السطر، وراجع ذلك السطر. إذا لم تستطع إصلاحه، فاترك الشاشة كما هي واعرضها على المعلم."
+    },
+    {
+      "source": "<strong>Build APK(s)</strong> が見つからない",
+      "translation": "لا تجد <strong>Build APK(s)</strong>"
+    },
+    {
+      "source": "Android Studio の版が違うと、メニュー名が少し違うことがある。手順5の「メニューが見つからない場合」を、先生と一緒に行う。",
+      "translation": "إذا اختلف إصدار Android Studio، فقد تختلف أسماء القوائم قليلا. نفّذ «إذا لم تجد عنصر القائمة» في الخطوة 5 مع المعلم."
+    },
+    {
+      "source": "完了の通知を消してしまい、APKの場所が分からない",
+      "translation": "أغلقت إشعار الاكتمال ولا تعرف مكان ملف APK"
+    },
+    {
+      "source": "Finderで <strong>書類 → Kotlin → 自分のプロジェクト名 → app → build → outputs → apk → debug</strong> の順に開く。",
+      "translation": "افتح في Finder <strong>書類 → Kotlin → 自分のプロジェクト名 → app → build → outputs → apk → debug</strong> بهذا الترتيب (المستندات ← Kotlin ← اسم مشروعك، ثم app → build → outputs → apk → debug)."
+    },
+    {
+      "source": "Android Studio の左の一覧に <code>build</code> フォルダが見えない",
+      "translation": "لا يظهر مجلد <code>build</code> في القائمة على يسار Android Studio"
+    },
+    {
+      "source": "左上の表示の切り替えが <strong>Android</strong> になっている。<strong>Project</strong> に変えると出る。Finderから探しても構わない。",
+      "translation": "مبدّل العرض في أعلى اليسار مضبوط على <strong>Android</strong>. غيّره إلى <strong>Project</strong> ليظهر المجلد. ويمكنك أيضا البحث عنه من Finder."
+    },
+    {
+      "source": "<code>app-debug.apk</code> がない・更新日時が古い",
+      "translation": "<code>app-debug.apk</code> غير موجود، أو تاريخ تعديله قديم"
+    },
+    {
+      "source": "別のプロジェクトを開いたままAPKを作っていないか確認する。提出するプロジェクトを開き直し、手順5からやり直す。",
+      "translation": "تحقق مما إذا كنت قد أنشأت ملف APK ومشروع آخر مفتوح. أعد فتح المشروع الذي ستسلّمه، وأعد الخطوات من الخطوة 5."
+    },
+    {
+      "source": "APKのファイルサイズが小さすぎる気がする",
+      "translation": "يبدو حجم ملف APK صغيرا جدا"
+    },
+    {
+      "source": "デバッグ用のAPKは数MB程度になる。極端に小さいときは、作り直して更新日時を確かめる。",
+      "translation": "يبلغ حجم ملف APK لتصحيح الأخطاء بضعة MB تقريبا. إذا كان صغيرا جدا، فأعد إنشاءه وتحقق من تاريخ التعديل."
+    },
+    {
+      "source": "提出先が分からない",
+      "translation": "لا تعرف أين تسلّم"
+    },
+    {
+      "source": "Google Classroom で、この授業のクラスの <strong>授業</strong> タブを開く（手順は7）。課題が見つからなければ、先生に確認する。",
+      "translation": "في Google Classroom، افتح علامة التبويب <strong>授業</strong> (الواجبات الدراسية) في صف هذا المقرر (الخطوات في 7). إذا لم تجد الواجب، فاسأل المعلم."
+    },
+    {
+      "source": "提出できるアプリが1つもない",
+      "translation": "لا يوجد أي تطبيق يمكنك تسليمه"
+    },
+    {
+      "source": "先生に相談する。",
+      "translation": "استشر المعلم."
+    },
+    {
+      "source": "表にないことが起きたら、その画面のまま先生に見せてください。",
+      "translation": "إذا حدث شيء غير موجود في الجدول، فاترك الشاشة كما هي واعرضها على المعلم."
     },
     {
       "source": "公式資料",
       "translation": "الوثائق الرسمية"
     },
     {
+      "source": "<a1>Android Developers：アプリのビルドと実行</a1>（手順4・手順5）",
+      "translation": "<a1>Android Developers: بناء التطبيق وتشغيله</a1> (الخطوتان 4 و5)"
+    },
+    {
+      "source": "<a1>Android Developers：コマンドラインからアプリをビルドする</a1>（手順5）",
+      "translation": "<a1>Android Developers: بناء التطبيق من سطر الأوامر</a1> (الخطوة 5)"
+    },
+    {
+      "source": "Google Classroom ヘルプ：課題を提出する",
+      "translation": "مساعدة Google Classroom: تسليم واجب"
+    },
+    {
+      "source": "公式資料は、この教材より詳しい代わりに、授業で使わない話も多く含みます。授業中は、まずこの資料と先生の案内を見てください。",
+      "translation": "الوثائق الرسمية أكثر تفصيلا من هذه المواد، لكنها تتناول أيضا موضوعات كثيرة لا نستخدمها في الحصص. أثناء الحصة، ارجع أولا إلى هذا الدليل وإلى تعليمات المعلم."
+    },
+    {
       "source": "← もとのページへ戻る",
       "translation": "→ العودة إلى الصفحة الأصلية"
+    },
+    {
+      "source": "対象：macOS / Android Studio Panda 2 · この資料では画像を使いません。画面の場所は、本文の手順と表でたどります。 · 確認日：2026年9月23日",
+      "translation": "البيئة المستهدفة: macOS / Android Studio Panda 2 · لا يستخدم هذا الدليل صورا. تتبّع مواضع الشاشة من خلال الخطوات والجداول في النص. · آخر تحقق: 23 سبتمبر 2026"
     }
   ]
 }

@@ -15,8 +15,20 @@
       "translation": "الحقل"
     },
     {
+      "source": "変える場所",
+      "translation": "أين تغيّره"
+    },
+    {
+      "source": "起きたこと",
+      "translation": "ما حدث"
+    },
+    {
       "source": "公式資料",
       "translation": "الوثائق الرسمية"
+    },
+    {
+      "source": "Android Studio：プロジェクトの作成",
+      "translation": "Android Studio: إنشاء مشروع"
     }
   ]
 }
