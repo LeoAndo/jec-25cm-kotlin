@@ -279,9 +279,8 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertIn('href="docs/en/common/setup.html"', entrance)
             self.assertIn('Kotlin演習 / Kotlin Programming Exercises', entrance)
             self.assertIn('Open index.html in your browser, then choose English.', instructions)
-            # 2回目以降は、その言語の単元の教科書を直接開ける（#91）。入口と はじめに.txt の両方に置く。
-            self.assertIn('<a href="docs/en/hello-kotlin/index.html">K01 HelloKotlin</a>', entrance)
-            self.assertIn('<a href="docs/hello-kotlin/index.html">K01 HelloKotlin</a>', entrance)
+            # 2回目以降に開く単元の教科書の場所は、はじめに.txt に書く（#91）。入口には置かない（#197）。
+            self.assertNotIn('hello-kotlin/index.html', entrance)
             self.assertIn("  K01 HelloKotlin: docs/en/hello-kotlin/index.html\n", instructions)
             self.assertIn("  A01 HelloAndroid: docs/en/hello-android/index.html\n", instructions)
             self.assertFalse(any('/docs/en/' in name and not name.endswith('.html') for name in names))
@@ -324,12 +323,13 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         # アラビア語は右から左の言語として設定してある（この検査で右から左の出力を必ず通すため）。
         self.assertIn("rtl", [language.get("dir") for language in config["languages"]])
 
-    def test_entrance_and_instructions_list_units_for_every_distributed_language(self):
+    def test_instructions_list_units_and_entrance_lists_only_languages(self):
         """言語ごとの単元の一覧は config/teaching-materials.json から作る（#91）。
 
         英語で読む学生が2回目以降に単元の教科書を開くとき、入口 → 準備ガイド → K01 → サイドバーと
-        たどらずに済むよう、入口の index.html と はじめに.txt に、配布する言語ごとの単元の場所を置く。
+        たどらずに済むよう、はじめに.txt に、配布する言語ごとの単元の場所を置く。
         単元をスクリプトに直書きしないので、設定に足した単元もそのまま並ぶ。
+        入口の index.html には、言語ごとの「ここから始める」だけを置き、単元へのリンクは並べない（#197）。
         """
         self.enable_translation()
         path = self.root / "config/i18n.json"
@@ -356,11 +356,11 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             instructions = archive.read(prefix + "はじめに.txt").decode()
             for code in ["ja", *(language["code"] for language in config["languages"])]:
                 folder = "docs/" if code == "ja" else f"docs/{code}/"
-                # 言語の行の中に、単元が設定の順で並ぶ。
-                item = entrance.split(f'<li lang="{code}">', 1)[1].split("</ul></li>", 1)[0]
-                links = [f'<li><a href="{folder}{slug}/index.html">{number} {label}</a></li>'
-                         for number, label, slug in units]
-                self.assertTrue(item.endswith("<ul>" + "".join(links)), (code, item))
+                # 言語の行は、準備ガイドへのリンク1つだけ。単元の一覧は入れない。
+                item = entrance.split(f'<li lang="{code}">', 1)[1].split("</li>", 1)[0]
+                self.assertEqual(item.count("<a "), 1, (code, item))
+                self.assertIn(f'href="{folder}common/setup.html"', item)
+                self.assertNotIn("<ul>", item)
                 if code != "ja":
                     language = next(item for item in config["languages"] if item["code"] == code)
                     lines = [f"  {number} {label}: {folder}{slug}/index.html" for number, label, slug in units]

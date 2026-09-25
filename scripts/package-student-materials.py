@@ -145,24 +145,15 @@ def add_localized_materials(files):
         if not projects:
             raise ValueError("配布物の入口にするページがありません。")
         start = projects[0]["docs"][0]
-    # 言語ごとに、単元の教科書も直接開けるようにする。準備が済んだ学生が2回目以降にその日の単元を
-    # 開くとき、準備ガイドとサイドバーをたどらずに済む。単元の一覧は projects から作る（単元名をここに
-    # 書き足さない）。教科書をまだ足していない単元は、ページがないので並べない。
-    units = [(split_unit(project["name"]), project["docs"][0]) for project in projects if project["docs"][0] in files]
-
-    def unit_links(code):
-        entries = []
-        for (number, label), page in units:
-            target = page if code == "ja" else localizer.output_name(page, code, settings.source_root)
-            entries.append(f'<li><a href="{html.escape(target, quote=True)}">{number} {label}</a></li>')
-        return f"<ul>{''.join(entries)}</ul>" if entries else ""
-
+    # 入口には、言語ごとの「ここから始める」だけを並べる。単元の教科書へのリンクは置かない
+    # （先生レビュー、#197。#91 で足した単元の一覧は外した）。2回目以降に単元の教科書を開く場所は、
+    # はじめに.txt に言語ごとに書いてある。
     # 向きはリンクの文字だけに付ける。li に付けると、右から左の言語の行だけが右端に寄り、一覧から離れて見える。
-    items = [f'<li lang="ja"><a href="{start}" dir="ltr">日本語 — ここから始める</a>{unit_links("ja")}</li>']
+    items = [f'<li lang="ja"><a href="{start}" dir="ltr">日本語 — ここから始める</a></li>']
     for item in languages:
         target = localizer.output_name(start, item["code"], settings.source_root)
         items.append(f'<li lang="{item["code"]}"><a href="{html.escape(target, quote=True)}" dir="{directions[item["code"]]}">'
-                     + html.escape(item["name"] + " — " + item["start_here"]) + '</a>' + unit_links(item["code"]) + '</li>')
+                     + html.escape(item["name"] + " — " + item["start_here"]) + '</a></li>')
     files["index.html"] = ('<!doctype html>\n<html lang="ja"><head><meta charset="utf-8">'
                            '<meta name="viewport" content="width=device-width, initial-scale=1">'
                            '<title>Kotlin演習 / Kotlin Programming Exercises — Language / 言語</title>'
