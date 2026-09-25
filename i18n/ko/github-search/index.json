@@ -11,16 +11,96 @@
       "translation": "JEC / Kotlin 실습"
     },
     {
+      "source": "進捗",
+      "translation": "진행 상황"
+    },
+    {
+      "source": "目次",
+      "translation": "목차"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 자신의 프로젝트 만들기"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "막혔을 때"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "완성 프로젝트 열기"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "공통: 수업 시작 전 준비"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "공통: 제출 과제와 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "공통: 다른 Android Studio 버전"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "이 단원에서 만드는 것"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "Java/Swift와의 비교"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "여기서 멈추고 확인"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "다 되면 체크합니다. 막혔을 때는 이 화면을 선생님께 보여 드립니다."
+    },
+    {
+      "source": "自分のプロジェクトを作る",
+      "translation": "자신의 프로젝트 만들기"
+    },
+    {
       "source": "項目",
       "translation": "항목"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "입력·선택"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 전문"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 전문"
     },
     {
       "source": "場所",
       "translation": "위치"
     },
     {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · 전문"
+    },
+    {
       "source": "変える場所",
       "translation": "바꿀 위치"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "보이는 상태"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "확인할 위치"
+    },
+    {
+      "source": "Gradle同期が失敗する",
+      "translation": "Gradle 동기화가 실패합니다"
     },
     {
       "source": "公式資料",
