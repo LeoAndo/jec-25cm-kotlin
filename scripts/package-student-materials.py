@@ -2,6 +2,7 @@
 
 import argparse
 from datetime import datetime, timedelta, timezone
+import functools
 import hashlib
 import html
 import importlib.util
@@ -79,12 +80,19 @@ def check_links(files):
                 raise ValueError(f"配布物内にリンク先がありません：{name} → {link}")
 
 
-def add_localized_materials(files):
-    """配布対象の言語だけを生成し、本文と導線を静的HTMLとして収録する。"""
+@functools.lru_cache(maxsize=None)
+def load_localizer():
+    """翻訳の生成スクリプトを、モジュールとして読み込む（1回だけ）。"""
     spec = importlib.util.spec_from_file_location("package_localizer", ROOT / "scripts/localize-student-materials.py")
     localizer = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = localizer
     spec.loader.exec_module(localizer)
+    return localizer
+
+
+def add_localized_materials(files):
+    """配布対象の言語だけを生成し、本文と導線を静的HTMLとして収録する。"""
+    localizer = load_localizer()
     settings = localizer.load_settings(ROOT)
     languages = [item for item in settings.languages if item.get("distribute")]
     if not languages:
@@ -131,18 +139,30 @@ def add_localized_materials(files):
             addition = f"\n{nav}\n{localizer.textbook_i18n_script(ui[code])}\n"
             files[name] = localizer.insert_into_body(files[name].decode("utf-8"), addition, name).encode("utf-8")
     # 翻訳された共通資料を入口にする。共通資料がないときは、最初の単元の教科書を入口にする。
+    projects = load_projects()
     start = "docs/common/setup.html"
     if start not in files:
-        projects = load_projects()
         if not projects:
             raise ValueError("配布物の入口にするページがありません。")
         start = projects[0]["docs"][0]
+    # 言語ごとに、単元の教科書も直接開けるようにする。準備が済んだ学生が2回目以降にその日の単元を
+    # 開くとき、準備ガイドとサイドバーをたどらずに済む。単元の一覧は projects から作る（単元名をここに
+    # 書き足さない）。教科書をまだ足していない単元は、ページがないので並べない。
+    units = [(split_unit(project["name"]), project["docs"][0]) for project in projects if project["docs"][0] in files]
+
+    def unit_links(code):
+        entries = []
+        for (number, label), page in units:
+            target = page if code == "ja" else localizer.output_name(page, code, settings.source_root)
+            entries.append(f'<li><a href="{html.escape(target, quote=True)}">{number} {label}</a></li>')
+        return f"<ul>{''.join(entries)}</ul>" if entries else ""
+
     # 向きはリンクの文字だけに付ける。li に付けると、右から左の言語の行だけが右端に寄り、一覧から離れて見える。
-    items = [f'<li lang="ja"><a href="{start}" dir="ltr">日本語 — ここから始める</a></li>']
+    items = [f'<li lang="ja"><a href="{start}" dir="ltr">日本語 — ここから始める</a>{unit_links("ja")}</li>']
     for item in languages:
         target = localizer.output_name(start, item["code"], settings.source_root)
         items.append(f'<li lang="{item["code"]}"><a href="{html.escape(target, quote=True)}" dir="{directions[item["code"]]}">'
-                     + html.escape(item["name"] + " — " + item["start_here"]) + '</a></li>')
+                     + html.escape(item["name"] + " — " + item["start_here"]) + '</a>' + unit_links(item["code"]) + '</li>')
     files["index.html"] = ('<!doctype html>\n<html lang="ja"><head><meta charset="utf-8">'
                            '<meta name="viewport" content="width=device-width, initial-scale=1">'
                            '<title>Kotlin演習 / Kotlin Programming Exercises — Language / 言語</title>'
@@ -240,9 +260,15 @@ def build(output_dir):
     ).encode()
 
     if languages:
+        source_root = load_localizer().load_settings(ROOT).source_root
         instructions = "\nLanguage / 言語\n日本語：index.html をブラウザで開き、言語を選んでください。\n"
         for language in languages:
             instructions += f"{language['name']}: {language['open_instructions']}\n"
+            # 2回目以降は、その言語の単元の教科書を直接開ける。日本語の3と同じ一覧を、その言語の置き場所で書く。
+            for project in projects:
+                number, label = split_unit(project["name"])
+                page = load_localizer().output_name(project["docs"][0], language["code"], source_root)
+                instructions += f"  {number} {label}: {page}\n"
         files["はじめに.txt"] += instructions.encode("utf-8")
 
     output_dir.mkdir(parents=True, exist_ok=True)

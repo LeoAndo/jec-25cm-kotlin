@@ -279,6 +279,11 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertIn('href="docs/en/common/setup.html"', entrance)
             self.assertIn('Kotlin演習 / Kotlin Programming Exercises', entrance)
             self.assertIn('Open index.html in your browser, then choose English.', instructions)
+            # 2回目以降は、その言語の単元の教科書を直接開ける（#91）。入口と はじめに.txt の両方に置く。
+            self.assertIn('<a href="docs/en/hello-kotlin/index.html">K01 HelloKotlin</a>', entrance)
+            self.assertIn('<a href="docs/hello-kotlin/index.html">K01 HelloKotlin</a>', entrance)
+            self.assertIn("  K01 HelloKotlin: docs/en/hello-kotlin/index.html\n", instructions)
+            self.assertIn("  A01 HelloAndroid: docs/en/hello-android/index.html\n", instructions)
             self.assertFalse(any('/docs/en/' in name and not name.endswith('.html') for name in names))
             self.assertFalse(any('/docs/ko/' in name for name in names))
 
@@ -318,6 +323,51 @@ class PackageStudentMaterialsTest(unittest.TestCase):
             self.assertNotIn('<li lang="ar" dir=', entrance)
         # アラビア語は右から左の言語として設定してある（この検査で右から左の出力を必ず通すため）。
         self.assertIn("rtl", [language.get("dir") for language in config["languages"]])
+
+    def test_entrance_and_instructions_list_units_for_every_distributed_language(self):
+        """言語ごとの単元の一覧は config/teaching-materials.json から作る（#91）。
+
+        英語で読む学生が2回目以降に単元の教科書を開くとき、入口 → 準備ガイド → K01 → サイドバーと
+        たどらずに済むよう、入口の index.html と はじめに.txt に、配布する言語ごとの単元の場所を置く。
+        単元をスクリプトに直書きしないので、設定に足した単元もそのまま並ぶ。
+        """
+        self.enable_translation()
+        path = self.root / "config/i18n.json"
+        config = json.loads(path.read_text(encoding="utf-8"))
+        for language in config["languages"]:
+            language["distribute"] = True
+        path.write_text(json.dumps(config, ensure_ascii=False), encoding="utf-8")
+        added = dict(FIXTURE_PROJECTS[0], name="K03Functions",
+                     docs=["docs/functions/index.html", "teacher/functions/index.html"])
+        self.set_projects([*FIXTURE_PROJECTS, added])
+        textbook = self.root / "docs/functions/index.html"
+        textbook.parent.mkdir(parents=True)
+        textbook.write_text(page("K03 Functions",
+                                 '<a href="../hello-kotlin/downloads/K01HelloKotlin.zip">完成プロジェクト</a>'),
+                            encoding="utf-8")
+        self.git("add", "config/i18n.json", "config/teaching-materials.json", "docs/functions/index.html")
+        result = self.package()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        prefix = f"{self.stem}/"
+        units = [("K01", "HelloKotlin", "hello-kotlin"), ("K02", "NullSafety", "null-safety"),
+                 ("A01", "HelloAndroid", "hello-android"), ("K03", "Functions", "functions")]
+        with ZipFile(self.archive) as archive:
+            entrance = archive.read(prefix + "index.html").decode()
+            instructions = archive.read(prefix + "はじめに.txt").decode()
+            for code in ["ja", *(language["code"] for language in config["languages"])]:
+                folder = "docs/" if code == "ja" else f"docs/{code}/"
+                # 言語の行の中に、単元が設定の順で並ぶ。
+                item = entrance.split(f'<li lang="{code}">', 1)[1].split("</ul></li>", 1)[0]
+                links = [f'<li><a href="{folder}{slug}/index.html">{number} {label}</a></li>'
+                         for number, label, slug in units]
+                self.assertTrue(item.endswith("<ul>" + "".join(links)), (code, item))
+                if code != "ja":
+                    language = next(item for item in config["languages"] if item["code"] == code)
+                    lines = [f"  {number} {label}: {folder}{slug}/index.html" for number, label, slug in units]
+                    self.assertIn(f"{language['name']}: {language['open_instructions']}\n" + "\n".join(lines) + "\n",
+                                  instructions, code)
+            # 日本語の一覧（3.）は今までどおり。
+            self.assertIn("  K03 Functions：docs/functions/index.html", instructions)
 
     def test_translation_does_not_include_untracked_pages(self):
         self.enable_translation()
