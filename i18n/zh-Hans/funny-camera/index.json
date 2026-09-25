@@ -332,7 +332,7 @@
     },
     {
       "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
-      "translation": "<a1>保存金鱼图片 character.png</a1>，然后在 Finder 中把它复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code>。如果保存时变成了其他名称，改回 <code>character.png</code>。直接放在 <strong>drawable</strong> 文件夹里（不要放进子文件夹）。图片是背景透明的500×416像素，与完成版相同。"
+      "translation": "<a1>保存金鱼图片 character.png</a1>，然后在 Finder 中把它复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code>。如果保存时变成了其他名称，改回 <code>character.png</code>。直接放在 <strong>drawable</strong> 文件夹里。图片是背景透明的500×416像素，与完成版相同。"
     },
     {
       "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
@@ -532,7 +532,7 @@
     },
     {
       "source": "まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
-      "translation": "首先，阅读下面的合成部分。<strong>这段摘录不要粘贴</strong>，等到 STEP 10 放入全文后再点击 Run。<code>previewView.bitmap</code> 取出当前显示在预览中的画面。准备好之前是 null。"
+      "translation": "首先，阅读下面的合成部分。<strong>唯独这段摘录不要粘贴</strong>，等把 STEP 10 的全文放进去后再点击 Run。<code>previewView.bitmap</code> 取出当前显示在预览中的画面。准备好之前是 null。"
     },
     {
       "source": "順序",
