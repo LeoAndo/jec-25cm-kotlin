@@ -15,8 +15,20 @@
       "translation": "Талбар"
     },
     {
+      "source": "変える場所",
+      "translation": "Өөрчлөх газар"
+    },
+    {
+      "source": "起きたこと",
+      "translation": "Тохиолдсон асуудал"
+    },
+    {
       "source": "公式資料",
       "translation": "Албан ёсны баримт бичиг"
+    },
+    {
+      "source": "Android Studio：プロジェクトの作成",
+      "translation": "Android Studio: Төсөл үүсгэх"
     }
   ]
 }

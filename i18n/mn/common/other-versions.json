@@ -3,6 +3,10 @@
   "language": "mn",
   "entries": [
     {
+      "source": "ちがうAndroid Studioのバージョンで進めるとき | Kotlin演習",
+      "translation": "Android Studio програмын өөр хувилбараар ажиллах үед | Kotlin дадлага"
+    },
+    {
       "source": "本文へ移動",
       "translation": "Үндсэн агуулга руу шилжих"
     },
@@ -19,24 +23,392 @@
       "translation": "KOTLIN PROGRAMMING EXERCISES / Нийтлэг материал, хичээлийн дэмжлэг"
     },
     {
+      "source": "ちがうAndroid Studioの<br>バージョンで進めるとき",
+      "translation": "Android Studio програмын өөр<br>хувилбараар ажиллах үед"
+    },
+    {
+      "source": "Androidの教科書はPanda 2を基準にしています。Quail 4・Panda 3を使う人は、作り始める前にこのページで、自分の版と進め方を確かめます。",
+      "translation": "Android сурах бичгүүд Panda 2 хувилбарыг стандарт болгосон. Quail 4 эсвэл Panda 3 ашиглаж байгаа хүн төсөл хийж эхлэхээсээ өмнө энэ хуудсаар өөрийн хувилбар болон хэрхэн үргэлжлүүлэхээ шалгана."
+    },
+    {
+      "source": "対象は後半のAndroid単元です。前半のK01HelloKotlinで使うIntelliJ IDEAの設定は変えません。",
+      "translation": "Хамрах хүрээ нь сүүлийн хагасын Android бүлгүүд юм. Эхний хагасын K01HelloKotlin төсөлд ашиглах IntelliJ IDEA програмын тохиргоог өөрчлөхгүй."
+    },
+    {
+      "source": "このページの内容",
+      "translation": "Энэ хуудасны агуулга"
+    },
+    {
+      "source": "版を確かめる・サポートの範囲",
+      "translation": "Хувилбарыг шалгах, дэмжлэгийн хүрээ"
+    },
+    {
+      "source": "新規作成で合わせる項目",
+      "translation": "Шинээр үүсгэхэд тааруулах талбарууд"
+    },
+    {
+      "source": "A01の読み替え",
+      "translation": "A01 бүлгийг тохируулан хийх"
+    },
+    {
+      "source": "生成される設定の違い",
+      "translation": "Автоматаар үүсэх тохиргооны ялгаа"
+    },
+    {
+      "source": "止まったとき",
+      "translation": "Гацсан үед"
+    },
+    {
+      "source": "確かめた範囲",
+      "translation": "Шалгасан хүрээ"
+    },
+    {
+      "source": "1. 版を確かめる・サポートの範囲",
+      "translation": "1. Хувилбарыг шалгах, дэмжлэгийн хүрээ"
+    },
+    {
+      "source": "Welcome画面、またはmacOSの <strong>Android Studio → About Android Studio</strong> で、製品名と版を見ます。<code>Panda 2</code>・<code>Panda 3</code>・<code>Quail 4</code> の名前まで確認します。",
+      "translation": "Welcome дэлгэц эсвэл macOS цэсний <strong>Android Studio → About Android Studio</strong> гэсэн замаар бүтээгдэхүүний нэр болон хувилбарыг харна. <code>Panda 2</code>, <code>Panda 3</code>, <code>Quail 4</code> гэсэн нэрийг хүртэл шалгана."
+    },
+    {
+      "source": "使っている版",
+      "translation": "Ашиглаж буй хувилбар"
+    },
+    {
+      "source": "進め方",
+      "translation": "Хэрхэн үргэлжлүүлэх"
+    },
+    {
+      "source": "授業の基準です。教科書の手順どおり進めます。作成日でライブラリの版が変わるため、A01のSTEP 01にある設定の照合も行います。",
+      "translation": "Хичээлийн стандарт юм. Сурах бичгийн алхмын дагуу үргэлжлүүлнэ. Үүсгэсэн огнооноос хамаарч сангийн хувилбар өөрчлөгддөг тул A01 бүлгийн STEP 01 дэх тохиргооны тулгалтыг ч хийнэ."
+    },
+    {
+      "source": "このページのA01の読み替えに従います。下の表と設定が一致し、同期・Runが通る範囲で進めます。表にない違いやエラーは先生に見せます。",
+      "translation": "Энэ хуудасны A01 бүлгийг тохируулан хийх зааврыг дагана. Тохиргоо нь доорх хүснэгттэй таарч, синк болон Run амжилттай болж байгаа хүрээнд үргэлжлүүлнэ. Хүснэгтэд байхгүй ялгаа, алдааг багшдаа үзүүлнэ."
+    },
+    {
+      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
+      "translation": "<strong>Бодитоор туршаагүй.</strong> Panda 2 хувилбарын алхмыг эхлэлийн цэг болгох боловч мөн адил ажиллана гэдгийг шалгаж баталгаажуулаагүй. A01 бүлгийн STEP 00 дээр хувилбараа багшдаа үзүүлж, STEP 01 дэх тохиргооны бүх агуулгыг солихоос өмнө шалгана. Дэлгэц эсвэл автоматаар үүссэн тохиргоо өөр байвал тэр чигээр нь багшдаа үзүүлнэ."
+    },
+    {
+      "source": "上記以外・版が分からない",
+      "translation": "Дээрхээс өөр хувилбар, эсвэл хувилбараа мэдэхгүй байна"
+    },
+    {
+      "source": "新規作成や設定の変更を始める前に先生へ相談します。この資料で動作を確認した範囲には含みません。",
+      "translation": "Шинээр үүсгэх, тохиргоо өөрчлөхөөс өмнө багштайгаа зөвлөлдөнө. Энэ материалаар ажиллагааг нь шалгасан хүрээнд багтахгүй."
+    },
+    {
+      "source": "授業ではmacOSを使います。見た目や項目の位置だけの違いは、次の表の選択内容で合わせます。必要な項目が見つからない、同期が赤い、Runできない場合は、設定を次々と変更せず先生と確認します。基準のPanda 2へ切り替えるかも、その場で決めます。",
+      "translation": "Хичээл дээр macOS ашиглана. Зөвхөн харагдах байдал, талбарын байрлалын ялгааг дараагийн хүснэгтийн сонголтоор тааруулна. Шаардлагатай талбар олдохгүй, синк улаан болсон, Run хийж чадахгүй бол тохиргоог ар араас нь өөрчлөлгүй багштайгаа хамт шалгана. Стандарт болох Panda 2 руу шилжих эсэхийг ч тэр үед нь шийднэ."
+    },
+    {
+      "source": "2. 新規作成で合わせる項目",
+      "translation": "2. Шинээр үүсгэхэд тааруулах талбарууд"
+    },
+    {
+      "source": "New Projectの画面では、位置より<strong>選ぶ内容</strong>を合わせます。A01では次のとおりです。",
+      "translation": "New Project дэлгэц дээр байрлалаас илүү <strong>сонгох утгыг</strong> тааруулна. A01 бүлэгт дараах байдалтай."
+    },
+    {
       "source": "項目",
       "translation": "Талбар"
+    },
+    {
+      "source": "A01で選ぶ内容",
+      "translation": "A01 бүлэгт сонгох утга"
+    },
+    {
+      "source": "テンプレート",
+      "translation": "Загвар"
+    },
+    {
+      "source": "Phone and Tablet → <strong>Empty Views Activity</strong>。ViewsのないEmpty Activityは選びません。",
+      "translation": "Phone and Tablet → <strong>Empty Views Activity</strong>. Views гэсэн үггүй Empty Activity загварыг сонгохгүй."
+    },
+    {
+      "source": "自分の <code>Documents/Kotlin/A01HelloAndroid</code>。末尾のプロジェクト名まで含めます。",
+      "translation": "Өөрийн <code>Documents/Kotlin/A01HelloAndroid</code>. Төгсгөлийн төслийн нэрийг хүртэл оруулна."
+    },
+    {
+      "source": "<strong>API 31（Android 12）</strong>。下のtargetSdkとは別の項目です。",
+      "translation": "<strong>API 31 (Android 12)</strong>. Доорх targetSdk талбараас тусдаа талбар юм."
+    },
+    {
+      "source": "実行先の表示名は、版が違っても <code>jec_25cm_kotlin_Pixel 9a</code> です。Device Managerに既にあれば、その端末を使います。なければA01のSTEP 02で先生が指定するシステムイメージを使って作ります。実機が接続されている場合も、Runの実行先が指定AVDになっているか確かめます。",
+      "translation": "Зорилтот төхөөрөмжийн харагдах нэр нь хувилбар өөр байсан ч <code>jec_25cm_kotlin_Pixel 9a</code> юм. Device Manager дээр аль хэдийн байвал тэр төхөөрөмжийг ашиглана. Байхгүй бол A01 бүлгийн STEP 02 дээр багшийн заасан системийн имэж (system image) ашиглан үүсгэнэ. Бодит төхөөрөмж холбогдсон байсан ч Run хийх зорилтот төхөөрөмж нь заасан AVD болсон эсэхийг шалгана."
+    },
+    {
+      "source": "POINT：IDEの版とプロジェクトの設定は別",
+      "translation": "POINT: IDE програмын хувилбар болон төслийн тохиргоо нь тусдаа"
+    },
+    {
+      "source": "Quail 4でPanda 2の完成見本をOpenしても、見本のAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、配布された設定を保って照合します。",
+      "translation": "Quail 4 дээр Panda 2 хувилбарын бэлэн жишээг Open цэсээр нээсэн ч жишээний AGP, Gradle хувилбарыг Quail 4 хувилбарын утга руу өөрчлөх шаардлагагүй. Шинэчлэхийг санал болгодог AGP Upgrade Assistant цонхыг хааж, тараасан тохиргоог хэвээр нь хадгалан тулгаж шалгана."
+    },
+    {
+      "source": "3. Quail 4でのA01の読み替え",
+      "translation": "3. Quail 4 дээр A01 бүлгийг тохируулан хийх"
+    },
+    {
+      "source": "対象は <code>A01HelloAndroid</code> のSTEP 00〜13です。先生に版を見せたあと、次の表を手元に置いて進めます。",
+      "translation": "Хамрах хүрээ нь <code>A01HelloAndroid</code> төслийн STEP 00–13 юм. Багшдаа хувилбараа үзүүлсний дараа дараах хүснэгтийг хажуудаа тавьж үргэлжлүүлнэ."
+    },
+    {
+      "source": "教科書の場所",
+      "translation": "Сурах бичгийн хэсэг"
+    },
+    {
+      "source": "Quail 4で行うこと",
+      "translation": "Quail 4 дээр хийх зүйл"
+    },
+    {
+      "source": "上の6項目で自分のプロジェクトを作ります。画面の順序が違っても、Empty Views Activity・Kotlin・API 31・Kotlin DSLを合わせます。",
+      "translation": "Дээрх 6 талбараар өөрийн төслийг үүсгэнэ. Дэлгэцийн дараалал өөр байсан ч Empty Views Activity, Kotlin, API 31, Kotlin DSL гэсэн сонголтуудыг тааруулна."
+    },
+    {
+      "source": "STEP 01：libs.versions.toml全文の置き換え",
+      "translation": "STEP 01: libs.versions.toml файлын бүх агуулгыг солих"
+    },
+    {
+      "source": "<strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。",
+      "translation": "<strong>Энэ солих үйлдлийг хийхгүй.</strong> Quail 4 хувилбарын үүсгэсэн <code>gradle/libs.versions.toml</code> файл болон бүтээх тохиргоог хамт хэвээр нь хадгалж, дараагийн ялгааны хүснэгттэй тулгаж шалгана. Зөвхөн Panda 2 хувилбарын AGP 9.1.1 оруулбал Quail 4 хувилбарын <code>optimization</code> бичих аргатай таарахгүй. Аль хэдийн сольчихсон бол багшдаа үзүүлнэ."
+    },
+    {
+      "source": "STEP 02〜03：端末・初回Run",
+      "translation": "STEP 02–03: Төхөөрөмж, анхны Run"
+    },
+    {
+      "source": "指定AVDを選び、生成直後の <code>Hello World!</code> を確かめます。SDKやJDKのダウンロード中は進行表示を確認します。",
+      "translation": "Заасан AVD сонгож, үүсгэсний дараах <code>Hello World!</code> гэснийг шалгана. SDK, JDK татаж авч байх үед явц харуулах хэсгийг шалгана."
+    },
+    {
+      "source": "教科書のXML全文を使います。<code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> のidを変えません。",
+      "translation": "Сурах бичгийн XML файлын бүх агуулгыг ашиглана. <code>main</code>, <code>text</code>, <code>button</code>, <code>btn1</code>, <code>btn2</code> гэсэн id утгуудыг өөрчлөхгүй."
+    },
+    {
+      "source": "STEP 05〜10：Kotlinの処理を追加",
+      "translation": "STEP 05–10: Kotlin логик нэмэх"
+    },
+    {
+      "source": "教科書と同じコードを入力します。生成された余白処理は残し、<code>onCreate</code> の中へ追加します。文字変更・Snackbar・Toast・Logcatの確認結果は同じです。",
+      "translation": "Сурах бичигтэй ижил кодыг бичнэ. Автоматаар үүссэн захын зайг тохируулах кодыг хэвээр үлдээж, <code>onCreate</code> функцийн дотор нэмнэ. Текст өөрчлөх, Snackbar, Toast, Logcat зэргийг шалгасан үр дүн ижил."
+    },
+    {
+      "source": "STEP 11〜13：全文照合・アレンジ",
+      "translation": "STEP 11–13: Бүх агуулгыг тулгаж шалгах, өөрчлөлт хийх"
+    },
+    {
+      "source": "教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体を完成見本から上書きしません。文字と余白のアレンジは同じ場所です。",
+      "translation": "Сурах бичгийн <code>MainActivity.kt</code> файлын бүх агуулга болон XML файлтай тулгаж шалгана. Харьцуулах нь энэ 2 файл бөгөөд Quail 4 хувилбарын Gradle тохиргоог бүхэлд нь бэлэн жишээгээр дарж бичихгүй. Текст болон захын зайн өөрчлөлт нь ижил газарт байна."
+    },
+    {
+      "source": "完成見本は <code>samples/A01HelloAndroid</code> です。別ウィンドウで開いて比べ、入力を続けるときは自分の <code>Documents/Kotlin/A01HelloAndroid</code> へ戻ります。完成見本は自分の提出作品として扱いません。",
+      "translation": "Бэлэн жишээ нь <code>samples/A01HelloAndroid</code> юм. Тусдаа цонхонд нээж харьцуулаад, бичихээ үргэлжлүүлэхдээ өөрийн <code>Documents/Kotlin/A01HelloAndroid</code> төсөл рүү буцна. Бэлэн жишээг өөрийн илгээх бүтээл гэж тооцохгүй."
+    },
+    {
+      "source": "4. 生成される設定の違い",
+      "translation": "4. Автоматаар үүсэх тохиргооны ялгаа"
+    },
+    {
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材のひな形・完成版、Quail 4列は比較用ひな形の実測値です。",
+      "translation": "Зүүн талын Project хэрэгслийн цонхыг <strong>Project</strong> харагдац болговол дараах файлуудыг нээж болно. Энэ бол <strong>харьцуулж үзэх хүснэгт</strong> бөгөөд утгыг өөрчлөх жагсаалт биш. Panda 2 багана нь сургалтын материалын загвар төсөл болон бэлэн хувилбар, Quail 4 багана нь харьцуулах зориулалттай загвар төслийн бодит утга юм."
     },
     {
       "source": "見る場所",
       "translation": "Харах газар"
     },
     {
+      "source": "Panda 2：教材の基準",
+      "translation": "Panda 2: Сургалтын материалын стандарт"
+    },
+    {
+      "source": "Quail 4：保つ設定",
+      "translation": "Quail 4: Хэвээр хадгалах тохиргоо"
+    },
+    {
+      "source": "<code>app/build.gradle.kts</code> のcompileSdk",
+      "translation": "<code>app/build.gradle.kts</code> файлын compileSdk"
+    },
+    {
+      "source": "同じファイルのtargetSdk",
+      "translation": "Мөн файлын targetSdk"
+    },
+    {
+      "source": "同じファイルのbuildTypes → release",
+      "translation": "Мөн файлын buildTypes → release"
+    },
+    {
+      "source": "<code>isMinifyEnabled = false</code> と <code>proguardFiles(...)</code>",
+      "translation": "<code>isMinifyEnabled = false</code> болон <code>proguardFiles(...)</code>"
+    },
+    {
+      "source": "R8のkeepルールのファイル",
+      "translation": "R8 keep дүрмийн файл"
+    },
+    {
+      "source": "<code>gradle/wrapper/gradle-wrapper.properties</code> のdistributionUrl",
+      "translation": "<code>gradle/wrapper/gradle-wrapper.properties</code> файлын distributionUrl"
+    },
+    {
+      "source": "<code>gradle/gradle-daemon-jvm.properties</code> のtoolchainVersion",
+      "translation": "<code>gradle/gradle-daemon-jvm.properties</code> файлын toolchainVersion"
+    },
+    {
+      "source": "configuration-cacheの指定なし",
+      "translation": "configuration-cache тохиргоо байхгүй"
+    },
+    {
+      "source": "Quail 4の <code>app/build.gradle.kts</code> では、依存の名前も <code>libs.androidx.activity.ktx</code> です。Panda 2のカタログへ丸ごと置き換えると、この名前も合わなくなります。表にない版が生成された場合は、自分で表の数値へ直さず先生と確認します。",
+      "translation": "Quail 4 хувилбарын <code>app/build.gradle.kts</code> файлд хамаарлын нэр ч <code>libs.androidx.activity.ktx</code> байна. Panda 2 хувилбарын каталогоор бүхэлд нь сольбол энэ нэр ч таарахгүй болно. Хүснэгтэд байхгүй хувилбар үүссэн бол өөрөө хүснэгтийн тоо руу засалгүй багштайгаа хамт шалгана."
+    },
+    {
+      "source": "<code>app/src/main/AndroidManifest.xml</code> のActivityに、Quail 4では <code>android:windowSoftInputMode=\"adjustResize\"</code> も生成されています。A01の作業ではそのまま残します。Kotlinの <code>MainActivity.kt</code> はパッケージ名を除いて、生成直後のXMLは全文が、2つのひな形で一致していました。",
+      "translation": "Quail 4 хувилбарт <code>app/src/main/AndroidManifest.xml</code> файлын Activity хэсэгт <code>android:windowSoftInputMode=\"adjustResize\"</code> ч үүссэн байна. A01 бүлгийн ажилд үүнийг тэр чигээр нь үлдээнэ. Kotlin хэлний <code>MainActivity.kt</code> файл нь багцын нэрээс бусад нь, үүсгэсний дараах XML файл нь бүх агуулгаараа 2 загвар төсөлд ижил байсан."
+    },
+    {
+      "source": "JDKの21と25で、Kotlinの書き方は変わるか",
+      "translation": "JDK 21 болон 25 хувилбарт Kotlin бичих арга өөрчлөгдөх үү"
+    },
+    {
+      "source": "<code>toolchainVersion</code> はアプリを組み立てるGradleを動かすJava実行環境の指定です。学生が書くKotlinの文法の版ではありません。Java側の <code>compileOptions</code> は、どちらのひな形も <code>JavaVersion.VERSION_11</code> です。Swiftでも、IDEを動かす環境の版と、ソースで使う言語の設定を分けて考えるのと同じです。",
+      "translation": "<code>toolchainVersion</code> нь аппыг угсардаг Gradle хэрэгслийг ажиллуулах Java орчныг заасан тохиргоо юм. Оюутны бичих Kotlin хэлний дүрмийн хувилбар биш. Java талын <code>compileOptions</code> нь аль ч загвар төсөлд <code>JavaVersion.VERSION_11</code> байна. Swift хэлэнд ч IDE програмыг ажиллуулах орчны хувилбар болон эх кодод ашиглах хэлний тохиргоог тусад нь авч үздэгтэй адил."
+    },
+    {
+      "source": "必要なJDKがMacにない場合、設定されたダウンロード先から取得することがあります。<code>Downloading</code> などの進行表示が出ていれば待ちます。赤いエラーで止まったら、JDKの数字を変更せず、その表示を先生に見せます。",
+      "translation": "Шаардлагатай JDK Mac дээр байхгүй бол тохируулсан татаж авах хаягаас татаж авах тохиолдол бий. <code>Downloading</code> гэх мэт явц харуулсан текст гарч байвал хүлээнэ. Улаан алдаагаар зогсвол JDK хувилбарын тоог өөрчлөлгүй тэр дэлгэцийг багшдаа үзүүлнэ."
+    },
+    {
+      "source": "5. 止まったとき",
+      "translation": "5. Гацсан үед"
+    },
+    {
+      "source": "画面で起きたこと",
+      "translation": "Дэлгэц дээр тохиолдсон асуудал"
+    },
+    {
       "source": "すること",
       "translation": "Хийх зүйл"
+    },
+    {
+      "source": "ボタンの位置やメニュー名が違う",
+      "translation": "Товчны байрлал, цэсний нэр өөр байна"
+    },
+    {
+      "source": "選択内容を2節で照合。Empty Views Activityなど必要な項目が見つからなければ先生に見せます。",
+      "translation": "Сонгосон утгыг 2-р хэсэгтэй тулгаж шалгана уу. Empty Views Activity зэрэг шаардлагатай зүйл олдохгүй бол багшдаа үзүүлнэ үү."
+    },
+    {
+      "source": "<code>optimization</code> や <code>activity.ktx</code> が赤い",
+      "translation": "<code>optimization</code> эсвэл <code>activity.ktx</code> улаан байна"
+    },
+    {
+      "source": "Panda 2とQuail 4の設定を混ぜた可能性があります。最近置き換えたファイルとエラーを先生に見せます。片方ずつ版を下げて試しません。",
+      "translation": "Panda 2 болон Quail 4 хувилбарын тохиргоог хольсон байж магадгүй. Саяхан сольсон файл болон алдааг багшдаа үзүүлнэ үү. Нэг нэгээр нь хувилбарыг бууруулж туршиж болохгүй."
+    },
+    {
+      "source": "Gradle同期やSDK・JDKの取得が失敗した",
+      "translation": "Gradle синк эсвэл SDK, JDK татаж авах үйлдэл амжилтгүй болсон"
+    },
+    {
+      "source": "エラーの先頭を表示し、先生に見せます。通信・必要なSDK・プロジェクトの生成版を確認します。",
+      "translation": "Алдааны эхний хэсгийг дэлгэц дээр гаргаж, багшдаа үзүүлнэ үү. Интернэт холболт, шаардлагатай SDK, төслийг үүсгэсэн хувилбарыг шалгана уу."
+    },
+    {
+      "source": "ビルドは通るが、A01の画面が違う・閉じる",
+      "translation": "Бүтээх үйлдэл амжилттай ч A01 бүлгийн дэлгэц өөр байна, эсвэл апп хаагдаж байна"
+    },
+    {
+      "source": "XMLのidとKotlinのR.id、指定AVDを確認します。直らなければSTEP番号とLogcatの赤い行を先生に見せます。",
+      "translation": "XML файлын id, Kotlin кодын R.id болон заасан AVD төхөөрөмжийг шалгана уу. Засагдахгүй бол STEP дугаар болон Logcat дээрх улаан мөрийг багшдаа үзүүлнэ үү."
+    },
+    {
+      "source": "Panda 2へ切り替えることになった",
+      "translation": "Panda 2 руу шилжих болсон"
+    },
+    {
+      "source": "自作プロジェクトを消さずに残します。先生と保存先を分け、Panda 2で作った新しいプロジェクトへ、自分のXMLとKotlinを照合して移します。Quail 4のGradle設定は持ち込みません。",
+      "translation": "Өөрийн хийсэн төслийг устгалгүй үлдээнэ үү. Багштайгаа хамт хадгалах байршлыг тусад нь болгож, Panda 2 дээр үүсгэсэн шинэ төсөл рүү өөрийн XML болон Kotlin кодыг тулгаж шалган зөөнө үү. Quail 4 хувилбарын Gradle тохиргоог авчирч болохгүй."
+    },
+    {
+      "source": "相談するときは <strong>Studioの製品名と版・教材のVERSION.jsonにある版・単元とSTEP番号・エラーの先頭</strong>を見せます。実習時間内に原因を切り分けられない場合もあるため、止まった時点で声をかけてください。",
+      "translation": "Зөвлөгөө авахдаа <strong>Studio програмын бүтээгдэхүүний нэр болон хувилбар, сургалтын материалын VERSION.json файл дахь хувилбар, бүлэг болон STEP дугаар, алдааны эхний хэсэг</strong> гэсэн зүйлсийг үзүүлнэ. Дадлагын цагт шалтгааныг нь олж чадахгүй тохиолдол ч байдаг тул гацсан даруйдаа багшдаа хэлнэ үү."
+    },
+    {
+      "source": "教材の開き方は <a1>共通：はじめの準備</a1>、提出時の作業は <a2>共通：提出課題とAPK</a2> にあります。",
+      "translation": "Сургалтын материалыг нээх арга нь <a1>Нийтлэг: Хичээл эхлэхээс өмнөх бэлтгэл</a1>, илгээх үеийн ажил нь <a2>Нийтлэг: Даалгавар болон APK</a2> хуудсанд байна."
+    },
+    {
+      "source": "6. 確かめた範囲",
+      "translation": "6. Шалгасан хүрээ"
+    },
+    {
+      "source": "区分",
+      "translation": "Ангилал"
+    },
+    {
+      "source": "内容",
+      "translation": "Агуулга"
+    },
+    {
+      "source": "ファイルの照合",
+      "translation": "Файлын тулгалт"
+    },
+    {
+      "source": "2026年9月24日、教材のPanda 2とQuail 4のKotlinひな形を比較しました。表の値はそのファイルに基づきます。作成日によって値が変わる場合があります。",
+      "translation": "2026 оны 9-р сарын 24-нд сургалтын материалын Panda 2 болон Quail 4 хувилбарын Kotlin загвар төслүүдийг харьцуулсан. Хүснэгтийн утга тэдгээр файлд үндэслэсэн. Үүсгэсэн огнооноос хамаарч утга өөрчлөгдөж болно."
+    },
+    {
+      "source": "Quail 4構成でのビルド",
+      "translation": "Quail 4 хувилбарын тохиргоогоор бүтээх"
+    },
+    {
+      "source": "ひな形を別の検証用フォルダに複製し、設定を保ったまま、生成直後とA01のSTEP 04・05・08・09・10〜11に相当するコードで <code>assembleDebug</code> の成功を確認しました。検証コピーではパッケージ名だけをひな形に合わせています。",
+      "translation": "Загвар төслийг тусдаа туршилтын хавтсанд хувилж, тохиргоог нь хэвээр хадгалан, үүсгэсний дараах код болон A01 бүлгийн STEP 04, 05, 08, 09, 10–11 гэсэн алхмуудад тохирох кодоор <code>assembleDebug</code> амжилттай болохыг шалгасан. Туршилтын хуулбарт зөвхөн багцын нэрийг загвар төсөлтэй тааруулсан."
+    },
+    {
+      "source": "Quail 4構成での実行",
+      "translation": "Quail 4 хувилбарын тохиргоогоор ажиллуулах"
+    },
+    {
+      "source": "上の検証コピーの完成コードを指定AVD <code>jec_25cm_kotlin_Pixel 9a</code>（API 37.1）で実行し、文字変更、1のSnackbar、2のToast、起動時とクリック後のLogcatを確認しました。",
+      "translation": "Дээрх туршилтын хуулбарын бэлэн кодыг заасан AVD <code>jec_25cm_kotlin_Pixel 9a</code> (API 37.1) дээр ажиллуулж, текст өөрчлөлт, 1-р товчны Snackbar, 2-р товчны Toast, эхлүүлэх үеийн болон дарсны дараах Logcat гаралтыг шалгасан."
+    },
+    {
+      "source": "ここでは未確認",
+      "translation": "Энд шалгаагүй зүйл"
+    },
+    {
+      "source": "Quail 4の現在のIDE画面のメニュー位置、Panda 3、ほかのStudio版、今後教材化するA02以降の段階別コード。これらも確認済みとは扱いません。",
+      "translation": "Quail 4 хувилбарын одоогийн IDE дэлгэцийн цэсний байрлал, Panda 3, бусад Studio хувилбар, цаашид сургалтын материал болгох A02 бүлгээс хойшхи алхам тус бүрийн код. Эдгээрийг ч шалгасан гэж тооцохгүй."
+    },
+    {
+      "source": "Quail 4の設定に書き換えた完成見本を配ることはしません。配布する完成見本と教科書本文の基準はPanda 2です。",
+      "translation": "Quail 4 хувилбарын тохиргоогоор өөрчилсөн бэлэн жишээг тараахгүй. Тараах бэлэн жишээ болон сурах бичгийн үндсэн текстийн стандарт нь Panda 2 юм."
     },
     {
       "source": "公式資料",
       "translation": "Албан ёсны баримт бичиг"
     },
     {
+      "source": "Android Studio：プロジェクトの作成",
+      "translation": "Android Studio: Төсөл үүсгэх"
+    },
+    {
+      "source": "AGP Upgrade Assistantが変更する設定",
+      "translation": "AGP Upgrade Assistant хэрэгслийн өөрчилдөг тохиргоо"
+    },
+    {
+      "source": "Gradle DaemonのJVM選択",
+      "translation": "Gradle Daemon хэрэгслийн JVM сонголт"
+    },
+    {
       "source": "← もとのページへ戻る",
       "translation": "← Эх хуудас руу буцах"
+    },
+    {
+      "source": "対象：macOS / 基準：Android Studio Panda 2 / 確認日：2026年9月24日",
+      "translation": "Хамрах хүрээ: macOS / Стандарт: Android Studio Panda 2 / Сүүлд шалгасан огноо: 2026 оны 9-р сарын 24"
     }
   ]
 }
