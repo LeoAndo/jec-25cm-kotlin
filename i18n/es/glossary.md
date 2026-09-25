@@ -132,6 +132,35 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 手順N / N節 | paso N / sección N | 共通資料の「手順5」は paso 5 |
 | 前半 / 後半 | primera mitad / segunda mitad | |
 | 授業 / この授業 | la clase / esta materia | Google Classroom の「クラス」も clase なので、「この授業のクラス」は la clase de este curso |
+| View | View | Android のクラス名なので訳さない。女性名詞で、複数も las View（las vistas にしない）。「View取得」は las líneas que obtienen las View |
+| 部品（画面の。短く言うとき） | elemento | 冠詞つきで el elemento / los elementos。上の「部品（画面の）」の短い言い方 |
+| 見出し（TextViewに出す文字） | encabezado | A01 で `Hello World!` を出す TextView の文字 |
+| 変更ボタン | botón de cambio | A01 の「テキストを変更する」ボタンを短く指すとき |
+| クリック処理 | manejador de clic | 「buttonのクリック処理」は el manejador de clic de button |
+| リスナ | listener | 男性名詞（el listener de START）。原文が「リスナ」と書く A02 で使い、A01 の「クリック処理」とは書き分ける |
+| ラムダ | lambda | 女性名詞（una lambda、la lambda de START） |
+| 生成コード / 生成された〜 | código generado | 「生成されたインセット処理」は el código generado para los insets |
+| タイマー | cronómetro | A02 の時間表示。クラス名の Chronometer は訳さない |
+| 基準時刻 | tiempo base | Chronometer の setBase / getBase |
+| 経過時間 | tiempo transcurrido | ミリ秒は milisegundos |
+| 停止 / 再開 / リセット | detener / reanudar / reiniciar | 「停止中」は durante la pausa、「休んだ時間」は el tiempo de la pausa |
+| 問題 / 問題欄 / 出題する | pregunta / área de la pregunta / mostrar una pregunta | 「1問目」は la pregunta 1、「10問」は 10 preguntas |
+| 正解数 / 正答 / 誤答 | número de aciertos / respuesta correcta / respuesta incorrecta | 「9問正解」は 9 aciertos |
+| 採点 | calificar / calificación | 中南米の言い方。corregir にしない |
+| 案内（ゲーム外で数字を押したときの Snackbar） | aviso | 表のセルでは Aviso |
+| 押せる / 押せない | se puede presionar / no se puede presionar | A02 の状態の表。「押せる色」は el color de habilitado、「押せない色」は el color de deshabilitado |
+| 完成状態 | estado final | 「7コマ目の完成状態を確認する」は Verificar el estado final de la clase 7 |
+| 前回 / 今回 | la vez anterior / esta vez | 「前回のプロジェクト」は el proyecto de la vez anterior |
+| 目安 N分 | Aprox. N min | STEP の見出し下の行（STEP 00 · Clase 7 · Aprox. 5 min） |
+| Nコマ目 / N〜Mコマ目・各90分 | Clase N / Clases N–M, 90 min cada una | STEP の見出し下では Clase を大文字で始める。本文では la clase 7 |
+| 指定AVDで撮影 | captura en el AVD designado | 図の説明のかっこ書き |
+| 全文（コードの見出し） | Archivo completo | `MainActivity.kt · Archivo completo`。「完成全文」は Archivo terminado completo |
+| Javaではどう書くか / Java／Swiftとの比較 | Cómo se escribe en Java / Comparación con Java y Swift | 比較欄の見出し |
+| この単元で作るもの | Lo que crearás en esta unidad | 単元の教科書の冒頭の囲み |
+| できたらチェックします | Marca la casilla cuando lo hayas hecho | 確認欄の下の定型文。「チェック」は casilla |
+| 完成プロジェクトZIP | ZIP del proyecto terminado | |
+| Runする / Run ▶ を押す | hacer Run / presionar Run ▶ | 「Runして〜」は Haz Run y …。見出しでは Ejecutar la aplicación generada con Run のように ejecutar と併用する |
+| 赤くなる / 赤いエラー | aparecer en rojo / error en rojo | 「R.idが赤い」は R.id aparece en rojo |
 
 ## IntelliJ IDEAの画面に出る日本語（K01。日本語のまま残し、訳をかっこで添える）
 
@@ -194,4 +223,9 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 - Finder の経路は、日本語の直後にかっこで訳を添えてから → を続ける（`<strong>書類 (Documentos) → Kotlin</strong>`）。英語版と同じ形。
 - 範囲は en dash でつなぐ（STEP 00–13、STEP 02–03）。
 - 同じページの見出しを本文で引用するときは “…” で囲み、その見出しの訳と1字も違えない（“Si quieres volver al estado original”、“Si no encuentras el menú”）。
-- 手順の並びを示す → はそのまま残す（`<strong>probar que funciona → crear el APK de nuevo → cambiar el nombre</strong>`）。
+- 手順の並びを示す → はそのまま残す（`<strong>probar que funciona → crear el APK de nuevo → cambiar el nombre</strong>`）。操作の並びでは → の前後に半角スペースを入れる（START → STOP → RESET、Stop → Run）。
+- STEP の見出し下の行は `STEP 00 · Clase 7 · Aprox. 5 min` の形にする（Android 単元。A01・A02 の #160 で決めた）。
+- **アプリの画面に出る日本語は「」のまま残し、意味をかっこで添える**（翻訳skillのルール）。A01・A02 で決めた添え方：「テキストを変更する」 (Cambiar el texto)、「ゲーム中のみボタンを押せます」 (Solo puedes presionar los botones durante el juego)、「1問目: 10 - 数字 =」 (Pregunta 1: 10 - número =)、「9問正解しました！時間は○秒です」 (¡9 aciertos! El tiempo es de ○ segundos)、「4問正解」 (4 aciertos)。原文が「1」「2」のように数字だけを「」で囲むときは、日本語ではないので “1” と引用符にする。
+- `<code>` の中に日本語が残るとき（`app → kotlin+java（またはjava）→ …`）は、`<code>` の直後に意味を添える（(または significa “o”)）。`<code>` の中身は変えない。
+- 図の説明の「（指定AVDで撮影）」は (captura en el AVD designado) にする。
+- 範囲の書き方：ボタンの並びは en dash（los botones 1–3）。数の範囲は del 1 al 9 のように書いてもよい。
