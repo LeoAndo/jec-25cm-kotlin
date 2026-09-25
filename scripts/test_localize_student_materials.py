@@ -926,10 +926,39 @@ class RepositoryTest(unittest.TestCase):
     def test_every_page_can_be_extracted_and_catalogs_are_valid(self):
         self.assertEqual(localize.check(self.settings), [])
 
-    # 参照リポジトリにあった「英語の見出しと版の表が、用語集と混ざらない」テストは移植していない。
-    # このリポジトリは翻訳が1文もない状態から始まったため、英語の訳文が入っていることを前提にした
-    # 検査は、翻訳を始めるまで成り立たなかった。英語の全ページの訳が入ったので（2026-09-25、#56）、
-    # 移植は #88 で行う。
+    def test_english_headers_and_version_table_are_separate_from_terminology(self):
+        """英語の見出しと版の表に、用語の表の「日本語 — English」の形が混ざらない。
+
+        参照リポジトリ（jec-26cm-android-programming-1）の同名のテストを、このリポジトリの単元名と
+        カタログに合わせて移植した（#88。英語の全ページの訳が入った #56 のあと）。用語の表の「言葉」の
+        列は、翻訳skillの決まりで `トップレベル関数 — top-level function` のように日本語を残して訳を
+        添える。merge は同じ原文の訳を全ページへ入れるので、同じ言葉が表の見出しや版の表にも出ると、
+        そこにも「日本語 — English」の形が入り込みうる。見出しと版の表は英語だけであることを確かめる。
+        """
+        output = localize.localized_pages(self.settings, "en")
+        # 「日本語 — English」の形（かな・漢字のうしろに「 — 」）。
+        terminology = re.compile(r"[\u3041-\u309f\u30a1-\u30ff\u4e00-\u9fff][^<]*? — ")
+        header = re.compile(r"<th(?:\s[^>]*)?>(.*?)</th>", re.DOTALL)
+        for name, translated in output.items():
+            source = (self.settings.root / posixpath_source(name, "en")).read_text(encoding="utf-8")
+            with self.subTest(page=name):
+                # 見出しは1つずつ訳されている（数が同じ）。
+                self.assertEqual(len(header.findall(translated)), len(header.findall(source)))
+                for text in header.findall(translated):
+                    # 見出しに残る日本語は、macOSの画面の言葉（ダウンロード (Downloads)）のような
+                    # 決まりで残すものだけで、用語の表の形ではない。
+                    self.assertNotRegex(text, terminology)
+        # K01 の用語の表だけが、Kotlinの言葉を日本語のまま残して英語を添える。同じ表の見出しは英語だけ。
+        first_unit = output["docs/en/hello-kotlin/index.html"]
+        self.assertIn("<td>トップレベル関数 — top-level function</td>", first_unit)
+        self.assertIn("<th>Kotlin term</th>", first_unit)
+        self.assertNotIn("<th>Kotlinの言葉", first_unit)
+        # 版の表（共通資料「ほかの版」）は、見出しも版の名前も英語だけで、用語の表の形は1つもない。
+        versions = output["docs/en/common/other-versions.html"]
+        self.assertIn("<th>Version you use</th>", versions)
+        self.assertIn("<th>Panda 2: Course standard</th>", versions)
+        self.assertIn("<th>Quail 4: Settings to keep</th>", versions)
+        self.assertNotRegex(versions, terminology)
 
     def test_code_blocks_are_identical_in_every_language(self):
         # <pre> とソースのバイト一致（check-teaching-materials.py）が、どの言語でも保たれる。
