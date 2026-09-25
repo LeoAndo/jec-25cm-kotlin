@@ -19,6 +19,18 @@
       "translation": "JEC / Kotlin练习"
     },
     {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "已确认 0 / 15 个步骤"
+    },
+    {
+      "source": "進捗",
+      "translation": "进度"
+    },
+    {
+      "source": "目次",
+      "translation": "目录"
+    },
+    {
       "source": "STEP 00 今日の画面を先に見る",
       "translation": "STEP 00 先看今天的界面"
     },
@@ -79,6 +91,26 @@
       "translation": "STEP 14 第15节课的最后3分钟"
     },
     {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "打开完成项目"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "通用：提交作业与 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
       "source": "カメラにキャラクターを<br>重ねよう",
       "translation": "把角色叠加到<br>相机画面上"
     },
@@ -89,6 +121,10 @@
     {
       "source": "対象：<code>A04FunnyCamera</code> / パッケージ：<code>jp.ac.jec.a04funnycamera</code><br>14〜15コマ目・各90分 / Android Studio Panda 2 / macOS",
       "translation": "项目：<code>A04FunnyCamera</code> / 包名：<code>jp.ac.jec.a04funnycamera</code><br>第14～15节课、每节90分钟 / Android Studio Panda 2 / macOS"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "本单元要制作的东西"
     },
     {
       "source": "カメラの上にキャラクターを重ねるアプリ。14コマ目でプレビューとドラッグ、15コマ目で合成画像の保存へ進みます。",
@@ -119,12 +155,24 @@
       "translation": "把课本和 Android Studio 并排放置。运行目标设备是 <code>jec_25cm_kotlin_Pixel 9a</code>。如果使用的是其他版本的 Android Studio，请在创建前把画面给老师看。"
     },
     {
+      "source": "Java／Swiftとの比較",
+      "translation": "与 Java / Swift 的比较"
+    },
+    {
       "source": "Swiftのletに対応するKotlinのvalを使います。以後も比較欄のJava／Swiftは読むための見本で、Android Studioに貼るのはKotlinです。",
       "translation": "使用与 Swift 的 let 对应的 Kotlin 的 val。之后比较栏中的 Java/Swift 也只是供阅读的示例，粘贴到 Android Studio 中的是 Kotlin。"
     },
     {
+      "source": "ここで止まって確認",
+      "translation": "在这里停下来确认"
+    },
+    {
       "source": "教科書とAndroid Studio Panda 2が開き、指定AVD名が実行先に見える。",
       "translation": "课本和 Android Studio Panda 2 已打开，运行目标设备中能看到指定的 AVD 名称。"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "做完后勾选。无法继续时，把当前画面给老师看。"
     },
     {
       "source": "STEP 01 · 14コマ目 · 目安 12分",
@@ -149,6 +197,10 @@
     {
       "source": "項目",
       "translation": "设置项"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "输入与选择"
     },
     {
       "source": "<code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。",
@@ -181,6 +233,10 @@
     {
       "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
       "translation": "<code>gradle/libs.versions.toml</code>。使用 CameraX 的4个库和 lifecycle。"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
     },
     {
       "source": "プロジェクト直下の <code>build.gradle.kts</code>。",
@@ -333,6 +389,10 @@
     {
       "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。",
       "translation": "打开 <code>app/src/main/res/layout/activity_main.xml</code>，在 <strong>Code</strong> 视图中全文替换。"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 全文"
     },
     {
       "source": "FrameLayoutは後に書いたViewが手前です。PreviewView → 金魚 → ボタンの順なので、金魚を下へ動かすとボタンに隠れる部分があります。XMLのカスタムViewはパッケージ名まで含むクラス名です。<code>@drawable/character</code> に拡張子は付けません。",
@@ -761,6 +821,14 @@
     {
       "source": "自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。",
       "translation": "自己的 A04 已保存，可以确认预览、拖动和保存的 JPEG。"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "看到的情况"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "要确认的位置"
     },
     {
       "source": "同期が止まる",

@@ -23,8 +23,20 @@
       "translation": "已确认 0 / 14 个步骤"
     },
     {
+      "source": "進捗",
+      "translation": "进度"
+    },
+    {
+      "source": "目次",
+      "translation": "目录"
+    },
+    {
       "source": "STEP 00 Android Studioを開く",
       "translation": "STEP 00 打开 Android Studio"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 创建自己的项目"
     },
     {
       "source": "STEP 02 実行するエミュレータを用意する",
@@ -75,6 +87,26 @@
       "translation": "STEP 13 确认第8节课的完成状态"
     },
     {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "打开完成项目"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "通用：提交作业与 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
       "source": "Kotlinで<br>画面を動かそう",
       "translation": "用 Kotlin<br>让界面动起来"
     },
@@ -85,6 +117,10 @@
     {
       "source": "対象：<code>A01HelloAndroid</code> / パッケージ：<code>jp.ac.jec.a01helloandroid</code><br>7〜8コマ目・各90分 / Android Studio Panda 2 / macOS",
       "translation": "项目：<code>A01HelloAndroid</code> / 包名：<code>jp.ac.jec.a01helloandroid</code><br>第7～8节课、每节90分钟 / Android Studio Panda 2 / macOS"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "本单元要制作的东西"
     },
     {
       "source": "文字を変更するボタンと、Snackbar・Toastを出すボタンがあるアプリ。各STEPを上から進めます。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。",
@@ -135,16 +171,68 @@
       "translation": "在 Android 中，不需要自己调用 <code>main</code>。Android 在准备界面时会调用 <code>onCreate</code>。重写继承来的方法这一点与 Java 相同。这段比较只需阅读，现在还不要输入。"
     },
     {
+      "source": "ここで止まって確認",
+      "translation": "在这里停下来确认"
+    },
+    {
       "source": "Android StudioのWelcome画面と、A01の教科書が開いている。",
       "translation": "Android Studio 的 Welcome 界面和 A01 的课本都已打开。"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "做完后勾选。无法继续时，把当前画面给老师看。"
     },
     {
       "source": "STEP 01 · 7コマ目 · 目安 15分",
       "translation": "STEP 01 · 第7节课 · 约15分钟"
     },
     {
+      "source": "自分のプロジェクトを作る",
+      "translation": "创建自己的项目"
+    },
+    {
+      "source": "Welcome画面の <strong>New Project</strong> を選びます。プロジェクトが開いている場合は <strong>File → New → New Project…</strong> です。",
+      "translation": "在 Welcome 界面选择 <strong>New Project</strong>。如果已经打开了项目，则使用 <strong>File → New → New Project…</strong>。"
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> の順に選びます。<code>Empty Activity</code> はCompose用なので、今回は選びません。",
+      "translation": "依次选择 <strong>Phone and Tablet → Empty Views Activity → Next</strong>。<code>Empty Activity</code> 是给 Compose 用的，这次不选。"
+    },
+    {
+      "source": "次の表のとおり入力して、<strong>Finish</strong> を押します。",
+      "translation": "按下表输入，然后点击 <strong>Finish</strong>。"
+    },
+    {
       "source": "項目",
       "translation": "设置项"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "输入与选择"
+    },
+    {
+      "source": "<code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。",
+      "translation": "<code>ユーザ名</code>（用户名）替换成自己在 Mac 上的用户名。<strong>Save location 要包含项目名称。</strong>第一次 Gradle 同步需要网络连接。如果 Mac 询问是否允许访问「書類」（文稿），为了能读取自己的项目，请允许。"
+    },
+    {
+      "source": "授業で使うライブラリの版をそろえる",
+      "translation": "统一课堂上使用的库的版本"
+    },
+    {
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "即使同样是 Panda 2，库的版本也会随创建日期而变化。把左侧的 Project 工具窗口切换为 <strong>Project</strong> 视图，打开 <code>gradle → libs.versions.toml</code>，把全部内容替换为下面的内容。这不是 Kotlin 代码，而是指定所用组件及其版本的设置。"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
+    },
+    {
+      "source": "表示される <strong>Sync Now</strong> を押します。出ない場合は <strong>File → Sync Project with Gradle Files</strong> で同期します。進行表示が消えるまで待ちます。赤いエラーが残るときは先へ進まず、内容を先生に見せます。",
+      "translation": "点击显示出来的 <strong>Sync Now</strong>。如果没有显示，就用 <strong>File → Sync Project with Gradle Files</strong> 同步。等到进度显示消失。如果仍有红色错误，不要继续，把错误内容给老师看。"
+    },
+    {
+      "source": "この手順はPanda 2用です。別の版で生成したプロジェクトに、この設定だけを入れて版を下げないでください。ほかの設定の書き方も違う場合があります。",
+      "translation": "这个步骤是给 Panda 2 用的。不要把这个设置单独放进用其他版本生成的项目里来降低版本。其他设置的写法也可能不同。"
     },
     {
       "source": "Kotlinの継承は <code>:</code>、Javaは <code>extends</code> です。<code>AppCompatActivity()</code> の <code>()</code> は親のコンストラクタを呼ぶ形です。パッケージ名はファイルの所属を表し、画面に出すアプリ名とは別です。",
@@ -189,6 +277,10 @@
     {
       "source": "MacのCPUに合うイメージを使います。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code> です。見つからない項目や利用規約の画面は先生と確認してください。初回のダウンロードが長い場合は、先生の端末で画面を確認してから、指示されたところまで進めます。",
       "translation": "使用与 Mac 的 CPU 匹配的镜像。Apple Silicon 用 <code>arm64-v8a</code>，Intel Mac 用 <code>x86_64</code>。找不到的选项和使用条款的界面，请与老师确认。如果第一次下载时间很长，先在老师的电脑上确认画面，然后进行到老师指示的地方。"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "与 Java / Swift 的比较"
     },
     {
       "source": "Android Studioの実行先でAVDを選びます。Kotlinの文法ではなく、アプリを動かす端末の設定です。",
@@ -265,6 +357,10 @@
     {
       "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
       "translation": "把全部内容替换为下面的 XML。不要粘贴到 <code>MainActivity.kt</code> 中。"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 全文"
     },
     {
       "source": "Runを押して、見出し・変更ボタン・1〜3のボタンが出ることを確認します。",
@@ -587,6 +683,10 @@
       "translation": "STEP 11 · 第8节课 · 约10分钟"
     },
     {
+      "source": "完成コードと照合する",
+      "translation": "与完成代码核对"
+    },
+    {
       "source": "<code>MainActivity.kt</code> の全文です。追加した処理の位置・import・かっこの対応を、自分のコードと照合します。足りない部分を直してRunします。迷ったときはファイル全体をこのコードにそろえられます。",
       "translation": "这是 <code>MainActivity.kt</code> 的全文。把添加的处理的位置、import、括号的对应，与自己的代码核对。补上不足的部分，然后点击 Run。拿不准时，可以把整个文件改成与这段代码一致。"
     },
@@ -621,6 +721,10 @@
     {
       "source": "変える場所",
       "translation": "更改的位置"
+    },
+    {
+      "source": "例",
+      "translation": "示例"
     },
     {
       "source": "変わるもの",
@@ -773,6 +877,10 @@
     {
       "source": "STEP 02のDevice Managerで指定AVDを起動します。",
       "translation": "在 STEP 02 的 Device Manager 中启动指定的 AVD。"
+    },
+    {
+      "source": "R.idが赤い",
+      "translation": "R.id 显示红色"
     },
     {
       "source": "XMLのidとつづりを合わせます。XML側の赤いエラーも先に直します。別のRをimportしません。",

@@ -3,6 +3,14 @@
   "language": "zh-Hans",
   "entries": [
     {
+      "source": "A02 CalcGame — 計算ゲームを作ろう | Kotlin演習",
+      "translation": "A02 CalcGame — 制作计算游戏 | Kotlin练习"
+    },
+    {
+      "source": "Android Studio Panda 2でA02CalcGameを作る、90分×2コマの教科書。停止・再開するタイマーと10問の採点を、Java・Swiftと比較して学びます。",
+      "translation": "用 Android Studio Panda 2 制作 A02CalcGame 的课本，共2节课，每节90分钟。通过与 Java、Swift 比较，学习可以停止和继续的计时器，以及10道题的判分。"
+    },
+    {
       "source": "本文へ移動",
       "translation": "跳转到正文"
     },
@@ -11,16 +19,996 @@
       "translation": "JEC / Kotlin练习"
     },
     {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "已确认 0 / 15 个步骤"
+    },
+    {
+      "source": "進捗",
+      "translation": "进度"
+    },
+    {
+      "source": "目次",
+      "translation": "目录"
+    },
+    {
+      "source": "STEP 00 Android Studioと完成時の画面を確認する",
+      "translation": "STEP 00 确认 Android Studio 和完成时的界面"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 创建自己的项目"
+    },
+    {
+      "source": "STEP 02 エミュレータを選び、画面をXMLで作る",
+      "translation": "STEP 02 选择模拟器，用 XML 制作界面"
+    },
+    {
+      "source": "STEP 03 Viewを取得し、経過時間を保存する場所を用意する",
+      "translation": "STEP 03 获取 View，准备保存经过时间的位置"
+    },
+    {
+      "source": "STEP 04 STARTで時間を進める",
+      "translation": "STEP 04 用 START 开始计时"
+    },
+    {
+      "source": "STEP 05 STOPで止め、STARTで再開し、RESETで戻す",
+      "translation": "STEP 05 用 STOP 停止，用 START 继续，用 RESET 重置"
+    },
+    {
+      "source": "STEP 06 9コマ目の完成状態を確認する",
+      "translation": "STEP 06 确认第9节课的完成状态"
+    },
+    {
+      "source": "STEP 07 10コマ目：前回のプロジェクトを開く",
+      "translation": "STEP 07 第10节课：打开上次的项目"
+    },
+    {
+      "source": "STEP 08 問題の状態と、1問を作るメソッドを追加する",
+      "translation": "STEP 08 添加题目的状态和生成一道题的方法"
+    },
+    {
+      "source": "STEP 09 START・STOP・RESETと問題の状態をつなぐ",
+      "translation": "STEP 09 把 START、STOP、RESET 与题目的状态连起来"
+    },
+    {
+      "source": "STEP 10 9個の数字ボタンに同じ処理を付ける",
+      "translation": "STEP 10 给9个数字按钮加上相同的处理"
+    },
+    {
+      "source": "STEP 11 採点し、10問で時間と結果を表示する",
+      "translation": "STEP 11 判分，并在10题后显示时间和结果"
+    },
+    {
+      "source": "STEP 12 完成コードと照合する",
+      "translation": "STEP 12 与完成代码核对"
+    },
+    {
+      "source": "STEP 13 アレンジできる場所を試す",
+      "translation": "STEP 13 试试可以修改的地方"
+    },
+    {
+      "source": "STEP 14 10コマ目の完成状態を確認する",
+      "translation": "STEP 14 确认第10节课的完成状态"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "打开完成项目"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "通用：提交作业与 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
+      "source": "時間を計って<br>計算ゲームを作ろう",
+      "translation": "制作一个能计时的<br>计算游戏"
+    },
+    {
+      "source": "START・STOP・RESETを使って時間を計り、10問の引き算に答えるアプリを作ります。",
+      "translation": "制作一个应用：用 START、STOP、RESET 计时，并回答10道减法题。"
+    },
+    {
+      "source": "対象：<code>A02CalcGame</code> / パッケージ：<code>jp.ac.jec.a02calcgame</code><br>9〜10コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "项目：<code>A02CalcGame</code> / 包：<code>jp.ac.jec.a02calcgame</code><br>第9～10节课，每节90分钟 / Android Studio Panda 2 / macOS"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "本单元要制作的东西"
+    },
+    {
+      "source": "停止中の時間を除いて再開できるタイマー付きの計算ゲーム。前から順に、自分のプロジェクトへコードを書き足します。完成コードと見本は初めから参照できます。",
+      "translation": "一个带计时器的计算游戏，计时器可以继续计时，且不计入停止期间的时间。从前往后按顺序，把代码添加到自己的项目里。完成代码和示例从一开始就可以参考。"
+    },
+    {
+      "source": "STEP 00 · 9コマ目 · 目安 5分",
+      "translation": "STEP 00 · 第9节课 · 约5分钟"
+    },
+    {
+      "source": "Android Studioと完成時の画面を確認する",
+      "translation": "确认 Android Studio 和完成时的界面"
+    },
+    {
+      "source": "使うIDEは <strong>Android Studio Panda 2</strong>、作るプロジェクトは <code>A02CalcGame</code> です。9コマ目で計時と停止・再開、10コマ目で10問の出題と採点を作ります。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。",
+      "translation": "使用的 IDE 是 <strong>Android Studio Panda 2</strong>，要创建的项目是 <code>A02CalcGame</code>。第9节课制作计时以及停止和继续，第10节课制作10道题的出题和判分。比较栏中的 Java / Swift 只供阅读，不要粘贴到 Kotlin 文件里。"
+    },
+    {
+      "source": "FinderのアプリケーションからAndroid Studioを開きます。",
+      "translation": "从 Finder 的「アプリケーション」（应用程序）中打开 Android Studio。"
+    },
+    {
+      "source": "Welcome画面の版を見ます。違う版の場合は、作り始める前に先生に画面を見せます。",
+      "translation": "查看 Welcome 界面上的版本。如果版本不同，在开始制作之前，把当前画面给老师看。"
+    },
+    {
+      "source": "ブラウザではこの教科書を開いておきます。",
+      "translation": "让这本课本在浏览器中保持打开。"
+    },
+    {
+      "source": "完成すると、STARTで「10から1〜9のどれかを引く問題」が出ます。答えの数字を押すと、正誤にかかわらず次へ進み、10問で正解数と時間が出ます。STOPで休み、STARTで同じ問題から再開できます。",
+      "translation": "完成后，按 START 会出现“用10减去1～9中某个数”的题目。按下答案的数字后，无论对错都会进入下一题，10题结束后显示答对的题数和时间。可以用 STOP 暂停，再用 START 从同一道题继续。"
+    },
+    {
+      "source": "完成版を起動した直後。問題欄は空白で、STARTが押せる",
+      "translation": "完成版刚启动时。题目栏是空白，START 可以按"
+    },
+    {
+      "source": "完成版を起動した直後。問題欄は空白で、STARTが押せる（指定AVDで撮影）",
+      "translation": "完成版刚启动时。题目栏是空白，START 可以按（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "与 Java / Swift 的比较"
+    },
+    {
+      "source": "Androidが画面を準備するときに <code>onCreate</code> を呼びます。Javaのオーバーライドと同じ役割です。今回は <code>main</code> 関数を作りません。",
+      "translation": "Android 在准备界面时会调用 <code>onCreate</code>。它的作用与 Java 中的重写相同。这次不创建 <code>main</code> 函数。"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "在这里停下来确认"
+    },
+    {
+      "source": "Android StudioのWelcome画面と、A02の教科書が開いている。",
+      "translation": "Android Studio 的 Welcome 界面和 A02 的课本都已打开。"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "做完后勾选。无法继续时，把当前画面给老师看。"
+    },
+    {
+      "source": "STEP 01 · 9コマ目 · 目安 15分",
+      "translation": "STEP 01 · 第9节课 · 约15分钟"
+    },
+    {
+      "source": "自分のプロジェクトを作る",
+      "translation": "创建自己的项目"
+    },
+    {
+      "source": "Welcome画面の <strong>New Project</strong> を選びます。プロジェクトが開いている場合は <strong>File → New → New Project…</strong> です。",
+      "translation": "在 Welcome 界面选择 <strong>New Project</strong>。如果已经打开了项目，则使用 <strong>File → New → New Project…</strong>。"
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> の順に選びます。<code>Empty Activity</code> はCompose用なので、今回は選びません。",
+      "translation": "依次选择 <strong>Phone and Tablet → Empty Views Activity → Next</strong>。<code>Empty Activity</code> 是给 Compose 用的，这次不选。"
+    },
+    {
+      "source": "次の表のとおり入力して、<strong>Finish</strong> を押します。",
+      "translation": "按下表输入，然后点击 <strong>Finish</strong>。"
+    },
+    {
       "source": "項目",
       "translation": "设置项"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "输入与选择"
+    },
+    {
+      "source": "<code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。",
+      "translation": "<code>ユーザ名</code>（用户名）替换成自己在 Mac 上的用户名。<strong>Save location 要包含项目名称。</strong>第一次 Gradle 同步需要网络连接。如果 Mac 询问是否允许访问「書類」（文稿），为了能读取自己的项目，请允许。"
+    },
+    {
+      "source": "授業で使うライブラリの版をそろえる",
+      "translation": "统一课堂上使用的库的版本"
+    },
+    {
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "即使同样是 Panda 2，库的版本也会随创建日期而变化。把左侧的 Project 工具窗口切换为 <strong>Project</strong> 视图，打开 <code>gradle → libs.versions.toml</code>，把全部内容替换为下面的内容。这不是 Kotlin 代码，而是指定所用组件及其版本的设置。"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
+    },
+    {
+      "source": "表示される <strong>Sync Now</strong> を押します。出ない場合は <strong>File → Sync Project with Gradle Files</strong> で同期します。進行表示が消えるまで待ちます。赤いエラーが残るときは先へ進まず、内容を先生に見せます。",
+      "translation": "点击显示出来的 <strong>Sync Now</strong>。如果没有显示，就用 <strong>File → Sync Project with Gradle Files</strong> 同步。等到进度显示消失。如果仍有红色错误，不要继续，把错误内容给老师看。"
+    },
+    {
+      "source": "この手順はPanda 2用です。別の版で生成したプロジェクトに、この設定だけを入れて版を下げないでください。ほかの設定の書き方も違う場合があります。",
+      "translation": "这个步骤是给 Panda 2 用的。不要把这个设置单独放进用其他版本生成的项目里来降低版本。其他设置的写法也可能不同。"
+    },
+    {
+      "source": "Kotlinの継承は <code>:</code>、Javaは <code>extends</code> です。Android Studioの設定ファイルと、これから書く <code>MainActivity.kt</code> は別のファイルです。",
+      "translation": "Kotlin 的继承用 <code>:</code>，Java 用 <code>extends</code>。Android Studio 的设置文件和接下来要写的 <code>MainActivity.kt</code> 是不同的文件。"
+    },
+    {
+      "source": "自分の保存先にA02CalcGameがあり、Gradle同期の赤いエラーが消えている。",
+      "translation": "自己的保存位置里有 A02CalcGame，Gradle 同步的红色错误已消失。"
+    },
+    {
+      "source": "STEP 02 · 9コマ目 · 目安 20分",
+      "translation": "STEP 02 · 第9节课 · 约20分钟"
+    },
+    {
+      "source": "エミュレータを選び、画面をXMLで作る",
+      "translation": "选择模拟器，用 XML 制作界面"
+    },
+    {
+      "source": "<strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使い、同名の端末を増やしません。",
+      "translation": "在 <strong>Tools → Device Manager</strong> 中启动 <code>jec_25cm_kotlin_Pixel 9a</code>。使用已有的设备，不要再新增同名设备。"
+    },
+    {
+      "source": "端末がなければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong> を選びます。先生が指定したAPI 31以上のイメージを使い、名前を <code>jec_25cm_kotlin_Pixel 9a</code> にして作成・起動します。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code> です。候補が見つからなければ先生に画面を見せます。",
+      "translation": "如果没有设备，从 <strong>＋ → Create Virtual Device</strong>（或 <strong>Create Device</strong>）中选择 <strong>Phone → Pixel 9a</strong>。使用老师指定的 API 31 或更高版本的镜像，把名称设为 <code>jec_25cm_kotlin_Pixel 9a</code>，然后创建并启动。Apple Silicon 选 <code>arm64-v8a</code>，Intel Mac 选 <code>x86_64</code>。找不到候选项时，把当前画面给老师看。"
+    },
+    {
+      "source": "上部で実行設定 <strong>app</strong> と指定AVDを選び、<strong>Run ▶</strong> を押します。まず <code>Hello World!</code> が出ることを確かめます。",
+      "translation": "在上方选择运行配置 <strong>app</strong> 和指定的 AVD，然后点击 <strong>Run ▶</strong>。先确认出现 <code>Hello World!</code>。"
+    },
+    {
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替え、全文を次で置き換えます。",
+      "translation": "把左侧的 Project 工具窗口切换为 <strong>Project</strong> 视图，打开 <code>app/src/main/res/layout/activity_main.xml</code>。切换到编辑器右上角的 <strong>Code</strong>，把全文替换为下面的内容。"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 全文"
+    },
+    {
+      "source": "もう一度Runします。上から時間、START・STOP・RESET、空白の問題欄、1〜9の数字が並びます。この段階では、ボタンに処理は付いていません。XMLプレビューに出る問題文は <code>tools:text</code> の見本なので、実行画面では空白です。",
+      "translation": "再点击一次 Run。从上到下依次排列着：时间，START、STOP、RESET，空白的题目栏，数字1～9。在这个阶段，按钮还没有加上处理。XML 预览中显示的题目文字是 <code>tools:text</code> 的示例，所以运行界面上是空白。"
     },
     {
       "source": "場所",
       "translation": "位置"
     },
     {
+      "source": "指定と効果",
+      "translation": "设置与效果"
+    },
+    {
+      "source": "外側のLinearLayout",
+      "translation": "外层的 LinearLayout"
+    },
+    {
+      "source": "<code>orientation=\"vertical\"</code> で縦に並べる。idは生成コードが参照する <code>main</code> のまま。",
+      "translation": "用 <code>orientation=\"vertical\"</code> 纵向排列。id 保持为生成代码所引用的 <code>main</code>。"
+    },
+    {
+      "source": "数字の3行",
+      "translation": "数字的3行"
+    },
+    {
+      "source": "<code>orientation=\"horizontal\"</code> で横に並べる。",
+      "translation": "用 <code>orientation=\"horizontal\"</code> 横向排列。"
+    },
+    {
+      "source": "<code>android:enabled=\"false\"</code> で開始前は押せなくする。",
+      "translation": "用 <code>android:enabled=\"false\"</code> 让它们在开始前不能按。"
+    },
+    {
+      "source": "間隔と文字サイズ",
+      "translation": "间距与文字大小"
+    },
+    {
+      "source": "<code>dp</code> は余白などの寸法、<code>sp</code> は文字サイズ。",
+      "translation": "<code>dp</code> 用于边距等尺寸，<code>sp</code> 用于文字大小。"
+    },
+    {
+      "source": "XMLの <code>@+id/btn_start</code> を、Kotlinから <code>R.id.btn_start</code> で参照します。",
+      "translation": "XML 中的 <code>@+id/btn_start</code>，在 Kotlin 中用 <code>R.id.btn_start</code> 引用。"
+    },
+    {
+      "source": "Javaでも同じXMLと <code>R.id.btn_start</code> を使います。XML自体をJava用に書き直す必要はありません。",
+      "translation": "Java 也使用同样的 XML 和 <code>R.id.btn_start</code>。不需要为了 Java 改写 XML 本身。"
+    },
+    {
+      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。",
+      "translation": "<code>android:text</code> 用于运行时，<code>tools:text</code> 用于编辑器的预览。<code>tools:ignore=\"ButtonStyle\"</code> 是完成示例中面向编辑器的设置，不是用来创建点击处理的设置。"
+    },
+    {
+      "source": "指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。",
+      "translation": "指定的 AVD 上显示 00:00、3个操作按钮和1～9，题目栏是空白。"
+    },
+    {
+      "source": "STEP 03 · 9コマ目 · 目安 15分",
+      "translation": "STEP 03 · 第9节课 · 约15分钟"
+    },
+    {
+      "source": "Viewを取得し、経過時間を保存する場所を用意する",
+      "translation": "获取 View，准备保存经过时间的位置"
+    },
+    {
+      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。",
+      "translation": "打开 <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code>，把全文替换为下面的内容。目前先做到把界面和 Kotlin 连接起来为止。"
+    },
+    {
+      "source": "MainActivity.kt · STEP 03終了時の全文",
+      "translation": "MainActivity.kt · STEP 03 结束时的全文"
+    },
+    {
+      "source": "Runして同じ画面が出ることを確かめます。<code>elapsedTimeMillis</code> は停止した瞬間までの経過時間をミリ秒で保存する場所です。<code>txtMessage</code> は、次のコマで <code>onCreate</code> の外に書く出題メソッドからも使います。ほかのViewは <code>onCreate</code> の中で使うのでローカル変数にします。",
+      "translation": "点击 Run，确认出现同样的界面。<code>elapsedTimeMillis</code> 用来以毫秒保存到停止那一刻为止的经过时间。<code>txtMessage</code> 在下一节课写在 <code>onCreate</code> 外面的出题方法中也会用到。其他 View 只在 <code>onCreate</code> 里使用，所以设为局部变量。"
+    },
+    {
+      "source": "<code>lateinit var</code> は「あとで代入する非Nullのプロパティ」です。Javaの後から代入するフィールドに対応しますが、Kotlinでは未代入のまま読むと例外になります。XMLを読み込む <code>setContentView</code> → View取得 → 使用の順を守ります。生成されたインセット処理は画面端との重なりを避けるので残します。",
+      "translation": "<code>lateinit var</code> 是“稍后再赋值的非空属性”。它对应 Java 中稍后赋值的字段，但在 Kotlin 中，还没赋值就读取会抛出异常。要遵守“读取 XML 的 <code>setContentView</code> → 获取 View → 使用”的顺序。生成的边距处理可以避免与屏幕边缘重叠，所以保留。"
+    },
+    {
+      "source": "5つのView取得に赤い波線がなく、RunするとSTEP 02と同じ画面が出ている。",
+      "translation": "获取5个 View 的代码没有红色波浪线，点击 Run 后出现与 STEP 02 相同的界面。"
+    },
+    {
+      "source": "STEP 04 · 9コマ目 · 目安 15分",
+      "translation": "STEP 04 · 第9节课 · 约15分钟"
+    },
+    {
+      "source": "STARTで時間を進める",
+      "translation": "用 START 开始计时"
+    },
+    {
+      "source": "<code>import</code> の一覧に <code>import android.os.SystemClock</code> があることを確かめます。<code>onCreate</code> の <code>val btnReset</code> の行の後、<code>onCreate</code> を閉じる <code>}</code> の前に、次を追加します。",
+      "translation": "确认 <code>import</code> 列表中有 <code>import android.os.SystemClock</code>。在 <code>onCreate</code> 中 <code>val btnReset</code> 那一行之后、关闭 <code>onCreate</code> 的 <code>}</code> 之前，添加下面的内容。"
+    },
+    {
+      "source": "MainActivity.kt · onCreateの末尾へ追加",
+      "translation": "MainActivity.kt · 添加到 onCreate 的末尾"
+    },
+    {
+      "source": "RunしてSTARTを押します。<code>00:00</code> から秒が進み、START・RESETが押せなくなり、STOPが押せる色になります。STOPの処理は次のSTEPで書くため、今は止まりません。Android StudioのStop ■でアプリを終了してから次へ進みます。",
+      "translation": "点击 Run，然后按 START。秒数从 <code>00:00</code> 开始走，START、RESET 变得不能按，STOP 变成可以按的颜色。STOP 的处理在下一个 STEP 写，所以现在停不下来。用 Android Studio 的 Stop ■ 结束应用后，再进入下一步。"
+    },
+    {
+      "source": "<code>SystemClock.elapsedRealtime()</code> は端末起動後の経過ミリ秒です。時計の「何時何分」ではありません。Chronometerは「今の経過ミリ秒 − 基準時刻」を表示するので、初回は今を基準にして0から始めます。",
+      "translation": "<code>SystemClock.elapsedRealtime()</code> 是设备启动后经过的毫秒数，不是时钟上的“几点几分”。Chronometer 显示的是“当前经过的毫秒数 − 基准时间”，所以第一次以当前时刻为基准，从0开始。"
+    },
+    {
+      "source": "Kotlinの <code>{ _ -&gt; … }</code> はJavaのクリック用ラムダに相当します。<code>_</code> は受け取ったViewを使わない印です。<code>start()</code> だけでは基準時刻を設定しないため、その直前に <code>setBase</code> を呼びます。",
+      "translation": "Kotlin 的 <code>{ _ -&gt; … }</code> 相当于 Java 中用于点击的 lambda。<code>_</code> 表示不使用接收到的 View。只调用 <code>start()</code> 不会设置基准时间，所以在它之前先调用 <code>setBase</code>。"
+    },
+    {
+      "source": "STARTを押すと秒が進み、STARTとRESETが押せない色に変わっている。",
+      "translation": "按 START 后秒数开始走，START 和 RESET 变成不能按的颜色。"
+    },
+    {
+      "source": "STEP 05 · 9コマ目 · 目安 17分",
+      "translation": "STEP 05 · 第9节课 · 约17分钟"
+    },
+    {
+      "source": "STOPで止め、STARTで再開し、RESETで戻す",
+      "translation": "用 STOP 停止，用 START 继续，用 RESET 重置"
+    },
+    {
+      "source": "STARTのリスナを閉じる <code>}</code> の後、<code>onCreate</code> の内側に、STOPとRESETの処理を続けて追加します。STARTのラムダの内側には入れません。",
+      "translation": "在关闭 START 监听器的 <code>}</code> 之后、<code>onCreate</code> 的内部，接着添加 STOP 和 RESET 的处理。不要放进 START 的 lambda 内部。"
+    },
+    {
+      "source": "MainActivity.kt · STARTのリスナの後へ追加",
+      "translation": "MainActivity.kt · 添加到 START 的监听器之后"
+    },
+    {
+      "source": "Run→STARTで5秒ほど動かし、STOPを押します。",
+      "translation": "Run → START 后让计时器走5秒左右，然后按 STOP。"
+    },
+    {
+      "source": "5秒待ちます。表示が進まないことを見ます。",
+      "translation": "等5秒。确认显示不再前进。"
+    },
+    {
+      "source": "STARTを押します。停止前の秒数の続きから進みます。",
+      "translation": "按 START。从停止前的秒数接着走。"
+    },
+    {
+      "source": "STOP→RESETを押します。時間が <code>00:00</code> に戻ります。",
+      "translation": "按 STOP → RESET。时间回到 <code>00:00</code>。"
+    },
+    {
+      "source": "操作",
+      "translation": "操作"
+    },
+    {
+      "source": "計算",
+      "translation": "计算"
+    },
+    {
+      "source": "例（ミリ秒）",
+      "translation": "示例（毫秒）"
+    },
+    {
+      "source": "保存する経過時間 = 今 − 基準時刻",
+      "translation": "要保存的经过时间 = 当前 − 基准时间"
+    },
+    {
+      "source": "5秒待ってSTART",
+      "translation": "等5秒后 START"
+    },
+    {
+      "source": "新しい基準時刻 = 今 − 保存した経過時間",
+      "translation": "新的基准时间 = 当前 − 保存的经过时间"
+    },
+    {
+      "source": "再開直後の表示",
+      "translation": "刚继续时的显示"
+    },
+    {
+      "source": "今 − 新しい基準時刻",
+      "translation": "当前 − 新的基准时间"
+    },
+    {
+      "source": "110000 − 105000 = 5000（5秒）",
+      "translation": "110000 − 105000 = 5000（5秒）"
+    },
+    {
+      "source": "<code>stop()</code> は表示の更新を止めますが、基準時刻を書き換えません。STOPで経過時間を保存し、STARTで基準時刻をずらすことで、休んだ時間を除きます。Javaと同じAPIなので <code>getBase()</code>・<code>setEnabled()</code> の書き方をそのまま使えます。",
+      "translation": "<code>stop()</code> 会停止更新显示，但不会改写基准时间。通过在 STOP 时保存经过时间、在 START 时移动基准时间，就把暂停的时间排除在外了。因为和 Java 是同一套 API，<code>getBase()</code>、<code>setEnabled()</code> 的写法可以直接使用。"
+    },
+    {
+      "source": "STOP中は秒が進まず、STARTで続きから進み、STOP→RESETで00:00に戻っている。",
+      "translation": "STOP 期间秒数不走，按 START 后接着走，按 STOP → RESET 后回到 00:00。"
+    },
+    {
+      "source": "STEP 06 · 9コマ目 · 目安 3分",
+      "translation": "STEP 06 · 第9节课 · 约3分钟"
+    },
+    {
+      "source": "9コマ目の完成状態を確認する",
+      "translation": "确认第9节课的完成状态"
+    },
+    {
+      "source": "最後の3分です。START→STOP→START→STOP→RESETを順に押します。自分のプロジェクトの保存先が <code>Documents/Kotlin/A02CalcGame</code> になっていることも見ます。",
+      "translation": "最后3分钟。依次按 START → STOP → START → STOP → RESET。同时确认自己项目的保存位置是 <code>Documents/Kotlin/A02CalcGame</code>。"
+    },
+    {
+      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。次回は同じプロジェクトを開きます。",
+      "translation": "现在只有时间在走。题目栏是空白、数字按钮还没有处理，这就是这个阶段的完成状态。下次打开同一个项目。"
+    },
+    {
+      "source": "<code>elapsedTimeMillis</code> をクラスのプロパティに置いたので、STOPとSTARTの両方から同じ値を使えます。",
+      "translation": "因为把 <code>elapsedTimeMillis</code> 放在了类的属性里，STOP 和 START 都能使用同一个值。"
+    },
+    {
+      "source": "Javaでもクラスのフィールドなら、複数のクリック用ラムダから同じ値を読み書きできます。",
+      "translation": "在 Java 中，如果是类的字段，多个用于点击的 lambda 也能读写同一个值。"
+    },
+    {
+      "source": "入力中の場所で迷ったら、<code>onCreate</code> の中にView取得と3つのリスナが並んでいるかを見ます。リスナを互いの内側に入れないことが大切です。",
+      "translation": "如果不确定正在输入的位置，就看看 <code>onCreate</code> 里是否依次排着获取 View 的代码和3个监听器。重要的是不要把监听器放进彼此的内部。"
+    },
+    {
+      "source": "停止・再開・リセットが動き、問題欄は空白、MainActivity.ktに3つのリスナが並んでいる。",
+      "translation": "停止、继续、重置都能用，题目栏是空白，MainActivity.kt 中依次排着3个监听器。"
+    },
+    {
+      "source": "STEP 07 · 10コマ目 · 目安 5分",
+      "translation": "STEP 07 · 第10节课 · 约5分钟"
+    },
+    {
+      "source": "10コマ目：前回のプロジェクトを開く",
+      "translation": "第10节课：打开上次的项目"
+    },
+    {
+      "source": "Android StudioのWelcome画面の <strong>Open</strong>（開いている場合は <strong>File → Open…</strong>）で、自分の <code>Documents/Kotlin/A02CalcGame</code> を選びます。",
+      "translation": "在 Android Studio 的 Welcome 界面用 <strong>Open</strong>（已经打开项目时用 <strong>File → Open…</strong>），选择自己的 <code>Documents/Kotlin/A02CalcGame</code>。"
+    },
+    {
+      "source": "実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。",
+      "translation": "选择运行配置 <strong>app</strong> 和 <code>jec_25cm_kotlin_Pixel 9a</code>，然后点击 Run。"
+    },
+    {
+      "source": "START→STOP→START→STOP→RESETを押し、前回のタイマーを確かめます。",
+      "translation": "依次按 START → STOP → START → STOP → RESET，确认上次做的计时器。"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を開きます。<code>elapsedTimeMillis</code> と <code>txtMessage</code> がクラスの内側、<code>onCreate</code> の外側にあることを見ます。",
+      "translation": "打开 <code>MainActivity.kt</code>。确认 <code>elapsedTimeMillis</code> 和 <code>txtMessage</code> 在类的内部、<code>onCreate</code> 的外部。"
+    },
+    {
+      "source": "今日も同じプロジェクトに書き足します。Runし直した直後はプロパティが初期値で作られるので、前回の秒数を残す作りではありません。",
+      "translation": "今天也在同一个项目里继续添加。重新 Run 之后，属性会以初始值创建，所以这个应用的设计不会保留上次的秒数。"
+    },
+    {
+      "source": "自分のA02CalcGameが開き、停止・再開・リセットが前回と同じように動いている。",
+      "translation": "自己的 A02CalcGame 已打开，停止、继续、重置和上次一样能用。"
+    },
+    {
+      "source": "STEP 08 · 10コマ目 · 目安 15分",
+      "translation": "STEP 08 · 第10节课 · 约15分钟"
+    },
+    {
+      "source": "問題の状態と、1問を作るメソッドを追加する",
+      "translation": "添加题目的状态和生成一道题的方法"
+    },
+    {
+      "source": "<code>class MainActivity</code> の内側、<code>onCreate</code> より前に、次の4行を追加します。前回の <code>elapsedTimeMillis</code> と <code>txtMessage</code> は残します。",
+      "translation": "在 <code>class MainActivity</code> 的内部、<code>onCreate</code> 之前，添加下面4行。上次写的 <code>elapsedTimeMillis</code> 和 <code>txtMessage</code> 保留不动。"
+    },
+    {
+      "source": "MainActivity.kt · クラスのプロパティへ追加",
+      "translation": "MainActivity.kt · 添加到类的属性"
+    },
+    {
+      "source": "ファイル上部の <code>import</code> 一覧へ <code>import java.util.concurrent.ThreadLocalRandom</code> を追加します。次のメソッドは、<strong>onCreateを閉じる <code>}</code> の後、MainActivityを閉じる最後の <code>}</code> の前</strong>に追加します。",
+      "translation": "在文件上方的 <code>import</code> 列表中添加 <code>import java.util.concurrent.ThreadLocalRandom</code>。下面的方法要添加在<strong>关闭 onCreate 的 <code>}</code> 之后、关闭 MainActivity 的最后一个 <code>}</code> 之前</strong>。"
+    },
+    {
+      "source": "MainActivity.kt · onCreateの外、クラスの内側へ追加",
+      "translation": "MainActivity.kt · 添加到 onCreate 外面、类的内部"
+    },
+    {
+      "source": "<code>nextInt(1, 10)</code> は1を含み、10を含まないので1〜9です。<code>10 - randomNumber</code> の答えも1〜9になります。<code>nowNo</code> は問題番号、<code>correctNo</code> は正解数、<code>answer</code> は現在の答え、<code>isPlaying</code> は数字への回答を受け付ける状態です。",
+      "translation": "<code>nextInt(1, 10)</code> 包含1、不包含10，所以是1～9。<code>10 - randomNumber</code> 的答案也是1～9。<code>nowNo</code> 是题号，<code>correctNo</code> 是答对的题数，<code>answer</code> 是当前的答案，<code>isPlaying</code> 表示是否接受用数字作答。"
+    },
+    {
+      "source": "Runしてタイマーが動くことを確かめます。ここでは <code>startQuestion()</code> をまだ呼んでいないため、問題欄は空白です。メソッド名に赤い波線がなければ次へ進みます。",
+      "translation": "点击 Run，确认计时器能走。这里还没有调用 <code>startQuestion()</code>，所以题目栏是空白。方法名上没有红色波浪线，就进入下一步。"
+    },
+    {
+      "source": "戻り値のないKotlinの <code>fun</code> は、Javaの <code>void</code> メソッドに対応します。Javaの乱数APIはKotlinからもそのまま呼べます。コメントにある別APIの行は実行されません。この授業ではAPI 31から使う実装のまま進めます。",
+      "translation": "没有返回值的 Kotlin <code>fun</code> 对应 Java 的 <code>void</code> 方法。Java 的随机数 API 在 Kotlin 中也可以直接调用。注释里那行使用另一个 API 的代码不会执行。本课程沿用从 API 31 起可用的实现。"
+    },
+    {
+      "source": "startQuestionと4つのプロパティに赤い波線がなく、タイマーは動き、問題欄はまだ空白である。",
+      "translation": "startQuestion 和4个属性上没有红色波浪线，计时器能走，题目栏仍是空白。"
+    },
+    {
+      "source": "STEP 09 · 10コマ目 · 目安 10分",
+      "translation": "STEP 09 · 第10节课 · 约10分钟"
+    },
+    {
+      "source": "START・STOP・RESETと問題の状態をつなぐ",
+      "translation": "把 START、STOP、RESET 与题目的状态连起来"
+    },
+    {
+      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナを、まとめて次に置き換えます</strong>。View取得の行は残します。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
+      "translation": "把 <code>onCreate</code> 里 START、STOP、RESET 的<strong>3个监听器，一起替换为下面的内容</strong>。获取 View 的行保留。START 只在第一次出题，STOP 停止作答，RESET 还会把题号和答对的题数一起重置。"
+    },
+    {
+      "source": "MainActivity.kt · 3つのリスナを置き換える",
+      "translation": "MainActivity.kt · 替换3个监听器"
+    },
+    {
+      "source": "Run→STARTで「1問目: 10 - 数字 =」が出ます。数字は毎回変わるので、画像と同じになる必要はありません。",
+      "translation": "Run → START 后，会出现「1問目: 10 - 数字 =」（第1题：10 - 数字 =）。数字每次都会变，不必和图片相同。"
+    },
+    {
+      "source": "STOPを押します。時間と問題がそのまま残ります。",
+      "translation": "按 STOP。时间和题目原样保留。"
+    },
+    {
+      "source": "STARTを押します。問題を作り直さず、同じ1問のまま時間だけが続きます。",
+      "translation": "按 START。不会重新生成题目，还是同一道题，只有时间继续走。"
+    },
+    {
+      "source": "STOP→RESETで問題が消え、もう一度STARTすると1問目が出ます。",
+      "translation": "按 STOP → RESET 后题目消失，再按一次 START 就会出现第1题。"
+    },
+    {
+      "source": "完成版をSTOPで止めた例。時間と現在の問題が残る",
+      "translation": "用 STOP 停止完成版的例子。时间和当前题目保留"
+    },
+    {
+      "source": "完成版をSTOPで止めた例。時間と現在の問題が残る（指定AVDで撮影）",
+      "translation": "用 STOP 停止完成版的例子。时间和当前题目保留（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "<code>answer == 0</code> は「まだ問題がない」という目印です。実際の答えが1〜9だから区別できます。毎回STARTで問題を作ると、STOP前の問題が別の問題へ変わってしまいます。",
+      "translation": "<code>answer == 0</code> 是“还没有题目”的标志。因为实际的答案是1～9，所以能区分开。如果每次按 START 都生成题目，STOP 之前的题目就会变成另一道题。"
+    },
+    {
+      "source": "STARTで1問目が出て、STOP→STARTでも同じ問題が残り、RESETで問題欄が空白になる。",
+      "translation": "按 START 出现第1题，按 STOP → START 后仍是同一道题，按 RESET 后题目栏变成空白。"
+    },
+    {
+      "source": "STEP 10 · 10コマ目 · 目安 15分",
+      "translation": "STEP 10 · 第10节课 · 约15分钟"
+    },
+    {
+      "source": "9個の数字ボタンに同じ処理を付ける",
+      "translation": "给9个数字按钮加上相同的处理"
+    },
+    {
+      "source": "<code>import</code> 一覧に <code>import com.google.android.material.snackbar.Snackbar</code> を追加します。RESETのリスナの後、<code>onCreate</code> の内側へ次を追加します。まずは押した数字をSnackbarに出して、ボタンと処理の対応だけを確かめます。",
+      "translation": "在 <code>import</code> 列表中添加 <code>import com.google.android.material.snackbar.Snackbar</code>。在 RESET 的监听器之后、<code>onCreate</code> 的内部添加下面的内容。先把按下的数字显示在 Snackbar 上，只确认按钮和处理的对应关系。"
+    },
+    {
+      "source": "MainActivity.kt · RESETのリスナの後へ追加",
+      "translation": "MainActivity.kt · 添加到 RESET 的监听器之后"
+    },
+    {
+      "source": "Run直後に数字を押します。「ゲーム中のみボタンを押せます」が出ます。",
+      "translation": "Run 之后立刻按数字。会出现「ゲーム中のみボタンを押せます」（只能在游戏进行中按按钮）。"
+    },
+    {
+      "source": "STARTを押し、1・5・9を順に押します。それぞれの数字がSnackbarに出ます。まだ採点しないため問題番号は1のままです。",
+      "translation": "按 START，然后依次按1、5、9。每个数字都会显示在 Snackbar 上。因为还没有判分，题号仍是1。"
+    },
+    {
+      "source": "STOPを押してから数字を押します。案内だけが出て、問題は変わりません。",
+      "translation": "按 STOP 之后再按数字。只会出现提示，题目不变。"
+    },
+    {
+      "source": "停止中に数字を押すと出る案内",
+      "translation": "停止期间按数字时出现的提示"
+    },
+    {
+      "source": "停止中に数字を押すと出る案内（指定AVDで撮影）",
+      "translation": "停止期间按数字时出现的提示（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "<code>intArrayOf</code> はJavaの <code>int[]</code>、<code>for (id in …)</code> は拡張for文に対応します。<code>return@setOnClickListener</code> はこのクリック用ラムダだけを終えます。<code>onCreate</code> を終える処理ではありません。ボタンの文字を <code>toString().toInt()</code> で数へ変えるので、数字の表示は1〜9のまま使います。",
+      "translation": "<code>intArrayOf</code> 对应 Java 的 <code>int[]</code>，<code>for (id in …)</code> 对应增强 for 语句。<code>return@setOnClickListener</code> 只结束这个用于点击的 lambda，不是结束 <code>onCreate</code> 的处理。因为要用 <code>toString().toInt()</code> 把按钮上的文字转成数字，所以按钮显示的数字保持1～9不变。"
+    },
+    {
+      "source": "開始前・停止中は案内が出て、実行中は押した1・5・9がSnackbarに出る。",
+      "translation": "开始前和停止期间会出现提示，运行中按下的1、5、9会显示在 Snackbar 上。"
+    },
+    {
+      "source": "STEP 11 · 10コマ目 · 目安 20分",
+      "translation": "STEP 11 · 第10节课 · 约20分钟"
+    },
+    {
+      "source": "採点し、10問で時間と結果を表示する",
+      "translation": "判分，并在10题后显示时间和结果"
+    },
+    {
+      "source": "<code>import</code> 一覧へ <code>import java.util.concurrent.TimeUnit</code> を追加します。前のSTEPで足した <code>val numberButtonIds</code> から <code>for</code> を閉じる <code>}</code> までを、次に置き換えます。押した数字だけを出す仮のSnackbarはなくなります。",
+      "translation": "在 <code>import</code> 列表中添加 <code>import java.util.concurrent.TimeUnit</code>。把上一个 STEP 添加的从 <code>val numberButtonIds</code> 到关闭 <code>for</code> 的 <code>}</code> 为止的部分，替换为下面的内容。只显示按下数字的临时 Snackbar 会去掉。"
+    },
+    {
+      "source": "MainActivity.kt · 数字ボタンの処理全体を置き換える",
+      "translation": "MainActivity.kt · 替换数字按钮的整个处理"
+    },
+    {
+      "source": "Run→STARTで10問答えます。1問だけ、計算結果と違う数字を押し、残り9問は正しい数字を押してください。最後は「9問正解しました！時間は○秒です」となり、時間が止まります。10問目の正誤も数えた後で終了する順です。",
+      "translation": "Run → START 后回答10道题。只有1道题按与计算结果不同的数字，其余9道题请按正确的数字。最后会显示「9問正解しました！時間は○秒です」（答对了9题！用时○秒），时间停止。顺序是先把第10题的对错也计入，然后才结束。"
+    },
+    {
+      "source": "1問を誤答し、9問を正答して終了した例",
+      "translation": "答错1题、答对9题后结束的例子"
+    },
+    {
+      "source": "1問を誤答し、9問を正答して終了した例（指定AVDで撮影）",
+      "translation": "答错1题、答对9题后结束的例子（在指定的 AVD 上截图）"
+    },
+    {
+      "source": "<code>nowNo &lt;= 9</code> の間は、回答後に番号を増やして次の問題を作ります。10問目では <code>else</code> へ進みます。間違えても次の問題へ進み、正解数だけが増えません。結果の秒数は経過ミリ秒を秒へ変換した整数で、小数部分は切り捨てます。",
+      "translation": "在 <code>nowNo &lt;= 9</code> 期间，作答后把题号加1并生成下一题。到第10题时进入 <code>else</code>。答错也会进入下一题，只是答对的题数不增加。结果中的秒数是把经过的毫秒数换算成秒的整数，小数部分舍去。"
+    },
+    {
+      "source": "終了後に数字を押すと案内が出て、結果は変わりません。RESET→STARTで1問目からやり直せます。",
+      "translation": "结束后按数字会出现提示，结果不变。按 RESET → START 可以从第1题重新开始。"
+    },
+    {
+      "source": "KotlinでもJavaと同じ順番で、正解数を更新してから終了を判定します。<code>TimeUnit</code> もJavaのAPIです。画面の時間と結果の秒数は同じ経過時間が元ですが、時間表示は更新間隔があるため、停止の瞬間に1秒程度ずれることがあります。",
+      "translation": "Kotlin 也和 Java 一样，按先更新答对的题数、再判断是否结束的顺序进行。<code>TimeUnit</code> 也是 Java 的 API。界面上的时间和结果中的秒数来自同一个经过时间，但时间显示有更新间隔，所以在停止的那一刻可能相差1秒左右。"
+    },
+    {
+      "source": "1問誤答・9問正答で9問正解と表示され、終了後はRESETだけが操作ボタンの中で押せる。",
+      "translation": "答错1题、答对9题时，显示答对了9题；结束后，操作按钮中只有 RESET 可以按。"
+    },
+    {
+      "source": "STEP 12 · 10コマ目 · 目安 10分",
+      "translation": "STEP 12 · 第10节课 · 约10分钟"
+    },
+    {
+      "source": "完成コードと照合する",
+      "translation": "与完成代码核对"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> の全文です。自分のファイルと照合します。<code>package</code>・<code>import</code> の一覧、クラスのプロパティ、<code>onCreate</code> 内の4組の処理、外側の <code>startQuestion</code> の順です。",
+      "translation": "这是 <code>MainActivity.kt</code> 的全文。与自己的文件核对。顺序是：<code>package</code>、<code>import</code> 列表，类的属性，<code>onCreate</code> 里的4组处理，以及外面的 <code>startQuestion</code>。"
+    },
+    {
+      "source": "MainActivity.kt · 完成全文",
+      "translation": "MainActivity.kt · 完成后的全文"
+    },
+    {
+      "source": "状態",
+      "translation": "状态"
+    },
+    {
+      "source": "数字を押すと",
+      "translation": "按数字时"
+    },
+    {
+      "source": "起動直後・RESET後",
+      "translation": "刚启动时、RESET 后"
+    },
+    {
+      "source": "押せる",
+      "translation": "可以按"
+    },
+    {
+      "source": "押せない",
+      "translation": "不能按"
+    },
+    {
+      "source": "案内",
+      "translation": "提示"
+    },
+    {
+      "source": "ゲーム中",
+      "translation": "游戏进行中"
+    },
+    {
+      "source": "採点して次の問題か結果",
+      "translation": "判分后进入下一题或显示结果"
+    },
+    {
+      "source": "STOP後",
+      "translation": "STOP 后"
+    },
+    {
+      "source": "10問終了後",
+      "translation": "10题结束后"
+    },
+    {
+      "source": "Runして表の4状態を順に確かめます。初回の実行では時間と問題番号が進み、STOP中はどちらも止まります。RESETしたら問題欄と正解数を引き継がず、次のゲームを始めます。",
+      "translation": "点击 Run，依次确认表中的4种状态。第一次运行时，时间和题号都会前进，STOP 期间两者都停止。RESET 之后，不会沿用之前的题目栏和答对的题数，而是开始下一局游戏。"
+    },
+    {
+      "source": "Javaの <code>setText</code> はKotlinから <code>text =</code> と書けます。完成コードでは <code>getText()</code> や <code>setEnabled()</code> も使っています。同じJavaのViewに対する呼び出しなので、両方の記法の対応を確認します。",
+      "translation": "Java 的 <code>setText</code> 在 Kotlin 中可以写成 <code>text =</code>。完成代码中也用到了 <code>getText()</code> 和 <code>setEnabled()</code>。它们都是对同一个 Java View 的调用，请确认两种写法的对应关系。"
+    },
+    {
+      "source": "完成全文と照合でき、起動・ゲーム中・STOP後・終了後で表どおりの動作になる。",
+      "translation": "能与完成后的全文核对上，启动时、游戏进行中、STOP 后、结束后的动作都和表中一致。"
+    },
+    {
+      "source": "STEP 13 · 10コマ目 · 目安 12分",
+      "translation": "STEP 13 · 第10节课 · 约12分钟"
+    },
+    {
+      "source": "アレンジできる場所を試す",
+      "translation": "试试可以修改的地方"
+    },
+    {
+      "source": "まず、今の完成状態で一度Runします。その後、次の表から1か所選び、変更→Run→確認の順で試します。例と同じにする必要はありません。1か所ずつ変えると、画面との対応を追えます。",
+      "translation": "首先，在当前的完成状态下先 Run 一次。然后从下表中选一处，按更改 → Run → 确认的顺序试试。不必和示例相同。一次只改一处，就能看清它与界面的对应关系。"
+    },
+    {
+      "source": "変更する場所",
+      "translation": "更改的位置"
+    },
+    {
+      "source": "例",
+      "translation": "示例"
+    },
+    {
+      "source": "画面・動作への影響",
+      "translation": "对界面与动作的影响"
+    },
+    {
+      "source": "XMLのbtn_startの <code>android:text</code>",
+      "translation": "XML 中 btn_start 的 <code>android:text</code>"
+    },
+    {
+      "source": "開始ボタンの文字が変わる。idは変更しない。",
+      "translation": "开始按钮的文字改变。id 不要改。"
+    },
+    {
+      "source": "XMLの数字の行の <code>android:layout_marginTop</code>",
+      "translation": "XML 中数字行的 <code>android:layout_marginTop</code>"
+    },
+    {
+      "source": "その行の上の間隔が広がる。",
+      "translation": "那一行上方的间距变大。"
+    },
+    {
+      "source": "Kotlinの <code>if (nowNo &lt;= 9)</code>",
+      "translation": "Kotlin 中的 <code>if (nowNo &lt;= 9)</code>"
+    },
+    {
+      "source": "5問で終了する。初期値の1はそのまま。",
+      "translation": "5题就结束。初始值1保持不变。"
+    },
+    {
+      "source": "結果文の文字列",
+      "translation": "结果语句的字符串"
+    },
+    {
+      "source": "<code>問正解しました！時間は</code> の言い方を変える",
+      "translation": "改变 <code>問正解しました！時間は</code>（题答对了！用时）的说法"
+    },
+    {
+      "source": "正解数と時間の間の文章が変わる。",
+      "translation": "答对的题数和时间之间的文字改变。"
+    },
+    {
+      "source": "5問版なら、1問誤答・4問正答で「4問正解」と表示されるかを見ます。試し終えたら元の値に戻してRunし、完成版の10問で終了する状態を残します。提出用に自分の案を進めるときは、この表を変更箇所の手がかりにできます。",
+      "translation": "如果是5题版，就看答错1题、答对4题时是否显示「4問正解」（答对4题）。试完后改回原来的值并 Run，保留完成版10题结束的状态。为提交作业推进自己的方案时，可以把这个表作为寻找修改位置的线索。"
+    },
+    {
+      "source": "数字ボタンは表示を整数に変換して採点するので、1〜9のまま使います。また、<code>10 - randomNumber</code> と乱数の範囲は一組です。片方だけ変えると、ボタンで答えられない数や、未開始の目印と同じ0が生まれるため、ここでは変えません。",
+      "translation": "数字按钮是把显示的文字转成整数来判分的，所以保持1～9不变。另外，<code>10 - randomNumber</code> 和随机数的范围是一组。只改其中一个，会出现按钮无法回答的数，或者与未开始标志相同的0，所以这里不改。"
+    },
+    {
+      "source": "5問で終える条件が4なのは、1〜4問目への回答後に「次の問題」を作る判定だからです。KotlinとJavaで境界の考え方は同じです。",
+      "translation": "5题结束的条件是4，是因为这个判断是在回答第1～4题之后生成“下一题”。Kotlin 和 Java 对边界的考虑方式相同。"
+    },
+    {
+      "source": "選んだ変更の効果が画面に現れ、試した後は元の表示と10問で終了する状態に戻っている。",
+      "translation": "所选更改的效果出现在界面上，试完后已恢复为原来的显示和10题结束的状态。"
+    },
+    {
+      "source": "STEP 14 · 10コマ目 · 目安 3分",
+      "translation": "STEP 14 · 第10节课 · 约3分钟"
+    },
+    {
+      "source": "10コマ目の完成状態を確認する",
+      "translation": "确认第10节课的完成状态"
+    },
+    {
+      "source": "最後の3分です。自分のアプリで、開始前に数字を押す→START→STOP→START→10問回答→RESETを順に試します。時間や問題の数字は画像と違ってかまいません。",
+      "translation": "最后3分钟。在自己的应用里，依次试：开始前按数字 → START → STOP → START → 回答10题 → RESET。时间和题目中的数字与图片不同也没关系。"
+    },
+    {
+      "source": "STOPの前後で問題が同じで、休んだ時間は加わらない。",
+      "translation": "STOP 前后题目相同，暂停的时间不会计入。"
+    },
+    {
+      "source": "10問後に正解数と秒数が出る。",
+      "translation": "10题之后显示答对的题数和秒数。"
+    },
+    {
+      "source": "RESET後は <code>00:00</code> と空白の問題欄になり、もう一度1問目から始められる。",
+      "translation": "RESET 后变为 <code>00:00</code> 和空白的题目栏，可以再次从第1题开始。"
+    },
+    {
+      "source": "自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
+      "translation": "保存自己项目的 <code>MainActivity.kt</code> 和 <code>activity_main.xml</code>。继续修改时，从 STEP 13 的表中确认要改的位置和效果，再进行。"
+    },
+    {
+      "source": "<code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。",
+      "translation": "用 <code>correctNo++</code> 计数，用 <code>txtMessage.text = message</code> 显示到界面上。"
+    },
+    {
+      "source": "Javaでは <code>correctNo++;</code> と <code>txtMessage.setText(message);</code> に対応します。計算した結果をViewへ渡す流れは同じです。",
+      "translation": "在 Java 中对应 <code>correctNo++;</code> 和 <code>txtMessage.setText(message);</code>。把计算结果传给 View 的流程是一样的。"
+    },
+    {
+      "source": "完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
+      "translation": "完成示例是用来比较代码和动作的资料。保留自己创建的项目，修改也在这个项目里一边确认修改位置一边进行。"
+    },
+    {
+      "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
+      "translation": "停止、继续、10题的结果、重置都能用，自己的 MainActivity.kt 和 XML 已保存。"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "看到的情况"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "要确认的位置"
+    },
+    {
+      "source": "Gradle同期が失敗する",
+      "translation": "Gradle 同步失败"
+    },
+    {
+      "source": "Panda 2かを見て、STEP 01の設定全文と照合します。ほかの版なら先生に画面を見せます。",
+      "translation": "确认是不是 Panda 2，并与 STEP 01 的设置全文核对。如果是其他版本，把当前画面给老师看。"
+    },
+    {
+      "source": "XMLがない",
+      "translation": "没有 XML"
+    },
+    {
+      "source": "作成時にEmpty Views Activityを選んだか確認します。Empty ActivityはCompose用です。",
+      "translation": "确认创建时选的是不是 Empty Views Activity。Empty Activity 是给 Compose 用的。"
+    },
+    {
+      "source": "R.idが赤い",
+      "translation": "R.id 显示红色"
+    },
+    {
+      "source": "XMLのidとKotlinの名前が同じか見ます。XMLの赤いエラーを先に直します。",
+      "translation": "确认 XML 中的 id 和 Kotlin 中的名称是否相同。先修正 XML 中的红色错误。"
+    },
+    {
+      "source": "アプリがすぐ閉じる",
+      "translation": "应用马上关闭"
+    },
+    {
+      "source": "View取得がsetContentViewより後か、txtMessageへ代入してから使っているかを確認します。",
+      "translation": "确认获取 View 是否在 setContentView 之后，以及是否先给 txtMessage 赋值再使用。"
+    },
+    {
+      "source": "STARTで大きな時間が出る",
+      "translation": "按 START 后显示很大的时间"
+    },
+    {
+      "source": "start()より前のsetBaseの行とelapsedTimeMillisの初期値を確認します。",
+      "translation": "确认 start() 之前的 setBase 那一行，以及 elapsedTimeMillis 的初始值。"
+    },
+    {
+      "source": "停止中の時間が加わる",
+      "translation": "停止期间的时间被计入"
+    },
+    {
+      "source": "STOPの経過時間保存と、STARTの「今 − 保存した時間」の両方をSTEP 05・09で照合します。",
+      "translation": "把 STOP 中保存经过时间的部分和 START 中的“当前 − 保存的时间”，都与 STEP 05、09 核对。"
+    },
+    {
+      "source": "STOP→STARTで問題が変わる",
+      "translation": "按 STOP → START 后题目改变"
+    },
+    {
+      "source": "startQuestion()がif (answer == 0)の内側にあるか確認します。",
+      "translation": "确认 startQuestion() 是否在 if (answer == 0) 的内部。"
+    },
+    {
+      "source": "数字を押すとまだ数字のSnackbarが出る",
+      "translation": "按数字时仍然出现显示数字的 Snackbar"
+    },
+    {
+      "source": "STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。",
+      "translation": "这是 STEP 10 的中间状态。在 STEP 11 替换数字按钮的整个处理。"
+    },
+    {
+      "source": "かっこが合わない",
+      "translation": "括号不匹配"
+    },
+    {
+      "source": "STEP 12の全文で、onCreateの終わりとstartQuestionの位置を照合します。",
+      "translation": "用 STEP 12 的全文核对 onCreate 的结尾和 startQuestion 的位置。"
+    },
+    {
+      "source": "配布ZIPを展開したフォルダの <code>samples/A02CalcGame</code> を、Android Studioの <strong>Open</strong> から開きます。<strong>This Window</strong> で自分のプロジェクトと取り違えないよう、開くフォルダ名と保存先を確認します。見本を閉じたら自分の <code>Documents/Kotlin/A02CalcGame</code> を開き直します。",
+      "translation": "用 Android Studio 的 <strong>Open</strong> 打开分发的 ZIP 解压后的文件夹中的 <code>samples/A02CalcGame</code>。为了在 <strong>This Window</strong> 中不与自己的项目弄混，确认要打开的文件夹名称和保存位置。关闭示例后，重新打开自己的 <code>Documents/Kotlin/A02CalcGame</code>。"
+    },
+    {
+      "source": "教科書だけを受け取った場合は、<a1>A02CalcGame.zip</a1> を保存して展開し、その中の <code>A02CalcGame</code> をOpenします。ZIPそのものや内側の <code>app</code> フォルダは選びません。",
+      "translation": "如果只收到了课本，就保存并解压 <a1>A02CalcGame.zip</a1>，用 Open 打开其中的 <code>A02CalcGame</code>。不要选 ZIP 本身或里面的 <code>app</code> 文件夹。"
+    },
+    {
+      "source": "Gradle同期を待ち、実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。見本は動作確認と比較用で、そのまま提出するものではありません。",
+      "translation": "等待 Gradle 同步，选择运行配置 <strong>app</strong> 和 <code>jec_25cm_kotlin_Pixel 9a</code>，然后点击 Run。示例用于确认动作和比较，不能直接提交。"
+    },
+    {
       "source": "公式資料",
       "translation": "官方资料"
+    },
+    {
+      "source": "Chronometer：基準時刻とstart・stop",
+      "translation": "Chronometer：基准时间与 start、stop"
+    },
+    {
+      "source": "Kotlin：lateinitプロパティ",
+      "translation": "Kotlin：lateinit 属性"
+    },
+    {
+      "source": "Kotlin：ラベル付きreturn",
+      "translation": "Kotlin：带标签的 return"
+    },
+    {
+      "source": "ThreadLocalRandom：乱数の範囲",
+      "translation": "ThreadLocalRandom：随机数的范围"
+    },
+    {
+      "source": "確認日：2026年9月24日 / Android Studio Panda 2 / A02CalcGame",
+      "translation": "确认日期：2026年9月24日 / Android Studio Panda 2 / A02CalcGame"
     }
   ]
 }

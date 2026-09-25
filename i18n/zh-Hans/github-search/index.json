@@ -23,8 +23,20 @@
       "translation": "已确认 0 / 19 个步骤"
     },
     {
+      "source": "進捗",
+      "translation": "进度"
+    },
+    {
+      "source": "目次",
+      "translation": "目录"
+    },
+    {
       "source": "STEP 00 完成する検索画面を確認する",
       "translation": "STEP 00 确认完成后的搜索界面"
+    },
+    {
+      "source": "STEP 01 自分のプロジェクトを作る",
+      "translation": "STEP 01 创建自己的项目"
     },
     {
       "source": "STEP 02 通信と一覧に使う設定をそろえる",
@@ -95,6 +107,26 @@
       "translation": "STEP 18 确认第13节课的完成状态"
     },
     {
+      "source": "困ったとき",
+      "translation": "遇到问题时"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "打开完成项目"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "通用：上课前的准备"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "通用：提交作业与 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
       "source": "GitHubのリポジトリを<br>検索しよう",
       "translation": "搜索<br>GitHub 仓库"
     },
@@ -105,6 +137,10 @@
     {
       "source": "対象：<code>A03GithubSearch</code> / パッケージ：<code>jp.ac.jec.a03githubsearch</code><br>11〜13コマ目・各90分 / Android Studio Panda 2 / macOS",
       "translation": "项目：<code>A03GithubSearch</code> / 包：<code>jp.ac.jec.a03githubsearch</code><br>第11～13节课、每节90分钟 / Android Studio Panda 2 / macOS"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "本单元要制作的东西"
     },
     {
       "source": "ソート順を選べるGitHub検索アプリ。自分のプロジェクトへ順に書き足し、12コマ目に固定データ、13コマ目に通信の結果を同じ一覧へ表示します。",
@@ -135,16 +171,32 @@
       "translation": "搜索 kotlin 的一个示例。名称、数值和顺序会随搜索时间而变化（截图自指定的 AVD）"
     },
     {
+      "source": "Java／Swiftとの比較",
+      "translation": "与 Java / Swift 的比较"
+    },
+    {
       "source": "Androidが画面の準備時に <code>onCreate</code> を呼びます。Kotlinの <code>override</code> はJavaのオーバーライドに対応します。今回は <code>main</code> を作りません。",
       "translation": "Android 在准备界面时会调用 <code>onCreate</code>。Kotlin 的 <code>override</code> 对应 Java 中的重写。这次不编写 <code>main</code>。"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "在这里停下来确认"
     },
     {
       "source": "Panda 2のWelcome画面と、A03の教科書が開いている。",
       "translation": "Panda 2 的 Welcome 界面和 A03 的课本都已打开。"
     },
     {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "做完后勾选。无法继续时，把当前画面给老师看。"
+    },
+    {
       "source": "STEP 01 · 11コマ目 · 目安 15分",
       "translation": "STEP 01 · 第11节课 · 约15分钟"
+    },
+    {
+      "source": "自分のプロジェクトを作る",
+      "translation": "创建自己的项目"
     },
     {
       "source": "<strong>New Project</strong>、または <strong>File → New → New Project…</strong> を選びます。",
@@ -161,6 +213,10 @@
     {
       "source": "項目",
       "translation": "设置项"
+    },
+    {
+      "source": "入力・選択",
+      "translation": "输入与选择"
     },
     {
       "source": "<code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。",
@@ -193,6 +249,10 @@
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "首先是 <code>gradle/libs.versions.toml</code>。Ktor 用于网络通信，serialization 用于 JSON 转换，RecyclerView 和 CardView 用于列表，lifecycle 用于启动与界面绑定的网络通信。"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
@@ -249,6 +309,10 @@
     {
       "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
       "translation": "打开 <code>app/src/main/res/layout/activity_main.xml</code>，在右上角切换到 <strong>Code</strong>，全文替换为下面的内容。"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 全文"
     },
     {
       "source": "外側の <code>FrameLayout</code> は、入力と一覧の上に通信中の印を重ねるための配置です。内側の <code>LinearLayout</code> は縦並び。<code>progress</code> は最初 <code>invisible</code> なので見えません。<code>main</code> のidは生成されたインセット処理が使うため残します。",
@@ -965,6 +1029,18 @@
     {
       "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
       "translation": "显示了搜索结果的4项，加载指示器已消失，源代码和 XML 已保存。"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "看到的情况"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "要确认的位置"
+    },
+    {
+      "source": "Gradle同期が失敗する",
+      "translation": "Gradle 同步失败"
     },
     {
       "source": "STEP 02の3つのファイルが正しい場所にあるか、Panda 2かを確認します。最初の原因行を先生に見せます。",
