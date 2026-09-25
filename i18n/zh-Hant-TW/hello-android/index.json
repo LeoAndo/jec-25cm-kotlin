@@ -15,8 +15,20 @@
       "translation": "項目"
     },
     {
+      "source": "変える場所",
+      "translation": "更改的位置"
+    },
+    {
+      "source": "起きたこと",
+      "translation": "發生的狀況"
+    },
+    {
       "source": "公式資料",
       "translation": "官方文件"
+    },
+    {
+      "source": "Android Studio：プロジェクトの作成",
+      "translation": "Android Studio：建立專案"
     }
   ]
 }
