@@ -11,12 +11,88 @@
       "translation": "JEC / Kotlin 程式實作"
     },
     {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "已確認 0 / 15 個步驟"
+    },
+    {
+      "source": "進捗",
+      "translation": "進度"
+    },
+    {
+      "source": "目次",
+      "translation": "目錄"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到問題時"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "開啟完成版專案"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "共用：課前準備"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "共用：作業繳交與 APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "共用：不同的 Android Studio 版本"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "本單元要製作的東西"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "與 Java／Swift 的比較"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "在這裡停下來確認"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "完成後請勾選。卡住時，請把這個畫面給老師看。"
+    },
+    {
       "source": "項目",
       "translation": "項目"
     },
     {
+      "source": "入力・選択",
+      "translation": "輸入或選擇的內容"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml · 全文"
+    },
+    {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · 全文"
+    },
+    {
       "source": "場所",
       "translation": "位置"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "看到的狀態"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "確認的位置"
+    },
+    {
+      "source": "起動直後に閉じる",
+      "translation": "一啟動就關閉"
     },
     {
       "source": "公式資料",
