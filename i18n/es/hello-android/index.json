@@ -15,8 +15,20 @@
       "translation": "Campo"
     },
     {
+      "source": "変える場所",
+      "translation": "Dónde cambiarlo"
+    },
+    {
+      "source": "起きたこと",
+      "translation": "Lo que sucedió"
+    },
+    {
       "source": "公式資料",
       "translation": "Documentación oficial"
+    },
+    {
+      "source": "Android Studio：プロジェクトの作成",
+      "translation": "Android Studio: Cómo crear un proyecto"
     }
   ]
 }
