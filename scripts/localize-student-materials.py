@@ -69,6 +69,8 @@ ASCII_PUNCTUATION = {
     "｀": "`", "｜": "|", "〃": '"', "￥": "¥",
 }
 FULLWIDTH_PUNCTUATION = re.compile("[" + "".join(map(re.escape, ASCII_PUNCTUATION)) + "]")
+# 並びの向きを示す矢印。右から左のページで、翻訳の単位を含まない並びを左から右に保つかどうかの目印（#195）。
+ARROWS = re.compile("[\u2190\u2192\u21d0\u21d2]")
 # 開始タグの属性を1つずつ読むための形。名前だけの属性（値なし）も受ける。
 ATTRIBUTE = re.compile(r"""\s+([^\s/>=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?""")
 # カタログの中のタグ。属性のないタグはそのまま（<strong>）、属性つきのタグは番号つきの目印（<a1>）で書く。
@@ -739,10 +741,12 @@ class _Localizer:
                     rendered = f'{self._span("ja")}{rendered}</span>'
             replacements.append((segment.start, segment.end, rendered))
         self._start_tags(self.page.root, replacements)
+        ranges = sorted((segment.start, segment.end) for segment in self.page.segments if segment.element is None)
+        starts, ends = [start for start, _ in ranges], [end for _, end in ranges]
         if self.ascii_punctuation:
-            ranges = sorted((segment.start, segment.end) for segment in self.page.segments if segment.element is None)
-            self._outside_segments(self.page.root, replacements,
-                                   [start for start, _ in ranges], [end for _, end in ranges])
+            self._outside_segments(self.page.root, replacements, starts, ends)
+        if self.direction == "rtl":
+            self._left_to_right_arrows(self.page.root, replacements, starts, ends)
         parts, position = [], 0
         for start, end, rendered in sorted(replacements):
             parts.extend((text[position:start], rendered))
@@ -810,6 +814,47 @@ class _Localizer:
                 replacements.append((child.start, child.end, converted))
             elif child.tag not in PROTECTED and child.tag not in SKIPPED and not _untranslatable(child):
                 self._outside_segments(child, replacements, starts, ends)
+
+    def _left_to_right_arrows(self, element: Element, replacements: list, starts: list, ends: list) -> None:
+        """右から左のページで、翻訳の単位を含まず矢印（→・←）を含む段落・表のセルを、左から右に並べる（#195）。
+
+        右から左のページでは、<code> を向きを持たないひとまとまりとして並べる（textbook.css の
+        unicode-bidi: isolate）。そのため <td><code>9</code> → <code>4</code></td> のように、訳文も日本語もない
+        並びは、セル全体が右から左に並んで「4 → 9」に見え、矢印が逆を指す。こうした要素の中身を
+        <span dir="ltr"> で包み、日本語版と同じ順に並べる。訳の対象の文を含む要素（流れ図の矢印など）は、
+        訳文と CSS が向きを受け持つので包まない。
+        """
+        for child in element.children:
+            if (not isinstance(child, Element) or child.tag in PROTECTED or child.tag in SKIPPED
+                    or _untranslatable(child)):
+                continue
+            if (not child.inline and child.children
+                    and all(isinstance(node, Text) or node.inline for node in child.children)):
+                if (not self._overlaps_segment(child.inner_start, child.inner_end, starts, ends)
+                        and ARROWS.search(self._text_outside_code(child))):
+                    replacements.append((child.inner_start, child.inner_start, '<span dir="ltr">'))
+                    replacements.append((child.inner_end, child.inner_end, '</span>'))
+                continue
+            self._left_to_right_arrows(child, replacements, starts, ends)
+
+    def _text_outside_code(self, element: Element) -> str:
+        """<code>・<kbd> などの外にある文字。矢印が <code> の中にあるときは、もともと左から右に並ぶ。
+
+        &rarr; のような文字参照で書いた矢印も同じ矢印として見るので、文字参照を戻してから返す。
+        """
+        parts = []
+        for node in element.children:
+            if isinstance(node, Text):
+                parts.append(html.unescape(self.page.text[node.start:node.end]))
+            elif node.tag not in PROTECTED:
+                parts.append(self._text_outside_code(node))
+        return "".join(parts)
+
+    @staticmethod
+    def _overlaps_segment(start: int, end: int, starts: list, ends: list) -> bool:
+        """start〜end の範囲に、取り出した文（訳の対象）が1つでも掛かっているか。"""
+        index = bisect.bisect_right(ends, start)
+        return index < len(starts) and starts[index] < end
 
     @staticmethod
     def _inside_segment(node: Text, starts: list, ends: list) -> bool:

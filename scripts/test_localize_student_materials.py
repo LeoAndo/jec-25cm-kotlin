@@ -363,6 +363,29 @@ class LocalizeTest(unittest.TestCase):
         self.assertNotIn(" dir=", english)
         self.assertIn('<span lang="ja">未翻訳の文です。</span>', english)
 
+    def test_right_to_left_page_keeps_untranslated_arrows_left_to_right(self):
+        """右から左のページでも、訳の対象にならない「変更前 → 変更後」は左から右に並べる（#195）。"""
+        source = ('<html lang="ja"><body><table><tr><td><code>9</code> → <code>4</code></td>'
+                  '<td>5問で終了する。</td><td><code>a → b</code></td><td>getInstance → addListener</td></tr></table>'
+                  '<div class="flow"><strong>① 受け取る</strong><span>→</span><strong>② 確かめる</strong></div>'
+                  '<p><code>START</code> を押す → 始まる</p><ul><li><code>12dp</code> → <code>24dp</code></li>'
+                  '<li><code>1</code> &rarr; <code>2</code></li></ul></body></html>')
+        rtl = localize.localize(page_of(source), {}, "ar", "docs", self.PAGES, direction="rtl")
+        self.assertIn('<td><span dir="ltr"><code>9</code> → <code>4</code></span></td>', rtl)
+        self.assertIn('<li><span dir="ltr"><code>12dp</code> → <code>24dp</code></span></li>', rtl)
+        self.assertIn('<td><span dir="ltr">getInstance → addListener</span></td>', rtl)
+        # 文字参照で書いた矢印も、同じように包む。
+        self.assertIn('<li><span dir="ltr"><code>1</code> &rarr; <code>2</code></span></li>', rtl)
+        # 矢印が <code> の中にあるときと、訳の対象の文を含む要素（流れ図・日本語の段落）は包まない。
+        self.assertIn('<td><code>a → b</code></td>', rtl)
+        self.assertIn('<span>→</span><strong>② 確かめる</strong></div>', rtl)
+        self.assertIn('<p><code>START</code> を押す → 始まる</p>', rtl)
+        self.assertIn('<td>5問で終了する。</td>', rtl)
+        # 左から右のページのHTMLは変わらない。
+        ltr = localize.localize(page_of(source), {}, "en", "docs", self.PAGES)
+        self.assertIn('<td><code>9</code> → <code>4</code></td>', ltr)
+        self.assertNotIn('dir=', ltr)
+
     def test_existing_dir_on_html_is_replaced_not_duplicated(self):
         source = '<html lang="ja" dir="ltr"><body><p>文です。</p></body></html>'
         rendered = localize.localize(page_of(source), {}, "ar", "docs", self.PAGES, direction="rtl")
@@ -1037,6 +1060,15 @@ class RepositoryTest(unittest.TestCase):
                 with self.subTest(page=name):
                     self.assertEqual(blocks.findall(text), blocks.findall(original))
                     self.assertIn(f'<html lang="{code}"{direction}>', text)
+
+    def test_right_to_left_pages_keep_untranslated_arrows_left_to_right(self):
+        """A02 STEP 13 の「例」の列（<code>9</code> → <code>4</code> など）は、右から左のページでも左から右に並ぶ（#195）。"""
+        for code in self.settings.codes():
+            if self.settings.direction(code) != "rtl":
+                continue
+            page = localize.localized_pages(self.settings, code)[f"docs/{code}/calc-game/index.html"]
+            with self.subTest(language=code):
+                self.assertIn('<td><span dir="ltr"><code>9</code> → <code>4</code></span></td>', page)
 
     def test_languages_without_han_have_no_fullwidth_punctuation_outside_japanese(self):
         """漢字を使わない言語のページでは、日本語のまま残す文の外に全角の記号が残らない（#89）。
