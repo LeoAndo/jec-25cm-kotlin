@@ -27,8 +27,8 @@
       "translation": "Preparación antes de<br>empezar la clase"
     },
     {
-      "source": "教材を受け取ってから、はじめてのKotlinのプログラムが動くまで。上から順に1回だけ行います。まずブラウザだけで動かし、そのあとIntelliJ IDEAに移ります。2回目からは、教科書を開くところから始められます。",
-      "translation": "Desde recibir los materiales hasta ejecutar tu primer programa en Kotlin. Sigue estos pasos de arriba hacia abajo solo una vez. Primero ejecútalo solo en el navegador y luego pasa a IntelliJ IDEA. A partir de la segunda vez, podrás comenzar directamente abriendo el libro de texto."
+      "source": "教材を受け取ってから、授業を始めるまでの準備です。上から順に1回だけ行います。教材を「書類」に置き、使うアプリが入っていることを確かめます。2回目からは、教科書を開くところから始められます。",
+      "translation": "Esta es la preparación desde que recibes los materiales hasta que comienzas la clase. Sigue los pasos en orden de arriba a abajo solo una vez. Coloca los materiales en “Documentos” y verifica que las aplicaciones que usarás estén instaladas. A partir de la segunda vez, podrás comenzar directamente abriendo el libro de texto."
     },
     {
       "source": "この資料の流れ",
@@ -43,40 +43,28 @@
       "translation": "② Verificar las herramientas que usarás"
     },
     {
-      "source": "③ ブラウザで動かす",
-      "translation": "③ Ejecutar en el navegador"
+      "source": "③ 後半の準備を知る",
+      "translation": "③ Conocer la preparación para la segunda mitad"
     },
     {
-      "source": "④ プロジェクトを作る",
-      "translation": "④ Crear el proyecto"
+      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。うまくいかないときは、いちばん下の「4. うまくいかないとき」を見てください。",
+      "translation": "Los números coinciden con los encabezados de abajo. En ②, verificarás que las aplicaciones que usarás estén instaladas en tu Mac. Si algo no funciona bien, consulta “4. Si tienes problemas” al final de la página."
     },
     {
-      "source": "⑤ 実行して結果を読む",
-      "translation": "⑤ Ejecutar y leer la salida"
+      "source": "プロジェクトの作成と実行は教科書で行います",
+      "translation": "La creación y ejecución de proyectos se realiza en el libro de texto"
     },
     {
-      "source": "⑥ 後半の準備を知る",
-      "translation": "⑥ Conocer la preparación para la segunda mitad"
-    },
-    {
-      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。③はブラウザだけで終わります。④で1行だけTerminalを使い、そのあとはIntelliJ IDEAの画面で操作します。うまくいかないときは、いちばん下の「7. うまくいかないとき」を見てください。",
-      "translation": "Los números coinciden con los encabezados de abajo. En ②, verificarás que las aplicaciones que usarás estén instaladas en tu Mac. ③ se realiza únicamente en el navegador. En ④, usarás Terminal solo para una línea y luego operarás en la pantalla de IntelliJ IDEA. Si algo no funciona bien, consulta “7. Si tienes problemas” al final de la página."
-    },
-    {
-      "source": "JavaやSwiftとの違いだけを書いています",
-      "translation": "Solo se explican las diferencias con Java y Swift"
-    },
-    {
-      "source": "この資料は、エディタの使い方そのものは説明しません。書いてあるのは、<strong>Kotlinのプロジェクトの作り方</strong>と、<strong>IntelliJ IDEAでの実行のしかた</strong>だけです。JavaやSwiftで同じことをやってきた経験は、そのまま使えます。",
-      "translation": "Este material no explica cómo usar el editor en sí. Solo describe <strong>cómo crear un proyecto de Kotlin</strong> y <strong>cómo ejecutarlo en IntelliJ IDEA</strong>. Puedes aprovechar directamente tu experiencia haciendo lo mismo en Java o Swift."
+      "source": "Kotlinのプロジェクトの作り方や、コードの書き方・実行のしかたは、第1単元（K01：HelloKotlin）の教科書で順を追って説明します。この資料では、教材の配置とアプリの確認だけを行います。",
+      "translation": "Cómo crear un proyecto de Kotlin, escribir código y ejecutarlo se explica paso a paso en el libro de texto de la unidad 1 (K01: HelloKotlin). En este material, solo colocamos los materiales y verificamos las aplicaciones."
     },
     {
       "source": "この準備が終わると",
       "translation": "Al terminar esta preparación"
     },
     {
-      "source": "ブラウザとIntelliJ IDEAの両方で、Kotlinのプログラムを実行し、その結果を読めるようになります。ここまでできれば、第1単元の教科書を開いて始められます。",
-      "translation": "Podrás ejecutar programas de Kotlin tanto en el navegador como en IntelliJ IDEA y leer sus resultados. Una vez que logres esto, podrás abrir el libro de texto de la unidad 1 y comenzar."
+      "source": "教材が手元にそろい、授業で使うアプリが開ける状態になります。ここまでできれば、第1単元の教科書を開いて始められます。",
+      "translation": "Tendrás los materiales a mano y las aplicaciones que se usan en clase estarán listas para abrirse. Una vez que llegues hasta aquí, podrás abrir el libro de texto de la unidad 1 y comenzar."
     },
     {
       "source": "1. 教材を受け取り、「書類」に置く",
@@ -331,328 +319,8 @@
       "translation": "Si la versión es diferente, el nombre o la disposición de los botones puede variar un poco respecto al libro de texto. Si no encuentras algo, no cambies la configuración ni reinstales por tu cuenta; deja la pantalla tal como está y muéstrasela a tu docente."
     },
     {
-      "source": "3. ブラウザだけで動かす（Kotlin Playground）",
-      "translation": "3. Ejecutar solo en el navegador (Kotlin Playground)"
-    },
-    {
-      "source": "<strong>Kotlin Playground</strong> は、JetBrainsが公開しているWebサービスです。アプリの用意も、プロジェクトの作成もせずに、ブラウザのページ上で <code>fun main()</code> をそのまま実行できます。最初の1回は、ここでKotlinのコードが動くことを確かめます。",
-      "translation": "<strong>Kotlin Playground</strong> es un servicio web proporcionado por JetBrains. Te permite ejecutar <code>fun main()</code> directamente en una página del navegador, sin necesidad de preparar aplicaciones ni crear proyectos. La primera vez, comprueba aquí que el código de Kotlin funcione."
-    },
-    {
-      "source": "ブラウザで <a1>https://play.kotlinlang.org/</a1> を開きます。エディタと、その上に並んだボタンが表示されます。",
-      "translation": "Abre <a1>https://play.kotlinlang.org/</a1> en tu navegador. Aparecerán el editor y una fila de botones encima de él."
-    },
-    {
-      "source": "エディタに最初から入っているコードをすべて消し、次の3行を書きます。",
-      "translation": "Borra todo el código que viene inicialmente en el editor y escribe las siguientes tres líneas."
-    },
-    {
-      "source": "Kotlin Playground · エディタ",
-      "translation": "Kotlin Playground · Editor"
-    },
-    {
-      "source": "右上の <strong>Run</strong> ボタン（▶）をクリックします。",
-      "translation": "Haz clic en el botón <strong>Run</strong> (▶) en la esquina superior derecha."
-    },
-    {
-      "source": "ページの下に<strong>実行結果のウィンドウ</strong>が自動で開き、出力が表示されます。",
-      "translation": "En la parte inferior de la página se abrirá automáticamente la <strong>ventana de salida</strong> y se mostrará el resultado."
-    },
-    {
-      "source": "実行結果のウィンドウに出るもの",
-      "translation": "Lo que aparece en la ventana de salida"
-    },
-    {
-      "source": "実行結果のウィンドウに <code>Hello, Kotlin</code> と出ている。",
-      "translation": "En la ventana de salida aparece <code>Hello, Kotlin</code>."
-    },
-    {
-      "source": "画面の使い方",
-      "translation": "Cómo usar la interfaz"
-    },
-    {
-      "source": "使うのは、次の4つだけです。残りのボタンは授業では触りません。",
-      "translation": "Solo usarás los siguientes cuatro elementos. Los demás botones no se tocan durante la clase."
-    },
-    {
-      "source": "場所",
-      "translation": "Ubicación"
-    },
-    {
-      "source": "何をするもの",
-      "translation": "Para qué sirve"
-    },
-    {
-      "source": "Kotlinの版を選ぶメニュー",
-      "translation": "Menú para elegir la versión de Kotlin"
-    },
-    {
-      "source": "既定で最新の版が選ばれています。<strong>変更しません</strong>。",
-      "translation": "Por defecto está seleccionada la versión más reciente. <strong>No la cambies</strong>."
-    },
-    {
-      "source": "<strong>Run</strong> ボタン（▶）",
-      "translation": "Botón <strong>Run</strong> (▶)"
-    },
-    {
-      "source": "書いたコードを実行します。",
-      "translation": "Ejecuta el código que escribiste."
-    },
-    {
-      "source": "実行結果のウィンドウ",
-      "translation": "Ventana de salida"
-    },
-    {
-      "source": "実行すると自動で開きます。<code>println</code> の出力とエラーが、ここに出ます。",
-      "translation": "Se abre automáticamente al ejecutar. La salida de <code>println</code> y los errores aparecen aquí."
-    },
-    {
-      "source": "共有ボタン",
-      "translation": "Botón de compartir"
-    },
-    {
-      "source": "いま書いているコードのURLを作ります。先生にコードを見せたいときだけ使います。",
-      "translation": "Genera una URL con el código que estás escribiendo. Úsalo solo cuando quieras mostrarle tu código a tu docente."
-    },
-    {
-      "source": "実行の入口（JavaやSwiftとの違い）",
-      "translation": "Punto de entrada para la ejecución (diferencias con Java y Swift)"
-    },
-    {
-      "source": "Kotlinは、<code>main</code> をクラスの中に入れる必要がありません。ファイルの一番外側に <code>fun</code> で書けば、それが入口になります。",
-      "translation": "En Kotlin no es necesario colocar <code>main</code> dentro de una clase. Si lo escribes con <code>fun</code> en el nivel más externo del archivo, esa función se convierte en el punto de entrada."
-    },
-    {
-      "source": "言語",
-      "translation": "Lenguaje"
-    },
-    {
-      "source": "実行の入口の書き方",
-      "translation": "Cómo escribir el punto de entrada"
-    },
-    {
-      "source": "<code>fun main()</code>。クラスは要りません。引数の <code>args</code> も、使わないなら省けます。",
-      "translation": "<code>fun main()</code>. No se necesita clase. El parámetro <code>args</code> también se puede omitir si no se utiliza."
-    },
-    {
-      "source": "<code>public static void main(String[] args)</code>。クラスの中に置きます。",
-      "translation": "<code>public static void main(String[] args)</code>. Se coloca dentro de una clase."
-    },
-    {
-      "source": "<code>main.swift</code> のトップレベルに書いたコード、または <code>@main</code> を付けた型の <code>static func main()</code>。",
-      "translation": "Código escrito en el nivel superior de <code>main.swift</code>, o <code>static func main()</code> en un tipo marcado con <code>@main</code>."
-    },
-    {
-      "source": "Playgroundは最初の1回だけ",
-      "translation": "Playground se usa solo la primera vez"
-    },
-    {
-      "source": "Playgroundには2つの弱点があります。<strong>コード補完が効きません</strong>。そして、<strong>実行結果が出るまでに時間がかかります</strong>（実行はサーバ側で行われるためです）。授業で書く量になると、この2つがそのまま手間になります。動くことを確かめたら、次の手順4からは IntelliJ IDEA に移ってください。",
-      "translation": "Playground tiene dos desventajas: <strong>no cuenta con autocompletado de código</strong> y <strong>tarda en mostrar la salida</strong> (debido a que la ejecución se realiza en el servidor). Con la cantidad de código que escribirás en clase, estos dos puntos se vuelven una molestia. Una vez que confirmes que funciona, pasa a IntelliJ IDEA a partir del paso 4."
-    },
-    {
-      "source": "4. IntelliJ IDEA でKotlinのプロジェクトを作る",
-      "translation": "4. Crear un proyecto de Kotlin en IntelliJ IDEA"
-    },
-    {
-      "source": "この授業で作るプロジェクトは、すべて <code>~/Documents/Kotlin</code> の下に置きます。まず、その置き場所を作ります。",
-      "translation": "Todos los proyectos creados en esta materia se guardarán dentro de <code>~/Documents/Kotlin</code>. Primero, crea esa ubicación."
-    },
-    {
-      "source": "Terminal · 打ち込む",
-      "translation": "Terminal · Escribir"
-    },
-    {
-      "source": "何も表示されずに入力待ちに戻れば成功です。すでに作ってあっても、エラーにはなりません。Terminalを使うのは、この1行だけです。",
-      "translation": "Si no aparece nada y vuelve a la espera de entrada, la operación fue exitosa. Si ya estaba creada, no generará error. Usarás Terminal solo para esta única línea."
-    },
-    {
-      "source": "新しいプロジェクトを作る",
-      "translation": "Crear un nuevo proyecto"
-    },
-    {
-      "source": "IntelliJ IDEA の Welcome画面で <strong>New Project</strong> をクリックします。すでにプロジェクトが開いているときは、<strong>File → New → Project…</strong> を選びます。",
-      "translation": "En la pantalla de Welcome de IntelliJ IDEA, haz clic en <strong>New Project</strong>. Si ya tienes un proyecto abierto, elige <strong>File → New → Project…</strong>."
-    },
-    {
-      "source": "左の一覧で <strong>New Project</strong> が選ばれていることを確かめます。",
-      "translation": "Asegúrate de que <strong>New Project</strong> esté seleccionado en la lista de la izquierda."
-    },
-    {
-      "source": "右側の項目を、次のように設定します。",
-      "translation": "Configura los elementos de la derecha de la siguiente manera."
-    },
-    {
-      "source": "項目",
-      "translation": "Campo"
-    },
-    {
-      "source": "入れるもの",
-      "translation": "Qué ingresar"
-    },
-    {
-      "source": "先生が指定したプロジェクト名。第1単元では <code>K01HelloKotlin</code> です。",
-      "translation": "El nombre del proyecto especificado por tu docente. En la unidad 1 es <code>K01HelloKotlin</code>."
-    },
-    {
-      "source": "一覧に出てくるもののうち、いちばん番号が大きいもの",
-      "translation": "La opción con el número más alto entre las que aparecen en la lista"
-    },
-    {
-      "source": "チェックを外す",
-      "translation": "Desmarcar la casilla"
-    },
-    {
-      "source": "<code>Location</code> には<strong>プロジェクト名を含めません</strong>。<code>Location</code> の下に、実際にできる場所が小さな文字で表示されるので、そこが <code>Documents/Kotlin</code> の下になっているか確かめてください。<code>ユーザ名</code> の部分は、Macにログインしている自分の名前です。",
-      "translation": "En <code>Location</code> <strong>no incluyas el nombre del proyecto</strong>. Debajo de <code>Location</code> se muestra en texto pequeño la ubicación real donde se creará; verifica que quede dentro de <code>Documents/Kotlin</code>. La parte de <code>ユーザ名</code> (nombre de usuario) corresponde al nombre con el que inicias sesión en tu Mac."
-    },
-    {
-      "source": "<code>Build system</code> は <code>IntelliJ</code> を選びます",
-      "translation": "En <code>Build system</code> elige <code>IntelliJ</code>"
-    },
-    {
-      "source": "ほかに <code>Maven</code> と <code>Gradle</code> が並んでいます。前半の授業では外部のライブラリを使わないので、ビルドツールを挟まない <code>IntelliJ</code> のままにしてください。後半のAndroidの単元では、Android Studioが <code>Gradle</code> を使います。そちらは自分で選ぶ必要がありません。",
-      "translation": "También aparecen <code>Maven</code> y <code>Gradle</code>. Como en las clases de la primera mitad no usarás bibliotecas externas, déjalo en <code>IntelliJ</code>, que no usa una herramienta de compilación aparte. En las unidades de Android de la segunda mitad, Android Studio usará <code>Gradle</code>; allí no tendrás que elegirlo tú."
-    },
-    {
-      "source": "<strong>Create</strong> をクリックします。新しいウィンドウが開きます。",
-      "translation": "Haz clic en <strong>Create</strong>. Se abrirá una ventana nueva."
-    },
-    {
-      "source": "左側の <strong>Project</strong> の一覧に、プロジェクト名のフォルダが出ます。その中に <code>src</code> というフォルダがあります。",
-      "translation": "En la lista <strong>Project</strong> de la izquierda aparecerá la carpeta con el nombre del proyecto. Dentro de ella hay una carpeta llamada <code>src</code>."
-    },
-    {
-      "source": "左側の一覧にプロジェクト名が出ていて、その下に <code>src</code> がある。",
-      "translation": "En la lista de la izquierda aparece el nombre del proyecto y debajo se encuentra <code>src</code>."
-    },
-    {
-      "source": "<code>Location</code> は、次からも同じ場所が入っています",
-      "translation": "<code>Location</code> mantendrá la misma ubicación a partir de la próxima vez"
-    },
-    {
-      "source": "2回目にプロジェクトを作るときは、<code>Location</code> に前回の場所が最初から入っています。<code>/Users/ユーザ名/Documents/Kotlin</code> のままかどうかだけ、毎回確かめてください。別の場所に作ってしまうと、あとで自分のファイルを見つけられなくなります。",
-      "translation": "La segunda vez que crees un proyecto, en <code>Location</code> ya vendrá colocada la ubicación anterior. Solo verifica cada vez que siga siendo <code>/Users/ユーザ名/Documents/Kotlin</code>. Si lo creas en otra ubicación, después no podrás encontrar tus archivos."
-    },
-    {
-      "source": "5. <code>fun main()</code> を実行して、結果を読む",
-      "translation": "5. Ejecutar <code>fun main()</code> y leer la salida"
-    },
-    {
-      "source": "ファイルを作って、3行書く",
-      "translation": "Crear un archivo y escribir tres líneas"
-    },
-    {
-      "source": "左側の一覧で <code>src</code> を右クリックし、<strong>New → Kotlin Class/File</strong> を選びます。",
-      "translation": "En la lista de la izquierda, haz clic derecho sobre <code>src</code> y elige <strong>New → Kotlin Class/File</strong>."
-    },
-    {
-      "source": "名前の欄に <code>main</code> と打ち、下の一覧から <strong>File</strong> を選んで <kbd>Enter</kbd> を押します。",
-      "translation": "Escribe <code>main</code> en el campo de nombre, elige <strong>File</strong> en la lista de abajo y presiona <kbd>Enter</kbd>."
-    },
-    {
-      "source": "<code>main.kt</code> というファイルができて、右側に編集画面が開きます。",
-      "translation": "Se creará el archivo <code>main.kt</code> y a la derecha se abrirá la pantalla de edición."
-    },
-    {
-      "source": "次の3行を打ち込みます。",
-      "translation": "Escribe las siguientes tres líneas."
-    },
-    {
-      "source": "ファイル名とクラス名を合わせる必要はありません。Kotlinでは、トップレベルの関数をそのまま書けます。書いたものは自動で保存されるので、保存の操作も要りません。",
-      "translation": "No es necesario hacer coincidir el nombre del archivo con el de la clase. En Kotlin puedes escribir funciones de nivel superior directamente. Lo que escribas se guarda automáticamente, así que no necesitas realizar ninguna acción para guardar."
-    },
-    {
-      "source": "実行する",
-      "translation": "Ejecutar"
-    },
-    {
-      "source": "<code>fun main()</code> と書いた行の左、行番号のとなりに<strong>緑の三角</strong>（▶）が出ます。これが実行ボタンです。",
-      "translation": "A la izquierda de la línea donde escribiste <code>fun main()</code>, junto al número de línea, aparecerá un <strong>triángulo verde</strong> (▶). Este es el botón de ejecución."
-    },
-    {
-      "source": "緑の三角（▶）をクリックします。",
-      "translation": "Haz clic en el triángulo verde (▶)."
-    },
-    {
-      "source": "出てきたメニューから <strong>Run 'MainKt'</strong> を選びます。",
-      "translation": "En el menú que aparece, elige <strong>Run 'MainKt'</strong>."
-    },
-    {
-      "source": "ウィンドウの下に <strong>Run</strong> ツールウィンドウが開き、結果が出ます。",
-      "translation": "En la parte inferior de la ventana se abrirá la ventana de herramientas <strong>Run</strong> y aparecerá el resultado."
-    },
-    {
-      "source": "Run ツールウィンドウに出るもの",
-      "translation": "Lo que aparece en la ventana de herramientas Run"
-    },
-    {
-      "source": "メニューに出る <code>MainKt</code> は、<code>main.kt</code> をコンパイルしてできるクラスの名前です。Kotlinのトップレベルの関数は、ファイル名から作られたこの名前のクラスに、<code>static</code> メソッドとして入ります。JavaからKotlinのコードを呼べるのは、この仕組みがあるためです。",
-      "translation": "El <code>MainKt</code> que aparece en el menú es el nombre de la clase generada al compilar <code>main.kt</code>. Las funciones de nivel superior de Kotlin se incluyen como métodos <code>static</code> dentro de esta clase nombrada a partir del archivo. Es gracias a este mecanismo que se puede llamar a código de Kotlin desde Java."
-    },
-    {
-      "source": "出ている行",
-      "translation": "Línea mostrada"
-    },
-    {
-      "source": "意味",
-      "translation": "Significado"
-    },
-    {
-      "source": "いちばん上にある、長い英数字の行",
-      "translation": "La línea larga de caracteres alfanuméricos en la parte superior"
-    },
-    {
-      "source": "IntelliJ IDEA が組み立てた実行コマンドです。出ないこともあります。",
-      "translation": "Es el comando de ejecución armado por IntelliJ IDEA. Puede que no aparezca."
-    },
-    {
-      "source": "真ん中の行",
-      "translation": "La línea del medio"
-    },
-    {
-      "source": "<code>println</code> で出した文字です。授業で確かめるのは、ここです。",
-      "translation": "Es el texto emitido por <code>println</code>. Esto es lo que se verifica en la clase."
-    },
-    {
-      "source": "正常に終わりました。",
-      "translation": "Terminó normalmente."
-    },
-    {
-      "source": "途中で止まりました。この行の上に、赤い文字で理由が出ています。",
-      "translation": "Se detuvo a mitad del proceso. Encima de esta línea aparece el motivo en letras rojas."
-    },
-    {
-      "source": "Run ツールウィンドウに <code>はじめまして</code> と出て、その下に <code>Process finished with exit code 0</code> がある。",
-      "translation": "En la ventana de herramientas Run aparece <code>はじめまして</code> (Mucho gusto) y debajo se muestra <code>Process finished with exit code 0</code>."
-    },
-    {
-      "source": "Run ツールウィンドウを閉じてしまったとき",
-      "translation": "Si cerraste la ventana de herramientas Run"
-    },
-    {
-      "source": "上のメニューの <strong>View → Tool Windows → Run</strong> で、もう一度出せます。<kbd>⌘ Command</kbd> + <kbd>4</kbd> でも開きます。前の結果は消えていません。",
-      "translation": "Puedes abrirla de nuevo en el menú superior con <strong>View → Tool Windows → Run</strong>. También se abre con <kbd>⌘ Command</kbd> + <kbd>4</kbd>. El resultado anterior no se ha borrado."
-    },
-    {
-      "source": "2回目からは、右上の ▶ で実行できます",
-      "translation": "A partir de la segunda vez, puedes ejecutar con el ▶ de la esquina superior derecha"
-    },
-    {
-      "source": "一度実行すると、その実行の設定が記憶され、ウィンドウの右上の実行ボタン（▶）から同じプログラムを動かせます。別のファイルを開いているときでも、動くのは記憶されたほうです。違うファイルを実行したいときは、そのファイルの行番号のとなりの緑の三角を使ってください。",
-      "translation": "Una vez que ejecutas el programa, esa configuración de ejecución queda guardada y puedes ejecutar el mismo programa desde el botón de ejecución (▶) en la esquina superior derecha de la ventana. Incluso si tienes abierto otro archivo, lo que se ejecutará será lo que quedó guardado. Cuando quieras ejecutar un archivo diferente, usa el triángulo verde junto al número de línea de ese archivo."
-    },
-    {
-      "source": "ここまでできたら、前半の準備は終わりです。次の授業からは、教科書を開くところから始められます。",
-      "translation": "Una vez que hayas llegado hasta aquí, la preparación de la primera mitad está completa. A partir de la próxima clase, podrás comenzar directamente abriendo el libro de texto."
-    },
-    {
-      "source": "K01：HelloKotlin へ進む →",
-      "translation": "Continuar a K01: HelloKotlin →"
-    },
-    {
-      "source": "6. 後半で使う Android Studio とエミュレータ",
-      "translation": "6. Android Studio y el emulador que se usarán en la segunda mitad"
+      "source": "3. 後半で使う Android Studio とエミュレータ",
+      "translation": "3. Android Studio y el emulador que se usarán en la segunda mitad"
     },
     {
       "source": "7コマ目からは、<strong>Android Studio</strong> でスマートフォンのアプリを作ります。作ったアプリは、<strong>エミュレータ</strong>（Macの中で動く練習用のAndroid端末）で動かします。",
@@ -711,8 +379,16 @@
       "translation": "Dentro de la carpeta de materiales que colocaste en 「書類」 (Documentos) en el paso 1, en <code>samples</code> vienen los proyectos terminados en un formato listo para <strong>abrirse directamente</strong>. No necesitas descargar ni descomprimir nada. Para los proyectos de Kotlin de la primera mitad, usa <strong>Open</strong> en IntelliJ IDEA; para los proyectos de Android de la segunda mitad, usa <strong>Open</strong> en Android Studio, y selecciona la carpeta dentro de <code>samples</code>."
     },
     {
-      "source": "7. うまくいかないとき",
-      "translation": "7. Si tienes problemas"
+      "source": "ここまでできたら、準備は終わりです。第1単元の教科書を開いて授業を始めましょう。",
+      "translation": "Una vez que hayas llegado hasta aquí, la preparación está completa. Abre el libro de texto de la unidad 1 y comencemos la clase."
+    },
+    {
+      "source": "K01：HelloKotlin へ進む →",
+      "translation": "Continuar a K01: HelloKotlin →"
+    },
+    {
+      "source": "4. うまくいかないとき",
+      "translation": "4. Si tienes problemas"
     },
     {
       "source": "出たもの・起きたこと",
@@ -723,92 +399,20 @@
       "translation": "Qué intentar"
     },
     {
-      "source": "Kotlin Playground の <strong>Run</strong> を押しても、何も出ない",
-      "translation": "Al presionar <strong>Run</strong> en Kotlin Playground no aparece nada"
+      "source": "ダウンロードしたフォルダの名前に <code>(1)</code> や <code>-2</code> が付いている",
+      "translation": "El nombre de la carpeta descargada tiene <code>(1)</code> o <code>-2</code> al final"
     },
     {
-      "source": "実行はサーバ側で行われるので、数秒から十数秒かかる。待っても出ないときは、ページを開き直してもう一度実行する。",
-      "translation": "Como la ejecución se realiza en el servidor, toma de varios segundos a más de diez segundos. Si no aparece nada tras esperar, vuelve a abrir la página y ejecuta otra vez."
+      "source": "古い教材を開いている可能性がある。自分で判断せず先生に見せる。",
+      "translation": "Es posible que estés abriendo materiales antiguos. No decidas por tu cuenta y muéstraselo a tu docente."
     },
     {
-      "source": "Kotlin Playground でコード補完が出ない",
-      "translation": "No aparece el autocompletado de código en Kotlin Playground"
-    },
-    {
-      "source": "Playgroundには補完がない。手順4に進んで IntelliJ IDEA を使う。",
-      "translation": "Playground no cuenta con autocompletado. Avanza al paso 4 y usa IntelliJ IDEA."
-    },
-    {
-      "source": "Macに IntelliJ IDEA が見つからない",
-      "translation": "No encuentras IntelliJ IDEA en tu Mac"
+      "source": "Macに IntelliJ IDEA や Android Studio が見つからない",
+      "translation": "No encuentras IntelliJ IDEA ni Android Studio en tu Mac"
     },
     {
       "source": "貸与されたMacには入っているはずなので、自分で入れようとせず、先生に知らせる。",
       "translation": "Debería estar instalado en la Mac que te prestaron; no intentes instalarlo por tu cuenta y avisa a tu docente."
-    },
-    {
-      "source": "Welcome画面に <code>New Project</code> が見あたらない",
-      "translation": "No encuentras <code>New Project</code> en la pantalla de Welcome"
-    },
-    {
-      "source": "すでにプロジェクトが開いている。そのウィンドウを閉じるか、<strong>File → New → Project…</strong> を使う。",
-      "translation": "Ya hay un proyecto abierto. Cierra esa ventana o usa <strong>File → New → Project…</strong>."
-    },
-    {
-      "source": "<code>Language</code> の一覧に <code>Kotlin</code> が出ない",
-      "translation": "No aparece <code>Kotlin</code> en la lista de <code>Language</code>"
-    },
-    {
-      "source": "左の一覧で <strong>New Project</strong> 以外が選ばれていないか確かめる。それでも出ないときは先生に知らせる。",
-      "translation": "Verifica que en la lista de la izquierda no esté seleccionado algo distinto a <strong>New Project</strong>. Si sigue sin aparecer, avisa a tu docente."
-    },
-    {
-      "source": "<code>JDK</code> の欄が <code>&lt;No JDK&gt;</code> のまま",
-      "translation": "El campo <code>JDK</code> permanece en <code>&lt;No JDK&gt;</code>"
-    },
-    {
-      "source": "欄を開いて一覧から選び直す。候補が1つも出ないときは先生に知らせる。",
-      "translation": "Abre el campo y vuelve a seleccionar una opción de la lista. Si no aparece ninguna opción, avisa a tu docente."
-    },
-    {
-      "source": "プロジェクトが <code>Documents/Kotlin</code> の中にできていない",
-      "translation": "El proyecto no se creó dentro de <code>Documents/Kotlin</code>"
-    },
-    {
-      "source": "<code>Location</code> にプロジェクト名まで入れてしまった可能性がある。手順4の表をもう一度確かめて作り直す。",
-      "translation": "Es posible que hayas incluido el nombre del proyecto en <code>Location</code>. Revisa de nuevo la tabla del paso 4 y vuelve a crearlo."
-    },
-    {
-      "source": "行番号のとなりに緑の三角（▶）が出ない",
-      "translation": "No aparece el triángulo verde (▶) junto al número de línea"
-    },
-    {
-      "source": "<code>fun main() {</code> と閉じかっこが正しく書けているか確かめる。ファイルが <code>src</code> の下にあるかも確かめる。",
-      "translation": "Asegúrate de haber escrito correctamente <code>fun main() {</code> y la llave de cierre. Verifica también que el archivo esté dentro de <code>src</code>."
-    },
-    {
-      "source": "右上の ▶ を押すと、別のファイルが実行される",
-      "translation": "Al presionar el ▶ de la esquina superior derecha, se ejecuta otro archivo"
-    },
-    {
-      "source": "前回の実行設定が記憶されている。実行したいファイルの行番号のとなりの緑の三角から実行し直す。",
-      "translation": "Quedó guardada la configuración de ejecución anterior. Vuelve a ejecutar desde el triángulo verde junto al número de línea del archivo que deseas ejecutar."
-    },
-    {
-      "source": "<code>Process finished with exit code 1</code> が出る",
-      "translation": "Aparece <code>Process finished with exit code 1</code>"
-    },
-    {
-      "source": "その上の赤い文字を読む。行番号が書いてあるので、その行を見直す。",
-      "translation": "Lee el texto en letras rojas que está arriba. Ahí se indica el número de línea, así que revisa esa línea."
-    },
-    {
-      "source": "Run ツールウィンドウが見あたらない",
-      "translation": "No encuentras la ventana de herramientas Run"
-    },
-    {
-      "source": "<strong>View → Tool Windows → Run</strong> で開く。",
-      "translation": "Ábrela con <strong>View → Tool Windows → Run</strong>."
     },
     {
       "source": "前に作ったプロジェクトの場所が分からない",
@@ -819,44 +423,28 @@
       "translation": "Revisa si aparece en <strong>File → Open Recent</strong>. Debería estar dentro de <code>~/Documents/Kotlin</code>."
     },
     {
-      "source": "ダウンロードしたフォルダの名前に <code>(1)</code> や <code>-2</code> が付いている",
-      "translation": "El nombre de la carpeta descargada tiene <code>(1)</code> o <code>-2</code> al final"
-    },
-    {
-      "source": "古い教材を開いている可能性がある。自分で判断せず先生に見せる。",
-      "translation": "Es posible que estés abriendo materiales antiguos. No decidas por tu cuenta y muéstraselo a tu docente."
-    },
-    {
       "source": "教科書に書いてある名前が、自分の画面にない",
       "translation": "El nombre que indica el libro de texto no aparece en tu pantalla"
     },
     {
-      "source": "IntelliJ IDEA の版が違うことがある。設定を変えず、その画面のまま先生に見せる。",
-      "translation": "Puede que la versión de IntelliJ IDEA sea distinta. Sin cambiar la configuración, deja la pantalla tal como está y muéstrasela a tu docente."
+      "source": "IntelliJ IDEA や Android Studio の版が違うことがある。設定を変えず、その画面のまま先生に見せる。",
+      "translation": "Puede que la versión de IntelliJ IDEA o de Android Studio sea distinta. Sin cambiar la configuración, deja la pantalla tal como está y muéstrasela a tu docente."
     },
     {
-      "source": "表にないことが起きたら、その画面のまま先生に見せてください。Terminalの場合は、打った行と出た文字の両方が見えるようにしておくと早く分かります。質問するときは、<code>VERSION.json</code> に書いてある教材の版と、教科書のSTEP番号を伝えてください。",
-      "translation": "Si ocurre algo que no esté en la tabla, deja la pantalla tal como está y muéstrasela a tu docente. En el caso de Terminal, si mantienes visible tanto la línea que escribiste como el texto que apareció, se entenderá más rápido. Cuando hagas una pregunta, indica la versión de los materiales escrita en <code>VERSION.json</code> y el número de STEP del libro de texto."
+      "source": "表にないことが起きたら、その画面のまま先生に見せてください。質問するときは、<code>VERSION.json</code> に書いてある教材の版を伝えてください。プロジェクトの作成やコードの実行で困ったときは、各教科書の「困ったとき」を見てください。",
+      "translation": "Si ocurre algo que no esté en la tabla, deja la pantalla tal como está y muéstrasela a tu docente. Cuando hagas una pregunta, indica la versión de los materiales escrita en <code>VERSION.json</code>. Si tienes problemas con la creación del proyecto o la ejecución del código, consulta “Si tienes problemas” de cada libro de texto."
     },
     {
       "source": "公式資料",
       "translation": "Documentación oficial"
     },
     {
-      "source": "<a1>Kotlin Playground</a1>（手順3）",
-      "translation": "<a1>Kotlin Playground</a1> (paso 3)"
+      "source": "IntelliJ IDEA：はじめに（英語）",
+      "translation": "IntelliJ IDEA: Primeros pasos (inglés)"
     },
     {
-      "source": "<a1>Kotlin：はじめてのKotlin（英語）</a1>（手順3・手順4・手順5）",
-      "translation": "<a1>Kotlin: Primeros pasos con Kotlin (inglés)</a1> (paso 3, paso 4 y paso 5)"
-    },
-    {
-      "source": "<a1>IntelliJ IDEA：はじめに（英語）</a1>（手順4）",
-      "translation": "<a1>IntelliJ IDEA: Primeros pasos (inglés)</a1> (paso 4)"
-    },
-    {
-      "source": "<a1>Android Developers：Android仮想デバイス（エミュレータ）の作成と管理</a1>（手順6）",
-      "translation": "<a1>Android Developers: Creación y administración de dispositivos virtuales de Android (emuladores)</a1> (paso 6)"
+      "source": "<a1>Android Developers：Android仮想デバイス（エミュレータ）の作成と管理</a1>（手順3）",
+      "translation": "<a1>Android Developers: Creación y administración de dispositivos virtuales de Android (emuladores)</a1> (paso 3)"
     },
     {
       "source": "公式資料は、この教材より詳しい代わりに、授業で使わない話も多く含みます。授業中は、まずこの資料と教科書を見てください。",
