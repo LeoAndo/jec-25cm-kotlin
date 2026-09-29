@@ -417,38 +417,66 @@ Non-Bundled Plugins:
 
 ## アンケート：普段授業で使っているパソコン
 
-「普段授業で利用しているパソコンの Android Studio・Xcode・MacBook のバージョン」を聞き、**4件の回答**を得ました。**回答したのは一部の学生で、母数は分かりません。**下の表は回答のままで、教員による読み取りは次の節に分けて書きます。
+「普段授業で利用しているパソコンの Android Studio・Xcode・MacBook のバージョン」を聞き、**26件の回答**を得ました（学籍番号 `25cm0101`〜`25cm0131`、重複回答は最新を採用して匿名化）。クラスのほぼ全員（n=26）の環境が判明しました。下の表は回答のままで、教員による読み取りは次の節に分けて書きます。
 
-| 回答日 | Android Studio | Xcode | macOS |
-| --- | --- | --- | --- |
-| 2026-09-16 | `2026.1` | 27 | macOS 27 Golden Gate バージョン27.0 |
-| 2026-09-17 | `panda2` | 26.4 | tahoe ver.26.4.1 |
-| 2026-09-18 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4 | macOS Tahoe 26.5.2 |
-| 2026-09-21 | `Android Studio Panda 2 \| 2025.3` | Xcode Version 26.5 | macOS Tahoe バージョン 26.5.1 |
+| 回答番号 | 回答日 | Android Studio | Xcode | macOS |
+| --- | --- | --- | --- | --- |
+| 回答1 | 2026-09-16 | `2026.1` | 27.0 | macOS 27 Golden Gate バージョン27.0 |
+| 回答2 | 2026-09-17 | `panda2` | 26.4 | tahoe ver.26.4.1 |
+| 回答3 | 2026-09-18 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4 | macOS Tahoe 26.5.2 |
+| 回答4 | 2026-09-21 | `Android Studio Panda 2 \| 2025.3.2` | Xcode Version 26.4 (17E192) | macOS Tahoe 26.4.1 |
+| 回答5 | 2026-09-21 | `Android Studio Panda 2 \| 2025.3` | Xcode Version 26.5 | macOS Tahoe バージョン 26.5.1 |
+| 回答6 | 2026-09-24 | `Quail 4 (2026.1.4 Patch 1)` | Version 26.4 (17E192) | 26.5.2 (25F84) |
+| 回答7 | 2026-09-24 | `Android Studio Panda 3 \| 2025.3.3` | 26.4.1 | 26.5.2 |
+| 回答8 | 2026-09-24 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4 (17E192) | macOS Tahoe 26.4.1（25E253） |
+| 回答9 | 2026-09-24 | `Android Studio Quail 3 \| 2026.1.3` | Xcode Version 26.6 (17F113) | macOS Tahoe バージョン26.5.2 |
+| 回答10 | 2026-09-28 | `2025.3.2` | 26.4 | 26.4.1 |
+| 回答11 | 2026-09-29 | `Android Studio Meerkat \| 2024.3.1` | Xcode Version 16.4 (16F6) | バージョン15.3.2（24D81） |
+| 回答12 | 2026-09-29 | `Android Studio Panda 2 \| 2025.3.2` | Xcode Version 16.4（16F6） | macOS Sequoia バージョン15.3.2（24D81） |
+| 回答13 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Xcode 26.4 Build version 17E192 | 26.4.1 |
+| 回答14 | 2026-09-29 | `panda 3` | 26.4 | 26.6.2 |
+| 回答15 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Version 26.4 (17E192) | バージョン26.5.1（25F80） |
+| 回答16 | 2026-09-29 | `Android Studio Panda 2 \| 2025.3.2 Build #AI-253.30387.90...` | 26.3 | 26.3.1 |
+| 回答17 | 2026-09-29 | `panda4` | 26.4 | 26.5.1（25F80） |
+| 回答18 | 2026-09-29 | `Android Studio Panda 2 \| 2025.3.2` | Version 26.4 (17E192) | Tahoe26.4.1 |
+| 回答19 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3 Build #AI-253.31033.145...` | 26.4 | 26.5.2 |
+| 回答20 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | XCode Version 26.4 (17E192) | MacOS 26.5 |
+| 回答21 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Version 26.2 (17C52) | バージョン26.2（25C56） |
+| 回答22 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Xcode 26.3 | Tahoe 26.4.1 |
+| 回答23 | 2026-09-29 | `Android Studio Panda 4 2025.3.4` | Xcode Version 26.4.1 17E202 | macOS 26.6.2 |
+| 回答24 | 2026-09-29 | `Android Studio Panda 3 \| 2025.3.3` | Xcode Version 26.4.1 (17E202) | macOS Tahoe バージョン 26.4.1 |
+| 回答25 | 2026-09-29 | `panda 2` | 16.3 | 26.4.1 |
+| 回答26 | 2026-09-29 | `Android Studio Panda 2` | 26.6 | 26.4.1 |
 
-Xcode と macOS の欄も聞いていますが、この授業では使いません（Kotlinの前半は IntelliJ IDEA、後半は Android Studio とエミュレータ）。ほかの科目と共通のアンケートです。
+Xcode と macOS の欄も聞いていますが、この授業では使いません（Kotlinの前半は IntelliJ IDEA、後半は Android Studio とエミュレータ）。ほかの科目（ハイブリッドアプリ開発技法など）と共通のアンケートです。
 
 ### 回答の読み取り
 
-- **2026-09-16 の `2026.1` は、Android Studio Quail 4 です。** 製品名が書かれていなかったため本人に聞き直し、**2026-09-23 に確定**しました。推測ではありません。
-- **2026-09-21 の `2025.3` は、Panda 2 のバージョン番号**です。教員環境の Panda 2 と同じ版と読めます。
-- 2026-09-17 の `panda2` も Panda 2 です。
+- **2026-09-16 の `2026.1`（回答1）は、Android Studio Quail 4 です。** 製品名が書かれていなかったため本人に聞き直し、**2026-09-23 に確定**しました。推測ではありません。
+- **回答6の `Quail 4 (2026.1.4 Patch 1)`** も Quail 4、**回答9の `Android Studio Quail 3 \| 2026.1.3`** は Quail 3 です。Quail系は計3名います。
+- **`panda2`、`2025.3.2`、`2025.3`、`Android Studio Panda 2`** は、すべて教員環境・教材の基準である **Panda 2（2025.3.2）** です（計9名）。
+- **`Android Studio Panda 3 \| 2025.3.3`、`panda 3`** は、Panda 2 の1パッチ先である **Panda 3（2025.3.3）** です（計11名）。クラス単独最多（42.3%）です。
+- **`panda4`、`Android Studio Panda 4 2025.3.4`** は、さらに次のパッチである **Panda 4（2025.3.4）** です（計2名）。
+- **`Android Studio Meerkat \| 2024.3.1`** は、Panda より1世代前の **Meerkat（2024.3.1）** です（計1名。macOS 15 Sequoia環境）。
 
 ### 教員環境・教材の基準とのバージョン差
 
-**回答した4人のうち2人が、教材の基準（Android Studio Panda 2）より新しい版を使っています。**
+**回答した26人のうち16人（61.5%）が、教材の基準（Android Studio Panda 2）より新しい版を使っています。**
 
-| 回答日 | Android Studio | 基準との差 |
-| --- | --- | --- |
-| 2026-09-16 | Quail 4 | **2世代先** |
-| 2026-09-17 | Panda 2 | 一致 |
-| 2026-09-18 | Panda 3（2025.3.3） | 1パッチ先 |
-| 2026-09-21 | Panda 2（2025.3） | 一致 |
+| バージョン | 基準との差 | 人数 | 割合 | 該当する回答 |
+| --- | --- | --- | --- | --- |
+| Quail 4（2026.1.4） | **2世代先（次世代メジャー版）** | 2名 | 7.7% | 回答1, 6 |
+| Quail 3（2026.1.3） | **2世代先（次世代メジャー版）** | 1名 | 3.8% | 回答9 |
+| Panda 4（2025.3.4） | 2パッチ先 | 2名 | 7.7% | 回答17, 23 |
+| Panda 3（2025.3.3） | 1パッチ先（**単独最多**） | 11名 | 42.3% | 回答3, 7, 8, 13, 14, 15, 19, 20, 21, 22, 24 |
+| **Panda 2（2025.3.2）** | **一致（教材の基準）** | **9名** | **34.6%** | 回答2, 4, 5, 10, 12, 16, 18, 25, 26 |
+| Meerkat（2024.3.1） | 1世代前（旧世代版） | 1名 | 3.8% | 回答11 |
 
-**割合は結論にできません。** 母数が分からないので、「半分が新しい版」とは言えません。ただし1人でも基準より新しい版を使っている以上、読み替えの案内は要ります。
+**母数（n=26）が確定し、学生の約6割が基準より新しい版を使っていることが判明しました。**
 
-- **Quail 4 で進めると、教科書と食い違うところが実測で分かっています。** リポジトリにある2つのひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）を突き合わせた結果、`buildTypes` の書き方（`isMinifyEnabled` ＋ `proguardFiles` ↔ `optimization { enable = false }`）と、R8のkeepルールの置き場（`app/proguard-rules.pro` ↔ `app/src/main/keepRules/rules.keep`）が違います。どちらも New Project ウィザードが生成する形そのものなので、学生が自分で作ったプロジェクトと教科書のコードを並べて見比べられなくなります。詳細は「教員が確認に使うプロジェクト」の表にあります。
-- **Panda 3（2025.3.3）の差分は実測していません。** Panda 2 とはパッチ1つぶんの差なので、上の食い違いは出ない見込みですが、確かめてはいません。ひな形も置いていません。
+- **Quail系（Quail 3/4）が3名（11.5%）存在します。** Quail 4 で進めると、教科書と食い違うところが実測で分かっています。リポジトリにある2つのひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）を突き合わせた結果、`buildTypes` の書き方（`isMinifyEnabled` ＋ `proguardFiles` ↔ `optimization { enable = false }`）と、R8のkeepルールの置き場（`app/proguard-rules.pro` ↔ `app/src/main/keepRules/rules.keep`）が違います。どちらも New Project ウィザードが生成する形そのものなので、学生が自分で作ったプロジェクトと教科書のコードを並べて見比べられなくなります。詳細は「教員が確認に使うプロジェクト」の表にあります。
+- **Panda 3（2025.3.3）が11名（42.3%）でクラス単独最多です。** Panda 3 はパッチ1つぶんの差であり、Panda 2 の手順を出発点として進められる見込みですが、実測確認はしていません。STEP 01で設定を置き換える前に先生に見せる案内を維持します。Panda系全体（Panda 2/3/4）では22名（84.6%）となります。
+- **Meerkat（2024.3.1）が1名（3.8%）います。** 前世代のIDEのため、最新のAGPやKotlinプラグインの互換性、プロジェクト新規作成時のウィザード設定などで予期せぬ挙動が生じる可能性があります。止まった場合は無理に設定を変更せず、教員へ相談してもらいます。
 - A01の教科書とあわせて、[共通資料：ちがうAndroid Studioのバージョンで進めるとき](docs/common/other-versions.html)を用意しました。Quail 4ではA01 STEP 01のPanda 2用カタログへ置き換えず、生成設定を保って進めます。設定の実測表、相談する条件、Panda 3が未実測であることをまとめています。
 
 # 基本方針
