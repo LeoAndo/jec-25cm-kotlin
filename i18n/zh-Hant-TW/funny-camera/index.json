@@ -3,6 +3,14 @@
   "language": "zh-Hant-TW",
   "entries": [
     {
+      "source": "A04 FunnyCamera — カメラにキャラクターを重ねよう | Kotlin演習",
+      "translation": "A04 FunnyCamera — 將角色疊加在相機畫面上 | Kotlin 程式實作"
+    },
+    {
+      "source": "Android Studio Panda 2で作る合成カメラ。90分×2コマで、カメラのプレビュー・ドラッグ・画像の合成と保存を進めます。",
+      "translation": "在 Android Studio Panda 2 中製作合成相機。共2堂課，每堂90分鐘，進行相機預覽、拖曳、影像合成與儲存。"
+    },
+    {
       "source": "本文へ移動",
       "translation": "跳到主要內容"
     },
@@ -21,6 +29,66 @@
     {
       "source": "目次",
       "translation": "目錄"
+    },
+    {
+      "source": "STEP 00 今日の画面を先に見る",
+      "translation": "STEP 00 先看今天的畫面"
+    },
+    {
+      "source": "STEP 01 自分のA04プロジェクトを作る",
+      "translation": "STEP 01 建立自己的 A04 專案"
+    },
+    {
+      "source": "STEP 02 カメラのライブラリをそろえる",
+      "translation": "STEP 02 準備好相機函式庫"
+    },
+    {
+      "source": "STEP 03 カメラの使用を宣言する",
+      "translation": "STEP 03 宣告使用相機"
+    },
+    {
+      "source": "STEP 04 金魚を置いてドラッグ用のViewを作る",
+      "translation": "STEP 04 放置金魚並製作拖曳用的 View"
+    },
+    {
+      "source": "STEP 05 映像・金魚・ボタンを重ねる",
+      "translation": "STEP 05 疊加畫面、金魚與按鈕"
+    },
+    {
+      "source": "STEP 06 権限を受け取りプレビューを起動する",
+      "translation": "STEP 06 取得權限並啟動預覽"
+    },
+    {
+      "source": "STEP 07 14コマ目の最後の3分",
+      "translation": "STEP 07 第14堂課最後的3分鐘"
+    },
+    {
+      "source": "STEP 08 前回のプロジェクトを開き直す",
+      "translation": "STEP 08 重新開啟上次的專案"
+    },
+    {
+      "source": "STEP 09 プレビューと金魚を1枚に描く",
+      "translation": "STEP 09 將預覽與金魚繪製在同一張圖片上"
+    },
+    {
+      "source": "STEP 10 JPEGを保存する完成コードへ進む",
+      "translation": "STEP 10 進入儲存 JPEG 的完成版程式碼"
+    },
+    {
+      "source": "STEP 11 保存した画像を開いて比べる",
+      "translation": "STEP 11 開啟儲存的圖片並比較"
+    },
+    {
+      "source": "STEP 12 権限を許可しない場合も確かめる",
+      "translation": "STEP 12 也確認不允許權限時的情況"
+    },
+    {
+      "source": "STEP 13 自分の画面へアレンジする",
+      "translation": "STEP 13 自訂成自己的畫面"
+    },
+    {
+      "source": "STEP 14 15コマ目の最後の3分",
+      "translation": "STEP 14 第15堂課最後的3分鐘"
     },
     {
       "source": "困ったとき",
@@ -43,20 +111,88 @@
       "translation": "共用：不同的 Android Studio 版本"
     },
     {
+      "source": "カメラにキャラクターを<br>重ねよう",
+      "translation": "將角色疊加在<br>相機畫面上"
+    },
+    {
+      "source": "金魚を指で動かし、カメラの映像と組み合わせた1枚を保存します。",
+      "translation": "用手指移動金魚，並儲存一張與相機畫面結合的圖片。"
+    },
+    {
+      "source": "対象：<code>A04FunnyCamera</code> / パッケージ：<code>jp.ac.jec.a04funnycamera</code><br>14〜15コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "對象：<code>A04FunnyCamera</code> / 套件：<code>jp.ac.jec.a04funnycamera</code><br>第14〜15堂課・每堂90分鐘 / Android Studio Panda 2 / macOS"
+    },
+    {
       "source": "この単元で作るもの",
       "translation": "本單元要製作的東西"
+    },
+    {
+      "source": "カメラの上にキャラクターを重ねるアプリ。14コマ目でプレビューとドラッグ、15コマ目で合成画像の保存へ進みます。",
+      "translation": "在相機上疊加角色的應用程式。第14堂課進行預覽與拖曳，第15堂課進入合成圖片的儲存。"
+    },
+    {
+      "source": "STEP 00 · 14コマ目 · 目安 5分",
+      "translation": "STEP 00 · 第14堂課 · 約5分鐘"
+    },
+    {
+      "source": "今日の画面を先に見る",
+      "translation": "先看今天的畫面"
+    },
+    {
+      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。見本の映像はエミュレータ内の仮想の部屋です。",
+      "translation": "要開啟的 IDE 是 <strong>Android Studio Panda 2</strong>。今天要在相機畫面上疊加金魚，並用手指移動它。下一堂課會將該組合儲存為圖片。範例畫面是模擬器內的虛擬房間。"
+    },
+    {
+      "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面",
+      "translation": "相機畫面上疊加金魚與 Take Picture 按鈕的畫面"
+    },
+    {
+      "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面（指定AVDで撮影）",
+      "translation": "相機畫面上疊加金魚與 Take Picture 按鈕的畫面（在指定的 AVD 上截圖）"
+    },
+    {
+      "source": "教科書とAndroid Studioを並べます。実行先は <code>jec_25cm_kotlin_Pixel 9a</code>。別のAndroid Studioの版を使っている場合は、作成前に先生へ画面を見せてください。",
+      "translation": "將課本與 Android Studio 並排。目標裝置為 <code>jec_25cm_kotlin_Pixel 9a</code>。如果使用的是其他版本的 Android Studio，請在建立前將畫面給老師看。"
     },
     {
       "source": "Java／Swiftとの比較",
       "translation": "與 Java／Swift 的比較"
     },
     {
+      "source": "Swiftのletに対応するKotlinのvalを使います。以後も比較欄のJava／Swiftは読むための見本で、Android Studioに貼るのはKotlinです。",
+      "translation": "使用與 Swift 的 let 對應的 Kotlin val。之後比較欄中的 Java／Swift 也只是用來閱讀的範例，要貼到 Android Studio 裡的是 Kotlin。"
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "在這裡停下來確認"
     },
     {
+      "source": "教科書とAndroid Studio Panda 2が開き、指定AVD名が実行先に見える。",
+      "translation": "課本和 Android Studio Panda 2 已開啟，且在目標裝置中能看到指定的 AVD 名稱。"
+    },
+    {
       "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
       "translation": "完成後請勾選。卡住時，請把這個畫面給老師看。"
+    },
+    {
+      "source": "STEP 01 · 14コマ目 · 目安 12分",
+      "translation": "STEP 01 · 第14堂課 · 約12分鐘"
+    },
+    {
+      "source": "自分のA04プロジェクトを作る",
+      "translation": "建立自己的 A04 專案"
+    },
+    {
+      "source": "<strong>New Project</strong>、または <strong>File → New → New Project…</strong> を選びます。",
+      "translation": "請選擇 <strong>New Project</strong>，或是 <strong>File → New → New Project…</strong>。"
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> を選びます。<code>Empty Activity</code> はCompose用です。",
+      "translation": "請選擇 <strong>Phone and Tablet → Empty Views Activity → Next</strong>。<code>Empty Activity</code> 是給 Compose 用的。"
+    },
+    {
+      "source": "次の表を入力して <strong>Finish</strong>。Gradle同期が終わるまで待ちます。",
+      "translation": "輸入下表的內容後按一下 <strong>Finish</strong>。等待 Gradle 同步完成。"
     },
     {
       "source": "項目",
@@ -67,20 +203,624 @@
       "translation": "輸入或選擇的內容"
     },
     {
+      "source": "<code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。",
+      "translation": "請把 <code>ユーザ名</code>（使用者名稱）換成自己在 Mac 上的名稱。Save location 要包含專案名稱。如果被詢問是否允許存取「書類」（文件），為了能讀取自己的儲存位置，請允許。同步的紅色錯誤一直沒有消失時，請把畫面給老師看。"
+    },
+    {
+      "source": "左のProjectツールウィンドウは <strong>Project</strong> 表示にします。Kotlinファイルの置き場は <code>app/src/main/java/jp/ac/jec/a04funnycamera/</code>。以後この教科書で「パッケージ」と書いたら、この場所です。",
+      "translation": "將左側的 Project 工具視窗切換為 <strong>Project</strong> 顯示。Kotlin 檔案的放置位置是 <code>app/src/main/java/jp/ac/jec/a04funnycamera/</code>。之後本課本中寫到「套件」時，指的就是這個位置。"
+    },
+    {
+      "source": "Kotlinの : はJavaのextendsに対応します。親のコンストラクタを呼ぶ括弧も残します。Empty Views ActivityならXMLとActivityが組になります。",
+      "translation": "Kotlin 的 : 對應 Java 的 extends。呼叫父類別建構函式的括號也要保留。如果是 Empty Views Activity，XML 與 Activity 就會成對出現。"
+    },
+    {
+      "source": "自分の保存先にA04FunnyCameraができ、MainActivity.ktのpackageがjp.ac.jec.a04funnycameraになっている。",
+      "translation": "自己的儲存位置已建立 A04FunnyCamera，且 MainActivity.kt 的 package 為 jp.ac.jec.a04funnycamera。"
+    },
+    {
+      "source": "STEP 02 · 14コマ目 · 目安 15分",
+      "translation": "STEP 02 · 第14堂課 · 約15分鐘"
+    },
+    {
+      "source": "カメラのライブラリをそろえる",
+      "translation": "準備好相機函式庫"
+    },
+    {
+      "source": "次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。",
+      "translation": "請將以下3個檔案<strong>確認路徑並替換全文後</strong>再進行同步。這樣可以統一因建立日期不同而產生的函式庫差異。這是以在 Panda 2 建立的組態為前提，而不是只調低其他版本的 AGP 版本號的步驟。"
+    },
+    {
+      "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
+      "translation": "<code>gradle/libs.versions.toml</code>。會使用 CameraX 的4個項目和 lifecycle。"
+    },
+    {
       "source": "libs.versions.toml · 全文",
       "translation": "libs.versions.toml · 全文"
+    },
+    {
+      "source": "プロジェクト直下の <code>build.gradle.kts</code>。",
+      "translation": "專案根目錄下的 <code>build.gradle.kts</code>。"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · 全文"
+    },
+    {
+      "source": "<code>app/build.gradle.kts</code>。こちらはappフォルダの中です。",
+      "translation": "<code>app/build.gradle.kts</code>。這個是在 app 資料夾裡面。"
+    },
+    {
+      "source": "コード内の <code>TODO STEP01</code> は完成プロジェクトに残る作業時の目印で、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
+      "translation": "程式碼中的 <code>TODO STEP01</code> 是留在完成版專案中作業時的標記，並非本課本的 STEP 編號。CameraX 的4行 <code>implementation</code> 已經包含在內了。替換全文之後，不需要再重新新增相同的行。"
+    },
+    {
+      "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
+      "translation": "請執行 <strong>Sync Now</strong>（如果沒有出現，則是 <strong>File → Sync Project with Gradle Files</strong>）。如果被詢問是否新增 SDK，請確認內容並與老師一起進行。<code>gradle/wrapper/gradle-wrapper.properties</code> 中的 Gradle 是 <code>9.3.1</code>，AGP 是 <code>9.1.1</code>，compileSdk 是 <code>36.1</code>，targetSdk 是 <code>36</code>。如果仍有同步錯誤，請停留在該畫面。"
+    },
+    {
+      "source": "依存関係",
+      "translation": "相依項目"
+    },
+    {
+      "source": "使う場所",
+      "translation": "使用位置"
+    },
+    {
+      "source": "CameraXが内部で使う背面カメラの実装",
+      "translation": "CameraX 在內部使用的後置相機實作"
+    },
+    {
+      "source": "Activityにプレビューを結び付ける",
+      "translation": "將預覽與 Activity 綁定"
+    },
+    {
+      "source": "XMLのPreviewView",
+      "translation": "XML 中的 PreviewView"
+    },
+    {
+      "source": "保存処理を起動するlifecycleScope",
+      "translation": "用來啟動儲存處理的 lifecycleScope"
+    },
+    {
+      "source": "Javaと同じライブラリをKotlinから使えます。Kotlinではnewを書きません。camera-camera2は本文にimportがなくても実行時に必要です。",
+      "translation": "可以在 Kotlin 中使用與 Java 相同的函式庫。在 Kotlin 中不需要寫 new。camera-camera2 即使在內文中沒有 import，在執行時期也是必要的。"
+    },
+    {
+      "source": "同期の赤いエラーがなくなり、カタログにCameraXの4つとlifecycleがある。",
+      "translation": "同步的紅色錯誤消失，且版本目錄中有 CameraX 的4個項目和 lifecycle。"
+    },
+    {
+      "source": "STEP 03 · 14コマ目 · 目安 10分",
+      "translation": "STEP 03 · 第14堂課 · 約10分鐘"
+    },
+    {
+      "source": "カメラの使用を宣言する",
+      "translation": "宣告使用相機"
+    },
+    {
+      "source": "<code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>uses-permission</code> はapplicationの外です。",
+      "translation": "將 <code>app/src/main/AndroidManifest.xml</code> 替換為全文。<code>uses-permission</code> 要放在 application 的外面。"
+    },
+    {
+      "source": "AndroidManifest.xml · 全文",
+      "translation": "AndroidManifest.xml · 全文"
+    },
+    {
+      "source": "<code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。テーマ名は生成済みの <code>Theme.A04FunnyCamera</code> と一致させます。",
+      "translation": "<code>CAMERA</code> 是使用相機的宣告。光是這樣並不算獲得允許，會在執行時透過對話框進行選擇。<code>camera.any</code> 是需要相機的宣告，選擇後置相機的設定稍後會寫在 Kotlin 中。主題名稱要與已產生的 <code>Theme.A04FunnyCamera</code> 保持一致。"
+    },
+    {
+      "source": "このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。",
+      "translation": "在這個 STEP 中請儲存檔案。讓權限對話框運作是在 STEP 06。"
+    },
+    {
+      "source": "同じAndroid APIをJavaからも呼べます。権限名は文字列の手入力を避け、Manifest.permission.CAMERAを使います。",
+      "translation": "從 Java 也可以呼叫相同的 Android API。權限名稱要避免手動輸入字串，請使用 Manifest.permission.CAMERA。"
+    },
+    {
+      "source": "ManifestにCAMERAの宣言があり、applicationの外に置かれている。",
+      "translation": "Manifest 中有 CAMERA 的宣告，且放置在 application 的外面。"
+    },
+    {
+      "source": "STEP 04 · 14コマ目 · 目安 20分",
+      "translation": "STEP 04 · 第14堂課 · 約20分鐘"
+    },
+    {
+      "source": "金魚を置いてドラッグ用のViewを作る",
+      "translation": "放置金魚並製作拖曳用的 View"
+    },
+    {
+      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
+      "translation": "請<a1>儲存金魚圖片 character.png</a1>，並從 Finder 複製到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code> 中。如果儲存時變成了其他名稱，請修改回 <code>character.png</code>。要放在 <strong>drawable</strong> 的正下方。圖片是背景透明的 500×416 像素，與完成版相同。"
+    },
+    {
+      "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
+      "translation": "在 Android Studio 中在套件 <code>jp.ac.jec.a04funnycamera</code> 上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>。名稱輸入 <code>DraggableImageView</code>，種類選擇 <strong>Class</strong> 來建立，並替換為以下全文。"
+    },
+    {
+      "source": "DraggableImageView.kt · 全文",
+      "translation": "DraggableImageView.kt · 全文"
+    },
+    {
+      "source": "処理",
+      "translation": "處理"
+    },
+    {
+      "source": "このコードでしていること",
+      "translation": "這段程式碼做的事情"
+    },
+    {
+      "source": "親内のView位置x/yと、画面上の指の位置rawX/rawYの差を記録する。",
+      "translation": "記錄父元件內的 View 位置 x/y，與螢幕上的手指位置 rawX/rawY 之間的差值。"
+    },
+    {
+      "source": "指の新しい位置に差を足して、最初につかんだ位置を保つ。",
+      "translation": "將差值加到手指的新位置上，保持最初抓取時的相對位置。"
+    },
+    {
+      "source": "親のpaddingとViewの大きさを引き、coerceInで端に止める。",
+      "translation": "減去父元件的 padding 和 View 的大小，用 coerceIn 限制在邊緣停住。"
+    },
+    {
+      "source": "指を離したときにViewのクリック処理を呼ぶ。警告をSuppressで隠さない。",
+      "translation": "手指放開時呼叫 View 的點擊處理。不使用 Suppress 來隱藏警告。"
+    },
+    {
+      "source": "まだXMLに配置していないので、この時点では画面は変わりません。次のSTEPでこのクラスをタグ名に使います。",
+      "translation": "因為尚未放置在 XML 中，所以此時畫面不會有變化。下一個 STEP 會將這個類別作為標籤名稱使用。"
+    },
+    {
+      "source": "プライマリコンストラクタは、Javaでクラス本体に書くコンストラクタの引数をクラス名の後へ出す形です。XMLから渡されるContextとAttributeSetを親へ渡します。",
+      "translation": "主要建構函式（プライマリコンストラクタ）是將 Java 中寫在類別本體內的建構函式參數移到類別名稱後面的形式。將從 XML 傳遞過來的 Context 和 AttributeSet 傳給父類別。"
+    },
+    {
+      "source": "drawable/character.pngとDraggableImageView.ktがあり、先頭のpackageとフォルダが一致する。",
+      "translation": "存在 drawable/character.png 與 DraggableImageView.kt，且開頭的 package 與資料夾一致。"
+    },
+    {
+      "source": "STEP 05 · 14コマ目 · 目安 10分",
+      "translation": "STEP 05 · 第14堂課 · 約10分鐘"
+    },
+    {
+      "source": "映像・金魚・ボタンを重ねる",
+      "translation": "疊加畫面、金魚與按鈕"
+    },
+    {
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。",
+      "translation": "開啟 <code>app/src/main/res/layout/activity_main.xml</code>，在 <strong>Code</strong> 檢視中替換為全文。"
     },
     {
       "source": "activity_main.xml · 全文",
       "translation": "activity_main.xml · 全文"
     },
     {
+      "source": "FrameLayoutは後に書いたViewが手前です。PreviewView → 金魚 → ボタンの順なので、金魚を下へ動かすとボタンに隠れる部分があります。XMLのカスタムViewはパッケージ名まで含むクラス名です。<code>@drawable/character</code> に拡張子は付けません。",
+      "translation": "在 FrameLayout 中，後寫的 View 會顯示在前面。順序是 PreviewView → 金魚 → 按鈕，因此把金魚向下移動時，會有一部分被按鈕遮住。XML 中的自訂 View 要寫包含套件名稱的類別名稱。<code>@drawable/character</code> 不需要加副檔名。"
+    },
+    {
+      "source": "この時点のPreviewはカメラ映像を表示しません。XMLの赤い参照が消えたら、STEP 06で起動します。",
+      "translation": "此時的 Preview 不會顯示相機畫面。XML 的紅色參照消失後，會在 STEP 06 中啟動。"
+    },
+    {
+      "source": "XMLとKotlinの接点はidです。Javaでも同じfindViewByIdを使えます。変数の型ImageViewは、子クラスDraggableImageViewを受け取れます。",
+      "translation": "XML 與 Kotlin 的連接點是 id。在 Java 中也能使用相同的 findViewById。變數的型別 ImageView 可以接收子類別 DraggableImageView。"
+    },
+    {
+      "source": "XMLのidがpreview_view・iv_character・btn_take_pictureで、drawableの参照が赤くなっていない。",
+      "translation": "XML 的 id 為 preview_view、iv_character、btn_take_picture，且 drawable 的參照沒有變成紅色。"
+    },
+    {
+      "source": "STEP 06 · 14コマ目 · 目安 15分",
+      "translation": "STEP 06 · 第14堂課 · 約15分鐘"
+    },
+    {
+      "source": "権限を受け取りプレビューを起動する",
+      "translation": "取得權限並啟動預覽"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の全文に置き換えます。これは<strong>14コマ目の途中コード</strong>です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。",
+      "translation": "將 <code>MainActivity.kt</code> 替換為以下全文。這是<strong>第14堂課進行中的程式碼</strong>。Take Picture 只是顯示確認訊息，還不會儲存。"
+    },
+    {
+      "source": "06-MainActivity.kt · 全文",
+      "translation": "06-MainActivity.kt · 全文"
+    },
+    {
+      "source": "実行設定 <strong>app</strong>、<code>jec_25cm_kotlin_Pixel 9a</code> を選び、<strong>Run ▶</strong>。カメラのダイアログで <strong>While using the app</strong>（アプリの使用中のみ）を選びます。既に許可済みならダイアログは出ません。仮想の部屋が表示されたら、金魚をつかんで上下左右へドラッグします。四辺で金魚のViewが止まります。",
+      "translation": "選擇執行組態 <strong>app</strong>、<code>jec_25cm_kotlin_Pixel 9a</code>，然後按一下 <strong>Run ▶</strong>。在相機權限對話框中選擇 <strong>While using the app</strong>（僅在使用應用程式時）。如果之前已經允許過，就不會顯示對話框。顯示虛擬房間後，抓住金魚並向上下左右拖曳。金魚的 View 會在四個邊緣停住。"
+    },
+    {
+      "source": "つながり",
+      "translation": "關聯"
+    },
+    {
+      "source": "役割",
+      "translation": "職責"
+    },
+    {
+      "source": "権限の結果をisGrantedで受け取り、許可ならstartCamera。拒否なら画面に案内。",
+      "translation": "用 isGranted 接收權限結果，若允許則執行 startCamera。若拒絕則在畫面上顯示提示。"
+    },
+    {
+      "source": "カメラの準備完了後に処理。getMainExecutorで画面を扱うスレッドへ渡す。",
+      "translation": "在相機準備完成後處理。透過 getMainExecutor 傳遞給處理畫面的執行緒。"
+    },
+    {
+      "source": "Previewの出力先をXMLのPreviewViewへ接続する。",
+      "translation": "將 Preview 的輸出目標連接至 XML 的 PreviewView。"
+    },
+    {
+      "source": "背面を選ぶ。指定AVDでは仮想の部屋。",
+      "translation": "選擇後置相機。在指定的 AVD 中是虛擬房間。"
+    },
+    {
+      "source": "このActivityのライフサイクルにプレビューを結び付ける。",
+      "translation": "將預覽與這個 Activity 的生命週期綁定。"
+    },
+    {
+      "source": "起動失敗をSnackbarで表示する。",
+      "translation": "透過 Snackbar 顯示啟動失敗。"
+    },
+    {
+      "source": "ボタンを1回押すと「プレビューを確認中です」が出ます。プレビューが黒いときは権限の状態を先生と確認し、連打で直そうとしません。",
+      "translation": "按一下按鈕會顯示「プレビューを確認中です」（正在確認預覽）。預覽畫面一片黑時，請與老師確認權限狀態，不要試圖用連續點擊來解決。"
+    },
+    {
+      "source": "Javaのgetter／setterをKotlinではプロパティの形で呼べます。cameraProviderFuture.get()は準備完了のリスナ内にあり、ここでPreviewを画面へ接続します。",
+      "translation": "在 Kotlin 中可以用屬性的形式呼叫 Java 的 getter／setter。cameraProviderFuture.get() 位於準備完成的監聽器內，在這裡將 Preview 連接至畫面。"
+    },
+    {
+      "source": "仮想の部屋と金魚が表示され、金魚を四辺へ動かすと画面の内側で止まる。ボタンから途中段階の案内が出る。",
+      "translation": "顯示虛擬房間與金魚，將金魚移動到四個邊緣時會停留在螢幕內側。按鈕會顯示進行階段的提示。"
+    },
+    {
+      "source": "STEP 07 · 14コマ目 · 目安 3分",
+      "translation": "STEP 07 · 第14堂課 · 約3分鐘"
+    },
+    {
+      "source": "14コマ目の最後の3分",
+      "translation": "第14堂課最後的3分鐘"
+    },
+    {
+      "source": "ファイルを保存し、金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。",
+      "translation": "儲存檔案，將金魚移回中央並按一下 Take Picture。等待確認訊息消失。下一堂課也是開啟相同的 <code>Documents/Kotlin/A04FunnyCamera</code>。"
+    },
+    {
+      "source": "途中で止まった人は、最後に画面が一致したSTEPを教科書のチェック欄で残します。14コマ目末の全文はSTEP 06です。",
+      "translation": "中途卡住的同學，請在課本的勾選欄中保留最後畫面一致的 STEP。第14堂課結束時的全文是 STEP 06。"
+    },
+    {
+      "source": "coerceInはJavaのMath.minとMath.maxの組に対応します。この数値例の結果は100fです。完成コードでは親の大きさから範囲を計算しています。",
+      "translation": "coerceIn 對應 Java 的 Math.min 與 Math.max 的組合。這個數值範例的結果是 100f。在完成版程式碼中，是根據父元件的大小來計算範圍。"
+    },
+    {
+      "source": "自分のA04が開き、プレビュー・金魚の移動・「プレビューを確認中です」の表示がそろっている。",
+      "translation": "自己的 A04 已開啟，且預覽、金魚移動，以及顯示「プレビューを確認中です」（正在確認預覽）都已具備。"
+    },
+    {
+      "source": "STEP 08 · 15コマ目 · 目安 5分",
+      "translation": "STEP 08 · 第15堂課 · 約5分鐘"
+    },
+    {
+      "source": "前回のプロジェクトを開き直す",
+      "translation": "重新開啟上次的專案"
+    },
+    {
+      "source": "Android Studioの <strong>Open</strong> で、自分の <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。既に開いていればそのまま進みます。同期後に <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。",
+      "translation": "在 Android Studio 中使用 <strong>Open</strong> 開啟自己的 <code>Documents/Kotlin/A04FunnyCamera</code>。如果已經開啟，就直接繼續。同步完成後，選擇 <strong>app</strong> 和 <code>jec_25cm_kotlin_Pixel 9a</code> 並按 Run。"
+    },
+    {
+      "source": "金魚が動き、Take Pictureから「プレビューを確認中です」が出る状態が出発点です。違っているときはSTEP 06の全文と照合します。今日はプレビューと金魚を1枚のJPEGへ保存します。",
+      "translation": "出發點是金魚可以移動，且按 Take Picture 會顯示「プレビューを確認中です」（正在確認預覽）的狀態。如果有出入，請對照 STEP 06 的全文。今天要把預覽與金魚儲存為一張 JPEG 圖片。"
+    },
+    {
+      "source": "lateinitは後で代入する非Nullのプロパティです。Javaのフィールドと同じ位置に置き、setContentViewの後でfindViewByIdから代入して使います。",
+      "translation": "lateinit 是稍後才指派的非 Null 屬性。放置在與 Java 欄位相同的位置，在 setContentView 之後透過 findViewById 指派值來使用。"
+    },
+    {
+      "source": "自分の保存先のA04をRunし、プレビューと途中段階の確認メッセージが出る。",
+      "translation": "Run 自己的儲存位置中的 A04，會顯示預覽與進行階段的確認訊息。"
+    },
+    {
+      "source": "STEP 09 · 15コマ目 · 目安 15分",
+      "translation": "STEP 09 · 第15堂課 · 約15分鐘"
+    },
+    {
+      "source": "プレビューと金魚を1枚に描く",
+      "translation": "將預覽與金魚繪製在同一張圖片上"
+    },
+    {
+      "source": "まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
+      "translation": "首先，請閱讀接下來的合成部分。<strong>只有這個摘錄部分請勿貼上</strong>，請在填入 STEP 10 的全文之後再 Run。<code>previewView.bitmap</code> 會取得目前預覽中顯示的畫面。在準備完成前為 null。"
+    },
+    {
+      "source": "順序",
+      "translation": "順序"
+    },
+    {
+      "source": "画像に起きること",
+      "translation": "圖片上發生的變化"
+    },
+    {
+      "source": "プレビューの範囲・大きさのBitmapを取り出す。カメラの最大解像度の写真ではない。",
+      "translation": "取出預覽範圍與大小的 Bitmap。這不是相機最大解析度的照片。"
+    },
+    {
+      "source": "上から描き込めるコピーを作る。",
+      "translation": "建立可從上方繪製內容的副本。"
+    },
+    {
+      "source": "描き込み先をそのコピーにする。",
+      "translation": "將繪製目標設定為該副本。"
+    },
+    {
+      "source": "プレビュー左上を原点にして、金魚のViewの左上へ移動する。",
+      "translation": "以預覽左上角為原點，移動到金魚 View 的左上角。"
+    },
+    {
+      "source": "金魚のViewだけを描く。ボタンや画面全体は描かない。",
+      "translation": "只繪製金魚的 View。不繪製按鈕或整個螢幕。"
+    },
+    {
+      "source": "金魚とPreviewViewは同じ親の子です。<code>characterView.x - previewView.x</code> とyの差で、親内の位置を画像内の位置に変えます。ステータスバーを避けるpaddingがあっても、この差で位置が合います。",
+      "translation": "金魚與 PreviewView 是同一個父元件下的子元件。利用 <code>characterView.x - previewView.x</code> 與 y 的差值，將父元件內的位置轉換為圖片內的位置。即使有避開狀態列的 padding，透過這個差值也能讓位置對齊。"
+    },
+    {
+      "source": "JavaのgetBitmap()をKotlinでは.bitmapと書きます。nullの場合にreturnした後は、Kotlinのスマートキャストで非Nullとして使えます。",
+      "translation": "Java 的 getBitmap() 在 Kotlin 中寫作 .bitmap。在為 null 情況下 return 之後，就能透過 Kotlin 的智慧轉型（スマートキャスト）當作非 Null 來使用。"
+    },
+    {
+      "source": "MainActivity.ktはまだSTEP 06の状態で、抜粋のbitmap・translate・drawの3か所が教科書に見えている。",
+      "translation": "MainActivity.kt 仍處於 STEP 06 的狀態，課本中能看到摘錄的 bitmap、translate、draw 這3個地方。"
+    },
+    {
+      "source": "STEP 10 · 15コマ目 · 目安 25分",
+      "translation": "STEP 10 · 第15堂課 · 約25分鐘"
+    },
+    {
+      "source": "JPEGを保存する完成コードへ進む",
+      "translation": "進入儲存 JPEG 的完成版程式碼"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の<strong>完成版の全文</strong>へ置き換えます。importも含みます。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。",
+      "translation": "將 <code>MainActivity.kt</code> 替換為以下<strong>完成版的全文</strong>。也包含 import。保留第14堂課的權限與相機連接，並加入由按鈕呼叫的 <code>takeScreenshot</code> 與 <code>saveBitmap</code>。"
+    },
+    {
       "source": "MainActivity.kt · 全文",
       "translation": "MainActivity.kt · 全文"
     },
     {
+      "source": "保存の順序",
+      "translation": "儲存的順序"
+    },
+    {
+      "source": "このコードの意味",
+      "translation": "這段程式碼的意思"
+    },
+    {
+      "source": "名前・image/jpeg・Pictures/FunnyCamera・IS_PENDING=1を指定する。",
+      "translation": "指定名稱、image/jpeg、Pictures/FunnyCamera、IS_PENDING=1。"
+    },
+    {
+      "source": "MediaStoreに保存先を作る。戻り値のuriがnullならfalse。",
+      "translation": "在 MediaStore 中建立儲存位置。若回傳值的 uri 為 null 則為 false。"
+    },
+    {
+      "source": "出力先を開いてJPEGを書き、useの終了時に閉じる。",
+      "translation": "開啟輸出目標並寫入 JPEG，在 use 結束時關閉。"
+    },
+    {
+      "source": "JPEG品質95で書き込む。圧縮に成功したかをisWrittenへ保存する。",
+      "translation": "以 JPEG 品質 95 寫入。將是否壓縮成功儲存到 isWritten。"
+    },
+    {
+      "source": "失敗ならdelete",
+      "translation": "失敗則 delete"
+    },
+    {
+      "source": "出力先を作ったが書き込めなければ、その作りかけを削除してfalse。",
+      "translation": "建立了輸出目標但無法寫入時，刪除該未完成的檔案並回傳 false。"
+    },
+    {
+      "source": "書き込み済みの画像を他のアプリからも見える状態にする。",
+      "translation": "將已寫入的圖片設定為其他應用程式也能看見的狀態。"
+    },
+    {
+      "source": "保存は <code>lifecycleScope.launch</code> から始め、圧縮・書き込みを <code>withContext(Dispatchers.IO)</code> の中へ置きます。そこを抜けるとメインスレッドへ戻り、trueなら「保存しました」、falseなら「保存に失敗しました」を表示します。Activityが破棄されるとlifecycleScopeのコルーチンはキャンセルされます。",
+      "translation": "儲存是從 <code>lifecycleScope.launch</code> 開始，並將壓縮與寫入放在 <code>withContext(Dispatchers.IO)</code> 之中。離開該區塊後會回到主執行緒，若為 true 則顯示「保存しました」（已儲存），若為 false 則顯示「保存に失敗しました」（儲存失敗）。當 Activity 被銷毀時，lifecycleScope 的協程會被取消。"
+    },
+    {
+      "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。",
+      "translation": "這個應用程式的適用對象是 Android 12 以後。不需要為了將自己應用程式製作的圖片儲存到 MediaStore 而新增儲存空間權限。這與相機的權限是兩回事。也不需要 <code>READ_MEDIA_IMAGES</code> 等讀取其他應用程式圖片的權限。儲存後按 Run，就會回到金魚可以移動的畫面。"
+    },
+    {
+      "source": "useはJavaのtry-with-resourcesと同じく、処理後にcloseします。ラムダのitが開いた出力先です。保存の結果はBooleanで画面側へ返します。",
+      "translation": "use 與 Java 的 try-with-resources 相同，會在處理後進行 close。Lambda 中的 it 就是開啟的輸出目標。儲存結果會以 Boolean 回傳給畫面端。"
+    },
+    {
+      "source": "MainActivity.ktにtakeScreenshotとsaveBitmapがあり、ビルドが通ってプレビューを表示できる。",
+      "translation": "MainActivity.kt 中有 takeScreenshot 與 saveBitmap，建置成功且能顯示預覽。"
+    },
+    {
+      "source": "STEP 11 · 15コマ目 · 目安 17分",
+      "translation": "STEP 11 · 第15堂課 · 約17分鐘"
+    },
+    {
+      "source": "保存した画像を開いて比べる",
+      "translation": "開啟儲存的圖片並比較"
+    },
+    {
+      "source": "仮想の部屋が表示されてから、金魚を下へ動かし、Take Pictureに少し重ねます。ボタンを1回押し、「保存しました」が消えるまで待ちます。",
+      "translation": "在虛擬房間顯示之後，將金魚向下移動，稍微與 Take Picture 重疊。按一下按鈕，等待「保存しました」（已儲存）消失。"
+    },
+    {
+      "source": "ボタンに金魚を重ねて保存し、保存しましたと出た画面",
+      "translation": "將金魚疊在按鈕上儲存後，顯示「保存しました」（已儲存）的畫面"
+    },
+    {
+      "source": "ボタンに金魚を重ねて保存し、保存しましたと出た画面（指定AVDで撮影）",
+      "translation": "將金魚疊在按鈕上儲存後，顯示「保存しました」（已儲存）的畫面（在指定的 AVD 上截圖）"
+    },
+    {
+      "source": "エミュレータのホームへ戻り、アプリ一覧から <strong>Files</strong> を開きます。左上メニューの端末内ストレージ（指定AVDでは <code>sdk_gphone16k_arm64</code> と表示）から <strong>Pictures → FunnyCamera</strong> を開き、今の日時の <code>.jpg</code> を選びます。Filesで端末が出ていなければ、右上メニューの内部ストレージ表示を確認します。写真アプリを使う場合も、端末内のFunnyCameraフォルダを開きます。画像の上下に操作バーが重なる場合は、画像を1回タップして非表示にします。全画面の案内が出たら <strong>Got it</strong> を押します。",
+      "translation": "返回模擬器的主畫面，從應用程式清單中開啟 <strong>Files</strong>。從左上角選單的裝置內部儲存空間（在指定的 AVD 上顯示為 <code>sdk_gphone16k_arm64</code>）中開啟 <strong>Pictures → FunnyCamera</strong>，並選擇目前日期的 <code>.jpg</code>。如果 Files 中沒有顯示裝置，請確認右上角選單的內部儲存空間顯示設定。使用相片應用程式時，也請開啟裝置內的 FunnyCamera 資料夾。如果圖片上下覆蓋了操作列，請輕觸一次圖片以隱藏操作列。如果出現全螢幕提示，請按 <strong>Got it</strong>。"
+    },
+    {
+      "source": "保存画像にはボタンに隠れていた金魚も写ります。ボタン・Snackbar・ステータスバー・画面下のナビゲーションバーは入りません。PreviewViewの映像と金魚だけを描いた結果です。",
+      "translation": "儲存的圖片中也會拍下原本被按鈕遮住的金魚。按鈕、Snackbar、狀態列以及螢幕下方的導覽列都不會包含在內。這是只繪製 PreviewView 的畫面與金魚的結果。"
+    },
+    {
+      "source": "保存したJPEG。下側の金魚全体が写り、ボタンとSnackbarは入らない",
+      "translation": "儲存的 JPEG。拍下了下方完整的金魚，且不包含按鈕和 Snackbar"
+    },
+    {
+      "source": "指定AVDで保存したJPEG。画面全体ではなくプレビュー範囲が画像になる",
+      "translation": "在指定的 AVD 上儲存的 JPEG。成為圖片的是預覽範圍，而非整個螢幕"
+    },
+    {
+      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、見本と同じ文字列にはなりません。",
+      "translation": "確認完畢後返回 A04。改變金魚的位置，再儲存一次，確認會新增帶有新日期的圖片。由於日期時間取決於裝置的設定，因此不會與範例中的字串完全相同。"
+    },
+    {
+      "source": "同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。",
+      "translation": "使用相同的 java.time API 建立檔案名稱。yyyy-MM-dd-HH-mm-ss-SSS 代表年、月、日、時、分、秒、毫秒。MediaStore 會自動加上 JPEG 的副檔名。"
+    },
+    {
+      "source": "Pictures/FunnyCameraに日時の異なるJPEGがあり、金魚が写ってボタンとSnackbarは写っていない。",
+      "translation": "Pictures/FunnyCamera 中有不同日期的 JPEG，拍下了金魚，且沒有拍下按鈕與 Snackbar。"
+    },
+    {
+      "source": "STEP 12 · 15コマ目 · 目安 10分",
+      "translation": "STEP 12 · 第15堂課 · 約10分鐘"
+    },
+    {
+      "source": "権限を許可しない場合も確かめる",
+      "translation": "也確認不允許權限時的情況"
+    },
+    {
+      "source": "作ったファイルを保存します。エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。",
+      "translation": "儲存製作的檔案。開啟模擬器的 <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong>，設定為 <strong>Don’t allow</strong>（不允許）。從 Android Studio 重新 Run，若出現對話框則選擇不允許。畫面會變黑，並顯示關於相機權限的提示。"
+    },
+    {
+      "source": "カメラを許可せず、権限が必要というSnackbarが出た画面",
+      "translation": "未允許相機，顯示需要權限之 Snackbar 的畫面"
+    },
+    {
+      "source": "カメラを許可せず、権限が必要というSnackbarが出た画面（指定AVDで撮影）",
+      "translation": "未允許相機，顯示需要權限之 Snackbar 的畫面（在指定的 AVD 上截圖）"
+    },
+    {
+      "source": "確認後は同じ設定画面で <strong>Allow only while using the app</strong>（アプリの使用中のみ許可）に戻してRunし直します。映像が戻ったら保存を1回確認します。拒否を繰り返すとダイアログが出なくなる場合があるため、設定から戻します。",
+      "translation": "確認完畢後，在相同的設定畫面中恢復為 <strong>Allow only while using the app</strong>（僅在使用應用程式時允許），然後重新 Run。當畫面恢復後，確認一次儲存動作。因為重複拒絕可能會導致對話框不再出現，所以透過設定畫面恢復。"
+    },
+    {
+      "source": "準備前のボタンでは <code>previewView.bitmap</code> がnullになり、完成版は保存せずreturnします。この分岐にはSnackbarがなく、Logcatだけに案内が出ます。「保存に失敗しました」はsaveBitmapがfalseを返す別の分岐です。保存失敗のために端末の容量を埋めたり、既存画像を消したりはしません。",
+      "translation": "在準備完成前按下按鈕，<code>previewView.bitmap</code> 會是 null，完成版專案不會進行儲存而是直接 return。這個分支沒有 Snackbar，只會在 Logcat 中顯示提示。「保存に失敗しました」（儲存失敗）是 saveBitmap 回傳 false 的另一個分支。不會因為儲存失敗而佔用裝置容量，也不會刪除現有的圖片。"
+    },
+    {
+      "source": "Kotlinのifは値を返せます。Javaの三項演算子に対応します。ただしカメラの権限拒否はこの保存結果のifより前で扱います。",
+      "translation": "Kotlin 的 if 可以回傳值。對應於 Java 的三元運算子。不過相機權限的拒絕是在這個處理儲存結果的 if 之前處理的。"
+    },
+    {
+      "source": "拒否時の権限の案内を確認し、許可へ戻した後にプレビューと保存しましたが再び表示される。",
+      "translation": "確認了拒絕時的權限提示，恢復為允許後，預覽與「保存しました」（已儲存）會再次顯示。"
+    },
+    {
+      "source": "STEP 13 · 15コマ目 · 目安 15分",
+      "translation": "STEP 13 · 第15堂課 · 約15分鐘"
+    },
+    {
+      "source": "自分の画面へアレンジする",
+      "translation": "自訂成自己的畫面"
+    },
+    {
+      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。完成プロジェクトの見本は上書きしません。",
+      "translation": "在自己的專案中，修改以下其中一處，按 Run 並比較畫面與儲存的圖片。先記下原本的數值再進行修改，逐一確認。不要覆蓋完成版專案的範例。"
+    },
+    {
       "source": "場所",
       "translation": "位置"
+    },
+    {
+      "source": "変える値の例",
+      "translation": "更改數值的範例"
+    },
+    {
+      "source": "変わるところ",
+      "translation": "會改變的地方"
+    },
+    {
+      "source": "activity_main.xmlのボタン",
+      "translation": "activity_main.xml 中的按鈕"
+    },
+    {
+      "source": "android:textを「保存」にする",
+      "translation": "將 android:text 改為「保存」（儲存）"
+    },
+    {
+      "source": "画面の文字が変わる。保存画像には文字は入らない。",
+      "translation": "畫面上的文字會改變。儲存的圖片中不會包含文字。"
+    },
+    {
+      "source": "activity_main.xmlの金魚",
+      "translation": "activity_main.xml 中的金魚"
+    },
+    {
+      "source": "layout_widthとlayout_heightを200dpから160dpへ",
+      "translation": "將 layout_width 與 layout_height 從 200dp 改為 160dp"
+    },
+    {
+      "source": "ドラッグするViewと保存画像内の金魚が小さくなる。",
+      "translation": "拖曳的 View 與儲存圖片中的金魚會變小。"
+    },
+    {
+      "source": "layout_gravityをcenterからtop|center_horizontalへ",
+      "translation": "將 layout_gravity 從 center 改為 top|center_horizontal"
+    },
+    {
+      "source": "起動直後の位置が変わる。ドラッグ後は動かした位置を使う。",
+      "translation": "剛啟動時的位置會改變。拖曳之後會使用移動後的位置。"
+    },
+    {
+      "source": "画像の差し替えをするなら、利用してよい自分の透過PNGを同じ <code>character.png</code> という名前で入れ替えます。今回の500×416程度の大きさにします。大きな原寸画像はメモリを使うため避けます。id・パッケージ・カメラ権限・保存処理の呼び出しは変えません。",
+      "translation": "如果要替換圖片，請將可以使用的自己的透明背景 PNG 圖片，以相同的名稱 <code>character.png</code> 進行替換。尺寸請設定在這次的 500×416 左右。為了避免消耗記憶體，請避開過大的原始尺寸圖片。id、套件、相機權限、儲存處理的呼叫請保持不變。"
+    },
+    {
+      "source": "どの値を選ぶかに1つの正解はありません。保存画像まで開き、変えた場所に対応する変化が出るかを確認します。提出するアプリは、自分で作ったAndroidアプリの中から1つ選びます。提出先と締め切りは授業で案内します。",
+      "translation": "選擇哪個數值並沒有唯一的標準答案。請開啟到儲存的圖片，確認修改的位置是否有產生相應的變化。要繳交的應用程式，是從自己製作的 Android 應用程式中選擇1個。繳交的地方與截止日期會在課堂上公布。"
+    },
+    {
+      "source": "JavaのsetXに対応するKotlinのxです。ここではAPIを増やさず、既に使っているサイズ・位置・文字を変えて、画面と保存結果の対応を見ます。",
+      "translation": "Kotlin 的 x 對應 Java 的 setX。這裡不增加新的 API，而是透過改變已經使用的尺寸、位置、文字，來觀察畫面與儲存結果之間的對應關係。"
+    },
+    {
+      "source": "変えた文字・金魚の大きさ・初期位置のいずれかが画面に反映され、保存画像の違いも確認できる。",
+      "translation": "修改的文字、金魚大小或初始位置的其中之一已反映在畫面上，且能確認儲存圖片的差異。"
+    },
+    {
+      "source": "STEP 14 · 15コマ目 · 目安 3分",
+      "translation": "STEP 14 · 第15堂課 · 約3分鐘"
+    },
+    {
+      "source": "15コマ目の最後の3分",
+      "translation": "第15堂課最後的3分鐘"
+    },
+    {
+      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、このページ下の完成プロジェクトを使います。",
+      "translation": "儲存自己的專案。將相機權限恢復為僅在使用時允許，依序開啟預覽與儲存的 JPEG。想要比對程式碼時，請使用本頁面下方的完成版專案。"
+    },
+    {
+      "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
+      "translation": "在準備繳交時，請前往側邊欄的「共用：作業繳交與 APK」。使用自訂過的自己專案副本，製作偵錯用 APK。"
+    },
+    {
+      "source": "保存結果のBooleanはJavaと同じ役目です。Kotlinでは型名を変数名の後へ書きます。画面に出る文はこの戻り値で変わります。",
+      "translation": "儲存結果的 Boolean 作用與 Java 相同。在 Kotlin 中型別名稱寫在變數名稱之後。畫面上出現的文字會依這個回傳值而改變。"
+    },
+    {
+      "source": "自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。",
+      "translation": "自己的 A04 已儲存，且能確認預覽、拖曳、儲存的 JPEG。"
     },
     {
       "source": "見えている状態",
@@ -91,12 +831,136 @@
       "translation": "確認的位置"
     },
     {
+      "source": "同期が止まる",
+      "translation": "同步停止"
+    },
+    {
+      "source": "Panda 2か、STEP 02の3ファイルが正しい場所にあるかを確認。最初の原因行を先生に見せます。",
+      "translation": "確認是否為 Panda 2，以及 STEP 02 的3個檔案是否放在正確位置。將最初的原因行給老師看。"
+    },
+    {
+      "source": "characterが赤い",
+      "translation": "character 顯示紅色"
+    },
+    {
+      "source": "drawable直下のcharacter.pngとXMLの@drawable/characterを照合。ファイル名の末尾に番号が付いていないか確認します。",
+      "translation": "對照 drawable 正下方的 character.png 與 XML 中的 @drawable/character。確認檔案名稱末尾是否附帶了數字編號。"
+    },
+    {
       "source": "起動直後に閉じる",
       "translation": "一啟動就關閉"
     },
     {
+      "source": "カスタムViewの完全なクラス名、パッケージ、コンストラクタの引数2つをSTEP 04・05と照合します。",
+      "translation": "將自訂 View 的完整類別名稱、套件、建構函式的2個參數，與 STEP 04・05 進行對照。"
+    },
+    {
+      "source": "プレビューが黒い",
+      "translation": "預覽畫面一片黑"
+    },
+    {
+      "source": "カメラ権限、指定AVDの背面カメラ設定、STEP 06のsurfaceProviderとbindToLifecycleを確認。映像が出るまで保存しません。",
+      "translation": "確認相機權限、指定 AVD 的後置相機設定、STEP 06 的 surfaceProvider 與 bindToLifecycle。在畫面出現之前不要進行儲存。"
+    },
+    {
+      "source": "権限のダイアログが出ない",
+      "translation": "沒有出現權限對話框"
+    },
+    {
+      "source": "既に許可しているか、拒否を繰り返している場合があります。設定のアプリ情報からCamera権限を確認し、変更後はRunし直します。",
+      "translation": "可能是已經允許過，或是重複拒絕過。請從設定的應用程式資訊確認 Camera 權限，變更後重新 Run。"
+    },
+    {
+      "source": "金魚がボタンに隠れる",
+      "translation": "金魚被按鈕遮住了"
+    },
+    {
+      "source": "XMLでボタンを後に書いた結果です。保存画像にはボタンが入らず、金魚全体が入ります。",
+      "translation": "這是在 XML 中將按鈕寫在後面的結果。儲存的圖片中不會包含按鈕，而是會包含完整的金魚。"
+    },
+    {
+      "source": "金魚をつかめない",
+      "translation": "抓不到金魚"
+    },
+    {
+      "source": "ボタンに隠れたところではボタンが先に反応します。見えている金魚の上側をドラッグします。",
+      "translation": "在被按鈕遮住的地方，按鈕會先產生反應。請拖曳看得到的金魚上半部分。"
+    },
+    {
+      "source": "押すとプレビューを確認中ですと出る",
+      "translation": "按下後顯示「プレビューを確認中です」（正在確認預覽）"
+    },
+    {
+      "source": "STEP 06の途中コードです。STEP 10の完成版で保存処理へ置き換わります。",
+      "translation": "這是 STEP 06 進行中的程式碼。會在 STEP 10 的完成版中替換為儲存處理。"
+    },
+    {
+      "source": "押しても保存の案内が出ない",
+      "translation": "按了也沒有顯示儲存提示"
+    },
+    {
+      "source": "プレビュー準備前のnull分岐はLogcatのみです。映像が見えてから押します。",
+      "translation": "預覽準備完成前的 null 分支只會記錄在 Logcat 中。請等看到畫面後再按。"
+    },
+    {
+      "source": "保存に失敗しましたと出る",
+      "translation": "顯示「保存に失敗しました」（儲存失敗）"
+    },
+    {
+      "source": "空き容量など端末の状態を先生と確認。saveBitmapがfalseを返した結果です。連打しません。",
+      "translation": "與老師一起確認剩餘容量等裝置狀態。這是 saveBitmap 回傳 false 的結果。請不要連續點擊。"
+    },
+    {
+      "source": "保存画像が見つからない",
+      "translation": "找不到儲存的圖片"
+    },
+    {
+      "source": "Filesの端末内ストレージでPictures/FunnyCameraを確認。今の端末の日時のjpgを開きます。",
+      "translation": "在 Files 的裝置內部儲存空間中確認 Pictures/FunnyCamera。開啟目前裝置日期的 jpg。"
+    },
+    {
+      "source": "途中から再開したい",
+      "translation": "想從中途繼續"
+    },
+    {
+      "source": "14コマ目末はSTEP 06の全文。15コマ目はSTEP 08から、完成版全文はSTEP 10です。",
+      "translation": "第14堂課結束時為 STEP 06 的全文。第15堂課從 STEP 08 開始，完成版全文為 STEP 10。"
+    },
+    {
+      "source": "配布ZIPを展開した中の <code>samples/A04FunnyCamera</code> をAndroid Studioの <strong>Open</strong> で開きます。自分の <code>Documents/Kotlin/A04FunnyCamera</code> と保存先で区別します。見本を閉じたら自分の保存先を開き直します。",
+      "translation": "使用 Android Studio 的 <strong>Open</strong> 開啟發放的 ZIP 解壓縮後的 <code>samples/A04FunnyCamera</code>。透過儲存位置來與自己的 <code>Documents/Kotlin/A04FunnyCamera</code> 做區別。關閉範例後，重新開啟自己的儲存位置。"
+    },
+    {
+      "source": "教科書だけを受け取った場合は <a1>A04FunnyCamera.zip</a1> を保存して展開し、中の <code>A04FunnyCamera</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
+      "translation": "如果只拿到課本，請儲存並解壓縮 <a1>A04FunnyCamera.zip</a1>，然後 Open 裡面的 <code>A04FunnyCamera</code> 資料夾。不要選擇 ZIP 本身或裡面的 app。"
+    },
+    {
+      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。カメラの使用を許可して動作を比べます。見本はコードと動作の確認用です。",
+      "translation": "同步後選擇執行組態 <strong>app</strong> 和 <code>jec_25cm_kotlin_Pixel 9a</code> 並按 Run。允許使用相機並比較運作行為。範例是用來確認程式碼與動作的。"
+    },
+    {
       "source": "公式資料",
       "translation": "官方文件"
+    },
+    {
+      "source": "Android：CameraXのプレビュー",
+      "translation": "Android：CameraX 的預覽"
+    },
+    {
+      "source": "Android：実行時の権限",
+      "translation": "Android：執行時期權限"
+    },
+    {
+      "source": "Android：MediaStoreへの追加とIS_PENDING",
+      "translation": "Android：新增至 MediaStore 與 IS_PENDING"
+    },
+    {
+      "source": "Android：ViewsのlifecycleScope",
+      "translation": "Android：Views 的 lifecycleScope"
+    },
+    {
+      "source": "確認日：2026年9月24日 / A04FunnyCamera、Panda 2の構成",
+      "translation": "確認日期：2026年9月24日 / A04FunnyCamera、Panda 2 的組態"
     }
   ]
 }
