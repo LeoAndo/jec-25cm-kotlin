@@ -3,12 +3,212 @@
   "language": "my",
   "entries": [
     {
+      "source": "JavaとSwiftを書ける人のためのKotlin入門。全6コマ・11演習で、変数・Null安全・関数・条件式・繰り返し・クラス・アクセサ・data class・スマートキャスト・拡張関数・map・by lazyを、他言語との差分で確かめる授業用教科書。",
+      "translation": "Java နှင့် Swift ရေးသားနိုင်သူများအတွက် Kotlin အခြေခံ။ စုစုပေါင်း အတန်းချိန် 6 ခု၊ လေ့ကျင့်ခန်း 11 ခုဖြင့် variable၊ Null safety၊ function၊ condition၊ loop၊ class၊ accessor၊ data class၊ smart cast၊ extension function၊ map၊ by lazy တို့ကို အခြား programming language များနှင့် ကွာခြားချက်များကို လေ့လာစစ်ဆေးနိုင်မည့် သင်ခန်းစာစာအုပ်။"
+    },
+    {
+      "source": "K01HelloKotlin — Kotlinを書き始める | Kotlin演習",
+      "translation": "K01HelloKotlin – Kotlin ကို စတင်ရေးသားရန် | Kotlin လေ့ကျင့်ခန်း"
+    },
+    {
       "source": "本文へ移動",
       "translation": "အဓိကအကြောင်းအရာသို့ သွားရန်"
     },
     {
       "source": "JEC / Kotlin演習",
       "translation": "JEC / Kotlin လေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "授業用教科書 · Kotlin + IntelliJ IDEA",
+      "translation": "သင်ခန်းစာစာအုပ် ၊ Kotlin + IntelliJ IDEA"
+    },
+    {
+      "source": "CONTENTS / 学習の順番",
+      "translation": "CONTENTS / သင်ယူရမည့် အစီအစဉ်"
+    },
+    {
+      "source": "学習ステップ",
+      "translation": "သင်ယူရမည့် အဆင့်များ"
+    },
+    {
+      "source": "1コマ目 · STEP 00〜06",
+      "translation": "အတန်းချိန် 1 ၊ STEP 00–06"
+    },
+    {
+      "source": "00　この単元のゴール",
+      "translation": "00 ဤယူနစ်၏ ရည်ရွယ်ချက်"
+    },
+    {
+      "source": "01　Playgroundで動かす",
+      "translation": "01 Playground တွင် run လုပ်ရန်"
+    },
+    {
+      "source": "02　プロジェクトを作る",
+      "translation": "02 project ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "03　val と var",
+      "translation": "03 val နှင့် var"
+    },
+    {
+      "source": "04　数の型",
+      "translation": "04 ဂဏန်း type များ"
+    },
+    {
+      "source": "05　ミニ練習",
+      "translation": "05 မီနီလေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "06　完成",
+      "translation": "06 ပြီးစီးပြီ"
+    },
+    {
+      "source": "2コマ目 · STEP 07〜12",
+      "translation": "အတန်းချိန် 2 ၊ STEP 07–12"
+    },
+    {
+      "source": "07　2コマ目のゴール",
+      "translation": "07 အတန်းချိန် 2 ၏ ရည်ရွယ်ချက်"
+    },
+    {
+      "source": "08　ex02 を作る",
+      "translation": "08 ex02 ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "09　String と String?",
+      "translation": "09 String နှင့် String?"
+    },
+    {
+      "source": "10　安全呼び出し ?.",
+      "translation": "10 လုံခြုံစွာခေါ်ယူခြင်း ?."
+    },
+    {
+      "source": "11　ミニ練習",
+      "translation": "11 မီနီလေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "12　完成",
+      "translation": "12 ပြီးစီးပြီ"
+    },
+    {
+      "source": "3コマ目 · STEP 13〜18",
+      "translation": "အတန်းချိန် 3 ၊ STEP 13–18"
+    },
+    {
+      "source": "13　3コマ目のゴール",
+      "translation": "13 အတန်းချိန် 3 ၏ ရည်ရွယ်ချက်"
+    },
+    {
+      "source": "14　ex03 を作る",
+      "translation": "14 ex03 ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "15　戻り値のある関数",
+      "translation": "15 return တန်ဖိုးရှိသော function"
+    },
+    {
+      "source": "16　戻り値のない関数",
+      "translation": "16 return တန်ဖိုးမရှိသော function"
+    },
+    {
+      "source": "17　ミニ練習",
+      "translation": "17 မီနီလေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "18　完成",
+      "translation": "18 ပြီးစီးပြီ"
+    },
+    {
+      "source": "4コマ目 · STEP 19〜24",
+      "translation": "အတန်းချိန် 4 ၊ STEP 19–24"
+    },
+    {
+      "source": "19　4コマ目のゴール",
+      "translation": "19 အတန်းချိန် 4 ၏ ရည်ရွယ်ချက်"
+    },
+    {
+      "source": "20　ex05 と条件式",
+      "translation": "20 ex05 နှင့် condition"
+    },
+    {
+      "source": "21　ex06 と繰り返し",
+      "translation": "21 ex06 နှင့် loop"
+    },
+    {
+      "source": "22　ex04 とクラス",
+      "translation": "22 ex04 နှင့် class"
+    },
+    {
+      "source": "23　ミニ練習",
+      "translation": "23 မီနီလေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "24　完成",
+      "translation": "24 ပြီးစီးပြီ"
+    },
+    {
+      "source": "5コマ目 · STEP 25〜30",
+      "translation": "အတန်းချိန် 5 ၊ STEP 25–30"
+    },
+    {
+      "source": "25　5コマ目を始める",
+      "translation": "25 အတန်းချိန် 5 ကို စတင်ရန်"
+    },
+    {
+      "source": "26　ex08 とアクセサ",
+      "translation": "26 ex08 နှင့် accessor"
+    },
+    {
+      "source": "27　ex09 と data class",
+      "translation": "27 ex09 နှင့် data class"
+    },
+    {
+      "source": "28　ex07 と拡張関数",
+      "translation": "28 ex07 နှင့် extension function"
+    },
+    {
+      "source": "29　ミニ練習",
+      "translation": "29 မီနီလေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "30　完成",
+      "translation": "30 ပြီးစီးပြီ"
+    },
+    {
+      "source": "6コマ目 · STEP 31〜35",
+      "translation": "အတန်းချိန် 6 ၊ STEP 31–35"
+    },
+    {
+      "source": "31　6コマ目を始める",
+      "translation": "31 အတန်းချိန် 6 ကို စတင်ရန်"
+    },
+    {
+      "source": "32　ex10 と map",
+      "translation": "32 ex10 နှင့် map"
+    },
+    {
+      "source": "33　ex11 と lazy",
+      "translation": "33 ex11 နှင့် lazy"
+    },
+    {
+      "source": "34　ミニ練習",
+      "translation": "34 မီနီလေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "35　K01の完成",
+      "translation": "35 K01 ၏ ပြီးစီးပြီ"
+    },
+    {
+      "source": "0 / 36 ステップ確認済み",
+      "translation": "အဆင့် 36 ခုအနက် 0 ခု စစ်ဆေးပြီးပါပြီ"
+    },
+    {
+      "source": "学習の進み具合",
+      "translation": "သင်ယူမှု တိုးတက်မှုပြသချက်"
+    },
+    {
+      "source": "自分用のチェックです。",
+      "translation": "မိမိကိုယ်တိုင်အတွက် စစ်ဆေးရန်ဖြစ်ပါသည်။"
     },
     {
       "source": "困ったとき",
@@ -31,28 +231,2356 @@
       "translation": "အထွေထွေ: မတူညီသော Android Studio ဗားရှင်း"
     },
     {
+      "source": "Kotlinを<br>書き始める",
+      "translation": "Kotlin ကို<br>စတင်ရေးသားရန်"
+    },
+    {
+      "source": "JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。",
+      "translation": "Java နှင့် Swift ဖြင့် ရေးသားနိုင်သောအရာများကို Kotlin ဖြင့်လည်း ရေးသားနိုင်ပါသည်။<br>ဤယူနစ်တွင် သိရှိပြီးသော လုပ်ဆောင်ချက်များကို \"Kotlin ဖြင့်ဆိုလျှင် မည်သို့ရေးသားမည်နည်း\" ဖြင့် အစားထိုးပါမည်။"
+    },
+    {
+      "source": "Java・Swift経験者向け",
+      "translation": "Java နှင့် Swift အတွေ့အကြုံရှိသူများအတွက်"
+    },
+    {
+      "source": "全6コマ · 11演習を収録",
+      "translation": "စုစုပေါင်း အတန်းချိန် 6 ခု ၊ လေ့ကျင့်ခန်း 11 ခု ပါဝင်သည်"
+    },
+    {
+      "source": "予習なしで始められる",
+      "translation": "ကြိုတင်လေ့လာရန်မလိုဘဲ စတင်နိုင်သည်"
+    },
+    {
+      "source": "STEP 00 · 目安 5分",
+      "translation": "STEP 00 ၊ ခန့်မှန်းခြေ 5 မိနစ်"
+    },
+    {
+      "source": "この単元のゴール",
+      "translation": "ဤယူနစ်၏ ရည်ရွယ်ချက်"
+    },
+    {
+      "source": "この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>です。",
+      "translation": "ဤသင်တန်းသည် <strong>Kotlin လေ့ကျင့်ခန်း</strong> ဖြစ်ပါသည်။ အတန်းချိန် 1 ခုလျှင် 90 မိနစ်၊ စုစုပေါင်း အတန်းချိန် 15 ခုဖြင့် သင်ကြားပါမည်။ ၎င်းတို့အနက် ယူနစ် <code>K01HelloKotlin</code> သည် <strong>စုစုပေါင်း အတန်းချိန် 6 ခု</strong> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "この教科書1冊で、<strong>全6コマ・11演習</strong>を進めます。1コマ目はSTEP 00〜06、2コマ目はSTEP 07〜12、3コマ目はSTEP 13〜18、4コマ目はSTEP 19〜24、5コマ目はSTEP 25〜30、6コマ目はSTEP 31〜35です。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。",
+      "translation": "ဤသင်ခန်းစာစာအုပ် 1 အုပ်ဖြင့် <strong>စုစုပေါင်း အတန်းချိန် 6 ခု ၊ လေ့ကျင့်ခန်း 11 ခု</strong> ကို လုပ်ဆောင်ပါမည်။ အတန်းချိန် 1 ခုမြောက်သည် STEP 00–06၊ အတန်းချိန် 2 ခုမြောက်သည် STEP 07–12၊ အတန်းချိန် 3 ခုမြောက်သည် STEP 13–18၊ အတန်းချိန် 4 ခုမြောက်သည် STEP 19–24၊ အတန်းချိန် 5 ခုမြောက်သည် STEP 25–30၊ အတန်းချိန် 6 ခုမြောက်သည် STEP 31–35 ဖြစ်ပါသည်။ <strong>ယနေ့မည်သည့်နေရာကို လုပ်ဆောင်မည်ကို အတန်းစတင်ချိန်တွင် ဆရာက သတ်မှတ်ပေးပါမည်။</strong> သတ်မှတ်ပေးထားသော STEP မှစ၍ အရှေ့မှအစဉ်လိုက် ဖတ်ရှုလုပ်ဆောင်ပါ။"
+    },
+    {
+      "source": "6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>〜<code>ex11</code> のパッケージを足していきます。演習番号と授業順が違う回も、教科書のSTEPの順に進めます。",
+      "translation": "အတန်းချိန် 6 ခုလုံးတွင် project သည် <code>K01HelloKotlin</code> 1 ခုတည်းကိုသာ အသုံးပြုပါမည်။ အတန်းချိန်တစ်ခုစီတွင် ၎င်း၏အထဲသို့ <code>ex01</code> မှ <code>ex11</code> အထိ package များကို ထပ်ထည့်သွားပါမည်။ လေ့ကျင့်ခန်းအမှတ်စဉ်နှင့် အတန်းချိန်အစီအစဉ် မတူညီသော အတန်းများတွင်လည်း သင်ခန်းစာစာအုပ်၏ STEP အစီအစဉ်အတိုင်း လုပ်ဆောင်ပါ။"
+    },
+    {
+      "source": "みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。",
+      "translation": "သင်တို့သည် Java နှင့် Swift ကို ရေးသားနိုင်ပြီးဖြစ်ပါသည်။ ထို့ကြောင့် ဤသင်ခန်းစာစာအုပ်တွင် variable ဆိုသည်မှာ အဘယ်နည်း၊ type ဆိုသည်မှာ အဘယ်နည်း စသည်တို့ကို ရှင်းပြမည်မဟုတ်ပါ။ အောက်ပါအချက် 2 ခုကိုသာ အဓိကထားရှင်းပြပါမည်။"
+    },
+    {
+      "source": "<strong>Kotlinではどう書くのか</strong>。",
+      "translation": "<strong>Kotlin တွင် မည်သို့ရေးသားမည်နည်း</strong>။"
+    },
+    {
+      "source": "<strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。",
+      "translation": "<strong>Java သို့မဟုတ် Swift နှင့် မည်သို့ကွာခြားသနည်း၊ အဘယ်ကြောင့် ကွာခြားသနည်း</strong>။"
+    },
+    {
+      "source": "Kotlinはどこで動く言語か",
+      "translation": "Kotlin သည် မည်သည့်နေရာတွင် အလုပ်လုပ်သော language ဖြစ်သနည်း"
+    },
+    {
+      "source": "Kotlinで書いたコードは、JVM（Java Virtual Machine）で動くJavaバイトコード（<code>class</code> ファイル）にコンパイルされます。つまり、Javaが動く環境ならKotlinも動きます。このような言語を <strong>JVM言語</strong> と呼びます。",
+      "translation": "Kotlin ဖြင့် ရေးသားထားသော ကုဒ်များကို JVM (Java Virtual Machine) တွင် အလုပ်လုပ်သော Java bytecode (<code>class</code> ဖိုင်) အဖြစ် compile လုပ်ပါသည်။ ဆိုလိုသည်မှာ Java အလုပ်လုပ်သော ပတ်ဝန်းကျင်ဆိုလျှင် Kotlin လည်း အလုပ်လုပ်ပါသည်။ ဤကဲ့သို့သော language များကို <strong>JVM language</strong> ဟု ခေါ်ပါသည်။"
+    },
+    {
+      "source": "Kotlinの特徴",
+      "translation": "Kotlin ၏ ဝိသေသလက္ခဏာများ"
+    },
+    {
+      "source": "中身",
+      "translation": "ပါဝင်သောအရာများ"
+    },
+    {
+      "source": "すでに知っていることとの関係",
+      "translation": "သိရှိပြီးသောအရာများနှင့် ဆက်စပ်မှု"
+    },
+    {
+      "source": "記述量が少ない",
+      "translation": "ရေးသားရမှု နည်းပါးခြင်း"
+    },
+    {
+      "source": "同じ処理でも、Javaより短く書ける。",
+      "translation": "တူညီသော လုပ်ဆောင်ချက်ဖြစ်စေကာမူ Java ထက် ပိုမိုတိုတောင်းစွာ ရေးသားနိုင်သည်။"
+    },
+    {
+      "source": "省けた部分はコンパイラが補っています。何が省かれたのかを、この単元で1つずつ確かめます。",
+      "translation": "လျှော့ချထားသော အစိတ်အပိုင်းများကို compiler က ဖြည့်ဆည်းပေးပါသည်။ မည်သည့်အရာများကို လျှော့ချထားသည်ကို ဤယူနစ်တွင် တစ်ခုချင်းစီ စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "Javaとの相互運用",
+      "translation": "Java နှင့် အပြန်အလှန် အသုံးပြုနိုင်ခြင်း"
+    },
+    {
+      "source": "JavaのコードからKotlinを、KotlinのコードからJavaを呼べる。",
+      "translation": "Java ကုဒ်မှ Kotlin ကို၊ Kotlin ကုဒ်မှ Java ကို ခေါ်ယူနိုင်သည်။"
+    },
+    {
+      "source": "全部をKotlinに書き換えなくても混在させられます。古いAndroidアプリにJavaが残っているのはこのためです。",
+      "translation": "အားလုံးကို Kotlin သို့ ပြောင်းလဲရေးသားစရာမလိုဘဲ ရောနှောအသုံးပြုနိုင်ပါသည်။ အဟောင်းဖြစ်သော Android အက်ပ်များတွင် Java ကျန်ရှိနေခြင်းမှာ ဤအကြောင်းကြောင့်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Null安全",
+      "translation": "Null safety"
+    },
+    {
+      "source": "nullを入れられる型と、入れられない型を、言語が区別する。",
+      "translation": "null ထည့်သွင်းနိုင်သော type နှင့် ထည့်သွင်း၍မရသော type ကို language က ခွဲခြားပေးသည်။"
+    },
+    {
+      "source": "Swiftのオプショナルと同じ発想です。",
+      "translation": "Swift ၏ optional နှင့် သဘောတရား တူညီပါသည်။"
+    },
+    {
+      "source": "Javaの資産が使える",
+      "translation": "Java ၏ အရင်းအမြစ်များကို အသုံးပြုနိုင်ခြင်း"
+    },
+    {
+      "source": "Java用のライブラリやフレームワークをそのまま使える。",
+      "translation": "Java အတွက် library များနှင့် framework များကို အသုံးပြုနိုင်သည်။"
+    },
+    {
+      "source": "JVM言語だからです。Kotlin用に作り直されるのを待つ必要はありません。",
+      "translation": "JVM language ဖြစ်သောကြောင့်ဖြစ်ပါသည်။ Kotlin အတွက် အသစ်ပြန်လည်ပြုလုပ်ပေးမည့်အချိန်ကို စောင့်ဆိုင်းရန် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "同じ処理を3つの言語で並べる",
+      "translation": "တူညီသော လုပ်ဆောင်ချက်ကို language 3 မျိုးဖြင့် ယှဉ်တွဲပြသခြင်း"
+    },
+    {
+      "source": "名前を変数に入れて出力するだけのプログラムです。まず全体の差を見ます。細かいところは STEP 03 以降で1つずつ扱います。",
+      "translation": "အမည်ကို variable ထဲသို့ထည့်၍ output ထုတ်ပေးရုံသာဖြစ်သော ပရိုဂရမ်တစ်ခုဖြစ်ပါသည်။ ဦးစွာ အားလုံး၏ ကွာခြားချက်ကို လေ့လာပါမည်။ အသေးစိတ်အချက်အလက်များကို STEP 03 နောက်ပိုင်းတွင် တစ်ခုချင်းစီ ရှင်းပြပါမည်။"
+    },
+    {
+      "source": "Kotlinの入口は <code>fun main()</code> です。Javaのように、入口をクラスで包む必要がありません。<code>String[] args</code> にあたる引数も省けます。",
+      "translation": "Kotlin ၏ အဝင်ဝသည် <code>fun main()</code> ဖြစ်ပါသည်။ Java ကဲ့သို့ အဝင်ဝကို class ဖြင့် ထုပ်ပိုးရန် မလိုအပ်ပါ။ <code>String[] args</code> ကဲ့သို့သော argument များကိုလည်း ဖယ်ရှားနိုင်ပါသည်။"
+    },
+    {
+      "source": "Kotlinの <code>val</code> は、Javaの <code>final</code>、Swiftの <code>let</code> にあたります。",
+      "translation": "Kotlin ၏ <code>val</code> သည် Java ၏ <code>final</code> နှင့် Swift ၏ <code>let</code> တို့နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "型注釈はSwiftと同じく省けます。右辺から型が決まります。",
+      "translation": "type သတ်မှတ်ချက်ကို Swift ကဲ့သို့ ဖယ်ရှားနိုင်ပါသည်။ ညာဘက်ခြမ်းမှ type ကို ဆုံးဖြတ်ပါသည်။"
+    },
+    {
+      "source": "文末のセミコロンはSwiftと同じく要りません。Javaとはここが違います。",
+      "translation": "စာကြောင်းအဆုံးရှိ ဆီမီးကိုလွန်ကို Swift ကဲ့သို့ မလိုအပ်ပါ။ ၎င်းသည် Java နှင့် ကွာခြားချက်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "出力はKotlinが <code>println</code>、Javaが <code>System.out.println</code>、Swiftが <code>print</code> です。",
+      "translation": "Output ထုတ်ခြင်းသည် Kotlin တွင် <code>println</code>၊ Java တွင် <code>System.out.println</code> နှင့် Swift တွင် <code>print</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "JavaとSwiftを知っていれば、Kotlinは「差分」で覚えられます。この教科書は、その差分だけを並べていきます。",
+      "translation": "Java နှင့် Swift ကို သိရှိထားပါက Kotlin ကို \"ကွာခြားချက်\" ဖြင့် မှတ်သားနိုင်ပါသည်။ ဤသင်ခန်းစာစာအုပ်သည် ထိုကွာခြားချက်များကိုသာ ယှဉ်တွဲပြသသွားပါမည်။"
+    },
+    {
+      "source": "この単元で出てくるKotlinの言葉",
+      "translation": "ဤယူနစ်တွင် ပါဝင်သော Kotlin ဝေါဟာရများ"
+    },
+    {
+      "source": "Kotlinの言葉",
+      "translation": "Kotlin ဝေါဟာရ"
+    },
+    {
+      "source": "Javaでの対応",
+      "translation": "Java ဖြင့် ညီမျှသောအရာ"
+    },
+    {
+      "source": "Swiftでの対応",
+      "translation": "Swift ဖြင့် ညီမျှသောအရာ"
+    },
+    {
+      "source": "<code>final</code> を付けた変数",
+      "translation": "<code>final</code> ထည့်ထားသော variable"
+    },
+    {
+      "source": "<code>final</code> を付けない変数",
+      "translation": "<code>final</code> မထည့်ထားသော variable"
+    },
+    {
+      "source": "トップレベル関数",
+      "translation": "Top-level function"
+    },
+    {
+      "source": "クラスの <code>static</code> メソッド",
+      "translation": "class ၏ <code>static</code> method"
+    },
+    {
+      "source": "グローバル関数",
+      "translation": "Global function"
+    },
+    {
+      "source": "<code>int</code> / <code>double</code> / <code>float</code> とそのラッパークラス",
+      "translation": "<code>int</code> / <code>double</code> / <code>float</code> နှင့် ၎င်းတို့၏ wrapper class များ"
+    },
+    {
+      "source": "1コマ目のゴール（コンソールに出る4行）",
+      "translation": "အတန်းချိန် 1 ၏ ရည်ရွယ်ချက် (console တွင်ထွက်လာမည့် စာကြောင်း 4 ကြောင်း)"
+    },
+    {
+      "source": "Runの結果 · この4行が出れば完成",
+      "translation": "Run ၏ ရလဒ် ၊ ဤ 4 ကြောင်း ထွက်လာပါက ပြီးစီးပြီဖြစ်သည်"
+    },
+    {
+      "source": "この4行を出すまでを、STEP 00 から STEP 06 までの7つのステップに分けて進みます。",
+      "translation": "ဤစာကြောင်း 4 ကြောင်းကို ထွက်ပေါ်လာစေရန် STEP 00 မှ STEP 06 အထိ အဆင့် 7 ဆင့် ခွဲ၍ လုပ်ဆောင်ပါမည်။"
+    },
+    {
+      "source": "1コマ目（90分）の進み方",
+      "translation": "အတန်းချိန် 1 (90 မိနစ်) ၏ လုပ်ဆောင်ရမည့်အစီအစဉ်"
+    },
+    {
+      "source": "時間",
+      "translation": "အချိန်"
+    },
+    {
+      "source": "進めるステップ",
+      "translation": "လုပ်ဆောင်ရမည့် အဆင့်များ"
+    },
+    {
+      "source": "やること",
+      "translation": "ပြုလုပ်ရမည့်အရာ"
+    },
+    {
+      "source": "前半（約35分）",
+      "translation": "ပထမပိုင်း (ခန့်မှန်းခြေ 35 မိနစ်)"
+    },
+    {
+      "source": "Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。",
+      "translation": "Playground တွင် 1 ကြောင်းကို run လုပ်ပြီး IntelliJ IDEA တွင် <code>K01HelloKotlin</code> project ကို ဖန်တီးပါ။"
+    },
+    {
+      "source": "後半（約55分）",
+      "translation": "ဒုတိယပိုင်း (ခန့်မှန်းခြေ 55 မိနစ်)"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。",
+      "translation": "<code>val</code> နှင့် <code>var</code>၊ ဂဏန်း type များကို ရေးသားပြီး စာကြောင်း 4 ကြောင်း၏ output ကို ပြီးမြောက်အောင် လုပ်ဆောင်ပါ။"
+    },
+    {
+      "source": "プロジェクトは <strong>自分で新規作成</strong>します。1コマ目の STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。",
+      "translation": "project ကို <strong>မိမိကိုယ်တိုင် အသစ်ဖန်တီးပါမည်</strong>။ အတန်းချိန် 1 ၏ STEP 02 တွင် <code>K01HelloKotlin</code> ကို ဖန်တီးပါမည်။ အတန်းချိန် 2 မှစ၍ ဤ project ကို ပြန်လည်ဖွင့်ပြီး ဆက်လက်ရေးသားမည်ဖြစ်သောကြောင့် အသစ်ပြန်လည်ဖန်တီးမည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "<a1>完成プロジェクト</a1>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。",
+      "translation": "<a1>ပြီးစီးပြီးသော project (နမူနာ)</a1>သည် ပထမဆုံးအတန်းချိန်မှစ၍ အချိန်မရွေးကြည့်ရှုနိုင်သော ရည်ညွှန်းမှတ်တမ်းတစ်ခုဖြစ်ပါသည်။ မိမိရေးသားထားသော ကုဒ်နှင့် နှိုင်းယှဉ်ကြည့်ရှုသည့်အခါတွင် အသုံးပြုပါ။"
+    },
+    {
+      "source": "この教科書の進め方",
+      "translation": "ဤသင်ခန်းစာစာအုပ်၏ အသုံးပြုပုံ"
+    },
+    {
+      "source": "書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。",
+      "translation": "ရေးသားပုံကို ဖတ်ရှုခြင်း → ရိုက်ထည့်ခြင်း → Run ဖြင့် run လုပ်ခြင်း → Java သို့မဟုတ် Swift နှင့် ကွာခြားချက်ကို စစ်ဆေးခြင်း။ ဤအစီအစဉ်အတိုင်း လုပ်ဆောင်ပါမည်။ အိမ်တွင် ကြိုတင်လေ့လာထားခြင်းမရှိသော်လည်း စတင်နိုင်ပါသည်။"
+    },
+    {
+      "source": "分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。",
+      "translation": "နားမလည်သောအရာများကို STEP နံပါတ်ဖြင့် အမှတ်အသားပြုလုပ်ထားပါ။ \"STEP 03 မှ <code>val</code> နှင့် Java မှ <code>var</code> တို့၏ ဆက်စပ်မှုကို နားမလည်ပါ\" ဟု မေးမြန်းနိုင်ပါသည်။"
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "ဤနေရာတွင် ရပ်၍ စစ်ဆေးရန်"
+    },
+    {
+      "source": "1コマ目に出す4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）を、上のゴールで確かめた。",
+      "translation": "အတန်းချိန် 1 တွင် ထွက်ပေါ်လာမည့် စာကြောင်း 4 ကြောင်း (<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>) ကို အထက်ပါ ရည်ရွယ်ချက်တွင် စစ်ဆေးပြီးပါပြီ။"
+    },
+    {
+      "source": "できたらチェックします。できないときは、この画面を先生に見せましょう。",
+      "translation": "ပြီးစီးပါက စစ်ဆေးပါ။ အဆင်မပြေပါက ဤမျက်နှာပြင်ကို ဆရာ့ကို ပြပါ။"
+    },
+    {
+      "source": "次へ：Playgroundで動かす →",
+      "translation": "ရှေ့သို့: Playground တွင် run လုပ်ရန် →"
+    },
+    {
+      "source": "STEP 01 · 目安 10分",
+      "translation": "STEP 01 ၊ ခန့်မှန်းခြေ 10 မိနစ်"
+    },
+    {
+      "source": "Kotlin Playgroundで動かす",
+      "translation": "Kotlin Playground တွင် run လုပ်ရန်"
+    },
+    {
+      "source": "このステップのゴール",
+      "translation": "ဤအဆင့်၏ ရည်ရွယ်ချက်"
+    },
+    {
+      "source": "開発環境を用意する前に、ブラウザだけでKotlinの <code>fun main()</code> を実行します。",
+      "translation": "Development environment ကို မပြင်ဆင်မီ Browser တွင်သာ Kotlin ၏ <code>fun main()</code> ကို run လုပ်ပါမည်။"
+    },
+    {
+      "source": "統合開発環境の準備は一手間かかります。最初の1行を動かすだけなら、ブラウザで動く <strong>Kotlin Playground</strong> で十分です。",
+      "translation": "Integrated Development Environment ကို ပြင်ဆင်ရန်မှာ အနည်းငယ် အချိန်ယူရပါသည်။ ပထမဆုံး စာကြောင်းတစ်ကြောင်းကိုသာ run လုပ်ရန်ဆိုလျှင် Browser တွင် အလုပ်လုပ်သော <strong>Kotlin Playground</strong> ဖြင့် လုံလောက်ပါသည်။"
+    },
+    {
+      "source": "① Playgroundを開く",
+      "translation": "① Playground ကို ဖွင့်ရန်"
+    },
+    {
+      "source": "ブラウザで <a1>https://play.kotlinlang.org/</a1> を開きます。",
+      "translation": "Browser တွင် <a1>https://play.kotlinlang.org/</a1> ကို ဖွင့်ပါ။"
+    },
+    {
+      "source": "エディタと、その下に実行結果のウィンドウがある画面が出ます。",
+      "translation": "Editor နှင့် ၎င်းအောက်တွင် ရလဒ်ပြဝင်းဒိုးပါရှိသော မျက်နှာပြင် ပေါ်လာပါမည်။"
+    },
+    {
+      "source": "画面の場所",
+      "translation": "မျက်နှာပြင်၏ နေရာ"
     },
     {
       "source": "役割",
       "translation": "လုပ်ဆောင်ရမည့်တာဝန်"
     },
     {
+      "source": "上の言語バージョンのメニュー",
+      "translation": "အပေါ်ရှိ Language version ၏ menu"
+    },
+    {
+      "source": "Kotlinのバージョンを切り替えます。既定で最新版です。授業では変更しません。",
+      "translation": "Kotlin ၏ ဗားရှင်းကို ပြောင်းလဲနိုင်ပါသည်။ မူလအတိုင်းဆိုလျှင် နောက်ဆုံးထွက်ဗားရှင်းဖြစ်ပါသည်။ အတန်းထဲတွင် ပြောင်းလဲမည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "共有のボタン",
+      "translation": "Share လုပ်ရန် ခလုတ်"
+    },
+    {
+      "source": "いま書いているコードのURLを作ります。人に見せるときに使います。",
+      "translation": "လက်ရှိရေးသားနေသော ကုဒ်၏ URL ကို ဖန်တီးပေးပါသည်။ အခြားသူများကို ပြသလိုသည့်အခါတွင် အသုံးပြုပါ။"
+    },
+    {
+      "source": "<strong>Run</strong> ボタン",
+      "translation": "<strong>Run</strong> ခလုတ်"
+    },
+    {
+      "source": "プログラムを実行します。",
+      "translation": "ပရိုဂရမ်ကို run လုပ်ပါမည်။"
+    },
+    {
+      "source": "ショートカットのボタン",
+      "translation": "Shortcut ၏ ခလုတ်"
+    },
+    {
+      "source": "キーボードショートカットの一覧を出します。",
+      "translation": "Keyboard shortcut များ၏ စာရင်းကို ပြသပေးပါသည်။"
+    },
+    {
+      "source": "下の実行結果のウィンドウ",
+      "translation": "အောက်ရှိ ရလဒ်ပြဝင်းဒိုး"
+    },
+    {
+      "source": "出力が出る場所です。Runすると自動で開きます。",
+      "translation": "Output ထွက်လာမည့်နေရာဖြစ်ပါသည်။ Run လုပ်လိုက်သည်နှင့် အလိုအလျောက် ပွင့်လာပါမည်။"
+    },
+    {
+      "source": "② エディタの中身を置き換えて実行する",
+      "translation": "② Editor အတွင်းရှိ အရာများကို အစားထိုး၍ run လုပ်ရန်"
+    },
+    {
+      "source": "エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。",
+      "translation": "Editor အတွင်းသို့ ကလစ်နှိပ်ပြီး <kbd>⌘ A</kbd> ဖြင့် အားလုံးကို ရွေးချယ်ပြီးနောက် အောက်ပါကုဒ်ကို paste လုပ်ပါ။"
+    },
+    {
+      "source": "Playgroundのエディタ · 全体を置き換える",
+      "translation": "Playground ၏ editor ၊ အားလုံးကို အစားထိုးမည်"
+    },
+    {
+      "source": "<strong>Run</strong> をクリックします。",
+      "translation": "<strong>Run</strong> ကို ကလစ်နှိပ်ပါ။"
+    },
+    {
+      "source": "下のウィンドウに <code>Hello, Kotlin!</code> が出れば成功です。",
+      "translation": "အောက်ရှိ ဝင်းဒိုးတွင် <code>Hello, Kotlin!</code> ထွက်လာပါက အောင်မြင်ပါသည်။"
+    },
+    {
+      "source": "③ 同じことを、JavaとSwiftではどこで試すか",
+      "translation": "③ ထိုအရာကိုပင် Java နှင့် Swift တွင်ဆိုလျှင် မည်သည့်နေရာတွင် စမ်းသပ်မည်နည်း"
+    },
+    {
+      "source": "JavaのJShellやSwiftのREPLは、<strong>式を1つずつ</strong>打って結果を見る場所です。だから <code>System.out.println(…)</code> や <code>print(…)</code> の1行だけで動きます。",
+      "translation": "Java ၏ JShell နှင့် Swift ၏ REPL တို့သည် <strong>Expression တစ်ခုချင်းစီကို</strong> ရိုက်ထည့်၍ ရလဒ်ကို ကြည့်ရှုသည့်နေရာဖြစ်ပါသည်။ ထို့ကြောင့် <code>System.out.println(…)</code> သို့မဟုတ် <code>print(…)</code> ၏ စာကြောင်းတစ်ကြောင်းတည်းဖြင့် အလုပ်လုပ်ပါသည်။"
+    },
+    {
+      "source": "Kotlin Playgroundは、<strong>ファイル1つ分をまるごと実行する</strong>場所です。だから入口の <code>fun main()</code> が要ります。<code>println(&quot;Hello, Kotlin!&quot;)</code> だけを貼っても実行されません。",
+      "translation": "Kotlin Playground သည် <strong>ဖိုင်တစ်ခုလုံးကို အစအဆုံး run လုပ်သည့်</strong> နေရာဖြစ်ပါသည်။ ထို့ကြောင့် အဝင်ဝဖြစ်သော <code>fun main()</code> လိုအပ်ပါသည်။ <code>println(&quot;Hello, Kotlin!&quot;)</code> ကိုသာ paste လုပ်လျှင် အလုပ်မလုပ်ပါ။"
+    },
+    {
+      "source": "Swiftのように「トップレベルに書いた文がそのまま上から実行される」わけでもありません。Kotlinの入口は、常に <code>fun main()</code> です。",
+      "translation": "Swift ကဲ့သို့ \"Top-level တွင် ရေးထားသော statement များသည် ထိုအတိုင်း အပေါ်မှစ၍ run လုပ်သွားသည်\" မျိုးလည်း မဟုတ်ပါ။ Kotlin ၏ အဝင်ဝသည် အမြဲတမ်း <code>fun main()</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Playgroundの短所",
+      "translation": "Playground ၏ အားနည်းချက်များ"
+    },
+    {
+      "source": "実行結果が出るまでに時間がかかります。サーバー側でコンパイルして実行しているためです。",
+      "translation": "ရလဒ်ထွက်ပေါ်လာရန် အချိန်ယူရပါသည်။ Server ဘက်တွင် compile လုပ်ပြီး run လုပ်နေသောကြောင့်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "コード補完がほとんど効きません。型を確かめたり、候補から選んだりする書き方ができません。",
+      "translation": "ကုဒ်အလိုအလျောက်ဖြည့်ပေးမှု (Code completion) လုံးဝနီးပါး အလုပ်မလုပ်ပါ။ Type ကို စစ်ဆေးခြင်း၊ ရွေးချယ်စရာများထဲမှ ရွေးချယ်ခြင်းစသော ရေးသားနည်းများကို အသုံးမပြုနိုင်ပါ။"
+    },
+    {
+      "source": "この2つがあるので、この先は統合開発環境を使います。Playgroundは、短いコードを人に見せるときや、あとで文法を思い出したいときに使ってください。",
+      "translation": "ဤအချက် 2 ခုကြောင့် နောက်ပိုင်းတွင် Integrated Development Environment ကို အသုံးပြုပါမည်။ Playground ကို တိုတောင်းသောကုဒ်များကို အခြားသူများအား ပြသလိုသည့်အခါ သို့မဟုတ် နောက်မှ grammar ကို ပြန်လည်မှတ်မိလိုသည့်အခါတွင် အသုံးပြုပါ။"
+    },
+    {
+      "source": "Playgroundで <code>Hello, Kotlin!</code> を出せた。",
+      "translation": "Playground တွင် <code>Hello, Kotlin!</code> ကို ထုတ်ပြနိုင်ခဲ့ပြီ။"
+    },
+    {
+      "source": "次へ：プロジェクトを作る →",
+      "translation": "ရှေ့သို့: project ကို ဖန်တီးရန် →"
+    },
+    {
+      "source": "STEP 02 · 目安 20分",
+      "translation": "STEP 02 ၊ ခန့်မှန်းခြေ 20 မိနစ်"
+    },
+    {
+      "source": "IntelliJ IDEAでプロジェクトを作る",
+      "translation": "IntelliJ IDEA တွင် project ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "IntelliJ IDEA で <code>K01HelloKotlin</code> プロジェクトを作り、ウィザードが用意したコードをそのまま実行します。動くことを確かめてから、<code>src/ex01/main.kt</code> を自分で作ります。",
+      "translation": "IntelliJ IDEA တွင် <code>K01HelloKotlin</code> project ကို ဖန်တီးပြီး wizard က ပြင်ဆင်ပေးထားသော ကုဒ်ကို ထိုအတိုင်း run လုပ်ပါမည်။ အလုပ်လုပ်ကြောင်းကို စစ်ဆေးပြီးနောက် <code>src/ex01/main.kt</code> ကို မိမိကိုယ်တိုင် ဖန်တီးပါမည်။"
+    },
+    {
+      "source": "授業ではMacと <strong>IntelliJ IDEA 2026.3 EAP</strong> を使います。IntelliJ IDEA は、学校から借りているMacに<strong>インストール済み</strong>です。Launchpadで探すか、Spotlight（<kbd>⌘ Space</kbd>）に <code>IntelliJ</code> と打って開きます。",
+      "translation": "အတန်းထဲတွင် Mac နှင့် <strong>IntelliJ IDEA 2026.3 EAP</strong> ကို အသုံးပြုပါမည်။ IntelliJ IDEA ကို ကျောင်းမှ ငှားရမ်းထားသော Mac တွင် <strong>install လုပ်ပြီးဖြစ်ပါသည်။</strong> Launchpad တွင် ရှာဖွေပါ သို့မဟုတ် Spotlight (<kbd>⌘ Space</kbd>) တွင် <code>IntelliJ</code> ဟု ရိုက်ထည့်၍ ဖွင့်ပါ။"
+    },
+    {
+      "source": "① 新規プロジェクト… を選ぶ",
+      "translation": "① 新規プロジェクト… (project အသစ်…) ကို ရွေးရန်"
+    },
+    {
+      "source": "IntelliJ IDEA を開きます。最初に出るのがホーム画面です。",
+      "translation": "IntelliJ IDEA ကို ဖွင့်ပါ။ ပထမဆုံးပေါ်လာသည်မှာ Home မျက်နှာပြင်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "左上の <strong>IntelliJ IDEA Home</strong> をクリックして、メニューを開きます。",
+      "translation": "ဘယ်ဘက်အပေါ်ရှိ <strong>IntelliJ IDEA Home</strong> ကို ကလစ်နှိပ်၍ menu ကို ဖွင့်ပါ။"
+    },
+    {
+      "source": "出てきた一覧から <strong>新規プロジェクト…</strong> を選びます。<strong>新規…</strong> ではありません。",
+      "translation": "ပေါ်လာသောစာရင်းမှ <strong>新規プロジェクト…</strong> (project အသစ်…) ကို ရွေးပါ။ <strong>新規…</strong> (အသစ်…) မဟုတ်ပါ။"
+    },
+    {
+      "source": "すでに別のプロジェクトが開いているときは、いちばん上のメニューバーから <strong>ファイル → 新規 → プロジェクト…</strong> を選びます。",
+      "translation": "အကယ်၍ အခြား project တစ်ခု ဖွင့်ထားပြီးဖြစ်ပါက အပေါ်ဆုံးရှိ menu bar မှ <strong>ファイル → 新規 → プロジェクト…</strong> (ဖိုင် → အသစ် → project…) ကို ရွေးပါ။"
+    },
+    {
+      "source": "② ダイアログに、表のとおり入力する",
+      "translation": "② Dialog တွင် ဇယားပါအတိုင်း ရိုက်ထည့်ရန်"
+    },
+    {
+      "source": "<strong>新規プロジェクト</strong> のダイアログが開きます。次の7か所を、表のとおりに入力・選択します。",
+      "translation": "<strong>新規プロジェクト</strong> (project အသစ်) ၏ dialog ပွင့်လာပါမည်။ အောက်ပါနေရာ 7 ခုကို ဇယားပါအတိုင်း ရိုက်ထည့်ခြင်း၊ ရွေးချယ်ခြင်းများ ပြုလုပ်ပါ။"
+    },
+    {
       "source": "項目",
       "translation": "သတ်မှတ်ရန်အကွက်"
+    },
+    {
+      "source": "入力・選択する内容",
+      "translation": "ရိုက်ထည့်ရမည့်၊ ရွေးချယ်ရမည့် အကြောင်းအရာ"
+    },
+    {
+      "source": "左の一覧",
+      "translation": "ဘယ်ဘက်ရှိ စာရင်း"
+    },
+    {
+      "source": "<strong>Kotlin</strong>。見出し <strong>新規プロジェクト</strong> の下に並ぶ4つのうちの2番目です。下の <strong>ジェネレーター</strong> の中からは選びません。",
+      "translation": "<strong>Kotlin</strong> ဖြစ်ပါသည်။ <strong>新規プロジェクト</strong> (project အသစ်) ခေါင်းစဉ်အောက်ရှိ 4 ခုအနက် 2 ခုမြောက်ဖြစ်ပါသည်။ အောက်ရှိ <strong>ジェネレーター</strong> (Generator) ထဲမှ မရွေးချယ်ပါ။"
+    },
+    {
+      "source": "名前",
+      "translation": "အမည်"
     },
     {
       "source": "場所",
       "translation": "နေရာ"
     },
     {
+      "source": "<code>~/Documents/Kotlin</code>（<strong>書類</strong> の中の <code>Kotlin</code> フォルダ。無ければ <strong>書類</strong> の中に作ります）。プロジェクト名は入れません。",
+      "translation": "<code>~/Documents/Kotlin</code> (<strong>စာရွက်စာတမ်းများ</strong> ထဲရှိ <code>Kotlin</code> ဖိုင်တွဲ။ မရှိပါက <strong>စာရွက်စာတမ်းများ</strong> ထဲတွင် ဖန်တီးပါမည်)။ project အမည်ကို မထည့်ပါ။"
+    },
+    {
+      "source": "ビルドシステム",
+      "translation": "Build စနစ်"
+    },
+    {
+      "source": "<strong>IntelliJ</strong>。<code>Kotlin</code>・<code>Maven</code>・<code>Gradle</code> は選びません。",
+      "translation": "<strong>IntelliJ</strong> ဖြစ်ပါသည်။ <code>Kotlin</code> ၊ <code>Maven</code> ၊ <code>Gradle</code> ကို မရွေးချယ်ပါ။"
+    },
+    {
+      "source": "一覧に出ているものを、そのまま使います。",
+      "translation": "စာရင်းတွင် ပေါ်နေသောအရာကို ထိုအတိုင်း အသုံးပြုပါမည်။"
+    },
+    {
+      "source": "サンプルコードの追加",
+      "translation": "နမူနာကုဒ် ထည့်သွင်းခြင်း"
+    },
+    {
+      "source": "チェックを<strong>入れたまま</strong>にします。",
+      "translation": "အမှန်ခြစ် <strong>ခြစ်ထားသည့်အတိုင်း</strong> ထားပါ။"
+    },
+    {
+      "source": "コンパクトなプロジェクト構造を使用する",
+      "translation": "ကျစ်လျစ်သော project တည်ဆောက်ပုံကို အသုံးပြုရန်"
+    },
+    {
+      "source": "新規プロジェクトのダイアログ。左の一覧でKotlinが選ばれ、右は名前がK01HelloKotlin、場所が~/Documents/Kotlin、その下にプロジェクトは次に作成されます: ~/Documents/Kotlin/K01HelloKotlinと出ている。ビルドシステムはIntelliJ、JDKの欄、サンプルコードの追加とコンパクトなプロジェクト構造を使用するの両方にチェックが入り、右下に作成ボタンがある",
+      "translation": "新規プロジェクト ၏ dialog။ ဘယ်ဘက်စာရင်းတွင် Kotlin ကို ရွေးချယ်ထားပြီး ညာဘက်တွင် အမည် K01HelloKotlin၊ နေရာ ~/Documents/Kotlin၊ ၎င်းအောက်တွင် プロジェクトは次に作成されます: ~/Documents/Kotlin/K01HelloKotlin ဟု ပေါ်နေသည်။ Build စနစ်တွင် IntelliJ၊ JDK နေရာ၊ サンプルコードの追加 နှင့် コンパクトなプロジェクト構造を使用する နှစ်ခုလုံးတွင် အမှန်ခြစ်ခြစ်ထားပြီး ညာဘက်အောက်ထောင့်တွင် 作成 ခလုတ်ရှိသည်"
+    },
+    {
+      "source": "表の7か所は、この画面の中にあります。<strong>JDK</strong> の欄に出る名前は、Macによって変わります。 <a1>画像を大きく開く</a1>",
+      "translation": "ဇယားပါ နေရာ 7 ခုသည် ဤမျက်နှာပြင်ထဲတွင် ရှိပါသည်။ <strong>JDK</strong> နေရာတွင် ပေါ်လာမည့်အမည်သည် Mac ပေါ်မူတည်၍ ပြောင်းလဲပါမည်။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "ビルドシステムに IntelliJ を選ぶ理由",
+      "translation": "Build စနစ်တွင် IntelliJ ကို ရွေးချယ်ရခြင်း၏ အကြောင်းရင်း"
+    },
+    {
+      "source": "Gradleを使わないので、ビルドの設定ファイルが増えず、自分が書いたKotlinのファイルだけを見ればよくなるからです。",
+      "translation": "Gradle ကို အသုံးမပြုသောကြောင့် build ဆက်တင်ဖိုင်များ မများပြားလာဘဲ မိမိရေးသားထားသော Kotlin ဖိုင်ကိုသာ ကြည့်ရှုရန် လုံလောက်သောကြောင့်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "入力できたら、<strong>場所</strong> の欄のすぐ下に出ている <strong>プロジェクトは次に作成されます: <code>~/Documents/Kotlin/K01HelloKotlin</code></strong> の行を読みます。この場所になっていることを確かめてから、右下の <strong>作成(C)</strong> を押します。",
+      "translation": "ရိုက်ထည့်ပြီးပါက <strong>場所</strong> (နေရာ) ၏ အောက်ဘက်တွင် ပေါ်လာသော <strong>プロジェクトは次に作成されます: <code>~/Documents/Kotlin/K01HelloKotlin</code></strong> (project ကို နောက်တစ်ဆင့်အနေဖြင့် ဖန်တီးပါမည်: ~/Documents/Kotlin/K01HelloKotlin) စာကြောင်းကို ဖတ်ပါ။ ဤနေရာဖြစ်ကြောင်း သေချာပါက ညာဘက်အောက်ခြေရှိ <strong>作成(C)</strong> (ဖန်တီးမည် (C)) ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "③ できあがった形を確かめる",
+      "translation": "③ ပြီးစီးသွားသော ပုံစံကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに、次の形ができます。",
+      "translation": "ဘယ်ဘက်ရှိ <strong>プロジェクト</strong> (project) tool ဝင်းဒိုးတွင် အောက်ပါပုံစံ ပေါ်လာပါမည်။"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> — プロジェクトのいちばん外側。右に <code>~/Documents/Kotlin/K01HelloKotlin</code> と出ます。",
+      "translation": "<code>K01HelloKotlin</code> — project ၏ အပြင်ဘက်ဆုံးအပိုင်း။ ညာဘက်တွင် <code>~/Documents/Kotlin/K01HelloKotlin</code> ဟု ပေါ်လာပါမည်။"
+    },
+    {
+      "source": "<code>.idea</code> — IntelliJ IDEA が使う設定です。中は見ません。",
+      "translation": "<code>.idea</code> — IntelliJ IDEA က အသုံးပြုသော ဆက်တင်ဖြစ်ပါသည်။ အထဲကို မကြည့်ပါ။"
+    },
+    {
+      "source": "<code>src</code> — ソースルート。これから書くKotlinのファイルは、すべてこの中に置きます。",
+      "translation": "<code>src</code> — Source root ဖြစ်ပါသည်။ ယခုမှစ၍ ရေးသားမည့် Kotlin ဖိုင်များအားလုံးကို ဤအထဲတွင် ထားရှိပါမည်။"
+    },
+    {
+      "source": "<code>Main.kt</code> — <code>src</code> の中にあります。<strong>サンプルコードの追加</strong> にチェックを入れたので作られた、そのまま動くサンプルです。",
+      "translation": "<code>Main.kt</code> — <code>src</code> ၏ အထဲတွင် ရှိပါသည်။ <strong>サンプルコードの追加</strong> (နမူနာကုဒ် ထည့်သွင်းခြင်း) ကို အမှန်ခြစ်ခြစ်ခဲ့သောကြောင့် ဖန်တီးပေးထားသော ထိုအတိုင်း run လုပ်၍ရသည့် နမူနာဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>.gitignore</code> — Gitが無視するファイルの一覧です。この単元では触りません。",
+      "translation": "<code>.gitignore</code> — Git က လျစ်လျူရှုမည့် ဖိုင်များစာရင်းဖြစ်ပါသည်။ ဤယူနစ်တွင် ၎င်းကို မပြင်ဆင်ပါ။"
+    },
+    {
+      "source": "右のエディタには <code>Main.kt</code> が開いています。<code>fun main()</code> の中に <code>val name = &quot;Kotlin&quot;</code>、<code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code>、そして <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code> が書かれています。",
+      "translation": "ညာဘက်ရှိ editor တွင် <code>Main.kt</code> ပွင့်နေပါသည်။ <code>fun main()</code> ၏ အထဲတွင် <code>val name = &quot;Kotlin&quot;</code> ၊ <code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code> နှင့် <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code> ကို ရေးသားထားပါသည်။"
+    },
+    {
+      "source": "できたプロジェクトの画面。左のツリーにK01HelloKotlinがあり、その中に.idea、src、srcの中にMain.kt、そして.gitignoreが並ぶ。右のエディタにはfun mainとval name = Kotlin、printlnの行、for (i in 1..5)のループが表示されている",
+      "translation": "ဖန်တီးပြီးသော project ၏ မျက်နှာပြင်။ ဘယ်ဘက်ရှိ tree တွင် K01HelloKotlin ရှိပြီး ၎င်းအထဲတွင် .idea၊ src၊ src အထဲတွင် Main.kt နှင့် .gitignore တို့ ရှိနေသည်။ ညာဘက်ရှိ editor တွင် fun main နှင့် val name = Kotlin၊ println စာကြောင်း၊ for (i in 1..5) ၏ loop တို့ကို ပြသထားသည်"
+    },
+    {
+      "source": "<code>src</code> の中に <code>Main.kt</code> があり、エディタに開いています。 <a1>画像を大きく開く</a1>",
+      "translation": "<code>src</code> ၏ အထဲတွင် <code>Main.kt</code> ရှိပြီး editor တွင် ပွင့်နေပါသည်။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "④ まず、そのまま実行する",
+      "translation": "④ ပထမဦးစွာ ၎င်းကို ထိုအတိုင်း run လုပ်ရန်"
+    },
+    {
+      "source": "自分でコードを書く前に、ウィザードが用意したこのサンプルを、1文字も変えずに実行します。",
+      "translation": "မိမိကိုယ်တိုင် ကုဒ်မရေးသားမီ wizard က ပြင်ဆင်ပေးထားသော ဤနမူနာကို စာလုံးတစ်လုံးမှ မပြောင်းလဲဘဲ run လုပ်ပါမည်။"
+    },
+    {
+      "source": "エディタで <code>Main.kt</code> を開きます。",
+      "translation": "Editor တွင် <code>Main.kt</code> ကို ဖွင့်ပါ။"
+    },
+    {
+      "source": "<code>fun main()</code> の行の左、行番号の右にある緑の三角 ▷（ガターのアイコン）をクリックします。",
+      "translation": "<code>fun main()</code> စာကြောင်း၏ ဘယ်ဘက်၊ စာကြောင်းနံပါတ်၏ ညာဘက်ရှိ အစိမ်းရောင်တြိဂံ ▷ (Gutter ၏ အိုင်ကွန်) ကို ကလစ်နှိပ်ပါ။"
+    },
+    {
+      "source": "出てきたメニューの、いちばん上の <strong>'MainKt' の実行</strong> を選びます。キーボードの <kbd>^ ⇧ R</kbd> でも同じです。",
+      "translation": "ပေါ်လာသော menu ၏ အပေါ်ဆုံးရှိ <strong>'MainKt' の実行</strong> ('MainKt' ကို run လုပ်ရန်) ကို ရွေးပါ။ Keyboard ၏ <kbd>^ ⇧ R</kbd> ဖြင့်လည်း တူညီပါသည်။"
+    },
+    {
+      "source": "エディタのfun mainの左にある緑の三角を押して出たメニュー。いちばん上の'MainKt' の実行が青く選ばれ、右端にショートカットの^⇧Rが出ている。その下に'MainKt' のデバッグなどが並ぶ",
+      "translation": "Editor ၏ fun main ဘယ်ဘက်ရှိ အစိမ်းရောင်တြိဂံကို နှိပ်၍ ပေါ်လာသော menu။ အပေါ်ဆုံးရှိ 'MainKt' の実行 ကို အပြာရောင်ဖြင့် ရွေးချယ်ထားပြီး ညာဘက်အစွန်တွင် shortcut ^⇧R ကို ပြသထားသည်။ ၎င်းအောက်တွင် 'MainKt' のデバッグ စသည်တို့ ရှိနေသည်"
+    },
+    {
+      "source": "ガターの ▷ を押すと、いちばん上に <strong>'MainKt' の実行</strong> が出ます。 <a1>画像を大きく開く</a1>",
+      "translation": "Gutter ၏ ▷ ကို နှိပ်ပါက အပေါ်ဆုံးတွင် <strong>'MainKt' の実行</strong> ('MainKt' ကို run လုပ်ရန်) ပေါ်လာပါမည်။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "⑤ 出た内容を確かめる",
+      "translation": "⑤ ထွက်လာသောအကြောင်းအရာကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "画面の下に <strong>実行</strong> ツールウィンドウが開き、次の内容が出ます。最初の実行は時間がかかることがあります。",
+      "translation": "မျက်နှာပြင်၏ အောက်ဘက်တွင် <strong>実行</strong> (run) tool ဝင်းဒိုး ပွင့်လာပြီး အောက်ပါအကြောင်းအရာများ ပေါ်လာပါမည်။ ပထမဆုံး run လုပ်ချိန်တွင် အချိန်ယူရနိုင်ပါသည်။"
+    },
+    {
+      "source": "実行ツールウィンドウ · この内容が出れば成功",
+      "translation": "Run လုပ်ခြင်း tool ဝင်းဒိုး ၊ ဤအကြောင်းအရာ ထွက်လာပါက အောင်မြင်သည်"
+    },
+    {
+      "source": "この <code>0</code> は、Javaの <code>System.exit(0)</code>、Swiftの <code>exit(0)</code> に書く <code>0</code> と同じものです。<code>0</code> 以外の数で終わったときは、途中で異常が起きています。",
+      "translation": "ဤ <code>0</code> သည် Java ၏ <code>System.exit(0)</code> နှင့် Swift ၏ <code>exit(0)</code> တို့တွင် ရေးသားသော <code>0</code> နှင့် တူညီသောအရာဖြစ်ပါသည်။ <code>0</code> မဟုတ်သော ဂဏန်းဖြင့် အဆုံးသတ်သွားပါက ကြားတွင် တစ်စုံတစ်ရာ မှားယွင်းမှု ဖြစ်ပေါ်နေပါသည်။"
+    },
+    {
+      "source": "自分でコードを書く前に一度動かしておくと、あとで動かなくなったときに、<strong>自分が書いた行</strong>だけを疑えます。「そもそも環境が動いていないのでは」を先に消しておく、ということです。",
+      "translation": "မိမိကိုယ်တိုင် ကုဒ်မရေးသားမီ တစ်ကြိမ် run လုပ်ကြည့်ထားပါက နောက်ပိုင်းတွင် run လုပ်၍မရသောအခါ <strong>မိမိရေးသားထားသော စာကြောင်း</strong>ကိုသာ သံသယဝင်နိုင်ပါသည်။ \"မူလပတ်ဝန်းကျင်ကတည်းက အလုပ်မလုပ်ခြင်း ဖြစ်နေမည်လား\" ဆိုသည်ကို ကြိုတင်ဖယ်ရှားထားခြင်းဖြစ်ပါသည်။"
+    },
+    {
+      "source": "⑥ ex01 パッケージと main.kt を作る",
+      "translation": "⑥ ex01 package နှင့် main.kt ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "動くことを確かめたら、ここからは自分のファイルを作ります。見本の <code>Main.kt</code> を先に消してから、<code>ex01</code> パッケージを作ります。",
+      "translation": "အလုပ်လုပ်ကြောင်းကို စစ်ဆေးပြီးပါက ဤနေရာမှစ၍ မိမိကိုယ်ပိုင်ဖိုင်ကို ဖန်တီးပါမည်။ နမူနာ <code>Main.kt</code> ကို ဦးစွာ ဖျက်ပြီးမှ <code>ex01</code> package ကို ဖန်တီးပါမည်။"
+    },
+    {
+      "source": "左のプロジェクトツリーで <code>src</code> の下の <code>Main.kt</code> を右クリックし、<strong>削除</strong> を選びます。確認のダイアログが出たら <strong>OK</strong> を押します。この単元では使いません。",
+      "translation": "ဘယ်ဘက်ရှိ project tree မှ <code>src</code> အောက်ရှိ <code>Main.kt</code> ကို ညာကလစ်နှိပ်ပြီး <strong>削除</strong> (ဖျက်မည်) ကို ရွေးပါ။ အတည်ပြု dialog ပေါ်လာပါက <strong>OK</strong> ကို နှိပ်ပါ။ ဤယူနစ်တွင် အသုံးမပြုပါ။"
+    },
+    {
+      "source": "ファイル Main.kt を削除しますか？ と尋ねる削除の確認ダイアログ。安全な削除とコメントと文字列内を検索にチェックが入っていて、右下にOKボタンがある",
+      "translation": "ဖိုင် Main.kt ကို ဖျက်မည်လား။ ဟု မေးမြန်းသော ဖျက်ရန်အတည်ပြု dialog။ 安全な削除 နှင့် コメントと文字列内を検索 တွင် အမှန်ခြစ်ခြစ်ထားပြီး ညာဘက်အောက်ထောင့်တွင် OK ခလုတ်ရှိသည်"
+    },
+    {
+      "source": "見本の <code>Main.kt</code> を消します。チェックはそのままで <strong>OK</strong> を押します。 <a1>画像を大きく開く</a1>",
+      "translation": "နမူနာ <code>Main.kt</code> ကို ဖျက်ပါမည်။ အမှန်ခြစ်များကို ထိုအတိုင်းထား၍ <strong>OK</strong> ကို နှိပ်ပါ။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。",
+      "translation": "<code>src</code> ကို ညာကလစ်နှိပ်ပြီး <strong>新規 → パッケージ</strong> (အသစ် → Package) ကို ရွေးပါ။"
+    },
+    {
+      "source": "プロジェクトツリーのsrcを右クリックして出たメニュー。新規の右に出たサブメニューでパッケージが選ばれている",
+      "translation": "Project tree ၏ src ကို ညာကလစ်နှိပ်၍ ပေါ်လာသော menu။ 新規 ၏ ညာဘက်တွင် ပေါ်လာသော sub-menu တွင် パッケージ ကို ရွေးချယ်ထားသည်"
+    },
+    {
+      "source": "<code>src</code> を右クリックして <strong>新規 → パッケージ</strong>。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。 <a1>画像を大きく開く</a1>",
+      "translation": "<code>src</code> ကို ညာကလစ်နှိပ်ပြီး <strong>新規 → パッケージ</strong> (အသစ် → Package)။ အပေါ်နားရှိ <strong>Kotlin ファイル/クラス</strong> (Kotlin ဖိုင်/class) နှင့် မမှားစေရန် သတိပြုပါ။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex01</code> ができます。",
+      "translation": "အမည်တွင် <code>ex01</code> ဟု ရိုက်ထည့်ပြီး <kbd>Return</kbd> ကို နှိပ်ပါ။ <code>src</code> ၏ အောက်တွင် <code>ex01</code> ပေါ်လာပါမည်။"
+    },
+    {
+      "source": "新規パッケージと書かれた小さな入力欄に ex01 と入力されている",
+      "translation": "新規パッケージ ဟုရေးထားသော အဝင်စာရိုက်ကွက်ငယ်လေးထဲတွင် ex01 ဟု ရိုက်ထည့်ထားသည်"
+    },
+    {
+      "source": "パッケージ名は <code>ex01</code>。すべて小文字で、記号は入れません。 <a1>画像を大きく開く</a1>",
+      "translation": "Package အမည်မှာ <code>ex01</code> ဖြစ်ပါသည်။ အားလုံးကို အင်္ဂလိပ်စာလုံးအသေးဖြင့်သာ ရေးသားပြီး သင်္ကေတများ မထည့်ပါ။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "できた <code>ex01</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> ではなく <code>ex01</code> を右クリックします。</strong>",
+      "translation": "ဖန်တီးထားသော <code>ex01</code> ကို ညာကလစ်နှိပ်ပြီး <strong>新規 → Kotlin ファイル/クラス</strong> (အသစ် → Kotlin ဖိုင်/class) ကို ရွေးပါ။ <strong><code>src</code> ကို မဟုတ်ဘဲ <code>ex01</code> ကို ညာကလစ်နှိပ်ပါ။</strong>"
+    },
+    {
+      "source": "プロジェクトツリーでsrcの下のex01を右クリックして出たメニュー。新規のサブメニューでKotlin ファイル/クラスが選ばれている",
+      "translation": "Project tree တွင် src အောက်ရှိ ex01 ကို ညာကလစ်နှိပ်၍ ပေါ်လာသော menu။ 新規 ၏ sub-menu တွင် Kotlin ファイル/クラス ကို ရွေးချယ်ထားသည်"
+    },
+    {
+      "source": "今度は <code>ex01</code> を右クリックして <strong>新規 → Kotlin ファイル/クラス</strong>。 <a1>画像を大きく開く</a1>",
+      "translation": "ယခုတစ်ကြိမ်တွင် <code>ex01</code> ကို ညာကလစ်နှိပ်ပြီး <strong>新規 → Kotlin ファイル/クラス</strong> (အသစ် → Kotlin ဖိုင်/class)။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。",
+      "translation": "အမည်တွင် <code>main</code> ဟု ရိုက်ထည့်ပြီး အောက်ပါစာရင်းမှ <strong>ファイル</strong> (ဖိုင်) ကို ရွေးချယ်၍ <kbd>Return</kbd> ကို နှိပ်ပါ။ <strong>အပေါ်ဆုံးရှိ \"class\" မဟုတ်ပါ။</strong> \"class\" ကို ရွေးချယ်ပါက <code>class main</code> ကို ဖန်တီးမည်ဖြစ်ပြီး ၎င်းနောက်ပိုင်းရှိ လုပ်ဆောင်ရမည့်အဆင့်များနှင့် ကိုက်ညီမှုရှိမည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "新規 Kotlin ファイル/クラスのダイアログ。上の入力欄に main と入力され、下の一覧でクラスの次にあるファイルが選ばれている",
+      "translation": "新規 Kotlin ファイル/クラス ၏ dialog။ အပေါ်ရှိ အဝင်စာရိုက်ကွက်တွင် main ဟု ရိုက်ထည့်ထားပြီး အောက်ပါစာရင်းတွင် クラス ၏ နောက်ရှိ ファイル ကို ရွေးချယ်ထားသည်"
+    },
+    {
+      "source": "名前は <code>main</code>、種類は <strong>ファイル</strong>。上から2番目です。 <a1>画像を大きく開く</a1>",
+      "translation": "အမည်သည် <code>main</code>၊ အမျိုးအစားသည် <strong>ファイル</strong> (ဖိုင်) ဖြစ်ပါသည်။ အပေါ်မှ ၂ ခုမြောက်ဖြစ်ပါသည်။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex01</code> が入っていることを確かめます。",
+      "translation": "ဖန်တီးထားသော <code>main.kt</code> ၏ ပထမစာကြောင်းတွင် <code>package ex01</code> ပါဝင်ခြင်းရှိမရှိ စစ်ဆေးပါ။"
+    },
+    {
+      "source": "エディタに開いたmain.kt。1行目にpackage ex01、3行目から5行目にfun main()の空の関数が入っている",
+      "translation": "Editor တွင် ပွင့်နေသော main.kt။ ပထမစာကြောင်းတွင် package ex01၊ တတိယစာကြောင်းမှ ပဉ္စမစာကြောင်းအထိ fun main() ၏ ဗလာ function ပါဝင်နေသည်"
+    },
+    {
+      "source": "1行目の <code>package ex01</code> と、空の <code>fun main()</code> は IntelliJ IDEA が入れたものです。自分で打つ必要はありません。 <a1>画像を大きく開く</a1>",
+      "translation": "ပထမစာကြောင်းရှိ <code>package ex01</code> နှင့် ဗလာ <code>fun main()</code> သည် IntelliJ IDEA က ထည့်သွင်းပေးထားခြင်းဖြစ်ပါသည်။ မိမိကိုယ်တိုင် ရိုက်ထည့်ရန် မလိုအပ်ပါ။ <a1>ပုံကို အကြီးချဲ့၍ကြည့်ရန်</a1>"
+    },
+    {
+      "source": "1行目が <code>package ex01</code> になっていないとき",
+      "translation": "ပထမစာကြောင်းသည် <code>package ex01</code> မဖြစ်နေပါက"
+    },
+    {
+      "source": "ファイルが <code>ex01</code> の中ではなく <code>src</code> の直下にできています。<code>main.kt</code> を右クリックして削除し、④からやり直します。<code>ex01</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "ဖိုင်သည် <code>ex01</code> ထဲတွင် မဟုတ်ဘဲ <code>src</code> ၏ တိုက်ရိုက်အောက်တွင် ဖန်တီးမိလျက်သားဖြစ်နေပါသည်။ <code>main.kt</code> ကို ညာကလစ်နှိပ်၍ ဖျက်ပြီးနောက် ④ မှစ၍ ပြန်လည်လုပ်ဆောင်ပါ။ <code>ex01</code> ကို ညာကလစ်နှိပ်ခဲ့ခြင်း ရှိမရှိသည် အဆုံးအဖြတ်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "この単元は全6コマです。回を重ねるごとに、同じ <code>K01HelloKotlin</code> プロジェクトの <code>src</code> の下に、いまと同じ手順で <code>ex02</code>、<code>ex03</code> …とパッケージを足していきます。プロジェクトを作り直さないので、前の回に書いたコードを、いつでも開いて見返せます。",
+      "translation": "ဤယူနစ်သည် စုစုပေါင်း အတန်းချိန် 6 ခု ဖြစ်ပါသည်။ အတန်းချိန် တစ်ခုပြီးတစ်ခု တူညီသော <code>K01HelloKotlin</code> project ၏ <code>src</code> အောက်တွင် ယခုအတိုင်း <code>ex02</code>၊ <code>ex03</code> ... ဟူ၍ package များကို ထပ်ထည့်သွားပါမည်။ project ကို အသစ်ပြန်လည်မဖန်တီးသောကြောင့် ယခင်အတန်းချိန်က ရေးသားခဲ့သော ကုဒ်များကို အချိန်မရွေး ဖွင့်လှစ်ကြည့်ရှုနိုင်ပါသည်။"
+    },
+    {
+      "source": "⑦ ファイル全体を、次の内容にする",
+      "translation": "⑦ ဖိုင်တစ်ခုလုံးကို အောက်ပါအကြောင်းအရာအတိုင်း ဖြစ်အောင်လုပ်ရန်"
+    },
+    {
+      "source": "src/ex01/main.kt · 全体を置き換える",
+      "translation": "src/ex01/main.kt ၊ အားလုံးကို အစားထိုးမည်"
+    },
+    {
+      "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
+      "translation": "<code>fun main()</code> စာကြောင်း၏ ဘယ်ဘက်တွင် ပေါ်လာမည့် အစိမ်းရောင်တြိဂံ ▷ ကို ကလစ်နှိပ်ပြီး <strong>'MainKt' の実行</strong> ('MainKt' ကို run လုပ်ရန်) ကို ရွေးပါ။ အောက်ရှိ <strong>実行</strong> (run) tool ဝင်းဒိုးတွင် <code>Hello, Kotlin!</code> နှင့် <code>プロセスは終了コード 0 で終了しました</code> ဟု ပေါ်လာပါက အောင်မြင်ပါသည်။"
+    },
+    {
+      "source": "<code>i = 1</code> 〜 <code>i = 5</code> はもう出ません。消した <code>Main.kt</code> ではなく、いま書いた <code>ex01</code> の <code>main.kt</code> が動いているからです。",
+      "translation": "<code>i = 1</code> မှ <code>i = 5</code> သည် ဆက်လက်မထွက်ပေါ်လာတော့ပါ။ ဖျက်လိုက်သော <code>Main.kt</code> မဟုတ်ဘဲ ယခုရေးသားလိုက်သော <code>ex01</code> ၏ <code>main.kt</code> က အလုပ်လုပ်နေသောကြောင့်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "この「ガターの ▷ から <strong>'MainKt' の実行</strong> を選ぶ」操作を、この教科書では STEP 03 以降「Run」と書きます。STEP 01 の Kotlin Playground の <strong>Run</strong> ボタンと同じ意味です。",
+      "translation": "ဤ \"Gutter ၏ ▷ မှ <strong>'MainKt' の実行</strong> ('MainKt' ကို run လုပ်ရန်) ကို ရွေးချယ်ခြင်း\" အား ဤသင်ခန်းစာစာအုပ်၏ STEP 03 နောက်ပိုင်းတွင် \"Run\" ဟု ရေးသားပါမည်။ STEP 01 ရှိ Kotlin Playground ၏ <strong>Run</strong> ခလုတ်နှင့် အဓိပ္ပာယ်တူညီပါသည်။"
+    },
+    {
+      "source": "⑧ ファイル名とクラス名の関係",
+      "translation": "⑧ ဖိုင်အမည်နှင့် class အမည်တို့၏ ဆက်စပ်မှု"
+    },
+    {
+      "source": "Javaの「ファイル名と <code>public</code> クラス名を一致させる」という決まりが、Kotlinにはありません。ファイル名は <code>main.kt</code> のように小文字で構いません。",
+      "translation": "Java ၏ \"ဖိုင်အမည်နှင့် <code>public</code> class အမည် တူညီရမည်\" ဟူသော သတ်မှတ်ချက်သည် Kotlin တွင် မရှိပါ။ ဖိုင်အမည်ကို <code>main.kt</code> ကဲ့သို့ အင်္ဂလိပ်စာလုံးအသေးဖြင့် ပေး၍ ရပါသည်။"
+    },
+    {
+      "source": "関数をクラスの外（トップレベル）に置けます。入口を入れるためだけのクラスを作らずに済みます。",
+      "translation": "function ကို class အပြင်ဘက် (ထိပ်ဆုံးအဆင့်) တွင် ထားနိုင်ပါသည်။ အစပိုင်းနေရာတစ်ခု ထည့်သွင်းရန်အတွက်သာ class တစ်ခု တည်ဆောက်စရာ မလိုပါ။"
+    },
+    {
+      "source": "<code>package</code> 宣言があり、フォルダ構成と合わせる点はJavaと同じです。違うのは行末の <code>;</code> が要らないことです。Swiftには <code>package</code> 宣言そのものがありません。",
+      "translation": "<code>package</code> ကြေညာချက်ပါရှိပြီး ဖိုင်တွဲတည်ဆောက်ပုံနှင့် ကိုက်ညီအောင်ပြုလုပ်ရခြင်းသည် Java နှင့် တူညီပါသည်။ ကွာခြားချက်မှာ စာကြောင်းအဆုံးတွင် <code>;</code> မလိုအပ်ခြင်းဖြစ်ပါသည်။ Swift တွင် <code>package</code> ကြေညာချက်ဟူ၍ လုံးဝမရှိပါ။"
+    },
+    {
+      "source": "実行の設定名が <code>MainKt</code> になるのは、Kotlinが <code>main.kt</code> から <code>MainKt</code> というクラスを作ってバイトコードに落としているからです。クラスを書かなくても、JVMの上ではクラスになっています。",
+      "translation": "run လုပ်မည့် ဆက်တင်အမည်သည် <code>MainKt</code> ဖြစ်လာခြင်းမှာ Kotlin သည် <code>main.kt</code> မှနေ၍ <code>MainKt</code> ဟူသော class တစ်ခုကို ဖန်တီးကာ byte code အဖြစ် ပြောင်းလဲပေးသောကြောင့် ဖြစ်ပါသည်။ class ကို မရေးသားထားသော်လည်း JVM အပေါ်တွင်မူ class တစ်ခုအဖြစ် တည်ရှိနေပါသည်။"
+    },
+    {
+      "source": "大文字と小文字",
+      "translation": "အင်္ဂလိပ်စာလုံး အကြီးနှင့် အသေး"
+    },
+    {
+      "source": "ファイル名は <code>main.kt</code>、パッケージ名は <code>ex01</code> です。<code>Main.kt</code> や <code>Ex01</code> ではありません。Kotlinは大文字と小文字を区別します。",
+      "translation": "ဖိုင်အမည်သည် <code>main.kt</code> ဖြစ်ပြီး package အမည်သည် <code>ex01</code> ဖြစ်ပါသည်။ <code>Main.kt</code> သို့မဟုတ် <code>Ex01</code> မဟုတ်ပါ။ Kotlin သည် အင်္ဂလိပ်စာလုံး အကြီးနှင့် အသေးကို ခွဲခြားမှတ်သားပါသည်။"
+    },
+    {
+      "source": "ウィザードのサンプルをそのまま実行して <code>プロセスは終了コード 0 で終了しました</code> を出し、そのあと <code>src/ex01/main.kt</code> を作って <code>Hello, Kotlin!</code> を出せた。",
+      "translation": "wizard ၏ နမူနာကို ထိုအတိုင်း run လုပ်၍ <code>プロセスは終了コード 0 で終了しました</code> (process သည် ပြီးဆုံးကုဒ် 0 ဖြင့် ပြီးဆုံးပါသည်) ကို ထွက်ပေါ်စေပြီးနောက်၊ <code>src/ex01/main.kt</code> ကို ဖန်တီးကာ <code>Hello, Kotlin!</code> ကို ထွက်ပေါ်စေနိုင်ခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：val と var →",
+      "translation": "နောက်တစ်ခုသို့: val နှင့် var →"
+    },
+    {
+      "source": "STEP 03 · 目安 20分",
+      "translation": "STEP 03 ၊ ခန့်မှန်းကြာချိန် 20 မိနစ်"
+    },
+    {
+      "source": "変数を宣言する（val と var）",
+      "translation": "variable များကို ကြေညာရန် (val နှင့် var)"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code> を使い分け、型注釈を省いて書きます。",
+      "translation": "<code>val</code> နှင့် <code>var</code> ကို ခွဲခြားအသုံးပြုပြီး type သတ်မှတ်ချက်ကို ချန်လှပ်၍ ရေးသားပါမည်။"
+    },
+    {
+      "source": "変更するファイル：src/ex01/main.kt",
+      "translation": "ပြင်ဆင်ရမည့်ဖိုင်: src/ex01/main.kt"
+    },
+    {
+      "source": "Kotlinの変数宣言は、キーワードが2つあります。",
+      "translation": "Kotlin ၏ variable ကြေညာခြင်းတွင် keyword နှစ်ခု ရှိပါသည်။"
+    },
+    {
+      "source": "キーワード",
+      "translation": "keyword"
+    },
+    {
       "source": "意味",
       "translation": "အဓိပ္ပာယ်"
     },
     {
+      "source": "再代入禁止。あとから別の値を入れるとコンパイルエラーになります。",
+      "translation": "ထပ်မံတန်ဖိုးထည့်သွင်းခွင့် မပြုပါ။ နောက်မှ အခြားတန်ဖိုးတစ်ခု ထည့်သွင်းပါက compile error ဖြစ်ပေါ်ပါမည်။"
+    },
+    {
+      "source": "再代入可能。あとから別の値を入れられます。",
+      "translation": "ထပ်မံတန်ဖိုးထည့်သွင်းနိုင်ပါသည်။ နောက်မှ အခြားတန်ဖိုးတစ်ခုကို ထည့်သွင်းနိုင်ပါသည်။"
+    },
+    {
+      "source": "① ファイル全体を、次の内容に置き換える",
+      "translation": "① ဖိုင်တစ်ခုလုံးကို အောက်ပါအကြောင်းအရာဖြင့် အစားထိုးရန်"
+    },
+    {
+      "source": "main.kt · 全体を置き換える",
+      "translation": "main.kt ၊ တစ်ခုလုံးကို အစားထိုးရန်"
+    },
+    {
+      "source": "② 実行結果",
+      "translation": "② ရလဒ်"
+    },
+    {
+      "source": "Runの結果",
+      "translation": "Run ၏ ရလဒ်"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか",
+      "translation": "③ Java / Swift တွင် မည်သို့ရေးသားမည်နည်း"
+    },
+    {
+      "source": "<code>val</code> キーワードで宣言した変数は再代入禁止です。再代入するとコンパイルエラーになります。Javaの <code>final</code>、Swiftの <code>let</code> にあたります。",
+      "translation": "<code>val</code> keyword ဖြင့် ကြေညာထားသော variable သည် ထပ်မံတန်ဖိုးထည့်သွင်းခွင့် မပြုပါ။ ထပ်မံတန်ဖိုးထည့်သွင်းပါက compile error ဖြစ်ပေါ်ပါမည်။ Java ၏ <code>final</code>၊ Swift ၏ <code>let</code> နှင့် အတူတူဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>var</code> キーワードで宣言した変数は再代入可能です。Swiftの <code>var</code> と同じです。",
+      "translation": "<code>var</code> keyword ဖြင့် ကြေညာထားသော variable သည် ထပ်မံတန်ဖိုးထည့်သွင်းနိုင်ပါသည်။ Swift ၏ <code>var</code> နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "Javaは「再代入できる」のが既定で、<code>final</code> を足して止めます。KotlinとSwiftは逆で、宣言のキーワードそのもので分けます。<strong>迷ったらまず <code>val</code> で書き、再代入が要るときだけ <code>var</code> にする</strong>のがKotlinの書き方です。",
+      "translation": "Java တွင် \"ထပ်မံတန်ဖိုးထည့်သွင်းနိုင်ခြင်း\" မှာ ပုံမှန်အားဖြင့်ဖြစ်ပြီး၊ <code>final</code> ကို ပေါင်းထည့်မှသာ တားမြစ်ပါသည်။ Kotlin နှင့် Swift မှာမူ ပြောင်းပြန်ဖြစ်ပြီး၊ ကြေညာသည့် keyword ကိုယ်တိုင်ဖြင့် ခွဲခြားသတ်မှတ်ပါသည်။ <strong>ဝေခွဲမရဖြစ်ပါက ပထမဦးစွာ <code>val</code> ဖြင့်ရေးသားပြီး ထပ်မံတန်ဖိုးထည့်သွင်းရန် လိုအပ်မှသာ <code>var</code> သို့ ပြောင်းလဲခြင်း</strong>သည် Kotlin ၏ ရေးသားပုံဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Swiftと同様に型推論が効くため、変数宣言時の型の指定は省略できます。<code>val number1: Int = 1</code> と書くこともできますが、右辺から決まるときは書きません。",
+      "translation": "Swift ကဲ့သို့ပင် type ကို အလိုအလျောက်ခန့်မှန်းပေးမှု အလုပ်လုပ်သောကြောင့် variable ကြေညာချိန်တွင် type သတ်မှတ်ချက်ကို ချန်လှပ်ထားနိုင်ပါသည်။ <code>val number1: Int = 1</code> ဟုလည်း ရေးသားနိုင်သော်လည်း ညာဘက်ခြမ်းမှနေ၍ ဆုံးဖြတ်နိုင်သောအခါတွင် မရေးသားပါ။"
+    },
+    {
+      "source": "Swiftと同様に文末のセミコロン（<code>;</code>）が不要です。",
+      "translation": "Swift ကဲ့သို့ပင် စာကြောင်းအဆုံးတွင် semicolon (<code>;</code>) မလိုအပ်ပါ။"
+    },
+    {
+      "source": "Javaの var と、Kotlinの var は別物",
+      "translation": "Java ၏ var နှင့် Kotlin ၏ var တို့သည် မတူညီပါ"
+    },
+    {
+      "source": "Java 10以降にもローカル変数の <code>var</code> があります。ただしJavaの <code>var</code> は「型を書かない」という意味で、再代入できるかどうかとは関係ありません（<code>final var</code> と書けます）。",
+      "translation": "Java 10 နှင့် နောက်ပိုင်းဗားရှင်းများတွင်လည်း local variable ၏ <code>var</code> ပါရှိပါသည်။ သို့သော်လည်း Java ၏ <code>var</code> သည် \"type ကို မရေးပါ\" ဟု အဓိပ္ပာယ်ရပြီး ထပ်မံတန်ဖိုးထည့်သွင်းနိုင်ခြင်း ရှိမရှိနှင့် မသက်ဆိုင်ပါ (<code>final var</code> ဟု ရေးသားနိုင်ပါသည်)။"
+    },
+    {
+      "source": "Kotlinの <code>var</code> は「再代入できる」という意味で、型を書くかどうかとは関係ありません（<code>var name: String = &quot;Yamada&quot;</code> と書けます）。つづりが同じでも、分けている軸が違います。",
+      "translation": "Kotlin ၏ <code>var</code> သည် \"ထပ်မံတန်ဖိုးထည့်သွင်းနိုင်သည်\" ဟု အဓိပ္ပာယ်ရပြီး type ကို ရေးသားခြင်း ရှိမရှိနှင့် မသက်ဆိုင်ပါ (<code>var name: String = &quot;Yamada&quot;</code> ဟု ရေးသားနိုင်ပါသည်)။ စာလုံးပေါင်းတူညီသော်လည်း ခွဲခြားထားသည့် အခြေခံသဘောတရားများ ကွာခြားပါသည်။"
+    },
+    {
+      "source": "押す前に予想する",
+      "translation": "မနှိပ်မီ ခန့်မှန်းရန်"
+    },
+    {
+      "source": "<code>println(name)</code> では、<code>Yamada</code> と <code>Tanaka</code> のどちらが出るでしょうか。予想してから、Runで確かめましょう。",
+      "translation": "<code>println(name)</code> တွင် <code>Yamada</code> နှင့် <code>Tanaka</code> မည်သည့်အရာ ထွက်ပေါ်လာမည်နည်း။ ခန့်မှန်းပြီးမှ Run ဖြင့် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "確かめたあとに答えを見る",
+      "translation": "စစ်ဆေးပြီးနောက် အဖြေကို ကြည့်ရန်"
+    },
+    {
+      "source": "<code>Tanaka</code> が出ます。JavaやSwiftと同じで、その行より上で最後に代入された値が入っています。",
+      "translation": "<code>Tanaka</code> ထွက်ပေါ်လာပါမည်။ Java သို့မဟုတ် Swift နှင့်တူညီပြီး ထိုစာကြောင်းအထက်ရှိ နောက်ဆုံးထည့်သွင်းထားသော တန်ဖိုး ဝင်ရောက်နေပါသည်။"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code> で2行を出せた。",
+      "translation": "<code>val</code> နှင့် <code>var</code> ဖြင့် စာကြောင်း 2 ကြောင်း ထွက်ပေါ်စေနိုင်ခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：数の型 →",
+      "translation": "နောက်တစ်ခုသို့: ကိန်းဂဏန်းများ၏ type →"
+    },
+    {
+      "source": "STEP 04 · 目安 15分",
+      "translation": "STEP 04 ၊ ခန့်မှန်းကြာချိန် 15 မိနစ်"
+    },
+    {
+      "source": "数の型を確かめる（Int・Double・Float）",
+      "translation": "ကိန်းဂဏန်းများ၏ type ကို စစ်ဆေးရန် (Int၊ Double၊ Float)"
+    },
+    {
+      "source": "<code>Int</code>・<code>Double</code>・<code>Float</code> をリテラルの書き方で作り分け、<code>println</code> で出します。",
+      "translation": "<code>Int</code>၊ <code>Double</code>၊ <code>Float</code> တို့ကို literal ၏ ရေးသားပုံအရ ခွဲခြားဖန်တီးပြီး <code>println</code> ဖြင့် ထုတ်ပြပါမည်။"
+    },
+    {
+      "source": "型",
+      "translation": "type"
+    },
+    {
+      "source": "リテラルの書き方",
+      "translation": "literal ၏ ရေးသားပုံ"
+    },
+    {
+      "source": "整数。既定の整数型です。",
+      "translation": "ကိန်းပြည့်။ ပုံမှန်ကိန်းပြည့် type ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "小数点を書くと、この型になります。既定の浮動小数点型です。",
+      "translation": "ဒသမကိန်းရေးသားပါက ဤ type ဖြစ်လာပါမည်။ ပုံမှန် floating point type ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "うしろに <code>f</code> を付けると、この型になります。",
+      "translation": "အနောက်တွင် <code>f</code> ထည့်ပါက ဤ type ဖြစ်လာပါမည်။"
+    },
+    {
+      "source": "① 追加する場所を見つける",
+      "translation": "① ထပ်ထည့်ရမည့်နေရာကို ရှာဖွေရန်"
+    },
+    {
+      "source": "場所の目印 · この枠は入力しません",
+      "translation": "နေရာ၏ အမှတ်အသား ၊ ဤဘောင်ကို ရိုက်ထည့်စရာ မလိုပါ"
+    },
+    {
+      "source": "② 値の行に2行追加する",
+      "translation": "② တန်ဖိုးစာကြောင်းတွင် စာကြောင်း 2 ကြောင်း ထပ်ထည့်ရန်"
+    },
+    {
+      "source": "追加① · val number1 = 1 の下",
+      "translation": "ထပ်ထည့်ရန် ① ၊ val number1 = 1 ၏ အောက်"
+    },
+    {
+      "source": "③ 表示の行に2行追加する",
+      "translation": "③ ပြသမှုစာကြောင်းတွင် စာကြောင်း 2 ကြောင်း ထပ်ထည့်ရန်"
+    },
+    {
+      "source": "追加② · println(number1) の下",
+      "translation": "ထပ်ထည့်ရန် ② ၊ println(number1) ၏ အောက်"
+    },
+    {
+      "source": "貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。",
+      "translation": "ကူးယူထည့်သွင်းပါက IntelliJ IDEA သည် စာကြောင်းအစရှိ နေရာချထားမှုကို အလိုအလျောက် ညှိပေးပါမည်။ အခြားစာကြောင်းများနှင့် အစတူညီနေပါက အဆင်ပြေပါသည်။"
+    },
+    {
+      "source": "④ 実行結果",
+      "translation": "④ ရလဒ်"
+    },
+    {
+      "source": "Runの結果 · この4行が出れば成功",
+      "translation": "Run ၏ ရလဒ် ၊ ဤ 4 ကြောင်း ထွက်ပေါ်လာပါက အောင်မြင်ပါသည်"
+    },
+    {
+      "source": "<code>3.0f</code> と書いたのに、出るのは <code>3.0</code> です。<code>f</code> はリテラルの型を決める目印で、値そのものには入っていません。Javaで <code>System.out.println(3.0f)</code> としたときと同じ結果です。",
+      "translation": "<code>3.0f</code> ဟု ရေးသားခဲ့သော်လည်း ထွက်ပေါ်လာသည်မှာ <code>3.0</code> ဖြစ်ပါသည်။ <code>f</code> သည် literal ၏ type ကို ဆုံးဖြတ်ပေးသော အမှတ်အသားဖြစ်ပြီး တန်ဖိုးအစစ်အမှန်ထဲတွင် မပါဝင်ပါ။ Java တွင် <code>System.out.println(3.0f)</code> ဟု ပြုလုပ်ခဲ့စဉ်ကနှင့် တူညီသောရလဒ် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "⑤ Java / Swift ではどう書くか（型）",
+      "translation": "⑤ Java / Swift တွင် မည်သို့ရေးသားမည်နည်း (type)"
+    },
+    {
+      "source": "<strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。",
+      "translation": "<strong>Kotlin တွင် Java ၏ primitive type နှင့် wrapper class တို့၏ ခွဲခြားမှု မရှိပါ။</strong> ရေးသားရမည်မှာ <code>Int</code> တစ်ခုတည်းသာ ဖြစ်ပါသည်။ <code>int</code> နှင့် <code>Integer</code> နှစ်ခုအနက် မည်သည့်အရာအဖြစ် byte code သို့ ပြောင်းလဲမည်ကို compiler က ဆုံးဖြတ်ပါမည်။"
+    },
+    {
+      "source": "だから、Javaで書くときに考えていた「ここは <code>int</code> か <code>Integer</code> か」「リストに入れるからボクシングされる」といった判断が、宣言のときには要りません。",
+      "translation": "ထို့ကြောင့် Java ဖြင့် ရေးသားစဉ်က စဉ်းစားခဲ့သော \"ဤနေရာတွင် <code>int</code> လား၊ <code>Integer</code> လား\"၊ \"list ထဲသို့ ထည့်မည်ဖြစ်သောကြောင့် boxing ပြုလုပ်ခံရမည်\" စသည့် ဆုံးဖြတ်ချက်များသည် ကြေညာချိန်တွင် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "型の名前はSwiftと同じく <code>Int</code> / <code>Double</code> / <code>Float</code> で、大文字で始まります。Javaの <code>int</code> のように小文字の型はありません。",
+      "translation": "type များ၏ အမည်များသည် Swift နှင့် အတူတူပင်ဖြစ်ပြီး <code>Int</code> / <code>Double</code> / <code>Float</code> ဖြစ်ကာ အင်္ဂလိပ်စာလုံးအကြီးဖြင့် စတင်ပါသည်။ Java ၏ <code>int</code> ကဲ့သို့သော အင်္ဂလိပ်စာလုံးအသေး type မရှိပါ။"
+    },
+    {
+      "source": "小数のリテラルが既定で <code>Double</code> になる点は、KotlinもSwiftも同じです。",
+      "translation": "ဒသမကိန်း literal များသည် ပုံမှန်အားဖြင့် <code>Double</code> ဖြစ်လာခြင်းမှာ Kotlin နှင့် Swift နှစ်ခုစလုံးတွင် တူညီပါသည်။"
+    },
+    {
+      "source": "Swiftには <code>3.0f</code> という書き方がありません。Swiftで <code>Float</code> にしたいときは <code>let number3: Float = 3.0</code> のように型注釈で指定します。Kotlinはこの点ではJavaと同じく、接尾辞の <code>f</code> が使えます。",
+      "translation": "Swift တွင် <code>3.0f</code> ဟူသော ရေးသားပုံ မရှိပါ။ Swift တွင် <code>Float</code> အဖြစ် ပြုလုပ်လိုပါက <code>let number3: Float = 3.0</code> ကဲ့သို့ type သတ်မှတ်ချက်ဖြင့် သတ်မှတ်ပေးရပါသည်။ Kotlin သည် ဤအချက်တွင် Java နှင့် တူညီပြီး နောက်ဆက် <code>f</code> ကို အသုံးပြုနိုင်ပါသည်။"
+    },
+    {
+      "source": "⑥ Java / Swift ではどう書くか（出力）",
+      "translation": "⑥ Java / Swift တွင် မည်သို့ရေးသားမည်နည်း (ထုတ်ပြခြင်း)"
+    },
+    {
+      "source": "<code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。",
+      "translation": "<code>println</code> သည် Kotlin standard library ၏ ထိပ်ဆုံးအဆင့် function ဖြစ်ပါသည်။ <code>System.out</code> ကဲ့သို့သော အရာလည်း မလိုအပ်သကဲ့သို့ <code>import</code> လည်း မလိုအပ်ပါ။"
+    },
+    {
+      "source": "改行するのが <code>println</code>、改行しないのが <code>print</code> です。Javaの <code>System.out.println</code> と <code>System.out.print</code> の対応と同じです。",
+      "translation": "စာကြောင်းဆင်းသည်မှာ <code>println</code> ဖြစ်ပြီး စာကြောင်းမဆင်းသည်မှာ <code>print</code> ဖြစ်ပါသည်။ Java ၏ <code>System.out.println</code> နှင့် <code>System.out.print</code> တို့နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "Swiftの <code>print</code> は既定で改行するので、名前は同じでも、はたらきはKotlinの <code>println</code> のほうです。改行しないときは <code>terminator</code> を渡します。ここは読み替えが要ります。",
+      "translation": "Swift ၏ <code>print</code> သည် ပုံမှန်အားဖြင့် စာကြောင်းဆင်းသောကြောင့် အမည်တူညီသော်လည်း လုပ်ဆောင်ချက်မှာ Kotlin ၏ <code>println</code> နှင့် တူညီပါသည်။ စာကြောင်းမဆင်းလိုပါက <code>terminator</code> ကို ပေးပို့ရပါသည်။ ဤနေရာတွင် ပြောင်းလဲနားလည်ရန် လိုအပ်ပါသည်။"
+    },
+    {
+      "source": "4行を出せた。",
+      "translation": "4 ကြောင်းကို ထွက်ပေါ်စေနိုင်ခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：ミニ練習 →",
+      "translation": "နောက်တစ်ခုသို့: လေ့ကျင့်ခန်းအသေးစား →"
+    },
+    {
+      "source": "STEP 05 · 目安 10分",
+      "translation": "STEP 05 ၊ ခန့်မှန်းကြာချိန် 10 မိနစ်"
+    },
+    {
+      "source": "ミニ練習",
+      "translation": "လေ့ကျင့်ခန်းအသေးစား"
+    },
+    {
+      "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。",
+      "translation": "ဤနေရာမှစ၍ ကိုယ်တိုင် ပြင်ဆင်ရေးသားရပါမည်။ <strong>တစ်ခုပြောင်းလဲပါ → ခန့်မှန်းပါ → Run ပါ</strong> ဟူသော အစီအစဉ်ဖြစ်ပါသည်။ အဖြေကို စမ်းသပ်ပြီးမှသာ ဖွင့်ကြည့်ပါ။"
+    },
+    {
+      "source": "練習A · 変数を1つ足す（必須・3分）",
+      "translation": "လေ့ကျင့်ခန်း A ၊ variable တစ်ခု ထပ်ထည့်ရန် (မဖြစ်မနေ ၊ 3 မိနစ်)"
+    },
+    {
+      "source": "<code>val</code> の変数を1つと、それを出す <code>println</code> を1行足して、出力を5行にします。値も型も自分で決めます。型注釈は書かずに、変数名にマウスを重ねて、推論された型を確かめましょう。",
+      "translation": "<code>val</code> ၏ variable တစ်ခုနှင့် ၎င်းကိုထုတ်ပြမည့် <code>println</code> 1 ကြောင်းကို ထပ်ထည့်ပြီး ထွက်ပေါ်လာမည့်ရလဒ်ကို 5 ကြောင်းဖြစ်အောင် ပြုလုပ်ပါ။ တန်ဖိုးနှင့် type ကို ကိုယ်တိုင် သတ်မှတ်ပါ။ type သတ်မှတ်ချက်ကို မရေးသားဘဲ variable အမည်ပေါ်တွင် mouse တင်ကာ ခန့်မှန်းထားသော type ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "試したあと：確かめること",
+      "translation": "စမ်းသပ်ပြီးနောက်: စစ်ဆေးရမည့်အရာ"
+    },
+    {
+      "source": "<code>4</code> と書けば <code>Int</code>、<code>4.5</code> と書けば <code>Double</code>、<code>4.5f</code> と書けば <code>Float</code> です。リテラルの書き方だけで型が決まっていることを、画面で確かめてください。",
+      "translation": "<code>4</code> ဟုရေးလျှင် <code>Int</code>၊ <code>4.5</code> ဟုရေးလျှင် <code>Double</code>၊ <code>4.5f</code> ဟုရေးလျှင် <code>Float</code> ဖြစ်ပါသည်။ literal ၏ ရေးသားပုံသက်သက်ဖြင့် type ကို ဆုံးဖြတ်နေကြောင်းကို မျက်နှာပြင်တွင် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "練習B · 再代入して、コンパイルエラーを起こす（必須・4分）",
+      "translation": "လေ့ကျင့်ခန်း B ၊ ထပ်မံတန်ဖိုးထည့်သွင်းပြီး compile error ဖြစ်ပေါ်စေရန် (မဖြစ်မနေ ၊ 4 မိနစ်)"
+    },
+    {
+      "source": "<code>name = &quot;Tanaka&quot;</code> の次の行に <code>number1 = 5</code> と書き足します。Runを押す前に、その行に出たエラーメッセージを読んでください。",
+      "translation": "<code>name = &quot;Tanaka&quot;</code> ၏ နောက်စာကြောင်းတွင် <code>number1 = 5</code> ဟု ထပ်မံရေးသားပါ။ Run ကို မနှိပ်မီ ထိုစာကြောင်းတွင် ပေါ်လာသော error message ကို ဖတ်ပါ။"
+    },
+    {
+      "source": "読むのは次の3つです。<strong>どの行か・何をしようとしたと言っているか・どう直せと言っているか。</strong>",
+      "translation": "ဖတ်ရမည့်အရာများမှာ အောက်ပါ 3 ခုဖြစ်ပါသည်။ <strong>မည်သည့်စာကြောင်းဖြစ်သနည်း ၊ မည်သို့ပြုလုပ်ရန် ကြိုးစားနေသည်ဟု ဆိုသနည်း ၊ မည်သို့ပြင်ဆင်ရန် ဆိုသနည်း။</strong>"
+    },
+    {
+      "source": "試したあと：答えと理由",
+      "translation": "စမ်းသပ်ပြီးနောက်: အဖြေနှင့် အကြောင်းရင်း"
+    },
+    {
+      "source": "書き足した行が赤くなり、再代入できないことを知らせるメッセージが出ます（言い回しはIDEの版によって変わります）。Runしても実行されません。<code>number1</code> は <code>val</code> で宣言したので、再代入できないからです。",
+      "translation": "ထပ်မံရေးသားခဲ့သော စာကြောင်းမှာ အနီရောင်ဖြစ်သွားပြီး ထပ်မံတန်ဖိုးထည့်သွင်း၍ မရကြောင်း အသိပေးသည့် message ထွက်ပေါ်လာပါမည် (အသုံးအနှုန်းမှာ IDE ဗားရှင်းအလိုက် ပြောင်းလဲနိုင်ပါသည်)။ Run ပြုလုပ်သော်လည်း အလုပ်မလုပ်ပါ။ <code>number1</code> သည် <code>val</code> ဖြင့် ကြေညာထားသောကြောင့် ထပ်မံတန်ဖိုးထည့်သွင်း၍ မရခြင်းဖြစ်ပါသည်။"
+    },
+    {
+      "source": "これは <strong>コンパイル時</strong> に止まるエラーです。実行してから気づく種類のものではありません。確かめたら、書き足した行を消して元に戻します。",
+      "translation": "ဤအရာသည် <strong>compile ချိန်</strong> တွင် ရပ်တန့်သွားသော error ဖြစ်ပါသည်။ run လုပ်ပြီးမှ သတိပြုမိမည့်အမျိုးအစား မဟုတ်ပါ။ စစ်ဆေးပြီးပါက ထပ်မံရေးသားခဲ့သော စာကြောင်းကို ဖျက်၍ နဂိုအတိုင်း ပြန်ထားပါ။"
+    },
+    {
+      "source": "同じ間違いを、JavaとSwiftでしたとき",
+      "translation": "တူညီသော အမှားမျိုးကို Java နှင့် Swift တွင် ပြုလုပ်မိသောအခါ"
+    },
+    {
+      "source": "3つとも、コンパイル時に止まります。止まる条件も同じで、言い回しが違うだけです。",
+      "translation": "သုံးမျိုးစလုံးသည် compile ချိန်တွင် ရပ်တန့်သွားပါမည်။ ရပ်တန့်မည့် အခြေအနေများလည်း တူညီပြီး အသုံးအနှုန်းများသာ ကွာခြားပါသည်။"
+    },
+    {
+      "source": "Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>'val'</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong>",
+      "translation": "Java ၏ message သည် <code>final</code> ကို၊ Swift ၏ message သည် <code>let</code> ကို အမည်တပ်၍ ဖော်ပြပါသည်။ Kotlin သည် <code>'val'</code> ကို အမည်တပ်၍ ဖော်ပြပါသည်။ <strong>message တွင် ပါလာသော keyword သည် ပြင်ဆင်ရမည့်နေရာကို ညွှန်ပြနေပါသည်။</strong>"
+    },
+    {
+      "source": "直し方は2つです。宣言を <code>var</code> に変えるか、再代入をやめるか。ここでは再代入をやめて元に戻します。",
+      "translation": "ပြင်ဆင်နည်း 2 နည်း ရှိပါသည်။ ကြေညာချက်ကို <code>var</code> သို့ ပြောင်းလဲမည်လား (သို့မဟုတ်) ထပ်မံတန်ဖိုးထည့်သွင်းခြင်းကို ရပ်တန့်မည်လား ဖြစ်ပါသည်။ ဤနေရာတွင် ထပ်မံတန်ဖိုးထည့်သွင်းခြင်းကို ဖျက်၍ နဂိုအတိုင်း ပြန်ထားပါမည်။"
+    },
+    {
+      "source": "最後の3分 · 元に戻す",
+      "translation": "နောက်ဆုံး 3 မိနစ် ၊ နဂိုအတိုင်း ပြန်ထားရန်"
+    },
+    {
+      "source": "練習Aで足した2行を消します。",
+      "translation": "လေ့ကျင့်ခန်း A တွင် ထပ်ထည့်ခဲ့သော စာကြောင်း 2 ကြောင်းကို ဖျက်ပါ။"
+    },
+    {
+      "source": "練習Bで書き足した <code>number1 = 5</code> の行を消します。",
+      "translation": "လေ့ကျင့်ခန်း B တွင် ထပ်မံရေးသားခဲ့သော <code>number1 = 5</code> စာကြောင်းကို ဖျက်ပါ။"
+    },
+    {
+      "source": "Runし、STEP 00 のゴールと同じ4行に戻ったことを確かめます。",
+      "translation": "Run လုပ်ပြီး STEP 00 ၏ ပန်းတိုင်နှင့် တူညီသော 4 ကြောင်းသို့ ပြန်ရောက်သွားကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "練習A・Bを試し、赤い波線が出た行を確かめた。最後に元の4行へ戻した。",
+      "translation": "လေ့ကျင့်ခန်း A နှင့် B ကို စမ်းသပ်ခဲ့ပြီး အနီရောင်လှိုင်းတွန့်မျဉ်း ပေါ်လာသောစာကြောင်းကို စစ်ဆေးခဲ့ပါသည်။ နောက်ဆုံးတွင် မူလ 4 ကြောင်းသို့ ပြန်ထားခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：完成 →",
+      "translation": "နောက်တစ်ခုသို့: ပြီးစီးမှု →"
+    },
+    {
+      "source": "STEP 06 · 目安 10分",
+      "translation": "STEP 06 ၊ ခန့်မှန်းကြာချိန် 10 မိနစ်"
+    },
+    {
+      "source": "完成",
+      "translation": "ပြီးစီးမှု"
+    },
+    {
+      "source": "① 完成チェック",
+      "translation": "① ပြီးစီးမှုစစ်ဆေးခြင်း"
+    },
+    {
+      "source": "Runし、コンソールの出力を上から順に見ます。",
+      "translation": "Run လုပ်ပြီး console ၏ ရလဒ်ကို အပေါ်မှအောက်သို့ အစဉ်လိုက် ကြည့်ပါ။"
+    },
+    {
+      "source": "行",
+      "translation": "စာကြောင်း"
+    },
+    {
+      "source": "出る内容",
+      "translation": "ထွက်ပေါ်လာမည့်အကြောင်းအရာ"
+    },
+    {
+      "source": "理由",
+      "translation": "အကြောင်းရင်း"
+    },
+    {
+      "source": "1行目",
+      "translation": "စာကြောင်း 1"
+    },
+    {
+      "source": "<code>val number1 = 1</code>（<code>Int</code>）の値を出している。",
+      "translation": "<code>val number1 = 1</code> (<code>Int</code>) ၏ တန်ဖိုးကို ထုတ်ပြနေပါသည်။"
+    },
+    {
+      "source": "2行目",
+      "translation": "စာကြောင်း 2"
+    },
+    {
+      "source": "<code>val number2 = 2.0</code>（<code>Double</code>）の値を出している。",
+      "translation": "<code>val number2 = 2.0</code> (<code>Double</code>) ၏ တန်ဖိုးကို ထုတ်ပြနေပါသည်။"
+    },
+    {
+      "source": "3行目",
+      "translation": "စာကြောင်း 3"
+    },
+    {
+      "source": "<code>val number3 = 3.0f</code>（<code>Float</code>）の値を出している。<code>f</code> は出ない。",
+      "translation": "<code>val number3 = 3.0f</code> (<code>Float</code>) ၏ တန်ဖိုးကို ထုတ်ပြနေပါသည်။ <code>f</code> မပါဝင်ပါ။"
+    },
+    {
+      "source": "4行目",
+      "translation": "စာကြောင်း 4"
+    },
+    {
+      "source": "<code>var name</code> に再代入した値を出している。",
+      "translation": "<code>var name</code> သို့ ထပ်မံထည့်သွင်းခဲ့သော တန်ဖိုးကို ထုတ်ပြနေပါသည်။"
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<code>val</code> の行と <code>var</code> の行を指さして説明します。",
+      "translation": "ဇယားပါအတိုင်း ဖြစ်လာပါက ဆရာ့ကို မျက်နှာပြင်ပြသပြီး <code>val</code> ၏ စာကြောင်းနှင့် <code>var</code> ၏ စာကြောင်းကို လက်ညှိုးထိုး၍ ရှင်းပြပါ။"
+    },
+    {
+      "source": "入力したコードと照合する",
+      "translation": "ရိုက်ထည့်ခဲ့သော ကုဒ်နှင့် တိုက်စစ်ရန်"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex01</code> も忘れずに入れます。",
+      "translation": "ယခုအချိန်အထိ ရိုက်ထည့်ခဲ့သော <code>main.kt</code> ၏ အပြည့်အစုံဖြစ်ပါသည်။ ပထမဆုံးစာကြောင်းဖြစ်သည့် <code>package ex01</code> ကိုလည်း မမေ့ဘဲ ထည့်သွင်းပါ။"
+    },
+    {
+      "source": "main.kt · 完成コード",
+      "translation": "main.kt ၊ ပြီးစီးပြီးသောကုဒ်"
+    },
+    {
+      "source": "② 同じ4行を、JavaとSwiftで出すと",
+      "translation": "② တူညီသော 4 ကြောင်းကို Java နှင့် Swift တွင် ထုတ်ပြပါက"
+    },
+    {
+      "source": "Kotlinで省いたのは、入口を包むクラス、型注釈、行末の <code>;</code>、<code>System.out</code> の4つです。処理そのものはJavaと同じです。",
+      "translation": "Kotlin တွင် ချန်လှပ်ခဲ့သောအရာများမှာ အစပိုင်းနေရာကို ဖုံးအုပ်ထားသော class၊ type သတ်မှတ်ချက်၊ စာကြောင်းအဆုံးရှိ <code>;</code>၊ <code>System.out</code> ဟူ၍ 4 မျိုးဖြစ်ပါသည်။ လုပ်ဆောင်ချက်ကိုယ်တိုင်မှာမူ Java နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "Swiftとの差は、入口の <code>fun main()</code> と <code>package</code> 宣言、そして <code>Float</code> リテラルの書き方だけです。",
+      "translation": "Swift နှင့် ကွာခြားချက်မှာ အစပိုင်းနေရာဖြစ်သော <code>fun main()</code> နှင့် <code>package</code> ကြေညာချက်၊ ထို့ပြင် <code>Float</code> literal ၏ ရေးသားပုံတို့သာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "「短く書ける」というのは、書かなかったぶんをコンパイラが補っているということです。<strong>Javaで書いていたことが消えたわけではありません。</strong>",
+      "translation": "\"တိုတိုတုတ်တုတ်ရေးနိုင်သည်\" ဟူသည်မှာ မရေးသားခဲ့သောအရာများကို compiler က ဖြည့်ဆည်းပေးနေခြင်း ဖြစ်ပါသည်။ <strong>Java တွင် ရေးသားခဲ့သောအရာများ ပျောက်ကွယ်သွားခြင်း မဟုတ်ပါ။</strong>"
+    },
+    {
+      "source": "③ 保存された場所を確かめる",
+      "translation": "③ သိမ်းဆည်းထားသောနေရာကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "IntelliJ IDEA は、書いたコードを自動でファイルに保存します。保存の操作は要りません。",
+      "translation": "IntelliJ IDEA သည် ရေးသားထားသော ကုဒ်များကို ဖိုင်အတွင်းသို့ အလိုအလျောက် သိမ်းဆည်းပေးပါသည်။ သိမ်းဆည်းခြင်း လုပ်ဆောင်ချက် မလိုအပ်ပါ။"
+    },
+    {
+      "source": "Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。",
+      "translation": "Finder ကိုဖွင့်ပြီး ဘယ်ဘက်ခြမ်းရှိ <strong>書類</strong> (စာရွက်စာတမ်းများ) (<code>Documents</code>) ကို ကလစ်နှိပ်ပါ။"
+    },
+    {
+      "source": "その中の <code>Kotlin</code> フォルダを開き、<code>K01HelloKotlin</code> フォルダがあることを確かめます。",
+      "translation": "၎င်းအထဲရှိ <code>Kotlin</code> ဖိုင်တွဲကိုဖွင့်ပြီး <code>K01HelloKotlin</code> ဖိုင်တွဲ ရှိနေကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "この <code>Documents/Kotlin/K01HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。",
+      "translation": "ဤ <code>Documents/Kotlin/K01HelloKotlin</code> ဖိုင်တွဲသည် ယနေ့ပြုလုပ်ခဲ့သော project ဖြစ်ပါသည်။ နောက်မှ တစ်ဖန်ပြန်ဖွင့်နိုင်ရန် ဖျက်ခြင်း၊ အခြားနေရာသို့ ရွှေ့ခြင်း၊ အမည်ပြောင်းခြင်းများ မပြုလုပ်ဘဲ ထိုအတိုင်းထားပါ။"
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。保存されたフォルダの場所も確かめた。",
+      "translation": "ပြီးစီးမှုစစ်ဆေးခြင်းကို ပြုလုပ်ခဲ့ပြီး ဆရာ့ကို မျက်နှာပြင်ပြသခဲ့ပါသည်။ သိမ်းဆည်းထားသော ဖိုင်တွဲနေရာကိုလည်း စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "1コマ目のまとめ",
+      "translation": "ပထမ အတန်းချိန်၏ အနှစ်ချုပ်"
+    },
+    {
+      "source": "<strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。",
+      "translation": "<strong><code>val</code> နှင့် <code>var</code> ဖြင့် ကြေညာသည် → type သည် literal မှ ဆုံးဖြတ်သည် → <code>println</code> ဖြင့် ထုတ်ပြသည်။</strong><br>Java နှင့် Swift တွင် ရေးသားခဲ့သောအရာများကို Kotlin ၏ ရေးသားပုံသို့ အစားထိုးခဲ့ပါသည်။"
+    },
+    {
+      "source": "STEP 07 · 2コマ目 · 目安 5分",
+      "translation": "STEP 07 ၊ ဒုတိယ အတန်းချိန် ၊ ခန့်မှန်းကြာချိန် 5 မိနစ်"
+    },
+    {
+      "source": "2コマ目のゴール（Null安全）",
+      "translation": "ဒုတိယ အတန်းချိန်၏ ပန်းတိုင် (Null ဘေးကင်းမှု)"
+    },
+    {
+      "source": "ここからが<strong>2コマ目</strong>です。使うプロジェクトは1コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex02</code> パッケージを足して、その中に書きます。1コマ目に書いた <code>ex01</code> は、そのまま残します。",
+      "translation": "ဤနေရာမှစ၍ <strong>ဒုတိယ အတန်းချိန်</strong> ဖြစ်ပါသည်။ အသုံးပြုမည့် project သည် ပထမ အတန်းချိန်ကအတိုင်း <code>K01HelloKotlin</code> ဖြစ်ပြီး အသစ်ပြန်လည်မဖန်တီးပါ။ <code>src</code> အောက်တွင် <code>ex02</code> package ကို ထပ်ထည့်ပြီး ၎င်းအထဲတွင် ရေးသားပါမည်။ ပထမ အတန်းချိန်တွင် ရေးသားခဲ့သော <code>ex01</code> ကို ထိုအတိုင်းထားပါ။"
+    },
+    {
+      "source": "この回の主題は <strong>Null安全</strong> です。Kotlinは、<code>null</code> を入れられる型と、入れられない型を、言語のしくみとして分けます。Swiftのオプショナルに近い考え方で、Javaとはいちばん差が大きいところです。",
+      "translation": "ဤအကြိမ်၏ အဓိကအကြောင်းအရာမှာ <strong>Null ဘေးကင်းမှု</strong> ဖြစ်ပါသည်။ Kotlin သည် <code>null</code> ထည့်သွင်းနိုင်သော type နှင့် ထည့်သွင်း၍မရသော type များကို ဘာသာစကား၏ ဖွဲ့စည်းပုံအနေဖြင့် ခွဲခြားထားပါသည်။ Swift ၏ optional နှင့် ဆင်တူသော အတွေးအခေါ်ဖြစ်ပြီး Java နှင့် အကွာခြားဆုံးသော အပိုင်းဖြစ်ပါသည်။"
+    },
+    {
+      "source": "この回で出てくるKotlinの言葉",
+      "translation": "ဤအကြိမ်တွင် ပါဝင်လာမည့် Kotlin စကားလုံးများ"
+    },
+    {
+      "source": "<code>String</code>（<code>?</code> なし）",
+      "translation": "<code>String</code> (<code>?</code> မပါ)"
+    },
+    {
+      "source": "<code>String</code>（<code>null</code> を入れられる）",
+      "translation": "<code>String</code> (<code>null</code> ကို ထည့်သွင်းနိုင်သည်)"
+    },
+    {
+      "source": "対応物なし",
+      "translation": "တူညီသောအရာ မရှိပါ"
+    },
+    {
+      "source": "<code>String?</code>（オプショナル）",
+      "translation": "<code>String?</code> (optional)"
+    },
+    {
+      "source": "<code>?.</code>（安全呼び出し）",
+      "translation": "<code>?.</code> (ဘေးကင်းသော ခေါ်ယူမှု)"
+    },
+    {
+      "source": "<code>if (name != null)</code> で囲む、または <code>Optional</code>",
+      "translation": "<code>if (name != null)</code> ဖြင့် ဝန်းရံသည် ၊ သို့မဟုတ် <code>Optional</code>"
+    },
+    {
+      "source": "<code>?.</code>（オプショナルチェイン）",
+      "translation": "<code>?.</code> (optional chaining)"
+    },
+    {
+      "source": "<code>count()</code>（文字数）",
+      "translation": "<code>count()</code> (စာလုံးရေ)"
+    },
+    {
+      "source": "同じ「nullかもしれない文字列」を3つの言語で書く",
+      "translation": "တူညီသော \"null ဖြစ်နိုင်သော string\" ကို ဘာသာစကား 3 မျိုးဖြင့် ရေးသားခြင်း"
+    },
+    {
+      "source": "KotlinとSwiftは、<strong>型そのものに「<code>null</code> が入るかどうか」を書きます。</strong> <code>String</code> と <code>String?</code> は別の型です。",
+      "translation": "Kotlin နှင့် Swift သည် <strong>type ၌ပင် \"<code>null</code> ဝင်လာနိုင်ခြင်း ရှိမရှိ\" ကို ရေးသားပါသည်။</strong> <code>String</code> နှင့် <code>String?</code> သည် မတူညီသော type များ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Javaには、この区別がありません。どの参照型にも <code>null</code> を入れられるので、「入らない」ことを型で表せません。",
+      "translation": "Java တွင် ဤကဲ့သို့ ခွဲခြားထားခြင်း မရှိပါ။ မည်သည့် reference type တွင်မဆို <code>null</code> ကို ထည့်သွင်းနိုင်သောကြောင့် \"မဝင်လာနိုင်ပါ\" ဆိုသည်ကို type ဖြင့် မဖော်ပြနိုင်ပါ။"
+    },
+    {
+      "source": "Kotlinの <code>null</code> は、Swiftの <code>nil</code> にあたります。書く文字が違うだけで、役目は同じです。",
+      "translation": "Kotlin ၏ <code>null</code> သည် Swift ၏ <code>nil</code> နှင့် တူညီပါသည်။ ရေးသားရသော စာလုံးသာကွာခြားပြီး လုပ်ဆောင်ချက်မှာ အတူတူပင်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "2コマ目のゴール（コンソールに出る3行）",
+      "translation": "ဒုတိယ အတန်းချိန်၏ ပန်းတိုင် (console တွင် ထွက်ပေါ်လာမည့် 3 ကြောင်း)"
+    },
+    {
+      "source": "Runの結果 · この3行が出れば完成",
+      "translation": "Run ၏ ရလဒ် ၊ ဤ 3 ကြောင်း ထွက်ပေါ်လာပါက ပြီးစီးပါသည်"
+    },
+    {
+      "source": "2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>は、STEP 10 で確かめます。",
+      "translation": "ဒုတိယစာကြောင်းမှ <code>null</code> သည်လည်း ရလဒ်၏ တစ်စိတ်တစ်ပိုင်း ဖြစ်ပါသည်။ error မဟုတ်ပါ။ <strong>အဘယ်ကြောင့် <code>null</code> ဟု ထွက်ပေါ်လာသနည်း</strong>ဆိုသည်ကို STEP 10 တွင် စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "この90分の進み方",
+      "translation": "ဤ မိနစ် 90 ၏ အစီအစဉ်"
+    },
+    {
+      "source": "<code>ex02</code> を作り、<code>String</code> と <code>String?</code> の違いを、わざと出したコンパイルエラーで確かめる。",
+      "translation": "<code>ex02</code> ကိုဖန်တီးပြီး <code>String</code> နှင့် <code>String?</code> ၏ ကွာခြားချက်ကို တမင်ဖန်တီးထားသော compile error ဖြင့် စစ်ဆေးမည်။"
+    },
+    {
+      "source": "安全呼び出し <code>?.</code> を書き、3行の出力を完成させる。",
+      "translation": "ဘေးကင်းသော ခေါ်ယူမှု <code>?.</code> ကို ရေးသားပြီး ရလဒ် 3 ကြောင်းကို အပြီးသတ်မည်။"
+    },
+    {
+      "source": "2コマ目に出す3行（<code>5</code> / <code>null</code> / <code>6</code>）を、上のゴールで確かめた。",
+      "translation": "ဒုတိယ အတန်းချိန်တွင် ထုတ်ပြမည့် 3 ကြောင်း (<code>5</code> / <code>null</code> / <code>6</code>) ကို အထက်ပါပန်းတိုင်တွင် စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：ex02 を作る →",
+      "translation": "နောက်တစ်ခုသို့: ex02 ကို ဖန်တီးရန် →"
+    },
+    {
+      "source": "STEP 08 · 2コマ目 · 目安 5分",
+      "translation": "STEP 08 ၊ ဒုတိယ အတန်းချိန် ၊ ခန့်မှန်းကြာချိန် 5 မိနစ်"
+    },
+    {
+      "source": "ex02 パッケージと main.kt を作る",
+      "translation": "ex02 package နှင့် main.kt ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex02</code> パッケージと、その中の <code>main.kt</code> を作ります。",
+      "translation": "<code>K01HelloKotlin</code> project ကို ပြန်လည်ဖွင့်ပြီး <code>src</code> ၏ အောက်တွင် <code>ex02</code> package နှင့် ၎င်းအထဲရှိ <code>main.kt</code> ကို ဖန်တီးပါမည်။"
+    },
+    {
+      "source": "<strong>STEP 02 の⑥と同じ操作です。</strong>違うのは、パッケージ名が <code>ex01</code> ではなく <code>ex02</code> になることだけです。手順は、下にもう一度すべて書きます。",
+      "translation": "<strong>STEP 02 ၏ ⑥ နှင့် တူညီသော လုပ်ဆောင်ချက်ဖြစ်ပါသည်။</strong> ကွာခြားချက်မှာ package အမည်သည် <code>ex01</code> အစား <code>ex02</code> ဖြစ်သွားခြင်းသာ ဖြစ်ပါသည်။ အဆင့်များကို အောက်တွင် တစ်ဖန်ပြန်လည် ရေးသားပေးထားပါသည်။"
+    },
+    {
+      "source": "① プロジェクトを開き直す",
+      "translation": "① project ကို ပြန်လည်ဖွင့်ရန်"
+    },
+    {
+      "source": "IntelliJ IDEA を開きます。<code>K01HelloKotlin</code> がすでに開いていれば、そのまま使います。",
+      "translation": "IntelliJ IDEA ကို ဖွင့်ပါ။ <code>K01HelloKotlin</code> သည် ဖွင့်ထားပြီးသားဖြစ်ပါက ထိုအတိုင်း ဆက်လက်အသုံးပြုပါ။"
+    },
+    {
+      "source": "開いていないときは、ホーム画面の左側に並ぶ、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> をクリックします。",
+      "translation": "ဖွင့်မထားပါက ပင်မမျက်နှာပြင်၏ ဘယ်ဘက်ခြမ်းတွင် စီထားသော မကြာမီကဖွင့်ခဲ့သည့် project များစာရင်းမှ <code>K01HelloKotlin</code> ကို ကလစ်နှိပ်ပါ။"
+    },
+    {
+      "source": "一覧に無いときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選び、<code>書類</code>（<code>Documents</code>）の中の <code>Kotlin</code> フォルダにある <code>K01HelloKotlin</code> フォルダを選んで開きます。",
+      "translation": "စာရင်းထဲတွင်မရှိပါက ပင်မမျက်နှာပြင်၏ ဘယ်ဘက်အပေါ်ရှိ မီနူးမှ <strong>開く…</strong> (ဖွင့်ရန်...) ကို ရွေးချယ်ပြီး <code>書類</code> (စာရွက်စာတမ်းများ) (<code>Documents</code>) ထဲရှိ <code>Kotlin</code> ဖိုင်တွဲတွင်ရှိသော <code>K01HelloKotlin</code> ဖိုင်တွဲကို ရွေးချယ်၍ ဖွင့်ပါ။"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> があることを確かめます。<code>ex01</code> は消しません。",
+      "translation": "ဘယ်ဘက်ရှိ <strong>プロジェクト</strong> (project) ကိရိယာဝင်းဒိုးတွင် <code>src</code> ရှိပြီး ၎င်းအောက်တွင် <code>ex01</code> ရှိနေကြောင်းကို စစ်ဆေးပါ။ <code>ex01</code> ကို မဖျက်ပါနှင့်။"
+    },
+    {
+      "source": "② ex02 パッケージを作る",
+      "translation": "② ex02 package ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。",
+      "translation": "<code>src</code> ကို right click နှိပ်ပြီး <strong>新規 → パッケージ</strong> (အသစ်ဖန်တီးရန် → package) ကို ရွေးချယ်ပါ။ ၎င်းအထက်ရှိ <strong>Kotlin ファイル/クラス</strong> (Kotlin ဖိုင်/class) နှင့် မမှားယွင်းစေရန် ဂရုပြုပါ။"
+    },
+    {
+      "source": "名前に <code>ex02</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex02</code> ができます。すべて小文字で、記号は入れません。",
+      "translation": "အမည်နေရာတွင် <code>ex02</code> ဟု ရိုက်ထည့်ပြီး <kbd>Return</kbd> ကို နှိပ်ပါ။ <code>src</code> ၏ အောက်တွင် <code>ex02</code> ရရှိလာပါမည်။ အားလုံးကို အင်္ဂလိပ်စာလုံးအသေးဖြင့် ရေးသားပြီး သင်္ကေတများ မထည့်သွင်းပါ။"
+    },
+    {
+      "source": "③ main.kt を作る",
+      "translation": "③ main.kt ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "できた <code>ex02</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でもなく、<code>ex02</code> を右クリックします。</strong>",
+      "translation": "ရရှိလာသော <code>ex02</code> ကို right click နှိပ်ပြီး <strong>新規 → Kotlin ファイル/クラス</strong> (အသစ်ဖန်တီးရန် → Kotlin ဖိုင်/class) ကို ရွေးချယ်ပါ။ <strong><code>src</code> သို့မဟုတ် <code>ex01</code> ကို မဟုတ်ဘဲ <code>ex02</code> ကို right click နှိပ်ပါ။</strong>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex02</code> が入っていることを確かめます。",
+      "translation": "ရရှိလာသော <code>main.kt</code> ၏ ပထမစာကြောင်းတွင် <code>package ex02</code> ပါဝင်နေကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "1行目が <code>package ex02</code> になっていないとき",
+      "translation": "ပထမစာကြောင်းသည် <code>package ex02</code> ဖြစ်မနေသည့်အခါ"
+    },
+    {
+      "source": "ファイルが <code>ex02</code> の中ではなく、<code>src</code> の直下か <code>ex01</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex02</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "ဖိုင်သည် <code>ex02</code> ၏ အထဲတွင်မဟုတ်ဘဲ <code>src</code> ၏ အောက်တည့်တည့် သို့မဟုတ် <code>ex01</code> ၏ အထဲတွင် ရောက်ရှိနေပါသည်။ <code>main.kt</code> ကို right click နှိပ်၍ ဖျက်ပြီး ③ မှစ၍ ပြန်လည်လုပ်ဆောင်ပါ။ <code>ex02</code> ကို right click နှိပ်ခဲ့ခြင်း ရှိမရှိက အဆုံးအဖြတ်ပေးပါသည်။"
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージ）",
+      "translation": "④ Java / Swift တွင် မည်သို့ရေးသားမည်နည်း (package)"
+    },
+    {
+      "source": "KotlinもJavaも、ファイルの先頭に <code>package</code> を書き、フォルダの構成と合わせます。違うのは行末の <code>;</code> が要らないことだけです。",
+      "translation": "Kotlin နှင့် Java နှစ်ခုစလုံးသည် ဖိုင်၏အစတွင် <code>package</code> ကို ရေးသားပြီး ဖိုင်တွဲတည်ဆောက်ပုံနှင့် ကိုက်ညီအောင် ပြုလုပ်ပါသည်။ ကွာခြားချက်မှာ စာကြောင်းအဆုံးတွင် <code>;</code> မလိုအပ်ခြင်းသာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Swiftには、ファイルの先頭に書く <code>package</code> 宣言がありません。同じターゲットの中のファイルは、宣言なしで互いを見られます。",
+      "translation": "Swift တွင် ဖိုင်၏အစတွင် ရေးသားရသော <code>package</code> ကြေညာချက် မရှိပါ။ တူညီသော target အတွင်းရှိ ဖိုင်များသည် ကြေညာချက်မလိုဘဲ အချင်းချင်း မြင်တွေ့နိုင်ပါသည်။"
+    },
+    {
+      "source": "<code>ex01</code> と <code>ex02</code> は別のパッケージなので、どちらにも <code>main.kt</code> があり、どちらにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。",
+      "translation": "<code>ex01</code> နှင့် <code>ex02</code> သည် မတူညီသော package များဖြစ်သောကြောင့် နှစ်ခုစလုံးတွင် <code>main.kt</code> ရှိနိုင်ပြီး နှစ်ခုစလုံးတွင် <code>fun main()</code> ရှိနေသော်လည်း အချင်းချင်း ပွတ်တိုက်မှု မရှိပါ။ Java တွင် မတူညီသော package များ၌ တူညီသော class အမည်များကို ထားရှိနိုင်ခြင်းနှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "<code>src/ex02/main.kt</code> を作り、1行目が <code>package ex02</code> になっていることを確かめた。<code>ex01</code> も残っている。",
+      "translation": "<code>src/ex02/main.kt</code> ကို ဖန်တီးပြီး ပထမစာကြောင်းသည် <code>package ex02</code> ဖြစ်နေကြောင်းကို စစ်ဆေးခဲ့ပါသည်။ <code>ex01</code> သည်လည်း ကျန်ရှိနေပါသည်။"
+    },
+    {
+      "source": "次へ：String と String? →",
+      "translation": "နောက်တစ်ခုသို့: String နှင့် String? →"
+    },
+    {
+      "source": "STEP 09 · 2コマ目 · 目安 25分",
+      "translation": "STEP 09 ၊ ဒုတိယ အတန်းချိန် ၊ ခန့်မှန်းကြာချိန် 25 မိနစ်"
+    },
+    {
+      "source": "nullを入れられない型と、入れられる型（String と String?）",
+      "translation": "null ထည့်သွင်း၍မရသော type နှင့် ထည့်သွင်း၍ရသော type (String နှင့် String?)"
+    },
+    {
+      "source": "<code>String</code> と <code>String?</code> を書き分けます。<code>?</code> の付かない型に <code>null</code> を入れると、Runする前に止められることを、自分の画面で確かめます。",
+      "translation": "<code>String</code> နှင့် <code>String?</code> ကို ခွဲခြားရေးသားပါမည်။ <code>?</code> မပါသော type တွင် <code>null</code> ကို ထည့်သွင်းပါက Run မလုပ်မီ ရပ်တန့်ခံရမည်ကို မိမိ၏မျက်နှာပြင်တွင် စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "変更するファイル：src/ex02/main.kt",
+      "translation": "ပြင်ဆင်ရမည့်ဖိုင်: src/ex02/main.kt"
+    },
+    {
+      "source": "入れられる値",
+      "translation": "ထည့်သွင်းနိုင်သော တန်ဖိုး"
+    },
+    {
+      "source": "文字列だけ。<code>null</code> は入れられません。",
+      "translation": "string သာလျှင်။ <code>null</code> ကို ထည့်သွင်း၍ မရပါ။"
+    },
+    {
+      "source": "文字列か、<code>null</code> のどちらか。",
+      "translation": "string သို့မဟုတ် <code>null</code> နှစ်ခုအနက်မှ တစ်ခုခု။"
+    },
+    {
+      "source": "型の最後に <code>?</code> を1文字足すかどうかだけで、別の型になります。",
+      "translation": "type ၏ နောက်ဆုံးတွင် <code>?</code> 1 လုံး ထပ်ထည့်ခြင်း ရှိမရှိသက်သက်ဖြင့် မတူညီသော type ဖြစ်လာပါသည်။"
+    },
+    {
+      "source": "① ファイル全体を、次の内容にする",
+      "translation": "① ဖိုင်တစ်ခုလုံးကို အောက်ပါအကြောင်းအရာအဖြစ် ပြုလုပ်ရန်"
+    },
+    {
+      "source": "src/ex02/main.kt · 全体を置き換える",
+      "translation": "src/ex02/main.kt ၊ တစ်ခုလုံးကို အစားထိုးရန်"
+    },
+    {
+      "source": "ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。",
+      "translation": "ဤနေရာတွင် type ကို မချန်လှပ်ဘဲ <code>: String</code> နှင့် <code>: String?</code> ကို ရေးသားပါမည်။ ပထမ အတန်းချိန်ဖြစ်သော <code>val number1 = 1</code> တွင် type အလိုအလျောက်ခန့်မှန်းပေးမှုကို အသုံးပြုခဲ့သော်လည်း ဤအကြိမ်တွင် <strong>type တွင် <code>?</code> ပါဝင်ခြင်း ရှိမရှိ</strong> က အဓိကအကြောင်းအရာဖြစ်သောကြောင့် မျက်နှာပြင်တွင် မြင်တွေ့နိုင်သောပုံစံဖြင့် ရေးသားပါမည်။"
+    },
+    {
+      "source": "<code>Saito</code> は5文字なので <code>5</code> が出ます。<code>count()</code> は、文字列の文字数を返すKotlinの関数です。Javaの <code>length()</code>、Swiftの <code>count</code> にあたります。",
+      "translation": "<code>Saito</code> သည် 5 လုံးဖြစ်သောကြောင့် <code>5</code> ထွက်ပေါ်လာပါမည်။ <code>count()</code> သည် string ၏ စာလုံးရေကို ပြန်ပေးသော Kotlin ၏ function ဖြစ်ပါသည်။ Java ၏ <code>length()</code>၊ Swift ၏ <code>count</code> နှင့် အတူတူဖြစ်ပါသည်။"
+    },
+    {
+      "source": "name2 の行が薄い色になっていても大丈夫",
+      "translation": "name2 ၏ စာကြောင်းသည် အရောင်ဖျော့နေသော်လည်း အဆင်ပြေပါသည်"
+    },
+    {
+      "source": "<code>var name2: String? = null</code> は宣言しただけで、まだどこからも使っていません。IntelliJ IDEA が「使っていない」ことを薄い色で知らせることがありますが、STEP 10 で使うので、消さずにそのままにします。",
+      "translation": "<code>var name2: String? = null</code> သည် ကြေညာထားရုံသာရှိသေးပြီး မည်သည့်နေရာမှ အသုံးမပြုရသေးပါ။ IntelliJ IDEA သည် \"အသုံးမပြုထားပါ\" ဟူသောအချက်ကို အရောင်ဖျော့ဖျော့ဖြင့် အသိပေးလေ့ရှိသော်လည်း STEP 10 တွင် အသုံးပြုမည်ဖြစ်သောကြောင့် မဖျက်ဘဲ ထိုအတိုင်းထားပါ။"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（nullを入れられるか）",
+      "translation": "③ Java / Swift တွင် မည်သို့ရေးသားမည်နည်း (null ထည့်သွင်းနိုင်ခြင်း ရှိမရှိ)"
+    },
+    {
+      "source": "Kotlinは、型の最後に <code>?</code> が付いていなければ <code>null</code> を代入できません。<strong>コンパイルエラーになり、Runできません。</strong>",
+      "translation": "Kotlin သည် type ၏ နောက်ဆုံးတွင် <code>?</code> မပါရှိပါက <code>null</code> ကို ထည့်သွင်း၍မရပါ။ <strong>compile error ဖြစ်ပေါ်ပြီး Run ၍ မရပါ။</strong>"
+    },
+    {
+      "source": "Swiftも同じ分け方です。<code>nil</code> を入れられるのは <code>String?</code> だけで、<code>String</code> には入れられません。<strong>KotlinのNull安全は、Swiftのオプショナルとほぼ同じ発想です。</strong>",
+      "translation": "Swift သည်လည်း တူညီသော ခွဲခြားသတ်မှတ်မှု ဖြစ်ပါသည်။ <code>nil</code> ကို ထည့်သွင်းနိုင်သည်မှာ <code>String?</code> သာဖြစ်ပြီး <code>String</code> တွင် ထည့်သွင်း၍ မရပါ။ <strong>Kotlin ၏ Null ဘေးကင်းမှုသည် Swift ၏ optional နှင့် အလွန်ဆင်တူသော အတွေးအခေါ် ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "Javaは、どの参照型にも <code>null</code> を入れられます。<code>String name = null;</code> はそのまま通り、<code>name.length()</code> を呼んだ瞬間に <code>NullPointerException</code> になります。",
+      "translation": "Java သည် မည်သည့် reference type တွင်မဆို <code>null</code> ကို ထည့်သွင်းနိုင်ပါသည်။ <code>String name = null;</code> သည် ထိုအတိုင်းအလုပ်လုပ်သွားပြီး <code>name.length()</code> ကို ခေါ်ယူလိုက်သည်နှင့် တစ်ပြိုင်နက် <code>NullPointerException</code> ဖြစ်ပေါ်သွားပါမည်။"
+    },
+    {
+      "source": "つまり<strong>Javaでは動かすまで分からないことが、KotlinとSwiftではコンパイル時に分かります。</strong> 同じ間違いに気づく時刻が、実行時から書いている最中に移ります。",
+      "translation": "ဆိုလိုသည်မှာ <strong>Java တွင် run ကြည့်မှသာ သိနိုင်မည့်အရာများကို Kotlin နှင့် Swift တွင် compile ချိန်၌ သိရှိနိုင်ပါသည်။</strong> တူညီသောအမှားကို သတိပြုမိမည့်အချိန်မှာ run ချိန်မှသည် ရေးသားနေစဉ်အတွင်းသို့ ရွေ့လျားသွားပါသည်။"
+    },
+    {
+      "source": "Javaにも <code>Optional</code> や <code>@Nullable</code> はありますが、どちらも型そのものの決まりではありません。<code>String</code> の変数に <code>null</code> が入ることを、言語が止めてくれるわけではありません。",
+      "translation": "Java တွင်လည်း <code>Optional</code> နှင့် <code>@Nullable</code> တို့ရှိသော်လည်း နှစ်ခုစလုံးသည် type ကိုယ်တိုင်၏ သတ်မှတ်ချက် မဟုတ်ပါ။ <code>String</code> variable အတွင်းသို့ <code>null</code> ဝင်ရောက်ခြင်းကို ဘာသာစကားက တားဆီးပေးမည် မဟုတ်ပါ။"
+    },
+    {
+      "source": "④ わざとコンパイルエラーを出す（必須）",
+      "translation": "④ တမင်တကာ compile error ထွက်ပေါ်စေရန် (မဖြစ်မနေ)"
+    },
+    {
+      "source": "<code>val name1: String = &quot;Saito&quot;</code> の <code>&quot;Saito&quot;</code> を <code>null</code> に書き換えます。Runを押す前に、その行を見てください。",
+      "translation": "<code>val name1: String = &quot;Saito&quot;</code> ၏ <code>&quot;Saito&quot;</code> ကို <code>null</code> သို့ ပြောင်းလဲရေးသားပါ။ Run ကို မနှိပ်မီ ထိုစာကြောင်းကို ကြည့်ပါ။"
+    },
+    {
+      "source": "見るのは次の3つです。<strong>どの行が赤くなったか・IDEが何を止めていると言っているか・どう直せと言っているか。</strong>",
+      "translation": "ကြည့်ရမည်မှာ အောက်ပါ 3 ခုဖြစ်ပါသည်။ <strong>မည်သည့်စာကြောင်း အနီရောင်ဖြစ်သွားသနည်း ၊ IDE က မည်သည့်အရာကို တားမြစ်နေသည်ဟု ဆိုသနည်း ၊ မည်သို့ပြင်ဆင်ရန် ဆိုသနည်း။</strong>"
+    },
+    {
+      "source": "試したあとに開く：何が起きたか",
+      "translation": "စမ်းသပ်ပြီးမှ ဖွင့်ကြည့်ရန်: မည်သို့ဖြစ်ပျက်ခဲ့သနည်း"
+    },
+    {
+      "source": "書き換えた行に赤い波線が出て、この型には <code>null</code> を代入できない、という<strong>おおよそその意味のメッセージ</strong>が出ます。Runしても実行されません。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言を覚える必要はありません。<strong>赤い波線が出たら、<code>?</code> の付いていない型に <code>null</code> を入れようとしている</strong>と読み替えてください。",
+      "translation": "ပြောင်းလဲရေးသားခဲ့သောစာကြောင်းတွင် အနီရောင်လှိုင်းတွန့်မျဉ်းပေါ်လာပြီး ဤ type တွင် <code>null</code> ကို ထည့်သွင်း၍မရပါဟူသော <strong>ယေဘုယျအားဖြင့် ထိုအဓိပ္ပာယ်သက်ရောက်သော message</strong> ထွက်ပေါ်လာပါမည်။ Run ပြုလုပ်သော်လည်း အလုပ်မလုပ်ပါ။ အသုံးအနှုန်းမှာ IntelliJ IDEA နှင့် Kotlin ၏ ဗားရှင်းအပေါ်မူတည်၍ ပြောင်းလဲနိုင်သောကြောင့် စကားလုံးအတိအကျကို မှတ်ထားရန် မလိုအပ်ပါ။ <strong>အနီရောင်လှိုင်းတွန့်မျဉ်း ပေါ်လာပါက <code>?</code> မပါသော type တွင် <code>null</code> ကို ထည့်သွင်းရန် ကြိုးစားနေသည်</strong> ဟု နားလည်မှတ်ယူပါ။"
+    },
+    {
+      "source": "直し方は2つです。型を <code>String?</code> に変えるか、<code>null</code> をやめて文字列に戻すか。ここでは <code>&quot;Saito&quot;</code> に戻し、赤い波線が消えることを確かめます。",
+      "translation": "ပြင်ဆင်နည်း 2 နည်း ရှိပါသည်။ type ကို <code>String?</code> သို့ ပြောင်းလဲမည်လား (သို့မဟုတ်) <code>null</code> ကိုဖျက်၍ string အဖြစ် ပြန်ထားမည်လား ဖြစ်ပါသည်။ ဤနေရာတွင် <code>&quot;Saito&quot;</code> အဖြစ် ပြန်ထားပြီး အနီရောင်လှိုင်းတွန့်မျဉ်း ပျောက်သွားကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "⑤ 同じ間違いを、JavaとSwiftでしたとき",
+      "translation": "⑤ တူညီသော အမှားမျိုးကို Java နှင့် Swift တွင် ပြုလုပ်မိသောအခါ"
+    },
+    {
+      "source": "KotlinとSwiftは、<strong>書いている最中</strong>に止まります。プログラムは1度も動きません。",
+      "translation": "Kotlin နှင့် Swift သည် <strong>ရေးသားနေစဉ်အတွင်း</strong> ရပ်တန့်သွားပါမည်။ ပရိုဂရမ်သည် တစ်ကြိမ်မျှ အလုပ်မလုပ်ပါ။"
+    },
+    {
+      "source": "Javaは、<strong>動かしてその行に着いたとき</strong>に落ちます。通らなかった経路の <code>null</code> は、そのまま残ります。",
+      "translation": "Java သည် <strong>run ပြီးနောက် ထိုစာကြောင်းသို့ ရောက်ရှိသောအခါမှသာ</strong> ရပ်တန့်သွားပါမည်။ ဖြတ်သန်းမသွားသော လမ်းကြောင်းမှ <code>null</code> သည် ထိုအတိုင်း ကျန်ရှိနေပါမည်။"
+    },
+    {
+      "source": "どちらも間違いは見つかりますが、<strong>見つかる時刻が違います。</strong> Kotlinが型に <code>?</code> を持ち込んだのは、この時刻を早めるためです。",
+      "translation": "နှစ်ခုစလုံးသည် အမှားကို တွေ့ရှိနိုင်သော်လည်း <strong>တွေ့ရှိမည့်အချိန် ကွာခြားပါသည်။</strong> Kotlin က type တွင် <code>?</code> ကို ယူဆောင်လာရခြင်းမှာ ဤအချိန်ကို စောနိုင်သမျှ စောစေရန်အတွက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>String</code> と <code>String?</code> を書き分けて <code>5</code> を出せた。<code>?</code> の付かない型に <code>null</code> を入れるとRunできないことを、自分の画面で確かめた。",
+      "translation": "<code>String</code> နှင့် <code>String?</code> ကို ခွဲခြားရေးသားပြီး <code>5</code> ကို ထွက်ပေါ်စေနိုင်ခဲ့ပါသည်။ <code>?</code> မပါသော type တွင် <code>null</code> ကို ထည့်သွင်းပါက Run ၍ မရကြောင်းကို မိမိ၏ မျက်နှာပြင်တွင် စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：安全呼び出し ?. →",
+      "translation": "နောက်တစ်ခုသို့: ဘေးကင်းသော ခေါ်ယူမှု ?. →"
+    },
+    {
+      "source": "STEP 10 · 2コマ目 · 目安 25分",
+      "translation": "STEP 10 ၊ ဒုတိယ အတန်းချိန် ၊ ခန့်မှန်းကြာချိန် 25 မိနစ်"
+    },
+    {
+      "source": "安全呼び出し（?.）",
+      "translation": "ဘေးကင်းသော ခေါ်ယူမှု (?. )"
+    },
+    {
+      "source": "<code>?.</code> を使って、<code>null</code> かもしれない変数のメソッドを呼びます。3行の出力を完成させます。",
+      "translation": "<code>?.</code> ကို အသုံးပြု၍ <code>null</code> ဖြစ်နိုင်သော variable ၏ method ကို ခေါ်ယူပါမည်။ 3 ကြောင်း၏ ရလဒ်ကို အပြီးသတ်ပါမည်။"
+    },
+    {
+      "source": "① ?. は何をするか",
+      "translation": "① ?. သည် မည်သည့်အရာကို လုပ်ဆောင်သနည်း"
+    },
+    {
+      "source": "書き方",
+      "translation": "ရေးသားပုံ"
+    },
+    {
+      "source": "<code>name2</code> が <code>null</code> のとき",
+      "translation": "<code>name2</code> သည် <code>null</code> ဖြစ်နေသောအခါ"
+    },
+    {
+      "source": "<code>name2</code> に文字列が入っているとき",
+      "translation": "<code>name2</code> တွင် string ပါရှိနေသောအခါ"
+    },
+    {
+      "source": "<code>count()</code> を呼ばずに <code>null</code> を返す",
+      "translation": "<code>count()</code> ကို မခေါ်ယူဘဲ <code>null</code> ကို ပြန်ပေးပါသည်"
+    },
+    {
+      "source": "<code>count()</code> を呼んで、その結果を返す",
+      "translation": "<code>count()</code> ကို ခေါ်ယူပြီး ၎င်း၏ ရလဒ်ကို ပြန်ပေးပါသည်"
+    },
+    {
+      "source": "コンパイルエラー。<code>String?</code> には、そのままメソッドを呼べません",
+      "translation": "compile error။ <code>String?</code> တွင် method ကို တိုက်ရိုက် ခေါ်ယူ၍ မရပါ"
+    },
+    {
+      "source": "呼べます。文字列を代入した行より後では、Kotlinが型を <code>String</code> として扱い直すためです（スマートキャスト）",
+      "translation": "ခေါ်ယူနိုင်ပါသည်။ string ကို ထည့်သွင်းခဲ့သော စာကြောင်း၏ အောက်တွင် Kotlin က type ကို <code>String</code> အဖြစ် ပြန်လည်သတ်မှတ်ပေးသောကြောင့် ဖြစ်ပါသည် (smart cast)"
+    },
+    {
+      "source": "<strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。",
+      "translation": "<strong><code>?.</code> သည် \"<code>null</code> ဖြစ်နေပါက မခေါ်ယူဘဲ <code>null</code> ကို ပြန်ပေးမည်\" ဟု အဓိပ္ပာယ်ရပါသည်။</strong> ခေါ်ယူမည်လား၊ မခေါ်ယူဘူးလား ဟူသော လမ်းခွဲသည် သင်္ကေတတစ်ခုတည်းတွင် ပါဝင်နေပါသည်။"
+    },
+    {
+      "source": "② ファイル全体を、次の内容にする",
+      "translation": "② ဖိုင်တစ်ခုလုံးကို အောက်ပါအကြောင်းအရာအဖြစ် ပြုလုပ်ရန်"
+    },
+    {
+      "source": "③ 実行結果",
+      "translation": "③ ရလဒ်"
+    },
+    {
+      "source": "Runの結果 · この3行が出れば成功",
+      "translation": "Run ၏ ရလဒ် ၊ ဤ 3 ကြောင်း ထွက်ပေါ်လာပါက အောင်မြင်ပါသည်"
+    },
+    {
+      "source": "<code>name1</code> は <code>String</code> で、<code>Saito</code> の5文字。<code>?</code> が付いていないので <code>?.</code> も要らない。",
+      "translation": "<code>name1</code> သည် <code>String</code> ဖြစ်ပြီး <code>Saito</code> ၏ စာလုံးရေ 5 လုံးဖြစ်ပါသည်။ <code>?</code> မပါသောကြောင့် <code>?.</code> လည်း မလိုအပ်ပါ။"
+    },
+    {
+      "source": "<code>name2</code> が <code>null</code> なので、<code>count()</code> は呼ばれず <code>null</code> が返り、<code>println</code> がそれを出している。",
+      "translation": "<code>name2</code> သည် <code>null</code> ဖြစ်သောကြောင့် <code>count()</code> သည် ခေါ်ယူမခံရဘဲ <code>null</code> ကို ပြန်ပေးကာ <code>println</code> က ၎င်းကို ထုတ်ပြနေပါသည်။"
+    },
+    {
+      "source": "<code>name2</code> に <code>Tanaka</code> を代入したので、<code>count()</code> が呼ばれて6が返る。",
+      "translation": "<code>name2</code> တွင် <code>Tanaka</code> ကို ထည့်သွင်းခဲ့သောကြောင့် <code>count()</code> ခေါ်ယူခံရပြီး 6 ကို ပြန်ပေးပါသည်။"
+    },
+    {
+      "source": "④ ?. が返す型は Int ではなく Int?",
+      "translation": "④ ?. က ပြန်ပေးသော type သည် Int မဟုတ်ဘဲ Int? ဖြစ်ပါသည်"
+    },
+    {
+      "source": "<code>count()</code> は <code>Int</code> を返します。しかし <code>name2?.count()</code> 全体の型は <code>Int?</code> です。<code>name2</code> が <code>null</code> のときは <code>count()</code> が呼ばれず <code>null</code> が返るので、「<code>Int</code> か <code>null</code> のどちらか」になるからです。",
+      "translation": "<code>count()</code> သည် <code>Int</code> ကို ပြန်ပေးပါသည်။ သို့သော် <code>name2?.count()</code> တစ်ခုလုံး၏ type သည် <code>Int?</code> ဖြစ်ပါသည်။ <code>name2</code> သည် <code>null</code> ဖြစ်နေသောအခါ <code>count()</code> ခေါ်ယူမခံရဘဲ <code>null</code> ပြန်ပေးသောကြောင့် \"<code>Int</code> သို့မဟုတ် <code>null</code> နှစ်ခုအနက်မှ တစ်ခုခု\" ဖြစ်လာသောကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "画面で確かめる",
+      "translation": "မျက်နှာပြင်တွင် စစ်ဆေးရန်"
+    },
+    {
+      "source": "<code>fun main()</code> のいちばん最後の行の下に <code>val length = name2?.count()</code> と1行足し、<code>length</code> にマウスを重ねて、出てくる型を読みます。確かめたら、足した行を消します。",
+      "translation": "<code>fun main()</code> ၏ အောက်ဆုံးစာကြောင်းအောက်တွင် <code>val length = name2?.count()</code> ဟု 1 ကြောင်း ထပ်ထည့်ပြီး <code>length</code> ပေါ်တွင် mouse တင်ကာ ထွက်ပေါ်လာသော type ကို ဖတ်ပါ။ စစ်ဆေးပြီးပါက ထပ်ထည့်ခဲ့သော စာကြောင်းကို ဖျက်ပါ။"
+    },
+    {
+      "source": "<code>Int?</code> と出ます。<code>Int</code> ではありません。<strong><code>null</code> が返る可能性が、そのまま型に出ています。</strong> Swiftの <code>name2?.count</code> も同じで、結果は <code>Int?</code> です。",
+      "translation": "<code>Int?</code> ဟု ထွက်ပေါ်လာပါမည်။ <code>Int</code> မဟုတ်ပါ။ <strong><code>null</code> ပြန်လာနိုင်ချေသည် type တွင် တိုက်ရိုက်ပေါ်လွင်နေပါသည်။</strong> Swift ၏ <code>name2?.count</code> သည်လည်း အတူတူပင်ဖြစ်ပြီး ရလဒ်သည် <code>Int?</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "⑤ Java / Swift ではどう書くか",
+      "translation": "⑤ Java / Swift တွင် မည်သို့ရေးသားမည်နည်း"
+    },
+    {
+      "source": "Kotlinの <code>?.</code> は、Swiftのオプショナルチェイン <code>?.</code> と<strong>ほぼ同じ</strong>です。書く記号も、<code>null</code> のときに呼ばないところも、返る型が <code>Int?</code> になるところも同じです。違うのは、Kotlinの <code>count()</code> が関数で、Swiftの <code>count</code> がプロパティであることくらいです。",
+      "translation": "Kotlin ၏ <code>?.</code> သည် Swift ၏ optional chaining <code>?.</code> နှင့် <strong>အလွန်ဆင်တူပါသည်</strong>။ ရေးသားရသော သင်္ကေတ၊ <code>null</code> ဖြစ်နေချိန်တွင် မခေါ်ယူခြင်း၊ ပြန်ပေးသော type သည် <code>Int?</code> ဖြစ်လာခြင်းတို့ အားလုံး တူညီပါသည်။ ကွာခြားချက်မှာ Kotlin ၏ <code>count()</code> သည် function ဖြစ်ပြီး Swift ၏ <code>count</code> သည် property ဖြစ်ခြင်းလောက်သာ ရှိပါသည်။"
+    },
+    {
+      "source": "Javaには <code>?.</code> がありません。<code>if (name2 != null)</code> で囲むか、<code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> のように書きます。",
+      "translation": "Java တွင် <code>?.</code> မရှိပါ။ <code>if (name2 != null)</code> ဖြင့် ဝန်းရံခြင်း သို့မဟုတ် <code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> ကဲ့သို့ ရေးသားရပါသည်။"
+    },
+    {
+      "source": "<strong>Javaの書き方は、囲むことを書く人が忘れないという前提の上に立っています。</strong> 忘れても書けてしまい、実行して初めて <code>NullPointerException</code> になります。",
+      "translation": "<strong>Java ၏ ရေးသားပုံသည် ဝန်းရံရန် ရေးသားသူက မမေ့လျော့ပါဟူသော အခြေခံအယူအဆပေါ်တွင် ရပ်တည်နေပါသည်။</strong> မေ့လျော့သွားလျှင်ပင် ရေးသားနိုင်ပြီး run ပြီးမှသာ <code>NullPointerException</code> ဖြစ်ပေါ်ပါမည်။"
+    },
+    {
+      "source": "Kotlinでは、<code>null</code> が入っているかもしれない位置で <code>?.</code> を忘れると、<strong>コンパイルエラー</strong>になります。Runできないので、忘れたまま先へ進めません。<strong>忘れられないのが、<code>if</code> で囲む書き方との違いです。</strong>",
+      "translation": "Kotlin တွင် <code>null</code> ပါဝင်လာနိုင်ချေရှိသောနေရာတွင် <code>?.</code> ကို မေ့လျော့သွားပါက <strong>compile error</strong> ဖြစ်ပေါ်ပါမည်။ Run ၍မရသောကြောင့် မေ့လျော့နေဆဲဖြင့် ရှေ့ဆက်သွား၍ မရပါ။ <strong>မေ့လျော့၍မရခြင်းမှာ <code>if</code> ဖြင့် ဝန်းရံသောရေးသားပုံနှင့် ကွာခြားချက်ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "<strong>ただし「常にエラー」ではありません。</strong> 文字列を代入した行より後では、Kotlinがその変数を <code>String</code> として扱い直すので（スマートキャスト）、<code>name2.count()</code> と書いても通ります。<strong>この教材の完成コードは、<code>name2</code> を読む2回とも <code>?.</code> でそろえてあります</strong>ので、最後の行には次の注意が出ます。",
+      "translation": "<strong>သို့သော်လည်း \"အမြဲတမ်း error\" မဟုတ်ပါ။</strong> string ကို ထည့်သွင်းခဲ့သော စာကြောင်း၏ အောက်တွင် Kotlin က ထို variable ကို <code>String</code> အဖြစ် ပြန်လည်သတ်မှတ်ပေးသောကြောင့် (smart cast)၊ <code>name2.count()</code> ဟု ရေးသားသော်လည်း အလုပ်လုပ်ပါမည်။ <strong>ဤသင်ခန်းစာဖိုင်၏ ပြီးစီးပြီးသောကုဒ်တွင် <code>name2</code> ကို ဖတ်သော 2 ကြိမ်စလုံးတွင် <code>?.</code> ဖြင့် တူညီအောင်ပြုလုပ်ထားပါသည်</strong> သောကြောင့် နောက်ဆုံးစာကြောင်းတွင် အောက်ပါသတိပေးချက် ထွက်ပေါ်လာပါမည်။"
+    },
+    {
+      "source": "最後の <code>?.</code> に、黄色い警告が出ます",
+      "translation": "နောက်ဆုံး <code>?.</code> တွင် အဝါရောင်သတိပေးချက် ထွက်ပေါ်လာပါမည်"
+    },
+    {
+      "source": "完成コードの最後の行 <code>println(name2?.count())</code> に、IntelliJ IDEA が警告を出します。<strong>間違いではありません。</strong> 直前の行で文字列を代入しているので、Kotlinはこの位置の <code>name2</code> を <code>String</code> として扱っています。<code>null</code> でないと分かっている相手に <code>?.</code> を付けているため、「その <code>?.</code> は要りません」と教えてくれています。",
+      "translation": "ပြီးစီးပြီးသောကုဒ်၏ နောက်ဆုံးစာကြောင်း <code>println(name2?.count())</code> တွင် IntelliJ IDEA က သတိပေးချက် ထုတ်ပြန်ပါမည်။ <strong>အမှား မဟုတ်ပါ။</strong> အထက်ပါစာကြောင်းတွင် string ကို ထည့်သွင်းထားသောကြောင့် Kotlin က ဤနေရာရှိ <code>name2</code> ကို <code>String</code> အဖြစ် မှတ်ယူထားပါသည်။ <code>null</code> မဟုတ်ကြောင်း သိထားသော အရာအပေါ်တွင် <code>?.</code> ကို တပ်ထားသောကြောင့် \"ထို <code>?.</code> သည် မလိုအပ်ပါ\" ဟု အသိပေးနေခြင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "この教材では、<strong><code>name2</code> を読む2回とも同じ書き方にそろえたいので、警告が出るまま残します。</strong> 消したいときは、最後の行だけ <code>println(name2.count())</code> にすれば警告は消えます。出力はどちらでも <code>6</code> です。",
+      "translation": "ဤသင်ခန်းစာဖိုင်တွင် <strong><code>name2</code> ကို ဖတ်သော 2 ကြိမ်စလုံးကို တူညီသောရေးသားပုံဖြစ်စေလိုသောကြောင့် သတိပေးချက် ထွက်ပေါ်နေလျက်ပင် ထိုအတိုင်းထားပါမည်။</strong> ဖျက်လိုပါက နောက်ဆုံးစာကြောင်းကိုသာ <code>println(name2.count())</code> အဖြစ် ပြောင်းလဲလိုက်ပါက သတိပေးချက် ပျောက်သွားပါမည်။ ရလဒ်မှာ နှစ်ခုစလုံးအတွက် <code>6</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<strong>ここはSwiftと違うところです。</strong> Swiftは代入しても型が <code>String?</code> のままなので、<code>?.</code> かアンラップがいつでも要ります。Kotlinは、代入した内容から「ここではもう <code>null</code> ではない」と判断して、型を絞り込みます。",
+      "translation": "<strong>ဤနေရာသည် Swift နှင့် ကွာခြားသော အချက်ဖြစ်ပါသည်။</strong> Swift တွင် တန်ဖိုးထည့်လိုက်သော်လည်း type သည် <code>String?</code> အဖြစ်သာ ကျန်ရှိနေသောကြောင့် <code>?.</code> သို့မဟုတ် unwrap လုပ်ရန် အမြဲတမ်း လိုအပ်ပါသည်။ Kotlin သည် ထည့်လိုက်သော အရာအပေါ် မူတည်၍ “ဤနေရာတွင် <code>null</code> မဟုတ်တော့ပါ” ဟု ဆုံးဖြတ်ပြီး type ကို ကျဉ်းမြောင်းပေးပါသည်။"
+    },
+    {
+      "source": "3行を出せた。<code>?.</code> が返す型が <code>Int?</code> であることを、マウスを重ねて確かめた。",
+      "translation": "စာကြောင်း 3 ကြောင်းကို ထုတ်နိုင်ခဲ့ပါသည်။ <code>?.</code> မှ ပြန်ပေးသော type သည် <code>Int?</code> ဖြစ်ကြောင်းကို mouse တင်၍ စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "STEP 11 · 2コマ目 · 目安 15分",
+      "translation": "STEP 11 · 2 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 15 မိနစ်"
+    },
+    {
+      "source": "練習A · String? の変数をもう1つ足す（必須・7分）",
+      "translation": "လေ့ကျင့်ခန်း A · String? ၏ variable ကို နောက်ထပ် 1 ခု ထပ်ထည့်ရန် (မဖြစ်မနေ · 7 မိနစ်)"
+    },
+    {
+      "source": "<code>fun main()</code> のいちばん最後の行（3つめの <code>println</code>）の下に、<code>String?</code> の変数を1つ足します。名前も値も自分で決めます。まず <code>null</code> を入れ、<code>?.count()</code> を付けた <code>println</code> を1行足して、出力を4行にします。Runして結果を見たら、こんどは <code>null</code> のかわりに好きな文字列を入れて、もう一度Runします。",
+      "translation": "<code>fun main()</code> ၏ အောက်ဆုံးစာကြောင်း (3 ခုမြောက် <code>println</code>) ၏ အောက်တွင် <code>String?</code> ၏ variable 1 ခု ထပ်ထည့်ပါ။ အမည်နှင့် တန်ဖိုးကို ကိုယ်တိုင် သတ်မှတ်ပါ။ ပထမဦးစွာ <code>null</code> ကို ထည့်သွင်းပြီး၊ <code>?.count()</code> ကို ထည့်ထားသော <code>println</code> 1 ကြောင်း ထပ်ထည့်ကာ output ကို 4 ကြောင်းဖြစ်အောင် လုပ်ပါ။ Run ပြီး ရလဒ်ကို ကြည့်ပြီးနောက်၊ ယခုတစ်ကြိမ်တွင် <code>null</code> အစား မိမိနှစ်သက်ရာ string ကို ထည့်သွင်း၍ နောက်တစ်ကြိမ် Run ပါ။"
+    },
+    {
+      "source": "<code>null</code> を入れたときは <code>null</code> と出ます。文字列を入れたときは、その文字列の文字数が出ます。自分が入れた文字列を数えて、出た数と合っているか確かめましょう。<strong>同じ1行が、入っている値によって数を出したり <code>null</code> を出したりします。</strong>これが <code>?.</code> のはたらきです。",
+      "translation": "<code>null</code> ကို ထည့်သွင်းသောအခါ <code>null</code> ဟု ထွက်ပါမည်။ string ကို ထည့်သွင်းသောအခါ ၎င်း string ၏ စာလုံးအရေအတွက် ထွက်ပါမည်။ မိမိထည့်သွင်းလိုက်သော string ကို ရေတွက်ကြည့်ပြီး ထွက်လာသော အရေအတွက်နှင့် ကိုက်ညီမှုရှိမရှိ စစ်ဆေးပါ။ <strong>တူညီသော စာကြောင်း 1 ကြောင်းတည်းက ထည့်သွင်းထားသော တန်ဖိုးအပေါ် မူတည်၍ အရေအတွက်ကို ထုတ်ပေးခြင်း သို့မဟုတ် <code>null</code> ကို ထုတ်ပေးခြင်းများ လုပ်ဆောင်ပါသည်။</strong> ၎င်းသည် <code>?.</code> ၏ အလုပ်လုပ်ပုံ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "練習B · ?. を . にしてみる（必須・5分）",
+      "translation": "လေ့ကျင့်ခန်း B · ?. ကို . သို့ ပြောင်းကြည့်ရန် (မဖြစ်မနေ · 5 မိနစ်)"
+    },
+    {
+      "source": "練習Aで足した行の <code>?.</code> を <code>.</code> に書き換えます。Runを押す前に、その行を見てください。",
+      "translation": "လေ့ကျင့်ခန်း A တွင် ထပ်ထည့်ခဲ့သော စာကြောင်းမှ <code>?.</code> ကို <code>.</code> သို့ ပြောင်းရေးပါ။ Run ကို မနှိပ်မီ ထိုစာကြောင်းကို ကြည့်ပါ။"
+    },
+    {
+      "source": "その行に赤い波線が出て、Runできません。<code>String?</code> の変数には、メソッドをそのまま呼べないからです。メッセージの文言はバージョンで変わるので、覚えなくて構いません。<strong>読み替えるのは「<code>?</code> の付いた型を、<code>?</code> なしで扱おうとしている」の1つだけです。</strong>",
+      "translation": "ထိုစာကြောင်းတွင် အနီရောင် လှိုင်းတွန့်မျဉ်းပေါ်လာပြီး Run ၍ မရနိုင်ပါ။ <code>String?</code> ၏ variable တွင် method ကို တိုက်ရိုက် ခေါ်၍မရသောကြောင့် ဖြစ်ပါသည်။ မက်ဆေ့ချ်၏ စာသားသည် version အလိုက် ပြောင်းလဲနိုင်သဖြင့် မှတ်ထားရန် မလိုအပ်ပါ။ <strong>ပြောင်းလဲဖတ်ရှုရမည်မှာ “<code>?</code> ပါသော type ကို <code>?</code> မပါဘဲ အသုံးပြုရန် ကြိုးစားနေသည်” ဆိုသည့် 1 ချက်တည်းသာ ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "確かめたら <code>?.</code> に戻し、赤い波線が消えることを確かめます。",
+      "translation": "စစ်ဆေးပြီးပါက <code>?.</code> သို့ ပြန်ထားပြီး အနီရောင် လှိုင်းတွန့်မျဉ်း ပျောက်သွားကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "同じことを、JavaとSwiftでしたとき",
+      "translation": "တူညီသော အရာကို Java နှင့် Swift တွင် လုပ်ဆောင်သောအခါ"
+    },
+    {
+      "source": "KotlinとSwiftは、<code>?</code> の付いた型にそのままメソッドを呼ぶコードを、コンパイル時に止めます。",
+      "translation": "Kotlin နှင့် Swift တို့သည် <code>?</code> ပါသော type တွင် method ကို တိုက်ရိုက် ခေါ်သော code အား compile အဆင့်တွင် ရပ်တန့်စေပါသည်။"
+    },
+    {
+      "source": "Javaは止めません。<code>null</code> かどうかを確かめるのは、書く人の仕事です。",
+      "translation": "Java သည် ရပ်တန့်ခြင်း မရှိပါ။ <code>null</code> ဟုတ်မဟုတ် စစ်ဆေးခြင်းသည် ရေးသားသူ၏ အလုပ်သာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<strong><code>?.</code> は「安全に書くための心がけ」ではなく、「書かないと通らない」しくみです。</strong> ここがJavaといちばん違うところです。",
+      "translation": "<strong><code>?.</code> သည် “လုံခြုံစွာ ရေးသားရန် သတိပြုရမည့်အရာ” မဟုတ်ဘဲ “မရေးလျှင် အလုပ်မလုပ်သော” စနစ် ဖြစ်ပါသည်။</strong> ၎င်းသည် Java နှင့် အကွာခြားဆုံး အချက်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>?.</code> が元どおりになっていることを確かめます。",
+      "translation": "<code>?.</code> သည် နဂိုအတိုင်း ပြန်ဖြစ်သွားကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "Runし、STEP 10 と同じ3行に戻ったことを確かめます。",
+      "translation": "Run ပြီး STEP 10 နှင့် တူညီသော စာကြောင်း 3 ကြောင်းသို့ ပြန်လည်ရောက်ရှိသွားကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "練習A・Bを試し、<code>?.</code> を <code>.</code> にした行が赤くなることを確かめた。最後に元の3行へ戻した。",
+      "translation": "လေ့ကျင့်ခန်း A, B ကို စမ်းသပ်ပြီး <code>?.</code> ကို <code>.</code> သို့ ပြောင်းလိုက်သော စာကြောင်းသည် အနီရောင် ပြောင်းသွားကြောင်းကို စစ်ဆေးခဲ့ပါသည်။ နောက်ဆုံးတွင် မူလ စာကြောင်း 3 ကြောင်းသို့ ပြန်လည်ပြောင်းလဲခဲ့ပါသည်။"
+    },
+    {
+      "source": "STEP 12 · 2コマ目 · 目安 15分",
+      "translation": "STEP 12 · 2 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 15 မိနစ်"
+    },
+    {
+      "source": "<code>val name1: String</code> には <code>null</code> が入らないので、<code>?.</code> なしで <code>count()</code> を呼べる。",
+      "translation": "<code>val name1: String</code> တွင် <code>null</code> မဝင်နိုင်သောကြောင့် <code>?.</code> မပါဘဲ <code>count()</code> ကို ခေါ်နိုင်ပါသည်။"
+    },
+    {
+      "source": "<code>var name2: String?</code> が <code>null</code> のとき、<code>?.</code> が <code>count()</code> を呼ばずに <code>null</code> を返している。",
+      "translation": "<code>var name2: String?</code> သည် <code>null</code> ဖြစ်သောအခါ <code>?.</code> သည် <code>count()</code> ကို မခေါ်ဘဲ <code>null</code> ကို ပြန်ပေးပါသည်။"
+    },
+    {
+      "source": "同じ <code>name2?.count()</code> でも、文字列が入っていれば <code>count()</code> が呼ばれる。",
+      "translation": "တူညီသော <code>name2?.count()</code> ဖြစ်သော်လည်း string ပါဝင်နေပါက <code>count()</code> ကို ခေါ်ပါမည်။"
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<code>?</code> を書いた場所と <code>?.</code> を書いた場所を指さして説明します。",
+      "translation": "ဇယားအတိုင်း ဖြစ်သွားပါက ဆရာ့ကို မျက်နှာပြင်ကို ပြသပြီး <code>?</code> ရေးထားသော နေရာနှင့် <code>?.</code> ရေးထားသော နေရာကို လက်ညှိုးထိုး၍ ရှင်းပြပါ။"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex02</code> も忘れずに入れます。",
+      "translation": "ယခုအထိ ရိုက်ထည့်ခဲ့သော <code>main.kt</code> ၏ အပြည့်အစုံ ဖြစ်ပါသည်။ ပထမစာကြောင်းရှိ <code>package ex02</code> ကိုလည်း မမေ့ဘဲ ထည့်ပါ။"
+    },
+    {
+      "source": "② 同じ3行を、JavaとSwiftで出すと",
+      "translation": "② တူညီသော စာကြောင်း 3 ကြောင်းကို Java နှင့် Swift တွင် ထုတ်သောအခါ"
+    },
+    {
+      "source": "Kotlinの <code>println(name2?.count())</code> の1行が、Javaでは <code>if</code> と <code>else</code> に分かれます。2回出てくるので、ここでは <code>printLength</code> というメソッドにまとめました。<strong>Javaでは「<code>null</code> のとき何を出すか」も自分で書きます。</strong> Kotlinは <code>?.</code> が <code>null</code> を返し、<code>println</code> がそれをそのまま出します。",
+      "translation": "Kotlin ၏ <code>println(name2?.count())</code> စာကြောင်း 1 ကြောင်းသည် Java တွင် <code>if</code> နှင့် <code>else</code> အဖြစ် ကွဲထွက်သွားပါသည်။ 2 ကြိမ် ပေါ်လာသောကြောင့် ဤနေရာတွင် <code>printLength</code> ဟူသော method ထဲသို့ စုစည်းထားပါသည်။ <strong>Java တွင် “<code>null</code> ဖြစ်သောအခါ မည်သည့်အရာကို ထုတ်မည်နည်း” ကိုလည်း ကိုယ်တိုင် ရေးရပါမည်။</strong> Kotlin သည် <code>?.</code> မှ <code>null</code> ကို ပြန်ပေးပြီး <code>println</code> က ၎င်းကို ထိုအတိုင်း ထုတ်ပေးပါသည်။"
+    },
+    {
+      "source": "Swiftの書き方はKotlinとほぼ同じです。ただし<strong>実行時の形が違います。</strong> Swiftの <code>String?</code> はオプショナルという入れ物に包まれた別の値なので、そのまま表示すると包まれていることが分かる形で出ます。Kotlinの <code>String?</code> は、実行時には文字列そのものか <code>null</code> かのどちらかで、包む入れ物がありません。だから <code>println(name2?.count())</code> は、数か <code>null</code> をそのまま出します。",
+      "translation": "Swift ၏ ရေးသားပုံသည် Kotlin နှင့် နီးပါးတူညီပါသည်။ သို့သော် <strong>run သည့်အချိန်ရှိ ပုံစံ ကွာခြားပါသည်။</strong> Swift ၏ <code>String?</code> သည် optional ဟူသော ဘူးထဲတွင် ထုပ်ပိုးထားသော အခြားတန်ဖိုးတစ်ခု ဖြစ်သောကြောင့် ထိုအတိုင်း ဖော်ပြပါက ထုပ်ပိုးထားကြောင်း သိသာသောပုံစံဖြင့် ထွက်လာပါမည်။ Kotlin ၏ <code>String?</code> သည် run သည့်အချိန်တွင် string ကိုယ်တိုင် သို့မဟုတ် <code>null</code> နှစ်ခုအနက် တစ်ခုခုသာဖြစ်ပြီး ထုပ်ပိုးထားသော ဘူးမရှိပါ။ ထို့ကြောင့် <code>println(name2?.count())</code> သည် အရေအတွက် သို့မဟုတ် <code>null</code> ကို ထိုအတိုင်း ထုတ်ပေးပါသည်။"
+    },
+    {
+      "source": "Kotlinの <code>?</code> と <code>?.</code> は、<strong>コンパイラのための印</strong>です。実行時の値が増えるわけではありません。ここがSwiftのオプショナルと似て見えて、中身が違うところです。",
+      "translation": "Kotlin ၏ <code>?</code> နှင့် <code>?.</code> တို့သည် <strong>compiler အတွက် အမှတ်အသား</strong> များဖြစ်ပါသည်။ Run သည့်အချိန်တွင် တန်ဖိုး တိုးလာခြင်း မရှိပါ။ ၎င်းသည် Swift ၏ optional နှင့် ဆင်တူသော်လည်း အတွင်းပိုင်း ကွာခြားသော အချက်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "③ ex01 と ex02 が並んでいることを確かめる",
+      "translation": "③ ex01 နှင့် ex02 တို့ ယှဉ်လျက်ရှိကြောင်းကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code> と <code>ex02</code> が並んでいることを確かめます。",
+      "translation": "ဘယ်ဘက်ရှိ <strong>プロジェクト</strong> (project) tool window တွင် <code>src</code> ကို ဖွင့်ပြီး <code>ex01</code> နှင့် <code>ex02</code> တို့ ယှဉ်လျက်ရှိကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "<code>ex01</code> の <code>main.kt</code> を開きます。1コマ目に書いたコードが、そのまま残っています。",
+      "translation": "<code>ex01</code> ၏ <code>main.kt</code> ကို ဖွင့်ပါ။ ပထမအတန်းတွင် ရေးခဲ့သော code သည် ထိုအတိုင်း ကျန်ရှိနေပါသည်။"
+    },
+    {
+      "source": "<code>fun main()</code> が2つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。",
+      "translation": "<code>fun main()</code> 2 ခု ရှိသော်လည်း package မတူသောကြောင့် အခြား ပရိုဂရမ်တစ်ခု ဖြစ်ပါသည်။ Run လိုသော ဖိုင်ကို ဖွင့်ပြီး ထို <code>fun main()</code> ၏ ဘယ်ဘက်ရှိ ▷ ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "プロジェクトは <code>K01HelloKotlin</code> の1つだけを使い続けます。回を重ねるごとに <code>src</code> の下のパッケージが増えていくので、前に書いたコードをいつでも開いて見返せます。",
+      "translation": "Project သည် <code>K01HelloKotlin</code> 1 ခုတည်းကိုသာ ဆက်လက်အသုံးပြုပါမည်။ အတန်းအကြိမ်ရေ တိုးလာသည်နှင့်အမျှ <code>src</code> အောက်ရှိ package များ တိုးလာမည်ဖြစ်သဖြင့် ယခင်က ရေးခဲ့သော code ကို အချိန်မရွေး ဖွင့်၍ ပြန်လည်ကြည့်ရှုနိုင်ပါသည်။"
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code> と <code>ex02</code> が同じプロジェクトに並んでいることも確かめた。",
+      "translation": "ပြီးစီးမှု စစ်ဆေးခြင်းကို ပြုလုပ်ပြီး ဆရာ့ကို မျက်နှာပြင်ကို ပြသခဲ့ပါသည်။ <code>ex01</code> နှင့် <code>ex02</code> တို့သည် တူညီသော project တွင် ယှဉ်လျက်ရှိကြောင်းကိုလည်း စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "この回のまとめ",
+      "translation": "ဤအတန်း၏ အနှစ်ချုပ်"
+    },
+    {
+      "source": "<strong><code>?</code> を付けた型だけが <code>null</code> を持てる → 呼ぶときは <code>?.</code> を付ける → 返ってくるのも <code>?</code> の付いた型。</strong><br>Javaでは実行時に <code>NullPointerException</code> で気づいていたことを、Kotlinでは書いている最中に見つけられます。Swiftのオプショナルで知っている考え方が、そのまま使えます。",
+      "translation": "<strong><code>?</code> ပါသော type သာလျှင် <code>null</code> ကို လက်ခံနိုင်သည် → ခေါ်သောအခါ <code>?.</code> ကို သုံးသည် → ပြန်ရလာသောအရာသည်လည်း <code>?</code> ပါသော type ဖြစ်သည်။</strong><br>Java တွင် run သည့်အချိန်မှ <code>NullPointerException</code> ဖြင့် သိရသောအရာကို Kotlin တွင် ရေးနေစဉ်မှာပင် သိရှိနိုင်ပါသည်။ Swift ၏ optional တွင် သိထားသော သဘောတရားကို ထိုအတိုင်း အသုံးပြုနိုင်ပါသည်။"
+    },
+    {
+      "source": "STEP 13 · 3コマ目 · 目安 5分",
+      "translation": "STEP 13 · 3 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 5 မိနစ်"
+    },
+    {
+      "source": "3コマ目のゴール（関数）",
+      "translation": "3 ကြိမ်မြောက် အတန်း၏ ရည်မှန်းချက် (function)"
+    },
+    {
+      "source": "ここからが<strong>3コマ目</strong>です。使うプロジェクトは1コマ目・2コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex03</code> パッケージを足して、その中に書きます。すでにある <code>ex01</code> と <code>ex02</code> は、そのまま残します。",
+      "translation": "ဤနေရာမှစ၍ <strong>3 ကြိမ်မြောက် အတန်း</strong> ဖြစ်ပါသည်။ အသုံးပြုမည့် project သည် 1 ကြိမ်မြောက်၊ 2 ကြိမ်မြောက် အတန်းတို့နှင့် တူညီသော <code>K01HelloKotlin</code> ဖြစ်ပြီး အသစ်ပြန်မလုပ်ပါ။ <code>src</code> ၏ အောက်တွင် <code>ex03</code> package ကို ထပ်ထည့်ပြီး ၎င်းအထဲတွင် ရေးပါမည်။ ရှိပြီးသားဖြစ်သော <code>ex01</code> နှင့် <code>ex02</code> ကို ထိုအတိုင်း ထားရှိပါ။"
+    },
+    {
+      "source": "この回の主題は <strong>関数の宣言</strong> です。やることはJavaのメソッド、Swiftの関数とまったく同じですが、<strong>書く順番と記号が、JavaともSwiftとも違います。</strong> 何を書くかではなく、どこに何を書くかを覚える回です。",
+      "translation": "ဤအတန်း၏ အဓိကအကြောင်းအရာမှာ <strong>function ကြေညာခြင်း</strong> ဖြစ်ပါသည်။ လုပ်ဆောင်ရမည့်အရာမှာ Java ၏ method၊ Swift ၏ function တို့နှင့် အတိအကျ တူညီသော်လည်း <strong>ရေးရမည့် အစီအစဉ်နှင့် အမှတ်အသားများသည် Java၊ Swift တို့နှင့် မတူညီပါ။</strong> မည်သည့်အရာကို ရေးရမည်ဆိုသည်ထက် မည်သည့်နေရာတွင် မည်သည့်အရာကို ရေးရမည်ဆိုသည်ကို မှတ်သားရမည့် အတန်းဖြစ်ပါသည်။"
+    },
+    {
+      "source": "キーワードなし（修飾子と戻り値の型で始める）",
+      "translation": "Keyword မရှိပါ (modifier နှင့် ပြန်ပေးမည့် type ဖြင့် စတင်သည်)"
+    },
+    {
+      "source": "引数 <code>a: Int</code>",
+      "translation": "Argument <code>a: Int</code>"
+    },
+    {
+      "source": "<code>int a</code>（型が先、名前があと）",
+      "translation": "<code>int a</code> (type က အရင်၊ အမည်က နောက်)"
+    },
+    {
+      "source": "<code>a: Int</code>（名前が先、型があと）",
+      "translation": "<code>a: Int</code> (အမည်က အရင်၊ type က နောက်)"
+    },
+    {
+      "source": "戻り値 <code>: Int</code>",
+      "translation": "ပြန်ပေးမည့် type <code>: Int</code>"
+    },
+    {
+      "source": "メソッド名の前の <code>int</code>",
+      "translation": "Method အမည်၏ ရှေ့မှ <code>int</code>"
+    },
+    {
+      "source": "戻り値を書かない",
+      "translation": "ပြန်ပေးမည့် type ကို မရေးပါ"
+    },
+    {
+      "source": "<code>void</code> と書く",
+      "translation": "<code>void</code> ဟု ရေးသည်"
+    },
+    {
+      "source": "<code>-&gt; Void</code> を省く",
+      "translation": "<code>-&gt; Void</code> ကို ဖြုတ်သည်"
+    },
+    {
+      "source": "同じ関数を3つの言語で書く",
+      "translation": "တူညီသော function ကို ဘာသာစကား 3 မျိုးဖြင့် ရေးခြင်း"
+    },
+    {
+      "source": "2つの <code>Int</code> を受け取って、足した <code>Int</code> を返す関数です。中身は3つとも同じで、違うのは形だけです。",
+      "translation": "<code>Int</code> 2 ခုကို လက်ခံရယူပြီး ပေါင်းထားသော <code>Int</code> ကို ပြန်ပေးမည့် function ဖြစ်ပါသည်။ အတွင်းပိုင်းမှာ 3 မျိုးစလုံး တူညီပြီး ကွာခြားသည်မှာ ပုံစံသာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Kotlinは <code>fun</code> で始めます。Swiftの <code>func</code> にあたります。Javaには、この位置に置くキーワードがありません。",
+      "translation": "Kotlin သည် <code>fun</code> ဖြင့် စတင်ပါသည်။ Swift ၏ <code>func</code> နှင့် ညီမျှပါသည်။ Java တွင် ထိုနေရာ၌ ထားရမည့် keyword မရှိပါ။"
+    },
+    {
+      "source": "引数は、Kotlinが <code>a: Int</code>、Swiftも <code>a: Int</code>、Javaだけが <code>int a</code> です。<strong>KotlinとSwiftは名前が先で、Javaは型が先です。</strong>",
+      "translation": "Argument မှာ Kotlin တွင် <code>a: Int</code>၊ Swift တွင်လည်း <code>a: Int</code> ဖြစ်ပြီး Java တွင်သာ <code>int a</code> ဖြစ်ပါသည်။ <strong>Kotlin နှင့် Swift တွင် အမည်က အရင်ဖြစ်ပြီး Java တွင် type က အရင်ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "戻り値の型は、Kotlinがかっこのうしろの <code>: Int</code>、Swiftがかっこのうしろの <code>-&gt; Int</code>、Javaがメソッド名の前の <code>int</code> です。<strong>3つとも位置か記号が違います。</strong>",
+      "translation": "ပြန်ပေးမည့် type မှာ Kotlin တွင် ဂွင်း၏ အနောက်မှ <code>: Int</code>၊ Swift တွင် ဂွင်း၏ အနောက်မှ <code>-&gt; Int</code>၊ Java တွင် method အမည်၏ ရှေ့မှ <code>int</code> ဖြစ်ပါသည်။ <strong>3 ခုစလုံး နေရာ သို့မဟုတ် အမှတ်အသား ကွာခြားပါသည်။</strong>"
+    },
+    {
+      "source": "値を返す <code>return</code> は、JavaともSwiftとも同じ書き方です。行末に <code>;</code> が要らない点は、1コマ目・2コマ目と同じです。",
+      "translation": "တန်ဖိုးကို ပြန်ပေးသော <code>return</code> သည် Java နှင့် Swift တို့နှင့် ရေးသားပုံ တူညီပါသည်။ စာကြောင်းအဆုံးတွင် <code>;</code> မလိုအပ်သည့် အချက်မှာ 1 ကြိမ်မြောက်၊ 2 ကြိမ်မြောက် အတန်းတို့နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "並びと位置は STEP 15 で1つずつ確かめます。ここでは「3つとも違う形になる」ことだけ見ておきます。",
+      "translation": "အစီအစဉ်နှင့် နေရာများကို STEP 15 တွင် တစ်ခုချင်းစီ စစ်ဆေးပါမည်။ ဤနေရာတွင် “ပုံစံ 3 မျိုးစလုံး ကွာခြားသွားသည်” ဆိုသည်ကိုသာ ကြည့်ထားပါ။"
+    },
+    {
+      "source": "3コマ目のゴール（コンソールに出る2行）",
+      "translation": "3 ကြိမ်မြောက် အတန်း၏ ရည်မှန်းချက် (console တွင် ပေါ်လာမည့် စာကြောင်း 2 ကြောင်း)"
+    },
+    {
+      "source": "Runの結果 · この2行が出れば完成",
+      "translation": "Run ပြီးနောက် ရလဒ် · ဤ 2 ကြောင်း ထွက်လာပါက ပြီးမြောက်ပါပြီ"
+    },
+    {
+      "source": "同じ <code>3</code> が2行出ます。<strong>1行目と2行目では、<code>3</code> を出している場所が違います。</strong> どちらがどこで出しているのかは、STEP 16 で確かめます。",
+      "translation": "တူညီသော <code>3</code> 2 ကြောင်း ထွက်လာပါမည်။ <strong>ပထမစာကြောင်းနှင့် ဒုတိယစာကြောင်းတွင် <code>3</code> ကို ထုတ်ပေးနေသော နေရာ ကွာခြားပါသည်။</strong> မည်သည့်အရာက မည်သည့်နေရာတွင် ထုတ်ပေးနေသည်ကို STEP 16 တွင် စစ်ဆေးပါမည်။"
+    },
+    {
+      "source": "前半（約40分）",
+      "translation": "ပထမပိုင်း (ခန့်မှန်းခြေ 40 မိနစ်)"
+    },
+    {
+      "source": "<code>ex03</code> を作り、戻り値のある関数 <code>sum</code> を書いて1行目を出す。",
+      "translation": "<code>ex03</code> ကို ဖန်တီးပြီး ပြန်ပေးမည့်တန်ဖိုး ပါဝင်သော function <code>sum</code> ကို ရေး၍ ပထမစာကြောင်းကို ထုတ်မည်။"
+    },
+    {
+      "source": "後半（約50分）",
+      "translation": "ဒုတိယပိုင်း (ခန့်မှန်းခြေ 50 မိနစ်)"
+    },
+    {
+      "source": "戻り値のない関数 <code>sum2</code> を足し、2行の出力を完成させる。",
+      "translation": "ပြန်ပေးမည့်တန်ဖိုး မပါဝင်သော function <code>sum2</code> ကို ထပ်ထည့်ပြီး စာကြောင်း 2 ကြောင်း၏ output ကို အပြီးသတ်မည်။"
+    },
+    {
+      "source": "3コマ目に出す2行（<code>3</code> / <code>3</code>）を、上のゴールで確かめた。",
+      "translation": "3 ကြိမ်မြောက် အတန်းတွင် ထုတ်မည့် စာကြောင်း 2 ကြောင်း (<code>3</code> / <code>3</code>) ကို အထက်ပါ ရည်မှန်းချက်တွင် စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：ex03 を作る →",
+      "translation": "ရှေ့သို့: ex03 ကို ဖန်တီးရန် →"
+    },
+    {
+      "source": "STEP 14 · 3コマ目 · 目安 5分",
+      "translation": "STEP 14 · 3 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 5 မိနစ်"
+    },
+    {
+      "source": "ex03 パッケージと main.kt を作る",
+      "translation": "ex03 package နှင့် main.kt ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex03</code> パッケージと、その中の <code>main.kt</code> を作ります。",
+      "translation": "<code>K01HelloKotlin</code> project ကို ပြန်ဖွင့်ပြီး <code>src</code> ၏ အောက်တွင် <code>ex03</code> package နှင့် ၎င်းအထဲရှိ <code>main.kt</code> ကို ဖန်တီးပါ။"
+    },
+    {
+      "source": "<strong>STEP 08 と同じ操作です。</strong>違うのは、パッケージ名が <code>ex02</code> ではなく <code>ex03</code> になることだけです。手順は、下にもう一度すべて書きます。",
+      "translation": "<strong>STEP 08 နှင့် တူညီသော လုပ်ဆောင်ချက် ဖြစ်ပါသည်။</strong> ကွာခြားသည်မှာ package အမည် <code>ex02</code> အစား <code>ex03</code> ဖြစ်သွားခြင်းသာ ဖြစ်ပါသည်။ အဆင့်များကို အောက်တွင် နောက်တစ်ကြိမ် အပြည့်အစုံ ရေးပေးထားပါသည်။"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> と <code>ex02</code> があることを確かめます。どちらも消しません。",
+      "translation": "ဘယ်ဘက်ရှိ <strong>プロジェクト</strong> (project) tool window တွင် <code>src</code> ရှိပြီး ၎င်း၏ အောက်တွင် <code>ex01</code> နှင့် <code>ex02</code> ရှိကြောင်းကို စစ်ဆေးပါ။ နှစ်ခုစလုံးကို မဖျက်ပါ။"
+    },
+    {
+      "source": "② ex03 パッケージを作る",
+      "translation": "② ex03 package ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "名前に <code>ex03</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex03</code> ができます。すべて小文字で、記号は入れません。",
+      "translation": "အမည်တွင် <code>ex03</code> ဟု ရိုက်ထည့်ပြီး <kbd>Return</kbd> ကို နှိပ်ပါ။ <code>src</code> ၏ အောက်တွင် <code>ex03</code> ရလာပါမည်။ အားလုံးကို အသေးစာလုံးဖြင့် ရေးပြီး သင်္ကေတများ မထည့်ပါ။"
+    },
+    {
+      "source": "できた <code>ex03</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でも <code>ex02</code> でもなく、<code>ex03</code> を右クリックします。</strong>",
+      "translation": "ရလာသော <code>ex03</code> ကို right-click နှိပ်ပြီး <strong>新規 → Kotlin ファイル/クラス</strong> (New → Kotlin File/Class) ကို ရွေးပါ။ <strong><code>src</code> ကိုဖြစ်စေ <code>ex01</code> ကိုဖြစ်စေ <code>ex02</code> ကိုဖြစ်စေ မနှိပ်ဘဲ <code>ex03</code> ကို right-click နှိပ်ပါ။</strong>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex03</code> が入っていることを確かめます。",
+      "translation": "ရလာသော <code>main.kt</code> ၏ ပထမစာကြောင်းတွင် <code>package ex03</code> ပါဝင်နေကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "1行目が <code>package ex03</code> になっていないとき",
+      "translation": "ပထမစာကြောင်းသည် <code>package ex03</code> ဖြစ်မနေသောအခါ"
+    },
+    {
+      "source": "ファイルが <code>ex03</code> の中ではなく、<code>src</code> の直下か、<code>ex01</code>・<code>ex02</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex03</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "ဖိုင်သည် <code>ex03</code> ၏ အထဲတွင် မဟုတ်ဘဲ <code>src</code> ၏ အောက်တိုက်ရိုက် သို့မဟုတ် <code>ex01</code>, <code>ex02</code> ၏ အထဲတွင် ရောက်နေပါသည်။ <code>main.kt</code> ကို right-click နှိပ်၍ ဖျက်ပြီးနောက် ③ မှ ပြန်စပါ။ <code>ex03</code> ကို right-click နှိပ်ခဲ့ခြင်း ရှိမရှိက အဆုံးအဖြတ် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージと、関数を置く場所）",
+      "translation": "④ Java / Swift တွင် မည်သို့ ရေးသနည်း (package နှင့် function ကို ထားရှိမည့် နေရာ)"
+    },
+    {
+      "source": "<strong>Kotlinは、関数をファイルの直下に書けます。</strong> これを<strong>トップレベル関数</strong>と呼びます。1コマ目から書いている <code>fun main()</code> が、その1つめです。Swiftのグローバル関数と同じ置き方です。",
+      "translation": "<strong>Kotlin သည် function ကို ဖိုင်၏ အောက်တိုက်ရိုက် ရေးနိုင်ပါသည်။</strong> ၎င်းကို <strong>top-level function</strong> ဟု ခေါ်ပါသည်။ 1 ကြိမ်မြောက် အတန်းမှစ၍ ရေးသားခဲ့သော <code>fun main()</code> သည် ၎င်းတို့အနက် ပထမဆုံးတစ်ခု ဖြစ်ပါသည်။ Swift ၏ global function နှင့် ထားရှိပုံ တူညီပါသည်။"
+    },
+    {
+      "source": "Javaは、メソッドを必ずクラスの中に置きます。<strong>この回で書く <code>sum</code> も、Javaならクラスの中の <code>static</code> メソッドにあたります。</strong>",
+      "translation": "Java သည် method ကို class ၏ အထဲတွင် အမြဲ ထားရှိပါသည်။ <strong>ဤအတန်းတွင် ရေးမည့် <code>sum</code> သည်လည်း Java ဆိုလျှင် class အထဲရှိ <code>static</code> method နှင့် ညီမျှပါသည်။</strong>"
+    },
+    {
+      "source": "<code>ex01</code>・<code>ex02</code>・<code>ex03</code> は別のパッケージなので、どれにも <code>main.kt</code> があり、どれにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。",
+      "translation": "<code>ex01</code>, <code>ex02</code>, <code>ex03</code> တို့သည် မတူညီသော package များဖြစ်သောကြောင့် မည်သည့်အရာတွင်မဆို <code>main.kt</code> ရှိနိုင်ပြီး မည်သည့်အရာတွင်မဆို <code>fun main()</code> ရှိသော်လည်း တိုက်မိခြင်း မရှိပါ။ Java တွင် မတူညီသော package ၌ တူညီသော class အမည် ထားရှိနိုင်ခြင်းနှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "<code>src/ex03/main.kt</code> を作り、1行目が <code>package ex03</code> になっていることを確かめた。<code>ex01</code> と <code>ex02</code> も残っている。",
+      "translation": "<code>src/ex03/main.kt</code> ကို ဖန်တီးပြီး ပထမစာကြောင်းသည် <code>package ex03</code> ဖြစ်နေကြောင်းကို စစ်ဆေးခဲ့ပါသည်။ <code>ex01</code> နှင့် <code>ex02</code> လည်း ကျန်ရှိနေပါသည်။"
+    },
+    {
+      "source": "次へ：戻り値のある関数 →",
+      "translation": "ရှေ့သို့: ပြန်ပေးမည့်တန်ဖိုး ပါဝင်သော function →"
+    },
+    {
+      "source": "STEP 15 · 3コマ目 · 目安 30分",
+      "translation": "STEP 15 · 3 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 30 မိနစ်"
+    },
+    {
+      "source": "戻り値のある関数（fun sum）",
+      "translation": "ပြန်ပေးမည့်တန်ဖိုး ပါဝင်သော function (fun sum)"
+    },
+    {
+      "source": "<code>fun</code> で関数を宣言し、引数を <code>名前: 型</code>、戻り値を末尾の <code>: 型</code> で書きます。<code>return</code> で返した値を <code>main</code> で受け取り、1行目の <code>3</code> を出します。",
+      "translation": "<code>fun</code> ဖြင့် function ကို ကြေညာပြီး argument ကို <code>名前: 型</code>၊ ပြန်ပေးမည့်တန်ဖိုးကို အဆုံးတွင် <code>: 型</code> ဟု ရေးပါ။ <code>return</code> ဖြင့် ပြန်ပေးသော တန်ဖိုးကို <code>main</code> မှ လက်ခံရယူပြီး ပထမစာကြောင်းရှိ <code>3</code> ကို ထုတ်ပေးမည်။"
+    },
+    {
+      "source": "変更するファイル：src/ex03/main.kt",
+      "translation": "ပြောင်းလဲမည့် ဖိုင်: src/ex03/main.kt"
+    },
+    {
+      "source": "src/ex03/main.kt · 全体を置き換える",
+      "translation": "src/ex03/main.kt · အားလုံးကို အစားထိုးရန်"
+    },
+    {
+      "source": "<code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。",
+      "translation": "<code>fun main()</code> နှင့် <code>fun sum(…)</code> နှစ်ခုစလုံးကို ဖိုင်၏ အောက်တိုက်ရိုက် ယှဉ်လျက် ထားပါ။ <strong>တစ်ခုအထဲတွင် နောက်တစ်ခုကို မထည့်ပါ။</strong> ရေးရမည့် အစီအစဉ်မှာ လွတ်လပ်ပြီး <code>sum</code> ကို <code>main</code> ၏ အောက်တွင် ရေးသော်လည်း <code>main</code> မှ ခေါ်နိုင်ပါသည်။"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> が <code>3</code> を返し、その値が <code>ret</code> に入り、<code>println(ret)</code> が出しています。<strong><code>sum</code> の中には <code>println</code> がありません。</strong> 出しているのは <code>main</code> のほうです。",
+      "translation": "<code>sum(1, 2)</code> က <code>3</code> ကို ပြန်ပေးပြီး ထိုတန်ဖိုးသည် <code>ret</code> ထဲသို့ ဝင်သွားကာ <code>println(ret)</code> က ထုတ်ပေးနေပါသည်။ <strong><code>sum</code> ၏ အထဲတွင် <code>println</code> မပါဝင်ပါ။</strong> ထုတ်ပေးနေသည်မှာ <code>main</code> ဘက်မှ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（関数の宣言）",
+      "translation": "③ Java / Swift တွင် မည်သို့ ရေးသနည်း (function ကြေညာခြင်း)"
+    },
+    {
+      "source": "やっていることは3つとも同じです。<strong>違うのは、同じ部品をどの順番に並べるかだけです。</strong>",
+      "translation": "လုပ်ဆောင်နေသောအရာမှာ 3 ခုစလုံး တူညီပါသည်။ <strong>ကွာခြားသည်မှာ တူညီသော အစိတ်အပိုင်းများကို မည်သည့် အစီအစဉ်အတိုင်း စီစဉ်ထားသည် ဆိုသည်သာ ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "Kotlinの <code>fun</code> は、Swiftの <code>func</code> にあたります。Javaには対応する語がなく、修飾子（<code>static</code>）と戻り値の型から始まります。",
+      "translation": "Kotlin ၏ <code>fun</code> သည် Swift ၏ <code>func</code> နှင့် ညီမျှပါသည်။ Java တွင် ညီမျှသော စကားလုံး မရှိဘဲ modifier (<code>static</code>) နှင့် ပြန်ပေးမည့် type တို့မှ စတင်ပါသည်။"
+    },
+    {
+      "source": "Kotlinの呼び出しは <code>sum(1, 2)</code> で、Javaと同じ形です。受け取った値を <code>val</code> に入れるところも、Javaの <code>final</code> 付きの変数と同じです。",
+      "translation": "Kotlin ၏ ခေါ်ယူပုံမှာ <code>sum(1, 2)</code> ဖြစ်ပြီး Java နှင့် ပုံစံတူညီပါသည်။ လက်ခံရယူသော တန်ဖိုးကို <code>val</code> ထဲသို့ ထည့်ခြင်းသည်လည်း Java ၏ <code>final</code> ပါသော variable နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "④ 引数は「名前: 型」 — Swiftと同じ並び、Javaと逆",
+      "translation": "④ Argument သည် “အမည်: type” — Swift နှင့် အစီအစဉ်တူပြီး Java နှင့် ပြောင်းပြန်"
+    },
+    {
       "source": "言語",
       "translation": "ဘာသာစကား"
+    },
+    {
+      "source": "引数の書き方",
+      "translation": "Argument ရေးသားပုံ"
+    },
+    {
+      "source": "先に書くもの",
+      "translation": "အရင်ရေးရမည့်အရာ"
+    },
+    {
+      "source": "<strong>Javaの並びで <code>fun sum(Int a, Int b)</code> と書くと、通りません。</strong> Runする前に赤い波線が出て、引数に型が書かれていない、というおおよそその意味のメッセージが出ます。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言は覚えなくて構いません。読み替えるのは<strong>「名前と型の順番が逆になっている」</strong>の1つだけです。",
+      "translation": "<strong>Java ၏ အစီအစဉ်အတိုင်း <code>fun sum(Int a, Int b)</code> ဟု ရေးပါက အလုပ်မလုပ်ပါ။</strong> Run မနှိပ်မီ အနီရောင် လှိုင်းတွန့်မျဉ်းပေါ်လာပြီး argument တွင် type မရေးထားပါ ဆိုသည့် အဓိပ္ပါယ်မျိုးရှိသော မက်ဆေ့ချ် ထွက်လာပါမည်။ စကားအသုံးအနှုန်းမှာ IntelliJ IDEA နှင့် Kotlin ၏ version အပေါ် မူတည်၍ ပြောင်းလဲနိုင်သဖြင့် စာသားကို မှတ်ထားရန် မလိုအပ်ပါ။ ပြောင်းလဲဖတ်ရှုရမည်မှာ <strong>“အမည်နှင့် type ၏ အစီအစဉ် ပြောင်းပြန်ဖြစ်နေသည်”</strong> ဆိုသည့် 1 ချက်တည်းသာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "なぜKotlinは名前を先に書くのか",
+      "translation": "အဘယ်ကြောင့် Kotlin သည် အမည်ကို အရင်ရေးသနည်း"
+    },
+    {
+      "source": "1コマ目で書いた変数の宣言を思い出してください。Kotlinは <code>val number1: Int = 1</code> と書き、<strong>名前が先、型があと</strong>でした。関数の引数も、同じ並びにそろえてあります。",
+      "translation": "1 ကြိမ်မြောက် အတန်းတွင် ရေးခဲ့သော variable ကြေညာခြင်းကို ပြန်သတိရပါ။ Kotlin သည် <code>val number1: Int = 1</code> ဟု ရေးပြီး <strong>အမည်က အရင်၊ type က နောက်</strong> ဖြစ်ပါသည်။ Function ၏ argument မှာလည်း တူညီသော အစီအစဉ်အတိုင်း ညှိထားပါသည်။"
+    },
+    {
+      "source": "この並びだと、<strong>型を省いても形が崩れません。</strong> <code>val number1 = 1</code> のように、うしろの <code>: Int</code> を取るだけで済みます。Javaの <code>int number1 = 1;</code> は先頭が型なので、そこを省くと何も残りません。<strong>型を省ける言語は、型をうしろに置くほうが都合がよいのです。</strong> Swiftが同じ並びなのも、同じ理由です。",
+      "translation": "ဤအစီအစဉ်အတိုင်းဆိုလျှင် <strong>type ကို ဖြုတ်လိုက်သော်လည်း ပုံစံပျက်မသွားပါ။</strong> <code>val number1 = 1</code> ကဲ့သို့ အနောက်ရှိ <code>: Int</code> ကို ဖြုတ်လိုက်ရုံသာ ဖြစ်ပါသည်။ Java ၏ <code>int number1 = 1;</code> သည် အစတွင် type ရှိသောကြောင့် ၎င်းကို ဖြုတ်လိုက်ပါက ဘာမှ ကျန်မည်မဟုတ်ပါ။ <strong>Type ကို ဖြုတ်နိုင်သော ဘာသာစကားသည် type ကို အနောက်တွင် ထားခြင်းက ပို၍ အဆင်ပြေပါသည်။</strong> Swift လည်း ထိုအစီအစဉ်အတိုင်း ဖြစ်နေခြင်းမှာ အကြောင်းရင်း တူညီသောကြောင့် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "ただし、<strong>関数の引数の型だけは省けません。</strong> 呼ぶ側が何を渡してよいか決まらなくなるからです。ここはSwiftも同じです。",
+      "translation": "သို့သော် <strong>function ၏ argument ၏ type ကိုသာလျှင် ဖြုတ်၍မရပါ။</strong> ခေါ်သောဘက်မှ မည်သည့်အရာကို ပေးပို့ရမည်ကို မသိနိုင်တော့သောကြောင့် ဖြစ်ပါသည်။ ဤနေရာသည်လည်း Swift နှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "⑤ 戻り値は末尾に「: 型」 — 3言語で位置か記号が違う",
+      "translation": "⑤ ပြန်ပေးမည့်တန်ဖိုးသည် အဆုံးတွင် “: type” — ဘာသာစကား 3 မျိုးတွင် နေရာ သို့မဟုတ် သင်္ကေတ ကွာခြားသည်"
+    },
+    {
+      "source": "宣言の1行目",
+      "translation": "ကြေညာခြင်း၏ ပထမစာကြောင်း"
+    },
+    {
+      "source": "戻り値の型を書く場所",
+      "translation": "ပြန်ပေးမည့် type ကို ရေးရမည့်နေရာ"
+    },
+    {
+      "source": "かっこのうしろに <code>: Int</code>",
+      "translation": "ဂွင်း၏ အနောက်တွင် <code>: Int</code>"
+    },
+    {
+      "source": "メソッド名の前に <code>int</code>",
+      "translation": "Method အမည်၏ ရှေ့တွင် <code>int</code>"
+    },
+    {
+      "source": "かっこのうしろに <code>-&gt; Int</code>",
+      "translation": "ဂွင်း၏ အနောက်တွင် <code>-&gt; Int</code>"
+    },
+    {
+      "source": "<strong>KotlinとSwiftは場所が同じで、記号だけが違います。</strong> Kotlinは <code>:</code>、Swiftは <code>-&gt;</code> です。Swiftの書き方で <code>fun sum(a: Int, b: Int) -&gt; Int</code> と書くと、Kotlinでは通りません。",
+      "translation": "<strong>Kotlin နှင့် Swift သည် နေရာတူညီပြီး သင်္ကေတသာ ကွာခြားပါသည်။</strong> Kotlin သည် <code>:</code> ဖြစ်ပြီး Swift သည် <code>-&gt;</code> ဖြစ်ပါသည်။ Swift ၏ ရေးသားပုံဖြင့် <code>fun sum(a: Int, b: Int) -&gt; Int</code> ဟု ရေးပါက Kotlin တွင် အလုပ်မလုပ်ပါ။"
+    },
+    {
+      "source": "Kotlinが <code>:</code> を使うのは、<strong>変数の型注釈と同じ記号にそろえるため</strong>です。<code>val ret: Int</code> と <code>fun sum(…): Int</code> で、「<code>:</code> のうしろが型」という読み方が1つで済みます。",
+      "translation": "Kotlin မှ <code>:</code> ကို အသုံးပြုခြင်းမှာ <strong>variable ၏ type မှတ်စုနှင့် တူညီသော သင်္ကေတအဖြစ် ညှိထားရန်</strong> ဖြစ်ပါသည်။ <code>val ret: Int</code> နှင့် <code>fun sum(…): Int</code> တို့တွင် “<code>:</code> ၏ အနောက်သည် type ဖြစ်သည်” ဆိုသည့် ဖတ်ရှုပုံ 1 မျိုးတည်းဖြင့် လုံလောက်သွားပါသည်။"
+    },
+    {
+      "source": "Javaだけが、名前より前に型を書きます。引数の <code>int a</code> と同じで、<strong>Javaは型を先に書く言語だから</strong>です。",
+      "translation": "Java တွင်သာ အမည်ထက်စော၍ type ကို ရေးပါသည်။ Argument ဖြစ်သော <code>int a</code> နှင့် တူညီပြီး <strong>Java သည် type ကို အရင်ရေးသော ဘာသာစကားဖြစ်သောကြောင့်</strong> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Kotlinでは、<code>: Int</code> と書いたら <code>return</code> で必ず値を返します。返さずに <code>}</code> まで進むと、<code>return</code> が足りない、というおおよそその意味のエラーになり、Runできません。",
+      "translation": "Kotlin တွင် <code>: Int</code> ဟု ရေးပါက <code>return</code> ဖြင့် တန်ဖိုးကို မဖြစ်မနေ ပြန်ပေးရပါမည်။ ပြန်မပေးဘဲ <code>}</code> သို့ ရောက်သွားပါက <code>return</code> မလုံလောက်ပါ ဟူသော အဓိပ္ပါယ်မျိုးရှိသည့် error ဖြစ်ပေါ်လာမည်ဖြစ်ပြီး Run ၍ မရနိုင်ပါ။"
+    },
+    {
+      "source": "<code>sum</code> を書いて <code>3</code> を出せた。",
+      "translation": "<code>sum</code> ကို ရေးပြီး <code>3</code> ကို ထုတ်နိုင်ခဲ့ပါသည်။"
+    },
+    {
+      "source": "次へ：戻り値のない関数 →",
+      "translation": "ရှေ့သို့: ပြန်ပေးမည့်တန်ဖိုး မပါဝင်သော function →"
+    },
+    {
+      "source": "STEP 16 · 3コマ目 · 目安 20分",
+      "translation": "STEP 16 · 3 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 20 မိနစ်"
+    },
+    {
+      "source": "戻り値のない関数（fun sum2）",
+      "translation": "ပြန်ပေးမည့်တန်ဖိုး မပါဝင်သော function (fun sum2)"
+    },
+    {
+      "source": "戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。",
+      "translation": "ပြန်ပေးမည့်တန်ဖိုး မပါဝင်သော function ကို ရေးပါမည်။ Kotlin တွင် အဆုံး၌ <strong>ဘာမှ မရေးပါ</strong>။ ဒုတိယစာကြောင်းရှိ <code>3</code> ကို ထုတ်ပြီး output ကို အပြီးသတ်မည်။"
+    },
+    {
+      "source": "足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。",
+      "translation": "ထပ်ထည့်လိုက်သည်မှာ <code>main</code> အထဲရှိ <code>sum2(1, 2)</code> စာကြောင်း 1 ကြောင်းနှင့် အောက်ဆုံးရှိ <code>sum2</code> ကြေညာခြင်း ဖြစ်ပါသည်။ <strong><code>sum2</code> ၏ ဂွင်းအနောက်တွင် ဘာမှ မရေးပါ။</strong> <code>: Int</code> ကဲ့သို့သော type ကိုဖြစ်စေ သင်္ကေတကိုဖြစ်စေ မထည့်ပါ။"
+    },
+    {
+      "source": "Runの結果 · この2行が出れば成功",
+      "translation": "Run ပြီးနောက် ရလဒ် · ဤ 2 ကြောင်း ထွက်လာပါက အောင်မြင်ပါပြီ"
+    },
+    {
+      "source": "出している場所",
+      "translation": "ထုတ်ပေးနေသော နေရာ"
+    },
+    {
+      "source": "<code>sum</code> が返した値を、<code>main</code> の <code>println(ret)</code> が出している。",
+      "translation": "<code>sum</code> မှ ပြန်ပေးသော တန်ဖိုးကို <code>main</code> ၏ <code>println(ret)</code> က ထုတ်ပေးနေပါသည်။"
+    },
+    {
+      "source": "<code>sum2</code> の中の <code>println(a + b)</code> が出している。<code>main</code> は受け取っていない。",
+      "translation": "<code>sum2</code> ၏ အထဲရှိ <code>println(a + b)</code> က ထုတ်ပေးနေပါသည်။ <code>main</code> က လက်ခံမရယူပါ။"
+    },
+    {
+      "source": "同じ <code>3</code> でも、<strong>出している場所が違います。</strong> <code>sum</code> は計算結果を返すだけで出力せず、<code>sum2</code> は計算結果を返さずに、関数の中で出力します。",
+      "translation": "တူညီသော <code>3</code> ဖြစ်သော်လည်း <strong>ထုတ်ပေးနေသော နေရာ ကွာခြားပါသည်။</strong> <code>sum</code> သည် တွက်ချက်မှုရလဒ်ကို ပြန်ပေးရုံသာဖြစ်ပြီး မထုတ်ပေးပါ။ <code>sum2</code> သည် တွက်ချက်မှုရလဒ်ကို ပြန်မပေးဘဲ function ၏ အထဲတွင် ထုတ်ပေးပါသည်။"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（戻り値がないとき）",
+      "translation": "③ Java / Swift တွင် မည်သို့ ရေးသနည်း (ပြန်ပေးမည့်တန်ဖိုး မရှိသောအခါ)"
+    },
+    {
+      "source": "<strong>Kotlinは、戻り値がないときに何も書きません。</strong> Swiftも <code>-&gt; Void</code> を省けるので、書き上がりは同じ形になります。",
+      "translation": "<strong>Kotlin သည် ပြန်ပေးမည့်တန်ဖိုး မရှိသောအခါ ဘာမှ မရေးပါ။</strong> Swift လည်း <code>-&gt; Void</code> ကို ဖြုတ်နိုင်သောကြောင့် ရေးသားပြီးသော ပုံစံသည် တူညီပါသည်။"
+    },
+    {
+      "source": "Javaだけは <code>void</code> を必ず書きます。<strong>メソッド名の前に必ず何かを置く文法だから</strong>です。前を空にはできないので、「無い」ことを表す語が要ります。",
+      "translation": "Java တွင်သာ <code>void</code> ကို မဖြစ်မနေ ရေးရပါသည်။ <strong>Method အမည်၏ ရှေ့တွင် မဖြစ်မနေ တစ်ခုခု ထားရှိရမည့် သဒ္ဒါဖြစ်သောကြောင့်</strong> ဖြစ်ပါသည်။ ရှေ့နေရာကို အလွတ်ထား၍ မရသောကြောင့် “မရှိ” ကြောင်းကို ပြသသော စကားလုံး လိုအပ်ပါသည်။"
+    },
+    {
+      "source": "KotlinとSwiftは、戻り値の型をかっこの<strong>うしろ</strong>に置きます。うしろは、書かなければそこで終わるだけです。だから「無い」ことを表す語を用意しなくて済みます。<strong>書く位置の違いが、そのまま省けるかどうかの違いになっています。</strong>",
+      "translation": "Kotlin နှင့် Swift သည် ပြန်ပေးမည့် type ကို ဂွင်း၏ <strong>အနောက်</strong> တွင် ထားရှိပါသည်။ အနောက်သည် မရေးလျှင် ထိုနေရာတွင် ပြီးဆုံးသွားရုံသာ ဖြစ်ပါသည်။ ထို့ကြောင့် “မရှိ” ကြောင်းကို ပြသသော စကားလုံး ပြင်ဆင်ရန် မလိုအပ်ပါ။ <strong>ရေးရမည့် နေရာ ကွာခြားမှုက ဖြုတ်နိုင်၊ မဖြုတ်နိုင် ကွာခြားမှုအဖြစ်သို့ တိုက်ရိုက် ရောက်ရှိသွားခြင်း ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "④ 何も書かないとき、Kotlinは何を返しているのか",
+      "translation": "④ ဘာမှ မရေးသောအခါ Kotlin သည် မည်သည့်အရာကို ပြန်ပေးနေသနည်း"
+    },
+    {
+      "source": "Kotlinには、戻り値がないことを表す <code>Unit</code> という型があります。<code>sum2</code> のように何も書かなかった関数は、<code>Unit</code> を返す関数として扱われます。<code>fun sum2(a: Int, b: Int): Unit</code> と書いても同じ意味ですが、<strong>ふつうは書きません。</strong>省くのが既定の書き方です。",
+      "translation": "Kotlin တွင် ပြန်ပေးမည့်တန်ဖိုး မရှိကြောင်းကို ပြသသော <code>Unit</code> ဟူသော type ရှိပါသည်။ <code>sum2</code> ကဲ့သို့ ဘာမှ မရေးထားသော function သည် <code>Unit</code> ကို ပြန်ပေးသော function အဖြစ် သတ်မှတ်ခံရပါသည်။ <code>fun sum2(a: Int, b: Int): Unit</code> ဟု ရေးလျှင်လည်း အဓိပ္ပါယ် တူညီသော်လည်း <strong>ပုံမှန်အားဖြင့် မရေးပါ။</strong> ဖြုတ်ထားခြင်းမှာ ပုံမှန် ရေးသားပုံ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>main</code> の中の <code>sum2(1, 2)</code> を <code>val ret2 = sum2(1, 2)</code> に書き換え、その下に <code>println(ret2)</code> を1行足してRunします。確かめたら、足した行を消し、<code>sum2(1, 2)</code> の形に戻します。",
+      "translation": "<code>main</code> ၏ အထဲရှိ <code>sum2(1, 2)</code> ကို <code>val ret2 = sum2(1, 2)</code> သို့ ပြောင်းရေးပြီး ၎င်းအောက်တွင် <code>println(ret2)</code> ကို 1 ကြောင်း ထပ်ထည့်၍ Run ပါ။ စစ်ဆေးပြီးပါက ထပ်ထည့်လိုက်သော စာကြောင်းကို ဖျက်ပြီး <code>sum2(1, 2)</code> ပုံစံသို့ ပြန်ထားပါ။"
+    },
+    {
+      "source": "出力は3行になり、3行目に <code>kotlin.Unit</code> と出ます。<strong>「何も返さない」ように見える関数も、値を1つ返しています。</strong>ふだんはその値を受け取らないので、目に見えないだけです。",
+      "translation": "Output သည် 3 ကြောင်းဖြစ်သွားပြီး 3 ကြောင်းမြောက်တွင် <code>kotlin.Unit</code> ဟု ထွက်လာပါမည်။ <strong>“ဘာမှ ပြန်မပေး” သကဲ့သို့ ထင်ရသော function သည်လည်း တန်ဖိုး 1 ခုကို ပြန်ပေးနေပါသည်။</strong> ပုံမှန်အားဖြင့် ၎င်းတန်ဖိုးကို လက်ခံမရယူသောကြောင့် မျက်စိဖြင့် မမြင်ရခြင်းသာ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Javaの <code>void</code> は型ではないので、<code>int x = sum2(1, 2);</code> のように結果を変数へ入れることはできません。Swiftの <code>Void</code> は空のタプル <code>()</code> の別名で、Kotlinの <code>Unit</code> と同じ発想です。<strong>Javaだけが「値が無い」を型の外側で表しています。</strong>",
+      "translation": "Java ၏ <code>void</code> သည် type မဟုတ်သောကြောင့် <code>int x = sum2(1, 2);</code> ကဲ့သို့ ရလဒ်ကို variable ထဲသို့ ထည့်၍ မရနိုင်ပါ။ Swift ၏ <code>Void</code> သည် အလွတ် tuple <code>()</code> ၏ အခြားအမည်ဖြစ်ပြီး Kotlin ၏ <code>Unit</code> နှင့် သဘောတရား တူညီပါသည်။ <strong>Java တွင်သာ “တန်ဖိုး မရှိ” ဆိုသည်ကို type ၏ ပြင်ပတွင် ဖော်ပြထားပါသည်။</strong>"
+    },
+    {
+      "source": "書くときに覚えるのは1つだけです。<strong>戻り値がなければ、かっこのうしろには何も書かない。</strong>",
+      "translation": "ရေးသည့်အခါတွင် မှတ်ထားရန်မှာ 1 ချက်တည်းသာ ဖြစ်ပါသည်။ <strong>ပြန်ပေးမည့်တန်ဖိုး မရှိပါက ဂွင်း၏ အနောက်တွင် ဘာမှ မရေးပါ။</strong>"
+    },
+    {
+      "source": "<code>: Unit</code> と書いても動きますが、この教材では書きません。<strong>Kotlinのふつうの書き方は、省いた形です。</strong>",
+      "translation": "<code>: Unit</code> ဟု ရေးလျှင်လည်း အလုပ်လုပ်သော်လည်း ဤသင်ခန်းစာတွင် မရေးပါ။ <strong>Kotlin ၏ ပုံမှန် ရေးသားပုံမှာ ဖြုတ်ထားသော ပုံစံဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "2行を出せた。<code>val ret2 = sum2(1, 2)</code> に書き換えて <code>kotlin.Unit</code> が出ることを確かめ、元の形に戻した。",
+      "translation": "စာကြောင်း 2 ကြောင်းကို ထုတ်နိုင်ခဲ့ပါသည်။ <code>val ret2 = sum2(1, 2)</code> သို့ ပြောင်းရေး၍ <code>kotlin.Unit</code> ထွက်လာကြောင်းကို စစ်ဆေးပြီးနောက် မူလပုံစံသို့ ပြန်ထားခဲ့ပါသည်။"
+    },
+    {
+      "source": "STEP 17 · 3コマ目 · 目安 15分",
+      "translation": "STEP 17 · 3 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 15 မိနစ်"
+    },
+    {
+      "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。<strong>エラーのメッセージは、文言ではなく意味だけを読みます。</strong>言い回しは IntelliJ IDEA と Kotlin のバージョンで変わります。",
+      "translation": "ဤနေရာမှစ၍ ကိုယ်တိုင် ပြောင်းရေးပါမည်။ <strong>1 ခု ပြောင်းမည် → ခန့်မှန်းမည် → Run မည်</strong> ဆိုသည့် အစီအစဉ်ဖြစ်ပါသည်။ အဖြေကို စမ်းသပ်ပြီးမှသာ ဖွင့်ကြည့်ပါ။ <strong>Error မက်ဆေ့ချ်များတွင် စကားအသုံးအနှုန်းကို မဟုတ်ဘဲ အဓိပ္ပါယ်ကိုသာ ဖတ်ပါ။</strong> စကားအသုံးအနှုန်းမှာ IntelliJ IDEA နှင့် Kotlin ၏ version အပေါ် မူတည်၍ ပြောင်းလဲနိုင်ပါသည်။"
+    },
+    {
+      "source": "練習A · 引数を3つに増やす（必須・6分）",
+      "translation": "လေ့ကျင့်ခန်း A · Argument ကို 3 ခုသို့ တိုးရန် (မဖြစ်မနေ · 6 မိနစ်)"
+    },
+    {
+      "source": "<code>sum</code> の引数を3つに増やします。<code>fun sum(a: Int, b: Int, c: Int): Int</code> にし、中身も <code>return a + b + c</code> に書き換えます。<strong><code>main</code> の <code>sum(1, 2)</code> はそのままにして</strong>、Runを押す前にその行を見てください。",
+      "translation": "<code>sum</code> ၏ argument ကို 3 ခုသို့ တိုးပါမည်။ <code>fun sum(a: Int, b: Int, c: Int): Int</code> သို့ ပြောင်းပြီး အထဲရှိအရာကိုလည်း <code>return a + b + c</code> သို့ ပြောင်းရေးပါ။ <strong><code>main</code> ရှိ <code>sum(1, 2)</code> ကို ထိုအတိုင်း ထားပြီး</strong> Run မနှိပ်မီ ထိုစာကြောင်းကို ကြည့်ပါ။"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> の行に赤い波線が出て、Runできません。3つ必要な引数に2つしか渡していないので、<strong>足りない引数がある</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "<code>sum(1, 2)</code> စာကြောင်းတွင် အနီရောင် လှိုင်းတွန့်မျဉ်းပေါ်လာပြီး Run ၍ မရနိုင်ပါ။ လိုအပ်သော argument 3 ခုတွင် 2 ခုသာ ပေးထားသောကြောင့် <strong>မလုံလောက်သော argument ရှိသည်</strong> ဆိုသည့် အဓိပ္ပါယ်မျိုးရှိသော မက်ဆေ့ချ် ထွက်လာပါမည်။"
+    },
+    {
+      "source": "呼び出しを <code>sum(1, 2, 3)</code> に直すとRunでき、1行目が <code>6</code> になります。確かめたら、宣言も呼び出しも元の2つに戻します。",
+      "translation": "ခေါ်ယူခြင်းကို <code>sum(1, 2, 3)</code> သို့ ပြင်လိုက်ပါက Run နိုင်မည်ဖြစ်ပြီး ပထမစာကြောင်းသည် <code>6</code> ဖြစ်သွားပါမည်။ စစ်ဆေးပြီးပါက ကြေညာခြင်းနှင့် ခေါ်ယူခြင်း နှစ်ခုစလုံးကို မူလ 2 ခုပုံစံသို့ ပြန်ထားပါ။"
+    },
+    {
+      "source": "Javaでも同じ間違いはコンパイルエラーになります。<strong>引数の数が合っているかは、KotlinもJavaもSwiftも、動かす前に確かめてくれます。</strong>",
+      "translation": "Java တွင်လည်း တူညီသော အမှားသည် compile error ဖြစ်သွားပါမည်။ <strong>Argument အရေအတွက် ကိုက်ညီမှု ရှိမရှိကို Kotlin, Java နှင့် Swift တို့ 3 ခုစလုံးတွင် မ run မီမှာပင် စစ်ဆေးပေးပါသည်။</strong>"
+    },
+    {
+      "source": "練習B · 戻り値の型を変える（必須・4分）",
+      "translation": "လေ့ကျင့်ခန်း B · ပြန်ပေးမည့် type ကို ပြောင်းရန် (မဖြစ်မနေ · 4 မိနစ်)"
+    },
+    {
+      "source": "<code>sum</code> の戻り値の型を <code>: Int</code> から <code>: String</code> に書き換えます。中身の <code>return a + b</code> はそのままにして、Runを押す前にその行を見てください。",
+      "translation": "<code>sum</code> ၏ ပြန်ပေးမည့် type ကို <code>: Int</code> မှ <code>: String</code> သို့ ပြောင်းရေးပါမည်။ အထဲရှိ <code>return a + b</code> ကို ထိုအတိုင်း ထားပြီး Run မနှိပ်မီ ထိုစာကြောင်းကို ကြည့်ပါ။"
+    },
+    {
+      "source": "<code>return a + b</code> の行に赤い波線が出て、Runできません。<code>a + b</code> は <code>Int</code> なのに、<code>String</code> を返すと宣言しているからです。<strong>宣言した型と、返している型が合っていない</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "<code>return a + b</code> စာကြောင်းတွင် အနီရောင် လှိုင်းတွန့်မျဉ်းပေါ်လာပြီး Run ၍ မရနိုင်ပါ။ <code>a + b</code> သည် <code>Int</code> ဖြစ်သော်လည်း <code>String</code> ကို ပြန်ပေးမည်ဟု ကြေညာထားသောကြောင့် ဖြစ်ပါသည်။ <strong>ကြေညာထားသော type နှင့် ပြန်ပေးနေသော type မကိုက်ညီပါ</strong> ဆိုသည့် အဓိပ္ပါယ်မျိုးရှိသော မက်ဆေ့ချ် ထွက်လာပါမည်။"
+    },
+    {
+      "source": "<strong>末尾に書いた <code>: 型</code> は、飾りではなく約束です。</strong> Kotlinは、その約束が守られているかを、書いている最中に確かめます。Javaの <code>static String sum(...)</code>、Swiftの <code>-&gt; String</code> でも、同じように止まります。確かめたら <code>: Int</code> に戻します。",
+      "translation": "<strong>အဆုံးတွင် ရေးထားသော <code>: 型</code> သည် အလှဆင်ထားခြင်း မဟုတ်ဘဲ ကတိကဝတ် ဖြစ်ပါသည်။</strong> Kotlin သည် ၎င်းကတိကဝတ်ကို လိုက်နာခြင်း ရှိမရှိကို ရေးနေစဉ်မှာပင် စစ်ဆေးပေးပါသည်။ Java ၏ <code>static String sum(...)</code> နှင့် Swift ၏ <code>-&gt; String</code> တွင်လည်း ထိုနည်းတူစွာ ရပ်တန့်သွားပါမည်။ စစ်ဆေးပြီးပါက <code>: Int</code> သို့ ပြန်ထားပါ။"
+    },
+    {
+      "source": "練習C · return を消す（必須・2分）",
+      "translation": "လေ့ကျင့်ခန်း C · return ကို ဖျက်ရန် (မဖြစ်မနေ · 2 မိနစ်)"
+    },
+    {
+      "source": "<code>sum</code> の中の <code>return</code> だけを消して、<code>a + b</code> の1行にします。Runを押す前に、関数の閉じかっこ <code>}</code> のあたりを見てください。",
+      "translation": "<code>sum</code> ၏ အထဲရှိ <code>return</code> ကိုသာ ဖျက်ပြီး <code>a + b</code> စာကြောင်း 1 ကြောင်းတည်းအဖြစ် ထားပါ။ Run မနှိပ်မီ function ၏ အပိတ်ဂွင်း <code>}</code> အနီးတဝိုက်ကို ကြည့်ပါ။"
+    },
+    {
+      "source": "赤い波線が出て、Runできません。<code>: Int</code> と宣言したのに値を返していないので、<strong><code>return</code> が足りない</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "အနီရောင် လှိုင်းတွန့်မျဉ်းပေါ်လာပြီး Run ၍ မရနိုင်ပါ။ <code>: Int</code> ဟု ကြေညာထားသော်လည်း တန်ဖိုး ပြန်မပေးသောကြောင့် <strong><code>return</code> မလုံလောက်ပါ</strong> ဆိုသည့် အဓိပ္ပါယ်မျိုးရှိသော မက်ဆေ့ချ် ထွက်လာပါမည်။"
+    },
+    {
+      "source": "直し方は2つです。<code>return</code> を書き戻すか、<code>: Int</code> のほうを消して <code>sum2</code> と同じ「戻り値のない関数」にするかです。ここでは <code>return</code> を書き戻します。",
+      "translation": "ပြင်ဆင်ရန် နည်းလမ်း 2 ခု ရှိပါသည်။ <code>return</code> ကို ပြန်ရေးမည် (သို့မဟုတ်) <code>: Int</code> ကို ဖျက်ပြီး <code>sum2</code> ကဲ့သို့ “ပြန်ပေးမည့်တန်ဖိုး မပါဝင်သော function” အဖြစ် ထားမည် ဖြစ်ပါသည်။ ဤနေရာတွင် <code>return</code> ကို ပြန်ရေးပါမည်။"
+    },
+    {
+      "source": "同じ3つの間違いを、JavaとSwiftでしたとき",
+      "translation": "တူညီသော အမှား 3 ခုကို Java နှင့် Swift တွင် လုပ်ဆောင်သောအခါ"
+    },
+    {
+      "source": "引数の数・戻り値の型・<code>return</code> の有無は、<strong>3つの言語すべてが動かす前に確かめます。</strong> ここはKotlinで新しく覚えることではありません。",
+      "translation": "Argument အရေအတွက်၊ ပြန်ပေးမည့် type နှင့် <code>return</code> ရှိမရှိကို <strong>ဘာသာစကား 3 မျိုးစလုံးတွင် မ run မီမှာပင် စစ်ဆေးပေးပါသည်။</strong> ဤအချက်သည် Kotlin တွင် အသစ်မှတ်သားရမည့်အရာ မဟုတ်ပါ။"
+    },
+    {
+      "source": "ただし <code>return</code> の省略だけは違います。<strong>Swiftは、本体が1つの式だけなら <code>return</code> を省けます。</strong> Kotlinは、かっこ <code>{ }</code> で本体を書いた関数では省けません。<code>: Int</code> と宣言したら、<code>return</code> で返します。",
+      "translation": "သို့သော် <code>return</code> ကို ဖြုတ်နိုင်မှုမှာ ကွာခြားပါသည်။ <strong>Swift သည် အတွင်းပိုင်း၌ expression 1 ခုတည်းသာ ရှိပါက <code>return</code> ကို ဖြုတ်နိုင်ပါသည်။</strong> Kotlin သည် ဂွင်း <code>{ }</code> ဖြင့် အတွင်းပိုင်းကို ရေးထားသော function တွင် ဖြုတ်၍ မရပါ။ <code>: Int</code> ဟု ကြေညာပါက <code>return</code> ဖြင့် ပြန်ပေးရပါမည်။"
+    },
+    {
+      "source": "2コマ目と同じで、<strong>覚えるのはメッセージの文言ではなく、どの行が赤くなったかと、その意味です。</strong>",
+      "translation": "2 ကြိမ်မြောက် အတန်းနှင့် တူညီပြီး <strong>မှတ်သားရမည်မှာ မက်ဆေ့ချ်၏ စကားအသုံးအနှုန်း မဟုတ်ဘဲ မည်သည့်စာကြောင်း အနီရောင်ပြောင်းသွားသနည်းနှင့် ၎င်း၏ အဓိပ္ပါယ်ကို ဖြစ်ပါသည်။</strong>"
+    },
+    {
+      "source": "練習A・B・Cで書き換えたところを、すべて元に戻します。",
+      "translation": "လေ့ကျင့်ခန်း A, B, C တွင် ပြောင်းရေးခဲ့သော နေရာများ အားလုံးကို မူလအတိုင်း ပြန်ထားပါ။"
+    },
+    {
+      "source": "<code>fun sum(a: Int, b: Int): Int</code> と <code>return a + b</code>、<code>sum(1, 2)</code> の3か所を確かめます。",
+      "translation": "<code>fun sum(a: Int, b: Int): Int</code> နှင့် <code>return a + b</code>၊ <code>sum(1, 2)</code> ဟူသော နေရာ 3 ခုကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "Runし、STEP 16 と同じ2行に戻ったことを確かめます。",
+      "translation": "Run ပြီး STEP 16 နှင့် တူညီသော စာကြောင်း 2 ကြောင်းသို့ ပြန်လည်ရောက်ရှိသွားကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "練習A・B・Cを試し、引数の数・戻り値の型・<code>return</code> が合っていないと動かせないことを確かめた。最後に元の2行へ戻した。",
+      "translation": "လေ့ကျင့်ခန်း A, B, C ကို စမ်းသပ်ပြီး argument အရေအတွက်၊ ပြန်ပေးမည့် type နှင့် <code>return</code> တို့ မကိုက်ညီပါက run ၍ မရနိုင်ကြောင်းကို စစ်ဆေးခဲ့ပါသည်။ နောက်ဆုံးတွင် မူလ စာကြောင်း 2 ကြောင်းသို့ ပြန်လည်ပြောင်းလဲခဲ့ပါသည်။"
+    },
+    {
+      "source": "STEP 18 · 3コマ目 · 目安 15分",
+      "translation": "STEP 18 · 3 ကြိမ်မြောက် အတန်း · ခန့်မှန်းခြေ 15 မိနစ်"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> が返した値が <code>ret</code> に入り、<code>main</code> の <code>println(ret)</code> が出している。",
+      "translation": "<code>sum(1, 2)</code> မှ ပြန်ပေးသော တန်ဖိုးသည် <code>ret</code> ထဲသို့ ဝင်သွားပြီး <code>main</code> ၏ <code>println(ret)</code> က ထုတ်ပေးနေပါသည်။"
+    },
+    {
+      "source": "<code>sum2(1, 2)</code> は計算結果を返さず、<code>sum2</code> の中の <code>println(a + b)</code> が出している。",
+      "translation": "<code>sum2(1, 2)</code> သည် တွက်ချက်မှုရလဒ်ကို ပြန်မပေးဘဲ <code>sum2</code> ၏ အထဲရှိ <code>println(a + b)</code> က ထုတ်ပေးနေပါသည်။"
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<strong><code>: Int</code> と書いた場所と、何も書かなかった場所</strong>を指さして説明します。",
+      "translation": "ဇယားအတိုင်း ဖြစ်သွားပါက ဆရာ့ကို မျက်နှာပြင်ကို ပြသပြီး <strong><code>: Int</code> ဟု ရေးထားသော နေရာနှင့် ဘာမှ မရေးထားသော နေရာ</strong> ကို လက်ညှိုးထိုး၍ ရှင်းပြပါ။"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex03</code> も忘れずに入れます。",
+      "translation": "ယခုအထိ ရိုက်ထည့်ခဲ့သော <code>main.kt</code> ၏ အပြည့်အစုံ ဖြစ်ပါသည်။ ပထမစာကြောင်းရှိ <code>package ex03</code> ကိုလည်း မမေ့ဘဲ ထည့်ပါ။"
+    },
+    {
+      "source": "② Javaの完成コードと、Swiftの関数宣言を比べる",
+      "translation": "② Java ၏ ပြီးမြောက်သော code နှင့် Swift ၏ function ကြေညာခြင်းကို နှိုင်းယှဉ်ရန်"
+    },
+    {
+      "source": "Javaで増えたのは、<strong>入口を包むクラスと、<code>void</code> と、行末の <code>;</code> の3つ</strong>です。処理そのものは同じです。",
+      "translation": "Java တွင် တိုးလာသောအရာမှာ <strong>အဝင်ကို ထုပ်ပိုးထားသော class, <code>void</code> နှင့် စာကြောင်းအဆုံးရှိ <code>;</code> ဟူ၍ 3 ခု</strong> ဖြစ်ပါသည်။ လုပ်ဆောင်ချက်ကိုယ်တိုင်မှာ တူညီပါသည်။"
+    },
+    {
+      "source": "Kotlinは <code>sum</code> も <code>sum2</code> もファイルの直下に置けます。Javaは、どちらもクラスの中の <code>static</code> メソッドにします。<strong>1コマ目から <code>fun main()</code> をクラスなしで書けていたのと、同じしくみです。</strong>",
+      "translation": "Kotlin သည် <code>sum</code> နှင့် <code>sum2</code> ကို ဖိုင်၏ အောက်တိုက်ရိုက် ထားရှိနိုင်ပါသည်။ Java သည် ၎င်းတို့နှစ်ခုစလုံးကို class အထဲရှိ <code>static</code> method အဖြစ် ထားရှိရပါမည်။ <strong>1 ကြိမ်မြောက် အတန်းကတည်းက <code>fun main()</code> ကို class မပါဘဲ ရေးနိုင်ခဲ့ခြင်းနှင့် အလုပ်လုပ်ပုံ တူညီပါသည်။</strong>"
+    },
+    {
+      "source": "Swiftの2つの宣言は、Kotlinと形がよく似ています。<strong>宣言の先頭行で違うのは <code>fun</code> と <code>func</code>、そして戻り値の <code>: Int</code> と <code>-&gt; Int</code> の2か所です。</strong>本体の出力は、1コマ目と同じく <code>println</code> と <code>print</code> の違いがあります。",
+      "translation": "Swift ၏ ကြေညာခြင်း 2 ခုသည် Kotlin နှင့် ပုံစံများစွာ ဆင်တူပါသည်။ <strong>ကြေညာခြင်း၏ ပထမစာကြောင်းတွင် ကွာခြားသည်မှာ <code>fun</code> နှင့် <code>func</code>၊ ပြီးနောက် ပြန်ပေးမည့်တန်ဖိုးဖြစ်သော <code>: Int</code> နှင့် <code>-&gt; Int</code> ဟူ၍ နေရာ 2 ခု ဖြစ်ပါသည်။</strong> အတွင်းပိုင်း၏ output မှာ 1 ကြိမ်မြောက် အတန်းနည်းတူ <code>println</code> နှင့် <code>print</code> ကွာခြားမှု ရှိပါသည်။"
+    },
+    {
+      "source": "戻り値のない <code>sum2</code> は、Kotlinでも Swift でもかっこのうしろが空です。<strong>Javaだけが <code>void</code> を書きます。</strong>",
+      "translation": "ပြန်ပေးမည့်တန်ဖိုး မပါဝင်သော <code>sum2</code> သည် Kotlin နှင့် Swift နှစ်ခုစလုံးတွင် ဂွင်း၏ အနောက်၌ အလွတ်ဖြစ်ပါသည်။ <strong>Java တွင်သာ <code>void</code> ကို ရေးရပါသည်။</strong>"
+    },
+    {
+      "source": "③ ex01・ex02・ex03 が並んでいることを確かめる",
+      "translation": "③ ex01, ex02, ex03 တို့ ယှဉ်လျက်ရှိကြောင်းကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることを確かめます。",
+      "translation": "ဘယ်ဘက်ရှိ <strong>プロジェクト</strong> (project) tool window တွင် <code>src</code> ကို ဖွင့်ပြီး <code>ex01</code>, <code>ex02</code>, <code>ex03</code> တို့ ယှဉ်လျက်ရှိကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "<code>ex01</code> と <code>ex02</code> の <code>main.kt</code> を開きます。前の回に書いたコードが、そのまま残っています。",
+      "translation": "<code>ex01</code> နှင့် <code>ex02</code> ၏ <code>main.kt</code> ကို ဖွင့်ပါ။ ယခင်အတန်းတွင် ရေးခဲ့သော code သည် ထိုအတိုင်း ကျန်ရှိနေပါသည်။"
+    },
+    {
+      "source": "<code>fun main()</code> が3つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。",
+      "translation": "<code>fun main()</code> 3 ခု ရှိသော်လည်း package မတူသောကြောင့် အခြား ပရိုဂရမ်တစ်ခု ဖြစ်ပါသည်။ Run လိုသော ဖိုင်ကို ဖွင့်ပြီး ထို <code>fun main()</code> ၏ ဘယ်ဘက်ရှိ ▷ ကို နှိပ်ပါ။"
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が同じプロジェクトに並んでいることも確かめた。",
+      "translation": "ပြီးစီးမှု စစ်ဆေးခြင်းကို ပြုလုပ်ပြီး ဆရာ့ကို မျက်နှာပြင်ကို ပြသခဲ့ပါသည်။ <code>ex01</code>, <code>ex02</code>, <code>ex03</code> တို့သည် တူညီသော project တွင် ယှဉ်လျက်ရှိကြောင်းကိုလည်း စစ်ဆေးခဲ့ပါသည်။"
+    },
+    {
+      "source": "<strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の型は3つの言語で書く位置か記号が違います。書く順番や記号が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。",
+      "translation": "<strong><code>fun</code> ဖြင့် စတင်သည် → argument သည် <code>名前: 型</code> → ပြန်ပေးမည့်တန်ဖိုးသည် ဂွင်း၏ အနောက်တွင် <code>: 型</code> → မရှိသောအခါ ဘာမှ မရေးပါ။</strong><br>Argument ၏ အစီအစဉ်သည် Swift နှင့် တူညီပြီး Java နှင့် ပြောင်းပြန်ဖြစ်ကာ ပြန်ပေးမည့် type မှာ ဘာသာစကား 3 မျိုးတွင် ရေးရမည့် နေရာ သို့မဟုတ် သင်္ကေတ ကွာခြားပါသည်။ ရေးရမည့် အစီအစဉ်နှင့် သင်္ကေတ ကွာခြားရုံသာဖြစ်ပြီး လုပ်ဆောင်နေသောအရာမှာ Java ၏ method၊ Swift ၏ function တို့နှင့် အတိအကျ တူညီပါသည်။"
     },
     {
       "source": "変える場所",
