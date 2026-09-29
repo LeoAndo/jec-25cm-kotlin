@@ -3,12 +3,212 @@
   "language": "zh-Hant-TW",
   "entries": [
     {
+      "source": "JavaとSwiftを書ける人のためのKotlin入門。全6コマ・11演習で、変数・Null安全・関数・条件式・繰り返し・クラス・アクセサ・data class・スマートキャスト・拡張関数・map・by lazyを、他言語との差分で確かめる授業用教科書。",
+      "translation": "適合會寫 Java 和 Swift 的人的 Kotlin 入門。全 6 堂課、11 個演習，用與其他語言的差異來確認變數、空值安全、函式、條件式、迴圈、類別、存取子、data class、智慧型轉型、擴充函式、map、by lazy 的課堂用課本。"
+    },
+    {
+      "source": "K01HelloKotlin — Kotlinを書き始める | Kotlin演習",
+      "translation": "K01HelloKotlin — 開始撰寫 Kotlin | Kotlin 程式實作"
+    },
+    {
       "source": "本文へ移動",
       "translation": "跳到主要內容"
     },
     {
       "source": "JEC / Kotlin演習",
       "translation": "JEC / Kotlin 程式實作"
+    },
+    {
+      "source": "授業用教科書 · Kotlin + IntelliJ IDEA",
+      "translation": "課堂用課本 · Kotlin + IntelliJ IDEA"
+    },
+    {
+      "source": "CONTENTS / 学習の順番",
+      "translation": "CONTENTS / 學習順序"
+    },
+    {
+      "source": "学習ステップ",
+      "translation": "學習步驟"
+    },
+    {
+      "source": "1コマ目 · STEP 00〜06",
+      "translation": "第1堂課 · STEP 00〜06"
+    },
+    {
+      "source": "00　この単元のゴール",
+      "translation": "00　本單元的目標"
+    },
+    {
+      "source": "01　Playgroundで動かす",
+      "translation": "01　在 Playground 執行"
+    },
+    {
+      "source": "02　プロジェクトを作る",
+      "translation": "02　建立專案"
+    },
+    {
+      "source": "03　val と var",
+      "translation": "03　val 與 var"
+    },
+    {
+      "source": "04　数の型",
+      "translation": "04　數字型別"
+    },
+    {
+      "source": "05　ミニ練習",
+      "translation": "05　迷你練習"
+    },
+    {
+      "source": "06　完成",
+      "translation": "06　完成"
+    },
+    {
+      "source": "2コマ目 · STEP 07〜12",
+      "translation": "第2堂課 · STEP 07〜12"
+    },
+    {
+      "source": "07　2コマ目のゴール",
+      "translation": "07　第2堂課的目標"
+    },
+    {
+      "source": "08　ex02 を作る",
+      "translation": "08　建立 ex02"
+    },
+    {
+      "source": "09　String と String?",
+      "translation": "09　String 與 String?"
+    },
+    {
+      "source": "10　安全呼び出し ?.",
+      "translation": "10　安全呼叫 ?."
+    },
+    {
+      "source": "11　ミニ練習",
+      "translation": "11　迷你練習"
+    },
+    {
+      "source": "12　完成",
+      "translation": "12　完成"
+    },
+    {
+      "source": "3コマ目 · STEP 13〜18",
+      "translation": "第3堂課 · STEP 13〜18"
+    },
+    {
+      "source": "13　3コマ目のゴール",
+      "translation": "13　第3堂課的目標"
+    },
+    {
+      "source": "14　ex03 を作る",
+      "translation": "14　建立 ex03"
+    },
+    {
+      "source": "15　戻り値のある関数",
+      "translation": "15　有回傳值的函式"
+    },
+    {
+      "source": "16　戻り値のない関数",
+      "translation": "16　沒有回傳值的函式"
+    },
+    {
+      "source": "17　ミニ練習",
+      "translation": "17　迷你練習"
+    },
+    {
+      "source": "18　完成",
+      "translation": "18　完成"
+    },
+    {
+      "source": "4コマ目 · STEP 19〜24",
+      "translation": "第4堂課 · STEP 19〜24"
+    },
+    {
+      "source": "19　4コマ目のゴール",
+      "translation": "19　第4堂課的目標"
+    },
+    {
+      "source": "20　ex05 と条件式",
+      "translation": "20　ex05 與條件式"
+    },
+    {
+      "source": "21　ex06 と繰り返し",
+      "translation": "21　ex06 與迴圈"
+    },
+    {
+      "source": "22　ex04 とクラス",
+      "translation": "22　ex04 與類別"
+    },
+    {
+      "source": "23　ミニ練習",
+      "translation": "23　迷你練習"
+    },
+    {
+      "source": "24　完成",
+      "translation": "24　完成"
+    },
+    {
+      "source": "5コマ目 · STEP 25〜30",
+      "translation": "第5堂課 · STEP 25〜30"
+    },
+    {
+      "source": "25　5コマ目を始める",
+      "translation": "25　開始第5堂課"
+    },
+    {
+      "source": "26　ex08 とアクセサ",
+      "translation": "26　ex08 與存取子"
+    },
+    {
+      "source": "27　ex09 と data class",
+      "translation": "27　ex09 與 data class"
+    },
+    {
+      "source": "28　ex07 と拡張関数",
+      "translation": "28　ex07 與擴充函式"
+    },
+    {
+      "source": "29　ミニ練習",
+      "translation": "29　迷你練習"
+    },
+    {
+      "source": "30　完成",
+      "translation": "30　完成"
+    },
+    {
+      "source": "6コマ目 · STEP 31〜35",
+      "translation": "第6堂課 · STEP 31〜35"
+    },
+    {
+      "source": "31　6コマ目を始める",
+      "translation": "31　開始第6堂課"
+    },
+    {
+      "source": "32　ex10 と map",
+      "translation": "32　ex10 與 map"
+    },
+    {
+      "source": "33　ex11 と lazy",
+      "translation": "33　ex11 與 lazy"
+    },
+    {
+      "source": "34　ミニ練習",
+      "translation": "34　迷你練習"
+    },
+    {
+      "source": "35　K01の完成",
+      "translation": "35　K01完成"
+    },
+    {
+      "source": "0 / 36 ステップ確認済み",
+      "translation": "已確認 0 / 36 個步驟"
+    },
+    {
+      "source": "学習の進み具合",
+      "translation": "學習進度"
+    },
+    {
+      "source": "自分用のチェックです。",
+      "translation": "這是給自己確認用的。"
     },
     {
       "source": "困ったとき",
@@ -31,28 +231,2372 @@
       "translation": "共用：不同的 Android Studio 版本"
     },
     {
+      "source": "Kotlinを<br>書き始める",
+      "translation": "開始撰寫<br>Kotlin"
+    },
+    {
+      "source": "JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。",
+      "translation": "用 Java 和 Swift 能寫的東西，用 Kotlin 也能寫。<br>在這個單元中，我們會將你已經知道的處理替換成「如果用 Kotlin 該怎麼寫」。"
+    },
+    {
+      "source": "Java・Swift経験者向け",
+      "translation": "適合 Java・Swift 經驗者"
+    },
+    {
+      "source": "全6コマ · 11演習を収録",
+      "translation": "收錄全6堂課 · 11個演習"
+    },
+    {
+      "source": "予習なしで始められる",
+      "translation": "無需預習即可開始"
+    },
+    {
+      "source": "STEP 00 · 目安 5分",
+      "translation": "STEP 00 · 約5分鐘"
+    },
+    {
+      "source": "この単元のゴール",
+      "translation": "本單元的目標"
+    },
+    {
+      "source": "この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>です。",
+      "translation": "這門課是 <strong>Kotlin 程式實作</strong>。1堂課90分鐘，共15堂課。其中單元 <code>K01HelloKotlin</code> 是<strong>全6堂課</strong>。"
+    },
+    {
+      "source": "この教科書1冊で、<strong>全6コマ・11演習</strong>を進めます。1コマ目はSTEP 00〜06、2コマ目はSTEP 07〜12、3コマ目はSTEP 13〜18、4コマ目はSTEP 19〜24、5コマ目はSTEP 25〜30、6コマ目はSTEP 31〜35です。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。",
+      "translation": "用這1本課本，就能進行<strong>全6堂課、11個演習</strong>。第1堂課是 STEP 00〜06，第2堂課是 STEP 07〜12，第3堂課是 STEP 13〜18，第4堂課是 STEP 19〜24，第5堂課是 STEP 25〜30，第6堂課是 STEP 31〜35。<strong>今天要做哪裡，老師會在開始上課時指定。</strong>請從指定的 STEP 開始，從頭依序往下讀。"
+    },
+    {
+      "source": "6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>〜<code>ex11</code> のパッケージを足していきます。演習番号と授業順が違う回も、教科書のSTEPの順に進めます。",
+      "translation": "在這6堂課中，專案只會用到 <code>K01HelloKotlin</code> 這1個。隨著堂數增加，會在裡面加上 <code>ex01</code>〜<code>ex11</code> 的套件。即使是演習編號與上課順序不同的時候，也請依照課本上的 STEP 順序進行。"
+    },
+    {
+      "source": "みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。",
+      "translation": "各位都已經會寫 Java 和 Swift 了。所以這本課本不會講什麼是變數、什麼是型別。只會講以下2點："
+    },
+    {
+      "source": "<strong>Kotlinではどう書くのか</strong>。",
+      "translation": "<strong>用 Kotlin 該怎麼寫</strong>。"
+    },
+    {
+      "source": "<strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。",
+      "translation": "<strong>與 Java 和 Swift 有什麼不同，以及為什麼不同</strong>。"
+    },
+    {
+      "source": "Kotlinはどこで動く言語か",
+      "translation": "Kotlin 是在哪裡執行的語言"
+    },
+    {
+      "source": "Kotlinで書いたコードは、JVM（Java Virtual Machine）で動くJavaバイトコード（<code>class</code> ファイル）にコンパイルされます。つまり、Javaが動く環境ならKotlinも動きます。このような言語を <strong>JVM言語</strong> と呼びます。",
+      "translation": "用 Kotlin 寫的程式碼，會被編譯成在 JVM (Java Virtual Machine) 上執行的 Java 位元組碼 (<code>class</code> 檔案)。也就是說，只要是能執行 Java 的環境就能執行 Kotlin。這樣的語言稱為 <strong>JVM 語言</strong>。"
+    },
+    {
+      "source": "Kotlinの特徴",
+      "translation": "Kotlin 的特色"
+    },
+    {
+      "source": "中身",
+      "translation": "內容"
+    },
+    {
+      "source": "すでに知っていることとの関係",
+      "translation": "與已知事物的關係"
+    },
+    {
+      "source": "記述量が少ない",
+      "translation": "撰寫量少"
+    },
+    {
+      "source": "同じ処理でも、Javaより短く書ける。",
+      "translation": "即使是相同的處理，也能寫得比 Java 更短。"
+    },
+    {
+      "source": "省けた部分はコンパイラが補っています。何が省かれたのかを、この単元で1つずつ確かめます。",
+      "translation": "省去的部分是由編譯器補上的。這個單元會一一確認省去了什麼。"
+    },
+    {
+      "source": "Javaとの相互運用",
+      "translation": "與 Java 交互運作"
+    },
+    {
+      "source": "JavaのコードからKotlinを、KotlinのコードからJavaを呼べる。",
+      "translation": "可以從 Java 程式碼呼叫 Kotlin，也能從 Kotlin 程式碼呼叫 Java。"
+    },
+    {
+      "source": "全部をKotlinに書き換えなくても混在させられます。古いAndroidアプリにJavaが残っているのはこのためです。",
+      "translation": "不必把全部都改寫成 Kotlin 也能混合使用。舊的 Android 應用程式會留下 Java 就是因為這個原因。"
+    },
+    {
+      "source": "Null安全",
+      "translation": "空值安全"
+    },
+    {
+      "source": "nullを入れられる型と、入れられない型を、言語が区別する。",
+      "translation": "語言會區分可以放入 null 的型別與不能放入 null 的型別。"
+    },
+    {
+      "source": "Swiftのオプショナルと同じ発想です。",
+      "translation": "與 Swift 的 Optional 是相同的概念。"
+    },
+    {
+      "source": "Javaの資産が使える",
+      "translation": "可使用 Java 的資產"
+    },
+    {
+      "source": "Java用のライブラリやフレームワークをそのまま使える。",
+      "translation": "能直接使用 Java 用的函式庫與框架。"
+    },
+    {
+      "source": "JVM言語だからです。Kotlin用に作り直されるのを待つ必要はありません。",
+      "translation": "因為是 JVM 語言。不需要等著為 Kotlin 重新製作。"
+    },
+    {
+      "source": "同じ処理を3つの言語で並べる",
+      "translation": "將相同處理用3種語言並列"
+    },
+    {
+      "source": "名前を変数に入れて出力するだけのプログラムです。まず全体の差を見ます。細かいところは STEP 03 以降で1つずつ扱います。",
+      "translation": "這只是一個將名字放入變數並輸出的程式。首先看看整體的差異。詳細的部分在 STEP 03 之後會一一說明。"
+    },
+    {
+      "source": "Kotlinの入口は <code>fun main()</code> です。Javaのように、入口をクラスで包む必要がありません。<code>String[] args</code> にあたる引数も省けます。",
+      "translation": "Kotlin 的入口是 <code>fun main()</code>。不需要像 Java 那樣用類別把入口包起來。也能省略相當於 <code>String[] args</code> 的參數。"
+    },
+    {
+      "source": "Kotlinの <code>val</code> は、Javaの <code>final</code>、Swiftの <code>let</code> にあたります。",
+      "translation": "Kotlin 的 <code>val</code>，相當於 Java 的 <code>final</code>、Swift 的 <code>let</code>。"
+    },
+    {
+      "source": "型注釈はSwiftと同じく省けます。右辺から型が決まります。",
+      "translation": "型別註記和 Swift 一樣可以省略。會從右邊決定型別。"
+    },
+    {
+      "source": "文末のセミコロンはSwiftと同じく要りません。Javaとはここが違います。",
+      "translation": "句尾的分號和 Swift 一樣是不需要的。這點和 Java 不同。"
+    },
+    {
+      "source": "出力はKotlinが <code>println</code>、Javaが <code>System.out.println</code>、Swiftが <code>print</code> です。",
+      "translation": "輸出在 Kotlin 是 <code>println</code>，Java 是 <code>System.out.println</code>，Swift 是 <code>print</code>。"
+    },
+    {
+      "source": "JavaとSwiftを知っていれば、Kotlinは「差分」で覚えられます。この教科書は、その差分だけを並べていきます。",
+      "translation": "只要知道 Java 和 Swift，就能用「差異」來記住 Kotlin。這本課本只會並列那些差異。"
+    },
+    {
+      "source": "この単元で出てくるKotlinの言葉",
+      "translation": "本單元出現的 Kotlin 詞彙"
+    },
+    {
+      "source": "Kotlinの言葉",
+      "translation": "Kotlin 詞彙"
+    },
+    {
+      "source": "Javaでの対応",
+      "translation": "Java 中的對應"
+    },
+    {
+      "source": "Swiftでの対応",
+      "translation": "Swift 中的對應"
+    },
+    {
+      "source": "<code>final</code> を付けた変数",
+      "translation": "加上 <code>final</code> 的變數"
+    },
+    {
+      "source": "<code>final</code> を付けない変数",
+      "translation": "不加 <code>final</code> 的變數"
+    },
+    {
+      "source": "トップレベル関数",
+      "translation": "トップレベル関数 — 頂層函式"
+    },
+    {
+      "source": "クラスの <code>static</code> メソッド",
+      "translation": "類別的 <code>static</code> 方法"
+    },
+    {
+      "source": "グローバル関数",
+      "translation": "全域函式"
+    },
+    {
+      "source": "<code>int</code> / <code>double</code> / <code>float</code> とそのラッパークラス",
+      "translation": "<code>int</code> / <code>double</code> / <code>float</code> 與其包裝類別"
+    },
+    {
+      "source": "1コマ目のゴール（コンソールに出る4行）",
+      "translation": "第1堂課的目標 (顯示在主控台的4行)"
+    },
+    {
+      "source": "Runの結果 · この4行が出れば完成",
+      "translation": "Run 的結果 · 出現這4行就算完成"
+    },
+    {
+      "source": "この4行を出すまでを、STEP 00 から STEP 06 までの7つのステップに分けて進みます。",
+      "translation": "直到出現這4行為止，會分成從 STEP 00 到 STEP 06 的7個步驟來進行。"
+    },
+    {
+      "source": "1コマ目（90分）の進み方",
+      "translation": "第1堂課 (90分鐘) 的進行方式"
+    },
+    {
+      "source": "時間",
+      "translation": "時間"
+    },
+    {
+      "source": "進めるステップ",
+      "translation": "進行的步驟"
+    },
+    {
+      "source": "やること",
+      "translation": "要做的事"
+    },
+    {
+      "source": "前半（約35分）",
+      "translation": "前半 (約35分鐘)"
+    },
+    {
+      "source": "Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。",
+      "translation": "在 Playground 執行1行，然後在 IntelliJ IDEA 中建立 <code>K01HelloKotlin</code> 專案。"
+    },
+    {
+      "source": "後半（約55分）",
+      "translation": "後半 (約55分鐘)"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。",
+      "translation": "撰寫 <code>val</code> 與 <code>var</code>、數字型別，完成4行輸出。"
+    },
+    {
+      "source": "プロジェクトは <strong>自分で新規作成</strong>します。1コマ目の STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。",
+      "translation": "專案要<strong>自己新增</strong>。在第1堂課的 STEP 02 建立 <code>K01HelloKotlin</code>。從第2堂課開始，會重新開啟這個專案來接著寫，所以不會重新建立。"
+    },
+    {
+      "source": "<a1>完成プロジェクト</a1>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。",
+      "translation": "<a1>完成專案</a1>是從第一堂課開始隨時都能看的參考資料。在與自己寫的程式碼做比較時使用。"
+    },
+    {
+      "source": "この教科書の進め方",
+      "translation": "這本課本的進行方式"
+    },
+    {
+      "source": "書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。",
+      "translation": "閱讀寫法 → 輸入 → 用 Run 執行 → 確認與 Java、Swift 的差異。會以這個順序進行。即使在家沒有預習也能開始。"
+    },
+    {
+      "source": "分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。",
+      "translation": "在不懂的地方，用步驟編號做個記號吧。可以像「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」（我不懂 STEP 03 的 val 與 Java 的 var 之間的關係）這樣提問。"
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "在這裡停下來確認"
+    },
+    {
+      "source": "1コマ目に出す4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）を、上のゴールで確かめた。",
+      "translation": "已經在上面的目標確認過第1堂課要輸出的4行 (<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>) 了。"
+    },
+    {
+      "source": "できたらチェックします。できないときは、この画面を先生に見せましょう。",
+      "translation": "完成後請打勾。做不到時，請把這個畫面給老師看。"
+    },
+    {
+      "source": "次へ：Playgroundで動かす →",
+      "translation": "下一步：在 Playground 執行 →"
+    },
+    {
+      "source": "STEP 01 · 目安 10分",
+      "translation": "STEP 01 · 約10分鐘"
+    },
+    {
+      "source": "Kotlin Playgroundで動かす",
+      "translation": "在 Kotlin Playground 執行"
+    },
+    {
+      "source": "このステップのゴール",
+      "translation": "這個步驟的目標"
+    },
+    {
+      "source": "開発環境を用意する前に、ブラウザだけでKotlinの <code>fun main()</code> を実行します。",
+      "translation": "在準備開發環境之前，先只用瀏覽器來執行 Kotlin 的 <code>fun main()</code>。"
+    },
+    {
+      "source": "統合開発環境の準備は一手間かかります。最初の1行を動かすだけなら、ブラウザで動く <strong>Kotlin Playground</strong> で十分です。",
+      "translation": "準備整合開發環境需要費一點功夫。如果只是要執行第1行，用在瀏覽器上執行的 <strong>Kotlin Playground</strong> 就足夠了。"
+    },
+    {
+      "source": "① Playgroundを開く",
+      "translation": "① 開啟 Playground"
+    },
+    {
+      "source": "ブラウザで <a1>https://play.kotlinlang.org/</a1> を開きます。",
+      "translation": "在瀏覽器開啟 <a1>https://play.kotlinlang.org/</a1>。"
+    },
+    {
+      "source": "エディタと、その下に実行結果のウィンドウがある画面が出ます。",
+      "translation": "會出現編輯器，以及其下方有執行結果視窗的畫面。"
+    },
+    {
+      "source": "画面の場所",
+      "translation": "畫面上的位置"
     },
     {
       "source": "役割",
       "translation": "職責"
     },
     {
+      "source": "上の言語バージョンのメニュー",
+      "translation": "上方的語言版本選單"
+    },
+    {
+      "source": "Kotlinのバージョンを切り替えます。既定で最新版です。授業では変更しません。",
+      "translation": "用來切換 Kotlin 的版本。預設為最新版。上課時不會變更。"
+    },
+    {
+      "source": "共有のボタン",
+      "translation": "共用的按鈕"
+    },
+    {
+      "source": "いま書いているコードのURLを作ります。人に見せるときに使います。",
+      "translation": "建立目前正在撰寫的程式碼的 URL。在給別人看的時候使用。"
+    },
+    {
+      "source": "<strong>Run</strong> ボタン",
+      "translation": "<strong>Run</strong> 按鈕"
+    },
+    {
+      "source": "プログラムを実行します。",
+      "translation": "執行程式。"
+    },
+    {
+      "source": "ショートカットのボタン",
+      "translation": "快速鍵的按鈕"
+    },
+    {
+      "source": "キーボードショートカットの一覧を出します。",
+      "translation": "顯示鍵盤快速鍵清單。"
+    },
+    {
+      "source": "下の実行結果のウィンドウ",
+      "translation": "下方的執行結果視窗"
+    },
+    {
+      "source": "出力が出る場所です。Runすると自動で開きます。",
+      "translation": "顯示輸出的地方。執行 Run 就會自動開啟。"
+    },
+    {
+      "source": "② エディタの中身を置き換えて実行する",
+      "translation": "② 替換編輯器的內容並執行"
+    },
+    {
+      "source": "エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。",
+      "translation": "在編輯器中按一下，用 <kbd>⌘ A</kbd> 全選後，貼上以下程式碼。"
+    },
+    {
+      "source": "Playgroundのエディタ · 全体を置き換える",
+      "translation": "Playground 的編輯器 · 替換全部"
+    },
+    {
+      "source": "<strong>Run</strong> をクリックします。",
+      "translation": "請按一下 <strong>Run</strong>。"
+    },
+    {
+      "source": "下のウィンドウに <code>Hello, Kotlin!</code> が出れば成功です。",
+      "translation": "如果下方的視窗出現 <code>Hello, Kotlin!</code> 就算成功。"
+    },
+    {
+      "source": "③ 同じことを、JavaとSwiftではどこで試すか",
+      "translation": "③ 在 Java 和 Swift 中，要去哪裡測試同樣的事"
+    },
+    {
+      "source": "JavaのJShellやSwiftのREPLは、<strong>式を1つずつ</strong>打って結果を見る場所です。だから <code>System.out.println(…)</code> や <code>print(…)</code> の1行だけで動きます。",
+      "translation": "Java 的 JShell 和 Swift 的 REPL 是<strong>一個一個輸入運算式</strong>來觀看結果的地方。所以只輸入 <code>System.out.println(…)</code> 或 <code>print(…)</code> 的1行就能執行。"
+    },
+    {
+      "source": "Kotlin Playgroundは、<strong>ファイル1つ分をまるごと実行する</strong>場所です。だから入口の <code>fun main()</code> が要ります。<code>println(&quot;Hello, Kotlin!&quot;)</code> だけを貼っても実行されません。",
+      "translation": "Kotlin Playground 是<strong>將1整個檔案完整執行</strong>的地方。所以需要入口的 <code>fun main()</code>。只貼上 <code>println(&quot;Hello, Kotlin!&quot;)</code> 是不會執行的。"
+    },
+    {
+      "source": "Swiftのように「トップレベルに書いた文がそのまま上から実行される」わけでもありません。Kotlinの入口は、常に <code>fun main()</code> です。",
+      "translation": "也不像 Swift 那樣「寫在頂層的陳述式會直接從上面開始執行」。Kotlin 的入口始終是 <code>fun main()</code>。"
+    },
+    {
+      "source": "Playgroundの短所",
+      "translation": "Playground 的缺點"
+    },
+    {
+      "source": "実行結果が出るまでに時間がかかります。サーバー側でコンパイルして実行しているためです。",
+      "translation": "要花一些時間才會出現執行結果。因為是在伺服器端編譯並執行的。"
+    },
+    {
+      "source": "コード補完がほとんど効きません。型を確かめたり、候補から選んだりする書き方ができません。",
+      "translation": "程式碼補齊幾乎沒有作用。無法確認型別，或從候補名單中選擇寫法。"
+    },
+    {
+      "source": "この2つがあるので、この先は統合開発環境を使います。Playgroundは、短いコードを人に見せるときや、あとで文法を思い出したいときに使ってください。",
+      "translation": "因為有這2點，所以之後會使用整合開發環境。請在把簡短程式碼給別人看，或是之後想回憶語法時使用 Playground。"
+    },
+    {
+      "source": "Playgroundで <code>Hello, Kotlin!</code> を出せた。",
+      "translation": "已在 Playground 顯示 <code>Hello, Kotlin!</code> 了。"
+    },
+    {
+      "source": "次へ：プロジェクトを作る →",
+      "translation": "下一步：建立專案 →"
+    },
+    {
+      "source": "STEP 02 · 目安 20分",
+      "translation": "STEP 02 · 約20分鐘"
+    },
+    {
+      "source": "IntelliJ IDEAでプロジェクトを作る",
+      "translation": "在 IntelliJ IDEA 建立專案"
+    },
+    {
+      "source": "IntelliJ IDEA で <code>K01HelloKotlin</code> プロジェクトを作り、ウィザードが用意したコードをそのまま実行します。動くことを確かめてから、<code>src/ex01/main.kt</code> を自分で作ります。",
+      "translation": "在 IntelliJ IDEA 中建立 <code>K01HelloKotlin</code> 專案，然後直接執行精靈準備好的程式碼。確認可以執行後，再自己建立 <code>src/ex01/main.kt</code>。"
+    },
+    {
+      "source": "授業ではMacと <strong>IntelliJ IDEA 2026.3 EAP</strong> を使います。IntelliJ IDEA は、学校から借りているMacに<strong>インストール済み</strong>です。Launchpadで探すか、Spotlight（<kbd>⌘ Space</kbd>）に <code>IntelliJ</code> と打って開きます。",
+      "translation": "上課時會使用 Mac 和 <strong>IntelliJ IDEA 2026.3 EAP</strong>。IntelliJ IDEA <strong>已經安裝</strong>在向學校借來的 Mac 裡了。請在 Launchpad 中尋找，或在 Spotlight (<kbd>⌘ Space</kbd>) 輸入 <code>IntelliJ</code> 來開啟。"
+    },
+    {
+      "source": "① 新規プロジェクト… を選ぶ",
+      "translation": "① 選擇 新規プロジェクト… (新增專案…)"
+    },
+    {
+      "source": "IntelliJ IDEA を開きます。最初に出るのがホーム画面です。",
+      "translation": "開啟 IntelliJ IDEA。一開始出現的是主畫面。"
+    },
+    {
+      "source": "左上の <strong>IntelliJ IDEA Home</strong> をクリックして、メニューを開きます。",
+      "translation": "按一下左上的 <strong>IntelliJ IDEA Home</strong>，開啟選單。"
+    },
+    {
+      "source": "出てきた一覧から <strong>新規プロジェクト…</strong> を選びます。<strong>新規…</strong> ではありません。",
+      "translation": "從出現的清單中選擇 <strong>新規プロジェクト…</strong> (新增專案…)。不是 <strong>新規…</strong> (新增…)。"
+    },
+    {
+      "source": "すでに別のプロジェクトが開いているときは、いちばん上のメニューバーから <strong>ファイル → 新規 → プロジェクト…</strong> を選びます。",
+      "translation": "如果已經開啟了其他專案，請從最上方的選單列選擇 <strong>ファイル（檔案）→ 新規（新增）→ プロジェクト…（專案…）</strong>。"
+    },
+    {
+      "source": "ホーム画面の左上のメニューから <strong>新規プロジェクト…</strong> を選びます。 <a1>画像を大きく開く</a1>",
+      "translation": "從主畫面左上角的選單中選擇 <strong>新規プロジェクト…</strong>（新增專案…）。<a1>放大開啟圖片</a1>"
+    },
+    {
+      "source": "② ダイアログに、表のとおり入力する",
+      "translation": "② 依照表格在對話方塊中輸入"
+    },
+    {
+      "source": "<strong>新規プロジェクト</strong> のダイアログが開きます。次の7か所を、表のとおりに入力・選択します。",
+      "translation": "會開啟 <strong>新規プロジェクト</strong> (新增專案) 的對話方塊。請依照表格輸入、選擇以下7個地方。"
+    },
+    {
       "source": "項目",
       "translation": "項目"
+    },
+    {
+      "source": "入力・選択する内容",
+      "translation": "輸入、選擇的內容"
+    },
+    {
+      "source": "左の一覧",
+      "translation": "左側清單"
+    },
+    {
+      "source": "<strong>Kotlin</strong>。見出し <strong>新規プロジェクト</strong> の下に並ぶ4つのうちの2番目です。下の <strong>ジェネレーター</strong> の中からは選びません。",
+      "translation": "<strong>Kotlin</strong>。這是並列在 <strong>新規プロジェクト</strong> (新增專案) 標題下方的4個中的第2個。不要從下面的 <strong>ジェネレーター</strong> (產生器) 之中選擇。"
+    },
+    {
+      "source": "名前",
+      "translation": "名前 (名稱)"
     },
     {
       "source": "場所",
       "translation": "位置"
     },
     {
+      "source": "<code>~/Documents/Kotlin</code>（<strong>書類</strong> の中の <code>Kotlin</code> フォルダ。無ければ <strong>書類</strong> の中に作ります）。プロジェクト名は入れません。",
+      "translation": "<code>~/Documents/Kotlin</code> (<strong>書類</strong> (文件) 裡的 <code>Kotlin</code> 資料夾。如果沒有，請在 <strong>書類</strong> (文件) 裡建立)。不輸入專案名稱。"
+    },
+    {
+      "source": "ビルドシステム",
+      "translation": "ビルドシステム (建置系統)"
+    },
+    {
+      "source": "<strong>IntelliJ</strong>。<code>Kotlin</code>・<code>Maven</code>・<code>Gradle</code> は選びません。",
+      "translation": "<strong>IntelliJ</strong>。不選擇 <code>Kotlin</code>、<code>Maven</code>、<code>Gradle</code>。"
+    },
+    {
+      "source": "一覧に出ているものを、そのまま使います。",
+      "translation": "直接使用清單中出現的項目。"
+    },
+    {
+      "source": "サンプルコードの追加",
+      "translation": "サンプルコードの追加 (新增範例程式碼)"
+    },
+    {
+      "source": "チェックを<strong>入れたまま</strong>にします。",
+      "translation": "請<strong>保持勾選</strong>。"
+    },
+    {
+      "source": "コンパクトなプロジェクト構造を使用する",
+      "translation": "コンパクトなプロジェクト構造を使用する (使用精簡的專案結構)"
+    },
+    {
+      "source": "新規プロジェクトのダイアログ。左の一覧でKotlinが選ばれ、右は名前がK01HelloKotlin、場所が~/Documents/Kotlin、その下にプロジェクトは次に作成されます: ~/Documents/Kotlin/K01HelloKotlinと出ている。ビルドシステムはIntelliJ、JDKの欄、サンプルコードの追加とコンパクトなプロジェクト構造を使用するの両方にチェックが入り、右下に作成ボタンがある",
+      "translation": "新增專案對話方塊。左側清單選了 Kotlin，右側名稱是 K01HelloKotlin，位置是 ~/Documents/Kotlin，下方顯示 プロジェクトは次に作成されます (接下來會建立專案於)：~/Documents/Kotlin/K01HelloKotlin。建置系統是 IntelliJ、JDK 欄位、サンプルコードの追加 (新增範例程式碼) 與 コンパクトなプロジェクト構造を使用する (使用精簡的專案結構) 都有打勾，右下方有 作成 (建立) 按鈕。"
+    },
+    {
+      "source": "表の7か所は、この画面の中にあります。<strong>JDK</strong> の欄に出る名前は、Macによって変わります。 <a1>画像を大きく開く</a1>",
+      "translation": "表格的7個地方在這個畫面中。<strong>JDK</strong> 欄位出現的名稱會依 Mac 而異。 <a1>放大顯示圖片</a1>"
+    },
+    {
+      "source": "ビルドシステムに IntelliJ を選ぶ理由",
+      "translation": "在建置系統選擇 IntelliJ 的理由"
+    },
+    {
+      "source": "Gradleを使わないので、ビルドの設定ファイルが増えず、自分が書いたKotlinのファイルだけを見ればよくなるからです。",
+      "translation": "因為不使用 Gradle，建置的設定檔不會增加，只需要看自己寫的 Kotlin 檔案就可以了。"
+    },
+    {
+      "source": "入力できたら、<strong>場所</strong> の欄のすぐ下に出ている <strong>プロジェクトは次に作成されます: <code>~/Documents/Kotlin/K01HelloKotlin</code></strong> の行を読みます。この場所になっていることを確かめてから、右下の <strong>作成(C)</strong> を押します。",
+      "translation": "輸入完成後，請讀一下 <strong>場所</strong> (位置) 欄位正下方出現的 <strong>プロジェクトは次に作成されます (接下來會建立專案於)：<code>~/Documents/Kotlin/K01HelloKotlin</code></strong> 這行。確認是這個位置後，請按一下右下的 <strong>作成(C)</strong> (建立(C))。"
+    },
+    {
+      "source": "③ できあがった形を確かめる",
+      "translation": "③ 確認完成的樣子"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに、次の形ができます。",
+      "translation": "在左側的 <strong>プロジェクト</strong> (專案) 工具視窗，會出現以下的樣子。"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> — プロジェクトのいちばん外側。右に <code>~/Documents/Kotlin/K01HelloKotlin</code> と出ます。",
+      "translation": "<code>K01HelloKotlin</code> — 專案的最外層。右邊會顯示 <code>~/Documents/Kotlin/K01HelloKotlin</code>。"
+    },
+    {
+      "source": "<code>.idea</code> — IntelliJ IDEA が使う設定です。中は見ません。",
+      "translation": "<code>.idea</code> — IntelliJ IDEA 所使用的設定。我們不看裡面的內容。"
+    },
+    {
+      "source": "<code>src</code> — ソースルート。これから書くKotlinのファイルは、すべてこの中に置きます。",
+      "translation": "<code>src</code> — 原始碼根目錄。接下來要寫的 Kotlin 檔案，全部都會放在這裡面。"
+    },
+    {
+      "source": "<code>Main.kt</code> — <code>src</code> の中にあります。<strong>サンプルコードの追加</strong> にチェックを入れたので作られた、そのまま動くサンプルです。",
+      "translation": "<code>Main.kt</code> — 在 <code>src</code> 裡面。因為有勾選 <strong>サンプルコードの追加</strong> (新增範例程式碼) 而建立的，是可以直接執行的範例。"
+    },
+    {
+      "source": "<code>.gitignore</code> — Gitが無視するファイルの一覧です。この単元では触りません。",
+      "translation": "<code>.gitignore</code> — Git 會忽略的檔案清單。這個單元不會碰到。"
+    },
+    {
+      "source": "右のエディタには <code>Main.kt</code> が開いています。<code>fun main()</code> の中に <code>val name = &quot;Kotlin&quot;</code>、<code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code>、そして <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code> が書かれています。",
+      "translation": "右側的編輯器已經開啟了 <code>Main.kt</code>。<code>fun main()</code> 裡面寫著 <code>val name = &quot;Kotlin&quot;</code>、<code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code>，以及 <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code>。"
+    },
+    {
+      "source": "できたプロジェクトの画面。左のツリーにK01HelloKotlinがあり、その中に.idea、src、srcの中にMain.kt、そして.gitignoreが並ぶ。右のエディタにはfun mainとval name = Kotlin、printlnの行、for (i in 1..5)のループが表示されている",
+      "translation": "建立完成的專案畫面。左側樹狀結構有 K01HelloKotlin，裡面有 .idea、src、src 裡面有 Main.kt，以及 .gitignore 並列著。右側的編輯器顯示著 fun main 與 val name = Kotlin、println 的行，還有 for (i in 1..5) 的迴圈。"
+    },
+    {
+      "source": "<code>src</code> の中に <code>Main.kt</code> があり、エディタに開いています。 <a1>画像を大きく開く</a1>",
+      "translation": "<code>src</code> 裡面有 <code>Main.kt</code>，並在編輯器中開啟。 <a1>放大顯示圖片</a1>"
+    },
+    {
+      "source": "④ まず、そのまま実行する",
+      "translation": "④ 首先，直接執行"
+    },
+    {
+      "source": "自分でコードを書く前に、ウィザードが用意したこのサンプルを、1文字も変えずに実行します。",
+      "translation": "在自己寫程式碼之前，先把精靈準備好的這個範例，一字不改地執行。"
+    },
+    {
+      "source": "エディタで <code>Main.kt</code> を開きます。",
+      "translation": "在編輯器中開啟 <code>Main.kt</code>。"
+    },
+    {
+      "source": "<code>fun main()</code> の行の左、行番号の右にある緑の三角 ▷（ガターのアイコン）をクリックします。",
+      "translation": "按一下 <code>fun main()</code> 行的左邊、行號右邊的綠色三角形 ▷ （邊欄的圖示）。"
+    },
+    {
+      "source": "出てきたメニューの、いちばん上の <strong>'MainKt' の実行</strong> を選びます。キーボードの <kbd>^ ⇧ R</kbd> でも同じです。",
+      "translation": "從出現的選單中，選擇最上面的 <strong>'MainKt' の実行</strong> (執行 'MainKt')。用鍵盤的 <kbd>^ ⇧ R</kbd> 也可以。"
+    },
+    {
+      "source": "エディタのfun mainの左にある緑の三角を押して出たメニュー。いちばん上の'MainKt' の実行が青く選ばれ、右端にショートカットの^⇧Rが出ている。その下に'MainKt' のデバッグなどが並ぶ",
+      "translation": "按下編輯器 fun main 左邊的綠色三角形所出現的選單。最上面的 'MainKt' の実行 (執行 'MainKt') 被選取成藍色，最右邊有捷徑 ^⇧R。下面並列著 'MainKt' のデバッグ (偵錯 'MainKt') 等項目。"
+    },
+    {
+      "source": "ガターの ▷ を押すと、いちばん上に <strong>'MainKt' の実行</strong> が出ます。 <a1>画像を大きく開く</a1>",
+      "translation": "按下 邊欄的 ▷ 後，最上面會出現 <strong>'MainKt' の実行</strong> (執行 'MainKt')。 <a1>放大顯示圖片</a1>"
+    },
+    {
+      "source": "⑤ 出た内容を確かめる",
+      "translation": "⑤ 確認出現的內容"
+    },
+    {
+      "source": "画面の下に <strong>実行</strong> ツールウィンドウが開き、次の内容が出ます。最初の実行は時間がかかることがあります。",
+      "translation": "畫面下方會開啟 <strong>実行</strong> (執行) 工具視窗，並出現以下內容。第一次執行可能會花一點時間。"
+    },
+    {
+      "source": "実行ツールウィンドウ · この内容が出れば成功",
+      "translation": "実行 (執行) 工具視窗 · 出現這個內容就算成功"
+    },
+    {
+      "source": "画面の下に開いた実行ツールウィンドウ。MainKtタブの中にHello, Kotlin!、i = 1からi = 5までの5行、1行あけてプロセスは終了コード 0 で終了しましたが青い文字で出ている",
+      "translation": "畫面下方開啟的執行工具視窗。MainKt 分頁中有 Hello, Kotlin!、從 i = 1 到 i = 5 的 5 行，空 1 行後以藍色文字顯示「プロセスは終了コード 0 で終了しました」（處理程序已結束，結束代碼為 0）"
+    },
+    {
+      "source": "<strong>実行</strong> ツールウィンドウ。最後の行が <code>プロセスは終了コード 0 で終了しました</code> です。 <a1>画像を大きく開く</a1>",
+      "translation": "<strong>実行</strong>（執行）工具視窗。最後一行是 <code>プロセスは終了コード 0 で終了しました</code>。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "最後の <code>プロセスは終了コード 0 で終了しました</code> は、<strong>プログラムが最後まで動いて、正常に終わった</strong>という意味です。出力の一部ではありません。",
+      "translation": "最後的 <code>プロセスは終了コード 0 で終了しました</code>，意思是<strong>程式已經執行到最後並正常結束</strong>。這不是輸出結果的一部分。"
+    },
+    {
+      "source": "この <code>0</code> は、Javaの <code>System.exit(0)</code>、Swiftの <code>exit(0)</code> に書く <code>0</code> と同じものです。<code>0</code> 以外の数で終わったときは、途中で異常が起きています。",
+      "translation": "這個 <code>0</code> 和 Java 的 <code>System.exit(0)</code>、Swift 的 <code>exit(0)</code> 裡面寫的 <code>0</code> 是一樣的。如果以 <code>0</code> 以外的數字結束，就表示途中發生了異常。"
+    },
+    {
+      "source": "自分でコードを書く前に一度動かしておくと、あとで動かなくなったときに、<strong>自分が書いた行</strong>だけを疑えます。「そもそも環境が動いていないのでは」を先に消しておく、ということです。",
+      "translation": "在自己寫程式碼之前先執行一次，之後如果無法執行，就可以只懷疑<strong>自己寫的那幾行</strong>。也就是先排除「該不會是環境本身有問題吧」的可能性。"
+    },
+    {
+      "source": "⑥ ex01 パッケージと main.kt を作る",
+      "translation": "⑥ 建立 ex01 套件與 main.kt"
+    },
+    {
+      "source": "動くことを確かめたら、ここからは自分のファイルを作ります。見本の <code>Main.kt</code> を先に消してから、<code>ex01</code> パッケージを作ります。",
+      "translation": "確認可以執行後，接下來要建立自己的檔案。先刪除範例的 <code>Main.kt</code>，再建立 <code>ex01</code> 套件。"
+    },
+    {
+      "source": "左のプロジェクトツリーで <code>src</code> の下の <code>Main.kt</code> を右クリックし、<strong>削除</strong> を選びます。確認のダイアログが出たら <strong>OK</strong> を押します。この単元では使いません。",
+      "translation": "在左側的專案樹中，對 <code>src</code> 底下的 <code>Main.kt</code> 按右鍵，然後選擇 <strong>削除</strong>（刪除）。出現確認對話方塊時，按一下 <strong>OK</strong>。本單元不會用到這個檔案。"
+    },
+    {
+      "source": "ファイル Main.kt を削除しますか？ と尋ねる削除の確認ダイアログ。安全な削除とコメントと文字列内を検索にチェックが入っていて、右下にOKボタンがある",
+      "translation": "詢問是否要刪除檔案 Main.kt 的確認對話方塊。已勾選安全刪除與在註解和字串中搜尋，右下角有 OK 按鈕"
+    },
+    {
+      "source": "見本の <code>Main.kt</code> を消します。チェックはそのままで <strong>OK</strong> を押します。 <a1>画像を大きく開く</a1>",
+      "translation": "刪除範例的 <code>Main.kt</code>。保持勾選狀態，直接按 <strong>OK</strong>。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。",
+      "translation": "對 <code>src</code> 按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。"
+    },
+    {
+      "source": "プロジェクトツリーのsrcを右クリックして出たメニュー。新規の右に出たサブメニューでパッケージが選ばれている",
+      "translation": "對專案樹的 src 按右鍵所出現的選單。在新規右側出現的子選單中，選取了パッケージ"
+    },
+    {
+      "source": "<code>src</code> を右クリックして <strong>新規 → パッケージ</strong>。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。 <a1>画像を大きく開く</a1>",
+      "translation": "對 <code>src</code> 按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。小心不要選到正上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 檔案/類別）。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex01</code> ができます。",
+      "translation": "在名稱中輸入 <code>ex01</code>，然後按 <kbd>Return</kbd>。<code>src</code> 底下就會產生 <code>ex01</code>。"
+    },
+    {
+      "source": "新規パッケージと書かれた小さな入力欄に ex01 と入力されている",
+      "translation": "在寫著新規パッケージ的小輸入框中輸入了 ex01"
+    },
+    {
+      "source": "パッケージ名は <code>ex01</code>。すべて小文字で、記号は入れません。 <a1>画像を大きく開く</a1>",
+      "translation": "套件名稱為 <code>ex01</code>。請全部使用小寫，不要加入任何符號。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "できた <code>ex01</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> ではなく <code>ex01</code> を右クリックします。</strong>",
+      "translation": "對產生出來的 <code>ex01</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。<strong>是對 <code>ex01</code> 按右鍵，而不是對 <code>src</code>。</strong>"
+    },
+    {
+      "source": "プロジェクトツリーでsrcの下のex01を右クリックして出たメニュー。新規のサブメニューでKotlin ファイル/クラスが選ばれている",
+      "translation": "在專案樹中對 src 底下的 ex01 按右鍵所出現的選單。在新規的子選單中，選取了Kotlin ファイル/クラス"
+    },
+    {
+      "source": "今度は <code>ex01</code> を右クリックして <strong>新規 → Kotlin ファイル/クラス</strong>。 <a1>画像を大きく開く</a1>",
+      "translation": "這次是對 <code>ex01</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。",
+      "translation": "在名稱中輸入 <code>main</code>，從下方的清單選擇 <strong>ファイル</strong>（檔案），然後按 <kbd>Return</kbd>。<strong>不要選最上面的「クラス」（類別）。</strong>如果選了「クラス」（類別），就會產生 <code>class main</code>，這樣會和後面的步驟對不上。"
+    },
+    {
+      "source": "新規 Kotlin ファイル/クラスのダイアログ。上の入力欄に main と入力され、下の一覧でクラスの次にあるファイルが選ばれている",
+      "translation": "新規 Kotlin ファイル/クラス的對話方塊。上方的輸入框中輸入了 main，下方的清單中選取了位在クラス下方的ファイル"
+    },
+    {
+      "source": "名前は <code>main</code>、種類は <strong>ファイル</strong>。上から2番目です。 <a1>画像を大きく開く</a1>",
+      "translation": "名稱為 <code>main</code>，種類為 <strong>ファイル</strong>（檔案）。這是從上面數來第 2 個選項。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex01</code> が入っていることを確かめます。",
+      "translation": "確認產生出來的 <code>main.kt</code> 第 1 行是否有 <code>package ex01</code>。"
+    },
+    {
+      "source": "エディタに開いたmain.kt。1行目にpackage ex01、3行目から5行目にfun main()の空の関数が入っている",
+      "translation": "在編輯器中開啟的 main.kt。第 1 行有 package ex01，第 3 行到第 5 行有 fun main() 的空函式"
+    },
+    {
+      "source": "1行目の <code>package ex01</code> と、空の <code>fun main()</code> は IntelliJ IDEA が入れたものです。自分で打つ必要はありません。 <a1>画像を大きく開く</a1>",
+      "translation": "第 1 行的 <code>package ex01</code> 和空的 <code>fun main()</code> 是 IntelliJ IDEA 幫我們加入的。不需要自己打字。 <a1>放大圖片</a1>"
+    },
+    {
+      "source": "1行目が <code>package ex01</code> になっていないとき",
+      "translation": "如果第 1 行不是 <code>package ex01</code>"
+    },
+    {
+      "source": "ファイルが <code>ex01</code> の中ではなく <code>src</code> の直下にできています。<code>main.kt</code> を右クリックして削除し、④からやり直します。<code>ex01</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "檔案建立在 <code>src</code> 正下方，而不是 <code>ex01</code> 裡面。請對 <code>main.kt</code> 按右鍵並選擇 削除（刪除），然後從步驟④重新開始。關鍵在於有沒有對 <code>ex01</code> 按右鍵。"
+    },
+    {
+      "source": "この単元は全6コマです。回を重ねるごとに、同じ <code>K01HelloKotlin</code> プロジェクトの <code>src</code> の下に、いまと同じ手順で <code>ex02</code>、<code>ex03</code> …とパッケージを足していきます。プロジェクトを作り直さないので、前の回に書いたコードを、いつでも開いて見返せます。",
+      "translation": "本單元全部共有 6 堂課。之後每一堂課，都會在同一個 <code>K01HelloKotlin</code> 專案的 <code>src</code> 底下，用與現在相同的步驟，陸續加入 <code>ex02</code>、<code>ex03</code> 等套件。因為不需要重新建立專案，所以隨時都可以開啟並回顧前幾堂課所寫的程式碼。"
+    },
+    {
+      "source": "⑦ ファイル全体を、次の内容にする",
+      "translation": "⑦ 將整個檔案改成以下內容"
+    },
+    {
+      "source": "src/ex01/main.kt · 全体を置き換える",
+      "translation": "src/ex01/main.kt · 替換全部"
+    },
+    {
+      "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
+      "translation": "按一下 <code>fun main()</code> 左側的綠色三角形 ▷，選擇 <strong>'MainKt' の実行</strong>（執行 'MainKt'）。如果在下方的 <strong>実行</strong>（執行）工具視窗中出現 <code>Hello, Kotlin!</code> 和 <code>プロセスは終了コード 0 で終了しました</code>，就表示成功了。"
+    },
+    {
+      "source": "<code>i = 1</code> 〜 <code>i = 5</code> はもう出ません。消した <code>Main.kt</code> ではなく、いま書いた <code>ex01</code> の <code>main.kt</code> が動いているからです。",
+      "translation": "<code>i = 1</code> 到 <code>i = 5</code> 已經不會再出現了。因為現在執行的，不是已經刪除的 <code>Main.kt</code>，而是剛才寫的 <code>ex01</code> 裡面的 <code>main.kt</code>。"
+    },
+    {
+      "source": "この「ガターの ▷ から <strong>'MainKt' の実行</strong> を選ぶ」操作を、この教科書では STEP 03 以降「Run」と書きます。STEP 01 の Kotlin Playground の <strong>Run</strong> ボタンと同じ意味です。",
+      "translation": "在接下來的 STEP 03 之後，本課本會將這個「從邊欄的 ▷ 選擇 <strong>'MainKt' の実行</strong>（執行 'MainKt'）」的動作寫成「Run」。這和 STEP 01 的 Kotlin Playground 裡面的 <strong>Run</strong> 按鈕是同樣的意思。"
+    },
+    {
+      "source": "⑧ ファイル名とクラス名の関係",
+      "translation": "⑧ 檔案名稱與類別名稱的關係"
+    },
+    {
+      "source": "Javaの「ファイル名と <code>public</code> クラス名を一致させる」という決まりが、Kotlinにはありません。ファイル名は <code>main.kt</code> のように小文字で構いません。",
+      "translation": "Java 有「檔案名稱必須與 <code>public</code> 類別名稱一致」的規定，但 Kotlin 沒有。檔案名稱可以像 <code>main.kt</code> 這樣使用小寫。"
+    },
+    {
+      "source": "関数をクラスの外（トップレベル）に置けます。入口を入れるためだけのクラスを作らずに済みます。",
+      "translation": "可以將函式放在類別外面（頂層）。不需要為了放入進入點而特地建立類別。"
+    },
+    {
+      "source": "<code>package</code> 宣言があり、フォルダ構成と合わせる点はJavaと同じです。違うのは行末の <code>;</code> が要らないことです。Swiftには <code>package</code> 宣言そのものがありません。",
+      "translation": "有 <code>package</code> 宣告，並且必須與資料夾結構一致，這點和 Java 一樣。不同的是行尾不需要加 <code>;</code>。Swift 則是根本沒有 <code>package</code> 宣告。"
+    },
+    {
+      "source": "実行の設定名が <code>MainKt</code> になるのは、Kotlinが <code>main.kt</code> から <code>MainKt</code> というクラスを作ってバイトコードに落としているからです。クラスを書かなくても、JVMの上ではクラスになっています。",
+      "translation": "執行組態名稱會變成 <code>MainKt</code>，是因為 Kotlin 會將 <code>main.kt</code> 轉成名為 <code>MainKt</code> 的類別，然後編譯成位元組碼。雖然我們沒有寫類別，但在 JVM 上它還是會變成類別。"
+    },
+    {
+      "source": "大文字と小文字",
+      "translation": "大寫與小寫"
+    },
+    {
+      "source": "ファイル名は <code>main.kt</code>、パッケージ名は <code>ex01</code> です。<code>Main.kt</code> や <code>Ex01</code> ではありません。Kotlinは大文字と小文字を区別します。",
+      "translation": "檔案名稱是 <code>main.kt</code>，套件名稱是 <code>ex01</code>。不是 <code>Main.kt</code> 也不是 <code>Ex01</code>。Kotlin 會區分大寫和小寫。"
+    },
+    {
+      "source": "ウィザードのサンプルをそのまま実行して <code>プロセスは終了コード 0 で終了しました</code> を出し、そのあと <code>src/ex01/main.kt</code> を作って <code>Hello, Kotlin!</code> を出せた。",
+      "translation": "直接執行精靈產生的範例並顯示出 <code>プロセスは終了コード 0 で終了しました</code>，然後建立了 <code>src/ex01/main.kt</code> 並成功顯示 <code>Hello, Kotlin!</code>。"
+    },
+    {
+      "source": "次へ：val と var →",
+      "translation": "下一頁：val 與 var →"
+    },
+    {
+      "source": "STEP 03 · 目安 20分",
+      "translation": "STEP 03 · 約 20 分鐘"
+    },
+    {
+      "source": "変数を宣言する（val と var）",
+      "translation": "宣告變數（val 與 var）"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code> を使い分け、型注釈を省いて書きます。",
+      "translation": "區分使用 <code>val</code> 和 <code>var</code>，並省略型別註記來寫。"
+    },
+    {
+      "source": "変更するファイル：src/ex01/main.kt",
+      "translation": "要更改的檔案：src/ex01/main.kt"
+    },
+    {
+      "source": "Kotlinの変数宣言は、キーワードが2つあります。",
+      "translation": "Kotlin 的變數宣告有 2 個關鍵字。"
+    },
+    {
+      "source": "キーワード",
+      "translation": "關鍵字"
+    },
+    {
       "source": "意味",
       "translation": "意思"
     },
     {
+      "source": "再代入禁止。あとから別の値を入れるとコンパイルエラーになります。",
+      "translation": "禁止重新指派。之後如果放入其他值，就會發生編譯錯誤。"
+    },
+    {
+      "source": "再代入可能。あとから別の値を入れられます。",
+      "translation": "可以重新指派。之後可以放入其他值。"
+    },
+    {
+      "source": "① ファイル全体を、次の内容に置き換える",
+      "translation": "① 將整個檔案改成以下內容"
+    },
+    {
+      "source": "main.kt · 全体を置き換える",
+      "translation": "main.kt · 替換全部"
+    },
+    {
+      "source": "② 実行結果",
+      "translation": "② 執行結果"
+    },
+    {
+      "source": "Runの結果",
+      "translation": "Run 的結果"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか",
+      "translation": "③ 與 Java／Swift 的比較"
+    },
+    {
+      "source": "<code>val</code> キーワードで宣言した変数は再代入禁止です。再代入するとコンパイルエラーになります。Javaの <code>final</code>、Swiftの <code>let</code> にあたります。",
+      "translation": "用 <code>val</code> 關鍵字宣告的變數，禁止重新指派。一旦重新指派就會發生編譯錯誤。相當於 Java 的 <code>final</code>、Swift 的 <code>let</code>。"
+    },
+    {
+      "source": "<code>var</code> キーワードで宣言した変数は再代入可能です。Swiftの <code>var</code> と同じです。",
+      "translation": "用 <code>var</code> 關鍵字宣告的變數，可以重新指派。和 Swift 的 <code>var</code> 一樣。"
+    },
+    {
+      "source": "Javaは「再代入できる」のが既定で、<code>final</code> を足して止めます。KotlinとSwiftは逆で、宣言のキーワードそのもので分けます。<strong>迷ったらまず <code>val</code> で書き、再代入が要るときだけ <code>var</code> にする</strong>のがKotlinの書き方です。",
+      "translation": "Java 預設是「可以重新指派」，要加上 <code>final</code> 才能禁止。Kotlin 和 Swift 則相反，是用宣告的關鍵字本身來區分。<strong>如果猶豫的話，Kotlin 的寫法是先寫 <code>val</code>，只有需要重新指派時才改成 <code>var</code></strong>。"
+    },
+    {
+      "source": "Swiftと同様に型推論が効くため、変数宣言時の型の指定は省略できます。<code>val number1: Int = 1</code> と書くこともできますが、右辺から決まるときは書きません。",
+      "translation": "和 Swift 一樣具有型別推斷的功能，因此宣告變數時可以省略指定型別。雖然也可以寫成 <code>val number1: Int = 1</code>，但如果是可以從等號右邊決定的情況就不寫。"
+    },
+    {
+      "source": "Swiftと同様に文末のセミコロン（<code>;</code>）が不要です。",
+      "translation": "和 Swift 一樣，句尾不需要分號（<code>;</code>）。"
+    },
+    {
+      "source": "Javaの var と、Kotlinの var は別物",
+      "translation": "Java 的 var 和 Kotlin 的 var 是兩回事"
+    },
+    {
+      "source": "Java 10以降にもローカル変数の <code>var</code> があります。ただしJavaの <code>var</code> は「型を書かない」という意味で、再代入できるかどうかとは関係ありません（<code>final var</code> と書けます）。",
+      "translation": "Java 10 之後也有區域變數的 <code>var</code>。不過 Java 的 <code>var</code> 意思是「不寫型別」，和能不能重新指派無關（可以寫 <code>final var</code>）。"
+    },
+    {
+      "source": "Kotlinの <code>var</code> は「再代入できる」という意味で、型を書くかどうかとは関係ありません（<code>var name: String = &quot;Yamada&quot;</code> と書けます）。つづりが同じでも、分けている軸が違います。",
+      "translation": "Kotlin 的 <code>var</code> 意思是「可以重新指派」，和要不要寫型別無關（可以寫 <code>var name: String = &quot;Yamada&quot;</code>）。即使拼法一樣，區分的基準也不同。"
+    },
+    {
+      "source": "押す前に予想する",
+      "translation": "在按之前先預測"
+    },
+    {
+      "source": "<code>println(name)</code> では、<code>Yamada</code> と <code>Tanaka</code> のどちらが出るでしょうか。予想してから、Runで確かめましょう。",
+      "translation": "在 <code>println(name)</code> 這裡，會顯示出 <code>Yamada</code> 還是 <code>Tanaka</code> 呢？請先預測結果，再按 Run 來確認。"
+    },
+    {
+      "source": "確かめたあとに答えを見る",
+      "translation": "確認後再看答案"
+    },
+    {
+      "source": "<code>Tanaka</code> が出ます。JavaやSwiftと同じで、その行より上で最後に代入された値が入っています。",
+      "translation": "會顯示 <code>Tanaka</code>。和 Java 及 Swift 一樣，會放入在那一行之前最後一次指派的值。"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code> で2行を出せた。",
+      "translation": "成功用 <code>val</code> 和 <code>var</code> 顯示出 2 行了。"
+    },
+    {
+      "source": "次へ：数の型 →",
+      "translation": "下一頁：數字的型別 →"
+    },
+    {
+      "source": "STEP 04 · 目安 15分",
+      "translation": "STEP 04 · 約 15 分鐘"
+    },
+    {
+      "source": "数の型を確かめる（Int・Double・Float）",
+      "translation": "確認數字的型別（Int・Double・Float）"
+    },
+    {
+      "source": "<code>Int</code>・<code>Double</code>・<code>Float</code> をリテラルの書き方で作り分け、<code>println</code> で出します。",
+      "translation": "透過常值（literal）的寫法來區分建立 <code>Int</code>・<code>Double</code>・<code>Float</code>，並用 <code>println</code> 顯示出來。"
+    },
+    {
+      "source": "型",
+      "translation": "型別"
+    },
+    {
+      "source": "リテラルの書き方",
+      "translation": "常值（literal）的寫法"
+    },
+    {
+      "source": "整数。既定の整数型です。",
+      "translation": "整數。這是預設的整數型別。"
+    },
+    {
+      "source": "小数点を書くと、この型になります。既定の浮動小数点型です。",
+      "translation": "如果寫了小數點，就會變成這個型別。這是預設的浮點數型別。"
+    },
+    {
+      "source": "うしろに <code>f</code> を付けると、この型になります。",
+      "translation": "在後面加上 <code>f</code>，就會變成這個型別。"
+    },
+    {
+      "source": "① 追加する場所を見つける",
+      "translation": "① 找到要加入的位置"
+    },
+    {
+      "source": "場所の目印 · この枠は入力しません",
+      "translation": "位置的標記 · 這個框框裡的內容不需要輸入"
+    },
+    {
+      "source": "② 値の行に2行追加する",
+      "translation": "② 在值的這幾行中加入 2 行"
+    },
+    {
+      "source": "追加① · val number1 = 1 の下",
+      "translation": "加入① · val number1 = 1 的下方"
+    },
+    {
+      "source": "③ 表示の行に2行追加する",
+      "translation": "③ 在顯示的這幾行中加入 2 行"
+    },
+    {
+      "source": "追加② · println(number1) の下",
+      "translation": "加入② · println(number1) 的下方"
+    },
+    {
+      "source": "貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。",
+      "translation": "貼上之後，IntelliJ IDEA 會自動對齊行首的縮排。只要和其他行的行首相齊就可以了。"
+    },
+    {
+      "source": "④ 実行結果",
+      "translation": "④ 執行結果"
+    },
+    {
+      "source": "Runの結果 · この4行が出れば成功",
+      "translation": "Run 的結果 · 如果出現這 4 行就表示成功"
+    },
+    {
+      "source": "<code>3.0f</code> と書いたのに、出るのは <code>3.0</code> です。<code>f</code> はリテラルの型を決める目印で、値そのものには入っていません。Javaで <code>System.out.println(3.0f)</code> としたときと同じ結果です。",
+      "translation": "明明寫了 <code>3.0f</code>，顯示出來的卻是 <code>3.0</code>。<code>f</code> 只是用來決定常值型別的標記，並沒有包含在值本身裡面。這和在 Java 中執行 <code>System.out.println(3.0f)</code> 時的結果是一樣的。"
+    },
+    {
+      "source": "⑤ Java / Swift ではどう書くか（型）",
+      "translation": "⑤ 與 Java／Swift 的比較（型別）"
+    },
+    {
+      "source": "<strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。",
+      "translation": "<strong>Kotlin 沒有區分 Java 的基本型別與包裝類別。</strong>只要寫 <code>Int</code> 1 個就可以了。至於編譯成位元組碼時要當成 <code>int</code> 還是 <code>Integer</code>，會由編譯器來決定。"
+    },
+    {
+      "source": "だから、Javaで書くときに考えていた「ここは <code>int</code> か <code>Integer</code> か」「リストに入れるからボクシングされる」といった判断が、宣言のときには要りません。",
+      "translation": "所以，以前在寫 Java 時需要考慮的「這裡該用 <code>int</code> 還是 <code>Integer</code>」、「因為要放進清單裡，所以會被裝箱（boxing）」等判斷，在宣告時都不需要了。"
+    },
+    {
+      "source": "型の名前はSwiftと同じく <code>Int</code> / <code>Double</code> / <code>Float</code> で、大文字で始まります。Javaの <code>int</code> のように小文字の型はありません。",
+      "translation": "型別的名稱和 Swift 一樣是 <code>Int</code> / <code>Double</code> / <code>Float</code>，開頭為大寫。沒有像 Java 的 <code>int</code> 這樣小寫的型別。"
+    },
+    {
+      "source": "小数のリテラルが既定で <code>Double</code> になる点は、KotlinもSwiftも同じです。",
+      "translation": "小數的常值預設會變成 <code>Double</code>，這一點 Kotlin 和 Swift 也是一樣的。"
+    },
+    {
+      "source": "Swiftには <code>3.0f</code> という書き方がありません。Swiftで <code>Float</code> にしたいときは <code>let number3: Float = 3.0</code> のように型注釈で指定します。Kotlinはこの点ではJavaと同じく、接尾辞の <code>f</code> が使えます。",
+      "translation": "Swift 沒有 <code>3.0f</code> 這種寫法。在 Swift 中如果要指定為 <code>Float</code>，必須像 <code>let number3: Float = 3.0</code> 這樣使用型別註記來指定。在這一點上，Kotlin 和 Java 一樣可以使用字尾的 <code>f</code>。"
+    },
+    {
+      "source": "⑥ Java / Swift ではどう書くか（出力）",
+      "translation": "⑥ 與 Java／Swift 的比較（輸出）"
+    },
+    {
+      "source": "<code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。",
+      "translation": "<code>println</code> 是 Kotlin 標準函式庫的頂層函式。不需要像 <code>System.out</code> 這樣的容器，也不需要 <code>import</code>。"
+    },
+    {
+      "source": "改行するのが <code>println</code>、改行しないのが <code>print</code> です。Javaの <code>System.out.println</code> と <code>System.out.print</code> の対応と同じです。",
+      "translation": "會換行的是 <code>println</code>，不會換行的是 <code>print</code>。這和 Java 的 <code>System.out.println</code> 與 <code>System.out.print</code> 的對應關係是一樣的。"
+    },
+    {
+      "source": "Swiftの <code>print</code> は既定で改行するので、名前は同じでも、はたらきはKotlinの <code>println</code> のほうです。改行しないときは <code>terminator</code> を渡します。ここは読み替えが要ります。",
+      "translation": "Swift 的 <code>print</code> 預設會換行，所以雖然名稱一樣，但功能相當於 Kotlin 的 <code>println</code>。如果不換行，則需要傳遞 <code>terminator</code>。這裡需要換成對應的做法。"
+    },
+    {
+      "source": "4行を出せた。",
+      "translation": "成功顯示出 4 行了。"
+    },
+    {
+      "source": "次へ：ミニ練習 →",
+      "translation": "下一頁：迷你練習 →"
+    },
+    {
+      "source": "STEP 05 · 目安 10分",
+      "translation": "STEP 05 · 約 10 分鐘"
+    },
+    {
+      "source": "ミニ練習",
+      "translation": "迷你練習"
+    },
+    {
+      "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。",
+      "translation": "從這裡開始要自己改寫。順序是<strong>更改 1 個地方 → 預測結果 → 執行 Run</strong>。請先嘗試過後再點開答案。"
+    },
+    {
+      "source": "練習A · 変数を1つ足す（必須・3分）",
+      "translation": "練習A · 加入 1 個變數（必做・3分鐘）"
+    },
+    {
+      "source": "<code>val</code> の変数を1つと、それを出す <code>println</code> を1行足して、出力を5行にします。値も型も自分で決めます。型注釈は書かずに、変数名にマウスを重ねて、推論された型を確かめましょう。",
+      "translation": "加入 1 個 <code>val</code> 變數，以及 1 行用來輸出它的 <code>println</code>，讓輸出結果變成 5 行。值和型別都由你自己決定。請不要寫出型別註記，而是將滑鼠游標停在變數名稱上，確認推斷出來的型別。"
+    },
+    {
+      "source": "試したあと：確かめること",
+      "translation": "嘗試之後：要確認的事情"
+    },
+    {
+      "source": "<code>4</code> と書けば <code>Int</code>、<code>4.5</code> と書けば <code>Double</code>、<code>4.5f</code> と書けば <code>Float</code> です。リテラルの書き方だけで型が決まっていることを、画面で確かめてください。",
+      "translation": "如果寫 <code>4</code> 就是 <code>Int</code>，寫 <code>4.5</code> 就是 <code>Double</code>，寫 <code>4.5f</code> 就是 <code>Float</code>。請在畫面上確認，光靠常值的寫法就能決定型別。"
+    },
+    {
+      "source": "練習B · 再代入して、コンパイルエラーを起こす（必須・4分）",
+      "translation": "練習B · 重新指派以引發編譯錯誤（必做・4分鐘）"
+    },
+    {
+      "source": "<code>name = &quot;Tanaka&quot;</code> の次の行に <code>number1 = 5</code> と書き足します。Runを押す前に、その行に出たエラーメッセージを読んでください。",
+      "translation": "在 <code>name = &quot;Tanaka&quot;</code> 的下一行加入 <code>number1 = 5</code>。在按 Run 之前，請先閱讀那一行顯示的錯誤訊息。"
+    },
+    {
+      "source": "読むのは次の3つです。<strong>どの行か・何をしようとしたと言っているか・どう直せと言っているか。</strong>",
+      "translation": "要閱讀的有以下 3 點：<strong>是哪一行、訊息說你想做什麼、訊息說該怎麼修正。</strong>"
+    },
+    {
+      "source": "試したあと：答えと理由",
+      "translation": "嘗試之後：答案與原因"
+    },
+    {
+      "source": "書き足した行が赤くなり、再代入できないことを知らせるメッセージが出ます（言い回しはIDEの版によって変わります）。Runしても実行されません。<code>number1</code> は <code>val</code> で宣言したので、再代入できないからです。",
+      "translation": "加入的那一行會變成紅色，並出現訊息提示無法重新指派（訊息的說法會因 IDE 版本而異）。即使按 Run 也不會執行。這是因為 <code>number1</code> 是用 <code>val</code> 宣告的，所以不能重新指派。"
+    },
+    {
+      "source": "これは <strong>コンパイル時</strong> に止まるエラーです。実行してから気づく種類のものではありません。確かめたら、書き足した行を消して元に戻します。",
+      "translation": "這是在<strong>編譯時</strong>就會被擋下來的錯誤。不是那種執行之後才會發現的錯誤。確認完畢後，請把加入的那一行刪除，恢復原狀。"
+    },
+    {
+      "source": "同じ間違いを、JavaとSwiftでしたとき",
+      "translation": "在 Java 和 Swift 中犯同樣錯誤時"
+    },
+    {
+      "source": "3つとも、コンパイル時に止まります。止まる条件も同じで、言い回しが違うだけです。",
+      "translation": "這 3 種寫法都會在編譯時被擋下來。擋下來的條件也一樣，只是說法不同而已。"
+    },
+    {
+      "source": "Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>'val'</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong>",
+      "translation": "Java 的訊息會指名 <code>final</code>，Swift 的訊息會指名 <code>let</code>。Kotlin 則會指名 <code>'val'</code>。<strong>訊息中出現的關鍵字，就指出了需要修正的地方。</strong>"
+    },
+    {
+      "source": "直し方は2つです。宣言を <code>var</code> に変えるか、再代入をやめるか。ここでは再代入をやめて元に戻します。",
+      "translation": "修正方法有 2 種：將宣告改成 <code>var</code>，或者不要重新指派。這裡我們選擇不要重新指派，恢復成原狀。"
+    },
+    {
+      "source": "最後の3分 · 元に戻す",
+      "translation": "最後的 3 分鐘 · 恢復原狀"
+    },
+    {
+      "source": "練習Aで足した2行を消します。",
+      "translation": "刪除在練習 A 中加入的 2 行。"
+    },
+    {
+      "source": "練習Bで書き足した <code>number1 = 5</code> の行を消します。",
+      "translation": "刪除在練習 B 中加入的 <code>number1 = 5</code> 這一行。"
+    },
+    {
+      "source": "Runし、STEP 00 のゴールと同じ4行に戻ったことを確かめます。",
+      "translation": "執行 Run，確認已恢復成和 STEP 00 終點相同的 4 行。"
+    },
+    {
+      "source": "練習A・Bを試し、赤い波線が出た行を確かめた。最後に元の4行へ戻した。",
+      "translation": "嘗試了練習 A、B，並確認了出現紅色波浪線的那一行。最後恢復成了原本的 4 行。"
+    },
+    {
+      "source": "次へ：完成 →",
+      "translation": "下一頁：完成 →"
+    },
+    {
+      "source": "STEP 06 · 目安 10分",
+      "translation": "STEP 06 · 約 10 分鐘"
+    },
+    {
+      "source": "完成",
+      "translation": "完成"
+    },
+    {
+      "source": "① 完成チェック",
+      "translation": "① 完成檢查"
+    },
+    {
+      "source": "Runし、コンソールの出力を上から順に見ます。",
+      "translation": "執行 Run，並由上往下依序查看主控台的輸出結果。"
+    },
+    {
+      "source": "行",
+      "translation": "行"
+    },
+    {
+      "source": "出る内容",
+      "translation": "顯示內容"
+    },
+    {
+      "source": "理由",
+      "translation": "原因"
+    },
+    {
+      "source": "1行目",
+      "translation": "第 1 行"
+    },
+    {
+      "source": "<code>val number1 = 1</code>（<code>Int</code>）の値を出している。",
+      "translation": "顯示 <code>val number1 = 1</code>（<code>Int</code>）的值。"
+    },
+    {
+      "source": "2行目",
+      "translation": "第 2 行"
+    },
+    {
+      "source": "<code>val number2 = 2.0</code>（<code>Double</code>）の値を出している。",
+      "translation": "顯示 <code>val number2 = 2.0</code>（<code>Double</code>）的值。"
+    },
+    {
+      "source": "3行目",
+      "translation": "第 3 行"
+    },
+    {
+      "source": "<code>val number3 = 3.0f</code>（<code>Float</code>）の値を出している。<code>f</code> は出ない。",
+      "translation": "顯示 <code>val number3 = 3.0f</code>（<code>Float</code>）的值。不會顯示 <code>f</code>。"
+    },
+    {
+      "source": "4行目",
+      "translation": "第 4 行"
+    },
+    {
+      "source": "<code>var name</code> に再代入した値を出している。",
+      "translation": "顯示重新指派給 <code>var name</code> 後的值。"
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<code>val</code> の行と <code>var</code> の行を指さして説明します。",
+      "translation": "結果如表所示之後，請將畫面拿給老師看，並指著 <code>val</code> 的那一行和 <code>var</code> 的那一行進行說明。"
+    },
+    {
+      "source": "入力したコードと照合する",
+      "translation": "對照輸入的程式碼"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex01</code> も忘れずに入れます。",
+      "translation": "這是到目前為止輸入的 <code>main.kt</code> 完整內容。請別忘了加入第 1 行的 <code>package ex01</code>。"
+    },
+    {
+      "source": "main.kt · 完成コード",
+      "translation": "main.kt · 完成版程式碼"
+    },
+    {
+      "source": "② 同じ4行を、JavaとSwiftで出すと",
+      "translation": "② 若用 Java 和 Swift 輸出同樣的 4 行"
+    },
+    {
+      "source": "Kotlinで省いたのは、入口を包むクラス、型注釈、行末の <code>;</code>、<code>System.out</code> の4つです。処理そのものはJavaと同じです。",
+      "translation": "Kotlin 省略了包住進入點的類別、型別註記、行尾的 <code>;</code>、以及 <code>System.out</code> 這 4 樣東西。處理本身和 Java 是一樣的。"
+    },
+    {
+      "source": "Swiftとの差は、入口の <code>fun main()</code> と <code>package</code> 宣言、そして <code>Float</code> リテラルの書き方だけです。",
+      "translation": "和 Swift 的差異，就只有進入點的 <code>fun main()</code> 和 <code>package</code> 宣告，以及 <code>Float</code> 常值的寫法而已。"
+    },
+    {
+      "source": "「短く書ける」というのは、書かなかったぶんをコンパイラが補っているということです。<strong>Javaで書いていたことが消えたわけではありません。</strong>",
+      "translation": "「寫得比較短」的意思是，沒有寫出來的部分是由編譯器補上了。<strong>並不是原本在 Java 裡寫的東西消失了。</strong>"
+    },
+    {
+      "source": "③ 保存された場所を確かめる",
+      "translation": "③ 確認儲存的位置"
+    },
+    {
+      "source": "IntelliJ IDEA は、書いたコードを自動でファイルに保存します。保存の操作は要りません。",
+      "translation": "IntelliJ IDEA 會自動將寫好的程式碼儲存到檔案中。不需要手動執行儲存的操作。"
+    },
+    {
+      "source": "Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。",
+      "translation": "開啟 Finder，按一下左側的 <strong>書類</strong>（文件，<code>Documents</code>）。"
+    },
+    {
+      "source": "その中の <code>Kotlin</code> フォルダを開き、<code>K01HelloKotlin</code> フォルダがあることを確かめます。",
+      "translation": "打開裡面的 <code>Kotlin</code> 資料夾，確認是否有 <code>K01HelloKotlin</code> 資料夾。"
+    },
+    {
+      "source": "この <code>Documents/Kotlin/K01HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。",
+      "translation": "這個 <code>Documents/Kotlin/K01HelloKotlin</code> 資料夾，就是今天建立的專案。為了以後還能再次開啟，請不要刪除、移動到其他地方或更改名稱，就這樣保留著。"
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。保存されたフォルダの場所も確かめた。",
+      "translation": "進行了完成檢查，並將畫面拿給老師看。同時也確認了儲存資料夾的位置。"
+    },
+    {
+      "source": "1コマ目のまとめ",
+      "translation": "第 1 堂課的總結"
+    },
+    {
+      "source": "<strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。",
+      "translation": "<strong>用 <code>val</code> 和 <code>var</code> 來宣告 → 型別由常值決定 → 用 <code>println</code> 顯示出來。</strong><br>我們將以前用 Java 和 Swift 寫的內容，替換成了 Kotlin 的寫法。"
+    },
+    {
+      "source": "STEP 07 · 2コマ目 · 目安 5分",
+      "translation": "STEP 07 · 第2堂課 · 約5分鐘"
+    },
+    {
+      "source": "2コマ目のゴール（Null安全）",
+      "translation": "第2堂課的目標（空值安全）"
+    },
+    {
+      "source": "ここからが<strong>2コマ目</strong>です。使うプロジェクトは1コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex02</code> パッケージを足して、その中に書きます。1コマ目に書いた <code>ex01</code> は、そのまま残します。",
+      "translation": "這裡開始是<strong>第2堂課</strong>。使用的專案和第1堂課一樣是 <code>K01HelloKotlin</code>，不用重新建立。我們會在 <code>src</code> 底下新增 <code>ex02</code> 套件，並把程式碼寫在裡面。第1堂課寫的 <code>ex01</code> 則原封不動地保留。"
+    },
+    {
+      "source": "この回の主題は <strong>Null安全</strong> です。Kotlinは、<code>null</code> を入れられる型と、入れられない型を、言語のしくみとして分けます。Swiftのオプショナルに近い考え方で、Javaとはいちばん差が大きいところです。",
+      "translation": "這堂課的主題是 <strong>空值安全</strong>（Null安全）。Kotlin 在語言層面上，將型別區分為可以放入 <code>null</code> 的型別和不能放入的型別。這和 Swift 的 Optional 概念很接近，也是與 Java 差異最大的地方。"
+    },
+    {
+      "source": "この回で出てくるKotlinの言葉",
+      "translation": "這堂課出現的 Kotlin 詞彙"
+    },
+    {
+      "source": "<code>String</code>（<code>?</code> なし）",
+      "translation": "<code>String</code>（沒有 <code>?</code>）"
+    },
+    {
+      "source": "<code>String</code>（<code>null</code> を入れられる）",
+      "translation": "<code>String</code>（可以放入 <code>null</code>）"
+    },
+    {
+      "source": "対応物なし",
+      "translation": "無對應項目"
+    },
+    {
+      "source": "<code>String?</code>（オプショナル）",
+      "translation": "<code>String?</code>（Optional）"
+    },
+    {
+      "source": "<code>?.</code>（安全呼び出し）",
+      "translation": "<code>?.</code>（安全呼叫）"
+    },
+    {
+      "source": "<code>if (name != null)</code> で囲む、または <code>Optional</code>",
+      "translation": "用 <code>if (name != null)</code> 包起來，或使用 <code>Optional</code>"
+    },
+    {
+      "source": "<code>?.</code>（オプショナルチェイン）",
+      "translation": "<code>?.</code>（Optional Chaining）"
+    },
+    {
+      "source": "<code>count()</code>（文字数）",
+      "translation": "<code>count()</code>（字元數）"
+    },
+    {
+      "source": "同じ「nullかもしれない文字列」を3つの言語で書く",
+      "translation": "用3種語言來寫相同的「可能是 null 的字串」"
+    },
+    {
+      "source": "KotlinとSwiftは、<strong>型そのものに「<code>null</code> が入るかどうか」を書きます。</strong> <code>String</code> と <code>String?</code> は別の型です。",
+      "translation": "Kotlin 和 Swift <strong>在型別本身標示「是否可以放入 <code>null</code>」。</strong> <code>String</code> 和 <code>String?</code> 是不同的型別。"
+    },
+    {
+      "source": "Javaには、この区別がありません。どの参照型にも <code>null</code> を入れられるので、「入らない」ことを型で表せません。",
+      "translation": "Java 沒有這個區別。任何參考型別都可以放入 <code>null</code>，因此無法用型別來表示「不能放入」。"
+    },
+    {
+      "source": "Kotlinの <code>null</code> は、Swiftの <code>nil</code> にあたります。書く文字が違うだけで、役目は同じです。",
+      "translation": "Kotlin 的 <code>null</code> 相當於 Swift 的 <code>nil</code>。只是寫法不同，作用是一樣的。"
+    },
+    {
+      "source": "2コマ目のゴール（コンソールに出る3行）",
+      "translation": "第2堂課的目標（顯示在主控台的3行）"
+    },
+    {
+      "source": "Runの結果 · この3行が出れば完成",
+      "translation": "Run 的結果 · 顯示這3行就算完成"
+    },
+    {
+      "source": "2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>は、STEP 10 で確かめます。",
+      "translation": "第2行的 <code>null</code> 也是輸出的一部分，並不是錯誤。至於<strong>為什麼會顯示 <code>null</code></strong>，我們會在 STEP 10 確認。"
+    },
+    {
+      "source": "この90分の進み方",
+      "translation": "這90分鐘的進行方式"
+    },
+    {
+      "source": "<code>ex02</code> を作り、<code>String</code> と <code>String?</code> の違いを、わざと出したコンパイルエラーで確かめる。",
+      "translation": "建立 <code>ex02</code>，並透過刻意產生編譯錯誤，來確認 <code>String</code> 和 <code>String?</code> 的差異。"
+    },
+    {
+      "source": "安全呼び出し <code>?.</code> を書き、3行の出力を完成させる。",
+      "translation": "撰寫安全呼叫 <code>?.</code>，並完成3行的輸出。"
+    },
+    {
+      "source": "2コマ目に出す3行（<code>5</code> / <code>null</code> / <code>6</code>）を、上のゴールで確かめた。",
+      "translation": "已透過上方的目標，確認了第2堂課要輸出的3行（<code>5</code> / <code>null</code> / <code>6</code>）。"
+    },
+    {
+      "source": "次へ：ex02 を作る →",
+      "translation": "下一步：建立 ex02 →"
+    },
+    {
+      "source": "STEP 08 · 2コマ目 · 目安 5分",
+      "translation": "STEP 08 · 第2堂課 · 約5分鐘"
+    },
+    {
+      "source": "ex02 パッケージと main.kt を作る",
+      "translation": "建立 ex02 套件和 main.kt"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex02</code> パッケージと、その中の <code>main.kt</code> を作ります。",
+      "translation": "重新開啟 <code>K01HelloKotlin</code> 專案，在 <code>src</code> 底下建立 <code>ex02</code> 套件，並在裡面建立 <code>main.kt</code>。"
+    },
+    {
+      "source": "<strong>STEP 02 の⑥と同じ操作です。</strong>違うのは、パッケージ名が <code>ex01</code> ではなく <code>ex02</code> になることだけです。手順は、下にもう一度すべて書きます。",
+      "translation": "<strong>這和 STEP 02 的⑥是相同的操作。</strong>差別只在於套件名稱不是 <code>ex01</code> 而是 <code>ex02</code>。下面會再把所有步驟寫一次。"
+    },
+    {
+      "source": "① プロジェクトを開き直す",
+      "translation": "① 重新開啟專案"
+    },
+    {
+      "source": "IntelliJ IDEA を開きます。<code>K01HelloKotlin</code> がすでに開いていれば、そのまま使います。",
+      "translation": "開啟 IntelliJ IDEA。如果已經開啟 <code>K01HelloKotlin</code>，就直接使用。"
+    },
+    {
+      "source": "開いていないときは、ホーム画面の左側に並ぶ、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> をクリックします。",
+      "translation": "如果沒有開啟，請從 Welcome 畫面（首頁畫面）左側的最近開啟專案清單中，按一下 <code>K01HelloKotlin</code>。"
+    },
+    {
+      "source": "一覧に無いときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選び、<code>書類</code>（<code>Documents</code>）の中の <code>Kotlin</code> フォルダにある <code>K01HelloKotlin</code> フォルダを選んで開きます。",
+      "translation": "如果清單中沒有，請從 Welcome 畫面左上的選單中選擇 <strong>開く…</strong>（開啟…），然後選擇 <code>書類</code>（<code>Documents</code>）中 <code>Kotlin</code> 資料夾裡的 <code>K01HelloKotlin</code> 資料夾來開啟。"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> があることを確かめます。<code>ex01</code> は消しません。",
+      "translation": "確認左側的 <strong>プロジェクト</strong>（專案）工具視窗裡有 <code>src</code>，且底下有 <code>ex01</code>。請不要刪除 <code>ex01</code>。"
+    },
+    {
+      "source": "② ex02 パッケージを作る",
+      "translation": "② 建立 ex02 套件"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。",
+      "translation": "在 <code>src</code> 上按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。小心不要選錯成上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 檔案/類別）。"
+    },
+    {
+      "source": "名前に <code>ex02</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex02</code> ができます。すべて小文字で、記号は入れません。",
+      "translation": "輸入名稱 <code>ex02</code> 後按下 <kbd>Return</kbd>。<code>src</code> 底下會建立 <code>ex02</code>。請全部使用小寫，且不要加入符號。"
+    },
+    {
+      "source": "③ main.kt を作る",
+      "translation": "③ 建立 main.kt"
+    },
+    {
+      "source": "できた <code>ex02</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でもなく、<code>ex02</code> を右クリックします。</strong>",
+      "translation": "在剛建立的 <code>ex02</code> 上按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。<strong>要在 <code>ex02</code> 上按右鍵，而不是 <code>src</code> 或 <code>ex01</code>。</strong>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex02</code> が入っていることを確かめます。",
+      "translation": "確認剛建立的 <code>main.kt</code> 的第1行是 <code>package ex02</code>。"
+    },
+    {
+      "source": "1行目が <code>package ex02</code> になっていないとき",
+      "translation": "第1行不是 <code>package ex02</code> 時"
+    },
+    {
+      "source": "ファイルが <code>ex02</code> の中ではなく、<code>src</code> の直下か <code>ex01</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex02</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "檔案建立在 <code>src</code> 正下方或 <code>ex01</code> 內部，而不是在 <code>ex02</code> 內部。請在 <code>main.kt</code> 上按右鍵並刪除，從③重新開始。關鍵在於是否在 <code>ex02</code> 上按了右鍵。"
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージ）",
+      "translation": "④ 與 Java／Swift 的比較（套件）"
+    },
+    {
+      "source": "KotlinもJavaも、ファイルの先頭に <code>package</code> を書き、フォルダの構成と合わせます。違うのは行末の <code>;</code> が要らないことだけです。",
+      "translation": "Kotlin 和 Java 都在檔案開頭寫上 <code>package</code>，並與資料夾結構一致。唯一的差別是句尾不需要 <code>;</code>。"
+    },
+    {
+      "source": "Swiftには、ファイルの先頭に書く <code>package</code> 宣言がありません。同じターゲットの中のファイルは、宣言なしで互いを見られます。",
+      "translation": "Swift 沒有寫在檔案開頭的 <code>package</code> 宣告。在同一個 Target 內的檔案，不需宣告就能看見彼此。"
+    },
+    {
+      "source": "<code>ex01</code> と <code>ex02</code> は別のパッケージなので、どちらにも <code>main.kt</code> があり、どちらにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。",
+      "translation": "因為 <code>ex01</code> 和 <code>ex02</code> 是不同的套件，所以兩邊都有 <code>main.kt</code>、也都有 <code>fun main()</code> 也不會衝突。這跟 Java 在不同套件可以放相同的類別名稱是一樣的。"
+    },
+    {
+      "source": "<code>src/ex02/main.kt</code> を作り、1行目が <code>package ex02</code> になっていることを確かめた。<code>ex01</code> も残っている。",
+      "translation": "建立了 <code>src/ex02/main.kt</code>，並確認第1行是 <code>package ex02</code>。也保留了 <code>ex01</code>。"
+    },
+    {
+      "source": "次へ：String と String? →",
+      "translation": "下一步：String 與 String? →"
+    },
+    {
+      "source": "STEP 09 · 2コマ目 · 目安 25分",
+      "translation": "STEP 09 · 第2堂課 · 約25分鐘"
+    },
+    {
+      "source": "nullを入れられない型と、入れられる型（String と String?）",
+      "translation": "不能放入 null 的型別，與可以放入的型別（String 與 String?）"
+    },
+    {
+      "source": "<code>String</code> と <code>String?</code> を書き分けます。<code>?</code> の付かない型に <code>null</code> を入れると、Runする前に止められることを、自分の画面で確かめます。",
+      "translation": "學習區分 <code>String</code> 和 <code>String?</code> 的寫法。在自己的畫面上確認，如果在沒有 <code>?</code> 的型別放入 <code>null</code>，在執行（Run）之前就會被擋下。"
+    },
+    {
+      "source": "変更するファイル：src/ex02/main.kt",
+      "translation": "要更改的檔案：src/ex02/main.kt"
+    },
+    {
+      "source": "入れられる値",
+      "translation": "能放入的值"
+    },
+    {
+      "source": "文字列だけ。<code>null</code> は入れられません。",
+      "translation": "只有字串。不能放入 <code>null</code>。"
+    },
+    {
+      "source": "文字列か、<code>null</code> のどちらか。",
+      "translation": "字串或 <code>null</code>。"
+    },
+    {
+      "source": "型の最後に <code>?</code> を1文字足すかどうかだけで、別の型になります。",
+      "translation": "只要在型別最後加上一個 <code>?</code>，就會變成不同的型別。"
+    },
+    {
+      "source": "① ファイル全体を、次の内容にする",
+      "translation": "① 將檔案內容全部替換如下"
+    },
+    {
+      "source": "src/ex02/main.kt · 全体を置き換える",
+      "translation": "src/ex02/main.kt · 替換全文"
+    },
+    {
+      "source": "ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。",
+      "translation": "這裡我們不省略型別，明確寫出 <code>: String</code> 和 <code>: String?</code>。雖然在第1堂課的 <code>val number1 = 1</code> 是交由型別推斷，但這堂課的主題是<strong>型別是否有加上 <code>?</code></strong>，所以會把它寫出來顯示在畫面上。"
+    },
+    {
+      "source": "<code>Saito</code> は5文字なので <code>5</code> が出ます。<code>count()</code> は、文字列の文字数を返すKotlinの関数です。Javaの <code>length()</code>、Swiftの <code>count</code> にあたります。",
+      "translation": "因為 <code>Saito</code> 有5個字，所以會輸出 <code>5</code>。<code>count()</code> 是 Kotlin 用來回傳字串字元數的函式。相當於 Java 的 <code>length()</code> 和 Swift 的 <code>count</code>。"
+    },
+    {
+      "source": "name2 の行が薄い色になっていても大丈夫",
+      "translation": "name2 那一行顏色變淺也沒關係"
+    },
+    {
+      "source": "<code>var name2: String? = null</code> は宣言しただけで、まだどこからも使っていません。IntelliJ IDEA が「使っていない」ことを薄い色で知らせることがありますが、STEP 10 で使うので、消さずにそのままにします。",
+      "translation": "<code>var name2: String? = null</code> 只是宣告，還沒有在任何地方使用。IntelliJ IDEA 可能會用淺色來提示「沒有被使用」，但因為我們在 STEP 10 會用到，所以請保留不要刪除。"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（nullを入れられるか）",
+      "translation": "③ 用 Java / Swift 怎麼寫（是否能放入 null）"
+    },
+    {
+      "source": "Kotlinは、型の最後に <code>?</code> が付いていなければ <code>null</code> を代入できません。<strong>コンパイルエラーになり、Runできません。</strong>",
+      "translation": "在 Kotlin 中，如果型別最後沒有加上 <code>?</code>，就不能指派 <code>null</code>。<strong>會發生編譯錯誤，無法執行（Run）。</strong>"
+    },
+    {
+      "source": "Swiftも同じ分け方です。<code>nil</code> を入れられるのは <code>String?</code> だけで、<code>String</code> には入れられません。<strong>KotlinのNull安全は、Swiftのオプショナルとほぼ同じ発想です。</strong>",
+      "translation": "Swift 的區分方式也一樣。只有 <code>String?</code> 可以放入 <code>nil</code>，<code>String</code> 則不行。<strong>Kotlin 的空值安全和 Swift 的 Optional 概念幾乎相同。</strong>"
+    },
+    {
+      "source": "Javaは、どの参照型にも <code>null</code> を入れられます。<code>String name = null;</code> はそのまま通り、<code>name.length()</code> を呼んだ瞬間に <code>NullPointerException</code> になります。",
+      "translation": "在 Java 中，任何參考型別都可以放入 <code>null</code>。<code>String name = null;</code> 可以直接通過，直到呼叫 <code>name.length()</code> 的瞬間才會發生 <code>NullPointerException</code>。"
+    },
+    {
+      "source": "つまり<strong>Javaでは動かすまで分からないことが、KotlinとSwiftではコンパイル時に分かります。</strong> 同じ間違いに気づく時刻が、実行時から書いている最中に移ります。",
+      "translation": "也就是說，<strong>Java 要等到執行才會發現的問題，Kotlin 和 Swift 在編譯時就能知道。</strong>發現同樣錯誤的時間點，從執行時提早到了撰寫程式碼的時候。"
+    },
+    {
+      "source": "Javaにも <code>Optional</code> や <code>@Nullable</code> はありますが、どちらも型そのものの決まりではありません。<code>String</code> の変数に <code>null</code> が入ることを、言語が止めてくれるわけではありません。",
+      "translation": "雖然 Java 也有 <code>Optional</code> 和 <code>@Nullable</code>，但兩者都不是型別本身的規範。語言層面並不會阻止 <code>String</code> 變數被放入 <code>null</code>。"
+    },
+    {
+      "source": "④ わざとコンパイルエラーを出す（必須）",
+      "translation": "④ 刻意產生編譯錯誤（必做）"
+    },
+    {
+      "source": "<code>val name1: String = &quot;Saito&quot;</code> の <code>&quot;Saito&quot;</code> を <code>null</code> に書き換えます。Runを押す前に、その行を見てください。",
+      "translation": "將 <code>val name1: String = &quot;Saito&quot;</code> 的 <code>&quot;Saito&quot;</code> 改成 <code>null</code>。在按 Run 之前，請先看看那一行。"
+    },
+    {
+      "source": "見るのは次の3つです。<strong>どの行が赤くなったか・IDEが何を止めていると言っているか・どう直せと言っているか。</strong>",
+      "translation": "請注意以下3點：<strong>哪一行變紅了、IDE 說它擋下了什麼、以及它建議怎麼修改。</strong>"
+    },
+    {
+      "source": "試したあとに開く：何が起きたか",
+      "translation": "測試後展開：發生的狀況"
+    },
+    {
+      "source": "書き換えた行に赤い波線が出て、この型には <code>null</code> を代入できない、という<strong>おおよそその意味のメッセージ</strong>が出ます。Runしても実行されません。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言を覚える必要はありません。<strong>赤い波線が出たら、<code>?</code> の付いていない型に <code>null</code> を入れようとしている</strong>と読み替えてください。",
+      "translation": "修改的那一行會出現紅色波浪線，並顯示<strong>大意是不能將 <code>null</code> 指派給這個型別</strong>的訊息。即使按了 Run 也不會執行。訊息的用詞會隨 IntelliJ IDEA 和 Kotlin 版本而改變，所以不需要記住確切文字。<strong>看到紅色波浪線，請將它理解為「你正試圖把 <code>null</code> 放入沒有 <code>?</code> 的型別」</strong>。"
+    },
+    {
+      "source": "直し方は2つです。型を <code>String?</code> に変えるか、<code>null</code> をやめて文字列に戻すか。ここでは <code>&quot;Saito&quot;</code> に戻し、赤い波線が消えることを確かめます。",
+      "translation": "有兩種修改方式。將型別改成 <code>String?</code>，或是把 <code>null</code> 改回字串。這裡我們改回 <code>&quot;Saito&quot;</code>，並確認紅色波浪線消失。"
+    },
+    {
+      "source": "⑤ 同じ間違いを、JavaとSwiftでしたとき",
+      "translation": "⑤ 在 Java 和 Swift 犯了相同的錯誤時"
+    },
+    {
+      "source": "KotlinとSwiftは、<strong>書いている最中</strong>に止まります。プログラムは1度も動きません。",
+      "translation": "Kotlin 和 Swift 在<strong>撰寫的過程中</strong>就會被擋下。程式一次都不會執行。"
+    },
+    {
+      "source": "Javaは、<strong>動かしてその行に着いたとき</strong>に落ちます。通らなかった経路の <code>null</code> は、そのまま残ります。",
+      "translation": "Java 則是<strong>在執行並跑到那一行時</strong>才會當機。沒有走到的路徑裡的 <code>null</code> 就會被遺留下來。"
+    },
+    {
+      "source": "どちらも間違いは見つかりますが、<strong>見つかる時刻が違います。</strong> Kotlinが型に <code>?</code> を持ち込んだのは、この時刻を早めるためです。",
+      "translation": "兩者都能發現錯誤，但<strong>發現的時間點不同。</strong>Kotlin 將 <code>?</code> 引進型別中，就是為了提早這個時間點。"
+    },
+    {
+      "source": "<code>String</code> と <code>String?</code> を書き分けて <code>5</code> を出せた。<code>?</code> の付かない型に <code>null</code> を入れるとRunできないことを、自分の画面で確かめた。",
+      "translation": "成功區分了 <code>String</code> 和 <code>String?</code> 的寫法，並輸出了 <code>5</code>。在自己的畫面上確認了如果把 <code>null</code> 放入沒有 <code>?</code> 的型別，就會無法執行（Run）。"
+    },
+    {
+      "source": "次へ：安全呼び出し ?. →",
+      "translation": "下一步：安全呼叫 ?. →"
+    },
+    {
+      "source": "STEP 10 · 2コマ目 · 目安 25分",
+      "translation": "STEP 10 · 第2堂課 · 約25分鐘"
+    },
+    {
+      "source": "安全呼び出し（?.）",
+      "translation": "安全呼叫（?.）"
+    },
+    {
+      "source": "<code>?.</code> を使って、<code>null</code> かもしれない変数のメソッドを呼びます。3行の出力を完成させます。",
+      "translation": "使用 <code>?.</code> 來呼叫可能是 <code>null</code> 的變數的方法。我們來完成3行的輸出。"
+    },
+    {
+      "source": "① ?. は何をするか",
+      "translation": "① ?. 有什麼作用"
+    },
+    {
+      "source": "書き方",
+      "translation": "寫法"
+    },
+    {
+      "source": "<code>name2</code> が <code>null</code> のとき",
+      "translation": "當 <code>name2</code> 是 <code>null</code> 時"
+    },
+    {
+      "source": "<code>name2</code> に文字列が入っているとき",
+      "translation": "當 <code>name2</code> 裡有字串時"
+    },
+    {
+      "source": "<code>count()</code> を呼ばずに <code>null</code> を返す",
+      "translation": "不會呼叫 <code>count()</code>，直接回傳 <code>null</code>"
+    },
+    {
+      "source": "<code>count()</code> を呼んで、その結果を返す",
+      "translation": "呼叫 <code>count()</code>，並回傳其結果"
+    },
+    {
+      "source": "コンパイルエラー。<code>String?</code> には、そのままメソッドを呼べません",
+      "translation": "編譯錯誤。不能直接對 <code>String?</code> 呼叫方法"
+    },
+    {
+      "source": "呼べます。文字列を代入した行より後では、Kotlinが型を <code>String</code> として扱い直すためです（スマートキャスト）",
+      "translation": "可以呼叫。因為在指派字串的那行之後，Kotlin 會將型別重新視為 <code>String</code>（智慧轉型，スマートキャスト）"
+    },
+    {
+      "source": "<strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。",
+      "translation": "<strong><code>?.</code> 的意思是「如果是 <code>null</code> 就不呼叫，直接回傳 <code>null</code>」。</strong>呼叫與否的分支，就包含在這個符號中。"
+    },
+    {
+      "source": "② ファイル全体を、次の内容にする",
+      "translation": "② 將檔案內容全部替換如下"
+    },
+    {
+      "source": "③ 実行結果",
+      "translation": "③ 執行結果"
+    },
+    {
+      "source": "Runの結果 · この3行が出れば成功",
+      "translation": "Run 的結果 · 顯示這3行就算成功"
+    },
+    {
+      "source": "<code>name1</code> は <code>String</code> で、<code>Saito</code> の5文字。<code>?</code> が付いていないので <code>?.</code> も要らない。",
+      "translation": "<code>name1</code> 是 <code>String</code>，有 <code>Saito</code> 5個字。因為沒有 <code>?</code>，所以也不需要 <code>?.</code>。"
+    },
+    {
+      "source": "<code>name2</code> が <code>null</code> なので、<code>count()</code> は呼ばれず <code>null</code> が返り、<code>println</code> がそれを出している。",
+      "translation": "因為 <code>name2</code> 是 <code>null</code>，所以沒有呼叫 <code>count()</code>，而是回傳 <code>null</code>，並由 <code>println</code> 輸出。"
+    },
+    {
+      "source": "<code>name2</code> に <code>Tanaka</code> を代入したので、<code>count()</code> が呼ばれて6が返る。",
+      "translation": "因為將 <code>Tanaka</code> 指派給 <code>name2</code>，所以會呼叫 <code>count()</code> 並回傳6。"
+    },
+    {
+      "source": "④ ?. が返す型は Int ではなく Int?",
+      "translation": "④ ?. 回傳的型別是 Int? 而不是 Int"
+    },
+    {
+      "source": "<code>count()</code> は <code>Int</code> を返します。しかし <code>name2?.count()</code> 全体の型は <code>Int?</code> です。<code>name2</code> が <code>null</code> のときは <code>count()</code> が呼ばれず <code>null</code> が返るので、「<code>Int</code> か <code>null</code> のどちらか」になるからです。",
+      "translation": "<code>count()</code> 會回傳 <code>Int</code>。但是 <code>name2?.count()</code> 整體的型別是 <code>Int?</code>。因為當 <code>name2</code> 是 <code>null</code> 時，不會呼叫 <code>count()</code> 而是回傳 <code>null</code>，所以結果會是「<code>Int</code> 或是 <code>null</code>」。"
+    },
+    {
+      "source": "画面で確かめる",
+      "translation": "在畫面上確認"
+    },
+    {
+      "source": "<code>fun main()</code> のいちばん最後の行の下に <code>val length = name2?.count()</code> と1行足し、<code>length</code> にマウスを重ねて、出てくる型を読みます。確かめたら、足した行を消します。",
+      "translation": "在 <code>fun main()</code> 的最後一行底下新增一行 <code>val length = name2?.count()</code>，將游標移到 <code>length</code> 上方，看看顯示出來的型別。確認後請將這行刪除。"
+    },
+    {
+      "source": "<code>Int?</code> と出ます。<code>Int</code> ではありません。<strong><code>null</code> が返る可能性が、そのまま型に出ています。</strong> Swiftの <code>name2?.count</code> も同じで、結果は <code>Int?</code> です。",
+      "translation": "會顯示 <code>Int?</code>。不是 <code>Int</code>。<strong>回傳 <code>null</code> 的可能性，直接反映在型別上了。</strong>Swift 的 <code>name2?.count</code> 也一樣，結果會是 <code>Int?</code>。"
+    },
+    {
+      "source": "⑤ Java / Swift ではどう書くか",
+      "translation": "⑤ 用 Java / Swift 怎麼寫"
+    },
+    {
+      "source": "Kotlinの <code>?.</code> は、Swiftのオプショナルチェイン <code>?.</code> と<strong>ほぼ同じ</strong>です。書く記号も、<code>null</code> のときに呼ばないところも、返る型が <code>Int?</code> になるところも同じです。違うのは、Kotlinの <code>count()</code> が関数で、Swiftの <code>count</code> がプロパティであることくらいです。",
+      "translation": "Kotlin 的 <code>?.</code> 和 Swift 的 Optional Chaining <code>?.</code> <strong>幾乎一樣</strong>。書寫的符號、為 <code>null</code> 時不呼叫、以及回傳型別會變成 <code>Int?</code> 都是一樣的。差別只在於 Kotlin 的 <code>count()</code> 是函式，而 Swift 的 <code>count</code> 是屬性。"
+    },
+    {
+      "source": "Javaには <code>?.</code> がありません。<code>if (name2 != null)</code> で囲むか、<code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> のように書きます。",
+      "translation": "Java 沒有 <code>?.</code>。只能用 <code>if (name2 != null)</code> 包起來，或是寫成 <code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> 的形式。"
+    },
+    {
+      "source": "<strong>Javaの書き方は、囲むことを書く人が忘れないという前提の上に立っています。</strong> 忘れても書けてしまい、実行して初めて <code>NullPointerException</code> になります。",
+      "translation": "<strong>Java 的寫法建立在「開發者不會忘記包起來」的前提之上。</strong>就算忘了包也能寫，直到執行時才會發生 <code>NullPointerException</code>。"
+    },
+    {
+      "source": "Kotlinでは、<code>null</code> が入っているかもしれない位置で <code>?.</code> を忘れると、<strong>コンパイルエラー</strong>になります。Runできないので、忘れたまま先へ進めません。<strong>忘れられないのが、<code>if</code> で囲む書き方との違いです。</strong>",
+      "translation": "在 Kotlin 中，如果在可能有 <code>null</code> 的地方忘記寫 <code>?.</code>，就會發生<strong>編譯錯誤</strong>。因為無法執行（Run），所以不能在忘記的情況下繼續進行。<strong>「無法忘記寫」就是它跟用 <code>if</code> 包起來的寫法最大的不同。</strong>"
+    },
+    {
+      "source": "<strong>ただし「常にエラー」ではありません。</strong> 文字列を代入した行より後では、Kotlinがその変数を <code>String</code> として扱い直すので（スマートキャスト）、<code>name2.count()</code> と書いても通ります。<strong>この教材の完成コードは、<code>name2</code> を読む2回とも <code>?.</code> でそろえてあります</strong>ので、最後の行には次の注意が出ます。",
+      "translation": "<strong>不過並不是「一定會出錯」。</strong>在指派字串的那行之後，Kotlin 會將該變數重新視為 <code>String</code>（智慧轉型，スマートキャスト），所以即使寫成 <code>name2.count()</code> 也能通過。<strong>本教材的完成版程式碼，為了統一寫法，兩次讀取 <code>name2</code> 都使用了 <code>?.</code></strong>，因此最後一行會出現以下的提示。"
+    },
+    {
+      "source": "最後の <code>?.</code> に、黄色い警告が出ます",
+      "translation": "最後一個 <code>?.</code> 會出現黃色警告"
+    },
+    {
+      "source": "完成コードの最後の行 <code>println(name2?.count())</code> に、IntelliJ IDEA が警告を出します。<strong>間違いではありません。</strong> 直前の行で文字列を代入しているので、Kotlinはこの位置の <code>name2</code> を <code>String</code> として扱っています。<code>null</code> でないと分かっている相手に <code>?.</code> を付けているため、「その <code>?.</code> は要りません」と教えてくれています。",
+      "translation": "完成版程式碼的最後一行 <code>println(name2?.count())</code>，IntelliJ IDEA 會顯示警告。<strong>這不是錯誤。</strong>因為在上一行剛指派了字串，所以 Kotlin 會把這個位置的 <code>name2</code> 視為 <code>String</code>。由於我們對一個已知不是 <code>null</code> 的對象加上了 <code>?.</code>，因此它在提示「不需要這個 <code>?.</code>」。"
+    },
+    {
+      "source": "この教材では、<strong><code>name2</code> を読む2回とも同じ書き方にそろえたいので、警告が出るまま残します。</strong> 消したいときは、最後の行だけ <code>println(name2.count())</code> にすれば警告は消えます。出力はどちらでも <code>6</code> です。",
+      "translation": "在本教材中，<strong>為了讓兩次讀取 <code>name2</code> 保持相同的寫法，所以會保留警告。</strong>如果想消除警告，只要把最後一行改成 <code>println(name2.count())</code> 即可。兩者的輸出結果都是 <code>6</code>。"
+    },
+    {
+      "source": "<strong>ここはSwiftと違うところです。</strong> Swiftは代入しても型が <code>String?</code> のままなので、<code>?.</code> かアンラップがいつでも要ります。Kotlinは、代入した内容から「ここではもう <code>null</code> ではない」と判断して、型を絞り込みます。",
+      "translation": "<strong>這裡與 Swift 不同。</strong>Swift 在賦值後型別依然是 <code>String?</code>，因此隨時需要 <code>?.</code> 或拆包。Kotlin 則會根據賦值的內容判斷「這裡已經不是 <code>null</code>」，進而限縮型別。"
+    },
+    {
+      "source": "3行を出せた。<code>?.</code> が返す型が <code>Int?</code> であることを、マウスを重ねて確かめた。",
+      "translation": "成功輸出了3行。將游標移至 <code>?.</code> 上，確認了它回傳的型別是 <code>Int?</code>。"
+    },
+    {
+      "source": "STEP 11 · 2コマ目 · 目安 15分",
+      "translation": "STEP 11 · 第2堂課 · 約15分鐘"
+    },
+    {
+      "source": "練習A · String? の変数をもう1つ足す（必須・7分）",
+      "translation": "練習A · 再新增一個 String? 的變數（必做・7分鐘）"
+    },
+    {
+      "source": "<code>fun main()</code> のいちばん最後の行（3つめの <code>println</code>）の下に、<code>String?</code> の変数を1つ足します。名前も値も自分で決めます。まず <code>null</code> を入れ、<code>?.count()</code> を付けた <code>println</code> を1行足して、出力を4行にします。Runして結果を見たら、こんどは <code>null</code> のかわりに好きな文字列を入れて、もう一度Runします。",
+      "translation": "在 <code>fun main()</code> 的最後一行（第3個 <code>println</code>）底下，再新增一個 <code>String?</code> 變數。名稱和值由你自己決定。首先放入 <code>null</code>，並加上一行帶有 <code>?.count()</code> 的 <code>println</code>，讓輸出變成4行。執行（Run）看完結果後，接著把 <code>null</code> 換成你喜歡的字串，再執行一次。"
+    },
+    {
+      "source": "<code>null</code> を入れたときは <code>null</code> と出ます。文字列を入れたときは、その文字列の文字数が出ます。自分が入れた文字列を数えて、出た数と合っているか確かめましょう。<strong>同じ1行が、入っている値によって数を出したり <code>null</code> を出したりします。</strong>これが <code>?.</code> のはたらきです。",
+      "translation": "放入 <code>null</code> 時會顯示 <code>null</code>。放入字串時，則會顯示該字串的字元數。請算一下自己輸入的字串，確認顯示的數字是否相符。<strong>同一行程式碼，會因為裡面的值而顯示數字或 <code>null</code>。</strong>這就是 <code>?.</code> 的作用。"
+    },
+    {
+      "source": "練習B · ?. を . にしてみる（必須・5分）",
+      "translation": "練習B · 試著把 ?. 改成 .（必做・5分鐘）"
+    },
+    {
+      "source": "練習Aで足した行の <code>?.</code> を <code>.</code> に書き換えます。Runを押す前に、その行を見てください。",
+      "translation": "將練習A新增的那一行的 <code>?.</code> 改成 <code>.</code>。在按 Run 之前，請先看看那一行。"
+    },
+    {
+      "source": "その行に赤い波線が出て、Runできません。<code>String?</code> の変数には、メソッドをそのまま呼べないからです。メッセージの文言はバージョンで変わるので、覚えなくて構いません。<strong>読み替えるのは「<code>?</code> の付いた型を、<code>?</code> なしで扱おうとしている」の1つだけです。</strong>",
+      "translation": "那一行會出現紅色波浪線，且無法執行（Run）。因為對 <code>String?</code> 的變數不能直接呼叫方法。訊息的用詞會隨版本而改變，所以不需要記住。<strong>只要理解成「正試圖用沒有 <code>?</code> 的方式來處理有 <code>?</code> 的型別」即可。</strong>"
+    },
+    {
+      "source": "確かめたら <code>?.</code> に戻し、赤い波線が消えることを確かめます。",
+      "translation": "確認後請改回 <code>?.</code>，並確認紅色波浪線消失。"
+    },
+    {
+      "source": "同じことを、JavaとSwiftでしたとき",
+      "translation": "在 Java 和 Swift 做了相同操作時"
+    },
+    {
+      "source": "KotlinとSwiftは、<code>?</code> の付いた型にそのままメソッドを呼ぶコードを、コンパイル時に止めます。",
+      "translation": "Kotlin 和 Swift 對於有 <code>?</code> 的型別直接呼叫方法的程式碼，會在編譯時擋下。"
+    },
+    {
+      "source": "Javaは止めません。<code>null</code> かどうかを確かめるのは、書く人の仕事です。",
+      "translation": "Java 則不會擋下。確認是否為 <code>null</code>，是寫程式的人的工作。"
+    },
+    {
+      "source": "<strong><code>?.</code> は「安全に書くための心がけ」ではなく、「書かないと通らない」しくみです。</strong> ここがJavaといちばん違うところです。",
+      "translation": "<strong><code>?.</code> 不是「為了寫得安全而具備的心態」，而是「不寫就過不了」的機制。</strong>這是和 Java 差異最大的地方。"
+    },
+    {
+      "source": "<code>?.</code> が元どおりになっていることを確かめます。",
+      "translation": "確認 <code>?.</code> 已恢復原狀。"
+    },
+    {
+      "source": "Runし、STEP 10 と同じ3行に戻ったことを確かめます。",
+      "translation": "執行（Run），確認已恢復為和 STEP 10 相同的3行。"
+    },
+    {
+      "source": "練習A・Bを試し、<code>?.</code> を <code>.</code> にした行が赤くなることを確かめた。最後に元の3行へ戻した。",
+      "translation": "嘗試了練習A・B，確認將 <code>?.</code> 改成 <code>.</code> 的那行會變紅。最後恢復成了原本的3行。"
+    },
+    {
+      "source": "STEP 12 · 2コマ目 · 目安 15分",
+      "translation": "STEP 12 · 第2堂課 · 約15分鐘"
+    },
+    {
+      "source": "<code>val name1: String</code> には <code>null</code> が入らないので、<code>?.</code> なしで <code>count()</code> を呼べる。",
+      "translation": "因為 <code>val name1: String</code> 不能放入 <code>null</code>，所以不加 <code>?.</code> 就能呼叫 <code>count()</code>。"
+    },
+    {
+      "source": "<code>var name2: String?</code> が <code>null</code> のとき、<code>?.</code> が <code>count()</code> を呼ばずに <code>null</code> を返している。",
+      "translation": "當 <code>var name2: String?</code> 為 <code>null</code> 時，<code>?.</code> 不會呼叫 <code>count()</code> 而是回傳 <code>null</code>。"
+    },
+    {
+      "source": "同じ <code>name2?.count()</code> でも、文字列が入っていれば <code>count()</code> が呼ばれる。",
+      "translation": "同樣是 <code>name2?.count()</code>，只要裡面有字串就會呼叫 <code>count()</code>。"
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<code>?</code> を書いた場所と <code>?.</code> を書いた場所を指さして説明します。",
+      "translation": "如果結果和表中一樣，請將畫面秀給老師看，並指著寫了 <code>?</code> 和寫了 <code>?.</code> 的地方進行說明。"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex02</code> も忘れずに入れます。",
+      "translation": "這是目前為止輸入的 <code>main.kt</code> 全貌。別忘了加入第1行的 <code>package ex02</code>。"
+    },
+    {
+      "source": "② 同じ3行を、JavaとSwiftで出すと",
+      "translation": "② 相同的3行，如果用 Java 和 Swift 來輸出"
+    },
+    {
+      "source": "Kotlinの <code>println(name2?.count())</code> の1行が、Javaでは <code>if</code> と <code>else</code> に分かれます。2回出てくるので、ここでは <code>printLength</code> というメソッドにまとめました。<strong>Javaでは「<code>null</code> のとき何を出すか」も自分で書きます。</strong> Kotlinは <code>?.</code> が <code>null</code> を返し、<code>println</code> がそれをそのまま出します。",
+      "translation": "Kotlin 裡 <code>println(name2?.count())</code> 這一行，在 Java 會分成 <code>if</code> 和 <code>else</code>。因為出現了兩次，所以這裡把它整理成名為 <code>printLength</code> 的方法。<strong>在 Java 中，「是 <code>null</code> 時要輸出什麼」也要自己寫。</strong>Kotlin 則是 <code>?.</code> 回傳 <code>null</code>，再由 <code>println</code> 直接將它輸出。"
+    },
+    {
+      "source": "Swiftの書き方はKotlinとほぼ同じです。ただし<strong>実行時の形が違います。</strong> Swiftの <code>String?</code> はオプショナルという入れ物に包まれた別の値なので、そのまま表示すると包まれていることが分かる形で出ます。Kotlinの <code>String?</code> は、実行時には文字列そのものか <code>null</code> かのどちらかで、包む入れ物がありません。だから <code>println(name2?.count())</code> は、数か <code>null</code> をそのまま出します。",
+      "translation": "Swift 的寫法和 Kotlin 幾乎相同。但是<strong>執行時的型態不一樣。</strong>Swift 的 <code>String?</code> 是被包在一個叫做 Optional 的容器裡的其他值，所以直接顯示時，會以能看出被包裝的形式呈現。Kotlin 的 <code>String?</code>，在執行時就只有字串本身或是 <code>null</code>，沒有包裝的容器。所以 <code>println(name2?.count())</code> 會直接輸出數字或 <code>null</code>。"
+    },
+    {
+      "source": "Kotlinの <code>?</code> と <code>?.</code> は、<strong>コンパイラのための印</strong>です。実行時の値が増えるわけではありません。ここがSwiftのオプショナルと似て見えて、中身が違うところです。",
+      "translation": "Kotlin 的 <code>?</code> 和 <code>?.</code> 是<strong>給編譯器看的標記</strong>。執行時的值並不會增加。這是它和 Swift 的 Optional 看似相近、本質卻不同的地方。"
+    },
+    {
+      "source": "③ ex01 と ex02 が並んでいることを確かめる",
+      "translation": "③ 確認 ex01 和 ex02 有排在一起"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code> と <code>ex02</code> が並んでいることを確かめます。",
+      "translation": "打開左側的 <strong>プロジェクト</strong>（專案）工具視窗裡的 <code>src</code>，確認 <code>ex01</code> 和 <code>ex02</code> 有排在一起。"
+    },
+    {
+      "source": "<code>ex01</code> の <code>main.kt</code> を開きます。1コマ目に書いたコードが、そのまま残っています。",
+      "translation": "開啟 <code>ex01</code> 的 <code>main.kt</code>。第1堂課寫的程式碼原封不動地保留著。"
+    },
+    {
+      "source": "<code>fun main()</code> が2つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。",
+      "translation": "雖然有兩個 <code>fun main()</code>，但因為套件不同所以是不同的程式。請打開想執行的檔案，按下該 <code>fun main()</code> 左邊的 ▷。"
+    },
+    {
+      "source": "プロジェクトは <code>K01HelloKotlin</code> の1つだけを使い続けます。回を重ねるごとに <code>src</code> の下のパッケージが増えていくので、前に書いたコードをいつでも開いて見返せます。",
+      "translation": "我們會繼續只使用 <code>K01HelloKotlin</code> 這個專案。隨著課堂進行，<code>src</code> 底下的套件會越來越多，隨時都能打開複習以前寫的程式碼。"
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code> と <code>ex02</code> が同じプロジェクトに並んでいることも確かめた。",
+      "translation": "進行完成檢查，並將畫面秀給老師看。也確認了 <code>ex01</code> 和 <code>ex02</code> 並列在同一個專案中。"
+    },
+    {
+      "source": "この回のまとめ",
+      "translation": "本堂課的總結"
+    },
+    {
+      "source": "<strong><code>?</code> を付けた型だけが <code>null</code> を持てる → 呼ぶときは <code>?.</code> を付ける → 返ってくるのも <code>?</code> の付いた型。</strong><br>Javaでは実行時に <code>NullPointerException</code> で気づいていたことを、Kotlinでは書いている最中に見つけられます。Swiftのオプショナルで知っている考え方が、そのまま使えます。",
+      "translation": "<strong>只有加上 <code>?</code> 的型別才能有 <code>null</code> → 呼叫時要加上 <code>?.</code> → 回傳的也是加上 <code>?</code> 的型別。</strong><br>在 Java 中執行時才會因為 <code>NullPointerException</code> 而發現的問題，在 Kotlin 中撰寫時就能夠發現。你可以直接套用在 Swift Optional 學到的觀念。"
+    },
+    {
+      "source": "STEP 13 · 3コマ目 · 目安 5分",
+      "translation": "STEP 13 · 第3堂課 · 約5分鐘"
+    },
+    {
+      "source": "3コマ目のゴール（関数）",
+      "translation": "第3堂課的目標（函式）"
+    },
+    {
+      "source": "ここからが<strong>3コマ目</strong>です。使うプロジェクトは1コマ目・2コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex03</code> パッケージを足して、その中に書きます。すでにある <code>ex01</code> と <code>ex02</code> は、そのまま残します。",
+      "translation": "從這裡開始是<strong>第3堂課</strong>。使用的專案與第1、2堂課一樣是 <code>K01HelloKotlin</code>，不重新建立。在 <code>src</code> 下新增 <code>ex03</code> 套件，並寫在裡面。原本就有的 <code>ex01</code> 和 <code>ex02</code> 就直接保留。"
+    },
+    {
+      "source": "この回の主題は <strong>関数の宣言</strong> です。やることはJavaのメソッド、Swiftの関数とまったく同じですが、<strong>書く順番と記号が、JavaともSwiftとも違います。</strong> 何を書くかではなく、どこに何を書くかを覚える回です。",
+      "translation": "本堂課的主題是 <strong>函式的宣告</strong>。做的事情和 Java 的方法、Swift 的函式完全一樣，<strong>但寫法順序和記號都與 Java 及 Swift 不同。</strong> 這是一堂學習不是寫什麼，而是要在哪裡寫什麼的課。"
+    },
+    {
+      "source": "キーワードなし（修飾子と戻り値の型で始める）",
+      "translation": "沒有關鍵字（由修飾子與回傳型別開始寫）"
+    },
+    {
+      "source": "引数 <code>a: Int</code>",
+      "translation": "參數 <code>a: Int</code>"
+    },
+    {
+      "source": "<code>int a</code>（型が先、名前があと）",
+      "translation": "<code>int a</code>（型別在前，名稱在後）"
+    },
+    {
+      "source": "<code>a: Int</code>（名前が先、型があと）",
+      "translation": "<code>a: Int</code>（名稱在前，型別在後）"
+    },
+    {
+      "source": "戻り値 <code>: Int</code>",
+      "translation": "回傳值 <code>: Int</code>"
+    },
+    {
+      "source": "メソッド名の前の <code>int</code>",
+      "translation": "方法名稱前面的 <code>int</code>"
+    },
+    {
+      "source": "戻り値を書かない",
+      "translation": "不寫回傳值"
+    },
+    {
+      "source": "<code>void</code> と書く",
+      "translation": "寫成 <code>void</code>"
+    },
+    {
+      "source": "<code>-&gt; Void</code> を省く",
+      "translation": "省略 <code>-&gt; Void</code>"
+    },
+    {
+      "source": "同じ関数を3つの言語で書く",
+      "translation": "用3種語言寫一樣的函式"
+    },
+    {
+      "source": "2つの <code>Int</code> を受け取って、足した <code>Int</code> を返す関数です。中身は3つとも同じで、違うのは形だけです。",
+      "translation": "這是一個接收2個 <code>Int</code> 並回傳兩者相加後之 <code>Int</code> 的函式。3者的內容都一樣，不同的只有形式。"
+    },
+    {
+      "source": "Kotlinは <code>fun</code> で始めます。Swiftの <code>func</code> にあたります。Javaには、この位置に置くキーワードがありません。",
+      "translation": "Kotlin 用 <code>fun</code> 開頭。相當於 Swift 的 <code>func</code>。Java 在這個位置則沒有關鍵字。"
+    },
+    {
+      "source": "引数は、Kotlinが <code>a: Int</code>、Swiftも <code>a: Int</code>、Javaだけが <code>int a</code> です。<strong>KotlinとSwiftは名前が先で、Javaは型が先です。</strong>",
+      "translation": "參數的部分，Kotlin 是 <code>a: Int</code>，Swift 也是 <code>a: Int</code>，只有 Java 是 <code>int a</code>。<strong>Kotlin 與 Swift 都是名稱在前，Java 則是型別在前。</strong>"
+    },
+    {
+      "source": "戻り値の型は、Kotlinがかっこのうしろの <code>: Int</code>、Swiftがかっこのうしろの <code>-&gt; Int</code>、Javaがメソッド名の前の <code>int</code> です。<strong>3つとも位置か記号が違います。</strong>",
+      "translation": "回傳型別的部分，Kotlin 在括號後方寫 <code>: Int</code>，Swift 在括號後方寫 <code>-&gt; Int</code>，Java 則在方法名稱前面寫 <code>int</code>。<strong>這3種語言的位置或記號都不一樣。</strong>"
+    },
+    {
+      "source": "値を返す <code>return</code> は、JavaともSwiftとも同じ書き方です。行末に <code>;</code> が要らない点は、1コマ目・2コマ目と同じです。",
+      "translation": "回傳值的 <code>return</code> 寫法與 Java、Swift 相同。行末不需要加 <code>;</code> 的部分也和第1、2堂課一樣。"
+    },
+    {
+      "source": "並びと位置は STEP 15 で1つずつ確かめます。ここでは「3つとも違う形になる」ことだけ見ておきます。",
+      "translation": "寫法順序與位置會在 STEP 15 逐一確認。這裡只要先了解「3者寫出來的形式不同」即可。"
+    },
+    {
+      "source": "3コマ目のゴール（コンソールに出る2行）",
+      "translation": "第3堂課的目標（顯示在主控台的2行）"
+    },
+    {
+      "source": "Runの結果 · この2行が出れば完成",
+      "translation": "Run 的結果 · 出現這2行就代表完成了"
+    },
+    {
+      "source": "同じ <code>3</code> が2行出ます。<strong>1行目と2行目では、<code>3</code> を出している場所が違います。</strong> どちらがどこで出しているのかは、STEP 16 で確かめます。",
+      "translation": "會出現2行一樣的 <code>3</code>。<strong>第1行與第2行印出 <code>3</code> 的位置不同。</strong> 分別是在哪裡印出來的，會在 STEP 16 中確認。"
+    },
+    {
+      "source": "前半（約40分）",
+      "translation": "前半（約40分鐘）"
+    },
+    {
+      "source": "<code>ex03</code> を作り、戻り値のある関数 <code>sum</code> を書いて1行目を出す。",
+      "translation": "建立 <code>ex03</code> 並撰寫有回傳值的函式 <code>sum</code> 後印出第1行。"
+    },
+    {
+      "source": "後半（約50分）",
+      "translation": "後半（約50分鐘）"
+    },
+    {
+      "source": "戻り値のない関数 <code>sum2</code> を足し、2行の出力を完成させる。",
+      "translation": "加上沒有回傳值的函式 <code>sum2</code>，完成兩行的輸出。"
+    },
+    {
+      "source": "3コマ目に出す2行（<code>3</code> / <code>3</code>）を、上のゴールで確かめた。",
+      "translation": "用上面的目標確認了第3堂課要印出的2行（<code>3</code> / <code>3</code>）。"
+    },
+    {
+      "source": "次へ：ex03 を作る →",
+      "translation": "下一步：建立 ex03 →"
+    },
+    {
+      "source": "STEP 14 · 3コマ目 · 目安 5分",
+      "translation": "STEP 14 · 第3堂課 · 約5分鐘"
+    },
+    {
+      "source": "ex03 パッケージと main.kt を作る",
+      "translation": "建立 ex03 套件與 main.kt"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex03</code> パッケージと、その中の <code>main.kt</code> を作ります。",
+      "translation": "重新開啟 <code>K01HelloKotlin</code> 專案，在 <code>src</code> 底下建立 <code>ex03</code> 套件，並在裡面建立 <code>main.kt</code>。"
+    },
+    {
+      "source": "<strong>STEP 08 と同じ操作です。</strong>違うのは、パッケージ名が <code>ex02</code> ではなく <code>ex03</code> になることだけです。手順は、下にもう一度すべて書きます。",
+      "translation": "<strong>與 STEP 08 進行同樣的操作。</strong> 不同的只有套件名稱從 <code>ex02</code> 變成 <code>ex03</code> 而已。步驟會全部重寫在下方。"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> と <code>ex02</code> があることを確かめます。どちらも消しません。",
+      "translation": "確認左邊的 <strong>プロジェクト</strong>（專案）工具視窗裡有 <code>src</code>，底下有 <code>ex01</code> 和 <code>ex02</code>。兩個都不要刪除。"
+    },
+    {
+      "source": "② ex03 パッケージを作る",
+      "translation": "② 建立 ex03 套件"
+    },
+    {
+      "source": "名前に <code>ex03</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex03</code> ができます。すべて小文字で、記号は入れません。",
+      "translation": "依名稱輸入 <code>ex03</code> 並按下 <kbd>Return</kbd>。<code>src</code> 底下會建立出 <code>ex03</code>。需全為小寫，不要加入記號。"
+    },
+    {
+      "source": "できた <code>ex03</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でも <code>ex02</code> でもなく、<code>ex03</code> を右クリックします。</strong>",
+      "translation": "對著建立好的 <code>ex03</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。<strong>不是對 <code>src</code> 或是 <code>ex01</code>、<code>ex02</code> 按右鍵，而是對著 <code>ex03</code> 按右鍵。</strong>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex03</code> が入っていることを確かめます。",
+      "translation": "確認建立好的 <code>main.kt</code> 的第1行有 <code>package ex03</code>。"
+    },
+    {
+      "source": "1行目が <code>package ex03</code> になっていないとき",
+      "translation": "第1行不是 <code>package ex03</code> 時"
+    },
+    {
+      "source": "ファイルが <code>ex03</code> の中ではなく、<code>src</code> の直下か、<code>ex01</code>・<code>ex02</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex03</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "檔案不是建立在 <code>ex03</code> 裡面，而是建立在 <code>src</code> 直下，或是 <code>ex01</code>、<code>ex02</code> 裡面。請對著 <code>main.kt</code> 按右鍵將其刪除，然後從③重新操作。關鍵在於是否有對著 <code>ex03</code> 按右鍵。"
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージと、関数を置く場所）",
+      "translation": "④ 用 Java / Swift 怎麼寫（套件與放置函式的位置）"
+    },
+    {
+      "source": "<strong>Kotlinは、関数をファイルの直下に書けます。</strong> これを<strong>トップレベル関数</strong>と呼びます。1コマ目から書いている <code>fun main()</code> が、その1つめです。Swiftのグローバル関数と同じ置き方です。",
+      "translation": "<strong>Kotlin 可以把函式寫在檔案直下。</strong> 這種寫法稱為 <strong>頂層函式</strong>（トップレベル関数）。從第1堂課開始寫的 <code>fun main()</code> 就是第1個頂層函式。這和 Swift 的全域函式放置位置相同。"
+    },
+    {
+      "source": "Javaは、メソッドを必ずクラスの中に置きます。<strong>この回で書く <code>sum</code> も、Javaならクラスの中の <code>static</code> メソッドにあたります。</strong>",
+      "translation": "Java 規定方法一定要寫在類別裡面。<strong>這堂課要寫的 <code>sum</code>，在 Java 中就相當於類別裡的 <code>static</code> 方法。</strong>"
+    },
+    {
+      "source": "<code>ex01</code>・<code>ex02</code>・<code>ex03</code> は別のパッケージなので、どれにも <code>main.kt</code> があり、どれにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。",
+      "translation": "<code>ex01</code>、<code>ex02</code>、<code>ex03</code> 是不同的套件，所以即使裡面都有 <code>main.kt</code>，也都有 <code>fun main()</code>，也不會發生衝突。這和 Java 可以在不同套件中放置相同類別名稱的道理一樣。"
+    },
+    {
+      "source": "<code>src/ex03/main.kt</code> を作り、1行目が <code>package ex03</code> になっていることを確かめた。<code>ex01</code> と <code>ex02</code> も残っている。",
+      "translation": "建立了 <code>src/ex03/main.kt</code>，並確認第1行是 <code>package ex03</code>。<code>ex01</code> 和 <code>ex02</code> 也有保留下來。"
+    },
+    {
+      "source": "次へ：戻り値のある関数 →",
+      "translation": "下一步：有回傳值的函式 →"
+    },
+    {
+      "source": "STEP 15 · 3コマ目 · 目安 30分",
+      "translation": "STEP 15 · 第3堂課 · 約30分鐘"
+    },
+    {
+      "source": "戻り値のある関数（fun sum）",
+      "translation": "有回傳值的函式（fun sum）"
+    },
+    {
+      "source": "<code>fun</code> で関数を宣言し、引数を <code>名前: 型</code>、戻り値を末尾の <code>: 型</code> で書きます。<code>return</code> で返した値を <code>main</code> で受け取り、1行目の <code>3</code> を出します。",
+      "translation": "用 <code>fun</code> 來宣告函式，將參數寫成 <code>名前: 型</code>（名稱: 型別），回傳值寫在結尾的 <code>: 型</code>（: 型別）。在 <code>main</code> 接收用 <code>return</code> 回傳的值，並印出第1行的 <code>3</code>。"
+    },
+    {
+      "source": "変更するファイル：src/ex03/main.kt",
+      "translation": "變更的檔案：src/ex03/main.kt"
+    },
+    {
+      "source": "src/ex03/main.kt · 全体を置き換える",
+      "translation": "src/ex03/main.kt · 替換全部內容"
+    },
+    {
+      "source": "<code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。",
+      "translation": "<code>fun main()</code> 和 <code>fun sum(…)</code> 都並列在檔案的直下。<strong>不要寫成巢狀。</strong> 寫的順序很自由，就算把 <code>sum</code> 寫在 <code>main</code> 之後，也能從 <code>main</code> 裡面呼叫它。"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> が <code>3</code> を返し、その値が <code>ret</code> に入り、<code>println(ret)</code> が出しています。<strong><code>sum</code> の中には <code>println</code> がありません。</strong> 出しているのは <code>main</code> のほうです。",
+      "translation": "<code>sum(1, 2)</code> 會回傳 <code>3</code>，這個數值會放進 <code>ret</code> 裡面，然後由 <code>println(ret)</code> 印出來。<strong><code>sum</code> 裡面沒有 <code>println</code>。</strong> 負責印出的是 <code>main</code>。"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（関数の宣言）",
+      "translation": "③ 用 Java / Swift 怎麼寫（宣告函式）"
+    },
+    {
+      "source": "やっていることは3つとも同じです。<strong>違うのは、同じ部品をどの順番に並べるかだけです。</strong>",
+      "translation": "3種語言做的事情都一樣。<strong>不同的只有排列相同元件的順序而已。</strong>"
+    },
+    {
+      "source": "Kotlinの <code>fun</code> は、Swiftの <code>func</code> にあたります。Javaには対応する語がなく、修飾子（<code>static</code>）と戻り値の型から始まります。",
+      "translation": "Kotlin 的 <code>fun</code> 相當於 Swift 的 <code>func</code>。Java 沒有對應的字，而是由修飾子（<code>static</code>）和回傳型別開始寫。"
+    },
+    {
+      "source": "Kotlinの呼び出しは <code>sum(1, 2)</code> で、Javaと同じ形です。受け取った値を <code>val</code> に入れるところも、Javaの <code>final</code> 付きの変数と同じです。",
+      "translation": "Kotlin 的呼叫方式是 <code>sum(1, 2)</code>，形式和 Java 相同。將接收到的數值放進 <code>val</code> 裡面的寫法，也和 Java 加上 <code>final</code> 的變數一樣。"
+    },
+    {
+      "source": "④ 引数は「名前: 型」 — Swiftと同じ並び、Javaと逆",
+      "translation": "④ 參數是「名稱: 型別」 — 順序和 Swift 一樣，和 Java 相反"
+    },
+    {
       "source": "言語",
       "translation": "語言"
+    },
+    {
+      "source": "引数の書き方",
+      "translation": "參數的寫法"
+    },
+    {
+      "source": "先に書くもの",
+      "translation": "先寫的東西"
+    },
+    {
+      "source": "<strong>Javaの並びで <code>fun sum(Int a, Int b)</code> と書くと、通りません。</strong> Runする前に赤い波線が出て、引数に型が書かれていない、というおおよそその意味のメッセージが出ます。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言は覚えなくて構いません。読み替えるのは<strong>「名前と型の順番が逆になっている」</strong>の1つだけです。",
+      "translation": "<strong>如果用 Java 的順序寫成 <code>fun sum(Int a, Int b)</code> 會無法執行。</strong> Run 之前會出現紅色波浪線，並出現大致上是說參數沒有寫上型別的訊息。用詞會因為 IntelliJ IDEA 和 Kotlin 的版本而改變，所以不需要記住訊息文字。只要換成自己的理解，知道<strong>「名稱與型別的順序相反了」</strong>就好。"
+    },
+    {
+      "source": "なぜKotlinは名前を先に書くのか",
+      "translation": "為什麼 Kotlin 要把名稱寫在前面"
+    },
+    {
+      "source": "1コマ目で書いた変数の宣言を思い出してください。Kotlinは <code>val number1: Int = 1</code> と書き、<strong>名前が先、型があと</strong>でした。関数の引数も、同じ並びにそろえてあります。",
+      "translation": "請回想一下第1堂課寫的變數宣告。Kotlin 寫成 <code>val number1: Int = 1</code>，也就是<strong>名稱在前，型別在後</strong>。函式的參數也是統一用這個順序來寫的。"
+    },
+    {
+      "source": "この並びだと、<strong>型を省いても形が崩れません。</strong> <code>val number1 = 1</code> のように、うしろの <code>: Int</code> を取るだけで済みます。Javaの <code>int number1 = 1;</code> は先頭が型なので、そこを省くと何も残りません。<strong>型を省ける言語は、型をうしろに置くほうが都合がよいのです。</strong> Swiftが同じ並びなのも、同じ理由です。",
+      "translation": "這個順序的優點是，<strong>就算省略了型別，形式也不會崩壞。</strong> 就像 <code>val number1 = 1</code>，只要把後方的 <code>: Int</code> 拿掉就可以了。Java 的 <code>int number1 = 1;</code> 因為開頭就是型別，如果把它省略，就什麼都不剩了。<strong>能夠省略型別的語言，把型別放在後面會比較方便。</strong> Swift 採用同樣順序的理由也是一樣的。"
+    },
+    {
+      "source": "ただし、<strong>関数の引数の型だけは省けません。</strong> 呼ぶ側が何を渡してよいか決まらなくなるからです。ここはSwiftも同じです。",
+      "translation": "但是，<strong>只有函式參數的型別不能省略。</strong> 因為這會導致呼叫方無法決定要傳遞什麼資料。這一點在 Swift 也是一樣的。"
+    },
+    {
+      "source": "⑤ 戻り値は末尾に「: 型」 — 3言語で位置か記号が違う",
+      "translation": "⑤ 回傳值放在結尾寫「: 型別」 — 3種語言的位置或記號都不一樣"
+    },
+    {
+      "source": "宣言の1行目",
+      "translation": "宣告的第1行"
+    },
+    {
+      "source": "戻り値の型を書く場所",
+      "translation": "寫回傳型別的位置"
+    },
+    {
+      "source": "かっこのうしろに <code>: Int</code>",
+      "translation": "在括號後方寫 <code>: Int</code>"
+    },
+    {
+      "source": "メソッド名の前に <code>int</code>",
+      "translation": "在方法名稱前面寫 <code>int</code>"
+    },
+    {
+      "source": "かっこのうしろに <code>-&gt; Int</code>",
+      "translation": "在括號後方寫 <code>-&gt; Int</code>"
+    },
+    {
+      "source": "<strong>KotlinとSwiftは場所が同じで、記号だけが違います。</strong> Kotlinは <code>:</code>、Swiftは <code>-&gt;</code> です。Swiftの書き方で <code>fun sum(a: Int, b: Int) -&gt; Int</code> と書くと、Kotlinでは通りません。",
+      "translation": "<strong>Kotlin 與 Swift 寫的位置一樣，只有記號不同。</strong> Kotlin 是 <code>:</code>，Swift 則是 <code>-&gt;</code>。如果用 Swift 的寫法寫成 <code>fun sum(a: Int, b: Int) -&gt; Int</code>，在 Kotlin 裡面是無法執行的。"
+    },
+    {
+      "source": "Kotlinが <code>:</code> を使うのは、<strong>変数の型注釈と同じ記号にそろえるため</strong>です。<code>val ret: Int</code> と <code>fun sum(…): Int</code> で、「<code>:</code> のうしろが型」という読み方が1つで済みます。",
+      "translation": "Kotlin 之所以使用 <code>:</code>，是<strong>為了要和變數的型別註記統一記號</strong>。在 <code>val ret: Int</code> 和 <code>fun sum(…): Int</code> 中，只要懂得「<code>:</code> 後方是型別」這個讀法就可以了。"
+    },
+    {
+      "source": "Javaだけが、名前より前に型を書きます。引数の <code>int a</code> と同じで、<strong>Javaは型を先に書く言語だから</strong>です。",
+      "translation": "只有 Java 會把型別寫在名稱前面。和參數的 <code>int a</code> 一樣，這是因為 <strong>Java 是將型別寫在前面的語言</strong>。"
+    },
+    {
+      "source": "Kotlinでは、<code>: Int</code> と書いたら <code>return</code> で必ず値を返します。返さずに <code>}</code> まで進むと、<code>return</code> が足りない、というおおよそその意味のエラーになり、Runできません。",
+      "translation": "在 Kotlin 中，只要寫了 <code>: Int</code>，就一定要用 <code>return</code> 回傳值。如果沒有回傳就執行到 <code>}</code>，就會出現大致上是說少了 <code>return</code> 的錯誤而無法執行。"
+    },
+    {
+      "source": "<code>sum</code> を書いて <code>3</code> を出せた。",
+      "translation": "寫好 <code>sum</code> 並印出 <code>3</code> 了。"
+    },
+    {
+      "source": "次へ：戻り値のない関数 →",
+      "translation": "下一步：沒有回傳值的函式 →"
+    },
+    {
+      "source": "STEP 16 · 3コマ目 · 目安 20分",
+      "translation": "STEP 16 · 第3堂課 · 約20分鐘"
+    },
+    {
+      "source": "戻り値のない関数（fun sum2）",
+      "translation": "沒有回傳值的函式（fun sum2）"
+    },
+    {
+      "source": "戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。",
+      "translation": "撰寫沒有回傳值的函式。在 Kotlin 中，結尾<strong>什麼都不寫</strong>。印出第2行的 <code>3</code>，完成輸出。"
+    },
+    {
+      "source": "足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。",
+      "translation": "加上的是 <code>main</code> 裡面的 <code>sum2(1, 2)</code> 這一行，以及最下方 <code>sum2</code> 的宣告。<strong><code>sum2</code> 的括號後方什麼都不寫。</strong> 也不會加上像 <code>: Int</code> 這樣的型別或記號。"
+    },
+    {
+      "source": "Runの結果 · この2行が出れば成功",
+      "translation": "Run 的結果 · 出現這2行就成功了"
+    },
+    {
+      "source": "出している場所",
+      "translation": "印出來的位置"
+    },
+    {
+      "source": "<code>sum</code> が返した値を、<code>main</code> の <code>println(ret)</code> が出している。",
+      "translation": "由 <code>main</code> 裡面的 <code>println(ret)</code> 印出 <code>sum</code> 所回傳的值。"
+    },
+    {
+      "source": "<code>sum2</code> の中の <code>println(a + b)</code> が出している。<code>main</code> は受け取っていない。",
+      "translation": "由 <code>sum2</code> 裡面的 <code>println(a + b)</code> 印出來。<code>main</code> 並沒有接收數值。"
+    },
+    {
+      "source": "同じ <code>3</code> でも、<strong>出している場所が違います。</strong> <code>sum</code> は計算結果を返すだけで出力せず、<code>sum2</code> は計算結果を返さずに、関数の中で出力します。",
+      "translation": "雖然都是 <code>3</code>，但<strong>印出來的位置不同。</strong> <code>sum</code> 只回傳計算結果而不輸出，<code>sum2</code> 不回傳計算結果，而是在函式裡面輸出。"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（戻り値がないとき）",
+      "translation": "③ 用 Java / Swift 怎麼寫（沒有回傳值時）"
+    },
+    {
+      "source": "<strong>Kotlinは、戻り値がないときに何も書きません。</strong> Swiftも <code>-&gt; Void</code> を省けるので、書き上がりは同じ形になります。",
+      "translation": "<strong>在 Kotlin 中沒有回傳值時，什麼都不用寫。</strong> Swift 也可以省略 <code>-&gt; Void</code>，所以寫出來的形式會是一樣的。"
+    },
+    {
+      "source": "Javaだけは <code>void</code> を必ず書きます。<strong>メソッド名の前に必ず何かを置く文法だから</strong>です。前を空にはできないので、「無い」ことを表す語が要ります。",
+      "translation": "只有 Java 一定要寫 <code>void</code>。這是因為它的<strong>文法規定方法名稱前面一定要放東西</strong>。前面不能空著，所以需要一個代表「沒有」的字。"
+    },
+    {
+      "source": "KotlinとSwiftは、戻り値の型をかっこの<strong>うしろ</strong>に置きます。うしろは、書かなければそこで終わるだけです。だから「無い」ことを表す語を用意しなくて済みます。<strong>書く位置の違いが、そのまま省けるかどうかの違いになっています。</strong>",
+      "translation": "Kotlin 和 Swift 會把回傳型別放在括號<strong>後方</strong>。後方如果不寫，就只是在那裡結束而已。所以不需要準備代表「沒有」的字。<strong>寫法位置的差異，就直接變成了能否省略的差異。</strong>"
+    },
+    {
+      "source": "④ 何も書かないとき、Kotlinは何を返しているのか",
+      "translation": "④ 什麼都不寫時，Kotlin 回傳了什麼"
+    },
+    {
+      "source": "Kotlinには、戻り値がないことを表す <code>Unit</code> という型があります。<code>sum2</code> のように何も書かなかった関数は、<code>Unit</code> を返す関数として扱われます。<code>fun sum2(a: Int, b: Int): Unit</code> と書いても同じ意味ですが、<strong>ふつうは書きません。</strong>省くのが既定の書き方です。",
+      "translation": "Kotlin 裡面有一個代表沒有回傳值的 <code>Unit</code> 型別。像 <code>sum2</code> 這樣什麼都沒寫的函式，會被當作回傳 <code>Unit</code> 的函式處理。雖然寫成 <code>fun sum2(a: Int, b: Int): Unit</code> 意思也一樣，但<strong>通常不會這麼寫。</strong> 省略才是預設的寫法。"
+    },
+    {
+      "source": "<code>main</code> の中の <code>sum2(1, 2)</code> を <code>val ret2 = sum2(1, 2)</code> に書き換え、その下に <code>println(ret2)</code> を1行足してRunします。確かめたら、足した行を消し、<code>sum2(1, 2)</code> の形に戻します。",
+      "translation": "將 <code>main</code> 裡面的 <code>sum2(1, 2)</code> 改寫成 <code>val ret2 = sum2(1, 2)</code>，並在下方加上 1行 <code>println(ret2)</code> 後執行 Run。確認完畢後，把加上去的行刪除，改回 <code>sum2(1, 2)</code> 的形式。"
+    },
+    {
+      "source": "出力は3行になり、3行目に <code>kotlin.Unit</code> と出ます。<strong>「何も返さない」ように見える関数も、値を1つ返しています。</strong>ふだんはその値を受け取らないので、目に見えないだけです。",
+      "translation": "輸出會變成3行，第3行會出現 <code>kotlin.Unit</code>。<strong>看起來「什麼都沒回傳」的函式，其實也有回傳1個數值。</strong> 只是平常我們不會去接收那個數值，所以看不見而已。"
+    },
+    {
+      "source": "Javaの <code>void</code> は型ではないので、<code>int x = sum2(1, 2);</code> のように結果を変数へ入れることはできません。Swiftの <code>Void</code> は空のタプル <code>()</code> の別名で、Kotlinの <code>Unit</code> と同じ発想です。<strong>Javaだけが「値が無い」を型の外側で表しています。</strong>",
+      "translation": "Java 的 <code>void</code> 不是型別，所以沒辦法像 <code>int x = sum2(1, 2);</code> 這樣把結果放進變數裡。Swift 的 <code>Void</code> 是空元組 <code>()</code> 的別名，這和 Kotlin 的 <code>Unit</code> 是同樣的概念。<strong>只有 Java 是在型別之外來表示「沒有數值」。</strong>"
+    },
+    {
+      "source": "書くときに覚えるのは1つだけです。<strong>戻り値がなければ、かっこのうしろには何も書かない。</strong>",
+      "translation": "寫的時候要記住的只有一點。<strong>如果沒有回傳值，括號的後方就什麼都不寫。</strong>"
+    },
+    {
+      "source": "<code>: Unit</code> と書いても動きますが、この教材では書きません。<strong>Kotlinのふつうの書き方は、省いた形です。</strong>",
+      "translation": "雖然寫上 <code>: Unit</code> 也能動，但本教材中不會這樣寫。<strong>省略的形式才是 Kotlin 一般的寫法。</strong>"
+    },
+    {
+      "source": "2行を出せた。<code>val ret2 = sum2(1, 2)</code> に書き換えて <code>kotlin.Unit</code> が出ることを確かめ、元の形に戻した。",
+      "translation": "印出2行了。改寫成 <code>val ret2 = sum2(1, 2)</code>，確認會出現 <code>kotlin.Unit</code> 後改回原狀了。"
+    },
+    {
+      "source": "STEP 17 · 3コマ目 · 目安 15分",
+      "translation": "STEP 17 · 第3堂課 · 約15分鐘"
+    },
+    {
+      "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。<strong>エラーのメッセージは、文言ではなく意味だけを読みます。</strong>言い回しは IntelliJ IDEA と Kotlin のバージョンで変わります。",
+      "translation": "接下來請自己改寫程式碼。順序是<strong>改1個地方 → 預測結果 → Run</strong>。試過之後再打開答案來看。<strong>只要看懂錯誤訊息的意思就好，不用管文字內容。</strong> 用詞會因為 IntelliJ IDEA 和 Kotlin 的版本而改變。"
+    },
+    {
+      "source": "練習A · 引数を3つに増やす（必須・6分）",
+      "translation": "練習A · 將參數增加到3個（必須・6分鐘）"
+    },
+    {
+      "source": "<code>sum</code> の引数を3つに増やします。<code>fun sum(a: Int, b: Int, c: Int): Int</code> にし、中身も <code>return a + b + c</code> に書き換えます。<strong><code>main</code> の <code>sum(1, 2)</code> はそのままにして</strong>、Runを押す前にその行を見てください。",
+      "translation": "將 <code>sum</code> 的參數增加到3個。改成 <code>fun sum(a: Int, b: Int, c: Int): Int</code>，並將內容改寫為 <code>return a + b + c</code>。<strong>不要更動 <code>main</code> 裡面的 <code>sum(1, 2)</code></strong>，在按下 Run 之前先看看那一行。"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> の行に赤い波線が出て、Runできません。3つ必要な引数に2つしか渡していないので、<strong>足りない引数がある</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "<code>sum(1, 2)</code> 那一行會出現紅色波浪線，且無法 Run。因為需要3個參數卻只傳了2個過去，所以會出現大致上是說<strong>有缺少的參數</strong>的訊息。"
+    },
+    {
+      "source": "呼び出しを <code>sum(1, 2, 3)</code> に直すとRunでき、1行目が <code>6</code> になります。確かめたら、宣言も呼び出しも元の2つに戻します。",
+      "translation": "將呼叫處改成 <code>sum(1, 2, 3)</code> 就能執行 Run，第1行會變成 <code>6</code>。確認完畢後，把宣告與呼叫處都改回原本的2個參數。"
+    },
+    {
+      "source": "Javaでも同じ間違いはコンパイルエラーになります。<strong>引数の数が合っているかは、KotlinもJavaもSwiftも、動かす前に確かめてくれます。</strong>",
+      "translation": "在 Java 裡犯一樣的錯也會發生編譯錯誤。<strong>不論是 Kotlin、Java 還是 Swift，在執行之前都會幫我們確認參數的數量對不對。</strong>"
+    },
+    {
+      "source": "練習B · 戻り値の型を変える（必須・4分）",
+      "translation": "練習B · 變更回傳型別（必須・4分鐘）"
+    },
+    {
+      "source": "<code>sum</code> の戻り値の型を <code>: Int</code> から <code>: String</code> に書き換えます。中身の <code>return a + b</code> はそのままにして、Runを押す前にその行を見てください。",
+      "translation": "將 <code>sum</code> 的回傳型別從 <code>: Int</code> 改成 <code>: String</code>。內容的 <code>return a + b</code> 保持原樣，在按下 Run 之前先看看那一行。"
+    },
+    {
+      "source": "<code>return a + b</code> の行に赤い波線が出て、Runできません。<code>a + b</code> は <code>Int</code> なのに、<code>String</code> を返すと宣言しているからです。<strong>宣言した型と、返している型が合っていない</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "<code>return a + b</code> 那一行會出現紅色波浪線，且無法 Run。因為 <code>a + b</code> 是 <code>Int</code>，卻宣告說要回傳 <code>String</code>。會出現大致上是說<strong>宣告的型別和回傳的型別不一致</strong>的訊息。"
+    },
+    {
+      "source": "<strong>末尾に書いた <code>: 型</code> は、飾りではなく約束です。</strong> Kotlinは、その約束が守られているかを、書いている最中に確かめます。Javaの <code>static String sum(...)</code>、Swiftの <code>-&gt; String</code> でも、同じように止まります。確かめたら <code>: Int</code> に戻します。",
+      "translation": "<strong>寫在結尾的 <code>: 型</code>（: 型別）不是裝飾，而是約定。</strong> Kotlin 會在我們撰寫的時候，確認這個約定有沒有被遵守。Java 的 <code>static String sum(...)</code>，或是 Swift 的 <code>-&gt; String</code>，也一樣會被擋下來。確認完畢後就改回 <code>: Int</code>。"
+    },
+    {
+      "source": "練習C · return を消す（必須・2分）",
+      "translation": "練習C · 刪除 return（必須・2分鐘）"
+    },
+    {
+      "source": "<code>sum</code> の中の <code>return</code> だけを消して、<code>a + b</code> の1行にします。Runを押す前に、関数の閉じかっこ <code>}</code> のあたりを見てください。",
+      "translation": "把 <code>sum</code> 裡面的 <code>return</code> 刪除，變成只有 <code>a + b</code> 的 1行。在按下 Run 之前，先看看函式結尾括號 <code>}</code> 的附近。"
+    },
+    {
+      "source": "赤い波線が出て、Runできません。<code>: Int</code> と宣言したのに値を返していないので、<strong><code>return</code> が足りない</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "會出現紅色波浪線，且無法 Run。因為宣告了 <code>: Int</code> 卻沒有回傳數值，所以會出現大致上是說<strong>缺少了 <code>return</code></strong> 的訊息。"
+    },
+    {
+      "source": "直し方は2つです。<code>return</code> を書き戻すか、<code>: Int</code> のほうを消して <code>sum2</code> と同じ「戻り値のない関数」にするかです。ここでは <code>return</code> を書き戻します。",
+      "translation": "修改的方法有2種。一種是把 <code>return</code> 加回來，另一種是把 <code>: Int</code> 刪掉，變成和 <code>sum2</code> 一樣的「沒有回傳值的函式」。這裡我們先把 <code>return</code> 加回來。"
+    },
+    {
+      "source": "同じ3つの間違いを、JavaとSwiftでしたとき",
+      "translation": "用 Java 和 Swift 犯下一樣的3種錯誤時"
+    },
+    {
+      "source": "引数の数・戻り値の型・<code>return</code> の有無は、<strong>3つの言語すべてが動かす前に確かめます。</strong> ここはKotlinで新しく覚えることではありません。",
+      "translation": "參數的數量、回傳型別、是否有 <code>return</code>，這3點<strong>全部的3種語言都會在執行前進行確認。</strong> 這並不是在 Kotlin 才要重新學習的知識。"
+    },
+    {
+      "source": "ただし <code>return</code> の省略だけは違います。<strong>Swiftは、本体が1つの式だけなら <code>return</code> を省けます。</strong> Kotlinは、かっこ <code>{ }</code> で本体を書いた関数では省けません。<code>: Int</code> と宣言したら、<code>return</code> で返します。",
+      "translation": "不過，只有省略 <code>return</code> 這一點不同。<strong>Swift 如果主體只有1個運算式，就可以省略 <code>return</code>。</strong> Kotlin 的話，用括號 <code>{ }</code> 寫出主體的函式就不能省略。只要宣告了 <code>: Int</code>，就要用 <code>return</code> 回傳。"
+    },
+    {
+      "source": "2コマ目と同じで、<strong>覚えるのはメッセージの文言ではなく、どの行が赤くなったかと、その意味です。</strong>",
+      "translation": "和第2堂課一樣，<strong>要記住的不是訊息的文字內容，而是哪一行變紅了，以及那是什麼意思。</strong>"
+    },
+    {
+      "source": "練習A・B・Cで書き換えたところを、すべて元に戻します。",
+      "translation": "將練習A、B、C改寫過的地方，全部改回原狀。"
+    },
+    {
+      "source": "<code>fun sum(a: Int, b: Int): Int</code> と <code>return a + b</code>、<code>sum(1, 2)</code> の3か所を確かめます。",
+      "translation": "確認 <code>fun sum(a: Int, b: Int): Int</code> 和 <code>return a + b</code>，以及 <code>sum(1, 2)</code> 這3個地方。"
+    },
+    {
+      "source": "Runし、STEP 16 と同じ2行に戻ったことを確かめます。",
+      "translation": "執行 Run，確認結果變回和 STEP 16 一樣的2行了。"
+    },
+    {
+      "source": "練習A・B・Cを試し、引数の数・戻り値の型・<code>return</code> が合っていないと動かせないことを確かめた。最後に元の2行へ戻した。",
+      "translation": "試過了練習A、B、C，並確認了如果參數數量、回傳型別、<code>return</code> 對不起來就無法執行。最後改回了原本的2行。"
+    },
+    {
+      "source": "STEP 18 · 3コマ目 · 目安 15分",
+      "translation": "STEP 18 · 第3堂課 · 約15分鐘"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> が返した値が <code>ret</code> に入り、<code>main</code> の <code>println(ret)</code> が出している。",
+      "translation": "將 <code>sum(1, 2)</code> 回傳的值放進 <code>ret</code>，由 <code>main</code> 的 <code>println(ret)</code> 印出來。"
+    },
+    {
+      "source": "<code>sum2(1, 2)</code> は計算結果を返さず、<code>sum2</code> の中の <code>println(a + b)</code> が出している。",
+      "translation": "<code>sum2(1, 2)</code> 不回傳計算結果，由 <code>sum2</code> 裡面的 <code>println(a + b)</code> 印出來。"
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<strong><code>: Int</code> と書いた場所と、何も書かなかった場所</strong>を指さして説明します。",
+      "translation": "和表格一樣之後，把畫面秀給老師看，指著<strong>寫了 <code>: Int</code> 的地方，以及什麼都沒寫的地方</strong>來進行說明。"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex03</code> も忘れずに入れます。",
+      "translation": "以上是輸入到這邊為止的 <code>main.kt</code> 全部內容。別忘了加入第1行的 <code>package ex03</code>。"
+    },
+    {
+      "source": "② Javaの完成コードと、Swiftの関数宣言を比べる",
+      "translation": "② 比較 Java 的完成程式碼與 Swift 的函式宣告"
+    },
+    {
+      "source": "Javaで増えたのは、<strong>入口を包むクラスと、<code>void</code> と、行末の <code>;</code> の3つ</strong>です。処理そのものは同じです。",
+      "translation": "Java 增加的東西，是<strong>包住進入點的類別、<code>void</code>、行末的 <code>;</code> 這3樣</strong>。處理本身是相同的。"
+    },
+    {
+      "source": "Kotlinは <code>sum</code> も <code>sum2</code> もファイルの直下に置けます。Javaは、どちらもクラスの中の <code>static</code> メソッドにします。<strong>1コマ目から <code>fun main()</code> をクラスなしで書けていたのと、同じしくみです。</strong>",
+      "translation": "在 Kotlin 裡，<code>sum</code> 和 <code>sum2</code> 都可以放在檔案直下。而在 Java 裡，兩者都要變成類別裡面的 <code>static</code> 方法。<strong>這和我們從第1堂課開始就能在沒有類別的狀態下寫 <code>fun main()</code> 是一樣的運作機制。</strong>"
+    },
+    {
+      "source": "Swiftの2つの宣言は、Kotlinと形がよく似ています。<strong>宣言の先頭行で違うのは <code>fun</code> と <code>func</code>、そして戻り値の <code>: Int</code> と <code>-&gt; Int</code> の2か所です。</strong>本体の出力は、1コマ目と同じく <code>println</code> と <code>print</code> の違いがあります。",
+      "translation": "Swift 的2個宣告，形式和 Kotlin 非常相似。<strong>宣告的首行不同的地方在於 <code>fun</code> 和 <code>func</code>，以及回傳值的 <code>: Int</code> 和 <code>-&gt; Int</code> 這2處。</strong> 主體的輸出部分，則和第1堂課一樣有著 <code>println</code> 和 <code>print</code> 的差異。"
+    },
+    {
+      "source": "戻り値のない <code>sum2</code> は、Kotlinでも Swift でもかっこのうしろが空です。<strong>Javaだけが <code>void</code> を書きます。</strong>",
+      "translation": "沒有回傳值的 <code>sum2</code>，在 Kotlin 或是 Swift 裡括號後方都是空的。<strong>只有 Java 會寫上 <code>void</code>。</strong>"
+    },
+    {
+      "source": "③ ex01・ex02・ex03 が並んでいることを確かめる",
+      "translation": "③ 確認 ex01、ex02、ex03 有並列在一起"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることを確かめます。",
+      "translation": "在左側的 <strong>プロジェクト</strong>（專案）工具視窗展開 <code>src</code>，確認 <code>ex01</code>、<code>ex02</code>、<code>ex03</code> 有並列在一起。"
+    },
+    {
+      "source": "<code>ex01</code> と <code>ex02</code> の <code>main.kt</code> を開きます。前の回に書いたコードが、そのまま残っています。",
+      "translation": "開啟 <code>ex01</code> 和 <code>ex02</code> 的 <code>main.kt</code>。上一堂課寫的程式碼原封不動地保留在裡面。"
+    },
+    {
+      "source": "<code>fun main()</code> が3つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。",
+      "translation": "雖然有3個 <code>fun main()</code>，但因為套件不同，所以是不同的程式。開啟你想執行的那個檔案，按下其 <code>fun main()</code> 左邊的 ▷ 即可。"
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が同じプロジェクトに並んでいることも確かめた。",
+      "translation": "進行完成檢查，並將畫面秀給老師看。也確認了 <code>ex01</code>、<code>ex02</code>、<code>ex03</code> 並列在同一個專案中。"
+    },
+    {
+      "source": "<strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の型は3つの言語で書く位置か記号が違います。書く順番や記号が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。",
+      "translation": "<strong>用 <code>fun</code> 開始寫 → 參數是 <code>名前: 型</code>（名稱: 型別） → 回傳值寫在括號後方 <code>: 型</code>（: 型別） → 沒有時什麼都不寫。</strong><br>參數的順序和 Swift 一樣，和 Java 相反，回傳型別則是3種語言寫法的位置或記號都不一樣。雖然寫的順序或記號不同，但做的事情和 Java 的方法、Swift 的函式完全相同。"
     },
     {
       "source": "変える場所",
