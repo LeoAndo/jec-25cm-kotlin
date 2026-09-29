@@ -588,7 +588,7 @@
     },
     {
       "source": "消えてから「2」を押します。<code>2</code> のToastが出ます。OSによりアイコンや形が違う場合があります。",
-      "translation": "等它消失後再按「2」。會出現 <code>2</code> 的 Toast。圖示和形狀可能會因 OS 而不同。"
+      "translation": "等它消失後，請再按「2」。會出現 <code>2</code> 的 Toast。圖示和形狀可能會因 OS 而不同。"
     },
     {
       "source": "「3」を押します。処理を登録していないので、メッセージは出ません。",
@@ -656,7 +656,7 @@
     },
     {
       "source": "端末に <code>jec_25cm_kotlin_Pixel 9a</code> を選び、検索欄に <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code> と入力します。",
-      "translation": "裝置選擇 <code>jec_25cm_kotlin_Pixel 9a</code>，在搜尋欄輸入 <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code>。"
+      "translation": "請選擇 <code>jec_25cm_kotlin_Pixel 9a</code> 裝置，並在搜尋欄輸入 <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code>。"
     },
     {
       "source": "実行中ならStop（■）で止めてからRunします。最新の <code>Hello World!</code> の行を確認します。",
