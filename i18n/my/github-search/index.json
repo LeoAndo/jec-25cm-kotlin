@@ -3,12 +3,24 @@
   "language": "my",
   "entries": [
     {
+      "source": "A03 GithubSearch — GitHubのリポジトリを検索しよう | Kotlin演習",
+      "translation": "A03 GithubSearch — GitHub ၏ repository ကို ရှာဖွေရန် | Kotlin လေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "Android Studio Panda 2で作るGitHub検索アプリ。90分×3コマで、入力画面、固定データの一覧、通信結果の表示へ進みます。",
+      "translation": "Android Studio Panda 2 ဖြင့် ပြုလုပ်သော GitHub ရှာဖွေရေး အက်ပ်။ 90 မိနစ် × 3 ချိန်ဖြင့်၊ ထည့်သွင်းမည့် မျက်နှာပြင်၊ ပုံသေ data စာရင်း၊ ချိတ်ဆက်မှု ရလဒ်များ ပြသခြင်းဆီသို့ ဆက်သွားပါမည်။"
+    },
+    {
       "source": "本文へ移動",
       "translation": "အဓိကအကြောင်းအရာသို့ သွားရန်"
     },
     {
       "source": "JEC / Kotlin演習",
       "translation": "JEC / Kotlin လေ့ကျင့်ခန်း"
+    },
+    {
+      "source": "0 / 19 ステップ確認済み",
+      "translation": "0 / 19 အဆင့်ကို စစ်ဆေးပြီးပါပြီ"
     },
     {
       "source": "進捗",
@@ -19,8 +31,80 @@
       "translation": "မာတိကာ"
     },
     {
+      "source": "STEP 00 完成する検索画面を確認する",
+      "translation": "STEP 00 ပြီးပြည့်စုံမည့် ရှာဖွေရေး မျက်နှာပြင်ကို စစ်ဆေးရန်"
+    },
+    {
       "source": "STEP 01 自分のプロジェクトを作る",
       "translation": "STEP 01 မိမိ၏ project ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "STEP 02 通信と一覧に使う設定をそろえる",
+      "translation": "STEP 02 ချိတ်ဆက်မှုနှင့် စာရင်းတွင် အသုံးပြုမည့် setting များကို ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "STEP 03 検索画面をXMLで作る",
+      "translation": "STEP 03 ရှာဖွေရေး မျက်နှာပြင်ကို XML ဖြင့် ဖန်တီးရန်"
+    },
+    {
+      "source": "STEP 04 入力とSpinnerをKotlinにつなぐ",
+      "translation": "STEP 04 ထည့်သွင်းမှုနှင့် Spinner ကို Kotlin နှင့် ချိတ်ဆက်ရန်"
+    },
+    {
+      "source": "STEP 05 11コマ目の画面を確認して保存する",
+      "translation": "STEP 05 11 ချိန်မြောက် မျက်နှာပြင်ကို စစ်ဆေးပြီး သိမ်းဆည်းရန်"
+    },
+    {
+      "source": "STEP 06 12コマ目：入力画面から再開する",
+      "translation": "STEP 06 12 ချိန်မြောက်: ထည့်သွင်းမည့် မျက်နှာပြင်မှ ပြန်လည်စတင်ရန်"
+    },
+    {
+      "source": "STEP 07 JSONに対応するdata classを作る",
+      "translation": "STEP 07 JSON နှင့် ကိုက်ညီမည့် data class ဖန်တီးရန်"
+    },
+    {
+      "source": "STEP 08 一覧の1行をXMLで作る",
+      "translation": "STEP 08 စာရင်း၏ 1 ကြောင်းကို XML ဖြင့် ဖန်တီးရန်"
+    },
+    {
+      "source": "STEP 09 Adapterでデータを1行へ結び付ける",
+      "translation": "STEP 09 Adapter ဖြင့် data ကို 1 ကြောင်းသို့ ချိတ်ဆက်ရန်"
+    },
+    {
+      "source": "STEP 10 固定データをRecyclerViewへ渡す",
+      "translation": "STEP 10 ပုံသေ data ကို RecyclerView သို့ ပေးပို့ရန်"
+    },
+    {
+      "source": "STEP 11 12コマ目の2行を確認して保存する",
+      "translation": "STEP 11 12 ချိန်မြောက်၏ 2 ကြောင်းကို စစ်ဆေးပြီး သိမ်းဆည်းရန်"
+    },
+    {
+      "source": "STEP 12 13コマ目：2行の画面から再開する",
+      "translation": "STEP 12 13 ချိန်မြောက်: 2 ကြောင်း မျက်နှာပြင်မှ ပြန်လည်စတင်ရန်"
+    },
+    {
+      "source": "STEP 13 Ktorで検索APIを呼ぶファイルを作る",
+      "translation": "STEP 13 Ktor ဖြင့် ရှာဖွေရေး API ကို ခေါ်မည့် ဖိုင် ဖန်တီးရန်"
+    },
+    {
+      "source": "STEP 14 入力・通信・一覧をつなぐ",
+      "translation": "STEP 14 ထည့်သွင်းမှု၊ ချိတ်ဆက်မှု၊ စာရင်းကို ချိတ်ဆက်ရန်"
+    },
+    {
+      "source": "STEP 15 空欄・0件・失敗を画面で確かめる",
+      "translation": "STEP 15 ကွက်လပ်၊ 0 ခု၊ ကျရှုံးမှုတို့ကို မျက်နှာပြင်တွင် သေချာစစ်ဆေးရန်"
+    },
+    {
+      "source": "STEP 16 並び順と4つのファイルを照合する",
+      "translation": "STEP 16 အစီအစဉ်နှင့် ဖိုင် 4 ခုကို တိုက်ဆိုင်စစ်ဆေးရန်"
+    },
+    {
+      "source": "STEP 17 アレンジできる場所を1つ試す",
+      "translation": "STEP 17 ပြင်ဆင်နိုင်သော နေရာ 1 ခုကို စမ်းကြည့်ရန်"
+    },
+    {
+      "source": "STEP 18 13コマ目の完成状態を確認する",
+      "translation": "STEP 18 13 ချိန်မြောက်၏ ပြီးပြည့်စုံသော အခြေအနေကို စစ်ဆေးရန်"
     },
     {
       "source": "困ったとき",
@@ -43,24 +127,88 @@
       "translation": "အထွေထွေ: မတူညီသော Android Studio ဗားရှင်း"
     },
     {
+      "source": "GitHubのリポジトリを<br>検索しよう",
+      "translation": "GitHub ၏ repository ကို<br>ရှာဖွေရန်"
+    },
+    {
+      "source": "検索語を送り、届いたJSONをKotlinのデータに変え、一覧に表示します。",
+      "translation": "ရှာဖွေမည့် စကားလုံးကို ပေးပို့ပြီး၊ ရရှိလာသော JSON ကို Kotlin ၏ data အဖြစ် ပြောင်းလဲကာ၊ စာရင်းတွင် ပြသပါမည်။"
+    },
+    {
+      "source": "対象：<code>A03GithubSearch</code> / パッケージ：<code>jp.ac.jec.a03githubsearch</code><br>11〜13コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "ပစ်မှတ်: <code>A03GithubSearch</code> / package: <code>jp.ac.jec.a03githubsearch</code><br>11–13 ချိန်မြောက်၊ တစ်ချိန်လျှင် 90 မိနစ် / Android Studio Panda 2 / macOS"
+    },
+    {
       "source": "この単元で作るもの",
       "translation": "ဤယူနစ်တွင် ဖန်တီးမည့်အရာ"
+    },
+    {
+      "source": "ソート順を選べるGitHub検索アプリ。自分のプロジェクトへ順に書き足し、12コマ目に固定データ、13コマ目に通信の結果を同じ一覧へ表示します。",
+      "translation": "စစ်ထုတ်မည့် အစီအစဉ်ကို ရွေးချယ်နိုင်သော GitHub ရှာဖွေရေး အက်ပ် ဖြစ်ပါသည်။ မိမိ၏ project သို့ အစဉ်လိုက် ထပ်မံရေးသားပြီး၊ 12 ချိန်မြောက်တွင် ပုံသေ data၊ 13 ချိန်မြောက်တွင် ချိတ်ဆက်မှု ရလဒ်များကို တူညီသော စာရင်းတွင် ပြသပါမည်။"
+    },
+    {
+      "source": "STEP 00 · 11コマ目 · 目安 5分",
+      "translation": "STEP 00 ၊ 11 ချိန်မြောက် ၊ ခန့်မှန်း 5 မိနစ်"
+    },
+    {
+      "source": "完成する検索画面を確認する",
+      "translation": "ပြီးပြည့်စုံမည့် ရှာဖွေရေး မျက်နှာပြင်ကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "この単元では <code>A03GithubSearch</code> を作ります。<strong>Android Studio Panda 2</strong> を開き、Welcome画面で版を確認します。違う版なら、作成前に先生に画面を見せます。ブラウザにはこの教科書を開いておきます。比較欄のJava／Swiftは読むためのコードで、Kotlinファイルには貼りません。",
+      "translation": "ဤသင်ခန်းစာတွင် <code>A03GithubSearch</code> ကို ဖန်တီးပါမည်။ <strong>Android Studio Panda 2</strong> ကို ဖွင့်ပြီး၊ Welcome မျက်နှာပြင်တွင် version ကို စစ်ဆေးပါ။ မတူညီသော version ဖြစ်နေပါက၊ မဖန်တီးမီ ဆရာ့ကို မျက်နှာပြင် ပြပါ။ browser တွင် ဤဖတ်စာအုပ်ကို ဖွင့်ထားပါ။ နှိုင်းယှဉ်ချက် ကော်လံရှိ Java / Swift သည် ဖတ်ရန်အတွက် code ဖြစ်ပြီး၊ Kotlin ဖိုင်တွင် မကူးထည့်ရပါ။"
+    },
+    {
+      "source": "検索語と並び順を選び、GitHubの公開リポジトリを一覧にするアプリです。行には所有者・リポジトリ名・スター数・フォーク数が出ます。行を押しても別の画面には移動しません。11コマ目は入力画面、12コマ目は通信しない2件の見本、13コマ目は実際の検索へ進みます。",
+      "translation": "ရှာဖွေမည့် စကားလုံးနှင့် အစီအစဉ်ကို ရွေးချယ်ပြီး၊ GitHub ၏ public repository များကို စာရင်းပြပေးသော အက်ပ် ဖြစ်ပါသည်။ အကြောင်းတစ်ခုစီတွင် ပိုင်ရှင်၊ repository အမည်၊ star အရေအတွက်၊ fork အရေအတွက်တို့ ပေါ်လာပါမည်။ အကြောင်းကို နှိပ်လျှင်လည်း အခြား မျက်နှာပြင်သို့ မရွှေ့ပါ။ 11 ချိန်မြောက်တွင် ထည့်သွင်းမည့် မျက်နှာပြင်၊ 12 ချိန်မြောက်တွင် ချိတ်ဆက်မှု မလုပ်သော နမူနာ 2 ခု၊ 13 ချိန်မြောက်တွင် အမှန်တကယ် ရှာဖွေမှုသို့ ဆက်သွားပါမည်။"
+    },
+    {
+      "source": "kotlinを検索した一例。名前・数・順序は検索時点で変わる",
+      "translation": "kotlin ကို ရှာဖွေထားသော ဥပမာတစ်ခု။ အမည်၊ အရေအတွက်၊ အစီအစဉ်သည် ရှာဖွေသည့် အချိန်ပေါ်မူတည်၍ ပြောင်းလဲပါသည်"
+    },
+    {
+      "source": "kotlinを検索した一例。名前・数・順序は検索時点で変わる（指定AVDで撮影）",
+      "translation": "kotlin ကို ရှာဖွေထားသော ဥပမာတစ်ခု။ အမည်၊ အရေအတွက်၊ အစီအစဉ်သည် ရှာဖွေသည့် အချိန်ပေါ်မူတည်၍ ပြောင်းလဲပါသည် (သတ်မှတ်ထားသော AVD ဖြင့် ရိုက်ကူးထားသည်)"
     },
     {
       "source": "Java／Swiftとの比較",
       "translation": "Java / Swift နှင့် နှိုင်းယှဉ်ချက်"
     },
     {
+      "source": "Androidが画面の準備時に <code>onCreate</code> を呼びます。Kotlinの <code>override</code> はJavaのオーバーライドに対応します。今回は <code>main</code> を作りません。",
+      "translation": "Android သည် မျက်နှာပြင် ပြင်ဆင်ချိန်တွင် <code>onCreate</code> ကို ခေါ်ပါသည်။ Kotlin ၏ <code>override</code> သည် Java ၏ override နှင့် ကိုက်ညီပါသည်။ ဤတစ်ကြိမ်တွင် <code>main</code> ကို မဖန်တီးပါ။"
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "ဤနေရာတွင် ရပ်၍ စစ်ဆေးရန်"
+    },
+    {
+      "source": "Panda 2のWelcome画面と、A03の教科書が開いている。",
+      "translation": "Panda 2 ၏ Welcome မျက်နှာပြင်နှင့်၊ A03 ၏ ဖတ်စာအုပ် ပွင့်နေပါသည်။"
     },
     {
       "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
       "translation": "ပြီးပါက အမှန်ခြစ်ပေးပါ။ ရပ်တန့်သွားသည့်အခါ ဤမျက်နှာပြင်ကို ဆရာ့ကို ပြပါ။"
     },
     {
+      "source": "STEP 01 · 11コマ目 · 目安 15分",
+      "translation": "STEP 01 ၊ 11 ချိန်မြောက် ၊ ခန့်မှန်း 15 မိနစ်"
+    },
+    {
       "source": "自分のプロジェクトを作る",
       "translation": "မိမိ၏ project ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "<strong>New Project</strong>、または <strong>File → New → New Project…</strong> を選びます。",
+      "translation": "<strong>New Project</strong> သို့မဟုတ် <strong>File → New → New Project…</strong> ကို ရွေးပါ။"
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> を選びます。<code>Empty Activity</code> はCompose用です。",
+      "translation": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> ကို ရွေးပါ။ <code>Empty Activity</code> သည် Compose အတွက် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "次の表を入力して <strong>Finish</strong>。Gradle同期が終わるまで待ちます。",
+      "translation": "အောက်ပါဇယားကို ထည့်သွင်းပြီး <strong>Finish</strong> ကို နှိပ်ပါ။ Gradle sync ပြီးဆုံးသည်အထိ စောင့်ပါ။"
     },
     {
       "source": "項目",
@@ -71,24 +219,816 @@
       "translation": "ဖြည့်သွင်းရန် / ရွေးချယ်ရန်"
     },
     {
+      "source": "<code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。",
+      "translation": "<code>ユーザ名</code> ကို မိမိ၏ Mac အမည်ဖြင့် အစားထိုးပါ။ Save location တွင် project အမည် အထိ ပါဝင်ရပါမည်။ 書類 (စာရွက်စာတမ်းများ) သို့ ဝင်ရောက်ခွင့် တောင်းခံလာပါက မိမိ၏ သိမ်းဆည်းထားသော နေရာကို ဖတ်ရန်အတွက် ခွင့်ပြုပါ။ sync ၏ အနီရောင် error မပျောက်ပါက ဆရာ့ကို မျက်နှာပြင် ပြပါ။"
+    },
+    {
+      "source": "左のProjectツールウィンドウは <strong>Project</strong> 表示にします。Kotlinファイルの置き場は <code>app/src/main/java/jp/ac/jec/a03githubsearch/</code>。以後この教科書で「パッケージ」と書いたら、この場所です。",
+      "translation": "ဘယ်ဘက်ရှိ Project tool window ကို <strong>Project</strong> ပြသမှုအဖြစ် ထားပါ။ Kotlin ဖိုင်များ ထားရှိမည့် နေရာသည် <code>app/src/main/java/jp/ac/jec/a03githubsearch/</code> ဖြစ်ပါသည်။ နောက်ပိုင်းတွင် ဤဖတ်စာအုပ်၌ “package” ဟု ရေးထားပါက၊ ဤနေရာပင် ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "継承はJavaの <code>extends</code> に対してKotlinは <code>:</code>。<code>AppCompatActivity()</code> の括弧は親のコンストラクタを呼ぶ部分です。",
+      "translation": "အမွေဆက်ခံခြင်းသည် Java ၏ <code>extends</code> နှင့် နှိုင်းယှဉ်ပါက Kotlin တွင် <code>:</code> ဖြစ်ပါသည်။ <code>AppCompatActivity()</code> ၏ ကွင်းစကွင်းပိတ်များသည် parent ၏ constructor ကို ခေါ်သော အပိုင်း ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "自分の保存先にA03GithubSearchがあり、パッケージ名がjp.ac.jec.a03githubsearchになっている。",
+      "translation": "မိမိ၏ သိမ်းဆည်းသည့်နေရာ၌ A03GithubSearch ရှိပြီး package အမည်မှာ jp.ac.jec.a03githubsearch ဖြစ်နေပါသည်။"
+    },
+    {
+      "source": "STEP 02 · 11コマ目 · 目安 20分",
+      "translation": "STEP 02 ၊ 11 ခုမြောက် အတန်း ၊ ခန့်မှန်း 20 မိနစ်"
+    },
+    {
+      "source": "通信と一覧に使う設定をそろえる",
+      "translation": "ချိတ်ဆက်မှုနှင့် စာရင်းအတွက် အသုံးပြုမည့် setting များကို ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
+      "translation": "Panda 2 တွင်လည်း ဖန်တီးသည့်ရက်ပေါ်မူတည်၍ library ၏ ဗားရှင်း ပြောင်းလဲသွားပါသည်။ အောက်ပါ <strong>setting ဖိုင် 3 ခုကို အပြည့်အစုံ အစားထိုးပြီးမှ</strong> sync လုပ်ပါ။ <code>build.gradle.kts</code> သည် 2 နေရာတွင် ရှိသောကြောင့် path ကို စစ်ဆေးပါ။ အခြား ဗားရှင်းဖြင့် ဖန်တီးထားသော တည်ဆောက်ပုံတွင် AGP နံပါတ်ကိုသာ လျှော့၍ အသုံးမပြုပါနှင့်။"
+    },
+    {
+      "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
+      "translation": "ပထမဆုံးမှာ <code>gradle/libs.versions.toml</code> ဖြစ်ပါသည်။ Ktor ကို ချိတ်ဆက်မှု၊ serialization ကို JSON ပြောင်းလဲခြင်း၊ RecyclerView နှင့် CardView ကို စာရင်း၊ lifecycle ကို မျက်နှာပြင်နှင့် ချိတ်ဆက်ထားသော ချိတ်ဆက်မှုစတင်ခြင်းတို့အတွက် အသုံးပြုပါသည်။"
+    },
+    {
       "source": "libs.versions.toml · 全文",
       "translation": "libs.versions.toml ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
+      "translation": "နောက်တစ်ခုမှာ project အောက်တိုက်ရိုက်ရှိ <code>build.gradle.kts</code> ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · အပြည့်အစုံ"
+    },
+    {
+      "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
+      "translation": "နောက်တစ်ခုမှာ <code>app/build.gradle.kts</code> ဖြစ်ပါသည်။ ဤနေရာတွင် serialization plugin နှင့် အသုံးပြုမည့် library များကို အသက်သွင်းပါသည်။"
+    },
+    {
+      "source": "<strong>Sync Now</strong>、出なければ <strong>File → Sync Project with Gradle Files</strong> を選び、赤いエラーが消えるまで待ちます。AGP 9.1.1はKotlinのビルド機能を内蔵しているので、別の <code>org.jetbrains.kotlin.android</code> は足しません。カタログの <code>kotlin</code> はここではserializationプラグインの版です。",
+      "translation": "<strong>Sync Now</strong> ကို ရွေးပါ၊ မပေါ်ပါက <strong>File → Sync Project with Gradle Files</strong> ကို ရွေးချယ်ပြီး အနီရောင် error ပျောက်သွားသည်အထိ စောင့်ပါ။ AGP 9.1.1 တွင် Kotlin ၏ build လုပ်ဆောင်ချက် ပါဝင်ပြီးဖြစ်သောကြောင့် အခြား <code>org.jetbrains.kotlin.android</code> ကို ထပ်မထည့်ပါ။ catalog အတွင်းရှိ <code>kotlin</code> မှာ ဤနေရာတွင် serialization plugin ၏ ဗားရှင်းဖြစ်ပါသည်။"
+    },
+    {
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "ဆက်လက်၍ <code>app/src/main/AndroidManifest.xml</code> ကို အပြည့်အစုံ အစားထိုးပါ။ <code>INTERNET</code> သည် <code>application</code> ၏ အပြင်ဘက်၊ <code>windowSoftInputMode</code> သည် <code>activity</code> ၏ attribute ဖြစ်ပါသည်။ ချိတ်ဆက်မှုအတွက် run ချိန်တွင် ခွင့်ပြုချက်တောင်းသော dialog ပေါ်မည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "AndroidManifest.xml · 全文",
+      "translation": "AndroidManifest.xml · အပြည့်အစုံ"
+    },
+    {
+      "source": "次のコマで使う <code>@Serializable</code> は、Swiftの <code>Codable</code> と同じくJSON変換に使います。その変換処理を生成できるように、今回はライブラリだけでなくプラグインも設定します。",
+      "translation": "နောက်အတန်းတွင် အသုံးပြုမည့် <code>@Serializable</code> ကို Swift ၏ <code>Codable</code> ကဲ့သို့ပင် JSON ပြောင်းလဲခြင်းအတွက် အသုံးပြုပါသည်။ ၎င်းပြောင်းလဲခြင်းလုပ်ငန်းစဉ်ကို ဖန်တီးနိုင်ရန်အတွက် ယခုအကြိမ်တွင် library သာမက plugin ကိုပါ သတ်မှတ်ပါသည်။"
+    },
+    {
+      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
+      "translation": "setting 3 ခုနှင့် Manifest ကို သိမ်းဆည်းပြီးဖြစ်ကာ Gradle sync ၏ အနီရောင် error များ ပျောက်နေပါသည်။"
+    },
+    {
+      "source": "STEP 03 · 11コマ目 · 目安 20分",
+      "translation": "STEP 03 ၊ 11 ခုမြောက် အတန်း ၊ ခန့်မှန်း 20 မိနစ်"
+    },
+    {
+      "source": "検索画面をXMLで作る",
+      "translation": "ရှာဖွေရေးမျက်နှာပြင်ကို XML ဖြင့် ဖန်တီးရန်"
+    },
+    {
+      "source": "<strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使います。",
+      "translation": "<strong>Tools → Device Manager</strong> တွင် <code>jec_25cm_kotlin_Pixel 9a</code> ကို ဖွင့်ပါ။ ရှိပြီးသားစက်ကို အသုံးပြုပါ။"
+    },
+    {
+      "source": "なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong>。先生指定のAPI 31以上のイメージで作成し、このAVD名にします。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code>。候補がなければ先生に画面を見せます。",
+      "translation": "မရှိပါက <strong>+ → Create Virtual Device</strong> (သို့မဟုတ် <strong>Create Device</strong>) မှတစ်ဆင့် <strong>Phone → Pixel 9a</strong> ကို ရွေးပါ။ ဆရာသတ်မှတ်ထားသော API 31 နှင့်အထက်ရှိ image ဖြင့် ဖန်တီးပြီး ဤ AVD အမည်ပေးပါ။ Apple Silicon အတွက် <code>arm64-v8a</code>၊ Intel Mac အတွက် <code>x86_64</code> ဖြစ်ပါသည်။ ရွေးချယ်စရာ မရှိပါက ဆရာ့ကို မျက်နှာပြင် ပြပါ။"
+    },
+    {
+      "source": "実行設定 <strong>app</strong> と指定AVDで <strong>Run ▶</strong>。まず <code>Hello World!</code> を確認します。",
+      "translation": "run ရန် setting <strong>app</strong> နှင့် သတ်မှတ်ထားသော AVD ဖြင့် <strong>Run ▶</strong> လုပ်ပါ။ ပထမဆုံး <code>Hello World!</code> ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
+      "translation": "<code>app/src/main/res/layout/activity_main.xml</code> ကို ဖွင့်ပြီး ညာဘက်အပေါ်ရှိ <strong>Code</strong> တွင် အပြည့်အစုံ အစားထိုးပါ။"
     },
     {
       "source": "activity_main.xml · 全文",
       "translation": "activity_main.xml ၊ အပြည့်အစုံ"
     },
     {
+      "source": "外側の <code>FrameLayout</code> は、入力と一覧の上に通信中の印を重ねるための配置です。内側の <code>LinearLayout</code> は縦並び。<code>progress</code> は最初 <code>invisible</code> なので見えません。<code>main</code> のidは生成されたインセット処理が使うため残します。",
+      "translation": "အပြင်ဘက်ရှိ <code>FrameLayout</code> သည် ထည့်သွင်းမှုနှင့် စာရင်းအပေါ်တွင် ချိတ်ဆက်နေသည့် အမှတ်အသားကို ထပ်တင်ရန်အတွက် နေရာချထားခြင်း ဖြစ်ပါသည်။ အတွင်းဘက်ရှိ <code>LinearLayout</code> သည် ဒေါင်လိုက်စီထားပါသည်။ <code>progress</code> သည် အစတွင် <code>invisible</code> ဖြစ်သောကြောင့် မြင်ရမည်မဟုတ်ပါ။ <code>main</code> ၏ id သည် ဖန်တီးထားသော inset လုပ်ငန်းစဉ်က အသုံးပြုမည်ဖြစ်သောကြောင့် ချန်ထားပါသည်။"
+    },
+    {
+      "source": "Runすると入力欄・「ソート順」・検索ボタンが出ます。まだSpinnerの選択肢も検索処理も書いていないので、押しても検索結果は出ません。",
+      "translation": "Run လုပ်ပါက ထည့်သွင်းရန်အကွက်၊ 「ソート順」 (sort အစီအစဉ်)၊ ရှာဖွေရန် ခလုတ်တို့ ပေါ်လာပါမည်။ Spinner ၏ ရွေးချယ်စရာများနှင့် ရှာဖွေခြင်းလုပ်ငန်းစဉ်များကို မရေးရသေးသောကြောင့် နှိပ်သော်လည်း ရှာဖွေမှုရလဒ် ပေါ်လာမည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "XMLの <code>@+id/btn_search</code> を、KotlinもJavaも <code>R.id.btn_search</code> で参照します。XMLは画面の形、Kotlinはその動きを担当します。",
+      "translation": "XML ၏ <code>@+id/btn_search</code> ကို Kotlin နှင့် Java နှစ်ခုလုံးတွင် <code>R.id.btn_search</code> ဖြင့် ရည်ညွှန်းပါသည်။ XML သည် မျက်နှာပြင်၏ ပုံစံ၊ Kotlin သည် ၎င်း၏ လုပ်ဆောင်မှုကို တာဝန်ယူပါသည်။"
+    },
+    {
+      "source": "指定AVDに入力欄・ソート順・検索ボタンが出て、一覧と通信中の印は出ていない。",
+      "translation": "သတ်မှတ်ထားသော AVD တွင် ထည့်သွင်းရန်အကွက်၊ ソート順 (sort အစီအစဉ်)၊ ရှာဖွေရန် ခလုတ်တို့ ပေါ်နေပြီး စာရင်းနှင့် ချိတ်ဆက်နေသည့် အမှတ်အသားများ မပေါ်ပါ။"
+    },
+    {
+      "source": "STEP 04 · 11コマ目 · 目安 27分",
+      "translation": "STEP 04 ၊ 11 ခုမြောက် အတန်း ၊ ခန့်မှန်း 27 မိနစ်"
+    },
+    {
+      "source": "入力とSpinnerをKotlinにつなぐ",
+      "translation": "ထည့်သွင်းမှုနှင့် Spinner ကို Kotlin ဖြင့် ချိတ်ဆက်ရန်"
+    },
+    {
+      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "package အတွင်းရှိ <code>MainActivity.kt</code> ကို အောက်ပါ <strong>11 ခုမြောက် အတန်း၏ ကြားဖြတ် code</strong> ဖြင့် အပြည့်အစုံ အစားထိုးပါ။ import ကိုလည်း ထည့်သွင်းပါ။ နောက်ပိုင်းတွင် ရှာဖွေမှုနှင့် မချိတ်ဆက်မီ ထည့်သွင်းမှုနှင့် ရွေးချယ်စရာများကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "04-MainActivity.kt · 全文",
+      "translation": "04-MainActivity.kt ၊ အပြည့်အစုံ"
+    },
+    {
       "source": "場所",
       "translation": "နေရာ"
+    },
+    {
+      "source": "画面とのつながり",
+      "translation": "မျက်နှာပြင်နှင့် ချိတ်ဆက်မှု"
+    },
+    {
+      "source": "Javaで後から代入するフィールドに対応。findViewByIdで代入してから読む。",
+      "translation": "Java တွင် နောက်မှ အစားထိုးမည့် field နှင့် သက်ဆိုင်ပါသည်။ findViewById ဖြင့် အစားထိုးပြီးမှ ဖတ်ပါသည်။"
+    },
+    {
+      "source": "左が表示文字、右が後でAPIへ送る値。<code>to</code> でPairを作る。",
+      "translation": "ဘယ်ဘက်သည် ပြသပေးမည့်စာသား၊ ညာဘက်သည် နောက်ပိုင်းတွင် API သို့ ပေးပို့မည့် တန်ဖိုးဖြစ်ပါသည်။ <code>to</code> ဖြင့် Pair ကို ဖန်တီးပါသည်။"
+    },
+    {
+      "source": "表示文字だけのリストを作る。<code>it</code> は各Pair。",
+      "translation": "ပြသပေးမည့်စာသားများသာပါဝင်သော စာရင်းကို ဖန်တီးပါသည်။ <code>it</code> သည် Pair တစ်ခုစီ ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "生成したArrayAdapterを設定して、その同じオブジェクトを返す。",
+      "translation": "ဖန်တီးထားသော ArrayAdapter ကို သတ်မှတ်ပြီး ၎င်း object ကိုပင် ပြန်ပေးပါသည်။"
+    },
+    {
+      "source": "前後の空白を除き、nullなら空文字にする。",
+      "translation": "ရှေ့နောက်ရှိ ကွက်လပ်များကို ဖယ်ရှားပြီး null ဖြစ်ပါက စာသားအလွတ် ဖြစ်စေပါသည်။"
+    },
+    {
+      "source": "空なら案内、入力があればその文字をToastに出す。まだ通信しない。",
+      "translation": "အလွတ်ဖြစ်ပါက လမ်းညွှန်ချက်၊ ထည့်သွင်းထားပါက ထိုစာသားကို Toast တွင် ပြသပါသည်။ ချိတ်ဆက်မှု မလုပ်သေးပါ။"
+    },
+    {
+      "source": "RunしてSpinnerを開き、4つの選択肢を確認します。入力欄に <code>kotlin</code> を入れ、必要なら端末の戻る操作でキーボードを閉じて検索を押します。「入力: kotlin」が短く出ます。入力を消すと「検索ワードを入力してください」です。",
+      "translation": "Run လုပ်ပြီး Spinner ကို ဖွင့်ကာ ရွေးချယ်စရာ 4 ခုကို စစ်ဆေးပါ။ ထည့်သွင်းရန်အကွက်တွင် <code>kotlin</code> ကို ထည့်ပြီး လိုအပ်ပါက စက်၏ back လုပ်ဆောင်ချက်ဖြင့် keyboard ကို ပိတ်ကာ ရှာဖွေမည်ကို နှိပ်ပါ။ 「入力: kotlin」 (ထည့်သွင်းမှု: kotlin) ဟု ခဏတာ ပေါ်လာပါမည်။ ထည့်သွင်းထားသည်ကို ဖျက်လိုက်ပါက 「検索ワードを入力してください」 (ရှာဖွေမည့်စကားလုံးကို ထည့်ပါ) ဟု ပေါ်ပါမည်။"
+    },
+    {
+      "source": "完成版の起動画面。11コマ目も選択肢を作ると同じ形になる",
+      "translation": "ပြီးစီးသွားသောဗားရှင်း၏ စတင်သည့် မျက်နှာပြင်။ 11 ခုမြောက် အတန်းတွင်လည်း ရွေးချယ်စရာများကို ဖန်တီးပါက တူညီသည့်ပုံစံ ဖြစ်လာပါမည်"
+    },
+    {
+      "source": "完成版の起動画面。11コマ目も選択肢を作ると同じ形になる（指定AVDで撮影）",
+      "translation": "ပြီးစီးသွားသောဗားရှင်း၏ စတင်သည့် မျက်နှာပြင်။ 11 ခုမြောက် အတန်းတွင်လည်း ရွေးချယ်စရာများကို ဖန်တီးပါက တူညီသည့်ပုံစံ ဖြစ်လာပါမည် (သတ်မှတ်ထားသော AVD တွင် ရိုက်ကူးထားသည်)"
+    },
+    {
+      "source": "Kotlinの <code>to</code> はPairを作る関数で、Swiftのタプルに近い役目です。<code>map</code> はSwiftと同じく各要素を変換します。<code>apply</code> の中は作成したAdapterが <code>this</code> になるので、直接そのメソッドを呼べます。",
+      "translation": "Kotlin ၏ <code>to</code> သည် Pair ကို ဖန်တီးပေးသော function ဖြစ်ပြီး Swift ၏ tuple နှင့် ဆင်တူသော အခန်းကဏ္ဍတွင် ရှိပါသည်။ <code>map</code> သည် Swift ကဲ့သို့ပင် အစိတ်အပိုင်းတစ်ခုစီကို ပြောင်းလဲပေးပါသည်။ <code>apply</code> အတွင်းတွင် ဖန်တီးထားသော Adapter သည် <code>this</code> ဖြစ်သွားသောကြောင့် ၎င်း၏ method ကို တိုက်ရိုက် ခေါ်ယူနိုင်ပါသည်။"
+    },
+    {
+      "source": "4つのソート順が選べ、検索を押すと入力した文字、空欄なら入力を促すToastが出る。",
+      "translation": "ソート順 (sort အစီအစဉ်) 4 ခုကို ရွေးချယ်နိုင်ပြီး ရှာဖွေမည်ကို နှိပ်ပါက ထည့်သွင်းထားသော စာသား၊ ကွက်လပ်ဖြစ်ပါက ထည့်သွင်းရန် တိုက်တွန်းသည့် Toast ပေါ်လာပါသည်။"
+    },
+    {
+      "source": "STEP 05 · 11コマ目 · 目安 3分",
+      "translation": "STEP 05 ၊ 11 ခုမြောက် အတန်း ၊ ခန့်မှန်း 3 မိနစ်"
+    },
+    {
+      "source": "11コマ目の画面を確認して保存する",
+      "translation": "အတန်းချိန် 11 ၏ မျက်နှာပြင်ကို စစ်ဆေးပြီး သိမ်းဆည်းရန်"
+    },
+    {
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
+      "translation": "နောက်ဆုံး 3 မိနစ်ဖြစ်ပါသည်။ ရှာဖွေမည့်စကားလုံးကို ဖျက်၍ နှိပ်ပါက လမ်းညွှန်ပြမည်ဖြစ်ပြီး၊ <code>kotlin</code> ကို ထည့်၍ နှိပ်ပါက \"入力: kotlin\" ဟု ပြပါမည်။ စာရင်းသည် အလွတ်အတိုင်းဖြစ်နေခြင်းက ပုံမှန်ဖြစ်ပါသည်။ <strong>File → Save All</strong> ဖြင့် သိမ်းဆည်းပါ။ နောက်တစ်ဆင့်တွင် ဤတူညီသော project ကို ဖွင့်ပါမည်။"
+    },
+    {
+      "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
+      "translation": "နှစ်ခုစလုံးသည် ကလစ်နှိပ်သည့်အချိန်၏ လုပ်ဆောင်ချက်ကို မှတ်ပုံတင်ထားပါသည်။ ယခု <code>search</code> သည် ထည့်သွင်းမှုကို စစ်ဆေးရန်အတွက်သာ ဖြစ်ပါသည်။ ဆက်သွယ်မည့် လုပ်ဆောင်ချက်ကို အတန်းချိန် 13 တွင် ထည့်သွင်းပါမည်။"
+    },
+    {
+      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
+      "translation": "MainActivity.kt ကို သိမ်းဆည်းပြီးဖြစ်ကာ၊ ထည့်သွင်းမှုကို စစ်ဆေးသည့် Toast ပေါ်လာပြီး၊ စာရင်းသည် အလွတ်အတိုင်း ဖြစ်နေပါသည်။"
+    },
+    {
+      "source": "STEP 06 · 12コマ目 · 目安 5分",
+      "translation": "အဆင့် 06 ၊ အတန်းချိန် 12 ၊ ခန့်မှန်း 5 မိနစ်"
+    },
+    {
+      "source": "12コマ目：入力画面から再開する",
+      "translation": "အတန်းချိန် 12: ထည့်သွင်းသည့်မျက်နှာပြင်မှ ပြန်လည်စတင်ရန်"
+    },
+    {
+      "source": "Android StudioのRecent Projects、または <strong>Open</strong> で、自分の <code>A03GithubSearch</code> フォルダを開きます。保存先が <code>Documents/Kotlin/A03GithubSearch</code> であることを確認し、同期を待ちます。指定AVDでRunし、入力した <code>kotlin</code> がToastに出ることを確認します。",
+      "translation": "Android Studio ၏ Recent Projects သို့မဟုတ် <strong>Open</strong> ဖြင့်၊ မိမိ၏ <code>A03GithubSearch</code> ဖိုင်တွဲကို ဖွင့်ပါ။ သိမ်းဆည်းမည့်နေရာသည် <code>Documents/Kotlin/A03GithubSearch</code> ဖြစ်ကြောင်းကို စစ်ဆေးပြီး၊ sync ကို စောင့်ပါ။ သတ်မှတ်ထားသော AVD ဖြင့် Run လုပ်ပြီး၊ ထည့်သွင်းထားသော <code>kotlin</code> သည် Toast တွင် ပေါ်လာကြောင်းကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "今日は、通信の代わりにKotlinで書いた固定の2件を一覧へ渡します。GitHubにアクセスせず、一覧を作る部分を動かせます。",
+      "translation": "ယနေ့တွင်၊ ဆက်သွယ်မည့်အစား Kotlin ဖြင့် ရေးသားထားသော ပုံသေ 2 ခုကို စာရင်းသို့ ပေးပို့ပါမည်။ GitHub သို့ ဝင်ရောက်ခြင်းမပြုဘဲ၊ စာရင်းပြုလုပ်သည့်အပိုင်းကို အလုပ်လုပ်စေနိုင်ပါသည်။"
+    },
+    {
+      "source": "後からViewを代入するフィールドの対応です。Kotlinの <code>lateinit</code> は未初期化のまま読むと例外になります。<code>setContentView</code> の後で代入する順を保ちます。",
+      "translation": "နောက်မှ View ကို အစားထိုးထည့်သွင်းမည့် field အတွက် လုပ်ဆောင်ချက်ဖြစ်ပါသည်။ Kotlin ၏ <code>lateinit</code> သည် မူလတန်ဖိုးသတ်မှတ်ခြင်းမရှိဘဲ ဖတ်ပါက exception ဖြစ်ပေါ်ပါမည်။ <code>setContentView</code> ၏ နောက်တွင် အစားထိုးထည့်သွင်းသည့် အစီအစဉ်အတိုင်း ထားရှိပါ။"
+    },
+    {
+      "source": "自分のA03GithubSearchで、前回の入力確認のToastが出ている。",
+      "translation": "မိမိ၏ A03GithubSearch တွင်၊ ယခင်အကြိမ်က ထည့်သွင်းမှုကို စစ်ဆေးသည့် Toast ပေါ်နေပါသည်။"
+    },
+    {
+      "source": "STEP 07 · 12コマ目 · 目安 20分",
+      "translation": "အဆင့် 07 ၊ အတန်းချိန် 12 ၊ ခန့်မှန်း 20 မိနစ်"
+    },
+    {
+      "source": "JSONに対応するdata classを作る",
+      "translation": "JSON နှင့် သက်ဆိုင်သော data class ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "package ကို right-click နှိပ်ပြီး <strong>New → Kotlin Class/File</strong> ကို ရွေးချယ်ကာ၊ အမည်ကို <code>GithubSearchResponse</code>၊ အမျိုးအစားကို <strong>File</strong> အဖြစ် သတ်မှတ်ပါ။ ရရှိလာသော <code>GithubSearchResponse.kt</code> ကို စာသားတစ်ခုလုံး အစားထိုးပါ။ အောက်ပါတို့သည် ဖိုင် ၁ ဖိုင်တွင် class ၃ ခု ရေးသားထားသည့် ပုံစံဖြစ်ပါသည်။"
+    },
+    {
+      "source": "GithubSearchResponse.kt · 全文",
+      "translation": "GithubSearchResponse.kt ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "JSONは次のような入れ子です。これは構造を読むための小さな固定例で、実際の検索応答ではありません。<code>items</code> の各要素が1リポジトリ、<code>owner</code> が所有者の情報です。",
+      "translation": "JSON သည် အောက်ပါကဲ့သို့ ထပ်ဆင့် (nested) ပုံစံဖြစ်ပါသည်။ ၎င်းသည် ဖွဲ့စည်းပုံကို ဖတ်ရန်အတွက် သေးငယ်သော ပုံသေနမူနာဖြစ်ပြီး၊ အမှန်တကယ် ရှာဖွေမှုတုံ့ပြန်ချက် မဟုတ်ပါ။ <code>items</code> ၏ အစိတ်အပိုင်းတစ်ခုစီသည် repository ၁ ခုဖြစ်ပြီး၊ <code>owner</code> သည် ပိုင်ရှင်၏ အချက်အလက်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "対応するデータ",
+      "translation": "သက်ဆိုင်သော ဒေတာ"
+    },
+    {
+      "source": "一覧に渡す <code>List&lt;GithubRepository&gt;</code>",
+      "translation": "စာရင်းသို့ ပေးပို့မည့် <code>List&lt;GithubRepository&gt;</code>"
+    },
+    {
+      "source": "所有者名",
+      "translation": "ပိုင်ရှင်အမည်"
+    },
+    {
+      "source": "JSONの名前をKotlinの <code>stargazersCount</code> に対応付ける",
+      "translation": "JSON ၏ အမည်ကို Kotlin ၏ <code>stargazersCount</code> နှင့် ချိတ်ဆက်ခြင်း"
+    },
+    {
+      "source": "変換処理の生成対象にする。Javaの <code>java.io.Serializable</code> とは別",
+      "translation": "ပြောင်းလဲခြင်း လုပ်ဆောင်ချက်၏ ဖန်တီးမည့် အရာအဖြစ် သတ်မှတ်ခြင်း။ Java ၏ <code>java.io.Serializable</code> နှင့် မတူပါ။"
+    },
+    {
+      "source": "検索全体の件数。このアプリの画面には表示しない",
+      "translation": "ရှာဖွေမှုတစ်ခုလုံး၏ အရေအတွက်။ ဤအက်ပ်၏ မျက်နှာပြင်တွင် မပြသပါ။"
+    },
+    {
+      "source": "Swiftの <code>Codable</code> と同様に、宣言した型へJSONを変換します。名前が違うとき、Swiftは <code>CodingKeys</code>、Kotlinのこのライブラリは <code>@SerialName</code> を使います。<code>data class</code> の <code>==</code> は、ここで宣言したプロパティの値を比較します。",
+      "translation": "Swift ၏ <code>Codable</code> ကဲ့သို့ပင်၊ ကြေညာထားသော type သို့ JSON ကို ပြောင်းလဲပေးပါသည်။ အမည်မတူညီသည့်အခါ၊ Swift သည် <code>CodingKeys</code> ကို သုံးပြီး၊ Kotlin ၏ ဤ library သည် <code>@SerialName</code> ကို အသုံးပြုပါသည်။ <code>data class</code> ၏ <code>==</code> သည် ဤနေရာတွင် ကြေညာထားသော property ၏ တန်ဖိုးများကို နှိုင်းယှဉ်ပါသည်။"
+    },
+    {
+      "source": "GithubSearchResponse.ktに3つのdata classがあり、SerializableとSerialNameの赤い波線が消えている。",
+      "translation": "GithubSearchResponse.kt တွင် data class ၃ ခု ရှိပြီး၊ Serializable နှင့် SerialName ၏ အနီရောင် လှိုင်းတွန့်မျဉ်းများ ပျောက်သွားပါသည်။"
+    },
+    {
+      "source": "STEP 08 · 12コマ目 · 目安 15分",
+      "translation": "အဆင့် 08 ၊ အတန်းချိန် 12 ၊ ခန့်မှန်း 15 မိနစ်"
+    },
+    {
+      "source": "一覧の1行をXMLで作る",
+      "translation": "စာရင်း၏ ၁ ကြောင်းကို XML ဖြင့် ပြုလုပ်ရန်"
+    },
+    {
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
+      "translation": "<code>app/src/main/res/layout</code> ကို right-click နှိပ်ပြီး <strong>New → Layout Resource File</strong> ကို ရွေးချယ်ပါ။ File name ကို <code>list_item</code> အဖြစ် သတ်မှတ်၍ ဖန်တီးပါ။ Root element ကို ဖန်တီးပြီးနောက် စာသားတစ်ခုလုံး အစားထိုးမည်ဖြစ်သဖြင့် မူလတန်ဖိုးအတိုင်းထား၍ ရပါသည်။ Code ပြသမှုသို့ ပြောင်းလဲပြီး၊ အောက်ပါအတိုင်း စာသားတစ်ခုလုံးကို အစားထိုးပါ။"
+    },
+    {
+      "source": "list_item.xml · 全文",
+      "translation": "list_item.xml ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "外側は <code>CardView</code>、内側に4つのTextViewです。<code>tools:text</code> はDesign／Splitプレビューだけの見本文字。Runした画面の文字は次のSTEPのKotlinで設定します。<code>maxLines=\"1\"</code> と <code>ellipsize=\"end\"</code> により、長い名前は末尾が省略されます。",
+      "translation": "အပြင်ဘက်သည် <code>CardView</code> ဖြစ်ပြီး၊ အတွင်းဘက်တွင် TextView ၄ ခု ရှိပါသည်။ <code>tools:text</code> သည် Design / Split ပရီဗျူးအတွက်သာဖြစ်သော နမူနာစာသားဖြစ်ပါသည်။ Run လုပ်ထားသော မျက်နှာပြင်၏ စာသားများကို နောက်ထပ်အဆင့်ရှိ Kotlin တွင် သတ်မှတ်ပါမည်။ <code>maxLines=\"1\"</code> နှင့် <code>ellipsize=\"end\"</code> ကြောင့်၊ ရှည်လျားသော အမည်များ၏ အဆုံးသတ်ကို ချန်လှပ်ထားမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Javaのgetterと文字列連結に対して、Kotlinはプロパティ参照と文字列テンプレートです。XMLの見本文字はこの代入の代わりにはなりません。",
+      "translation": "Java ၏ getter နှင့် string ဆက်ခြင်းများနှင့် နှိုင်းယှဉ်ပါက၊ Kotlin သည် property ရည်ညွှန်းခြင်းနှင့် string template ကို အသုံးပြုပါသည်။ XML ၏ နမူနာစာသားသည် ဤအစားထိုးထည့်သွင်းခြင်းအတွက် အစားထိုးဖြစ်မည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "list_item.xmlのプレビューに4項目が縦に並び、各TextViewのidがコードと一致している。",
+      "translation": "list_item.xml ၏ ပရီဗျူးတွင် အချက် ၄ ချက်သည် ဒေါင်လိုက်စီတန်းနေပြီး၊ TextView တစ်ခုစီ၏ id သည် ကုဒ်နှင့် ကိုက်ညီမှုရှိပါသည်။"
+    },
+    {
+      "source": "STEP 09 · 12コマ目 · 目安 25分",
+      "translation": "အဆင့် 09 ၊ အတန်းချိန် 12 ၊ ခန့်မှန်း 25 မိနစ်"
+    },
+    {
+      "source": "Adapterでデータを1行へ結び付ける",
+      "translation": "Adapter ဖြင့် ဒေတာများကို ၁ ကြောင်းသို့ ချိတ်ဆက်ရန်"
+    },
+    {
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
+      "translation": "package ကို right-click နှိပ်ပြီး <strong>New → Kotlin Class/File</strong> ကို ရွေးချယ်ပါ။ အမည်ကို <code>RepositoryAdapter</code>၊ အမျိုးအစားကို <strong>File</strong> အဖြစ် သတ်မှတ်ပြီး၊ စာသားတစ်ခုလုံးကို အောက်ပါအတိုင်း အစားထိုးပါ။"
+    },
+    {
+      "source": "RepositoryAdapter.kt · 全文",
+      "translation": "RepositoryAdapter.kt ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "担当すること",
+      "translation": "တာဝန်ယူရမည့်အရာ"
+    },
+    {
+      "source": "1行の中の4つのTextViewを保持。画面全体ではなく <code>itemView</code> から探す。",
+      "translation": "၁ ကြောင်းအတွင်းရှိ TextView ၄ ခုကို သိမ်းဆည်းထားခြင်း။ မျက်နှာပြင်တစ်ခုလုံးမှ မဟုတ်ဘဲ <code>itemView</code> မှ ရှာဖွေခြင်း။"
+    },
+    {
+      "source": "必要な行のViewを <code>list_item.xml</code> から作る。",
+      "translation": "လိုအပ်သော အတန်း၏ View ကို <code>list_item.xml</code> မှ ပြုလုပ်ခြင်း။"
+    },
+    {
+      "source": "その位置のリポジトリを読み、4つの文字へ反映。",
+      "translation": "၎င်းနေရာ၏ repository ကို ဖတ်ပြီး၊ စာသား ၄ ခုသို့ အကျိုးသက်ရောက်စေခြင်း။"
+    },
+    {
+      "source": "同じリポジトリかをidで、表示内容が同じかを値で判定。",
+      "translation": "တူညီသော repository ဖြစ်ကြောင်းကို id ဖြင့်၊ ပြသသည့် အကြောင်းအရာ တူညီကြောင်းကို တန်ဖိုးဖြင့် ဆုံးဖြတ်ခြင်း။"
+    },
+    {
+      "source": "渡されたリストの差分を扱う親クラス。<code>submitList</code> でリストを渡す。",
+      "translation": "ပေးပို့လာသော စာရင်း၏ ကွာခြားချက်များကို ကိုင်တွယ်သည့် မိခင် class။ <code>submitList</code> ဖြင့် စာရင်းကို ပေးပို့ခြင်း။"
+    },
+    {
+      "source": "<code>inflate(R.layout.list_item, parent, false)</code> は、親に合うレイアウト情報で行を作り、その場では親へ追加しない指定です。行の追加はRecyclerViewが担当します。行を使い回すたび <code>onBindViewHolder</code> で文字を書き直すため、4項目とも代入します。",
+      "translation": "<code>inflate(R.layout.list_item, parent, false)</code> သည် မိဘနှင့်ကိုက်ညီသော layout အချက်အလက်ဖြင့် အတန်းကို ဖန်တီးပြီး၊ ချက်ချင်း မိဘထံသို့ မထည့်သွင်းရန် သတ်မှတ်ချက်ဖြစ်ပါသည်။ အတန်းထည့်သွင်းခြင်းကို RecyclerView က တာဝန်ယူပါသည်။ အတန်းကို ပြန်လည်အသုံးပြုတိုင်း <code>onBindViewHolder</code> တွင် စာသားကို ပြန်လည်ရေးသားမည်ဖြစ်သောကြောင့်၊ အချက် 4 ချက်စလုံးကို တန်ဖိုးထည့်သွင်းပါသည်။"
+    },
+    {
+      "source": "<code>companion object</code> はクラス側で使う値を置く場所。<code>object : DiffUtil.ItemCallback&lt;GithubRepository&gt;()</code> は名前のないオブジェクトを作り、2つのメソッドをoverrideしています。まだMainActivityにつないでいないので、Runしても一覧は空です。",
+      "translation": "<code>companion object</code> သည် class ဘက်တွင် အသုံးပြုမည့် တန်ဖိုးများကို ထားရှိရန် နေရာဖြစ်ပါသည်။ <code>object : DiffUtil.ItemCallback&lt;GithubRepository&gt;()</code> သည် အမည်မပါသော object ကို ဖန်တီးပြီး၊ method 2 ခုကို override လုပ်ထားပါသည်။ MainActivity နှင့် မချိတ်ဆက်ရသေးသောကြောင့်၊ Run လုပ်သော်လည်း စာရင်းသည် အလွတ်ဖြစ်နေမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "Kotlinの <code>==</code> はJavaの参照比較 <code>==</code> とは違い、<code>equals</code> を使う比較です。このdata classではプロパティの値を比べます。idが同じでもスター数が変われば、内容は違うと判定します。",
+      "translation": "Kotlin ၏ <code>==</code> သည် Java ၏ reference နှိုင်းယှဉ်မှု <code>==</code> နှင့်မတူဘဲ၊ <code>equals</code> ကို အသုံးပြုသည့် နှိုင်းယှဉ်မှုဖြစ်ပါသည်။ ဤ data class တွင် property များ၏ တန်ဖိုးများကို နှိုင်းယှဉ်ပါသည်။ id တူညီသော်လည်း star အရေအတွက် ပြောင်းလဲသွားပါက၊ အကြောင်းအရာ မတူညီဟု သတ်မှတ်မည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "RepositoryAdapter.ktに赤い波線がなく、id比較と内容比較の2つのメソッドがある。",
+      "translation": "RepositoryAdapter.kt တွင် အနီရောင် လှိုင်းတွန့်မျဉ်း မရှိဘဲ၊ id နှိုင်းယှဉ်မှုနှင့် အကြောင်းအရာ နှိုင်းယှဉ်မှု method 2 ခု ရှိပါသည်။"
+    },
+    {
+      "source": "STEP 10 · 12コマ目 · 目安 22分",
+      "translation": "STEP 10 ၊ 12 ကြိမ်မြောက် အတန်းချိန် ၊ ခန့်မှန်း 22 မိနစ်"
+    },
+    {
+      "source": "固定データをRecyclerViewへ渡す",
+      "translation": "ပုံသေဒေတာကို RecyclerView သို့ ပေးပို့ရန်"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
+      "translation": "<code>MainActivity.kt</code> ကို အောက်ပါ 12 ကြိမ်မြောက် အတန်းချိန်၏ ကြားဖြတ် code ဖြင့် အပြည့်အစုံ အစားထိုးပါ။ 11 ကြိမ်မြောက် အတန်းချိန်၏ input စစ်ဆေးမှုကို ချန်ထားပြီး၊ <code>repositoryAdapter</code> ဖန်တီးခြင်း၊ RecyclerView နှင့် ချိတ်ဆက်ခြင်း၊ ပုံသေဒေတာ၏ <code>submitList</code> ကို ထပ်ထည့်ထားသော ပုံစံဖြစ်ပါသည်။"
+    },
+    {
+      "source": "10-MainActivity.kt · 全文",
+      "translation": "10-MainActivity.kt ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "<code>LinearLayoutManager(this)</code> は縦方向の一覧を配置します。<code>this</code> はこのMainActivity。<code>recyclerView.adapter</code> へ同じ <code>repositoryAdapter</code> を渡してから、そのAdapterへリストを送ります。",
+      "translation": "<code>LinearLayoutManager(this)</code> သည် ဒေါင်လိုက် စာရင်းကို နေရာချထားပေးပါသည်။ <code>this</code> သည် ဤ MainActivity ဖြစ်ပါသည်။ <code>recyclerView.adapter</code> သို့ တူညီသော <code>repositoryAdapter</code> ကို ပေးပို့ပြီးနောက်၊ ၎င်း Adapter သို့ စာရင်းကို ပေးပို့ပါသည်။"
+    },
+    {
+      "source": "Runすると、<code>student / HelloKotlin / 12 / 3</code> と <code>classroom / CalcGame / 5 / 1</code> が表示されます。これらはKotlinに書いた練習用データで、GitHubの検索結果ではありません。検索ボタンは引き続き入力確認のToastだけを出します。",
+      "translation": "Run လုပ်ပါက၊ <code>student / HelloKotlin / 12 / 3</code> နှင့် <code>classroom / CalcGame / 5 / 1</code> ကို ပြသမည်ဖြစ်ပါသည်။ ၎င်းတို့သည် Kotlin တွင် ရေးထားသော လေ့ကျင့်ရေး ဒေတာများဖြစ်ပြီး၊ GitHub ၏ ရှာဖွေမှုရလဒ် မဟုတ်ပါ။ ရှာဖွေရေးခလုတ်သည် ဆက်လက်၍ input စစ်ဆေးမှု Toast ကိုသာ ပြသမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "通信せずに固定の2件を表示した12コマ目の途中画面",
+      "translation": "network ချိတ်ဆက်မှုမရှိဘဲ ပုံသေ 2 ခုကို ပြသထားသော 12 ကြိမ်မြောက် အတန်းချိန်၏ ကြားဖြတ် မျက်နှာပြင်"
+    },
+    {
+      "source": "通信せずに固定の2件を表示した12コマ目の途中画面（指定AVDで撮影）",
+      "translation": "network ချိတ်ဆက်မှုမရှိဘဲ ပုံသေ 2 ခုကို ပြသထားသော 12 ကြိမ်မြောက် အတန်းချိန်၏ ကြားဖြတ် မျက်နှာပြင် (သတ်မှတ်ထားသော AVD ဖြင့် ရိုက်ကူးထားသည်)"
+    },
+    {
+      "source": "KotlinはJavaのsetterをプロパティへの代入として書けます。SwiftのTable Viewにもデータを行へ表示する役割がありますが、このアプリではRecyclerViewのAdapterとViewHolderで分担します。",
+      "translation": "Kotlin တွင် Java ၏ setter ကို property သို့ တန်ဖိုးထည့်သွင်းခြင်းအဖြစ် ရေးသားနိုင်ပါသည်။ Swift ၏ Table View တွင်လည်း ဒေတာကို အတန်းတွင် ပြသရန် အခန်းကဏ္ဍ ရှိသော်လည်း၊ ဤအက်ပ်တွင် RecyclerView ၏ Adapter နှင့် ViewHolder တို့ဖြင့် ခွဲဝေလုပ်ဆောင်ပါသည်။"
+    },
+    {
+      "source": "HelloKotlinとCalcGameの2行に、コードに書いた所有者名・スター数・フォーク数が出ている。",
+      "translation": "HelloKotlin နှင့် CalcGame အတန်း 2 တန်းတွင်၊ code ၌ ရေးသားထားသော ပိုင်ရှင်အမည်၊ star အရေအတွက်၊ fork အရေအတွက်တို့ ပေါ်နေပါသည်။"
+    },
+    {
+      "source": "STEP 11 · 12コマ目 · 目安 3分",
+      "translation": "STEP 11 ၊ 12 ကြိမ်မြောက် အတန်းချိန် ၊ ခန့်မှန်း 3 မိနစ်"
+    },
+    {
+      "source": "12コマ目の2行を確認して保存する",
+      "translation": "12 ကြိမ်မြောက် အတန်းချိန်၏ အတန်း 2 တန်းကို စစ်ဆေး၍ သိမ်းဆည်းရန်"
+    },
+    {
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ အတန်း 2 တန်း၏ အချက် 4 ချက်ကို ပုံသေဒေတာနှင့် တိုက်စစ်ပါ၊ input ကို ပြောင်းလဲ၍ ရှာဖွေသော်လည်း စာရင်း၏ အတန်း 2 တန်းသည် ပြောင်းလဲမှုမရှိကြောင်းကို အတည်ပြုပါ။ <strong>File (ဖိုင်) → Save All (အားလုံးကို သိမ်းရန်)</strong> ကို ပြုလုပ်ပါ။ ဆက်သွယ်ရေး code မရှိသေးပါ။ နောက်တစ်ဆင့်တွင် တူညီသော project သို့ API ခေါ်မည့် ဖိုင်ကို ထပ်ထည့်ပါမည်။"
+    },
+    {
+      "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
+      "translation": "Java ၏ generics နည်းတူ <code>&lt;GithubRepository&gt;</code> သည် element ၏ type ဖြစ်ပါသည်။ ယခုတွင် ပုံသေတန်ဖိုးဖြစ်ပြီး၊ နောက်တစ်ဆင့်တွင် network မှ ရရှိသော တူညီသည့် type ရှိသည့် စာရင်းကို တူညီသော Adapter သို့ ပေးပို့ပါမည်။"
+    },
+    {
+      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
+      "translation": "အတန်း 2 တန်းသည် ပုံသေဒေတာအတိုင်းဖြစ်ပြီး၊ MainActivity.kt၊ မော်ဒယ်၊ Adapter၊ XML 2 ခုကို သိမ်းဆည်းထားပါသည်။"
+    },
+    {
+      "source": "STEP 12 · 13コマ目 · 目安 5分",
+      "translation": "STEP 12 ၊ 13 ကြိမ်မြောက် အတန်းချိန် ၊ ခန့်မှန်း 5 မိနစ်"
+    },
+    {
+      "source": "13コマ目：2行の画面から再開する",
+      "translation": "13 ကြိမ်မြောက် အတန်းချိန်: အတန်း 2 တန်းရှိသော မျက်နှာပြင်မှ ပြန်လည်စတင်ရန်"
+    },
+    {
+      "source": "自分の <code>A03GithubSearch</code> をOpenし、指定AVDでRunします。<code>HelloKotlin</code> と <code>CalcGame</code> の2行を確認します。今日は固定データをAPIの結果に置き換えます。",
+      "translation": "မိမိ၏ <code>A03GithubSearch</code> ကို Open လုပ်ပြီး၊ သတ်မှတ်ထားသော AVD ဖြင့် Run လုပ်ပါ။ <code>HelloKotlin</code> နှင့် <code>CalcGame</code> အတန်း 2 တန်းကို စစ်ဆေးပါ။ ယနေ့တွင် ပုံသေဒေတာကို API ၏ ရလဒ်ဖြင့် အစားထိုးပါမည်။"
+    },
+    {
+      "source": "<strong>実際の検索は先生の合図で、少人数ずつ行います。</strong>認証なしの検索APIは1分間に10回までです。同じ外部IPで通信する教室では複数の端末がこの枠を共有するため、全員で連打しません。通信待ちの間はコードと固定データの照合を進めます。",
+      "translation": "<strong>အမှန်တကယ် ရှာဖွေမှုကို ဆရာ၏ အချက်ပြမှုဖြင့်၊ လူနည်းစုစီ ပြုလုပ်ပါမည်။</strong> အထောက်အထားစစ်ဆေးမှု မပါသော ရှာဖွေရေး API သည် 1 မိနစ်လျှင် 10 ကြိမ်အထိသာ ဖြစ်ပါသည်။ တူညီသော အပြင်ဘက် IP ဖြင့် ချိတ်ဆက်သော စာသင်ခန်းတွင် စက်အများအပြားက ဤကန့်သတ်ချက်ကို မျှဝေအသုံးပြုရမည်ဖြစ်သောကြောင့်၊ အားလုံးက တပြိုင်နက်တည်း အကြိမ်ကြိမ် မနှိပ်ရပါ။ Network စောင့်ဆိုင်းနေစဉ်အတွင်း code နှင့် ပုံသေဒေတာ တိုက်စစ်ခြင်းကို ဆက်လက်လုပ်ဆောင်ပါ။"
+    },
+    {
+      "source": "選んだ位置から、表示ラベルではなくAPI用の値を取り出します。KotlinのPairの <code>second</code> はSwiftのタプルの2番目に対応します。",
+      "translation": "ရွေးချယ်ထားသော နေရာမှ၊ ပြသထားသော label မဟုတ်ဘဲ API အတွက် တန်ဖိုးကို ထုတ်ယူပါသည်။ Kotlin ၏ Pair ရှိ <code>second</code> သည် Swift ၏ tuple မှ ဒုတိယအရာနှင့် ကိုက်ညီပါသည်။"
+    },
+    {
+      "source": "自分のプロジェクトで固定の2行が出ており、次に追加するGithubApi.ktはまだない。",
+      "translation": "မိမိ၏ project တွင် ပုံသေ အတန်း 2 တန်း ပေါ်နေပြီး၊ နောက်ထပ် ထည့်သွင်းမည့် GithubApi.kt သည် မရှိသေးပါ။"
+    },
+    {
+      "source": "STEP 13 · 13コマ目 · 目安 15分",
+      "translation": "STEP 13 ၊ 13 ကြိမ်မြောက် အတန်းချိန် ၊ ခန့်မှန်း 15 မိနစ်"
+    },
+    {
+      "source": "Ktorで検索APIを呼ぶファイルを作る",
+      "translation": "Ktor ဖြင့် ရှာဖွေရေး API ကို ခေါ်မည့် ဖိုင်ကို ဖန်တီးရန်"
+    },
+    {
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
+      "translation": "package တွင် <strong>New (အသစ်) → Kotlin Class/File (Kotlin Class/ဖိုင်)</strong> ကို ရွေးချယ်ပါ။ အမည်ကို <code>GithubApi</code>၊ အမျိုးအစားကို <strong>File (ဖိုင်)</strong> ဟု သတ်မှတ်ပြီး၊ အပြည့်အစုံ အစားထိုးပါ။"
+    },
+    {
+      "source": "GithubApi.kt · 全文",
+      "translation": "GithubApi.kt ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "役割",
+      "translation": "လုပ်ဆောင်ရမည့်တာဝန်"
+    },
+    {
+      "source": "共有する1個のオブジェクト。Javaのstaticメソッドをまとめるクラスに近い呼び出し方。",
+      "translation": "မျှဝေသုံးစွဲမည့် object 1 ခုဖြစ်ပါသည်။ Java ၏ static method များကို စုစည်းထားသော class နှင့် ဆင်တူသည့် ခေါ်ယူနည်းဖြစ်ပါသည်။"
+    },
+    {
+      "source": "HTTP通信をするクライアントを1個作る。",
+      "translation": "HTTP ချိတ်ဆက်မှုပြုလုပ်မည့် client 1 ခုကို ဖန်တီးပါသည်။"
+    },
+    {
+      "source": "<code>ContentNegotiation</code> と <code>json</code>",
+      "translation": "<code>ContentNegotiation</code> နှင့် <code>json</code>"
+    },
+    {
+      "source": "受け取ったJSONをdata classへ変換する設定。",
+      "translation": "လက်ခံရရှိသော JSON ကို data class သို့ ပြောင်းလဲပေးမည့် ဆက်တင်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "data classで宣言していないJSON項目を読み飛ばす。必要な項目が欠けた応答まで成功にする設定ではない。",
+      "translation": "data class တွင် ကြေညာမထားသော JSON အချက်များကို ကျော်ဖတ်ပါသည်။ လိုအပ်သော အချက်များ လိုအပ်နေသည့် တုံ့ပြန်မှုကိုပါ အောင်မြင်သည်ဟု သတ်မှတ်သည့် ဆက်တင် မဟုတ်ပါ။"
+    },
+    {
+      "source": "検索語などをURLのパラメータへ渡す。文字列を手でURLへ連結しない。",
+      "translation": "ရှာဖွေမည့်စကားလုံး စသည်တို့ကို URL ၏ parameter သို့ ပေးပို့ပါသည်။ string ကို URL တွင် ကိုယ်တိုင် ဆက်စပ်ခြင်း မပြုလုပ်ပါ။"
+    },
+    {
+      "source": "変数の型 <code>GithubSearchResponse</code> に変換して受け取る。",
+      "translation": "variable ၏ type <code>GithubSearchResponse</code> သို့ ပြောင်းလဲ၍ လက်ခံရယူပါသည်။"
+    },
+    {
+      "source": "全体の件数ではなく、受け取ったリストを返す。",
+      "translation": "စုစုပေါင်း အရေအတွက်မဟုတ်ဘဲ၊ လက်ခံရရှိသော စာရင်းကို ပြန်ပေးပါသည်။"
+    },
+    {
+      "source": "送信先は <code>https://api.github.com/search/repositories</code>。<code>q</code> が検索語、<code>sort</code> が並び順、<code>per_page</code> が1回で受け取る上限です。このアプリは先頭ページを最大30件だけ受け取り、スクロールしても次のページは取得しません。APIキーの入力やログインはありません。",
+      "translation": "ပေးပို့ရမည့်နေရာသည် <code>https://api.github.com/search/repositories</code> ဖြစ်ပါသည်။ <code>q</code> သည် ရှာဖွေမည့်စကားလုံး၊ <code>sort</code> သည် အစီအစဉ်၊ <code>per_page</code> သည် 1 ကြိမ်တွင် လက်ခံရရှိမည့် အများဆုံးအရေအတွက် ဖြစ်ပါသည်။ ဤအက်ပ်သည် ပထမဆုံး စာမျက်နှာကို အများဆုံး အခု 30 သာ လက်ခံရရှိမည်ဖြစ်ပြီး၊ scroll လုပ်သော်လည်း နောက်စာမျက်နှာကို ရယူမည်မဟုတ်ပါ။ API key ထည့်သွင်းခြင်း သို့မဟုတ် login ပြုလုပ်ခြင်းများ မရှိပါ။"
+    },
+    {
+      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "ဤဖိုင်ကို သိမ်းဆည်းရုံဖြင့် ချိတ်ဆက်မှုကို စတင်မည်မဟုတ်ပါ။ နောက်တစ်ဆင့်တွင် ခေါ်ယူမည့်နေရာကို ရေးသားပါမည်။"
+    },
+    {
+      "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
+      "translation": "Swift ၏ <code>async</code> function ကဲ့သို့ ရလဒ်ကို စောင့်ဆိုင်းရမည့် လုပ်ဆောင်ချက်များကို အစဉ်လိုက် ရေးသားပါမည်။ Kotlin တွင် ကြေညာချက်၌ <code>suspend</code> ဟုရေးသော်လည်း၊ ခေါ်ယူသည့်နေရာတွင် <code>await</code> ဟု မရေးပါ။ <code>suspend</code> ဟုရေးရုံဖြင့် အခြား thread တစ်ခု ဖြစ်သွားမည်မဟုတ်ဘဲ၊ ဤနေရာတွင် Ktor ၏ ဆက်သွယ်မှု စောင့်ဆိုင်းနေစဉ်အတွင်း လုပ်ဆောင်မှုကို ခေတ္တရပ်နားထားနိုင်ရန် ပြုလုပ်ထားပါသည်။"
+    },
+    {
+      "source": "GithubApi.ktのimportとbodyに赤い波線がなく、Runしてもまだ固定の2行が出る。",
+      "translation": "GithubApi.kt ၏ import နှင့် body တွင် အနီရောင်လှိုင်းတွန့်မျဉ်း မရှိဘဲ၊ Run လုပ်သော်လည်း ပုံသေစာကြောင်း 2 ကြောင်းသာ ထွက်ပေါ်နေပါသည်။"
+    },
+    {
+      "source": "STEP 14 · 13コマ目 · 目安 25分",
+      "translation": "အဆင့် 14 · 13 ကြိမ်မြောက် အတန်းချိန် · ခန့်မှန်း 25 မိနစ်"
+    },
+    {
+      "source": "入力・通信・一覧をつなぐ",
+      "translation": "ထည့်သွင်းခြင်း၊ ဆက်သွယ်ခြင်းနှင့် စာရင်းကို ချိတ်ဆက်ရန်"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
+      "translation": "<code>MainActivity.kt</code> ကို အောက်ပါ <strong>ပြီးစီးပြီးသော code</strong> ဖြင့် အားလုံးကို အစားထိုးပါ။ ပုံသေဒေတာဖြစ်သော <code>submitList(listOf(…))</code> ကို ဖယ်ရှားပြီး၊ <code>search</code> ထဲမှနေ၍ ဆက်သွယ်မှုကို ခေါ်ယူပါမည်။ ဖန်တီးစဉ်က ပါဝင်သည့် inset လုပ်ဆောင်ချက်၊ View ရယူခြင်းနှင့် Spinner တည်ဆောက်ခြင်းတို့သည် ကျန်ရှိနေမည်ဖြစ်ပါသည်။"
     },
     {
       "source": "MainActivity.kt · 全文",
       "translation": "MainActivity.kt · ဖိုင်တစ်ခုလုံး"
     },
     {
+      "source": "順番",
+      "translation": "အစဉ်လိုက်"
+    },
+    {
+      "source": "処理",
+      "translation": "လုပ်ဆောင်ချက်"
+    },
+    {
+      "source": "入力をtrimし、空ならToastを出して <code>return</code>。通信しない。",
+      "translation": "ထည့်သွင်းမှုကို trim လုပ်ပြီး၊ အလွတ်ဖြစ်နေပါက Toast ပြသကာ <code>return</code> ပါ။ ဆက်သွယ်မှု မလုပ်ပါ။"
+    },
+    {
+      "source": "選択位置の <code>second</code> をAPI用sortとして取り出す。",
+      "translation": "ရွေးချယ်ထားသော နေရာ၏ <code>second</code> ကို API အတွက် sort အဖြစ် ရယူပါ။"
+    },
+    {
+      "source": "<code>lifecycleScope.launch</code> の中で <code>setLoading(true)</code>。印を出し検索ボタンを無効にする。",
+      "translation": "<code>lifecycleScope.launch</code> ထဲတွင် <code>setLoading(true)</code> ပါ။ အမှတ်အသားကို ပြသပြီး ရှာဖွေရေးခလုတ်ကို အသုံးပြု၍မရအောင် လုပ်ဆောင်ပါ။"
+    },
+    {
+      "source": "<code>runCatching</code> の中で結果を待つ。成功なら <code>onSuccess</code> で <code>submitList</code>。",
+      "translation": "<code>runCatching</code> ထဲတွင် ရလဒ်ကို စောင့်ဆိုင်းပါ။ အောင်မြင်ပါက <code>onSuccess</code> ဖြင့် <code>submitList</code> လုပ်ပါ။"
+    },
+    {
+      "source": "0件なら空の一覧とToast。失敗なら <code>onFailure</code> で古い一覧を空にしてToast。",
+      "translation": "0 ခုဖြစ်ပါက အလွတ်ဖြစ်နေသော စာရင်းနှင့် Toast ပြသပါ။ မအောင်မြင်ပါက <code>onFailure</code> ဖြင့် အဟောင်းဖြစ်နေသော စာရင်းကို အလွတ်ဖြစ်စေပြီး Toast ပြသပါ။"
+    },
+    {
+      "source": "<code>setLoading(false)</code> で印を隠し、検索ボタンを有効へ戻す。",
+      "translation": "<code>setLoading(false)</code> ဖြင့် အမှတ်အသားကို ဖျောက်ထားပြီး၊ ရှာဖွေရေးခလုတ်ကို အသုံးပြုနိုင်သည့် အခြေအနေသို့ ပြန်ထားပါ။"
+    },
+    {
+      "source": "<code>lifecycleScope</code> は画面に結び付いたコルーチンの開始場所です。<code>launch</code> の内側なら <code>suspend</code> 関数を呼べます。今回は画面を開いたまま操作します。<code>onSuccess</code> の <code>repositories</code>、<code>onFailure</code> の <code>e</code> はラムダの引数です。<code>e.message</code> の詳細文は原因やライブラリの版で変わります。",
+      "translation": "<code>lifecycleScope</code> သည် မျက်နှာပြင်နှင့် ချိတ်ဆက်ထားသော coroutine စတင်သည့် နေရာဖြစ်ပါသည်။ <code>launch</code> ၏ အတွင်းဘက်ဖြစ်ပါက <code>suspend</code> function ကို ခေါ်ယူနိုင်ပါသည်။ ယခုတစ်ကြိမ်တွင် မျက်နှာပြင်ကို ဖွင့်ထားလျက်ဖြင့် လုပ်ဆောင်ပါမည်။ <code>onSuccess</code> ၏ <code>repositories</code> နှင့် <code>onFailure</code> ၏ <code>e</code> တို့သည် lambda ၏ argument များ ဖြစ်ကြပါသည်။ <code>e.message</code> ၏ အသေးစိတ်စာသားသည် အကြောင်းရင်းနှင့် library ဗားရှင်းပေါ်မူတည်၍ ပြောင်းလဲပါသည်။"
+    },
+    {
+      "source": "Runすると起動時の一覧は空になります。合図があったら <code>kotlin</code> を入力し、必要なら端末の戻る操作でキーボードを閉じ、検索を<strong>1回</strong>押します。応答後に4項目の行が並びます。処理が速いと通信中の印は一瞬です。",
+      "translation": "Run လုပ်လိုက်ပါက စတင်ချိန်တွင် စာရင်းသည် အလွတ်ဖြစ်နေပါမည်။ အချက်ပြမှုရရှိပါက <code>kotlin</code> ဟု ထည့်သွင်းပြီး၊ လိုအပ်ပါက စက်၏ back လုပ်ဆောင်ချက်ဖြင့် keyboard ကို ပိတ်ကာ၊ ရှာဖွေရေးကို <strong>1 ကြိမ်</strong> နှိပ်ပါ။ တုံ့ပြန်မှုရရှိပြီးနောက် 4 ခုပါဝင်သော စာကြောင်းများ စီတန်းနေပါမည်။ လုပ်ဆောင်ချက် မြန်ဆန်ပါက ဆက်သွယ်နေကြောင်း အမှတ်အသားသည် ခဏသာ ပြသမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "比較欄は成功経路の抜粋です。実際の完成コードは <code>runCatching</code> で例外を結果にまとめ、成功と失敗を分けています。Javaのtry/catchやSwiftのdo/catchで経路を分けるのに対応します。",
+      "translation": "နှိုင်းယှဉ်ချက်ကော်လံသည် အောင်မြင်သောလမ်းကြောင်းမှ ကောက်နုတ်ချက်ဖြစ်ပါသည်။ အမှန်တကယ် ပြီးစီးပြီးသော code သည် <code>runCatching</code> ဖြင့် ချွင်းချက်ကို ရလဒ်ထဲတွင် စုစည်းကာ အောင်မြင်မှုနှင့် မအောင်မြင်မှုကို ခွဲခြားထားပါသည်။ ၎င်းသည် Java ၏ try/catch သို့မဟုတ် Swift ၏ do/catch ဖြင့် လမ်းကြောင်းခွဲခြားခြင်းနှင့် တူညီပါသည်။"
+    },
+    {
+      "source": "実検索の結果が4項目の一覧になり、通信後に検索ボタンが押せる色へ戻っている。",
+      "translation": "အမှန်တကယ် ရှာဖွေမှု၏ ရလဒ်သည် 4 ခုပါဝင်သော စာရင်းဖြစ်လာပြီး၊ ဆက်သွယ်မှုပြီးဆုံးပါက ရှာဖွေရေးခလုတ်သည် နှိပ်၍ရသော အရောင်သို့ ပြန်လည်ရောက်ရှိနေပါသည်။"
+    },
+    {
+      "source": "STEP 15 · 13コマ目 · 目安 15分",
+      "translation": "အဆင့် 15 · 13 ကြိမ်မြောက် အတန်းချိန် · ခန့်မှန်း 15 မိနစ်"
+    },
+    {
+      "source": "空欄・0件・失敗を画面で確かめる",
+      "translation": "အလွတ်ဖြစ်နေခြင်း၊ 0 ခုဖြစ်ခြင်းနှင့် မအောင်မြင်ခြင်းကို မျက်နှာပြင်တွင် စစ်ဆေးရန်"
+    },
+    {
+      "source": "以下の通信確認も先生の合図で行います。待ち時間に同じ検索を連打しません。名前・順位・スター数の一致は確認条件にしません。",
+      "translation": "အောက်ပါ ဆက်သွယ်မှု စစ်ဆေးခြင်းကိုလည်း ဆရာ၏ အချက်ပြမှုဖြင့် လုပ်ဆောင်ပါမည်။ စောင့်ဆိုင်းနေချိန်တွင် တူညီသော ရှာဖွေမှုကို ဆက်တိုက်မနှိပ်ပါ။ အမည်၊ အဆင့်နှင့် star အရေအတွက် တိုက်ဆိုင်မှုတို့ကို စစ်ဆေးမည့် အခြေအနေအဖြစ် သတ်မှတ်မည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "操作・状態",
+      "translation": "လုပ်ဆောင်ချက် / အခြေအနေ"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "မျက်နှာပြင်တွင် စစ်ဆေးရမည့်အရာ"
+    },
+    {
+      "source": "入力をすべて消して検索",
+      "translation": "ထည့်သွင်းထားသည်များကို အားလုံးဖျက်ပြီး ရှာဖွေပါ"
+    },
+    {
+      "source": "入力を促すToast。通信せず、前の一覧があれば残る。",
+      "translation": "ထည့်သွင်းရန် တိုက်တွန်းသည့် Toast။ ဆက်သွယ်မှု မလုပ်ဘဲ၊ ယခင်စာရင်းရှိပါက ကျန်ရှိနေမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "通常の語で検索中",
+      "translation": "ပုံမှန်စကားလုံးဖြင့် ရှာဖွေနေစဉ်"
+    },
+    {
+      "source": "中央に通信中の印。検索ボタンは押せない。前の一覧は応答まで残る。",
+      "translation": "အလယ်တွင် ဆက်သွယ်နေကြောင်း အမှတ်အသား။ ရှာဖွေရေးခလုတ်ကို နှိပ်၍မရပါ။ ယခင်စာရင်းသည် တုံ့ပြန်မှုရရှိသည်အထိ ကျန်ရှိနေမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "<code>jec-a03-no-match-20260924-7d4a9c</code> など一致しにくい語で検索",
+      "translation": "<code>jec-a03-no-match-20260924-7d4a9c</code> စသည့် တိုက်ဆိုင်မှုဖြစ်ရန်ခက်ခဲသော စကားလုံးဖြင့် ရှာဖွေပါ"
+    },
+    {
+      "source": "本当に0件なら一覧が空になり「検索結果が0件でした」。結果が出たら別の長い語にする。",
+      "translation": "တကယ်တမ်း 0 ခုဖြစ်ပါက စာရင်းသည် အလွတ်ဖြစ်သွားပြီး \"ရှာဖွေမှုရလဒ် 0 ခုဖြစ်ပါသည်\"။ ရလဒ်ထွက်ပေါ်လာပါက အခြားရှည်လျားသော စကားလုံးတစ်ခုသို့ ပြောင်းပါ။"
+    },
+    {
+      "source": "教員指定の存在しないユーザー条件で検索",
+      "translation": "ဆရာသတ်မှတ်ထားသော မရှိသည့် user အခြေအနေဖြင့် ရှာဖွေပါ"
+    },
+    {
+      "source": "例えば <code>user:jec-a03-user-that-does-not-exist-20260924</code>。そのユーザーが存在しなければ検索条件エラーとなり、一覧が空で「検索に失敗しました: …」のToast。",
+      "translation": "ဥပမာ <code>user:jec-a03-user-that-does-not-exist-20260924</code>။ ထို user မရှိပါက ရှာဖွေမှုအခြေအနေ error ဖြစ်သွားပြီး၊ စာရင်းသည် အလွတ်ဖြစ်ကာ \"ရှာဖွေမှု မအောင်မြင်ပါ: …\" ဟူသော Toast ပြသပါမည်။"
+    },
+    {
+      "source": "通信完了後",
+      "translation": "ဆက်သွယ်မှု ပြီးဆုံးပြီးနောက်"
+    },
+    {
+      "source": "通信中の印が消え、検索ボタンが使える。",
+      "translation": "ဆက်သွယ်နေကြောင်း အမှတ်အသား ပျောက်သွားပြီး၊ ရှာဖွေရေးခလုတ်ကို အသုံးပြုနိုင်ပါသည်။"
+    },
+    {
+      "source": "失敗用の例は検証時に存在しなかったユーザー名です。授業時にも同じ結果になるとは限らないので、先生が事前確認した条件を使います。ネットワーク設定を変えたり、制限に達するまで連打したりして失敗を作る必要はありません。通信環境や利用制限でも同じ失敗経路に入ります。",
+      "translation": "မအောင်မြင်မှုအတွက် ဥပမာသည် စမ်းသပ်ချိန်က မရှိခဲ့သော user အမည်ဖြစ်ပါသည်။ အတန်းချိန်တွင်လည်း တူညီသောရလဒ် ဖြစ်လာမည်ဟု အာမမခံနိုင်သဖြင့်၊ ဆရာက ကြိုတင်စစ်ဆေးထားသော အခြေအနေကို အသုံးပြုပါမည်။ ကွန်ရက်ဆက်တင်များကို ပြောင်းလဲခြင်း သို့မဟုတ် ကန့်သတ်ချက်ပြည့်သည်အထိ ဆက်တိုက်နှိပ်ခြင်းများဖြင့် မအောင်မြင်မှုဖြစ်အောင် ဖန်တီးရန် မလိုအပ်ပါ။ ဆက်သွယ်ရေးပတ်ဝန်းကျင် သို့မဟုတ် အသုံးပြုမှုကန့်သတ်ချက်များတွင်လည်း တူညီသော မအောင်မြင်မှုလမ်းကြောင်းသို့ ရောက်ရှိပါမည်။"
+    },
+    {
+      "source": "一覧の0件と通信失敗は別です。0件は正しい応答の空リスト、失敗は通信やJSON変換が完了しなかった場合です。完成コードはHTTPの状態コード別に説明を出し分けていません。長いToastは画面に収まりきらないことがあります。",
+      "translation": "စာရင်း 0 ခုဖြစ်ခြင်းနှင့် ဆက်သွယ်မှု မအောင်မြင်ခြင်းသည် မတူညီပါ။ 0 ခုဖြစ်ခြင်းသည် မှန်ကန်သော တုံ့ပြန်မှုဖြစ်သည့် အလွတ်စာရင်းဖြစ်ပြီး၊ မအောင်မြင်ခြင်းသည် ဆက်သွယ်မှု သို့မဟုတ် JSON အသွင်ပြောင်းခြင်း မပြီးဆုံးသည့် အခြေအနေဖြစ်ပါသည်။ ပြီးစီးပြီးသော code သည် HTTP ၏ အခြေအနေ code အလိုက် ရှင်းလင်းချက်များကို ခွဲခြားပြသထားခြင်း မရှိပါ။ ရှည်လျားသော Toast သည် မျက်နှာပြင်တွင် အပြည့်အဝ မဆံ့သည်များ ရှိနိုင်ပါသည်။"
+    },
+    {
+      "source": "Kotlinの <code>if</code> は値を返せるので、Javaの三項演算子の位置に書けます。<code>!</code> で検索ボタンの有効／無効を通信中と逆にしています。",
+      "translation": "Kotlin ၏ <code>if</code> သည် တန်ဖိုးကို ပြန်ပေးနိုင်သောကြောင့်၊ Java ၏ ternary operator နေရာတွင် ရေးသားနိုင်ပါသည်။ <code>!</code> ဖြင့် ရှာဖွေရေးခလုတ်၏ အသုံးပြုနိုင်မှု/အသုံးပြု၍မရမှုကို ဆက်သွယ်နေချိန်နှင့် ဆန့်ကျင်ဘက်ဖြစ်အောင် လုပ်ထားပါသည်။"
+    },
+    {
+      "source": "空欄の案内、0件の空一覧、失敗の空一覧を確認し、通信後は検索ボタンが使える。",
+      "translation": "အလွတ်ဖြစ်နေကြောင်း အသိပေးချက်၊ 0 ခုဖြစ်နေသော အလွတ်စာရင်း၊ မအောင်မြင်သော အလွတ်စာရင်းတို့ကို စစ်ဆေးပြီး၊ ဆက်သွယ်မှုပြီးနောက် ရှာဖွေရေးခလုတ်ကို အသုံးပြုနိုင်ပါသည်။"
+    },
+    {
+      "source": "STEP 16 · 13コマ目 · 目安 15分",
+      "translation": "အဆင့် 16 · 13 ကြိမ်မြောက် အတန်းချိန် · ခန့်မှန်း 15 မိနစ်"
+    },
+    {
+      "source": "並び順と4つのファイルを照合する",
+      "translation": "အစီအစဉ်နှင့် ဖိုင် 4 ခုကို တိုက်စစ်ရန်"
+    },
+    {
+      "source": "Spinnerで「スター数」を選んだだけでは通信しません。先生の合図で検索を1回押し、受け取った行のスター数を上から見ます。APIの既定の降順で、大きい値から並びます。同数の行の順序は固定しません。「フォーク数」も数の降順、「更新日時」は新しい順です。更新日時自体はこの画面には出ません。",
+      "translation": "Spinner တွင် \"star အရေအတွက်\" ကို ရွေးချယ်ရုံဖြင့် ဆက်သွယ်မှု မလုပ်ပါ။ ဆရာ၏ အချက်ပြမှုဖြင့် ရှာဖွေရေးကို 1 ကြိမ်နှိပ်ပြီး၊ လက်ခံရရှိသော စာကြောင်း၏ star အရေအတွက်ကို အပေါ်မှစ၍ ကြည့်ပါ။ API ၏ မူလအတိုင်း အကြီးမှအသေးသို့စီခြင်းဖြစ်ပြီး၊ ကြီးသောတန်ဖိုးမှစ၍ စီစဉ်ပါမည်။ အရေအတွက်တူညီသော စာကြောင်းများ၏ အစီအစဉ်ကို ပုံသေသတ်မှတ်မထားပါ။ \"fork အရေအတွက်\" သည်လည်း အရေအတွက် အကြီးမှအသေးသို့စီပြီး၊ \"ပြင်ဆင်ထားသည့် ရက်စွဲနှင့်အချိန်\" သည် အသစ်မှအဟောင်းသို့စီပါသည်။ ပြင်ဆင်ထားသည့် ရက်စွဲနှင့်အချိန် ကိုယ်တိုင်သည် ဤမျက်နှာပြင်တွင် ပေါ်မည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "画面のラベル",
+      "translation": "မျက်နှာပြင်၏ လေဘယ်"
+    },
+    {
+      "source": "APIに渡す値",
+      "translation": "API သို့ ပေးပို့မည့် တန်ဖိုး"
+    },
+    {
+      "source": "ベストマッチ",
+      "translation": "အကောင်းဆုံး ကိုက်ညီမှု"
+    },
+    {
+      "source": "空文字。sortパラメータを送らない。",
+      "translation": "string အလွတ်။ sort parameter ကို မပို့ပါ။"
+    },
+    {
+      "source": "スター数",
+      "translation": "Star အရေအတွက်"
+    },
+    {
+      "source": "フォーク数",
+      "translation": "Fork အရေအတွက်"
+    },
+    {
+      "source": "更新日時",
+      "translation": "ပြင်ဆင်ထားသည့် ရက်စွဲနှင့်အချိန်"
+    },
+    {
+      "source": "パッケージに <code>MainActivity.kt</code>・<code>GithubSearchResponse.kt</code>・<code>RepositoryAdapter.kt</code>・<code>GithubApi.kt</code> があることを確認します。完成全文は、この教科書内のSTEP 07・09・13・14にあります。XMLはSTEP 03・08、設定はSTEP 02です。",
+      "translation": "package တွင် <code>MainActivity.kt</code>၊ <code>GithubSearchResponse.kt</code>၊ <code>RepositoryAdapter.kt</code>၊ <code>GithubApi.kt</code> တို့ ရှိကြောင်း စစ်ဆေးပါ။ ပြီးစီးပြီးသော အပြည့်အစုံကို ဤသင်ခန်းစာစာအုပ်ရှိ STEP 07၊ 09၊ 13၊ 14 တွင် တွေ့နိုင်ပါသည်။ XML သည် STEP 03၊ 08 ဖြစ်ပြီး ဆက်တင်သည် STEP 02 ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "画面下に隠れた行は一覧を上へゆっくりスワイプして確認します。行をタップしても画面は変わりません。リポジトリ名をブラウザで開く機能はこの完成版にはありません。",
+      "translation": "မျက်နှာပြင်အောက်တွင် ဖုံးကွယ်နေသော အတန်းများကို စာရင်းအား အပေါ်သို့ ဖြည်းညင်းစွာ swipe လုပ်၍ စစ်ဆေးပါ။ အတန်းကို နှိပ်လျှင်လည်း မျက်နှာပြင် ပြောင်းလဲမည် မဟုတ်ပါ။ Repository အမည်ကို browser ဖြင့် ဖွင့်သည့် လုပ်ဆောင်ချက်သည် ဤပြီးစီးပြီးသော ဗားရှင်းတွင် မပါဝင်ပါ။"
+    },
+    {
+      "source": "Adapterで使うのは内容の <code>==</code>。Kotlinの参照比較は <code>===</code> です。画面の各行はAPIが返したリストから作り、端末内で並べ替え直してはいません。",
+      "translation": "Adapter တွင် အသုံးပြုမည်မှာ အကြောင်းအရာများအတွက် <code>==</code> ဖြစ်ပါသည်။ Kotlin ၏ reference နှိုင်းယှဉ်မှုမှာ <code>===</code> ဖြစ်ပါသည်။ မျက်နှာပြင်ရှိ အတန်းတစ်ခုစီကို API မှ ပြန်ပေးသော စာရင်းမှ ဖန်တီးထားပြီး၊ စက်အတွင်း၌ ပြန်လည်စီစဉ်ထားခြင်း မရှိပါ။"
+    },
+    {
+      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
+      "translation": "Star အရေအတွက်အလိုက် တန်ဖိုးများကို ကြီးစဉ်ငယ်လိုက် စီထားပြီး၊ Kotlin ဖိုင် 4 ခုနှင့် XML 2 ခုကို သိမ်းဆည်းထားပါသည်။"
+    },
+    {
+      "source": "STEP 17 · 13コマ目 · 目安 12分",
+      "translation": "STEP 17 · 13 ကြိမ်မြောက် အတန်းချိန် · ခန့်မှန်း 12 မိနစ်"
+    },
+    {
+      "source": "アレンジできる場所を1つ試す",
+      "translation": "စိတ်ကြိုက်ပြောင်းလဲနိုင်သော နေရာ 1 ခုကို စမ်းသပ်ရန်"
+    },
+    {
+      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "အောက်ပါတို့မှ 1 ခုကို ရွေးချယ်ပြီး သိမ်းဆည်းကာ Run လုပ်ပါ။ စာသားနှင့် ကွက်လပ် ပြောင်းလဲမှုများကို ဆက်သွယ်မှု မပြုလုပ်မီ မျက်နှာပြင် သို့မဟုတ် ပုံသေဒေတာဖြင့်လည်း စစ်ဆေးနိုင်ပါသည်။ ဆက်သွယ်ရန် လိုအပ်သော ပြောင်းလဲမှုများအတွက် ဆရာ့ထံမှ အချက်ပြမှုကို စောင့်ပါ။"
+    },
+    {
       "source": "変える場所",
       "translation": "ပြောင်းလဲမည့်နေရာ"
+    },
+    {
+      "source": "変え方の例",
+      "translation": "ပြောင်းလဲနည်း နမူနာ"
+    },
+    {
+      "source": "画面で確かめる効果",
+      "translation": "မျက်နှာပြင်တွင် စစ်ဆေးနိုင်သော အကျိုးသက်ရောက်မှု"
+    },
+    {
+      "source": "<code>activity_main.xml</code> のボタンの <code>android:text</code>",
+      "translation": "<code>activity_main.xml</code> ရှိ ခလုတ်၏ <code>android:text</code>"
+    },
+    {
+      "source": "「検索」を「リポジトリ検索」へ",
+      "translation": "「検索」 မှ 「リポジトリ検索」 သို့"
+    },
+    {
+      "source": "ボタンの文字が変わる",
+      "translation": "ခလုတ်၏ စာသား ပြောင်းလဲသွားပါသည်။"
+    },
+    {
+      "source": "<code>list_item.xml</code> の <code>android:padding</code>",
+      "translation": "<code>list_item.xml</code> ၏ <code>android:padding</code>"
+    },
+    {
+      "source": "<code>4dp</code> を <code>12dp</code> へ",
+      "translation": "<code>4dp</code> မှ <code>12dp</code> သို့"
+    },
+    {
+      "source": "1行の内側の余白が広がる",
+      "translation": "1 တန်း၏ အတွင်းပိုင်း ကွက်လပ် ကျယ်လာပါသည်။"
+    },
+    {
+      "source": "<code>RepositoryAdapter.kt</code> の <code>\"スター数: …\"</code>",
+      "translation": "<code>RepositoryAdapter.kt</code> ၏ <code>\"スター数: …\"</code>"
+    },
+    {
+      "source": "「スター数:」を「Star:」へ",
+      "translation": "「スター数:」 မှ 「Star:」 သို့"
+    },
+    {
+      "source": "値を残したまま見出しが変わる",
+      "translation": "တန်ဖိုးကို ချန်ထားပြီး ခေါင်းစဉ် ပြောင်းလဲသွားပါသည်။"
+    },
+    {
+      "source": "<code>GithubApi.kt</code> の <code>PER_PAGE</code>",
+      "translation": "<code>GithubApi.kt</code> ၏ <code>PER_PAGE</code>"
+    },
+    {
+      "source": "<code>30</code> を <code>10</code> へ",
+      "translation": "<code>30</code> မှ <code>10</code> သို့"
+    },
+    {
+      "source": "十分な結果がある検索でも1回の一覧は最大10件になる",
+      "translation": "လုံလောက်သော ရလဒ်များရှိသည့် ရှာဖွေမှုဖြစ်လျှင်တောင်မှ 1 ကြိမ်ပြသသည့် စာရင်းမှာ အများဆုံး 10 ခု ဖြစ်သွားပါသည်။"
+    },
+    {
+      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "လေ့ကျင့်ပြီးနောက် ပြောင်းလဲမှုမပြုမီ အခြေအနေသို့ ပြန်ထားပြီး သိမ်းဆည်းပါ။ တင်သွင်းရန် ချန်ထားမည့် စိတ်ကြိုက်ပြောင်းလဲမှုများကို ကိုယ်တိုင် ဆုံးဖြတ်နိုင်ပါသည်။ id၊ JSON ၏ SerialName၊ sort ၏ API အတွက် တန်ဖိုးများကို ထိုအတိုင်းထားပါ။ <code>PER_PAGE</code> သည် 1–100 အကြားရှိသော်လည်း၊ ယခုတစ်ကြိမ်တွင် 30 နှင့် 10 ဖြင့် စမ်းသပ်ပါမည်။"
+    },
+    {
+      "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
+      "translation": "Kotlin ၏ ကိန်းသေများမှာ <code>const val</code> ဖြစ်ပြီး၊ Java တွင် <code>static final</code> ဖြစ်ပါသည်။ ပြောင်းလဲလိုက်သော တန်ဖိုးနှင့် စာရင်း၏ အရေအတွက်မှာ ကိုက်ညီမှုရှိပါသည်။ ရှာတွေ့သော စုစုပေါင်းအရေအတွက်ကို 10 သို့ ပြောင်းလဲသည့် ဆက်တင် မဟုတ်ပါ။"
+    },
+    {
+      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
+      "translation": "ရွေးချယ်ထားသော ပြောင်းလဲမှု၏ အကျိုးသက်ရောက်မှုသည် မျက်နှာပြင်တွင် ပေါ်လာပြီး၊ လေ့ကျင့်ပြီးနောက် မူလတန်ဖိုးနှင့် အခြေအနေသို့ ပြန်လည်ထားရှိကာ သိမ်းဆည်းနိုင်ပါသည်။"
+    },
+    {
+      "source": "STEP 18 · 13コマ目 · 目安 3分",
+      "translation": "STEP 18 · 13 ကြိမ်မြောက် အတန်းချိန် · ခန့်မှန်း 3 မိနစ်"
+    },
+    {
+      "source": "13コマ目の完成状態を確認する",
+      "translation": "13 ကြိမ်မြောက် အတန်းချိန်၏ ပြီးစီးမှုအခြေအနေကို စစ်ဆေးရန်"
+    },
+    {
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ ရှာဖွေပြီး ထွက်လာသော အတန်း၏ အချက် 4 ချက်၊ ပျောက်သွားသော ဆက်သွယ်နေသည့် အမှတ်အသား၊ နှိပ်၍ရသော ရှာဖွေရေးခလုတ်တို့ကို စစ်ဆေးပါ။ <strong>File → Save All</strong>။ နောက်တစ်ကြိမ်ဖွင့်မည့် မိမိ၏ သိမ်းဆည်းရာနေရာနှင့် Kotlin ဖိုင် 4 ခုသည် Project tool window တွင် မြင်နေရကြောင်း သေချာအောင် စစ်ဆေးပါ။"
+    },
+    {
+      "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
+      "translation": "12 ကြိမ်မြောက် အတန်းချိန်နှင့် တူညီသော Adapter သို့၊ ယခုတစ်ကြိမ်တွင် ဆက်သွယ်မှုရလဒ် စာရင်းကို ပေးပို့ထားပါသည်။ ဒေတာရယူခြင်းနှင့် 1 တန်းတွင် ပြသခြင်း အလုပ်ကို သီးခြားဖိုင်တစ်ခုစီ ခွဲထားသော ပုံစံဖြစ်ပါသည်။"
+    },
+    {
+      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
+      "translation": "ရှာဖွေမှုရလဒ်၏ အချက် 4 ချက်ကို ပြသထားပြီး၊ ဆက်သွယ်နေသည့် အမှတ်အသား ပျောက်သွားကာ source နှင့် XML ကို သိမ်းဆည်းထားပါသည်။"
     },
     {
       "source": "見えている状態",
@@ -103,8 +1043,116 @@
       "translation": "Gradle sync မအောင်မြင်ပါ"
     },
     {
+      "source": "STEP 02の3つのファイルが正しい場所にあるか、Panda 2かを確認します。最初の原因行を先生に見せます。",
+      "translation": "STEP 02 ၏ ဖိုင် 3 ခုသည် မှန်ကန်သော နေရာတွင် ရှိမရှိ သို့မဟုတ် Panda 2 ဖြစ်မဖြစ် စစ်ဆေးပါ။ ပထမဆုံး အကြောင်းရင်းဖြစ်သော အတန်းကို ဆရာ့ကို ပြပါ။"
+    },
+    {
+      "source": "Serializableが赤い",
+      "translation": "Serializable အနီရောင်ဖြစ်နေပါသည်"
+    },
+    {
+      "source": "STEP 02のserializationプラグインと同期、STEP 07のimportを確認します。java.io.Serializableは使いません。",
+      "translation": "STEP 02 ၏ serialization plugin နှင့် sync ပြုလုပ်ခြင်း၊ STEP 07 ၏ import ကို စစ်ဆေးပါ။ java.io.Serializable ကို အသုံးမပြုပါ။"
+    },
+    {
+      "source": "R.idが赤い／起動直後に閉じる",
+      "translation": "R.id အနီရောင်ဖြစ်နေပါသည် / ဖွင့်ပြီးပြီးချင်း ပိတ်သွားပါသည်"
+    },
+    {
+      "source": "2つのXMLのidと型、setContentViewの後での取得を照合します。行のViewはitemViewから探します。",
+      "translation": "XML 2 ခု၏ id နှင့် type၊ setContentView ပြီးနောက်တွင် ရယူခြင်းကို တိုက်စစ်ပါ။ အတန်း၏ View ကို itemView မှတစ်ဆင့် ရှာပါ။"
+    },
+    {
+      "source": "一覧が空",
+      "translation": "စာရင်းမှာ အလွတ်ဖြစ်နေပါသည်"
+    },
+    {
+      "source": "STEP 09までは正常。STEP 10でlayoutManager・adapter・submitListがそろっているか見ます。STEP 14以降は検索後に結果が出ます。",
+      "translation": "STEP 09 အထိ ပုံမှန်ဖြစ်ပါသည်။ STEP 10 တွင် layoutManager၊ adapter၊ submitList တို့ ပြည့်စုံမှုရှိမရှိကို ကြည့်ပါ။ STEP 14 နောက်ပိုင်းတွင် ရှာဖွေပြီးနောက် ရလဒ် ထွက်ပေါ်လာမည်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "検索しても入力のToastだけ",
+      "translation": "ရှာဖွေလိုက်သော်လည်း ရိုက်ထည့်ထားသောစာ၏ Toast သာပြနေပါသည်"
+    },
+    {
+      "source": "STEP 04・10の途中コードです。STEP 14の完成コードへ進みます。",
+      "translation": "STEP 04 နှင့် 10 ၏ ကြားဖြတ်ကုဒ်ဖြစ်ပါသည်။ STEP 14 ၏ အပြည့်အစုံကုဒ်သို့ ဆက်သွားပါ။"
+    },
+    {
+      "source": "0件という案内",
+      "translation": "0 ခုဟူသော အကြောင်းကြားစာပြနေပါသည်"
+    },
+    {
+      "source": "通信は成功しています。入力語を確認し、次の検索は先生の合図を待ちます。",
+      "translation": "ချိတ်ဆက်မှု အောင်မြင်ပါသည်။ ရိုက်ထည့်ထားသောစကားလုံးကို စစ်ဆေးပြီး နောက်ထပ်ရှာဖွေမှုအတွက် ဆရာ၏အချက်ပြမှုကို စောင့်ပါ။"
+    },
+    {
+      "source": "検索に失敗した",
+      "translation": "ရှာဖွေမှု မအောင်မြင်ဖြစ်နေပါသည်"
+    },
+    {
+      "source": "まず連打をやめ、入力条件と回線・利用制限を先生と確認します。何度もRunすることでは制限は解除されません。",
+      "translation": "ရှေးဦးစွာ ဆက်တိုက်နှိပ်ခြင်းကို ရပ်ပြီး၊ ရိုက်ထည့်ရန်သတ်မှတ်ချက်များနှင့် အင်တာနက်လိုင်း၊ အသုံးပြုမှုကန့်သတ်ချက်များကို ဆရာနှင့် စစ်ဆေးပါ။ အကြိမ်ကြိမ် run လုပ်ရုံဖြင့် ကန့်သတ်ချက်များကို ပယ်ဖျက်ပေးမည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "通信中の印が見えない",
+      "translation": "ချိတ်ဆက်နေသည့် အမှတ်အသားကို မတွေ့ရပါသည်"
+    },
+    {
+      "source": "速い応答では一瞬です。わざと連打せず、STEP 14のsetLoadingと呼び出し順を照合します。",
+      "translation": "လျင်မြန်သော တုံ့ပြန်မှုဖြစ်ပါက တစ်ခဏသာဖြစ်ပါသည်။ တမင်သက်သက် ဆက်တိုက်မနှိပ်ဘဲ STEP 14 ၏ setLoading နှင့် ခေါ်ယူသည့်အစီအစဉ်ကို တိုက်စစ်ပါ။"
+    },
+    {
+      "source": "見本と順位・件数が違う",
+      "translation": "ပြီးစီးပြီးသော project (နမူနာ) နှင့် အစီအစဉ်၊ အရေအတွက် ကွာခြားနေပါသည်"
+    },
+    {
+      "source": "GitHubのデータは変わります。4項目が表示されるかで確認します。最大30件で、全件取得ではありません。",
+      "translation": "GitHub ၏ ဒေတာများသည် ပြောင်းလဲနိုင်ပါသည်။ အချက်အလက် 4 ခု ပြသခြင်း ရှိမရှိဖြင့် စစ်ဆေးပါ။ အများဆုံး 30 ခုသာဖြစ်ပြီး အားလုံးကို ရယူထားခြင်း မဟုတ်ပါ။"
+    },
+    {
+      "source": "途中から再開したい",
+      "translation": "လမ်းခုလတ်မှ ပြန်လည်စတင်လိုသည်"
+    },
+    {
+      "source": "最後に画面が一致したSTEPの次から進みます。11コマ目末はSTEP 04、12コマ目末はSTEP 10の全文で照合できます。",
+      "translation": "နောက်ဆုံး မျက်နှာပြင် တူညီခဲ့သော STEP ၏ နောက်တစ်ဆင့်မှ ဆက်သွားပါ။ 11 ကြိမ်မြောက် အတန်းချိန်အဆုံးတွင် STEP 04၊ 12 ကြိမ်မြောက် အတန်းချိန်အဆုံးတွင် STEP 10 ၏ အပြည့်အစုံဖြင့် တိုက်စစ်နိုင်ပါသည်။"
+    },
+    {
+      "source": "配布ZIPを展開した中の <code>samples/A03GithubSearch</code> をAndroid Studioの <strong>Open</strong> で開きます。<strong>This Window</strong> を選ぶ前に保存先を確認し、自分の <code>Documents/Kotlin/A03GithubSearch</code> と取り違えないようにします。見本を閉じたら自分の保存先を開き直します。",
+      "translation": "ဖြန့်ဝေထားသော ZIP ကို ဖြည်လိုက်သည့်အထဲမှ <code>samples/A03GithubSearch</code> ကို Android Studio ၏ <strong>Open</strong> ဖြင့် ဖွင့်ပါ။ <strong>This Window</strong> ကို မရွေးချယ်မီ သိမ်းဆည်းမည့်နေရာကို စစ်ဆေးပြီး မိမိ၏ <code>Documents/Kotlin/A03GithubSearch</code> နှင့် မမှားစေရန် သတိပြုပါ။ ပြီးစီးပြီးသော project (နမူနာ) ကို ပိတ်ပြီးနောက် မိမိ၏ သိမ်းဆည်းထားသောနေရာကို ပြန်ဖွင့်ပါ။"
+    },
+    {
+      "source": "教科書だけを受け取った場合は <a1>A03GithubSearch.zip</a1> を保存して展開し、中の <code>A03GithubSearch</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
+      "translation": "သင်ခန်းစာစာအုပ်ကိုသာ လက်ခံရရှိပါက <a1>A03GithubSearch.zip</a1> ကို သိမ်းဆည်း၍ ဖြည်ပြီးနောက် အတွင်းရှိ <code>A03GithubSearch</code> ဖိုင်တွဲကို Open လုပ်ပါ။ ZIP ကိုယ်တိုင် သို့မဟုတ် အတွင်းရှိ app ကို မရွေးချယ်ပါနှင့်။"
+    },
+    {
+      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。通信には回線が必要で、検索回数の制限も同じです。見本はコードと動作を比べる資料です。",
+      "translation": "sync လုပ်ပြီးနောက် run ဆက်တင် <strong>app</strong> နှင့် <code>jec_25cm_kotlin_Pixel 9a</code> ကို ရွေးချယ်၍ run လုပ်ပါ။ ချိတ်ဆက်မှုအတွက် အင်တာနက်လိုင်း လိုအပ်ပြီး ရှာဖွေနိုင်သည့်အကြိမ်အရေအတွက် ကန့်သတ်ချက်လည်း အတူတူပင်ဖြစ်ပါသည်။ ပြီးစီးပြီးသော project (နမူနာ) သည် ကုဒ်နှင့် အလုပ်လုပ်ပုံကို နှိုင်းယှဉ်ကြည့်ရန်အတွက် အထောက်အထားဖြစ်ပါသည်။"
+    },
+    {
       "source": "公式資料",
       "translation": "တရားဝင်လမ်းညွှန်များ"
+    },
+    {
+      "source": "GitHub：リポジトリ検索APIと検索の制限",
+      "translation": "GitHub: Repository ရှာဖွေမှု API နှင့် ရှာဖွေမှု ကန့်သတ်ချက်"
+    },
+    {
+      "source": "GitHub：認証なしのIP単位の制限",
+      "translation": "GitHub: Authentication မရှိဘဲ IP အလိုက် ကန့်သတ်ချက်"
+    },
+    {
+      "source": "Android：RecyclerViewの役割分担",
+      "translation": "Android: RecyclerView ၏ တာဝန်ခွဲဝေမှု"
+    },
+    {
+      "source": "Ktor：JSON変換",
+      "translation": "Ktor: JSON ပြောင်းလဲခြင်း"
+    },
+    {
+      "source": "確認日：2026年9月24日 / Android Studio Panda 2 / A03GithubSearch",
+      "translation": "စစ်ဆေးသည့်ရက်: 2026 စက်တင်ဘာ 24 / Android Studio Panda 2 / A03GithubSearch"
     }
   ]
 }
