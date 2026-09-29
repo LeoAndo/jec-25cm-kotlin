@@ -664,7 +664,7 @@
     },
     {
       "source": "エミュレータのホームへ戻り、アプリ一覧から <strong>Files</strong> を開きます。左上メニューの端末内ストレージ（指定AVDでは <code>sdk_gphone16k_arm64</code> と表示）から <strong>Pictures → FunnyCamera</strong> を開き、今の日時の <code>.jpg</code> を選びます。Filesで端末が出ていなければ、右上メニューの内部ストレージ表示を確認します。写真アプリを使う場合も、端末内のFunnyCameraフォルダを開きます。画像の上下に操作バーが重なる場合は、画像を1回タップして非表示にします。全画面の案内が出たら <strong>Got it</strong> を押します。",
-      "translation": "返回模擬器的主畫面，從應用程式清單中開啟 <strong>Files</strong>。從左上角選單的裝置內部儲存空間（在指定的 AVD 上顯示為 <code>sdk_gphone16k_arm64</code>）中開啟 <strong>Pictures → FunnyCamera</strong>，並選擇目前日期的 <code>.jpg</code>。如果 Files 中沒有顯示裝置，請確認右上角選單的內部儲存空間顯示設定。使用相片應用程式時，也請開啟裝置內的 FunnyCamera 資料夾。如果圖片上下覆蓋了操作列，請輕觸一次圖片以隱藏操作列。如果出現全螢幕提示，請按 <strong>Got it</strong>。"
+      "translation": "返回模擬器的主畫面，從應用程式清單中開啟 <strong>Files</strong>。從左上角選單的裝置內部儲存空間（在指定的 AVD 上顯示為 <code>sdk_gphone16k_arm64</code>）中開啟 <strong>Pictures → FunnyCamera</strong>，並選擇目前日期時間的 <code>.jpg</code>。如果 Files 中沒有顯示裝置，請確認右上角選單的內部儲存空間顯示設定。使用相片應用程式時，也請開啟裝置內的 FunnyCamera 資料夾。如果圖片上下覆蓋了操作列，請輕觸一次圖片以隱藏操作列。如果出現全螢幕提示，請按 <strong>Got it</strong>。"
     },
     {
       "source": "保存画像にはボタンに隠れていた金魚も写ります。ボタン・Snackbar・ステータスバー・画面下のナビゲーションバーは入りません。PreviewViewの映像と金魚だけを描いた結果です。",
