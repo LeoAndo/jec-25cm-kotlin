@@ -724,7 +724,7 @@
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
-      "translation": "就像 Swift 的 <code>async</code> 函式一樣，依序寫下等待結果的處理。Kotlin 會在宣告加上 <code>suspend</code>，呼叫端則不寫 <code>await</code>。單靠 <code>suspend</code> 也不會變成另一個執行緒，這裏是讓 Ktor 的網絡連線在等待時能夠中斷執行。"
+      "translation": "就像 Swift 的 <code>async</code> 函式一樣，依序寫下等待結果的處理。Kotlin 會在宣告加上 <code>suspend</code>，呼叫端則不寫 <code>await</code>。單靠 <code>suspend</code> 也不會變成另一個執行緒，這裏是讓 Ktor 的網絡連線在等待期間能夠暫停執行。"
     },
     {
       "source": "GithubApi.ktのimportとbodyに赤い波線がなく、Runしてもまだ固定の2行が出る。",
