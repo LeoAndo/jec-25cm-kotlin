@@ -35,6 +35,10 @@
       "translation": "Энд зогсоод шалгана уу"
     },
     {
+      "source": "役割",
+      "translation": "Үүрэг"
+    },
+    {
       "source": "項目",
       "translation": "Талбар"
     },
@@ -53,6 +57,10 @@
     {
       "source": "変える場所",
       "translation": "Өөрчлөх газар"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "Дэлгэц дээр шалгах зүйл"
     },
     {
       "source": "使うもの",
