@@ -27,8 +27,8 @@
       "translation": "الاستعداد<br>لبدء الحصص"
     },
     {
-      "source": "教材を受け取ってから、はじめてのKotlinのプログラムが動くまで。上から順に1回だけ行います。まずブラウザだけで動かし、そのあとIntelliJ IDEAに移ります。2回目からは、教科書を開くところから始められます。",
-      "translation": "من استلام المواد التعليمية حتى تشغيل أول برنامج Kotlin لك. نفّذ الخطوات بالترتيب من الأعلى إلى الأسفل مرة واحدة فقط. شغّل البرنامج أولا في المتصفح وحده، ثم انتقل إلى IntelliJ IDEA. ابتداء من المرة الثانية، يمكنك أن تبدأ بفتح الكتاب المدرسي."
+      "source": "教材を受け取ってから、授業を始めるまでの準備です。上から順に1回だけ行います。教材を「書類」に置き、使うアプリが入っていることを確かめます。2回目からは、教科書を開くところから始められます。",
+      "translation": "هذا هو التحضير من استلام المواد التعليمية حتى بدء الدرس. نفّذ ذلك مرة واحدة فقط بالترتيب من الأعلى. ضع المواد في 「書類」 (المستندات)، وتأكد من أن التطبيقات التي ستستخدمها مثبّتة. ابتداء من المرة الثانية، يمكنك أن تبدأ بفتح الكتاب المدرسي مباشرة."
     },
     {
       "source": "この資料の流れ",
@@ -43,40 +43,28 @@
       "translation": "② التحقق من الأدوات المستخدمة"
     },
     {
-      "source": "③ ブラウザで動かす",
-      "translation": "③ التشغيل في المتصفح"
+      "source": "③ 後半の準備を知る",
+      "translation": "③ التعرّف على تحضيرات النصف الثاني"
     },
     {
-      "source": "④ プロジェクトを作る",
-      "translation": "④ إنشاء مشروع"
+      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。うまくいかないときは、いちばん下の「4. うまくいかないとき」を見てください。",
+      "translation": "الأرقام هي نفسها أرقام العناوين أدناه. في ②، تتحقق من أن التطبيقات التي ستستخدمها مثبّتة على جهاز Mac. وإذا لم يسر شيء كما ينبغي، فانظر «4. حل المشكلات» في أسفل الصفحة."
     },
     {
-      "source": "⑤ 実行して結果を読む",
-      "translation": "⑤ التشغيل وقراءة النتيجة"
+      "source": "プロジェクトの作成と実行は教科書で行います",
+      "translation": "إنشاء المشاريع وتشغيلها يكون في الكتاب المدرسي"
     },
     {
-      "source": "⑥ 後半の準備を知る",
-      "translation": "⑥ التعرّف على تحضيرات النصف الثاني"
-    },
-    {
-      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。③はブラウザだけで終わります。④で1行だけTerminalを使い、そのあとはIntelliJ IDEAの画面で操作します。うまくいかないときは、いちばん下の「7. うまくいかないとき」を見てください。",
-      "translation": "الأرقام هي نفسها أرقام العناوين أدناه. في ②، تتحقق من أن التطبيقات التي ستستخدمها مثبّتة على جهاز Mac. وينتهي ③ في المتصفح وحده. في ④، تستخدم Terminal لسطر واحد فقط، ثم تعمل بعد ذلك في شاشة IntelliJ IDEA. إذا لم يسر شيء كما ينبغي، فانظر «7. حل المشكلات» في آخر الصفحة."
-    },
-    {
-      "source": "JavaやSwiftとの違いだけを書いています",
-      "translation": "لا نشرح إلا الاختلافات عن Java وSwift"
-    },
-    {
-      "source": "この資料は、エディタの使い方そのものは説明しません。書いてあるのは、<strong>Kotlinのプロジェクトの作り方</strong>と、<strong>IntelliJ IDEAでの実行のしかた</strong>だけです。JavaやSwiftで同じことをやってきた経験は、そのまま使えます。",
-      "translation": "لا يشرح هذا الدليل طريقة استخدام المحرر نفسه. كل ما يتناوله هو <strong>طريقة إنشاء مشروع Kotlin</strong> و<strong>طريقة التشغيل في IntelliJ IDEA</strong>. ويمكنك الاستفادة مباشرة من خبرتك في فعل الأشياء نفسها بـ Java وSwift."
+      "source": "Kotlinのプロジェクトの作り方や、コードの書き方・実行のしかたは、第1単元（K01：HelloKotlin）の教科書で順を追って説明します。この資料では、教材の配置とアプリの確認だけを行います。",
+      "translation": "يتم شرح طريقة إنشاء مشروع Kotlin وطريقة كتابة الشيفرة البرمجية وتشغيلها خطوة بخطوة في الكتاب المدرسي للوحدة الأولى (K01: HelloKotlin). في هذه الوثيقة، نقتصر على ترتيب المواد التعليمية والتحقق من التطبيقات فقط."
     },
     {
       "source": "この準備が終わると",
       "translation": "بعد إتمام هذا التحضير"
     },
     {
-      "source": "ブラウザとIntelliJ IDEAの両方で、Kotlinのプログラムを実行し、その結果を読めるようになります。ここまでできれば、第1単元の教科書を開いて始められます。",
-      "translation": "ستتمكن من تشغيل برامج Kotlin وقراءة نتائجها في كل من المتصفح وIntelliJ IDEA. إذا وصلت إلى هنا، يمكنك أن تفتح الكتاب المدرسي للوحدة الأولى وتبدأ."
+      "source": "教材が手元にそろい、授業で使うアプリが開ける状態になります。ここまでできれば、第1単元の教科書を開いて始められます。",
+      "translation": "تكون المواد التعليمية جاهزة بين يديك وتكون التطبيقات المستخدمة في الدرس جاهزة للفتح. إذا وصلت إلى هذه النقطة، يمكنك فتح الكتاب المدرسي للوحدة الأولى والبدء."
     },
     {
       "source": "1. 教材を受け取り、「書類」に置く",
@@ -331,328 +319,8 @@
       "translation": "إذا اختلف الإصدار، فقد تختلف أسماء الأزرار أو ترتيبها قليلا عما في الكتاب المدرسي. إذا بحثت ولم تجد ما تريد، فلا تغيّر الإعدادات ولا تعد التثبيت بنفسك، بل اترك الشاشة كما هي واعرضها على المعلم."
     },
     {
-      "source": "3. ブラウザだけで動かす（Kotlin Playground）",
-      "translation": "3. التشغيل في المتصفح وحده (Kotlin Playground)"
-    },
-    {
-      "source": "<strong>Kotlin Playground</strong> は、JetBrainsが公開しているWebサービスです。アプリの用意も、プロジェクトの作成もせずに、ブラウザのページ上で <code>fun main()</code> をそのまま実行できます。最初の1回は、ここでKotlinのコードが動くことを確かめます。",
-      "translation": "<strong>Kotlin Playground</strong> خدمة ويب تقدمها JetBrains. يمكنك فيها تشغيل <code>fun main()</code> مباشرة في صفحة المتصفح، دون تجهيز أي تطبيق أو إنشاء مشروع. في المرة الأولى، تحقق هنا من أن شيفرة Kotlin تعمل."
-    },
-    {
-      "source": "ブラウザで <a1>https://play.kotlinlang.org/</a1> を開きます。エディタと、その上に並んだボタンが表示されます。",
-      "translation": "افتح <a1>https://play.kotlinlang.org</a1> في المتصفح. سيظهر المحرر، وفوقه صف من الأزرار."
-    },
-    {
-      "source": "エディタに最初から入っているコードをすべて消し、次の3行を書きます。",
-      "translation": "احذف كل الشيفرة الموجودة مسبقا في المحرر، ثم اكتب الأسطر الثلاثة التالية."
-    },
-    {
-      "source": "Kotlin Playground · エディタ",
-      "translation": "Kotlin Playground · المحرر"
-    },
-    {
-      "source": "右上の <strong>Run</strong> ボタン（▶）をクリックします。",
-      "translation": "انقر زر <strong>Run</strong> (▶) في أعلى اليمين."
-    },
-    {
-      "source": "ページの下に<strong>実行結果のウィンドウ</strong>が自動で開き、出力が表示されます。",
-      "translation": "تفتح <strong>نافذة المخرجات</strong> تلقائيا في أسفل الصفحة، ويظهر فيها الناتج."
-    },
-    {
-      "source": "実行結果のウィンドウに出るもの",
-      "translation": "ما يظهر في نافذة المخرجات"
-    },
-    {
-      "source": "実行結果のウィンドウに <code>Hello, Kotlin</code> と出ている。",
-      "translation": "يظهر <code>Hello, Kotlin</code> في نافذة المخرجات."
-    },
-    {
-      "source": "画面の使い方",
-      "translation": "استخدام الشاشة"
-    },
-    {
-      "source": "使うのは、次の4つだけです。残りのボタンは授業では触りません。",
-      "translation": "لن تستخدم إلا العناصر الأربعة التالية. لا حاجة إلى لمس بقية الأزرار في الحصص."
-    },
-    {
-      "source": "場所",
-      "translation": "الموضع"
-    },
-    {
-      "source": "何をするもの",
-      "translation": "وظيفته"
-    },
-    {
-      "source": "Kotlinの版を選ぶメニュー",
-      "translation": "قائمة اختيار إصدار Kotlin"
-    },
-    {
-      "source": "既定で最新の版が選ばれています。<strong>変更しません</strong>。",
-      "translation": "يكون أحدث إصدار محددا افتراضيا. <strong>لا تغيّره</strong>."
-    },
-    {
-      "source": "<strong>Run</strong> ボタン（▶）",
-      "translation": "زر <strong>Run</strong> (▶)"
-    },
-    {
-      "source": "書いたコードを実行します。",
-      "translation": "يشغّل الشيفرة التي كتبتها."
-    },
-    {
-      "source": "実行結果のウィンドウ",
-      "translation": "نافذة المخرجات"
-    },
-    {
-      "source": "実行すると自動で開きます。<code>println</code> の出力とエラーが、ここに出ます。",
-      "translation": "تفتح تلقائيا عند التشغيل. ويظهر هنا ناتج <code>println</code> والأخطاء."
-    },
-    {
-      "source": "共有ボタン",
-      "translation": "زر المشاركة"
-    },
-    {
-      "source": "いま書いているコードのURLを作ります。先生にコードを見せたいときだけ使います。",
-      "translation": "ينشئ رابط URL للشيفرة التي تكتبها الآن. استخدمه فقط عندما تريد أن تعرض شيفرتك على المعلم."
-    },
-    {
-      "source": "実行の入口（JavaやSwiftとの違い）",
-      "translation": "نقطة الدخول (الاختلاف عن Java وSwift)"
-    },
-    {
-      "source": "Kotlinは、<code>main</code> をクラスの中に入れる必要がありません。ファイルの一番外側に <code>fun</code> で書けば、それが入口になります。",
-      "translation": "في Kotlin، لا حاجة إلى وضع <code>main</code> داخل صنف. إذا كتبتها بـ <code>fun</code> في المستوى الأعلى من الملف، فإنها تصبح نقطة الدخول."
-    },
-    {
-      "source": "言語",
-      "translation": "اللغة"
-    },
-    {
-      "source": "実行の入口の書き方",
-      "translation": "طريقة كتابة نقطة الدخول"
-    },
-    {
-      "source": "<code>fun main()</code>。クラスは要りません。引数の <code>args</code> も、使わないなら省けます。",
-      "translation": "<code>fun main()</code>. لا حاجة إلى صنف. ويمكنك أيضا حذف المُعامِل <code>args</code> إذا لم تستخدمه."
-    },
-    {
-      "source": "<code>public static void main(String[] args)</code>。クラスの中に置きます。",
-      "translation": "<code>public static void main(String[] args)</code>. ضعها داخل صنف."
-    },
-    {
-      "source": "<code>main.swift</code> のトップレベルに書いたコード、または <code>@main</code> を付けた型の <code>static func main()</code>。",
-      "translation": "الشيفرة المكتوبة في المستوى الأعلى من <code>main.swift</code>، أو <code>static func main()</code> في نوع موسوم بـ <code>@main</code>."
-    },
-    {
-      "source": "Playgroundは最初の1回だけ",
-      "translation": "استخدم Playground في المرة الأولى فقط"
-    },
-    {
-      "source": "Playgroundには2つの弱点があります。<strong>コード補完が効きません</strong>。そして、<strong>実行結果が出るまでに時間がかかります</strong>（実行はサーバ側で行われるためです）。授業で書く量になると、この2つがそのまま手間になります。動くことを確かめたら、次の手順4からは IntelliJ IDEA に移ってください。",
-      "translation": "في Playground عيبان. <strong>لا يعمل فيه الإكمال التلقائي للشيفرة</strong>. و<strong>تستغرق المخرجات وقتا حتى تظهر</strong> (لأن التشغيل يتم على الخادم). ومع كمية الشيفرة التي ستكتبها في الحصص، يصبح هذان العيبان عبئا مباشرا. بعد أن تتحقق من أن الشيفرة تعمل، انتقل إلى IntelliJ IDEA ابتداء من الخطوة 4 التالية."
-    },
-    {
-      "source": "4. IntelliJ IDEA でKotlinのプロジェクトを作る",
-      "translation": "4. إنشاء مشروع Kotlin في IntelliJ IDEA"
-    },
-    {
-      "source": "この授業で作るプロジェクトは、すべて <code>~/Documents/Kotlin</code> の下に置きます。まず、その置き場所を作ります。",
-      "translation": "ضع كل المشاريع التي تنشئها في هذا المقرر داخل <code>~/Documents/Kotlin</code>. أنشئ هذا المكان أولا."
-    },
-    {
-      "source": "Terminal · 打ち込む",
-      "translation": "Terminal · اكتب هذا"
-    },
-    {
-      "source": "何も表示されずに入力待ちに戻れば成功です。すでに作ってあっても、エラーにはなりません。Terminalを使うのは、この1行だけです。",
-      "translation": "إذا عاد Terminal إلى انتظار الإدخال دون أن يعرض شيئا، فقد نجح الأمر. ولن يظهر خطأ حتى لو كان المجلد موجودا من قبل. هذا السطر هو الوحيد الذي تستخدم فيه Terminal."
-    },
-    {
-      "source": "新しいプロジェクトを作る",
-      "translation": "إنشاء مشروع جديد"
-    },
-    {
-      "source": "IntelliJ IDEA の Welcome画面で <strong>New Project</strong> をクリックします。すでにプロジェクトが開いているときは、<strong>File → New → Project…</strong> を選びます。",
-      "translation": "في شاشة Welcome في IntelliJ IDEA، انقر <strong>New Project</strong>. وإذا كان هناك مشروع مفتوح بالفعل، فاختر <strong>File → New → Project…</strong>."
-    },
-    {
-      "source": "左の一覧で <strong>New Project</strong> が選ばれていることを確かめます。",
-      "translation": "تحقق من أن <strong>New Project</strong> محدد في القائمة على اليسار."
-    },
-    {
-      "source": "右側の項目を、次のように設定します。",
-      "translation": "اضبط الحقول على اليمين كما يلي."
-    },
-    {
-      "source": "項目",
-      "translation": "الحقل"
-    },
-    {
-      "source": "入れるもの",
-      "translation": "ما تدخله"
-    },
-    {
-      "source": "先生が指定したプロジェクト名。第1単元では <code>K01HelloKotlin</code> です。",
-      "translation": "اسم المشروع الذي يحدده المعلم. في الوحدة الأولى هو <code>K01HelloKotlin</code>."
-    },
-    {
-      "source": "一覧に出てくるもののうち、いちばん番号が大きいもの",
-      "translation": "الخيار ذو الرقم الأكبر بين ما يظهر في القائمة"
-    },
-    {
-      "source": "チェックを外す",
-      "translation": "أزل علامة الاختيار"
-    },
-    {
-      "source": "<code>Location</code> には<strong>プロジェクト名を含めません</strong>。<code>Location</code> の下に、実際にできる場所が小さな文字で表示されるので、そこが <code>Documents/Kotlin</code> の下になっているか確かめてください。<code>ユーザ名</code> の部分は、Macにログインしている自分の名前です。",
-      "translation": "<strong>لا تضمّن اسم المشروع</strong> في <code>Location</code>. يظهر أسفل <code>Location</code> بخط صغير المكان الذي سينشأ فيه المشروع فعلا، فتحقق من أنه داخل <code>Documents/Kotlin</code>. الجزء <code>ユーザ名</code> (اسم المستخدم) هو اسمك الذي تسجل به الدخول إلى جهاز Mac."
-    },
-    {
-      "source": "<code>Build system</code> は <code>IntelliJ</code> を選びます",
-      "translation": "اختر <code>IntelliJ</code> في <code>Build system</code>"
-    },
-    {
-      "source": "ほかに <code>Maven</code> と <code>Gradle</code> が並んでいます。前半の授業では外部のライブラリを使わないので、ビルドツールを挟まない <code>IntelliJ</code> のままにしてください。後半のAndroidの単元では、Android Studioが <code>Gradle</code> を使います。そちらは自分で選ぶ必要がありません。",
-      "translation": "يظهر بجانبه أيضا <code>Maven</code> و<code>Gradle</code>. لن تستخدم مكتبات خارجية في حصص النصف الأول، لذا أبق الاختيار على <code>IntelliJ</code> الذي لا يستخدم أداة بناء. أما في وحدات Android في النصف الثاني، فيستخدم Android Studio <code>Gradle</code>، ولا تحتاج إلى اختياره بنفسك هناك."
-    },
-    {
-      "source": "<strong>Create</strong> をクリックします。新しいウィンドウが開きます。",
-      "translation": "انقر <strong>Create</strong>. ستفتح نافذة جديدة."
-    },
-    {
-      "source": "左側の <strong>Project</strong> の一覧に、プロジェクト名のフォルダが出ます。その中に <code>src</code> というフォルダがあります。",
-      "translation": "يظهر مجلد باسم المشروع في قائمة <strong>Project</strong> على اليسار. وبداخله مجلد اسمه <code>src</code>."
-    },
-    {
-      "source": "左側の一覧にプロジェクト名が出ていて、その下に <code>src</code> がある。",
-      "translation": "يظهر اسم المشروع في القائمة على اليسار، ويوجد <code>src</code> تحته."
-    },
-    {
-      "source": "<code>Location</code> は、次からも同じ場所が入っています",
-      "translation": "يحتفظ <code>Location</code> بالمكان نفسه في المرات التالية"
-    },
-    {
-      "source": "2回目にプロジェクトを作るときは、<code>Location</code> に前回の場所が最初から入っています。<code>/Users/ユーザ名/Documents/Kotlin</code> のままかどうかだけ、毎回確かめてください。別の場所に作ってしまうと、あとで自分のファイルを見つけられなくなります。",
-      "translation": "عندما تنشئ مشروعا للمرة الثانية، يكون المكان السابق مكتوبا مسبقا في <code>Location</code>. تحقق في كل مرة فقط من أنه ما زال <code>/Users/ユーザ名/Documents/Kotlin</code>. إذا أنشأت المشروع في مكان آخر، فلن تتمكن لاحقا من العثور على ملفاتك."
-    },
-    {
-      "source": "5. <code>fun main()</code> を実行して、結果を読む",
-      "translation": "5. تشغيل <code>fun main()</code> وقراءة النتيجة"
-    },
-    {
-      "source": "ファイルを作って、3行書く",
-      "translation": "إنشاء ملف وكتابة ثلاثة أسطر"
-    },
-    {
-      "source": "左側の一覧で <code>src</code> を右クリックし、<strong>New → Kotlin Class/File</strong> を選びます。",
-      "translation": "في القائمة على اليسار، انقر بزر الفأرة الأيمن على <code>src</code>، ثم اختر <strong>New → Kotlin Class/File</strong>."
-    },
-    {
-      "source": "名前の欄に <code>main</code> と打ち、下の一覧から <strong>File</strong> を選んで <kbd>Enter</kbd> を押します。",
-      "translation": "اكتب <code>main</code> في حقل الاسم، ثم اختر <strong>File</strong> من القائمة أسفله، واضغط <kbd>Enter</kbd>."
-    },
-    {
-      "source": "<code>main.kt</code> というファイルができて、右側に編集画面が開きます。",
-      "translation": "يتم إنشاء ملف اسمه <code>main.kt</code>، وتفتح شاشة التحرير على اليمين."
-    },
-    {
-      "source": "次の3行を打ち込みます。",
-      "translation": "اكتب الأسطر الثلاثة التالية."
-    },
-    {
-      "source": "ファイル名とクラス名を合わせる必要はありません。Kotlinでは、トップレベルの関数をそのまま書けます。書いたものは自動で保存されるので、保存の操作も要りません。",
-      "translation": "لا حاجة إلى أن يطابق اسم الملف اسم صنف. ففي Kotlin، يمكنك كتابة الدوال في المستوى الأعلى مباشرة. وما تكتبه يحفظ تلقائيا، فلا حاجة إلى الحفظ بنفسك."
-    },
-    {
-      "source": "実行する",
-      "translation": "التشغيل"
-    },
-    {
-      "source": "<code>fun main()</code> と書いた行の左、行番号のとなりに<strong>緑の三角</strong>（▶）が出ます。これが実行ボタンです。",
-      "translation": "يظهر <strong>مثلث أخضر</strong> (▶) على يسار السطر الذي كتبت فيه <code>fun main()</code>، بجانب رقم السطر. هذا هو زر التشغيل."
-    },
-    {
-      "source": "緑の三角（▶）をクリックします。",
-      "translation": "انقر المثلث الأخضر (▶)."
-    },
-    {
-      "source": "出てきたメニューから <strong>Run 'MainKt'</strong> を選びます。",
-      "translation": "اختر <strong>Run 'MainKt'</strong> من القائمة التي تظهر."
-    },
-    {
-      "source": "ウィンドウの下に <strong>Run</strong> ツールウィンドウが開き、結果が出ます。",
-      "translation": "تفتح نافذة الأدوات <strong>Run</strong> في أسفل النافذة، وتظهر فيها النتيجة."
-    },
-    {
-      "source": "Run ツールウィンドウに出るもの",
-      "translation": "ما يظهر في نافذة الأدوات Run"
-    },
-    {
-      "source": "メニューに出る <code>MainKt</code> は、<code>main.kt</code> をコンパイルしてできるクラスの名前です。Kotlinのトップレベルの関数は、ファイル名から作られたこの名前のクラスに、<code>static</code> メソッドとして入ります。JavaからKotlinのコードを呼べるのは、この仕組みがあるためです。",
-      "translation": "<code>MainKt</code> الذي يظهر في القائمة هو اسم الصنف الناتج عن تصريف <code>main.kt</code>. فالدوال في المستوى الأعلى في Kotlin توضع كطرق <code>static</code> في هذا الصنف الذي يشتق اسمه من اسم الملف. وبفضل هذه الآلية يمكن استدعاء شيفرة Kotlin من Java."
-    },
-    {
-      "source": "出ている行",
-      "translation": "السطر الظاهر"
-    },
-    {
-      "source": "意味",
-      "translation": "المعنى"
-    },
-    {
-      "source": "いちばん上にある、長い英数字の行",
-      "translation": "السطر الطويل من الحروف والأرقام في الأعلى"
-    },
-    {
-      "source": "IntelliJ IDEA が組み立てた実行コマンドです。出ないこともあります。",
-      "translation": "هو أمر التشغيل الذي أعده IntelliJ IDEA. وقد لا يظهر أحيانا."
-    },
-    {
-      "source": "真ん中の行",
-      "translation": "السطر الأوسط"
-    },
-    {
-      "source": "<code>println</code> で出した文字です。授業で確かめるのは、ここです。",
-      "translation": "هو النص الذي طبعته <code>println</code>. وهذا ما تتحقق منه في الحصص."
-    },
-    {
-      "source": "正常に終わりました。",
-      "translation": "انتهى البرنامج بشكل طبيعي."
-    },
-    {
-      "source": "途中で止まりました。この行の上に、赤い文字で理由が出ています。",
-      "translation": "توقف البرنامج قبل أن ينتهي. يظهر السبب باللون الأحمر فوق هذا السطر."
-    },
-    {
-      "source": "Run ツールウィンドウに <code>はじめまして</code> と出て、その下に <code>Process finished with exit code 0</code> がある。",
-      "translation": "يظهر <code>はじめまして</code> (تشرفت بمعرفتك) في نافذة الأدوات Run، وتحته <code>Process finished with exit code 0</code>."
-    },
-    {
-      "source": "Run ツールウィンドウを閉じてしまったとき",
-      "translation": "إذا أغلقت نافذة الأدوات Run"
-    },
-    {
-      "source": "上のメニューの <strong>View → Tool Windows → Run</strong> で、もう一度出せます。<kbd>⌘ Command</kbd> + <kbd>4</kbd> でも開きます。前の結果は消えていません。",
-      "translation": "يمكنك إظهارها مرة أخرى من القائمة العلوية عبر <strong>View → Tool Windows → Run</strong>. ويمكنك فتحها أيضا بالضغط على <kbd>⌘ Command</kbd> + <kbd>4</kbd>. النتيجة السابقة لم تحذف."
-    },
-    {
-      "source": "2回目からは、右上の ▶ で実行できます",
-      "translation": "ابتداء من المرة الثانية، يمكنك التشغيل بزر ▶ في أعلى اليمين"
-    },
-    {
-      "source": "一度実行すると、その実行の設定が記憶され、ウィンドウの右上の実行ボタン（▶）から同じプログラムを動かせます。別のファイルを開いているときでも、動くのは記憶されたほうです。違うファイルを実行したいときは、そのファイルの行番号のとなりの緑の三角を使ってください。",
-      "translation": "بعد أن تشغّل البرنامج مرة واحدة، تحفظ إعدادات ذلك التشغيل، ويمكنك تشغيل البرنامج نفسه من زر التشغيل (▶) في أعلى يمين النافذة. وحتى لو كان ملف آخر مفتوحا، فإن ما يعمل هو البرنامج المحفوظ. إذا أردت تشغيل ملف مختلف، فاستخدم المثلث الأخضر بجانب أرقام الأسطر في ذلك الملف."
-    },
-    {
-      "source": "ここまでできたら、前半の準備は終わりです。次の授業からは、教科書を開くところから始められます。",
-      "translation": "إذا وصلت إلى هنا، فقد انتهى تحضير النصف الأول. ابتداء من الحصة القادمة، يمكنك أن تبدأ بفتح الكتاب المدرسي."
-    },
-    {
-      "source": "K01：HelloKotlin へ進む →",
-      "translation": "الانتقال إلى K01: HelloKotlin ←"
-    },
-    {
-      "source": "6. 後半で使う Android Studio とエミュレータ",
-      "translation": "6. Android Studio والمحاكي في النصف الثاني"
+      "source": "3. 後半で使う Android Studio とエミュレータ",
+      "translation": "3. Android Studio والمحاكي في النصف الثاني"
     },
     {
       "source": "7コマ目からは、<strong>Android Studio</strong> でスマートフォンのアプリを作ります。作ったアプリは、<strong>エミュレータ</strong>（Macの中で動く練習用のAndroid端末）で動かします。",
@@ -711,8 +379,16 @@
       "translation": "في المجلد <code>samples</code> داخل مجلد المواد الذي وضعته في 「書類」 (المستندات) في الخطوة 1، توجد المشاريع المكتملة <strong>جاهزة للفتح مباشرة</strong>. لا حاجة إلى تنزيلها أو فك ضغطها. لمشروع Kotlin في النصف الأول استخدم <strong>Open</strong> في IntelliJ IDEA، ولمشاريع Android في النصف الثاني استخدم <strong>Open</strong> في Android Studio، ثم اختر المجلد الموجود داخل <code>samples</code>."
     },
     {
-      "source": "7. うまくいかないとき",
-      "translation": "7. حل المشكلات"
+      "source": "ここまでできたら、準備は終わりです。第1単元の教科書を開いて授業を始めましょう。",
+      "translation": "إذا وصلت إلى هنا، فقد انتهت التحضيرات. افتح الكتاب المدرسي للوحدة الأولى وابدأ الدرس."
+    },
+    {
+      "source": "K01：HelloKotlin へ進む →",
+      "translation": "الانتقال إلى K01: HelloKotlin ←"
+    },
+    {
+      "source": "4. うまくいかないとき",
+      "translation": "4. حل المشكلات"
     },
     {
       "source": "出たもの・起きたこと",
@@ -723,92 +399,20 @@
       "translation": "ما تجربه"
     },
     {
-      "source": "Kotlin Playground の <strong>Run</strong> を押しても、何も出ない",
-      "translation": "لا يظهر شيء بعد الضغط على <strong>Run</strong> في Kotlin Playground"
+      "source": "ダウンロードしたフォルダの名前に <code>(1)</code> や <code>-2</code> が付いている",
+      "translation": "يوجد <code>(1)</code> أو <code>-2</code> في اسم المجلد الذي نزّلته"
     },
     {
-      "source": "実行はサーバ側で行われるので、数秒から十数秒かかる。待っても出ないときは、ページを開き直してもう一度実行する。",
-      "translation": "يتم التشغيل على الخادم، لذا يستغرق من بضع ثوان إلى أكثر من عشر ثوان بقليل. إذا لم يظهر شيء بعد الانتظار، فأعد فتح الصفحة وشغّل الشيفرة مرة أخرى."
+      "source": "古い教材を開いている可能性がある。自分で判断せず先生に見せる。",
+      "translation": "ربما تفتح مواد قديمة. لا تحكم على ذلك بنفسك، واعرضه على المعلم."
     },
     {
-      "source": "Kotlin Playground でコード補完が出ない",
-      "translation": "لا يظهر الإكمال التلقائي للشيفرة في Kotlin Playground"
-    },
-    {
-      "source": "Playgroundには補完がない。手順4に進んで IntelliJ IDEA を使う。",
-      "translation": "لا يوجد إكمال تلقائي في Playground. انتقل إلى الخطوة 4 واستخدم IntelliJ IDEA."
-    },
-    {
-      "source": "Macに IntelliJ IDEA が見つからない",
-      "translation": "لا تجد IntelliJ IDEA على جهاز Mac"
+      "source": "Macに IntelliJ IDEA や Android Studio が見つからない",
+      "translation": "لا تجد IntelliJ IDEA أو Android Studio على جهاز Mac"
     },
     {
       "source": "貸与されたMacには入っているはずなので、自分で入れようとせず、先生に知らせる。",
       "translation": "يفترض أنه مثبّت على جهاز Mac المعار، فلا تحاول تثبيته بنفسك، وأخبر المعلم."
-    },
-    {
-      "source": "Welcome画面に <code>New Project</code> が見あたらない",
-      "translation": "لا تجد <code>New Project</code> في شاشة Welcome"
-    },
-    {
-      "source": "すでにプロジェクトが開いている。そのウィンドウを閉じるか、<strong>File → New → Project…</strong> を使う。",
-      "translation": "هناك مشروع مفتوح بالفعل. أغلق تلك النافذة، أو استخدم <strong>File → New → Project…</strong>."
-    },
-    {
-      "source": "<code>Language</code> の一覧に <code>Kotlin</code> が出ない",
-      "translation": "لا يظهر <code>Kotlin</code> في قائمة <code>Language</code>"
-    },
-    {
-      "source": "左の一覧で <strong>New Project</strong> 以外が選ばれていないか確かめる。それでも出ないときは先生に知らせる。",
-      "translation": "تحقق من أن المحدد في القائمة على اليسار هو <strong>New Project</strong> وليس شيئا آخر. وإذا لم يظهر رغم ذلك، فأخبر المعلم."
-    },
-    {
-      "source": "<code>JDK</code> の欄が <code>&lt;No JDK&gt;</code> のまま",
-      "translation": "يبقى حقل <code>JDK</code> على <code>&lt;No JDK&gt;</code>"
-    },
-    {
-      "source": "欄を開いて一覧から選び直す。候補が1つも出ないときは先生に知らせる。",
-      "translation": "افتح الحقل واختر من القائمة مرة أخرى. وإذا لم يظهر أي خيار، فأخبر المعلم."
-    },
-    {
-      "source": "プロジェクトが <code>Documents/Kotlin</code> の中にできていない",
-      "translation": "لم ينشأ المشروع داخل <code>Documents/Kotlin</code>"
-    },
-    {
-      "source": "<code>Location</code> にプロジェクト名まで入れてしまった可能性がある。手順4の表をもう一度確かめて作り直す。",
-      "translation": "ربما أدخلت اسم المشروع أيضا في <code>Location</code>. راجع الجدول في الخطوة 4 مرة أخرى، ثم أنشئ المشروع من جديد."
-    },
-    {
-      "source": "行番号のとなりに緑の三角（▶）が出ない",
-      "translation": "لا يظهر المثلث الأخضر (▶) بجانب أرقام الأسطر"
-    },
-    {
-      "source": "<code>fun main() {</code> と閉じかっこが正しく書けているか確かめる。ファイルが <code>src</code> の下にあるかも確かめる。",
-      "translation": "تحقق من أنك كتبت <code>fun main() {</code> وقوس الإغلاق بشكل صحيح. وتحقق أيضا من أن الملف داخل <code>src</code>."
-    },
-    {
-      "source": "右上の ▶ を押すと、別のファイルが実行される",
-      "translation": "عند الضغط على ▶ في أعلى اليمين، يتم تشغيل ملف آخر"
-    },
-    {
-      "source": "前回の実行設定が記憶されている。実行したいファイルの行番号のとなりの緑の三角から実行し直す。",
-      "translation": "إعدادات التشغيل السابقة محفوظة. أعد التشغيل من المثلث الأخضر بجانب أرقام الأسطر في الملف الذي تريد تشغيله."
-    },
-    {
-      "source": "<code>Process finished with exit code 1</code> が出る",
-      "translation": "يظهر <code>Process finished with exit code 1</code>"
-    },
-    {
-      "source": "その上の赤い文字を読む。行番号が書いてあるので、その行を見直す。",
-      "translation": "اقرأ النص الأحمر فوقه. فيه رقم السطر، فراجع ذلك السطر."
-    },
-    {
-      "source": "Run ツールウィンドウが見あたらない",
-      "translation": "لا تجد نافذة الأدوات Run"
-    },
-    {
-      "source": "<strong>View → Tool Windows → Run</strong> で開く。",
-      "translation": "افتحها عبر <strong>View → Tool Windows → Run</strong>."
     },
     {
       "source": "前に作ったプロジェクトの場所が分からない",
@@ -819,44 +423,28 @@
       "translation": "انظر هل يظهر في <strong>File → Open Recent</strong>. يفترض أن يكون داخل <code>~/Documents/Kotlin</code>."
     },
     {
-      "source": "ダウンロードしたフォルダの名前に <code>(1)</code> や <code>-2</code> が付いている",
-      "translation": "يوجد <code>(1)</code> أو <code>-2</code> في اسم المجلد الذي نزّلته"
-    },
-    {
-      "source": "古い教材を開いている可能性がある。自分で判断せず先生に見せる。",
-      "translation": "ربما تفتح مواد قديمة. لا تحكم على ذلك بنفسك، واعرضه على المعلم."
-    },
-    {
       "source": "教科書に書いてある名前が、自分の画面にない",
       "translation": "اسم مكتوب في الكتاب المدرسي غير موجود على شاشتك"
     },
     {
-      "source": "IntelliJ IDEA の版が違うことがある。設定を変えず、その画面のまま先生に見せる。",
-      "translation": "قد يكون إصدار IntelliJ IDEA مختلفا. لا تغيّر الإعدادات، واترك الشاشة كما هي واعرضها على المعلم."
+      "source": "IntelliJ IDEA や Android Studio の版が違うことがある。設定を変えず、その画面のまま先生に見せる。",
+      "translation": "قد يكون إصدار IntelliJ IDEA أو Android Studio مختلفا. لا تغيّر الإعدادات، واترك الشاشة كما هي واعرضها على المعلم."
     },
     {
-      "source": "表にないことが起きたら、その画面のまま先生に見せてください。Terminalの場合は、打った行と出た文字の両方が見えるようにしておくと早く分かります。質問するときは、<code>VERSION.json</code> に書いてある教材の版と、教科書のSTEP番号を伝えてください。",
-      "translation": "إذا حدث شيء غير موجود في الجدول، فاترك الشاشة كما هي واعرضها على المعلم. وفي حالة Terminal، اجعل السطر الذي كتبته والنص الذي ظهر مرئيين معا، فهذا يسرّع فهم المشكلة. وعندما تسأل، أخبر المعلم بإصدار المواد المكتوب في <code>VERSION.json</code> وبرقم STEP في الكتاب المدرسي."
+      "source": "表にないことが起きたら、その画面のまま先生に見せてください。質問するときは、<code>VERSION.json</code> に書いてある教材の版を伝えてください。プロジェクトの作成やコードの実行で困ったときは、各教科書の「困ったとき」を見てください。",
+      "translation": "إذا حدث شيء غير موجود في الجدول، فاترك الشاشة كما هي واعرضها على المعلم. وعندما تسأل، أخبر المعلم بإصدار المواد المكتوب في <code>VERSION.json</code>. وإذا واجهتك مشكلة في إنشاء مشروع أو تشغيل الشيفرة البرمجية، فانظر «إذا واجهتك مشكلة» في كل كتاب مدرسي."
     },
     {
       "source": "公式資料",
       "translation": "الوثائق الرسمية"
     },
     {
-      "source": "<a1>Kotlin Playground</a1>（手順3）",
-      "translation": "<a1>Kotlin Playground</a1> (الخطوة 3)"
+      "source": "IntelliJ IDEA：はじめに（英語）",
+      "translation": "IntelliJ IDEA: البدء (بالإنجليزية)"
     },
     {
-      "source": "<a1>Kotlin：はじめてのKotlin（英語）</a1>（手順3・手順4・手順5）",
-      "translation": "<a1>Kotlin: البدء مع Kotlin (بالإنجليزية)</a1> (الخطوات 3 و4 و5)"
-    },
-    {
-      "source": "<a1>IntelliJ IDEA：はじめに（英語）</a1>（手順4）",
-      "translation": "<a1>IntelliJ IDEA: البدء (بالإنجليزية)</a1> (الخطوة 4)"
-    },
-    {
-      "source": "<a1>Android Developers：Android仮想デバイス（エミュレータ）の作成と管理</a1>（手順6）",
-      "translation": "<a1>Android Developers: إنشاء أجهزة Android الافتراضية (المحاكيات) وإدارتها</a1> (الخطوة 6)"
+      "source": "<a1>Android Developers：Android仮想デバイス（エミュレータ）の作成と管理</a1>（手順3）",
+      "translation": "<a1>Android Developers: إنشاء أجهزة Android الافتراضية (المحاكيات) وإدارتها</a1> (الخطوة 3)"
     },
     {
       "source": "公式資料は、この教材より詳しい代わりに、授業で使わない話も多く含みます。授業中は、まずこの資料と教科書を見てください。",
