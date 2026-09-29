@@ -35,6 +35,10 @@
       "translation": "توقّف هنا وتحقّق"
     },
     {
+      "source": "役割",
+      "translation": "الدور"
+    },
+    {
       "source": "項目",
       "translation": "الحقل"
     },
@@ -53,6 +57,10 @@
     {
       "source": "変える場所",
       "translation": "أين تغيّره"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "ما تتحقق منه على الشاشة"
     },
     {
       "source": "使うもの",
