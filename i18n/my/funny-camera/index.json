@@ -11,12 +11,88 @@
       "translation": "JEC / Kotlin လေ့ကျင့်ခန်း"
     },
     {
+      "source": "0 / 15 ステップ確認済み",
+      "translation": "0 / 15 အဆင့် စစ်ဆေးပြီးပါပြီ"
+    },
+    {
+      "source": "進捗",
+      "translation": "တိုးတက်မှု"
+    },
+    {
+      "source": "目次",
+      "translation": "မာတိကာ"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "အဆင်မပြေသည့်အခါ"
+    },
+    {
+      "source": "完成プロジェクトを開く",
+      "translation": "ပြီးစီးပြီးသော project ကို ဖွင့်ရန်"
+    },
+    {
+      "source": "共通：はじめの準備",
+      "translation": "အထွေထွေ: အတန်းမစမီ ပြင်ဆင်ရန်"
+    },
+    {
+      "source": "共通：提出課題とAPK",
+      "translation": "အထွေထွေ: တင်သွင်းရမည့် assignment နှင့် APK"
+    },
+    {
+      "source": "共通：ちがうAndroid Studioの版",
+      "translation": "အထွေထွေ: မတူညီသော Android Studio ဗားရှင်း"
+    },
+    {
+      "source": "この単元で作るもの",
+      "translation": "ဤယူနစ်တွင် ဖန်တီးမည့်အရာ"
+    },
+    {
+      "source": "Java／Swiftとの比較",
+      "translation": "Java / Swift နှင့် နှိုင်းယှဉ်ချက်"
+    },
+    {
+      "source": "ここで止まって確認",
+      "translation": "ဤနေရာတွင် ရပ်၍ စစ်ဆေးရန်"
+    },
+    {
+      "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
+      "translation": "ပြီးပါက အမှန်ခြစ်ပေးပါ။ ရပ်တန့်သွားသည့်အခါ ဤမျက်နှာပြင်ကို ဆရာ့ကို ပြပါ။"
+    },
+    {
       "source": "項目",
       "translation": "သတ်မှတ်ရန်အကွက်"
     },
     {
+      "source": "入力・選択",
+      "translation": "ဖြည့်သွင်းရန် / ရွေးချယ်ရန်"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "activity_main.xml · 全文",
+      "translation": "activity_main.xml ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "MainActivity.kt · 全文",
+      "translation": "MainActivity.kt · ဖိုင်တစ်ခုလုံး"
+    },
+    {
       "source": "場所",
       "translation": "နေရာ"
+    },
+    {
+      "source": "見えている状態",
+      "translation": "မြင်တွေ့နေရသော အခြေအနေ"
+    },
+    {
+      "source": "確認する場所",
+      "translation": "စစ်ဆေးမည့်နေရာ"
+    },
+    {
+      "source": "起動直後に閉じる",
+      "translation": "စတင်ပြီးချင်း ပိတ်သွားပါသည်"
     },
     {
       "source": "公式資料",
