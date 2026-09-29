@@ -32,7 +32,7 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | デバイス | dispositivo | Android Studio のデバイス選択の画面名は英語のまま |
 | テンプレート | plantilla | Android Studio のテンプレート名（**Empty Views Activity**）は英語のまま |
 | プレビュー | vista previa | A04 の CameraX の `Preview` は `<code>` のまま |
-| コマ | clase | 1コマ＝90分の授業1回。「2コマ目」は clase 2。Kotlinの「クラス」（`class`）も clase になるので、同じ文に両方が出て紛らわしいときは、コマを clase 2 のように番号つきで書き、クラスは la clase `Person` のようにクラス名を添える。この書き分けは要確認（訳語の clase は、あちらと同じにしておく） |
+| コマ | clase | 1コマ＝90分の授業1回。「2コマ目」は clase 2。Kotlinの「クラス」（`class`）も clase になるので、同じ文に両方が出て紛らわしいときは、コマを clase 2 のように番号つきで書き、クラスは la clase `Person` のようにクラス名を添えて書き分ける（訳語の clase は、あちらと同じにしておく） |
 
 ## Kotlin演習の用語
 
@@ -80,18 +80,18 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | IDE | IDE | 男性名詞（el IDE） |
 | URL | URL | 女性名詞（la URL） |
 | UI | UI | 女性名詞（la UI） |
-| 半角スペース | espacio de ancho medio | 日本語の入力に特有の言い方。要確認 |
+| 半角スペース | espacio de ancho medio | 日本語の入力に特有の言い方 |
 | 進捗 / 目次（aria-label） | Progreso / Índice | |
 | クラス | clase | `class` の表記は原文のまま。コマと同じ語になる（上の「コマ」のメモ） |
 | 型 | tipo | |
-| Null安全 | seguridad frente a null | 導入する文では null safety (Null安全) のように英語と日本語を添える。要確認 |
+| Null安全 | seguridad frente a null | 導入する文では null safety (Null安全) のように英語と日本語を添える |
 | 安全呼び出し | llamada segura | |
 | 戻り値 / 戻り値の型 | valor de retorno / tipo de retorno | |
 | 引数 | parámetro / argumento | 宣言の側は parámetro、呼び出しの側は argumento |
 | 型注釈 / 型推論 | anotación de tipo / inferencia de tipos | |
 | トップレベル関数 | función de nivel superior | 用語の表では トップレベル関数 — función de nivel superior |
 | 再代入 | reasignar | |
-| ガター | margen (gutter) | 行番号のとなりの ▷ が出る場所。要確認 |
+| ガター | margen (gutter) | 行番号のとなりの ▷ が出る場所 |
 | 途中コード / 途中画面 | código en progreso / pantalla en progreso | |
 | 通信中の印 | indicador de carga | |
 | 保存先 | ubicación de guardado | |
