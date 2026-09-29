@@ -628,7 +628,7 @@
     },
     {
       "source": "保存は <code>lifecycleScope.launch</code> から始め、圧縮・書き込みを <code>withContext(Dispatchers.IO)</code> の中へ置きます。そこを抜けるとメインスレッドへ戻り、trueなら「保存しました」、falseなら「保存に失敗しました」を表示します。Activityが破棄されるとlifecycleScopeのコルーチンはキャンセルされます。",
-      "translation": "تبدأ عملية الحفظ من <code>lifecycleScope.launch</code>، وتوضع عمليتا الضغط والكتابة داخل <code>withContext(Dispatchers.IO)</code>. وعند الخروج منه نعود إلى مسار التنفيذ الرئيسي، ويعرض 「保存しました」 (تم الحفظ) إذا كانت النتيجة true، أو 「保存に失敗しました」 (فشل الحفظ) إذا كانت false. وإذا تم تدمير Activity، يتم إلغاء الكوروين التابع لـ lifecycleScope."
+      "translation": "تبدأ عملية الحفظ من <code>lifecycleScope.launch</code>، وتوضع عمليتا الضغط والكتابة داخل <code>withContext(Dispatchers.IO)</code>. وعند الخروج منه نعود إلى مسار التنفيذ الرئيسي، ويعرض 「保存しました」 (تم الحفظ) إذا كانت النتيجة true، أو 「保存に失敗しました」 (فشل الحفظ) إذا كانت false. وإذا تم تدمير Activity، يتم إلغاء الكوروتين التابع لـ lifecycleScope."
     },
     {
       "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。",
