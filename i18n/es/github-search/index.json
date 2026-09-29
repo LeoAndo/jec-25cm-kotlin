@@ -832,7 +832,7 @@
     },
     {
       "source": "<code>jec-a03-no-match-20260924-7d4a9c</code> など一致しにくい語で検索",
-      "translation": "Buscar con una palabra difícil de coincidir, como <code>jec-a03-no-match-20260924-7d4a9c</code>"
+      "translation": "Buscar con una palabra que probablemente no produzca coincidencias, como <code>jec-a03-no-match-20260924-7d4a9c</code>"
     },
     {
       "source": "本当に0件なら一覧が空になり「検索結果が0件でした」。結果が出たら別の長い語にする。",

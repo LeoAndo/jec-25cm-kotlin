@@ -228,7 +228,7 @@
     },
     {
       "source": "次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。",
-      "translation": "Sincroniza los siguientes 3 archivos <strong>después de verificar sus rutas y reemplazar el archivo completo</strong>. Esto unifica las diferencias de las bibliotecas según la fecha de creación. Da por supuesta la configuración creada con Panda 2; no es un procedimiento para solo bajar el número de AGP de otra versión."
+      "translation": "Después de verificar sus rutas, <strong>reemplaza por completo los siguientes 3 archivos y luego sincroniza el proyecto</strong>. Esto unifica las diferencias de las bibliotecas según la fecha de creación. Da por supuesta la configuración creada con Panda 2; no es un procedimiento para solo bajar el número de AGP de otra versión."
     },
     {
       "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
