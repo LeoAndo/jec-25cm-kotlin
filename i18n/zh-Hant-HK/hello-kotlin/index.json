@@ -35,6 +35,10 @@
       "translation": "在這裏停下來確認"
     },
     {
+      "source": "役割",
+      "translation": "職責"
+    },
+    {
       "source": "項目",
       "translation": "設定項目"
     },
@@ -53,6 +57,10 @@
     {
       "source": "変える場所",
       "translation": "更改的位置"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "在畫面上確認的事項"
     },
     {
       "source": "使うもの",
