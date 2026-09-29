@@ -2603,16 +2603,1796 @@
       "translation": "<strong>تبدأ بـ <code>fun</code> ← المُعامِل على شكل <code>名前: 型</code> ← القيمة المُعادة تكتب بعد القوسين على شكل <code>: 型</code> ← وإذا لم تكن هناك قيمة مُعادة لا نكتب شيئًا.</strong><br>ترتيب المُعامِلات يماثل Swift وعكس Java، بينما يختلف موقع أو رمز نوع القيمة المُعادة في اللغات الثلاث. والاختلاف يقتصر على ترتيب الكتابة والرموز، لكن ما يحدث مطابق تمامًا لطريقة Java ودالة Swift."
     },
     {
+      "source": "STEP 19 · 4コマ目 · 目安 5分",
+      "translation": "STEP 19 · الحصة 4 · حوالي 5 دقائق"
+    },
+    {
+      "source": "4コマ目のゴール（条件式・繰り返し・クラス）",
+      "translation": "هدف الحصة 4 (التعبيرات الشرطية والتكرار والأصناف)"
+    },
+    {
+      "source": "4コマ目は、<strong>条件式 → 繰り返し → クラス</strong>の順に書きます。Java・Swiftで知っている処理を、Kotlinの記号と宣言へ置き換えます。番号は前年度資料との対応なので、今日は <code>ex05</code> → <code>ex06</code> → <code>ex04</code> の順です。番号を付け替える必要はありません。",
+      "translation": "ستكتب في الحصة 4 بالترتيب: <strong>التعبيرات الشرطية ← التكرار ← الأصناف</strong>. ستستبدل المعالجات التي تعرفها في Java وSwift برموز وتصريحات Kotlin. الأرقام تتوافق مع مواد العام الماضي، لذا الترتيب اليوم هو <code>ex05</code> ← <code>ex06</code> ← <code>ex04</code>. لا داعي لتغيير الأرقام."
+    },
+    {
+      "source": "① 自分のプロジェクトを開く",
+      "translation": "① فتح مشروعك"
+    },
+    {
+      "source": "IntelliJ IDEA を開き、最近のプロジェクトから <code>K01HelloKotlin</code> を選びます。",
+      "translation": "افتح IntelliJ IDEA، واختر <code>K01HelloKotlin</code> من المشاريع الحديثة."
+    },
+    {
+      "source": "見つからなければ<strong>開く</strong>から <code>Documents/Kotlin/K01HelloKotlin</code> を選びます。新規プロジェクトは作りません。",
+      "translation": "إذا لم تجده، فاختر <code>Documents/Kotlin/K01HelloKotlin</code> من <strong>開く</strong> (فتح). لا تنشئ مشروعا جديدا."
+    },
+    {
+      "source": "左の <code>src</code> を開きます。これまでの <code>ex01</code>〜<code>ex03</code> は消さずに残します。今日書く3本は、過去の演習のコードを呼びません。",
+      "translation": "افتح <code>src</code> على اليسار. اترك <code>ex01</code>–<code>ex03</code> السابقة دون حذفها. الملفات الثلاثة التي ستكتبها اليوم لا تستدعي شيفرات التمارين السابقة."
+    },
+    {
+      "source": "② 今日の出力を確かめる",
+      "translation": "② التحقق من مخرجات اليوم"
+    },
+    {
+      "source": "実行するファイル",
+      "translation": "الملف الذي ستشغّله"
+    },
+    {
+      "source": "完成時の出力（上から順）",
+      "translation": "المخرجات عند الاكتمال (من أعلى إلى أسفل)"
+    },
+    {
+      "source": "③ Java・Swiftとの違いを見る",
+      "translation": "③ رؤية الاختلافات مع Java وSwift"
+    },
+    {
+      "source": "これは書き方の見取り図です。<code>flag</code>、<code>persons</code>、<code>Person</code> の宣言は、このあと各STEPで書きます。",
+      "translation": "هذا رسم توضيحي لطريقة الكتابة. ستكتب تصريحات <code>flag</code> و<code>persons</code> و<code>Person</code> في كل STEP لاحقا."
+    },
+    {
+      "source": "Kotlinの <code>if</code> はJavaと同じく条件を丸かっこで囲み、<code>for</code> はSwiftと同じく <code>in</code> を使います。インスタンスを作るときにJavaの <code>new</code> は書きません。Swiftの引数ラベルと違い、上のKotlinの呼び出しは値だけを順に渡しています。",
+      "translation": "يحيط <code>if</code> في Kotlin الشرط بأقواس دائرية كما في Java، ويستخدم <code>for</code> الكلمة <code>in</code> كما في Swift. لا تكتب <code>new</code> الخاصة بـ Java عند إنشاء نسخة (instance). على عكس تسمية الوسيط في Swift، يمرّر استدعاء Kotlin أعلاه القيم فقط بالترتيب."
+    },
+    {
+      "source": "目安",
+      "translation": "المدة المقدرة"
+    },
+    {
+      "source": "19 再開とゴール",
+      "translation": "19 الاستئناف والهدف"
+    },
+    {
+      "source": "5分",
+      "translation": "5 دقائق"
+    },
+    {
+      "source": "20 条件式",
+      "translation": "20 التعبيرات الشرطية"
+    },
+    {
+      "source": "20分",
+      "translation": "20 دقيقة"
+    },
+    {
+      "source": "21 繰り返し",
+      "translation": "21 التكرار"
+    },
+    {
+      "source": "22 クラス",
+      "translation": "22 الأصناف"
+    },
+    {
+      "source": "30分",
+      "translation": "30 دقيقة"
+    },
+    {
+      "source": "23 ミニ練習",
+      "translation": "23 تدريب مصغر"
+    },
+    {
+      "source": "12分",
+      "translation": "12 دقيقة"
+    },
+    {
+      "source": "24 完成",
+      "translation": "24 الاكتمال"
+    },
+    {
+      "source": "3分",
+      "translation": "3 دقائق"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> の <code>src</code> が開いていて、今日の3つの出力を上の表で確かめた。",
+      "translation": "مجلد <code>src</code> في <code>K01HelloKotlin</code> مفتوح، وتتحقق من المخرجات الثلاثة لليوم في الجدول أعلاه."
+    },
+    {
+      "source": "合わなければ、ファイル名と出力を先生に見せましょう。",
+      "translation": "إذا لم تتطابق، فاعرض اسم الملف والمخرجات على المعلم."
+    },
+    {
+      "source": "次へ：ex05 と条件式 →",
+      "translation": "الانتقال إلى ex05 والتعبيرات الشرطية ←"
+    },
+    {
+      "source": "STEP 20 · 4コマ目 · 目安 20分",
+      "translation": "STEP 20 · الحصة 4 · حوالي 20 دقيقة"
+    },
+    {
+      "source": "ex05 を作る：if と文字列の比較",
+      "translation": "إنشاء ex05: if ومقارنة السلاسل النصية"
+    },
+    {
+      "source": "① ex05 を作り、2つの条件を書く",
+      "translation": "① إنشاء ex05 وكتابة شرطين"
+    },
+    {
+      "source": "左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex05</code> と入力します。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code> في نافذة الأدوات <strong>プロジェクト</strong> (المشروع) على اليسار، واختر <strong>新規 → パッケージ</strong> (جديد ← حزمة)، ثم أدخل <code>ex05</code>."
+    },
+    {
+      "source": "できた <code>ex05</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex05</code> الذي أُنشئ، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). اجعل الاسم <code>main</code>، والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "<code>src/ex05/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex05</code> が2行にならないようにします。",
+      "translation": "افتح <code>src/ex05/main.kt</code>، واجعل محتواه كالشيفرة المكتملة التالية. تأكد من ألا يصبح <code>package ex05</code> في البداية على سطرين."
+    },
+    {
+      "source": "このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。",
+      "translation": "شغّل من ▷ الموجود على يسار <code>fun main()</code> في هذا الملف. لا تخلط بينه وبين زر تشغيل التمرين السابق."
+    },
+    {
+      "source": "src/ex05/main.kt · ファイル全体",
+      "translation": "src/ex05/main.kt · الملف كاملا"
+    },
+    {
+      "source": "② 実行結果を見る",
+      "translation": "② رؤية المخرجات"
+    },
+    {
+      "source": "<code>flag</code> は <code>true</code> なので上の <code>if</code> は最初のブロックへ進みます。下の比較は <code>\"Tanaka\"</code> と <code>\"yamada\"</code> で文字が違うため、<code>else</code> の行が出ます。",
+      "translation": "نظرا لأن <code>flag</code> هو <code>true</code>، يتقدم <code>if</code> العلوي إلى الكتلة الأولى. المقارنة السفلية تختلف أحرفها بين <code>\"Tanaka\"</code> و<code>\"yamada\"</code>، لذا يظهر سطر <code>else</code>."
+    },
+    {
+      "source": "③ Java・Swiftと条件の書き方を比べる",
+      "translation": "③ مقارنة طريقة كتابة الشروط مع Java وSwift"
+    },
+    {
+      "source": "Kotlinで文字列の内容を比べるのは <code>==</code> です。Javaの <code>String.equals</code> にあたり、Javaの参照比較の <code>==</code> とは役割が違います。Kotlinの <code>==</code> は等価性の比較を <code>equals</code> に結び付けています。",
+      "translation": "تُستخدم <code>==</code> لمقارنة محتوى السلاسل النصية في Kotlin. وهي تعادل <code>String.equals</code> في Java، ويختلف دورها عن <code>==</code> الخاصة بمقارنة المراجع في Java. تربط <code>==</code> في Kotlin مقارنة التكافؤ بـ <code>equals</code>."
+    },
+    {
+      "source": "Swiftの文字列も <code>==</code> で内容を比べます。Kotlinでは <code>if (条件)</code> の丸かっこが必要です。",
+      "translation": "تقارن السلاسل النصية في Swift المحتوى أيضا باستخدام <code>==</code>. تتطلب Kotlin الأقواس الدائرية في <code>if (条件)</code> (الشرط)."
+    },
+    {
+      "source": "大文字・小文字も比較の対象です。<code>\"Tanaka\"</code> と <code>\"tanaka\"</code> は別の文字列です。",
+      "translation": "الأحرف الكبيرة والصغيرة مشمولة أيضا في المقارنة. <code>\"Tanaka\"</code> و<code>\"tanaka\"</code> هما سلسلتان نصيتان مختلفتان."
+    },
+    {
+      "source": "Kotlinの <code>if</code> は値を返す式としても使えますが、この完成コードは分岐した先で出力する形です。値を受け取る形や <code>when</code> はここでは増やしません。",
+      "translation": "يمكن أيضا استخدام <code>if</code> في Kotlin كتعبير يعيد قيمة، لكن هذه الشيفرة المكتملة مكتوبة بشكل يُخرج ناتجا في الوجهة المتفرعة. لن نضيف هنا شكل تلقي القيمة أو <code>when</code>."
+    },
+    {
+      "source": "④ 条件を1か所だけ変える",
+      "translation": "④ تغيير الشرط في موضع واحد فقط"
+    },
+    {
+      "source": "<code>val flag = true</code> を <code>val flag = false</code> にして実行します。1行目が <code>flag is false</code> に変わり、2行目は変わりません。確かめたら <code>true</code> に戻して、完成時の2行をもう一度出します。",
+      "translation": "غيّر <code>val flag = true</code> إلى <code>val flag = false</code> ثم شغّل. يتغير السطر الأول إلى <code>flag is false</code>، ولا يتغير السطر الثاني. بعد التحقق، أعده إلى <code>true</code>، وأخرج سطري الاكتمال مرة أخرى."
+    },
+    {
+      "source": "<code>flag</code> の変更で1行目だけが変わり、戻すと <code>flag is true</code> / <code>string is not Tanaka</code> の2行になった。",
+      "translation": "تغير السطر الأول فقط بتغيير <code>flag</code>، وعند إعادته ظهرا السطران <code>flag is true</code> / <code>string is not Tanaka</code>."
+    },
+    {
+      "source": "次へ：ex06 と繰り返し →",
+      "translation": "الانتقال إلى ex06 والتكرار ←"
+    },
+    {
+      "source": "STEP 21 · 4コマ目 · 目安 20分",
+      "translation": "STEP 21 · الحصة 4 · حوالي 20 دقيقة"
+    },
+    {
+      "source": "ex06 を作る：listOf と for",
+      "translation": "إنشاء ex06: الكلمة listOf وfor"
+    },
+    {
+      "source": "① ex06 を作り、リストの要素を出す",
+      "translation": "① إنشاء ex06 وإخراج عناصر القائمة"
+    },
+    {
+      "source": "左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex06</code> と入力します。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code> في نافذة الأدوات <strong>プロジェクト</strong> (المشروع) على اليسار، واختر <strong>新規 → パッケージ</strong> (جديد ← حزمة)، ثم أدخل <code>ex06</code>."
+    },
+    {
+      "source": "できた <code>ex06</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex06</code> الذي أُنشئ، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). اجعل الاسم <code>main</code>، والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "<code>src/ex06/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex06</code> が2行にならないようにします。",
+      "translation": "افتح <code>src/ex06/main.kt</code>، واجعل محتواه كالشيفرة المكتملة التالية. تأكد من ألا يصبح <code>package ex06</code> في البداية على سطرين."
+    },
+    {
+      "source": "src/ex06/main.kt · ファイル全体",
+      "translation": "src/ex06/main.kt · الملف كاملا"
+    },
+    {
+      "source": "<code>listOf</code> に並べた文字列が、同じ順で1行ずつ出ます。<code>persons</code> は文字列のリスト <code>List&lt;String&gt;</code>、その中から取り出す <code>person</code> は <code>String</code> です。",
+      "translation": "تُخرج السلاسل النصية المدرجة في <code>listOf</code> سطرا بسطر بنفس الترتيب. <code>persons</code> هي قائمة سلاسل نصية <code>List&lt;String&gt;</code>، و<code>person</code> المستخرجة منها هي <code>String</code>."
+    },
+    {
+      "source": "③ Javaの拡張for・Swiftのfor-inと比べる",
+      "translation": "③ المقارنة مع حلقة for المحسنة في Java وfor-in في Swift"
+    },
+    {
+      "source": "Kotlinの <code>listOf(...)</code> は読み取り用の <code>List</code> を作る関数です。ここでは要素の追加・削除をせず、並べたものを順に読みます。",
+      "translation": "الدالة <code>listOf(...)</code> في Kotlin هي دالة تُنشئ <code>List</code> للقراءة. هنا لا نضيف أو نحذف عناصر، بل نقرأ العناصر المدرجة بالترتيب."
+    },
+    {
+      "source": "Javaの拡張forの <code>:</code> が、Kotlinでは <code>in</code> です。Swiftも <code>in</code> を使いますが、Kotlinは <code>for (...)</code> と丸かっこで囲みます。",
+      "translation": "العلامة <code>:</code> في حلقة for المحسنة في Java تقابلها <code>in</code> في Kotlin. تستخدم Swift أيضا <code>in</code>، لكن Kotlin تحيطها بأقواس دائرية <code>for (...)</code>."
+    },
+    {
+      "source": "<code>person</code> に <code>val</code> や <code>String</code> は書きません。<code>persons</code> の要素型から <code>String</code> が決まるためです。要素型を明示するなら <code>for (person: String in persons)</code> ですが、この回は省いた形でそろえます。",
+      "translation": "لا تكتب <code>val</code> أو <code>String</code> لـ <code>person</code>. ذلك لأن <code>String</code> تتحدد من نوع عنصر <code>persons</code>. لتحديد نوع العنصر صراحة تكتب <code>for (person: String in persons)</code>، لكننا سنوحدها في هذه الحصة بالشكل المختصر."
+    },
+    {
+      "source": "<code>val persons</code> の <code>val</code> は変数への再代入禁止です。リストの変更操作を公開するかどうかとは別の話で、ここでは <code>listOf</code> の読み取り用の型だけを使います。",
+      "translation": "الكلمة <code>val</code> في <code>val persons</code> تعني منع إعادة الإسناد للمتغير. هذا أمر منفصل عما إذا كانت عمليات تغيير القائمة مكشوفة أم لا، ونستخدم هنا فقط نوع القراءة الخاص بـ <code>listOf</code>."
+    },
+    {
+      "source": "④ 要素の順と出力の順を照合する",
+      "translation": "④ مطابقة ترتيب العناصر وترتيب المخرجات"
+    },
+    {
+      "source": "<code>listOf</code> の中で <code>\"tanaka\"</code> と <code>\"sato\"</code> の位置を入れ替えて実行します。出力が <code>sato</code> / <code>yamada</code> / <code>tanaka</code> になります。確かめたら元の順へ戻します。",
+      "translation": "بدّل موضعي <code>\"tanaka\"</code> و<code>\"sato\"</code> داخل <code>listOf</code> ثم شغّل. ستصبح المخرجات <code>sato</code> / <code>yamada</code> / <code>tanaka</code>. بعد التحقق، أعدها إلى الترتيب الأصلي."
+    },
+    {
+      "source": "<code>ex06/main.kt</code> を実行すると、<code>tanaka</code> / <code>yamada</code> / <code>sato</code> の順に3行出た。",
+      "translation": "عند تشغيل <code>ex06/main.kt</code>، ظهرت 3 أسطر بالترتيب <code>tanaka</code> / <code>yamada</code> / <code>sato</code>."
+    },
+    {
+      "source": "次へ：ex04 とクラス →",
+      "translation": "الانتقال إلى ex04 والأصناف ←"
+    },
+    {
+      "source": "STEP 22 · 4コマ目 · 目安 30分",
+      "translation": "STEP 22 · الحصة 4 · حوالي 30 دقيقة"
+    },
+    {
+      "source": "ex04 を作る：クラスとプライマリコンストラクタ",
+      "translation": "إنشاء ex04: الصنف والمُنشئ الأساسي"
+    },
+    {
+      "source": "① ex04 を作り、クラスから値を取り出す",
+      "translation": "① إنشاء ex04 واستخراج القيم من الصنف"
+    },
+    {
+      "source": "左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex04</code> と入力します。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code> في نافذة الأدوات <strong>プロジェクト</strong> (المشروع) على اليسار، واختر <strong>新規 → パッケージ</strong> (جديد ← حزمة)، ثم أدخل <code>ex04</code>."
+    },
+    {
+      "source": "できた <code>ex04</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex04</code> الذي أُنشئ، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). اجعل الاسم <code>main</code>، والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "<code>src/ex04/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex04</code> が2行にならないようにします。",
+      "translation": "افتح <code>src/ex04/main.kt</code>، واجعل محتواه كالشيفرة المكتملة التالية. تأكد من ألا يصبح <code>package ex04</code> في البداية على سطرين."
+    },
+    {
+      "source": "src/ex04/main.kt · ファイル全体",
+      "translation": "src/ex04/main.kt · الملف كاملا"
+    },
+    {
+      "source": "<code>Person(\"Yamada\", 20)</code> で渡した値を、<code>yamada.name</code> と <code>yamada.age</code> で読みます。<code>name</code> と <code>age</code> は <strong>プロパティ</strong>です。Javaのフィールドとgetterをまとめた宣言、Swiftの保存用プロパティに対応します。",
+      "translation": "تُقرأ القيم الممررة في <code>Person(\"Yamada\", 20)</code> باستخدام <code>yamada.name</code> و<code>yamada.age</code>. إن <code>name</code> و<code>age</code> هما <strong>خصائص</strong> (プロパティ). تقابل التصريح الذي يجمع الحقل (field) وgetter في Java، والخاصية المحفوظة في Swift."
+    },
+    {
+      "source": "③ コンストラクタの置き場所を比べる",
+      "translation": "③ مقارنة موضع المُنشئ"
+    },
+    {
+      "source": "クラス名の直後にある <code>(val name: String, val age: Int)</code> は、<strong>プライマリコンストラクタ</strong>です。Javaのコンストラクタ、Swiftの <code>init</code> が受け取る引数にあたります。",
+      "translation": "يمثل <code>(val name: String, val age: Int)</code> الموجود مباشرة بعد اسم الصنف <strong>المُنشئ الأساسي</strong> (プライマリコンストラクタ). وهو يعادل المُعامِلات التي يتلقاها مُنشئ Java و<code>init</code> في Swift."
+    },
+    {
+      "source": "ここでの <code>val</code> は「受け取った値を、読み取り専用のプロパティとして持つ」という宣言でもあります。Javaのフィールド・代入・getterをそれぞれ書く手間をまとめています。",
+      "translation": "تُعد <code>val</code> هنا أيضا تصريحا بأنها «تحتفظ بالقيمة المتلقاة كخاصية للقراءة فقط». فهي تختصر عناء كتابة الحقل والإسناد وgetter في Java بشكل منفصل."
+    },
+    {
+      "source": "Kotlinでインスタンスを作るときは <code>new</code> を書きません。<code>Person(...)</code> というクラス名への呼び出しがコンストラクタ呼び出しです。",
+      "translation": "عند إنشاء نسخة في Kotlin لا تكتب <code>new</code>. إن استدعاء اسم الصنف <code>Person(...)</code> هو استدعاء للمُنشئ."
+    },
+    {
+      "source": "本体に書くものがなければ、クラスの <code>{ }</code> も省けます。今日の完成コードが1行なのは、このためです。",
+      "translation": "إذا لم يكن هناك ما يُكتب في الجسم، فيمكن أيضا حذف الأقواس <code>{ }</code> الخاصة بالصنف. لهذا السبب تتكون الشيفرة المكتملة اليوم من سطر واحد."
+    },
+    {
+      "source": "④ クラスの中へメソッドを一時的に足す（5分）",
+      "translation": "④ إضافة طريقة إلى الصنف مؤقتا (5 دقائق)"
+    },
+    {
+      "source": "最後の <code>class Person...</code> の1行だけを、次の形に置き換えます。関数をクラスの <code>{ }</code> の中へ置く点が、Javaのメソッド・Swiftのインスタンスメソッドと同じです。",
+      "translation": "استبدل السطر الأخير <code>class Person...</code> فقط بالشكل التالي. وضع الدالة داخل أقواس <code>{ }</code> للصنف يماثل الطريقة في Java وطريقة النسخة في Swift."
+    },
+    {
+      "source": "<code>main</code> の <code>println(yamada.age)</code> の次に <code>yamada.greet()</code> を足して実行します。3行目に <code>Yamada</code> が出ます。メソッドの中の <code>name</code> は、そのインスタンスのプロパティです。確認したら呼び出しを消し、クラスも元の1行へ戻します。",
+      "translation": "أضف <code>yamada.greet()</code> بعد <code>println(yamada.age)</code> في <code>main</code> ثم شغّل. ستظهر <code>Yamada</code> في السطر الثالث. الكلمة <code>name</code> داخل الطريقة هي خاصية لتلك النسخة. بعد التحقق، احذف الاستدعاء وأعد الصنف أيضا إلى السطر الأصلي الواحد."
+    },
+    {
+      "source": "⑤ Javaから見える形を確認する（教員と5分）",
+      "translation": "⑤ التحقق من الشكل المرئي من Java (5 دقائق مع المعلم)"
+    },
+    {
+      "source": "Kotlin/JVMでは、読み取り専用プロパティの値を読むgetterが生成されます。教員が <code>Person</code> のバイトコードをJavaの形で表示し、次の名前を探します。表示用のJavaコードは編集しません。",
+      "translation": "في Kotlin/JVM، يُولّد getter يقرأ قيمة خاصية القراءة فقط. سيعرض المعلم شيفرة البايت (bytecode) الخاصة بـ <code>Person</code> بصيغة Java، ويبحث عن الأسماء التالية. لن تُعدّل شيفرة Java المخصصة للعرض."
+    },
+    {
+      "source": "Kotlinの宣言・読み取り",
+      "translation": "التصريح والقراءة في Kotlin"
+    },
+    {
+      "source": "生成されるJava側の形",
+      "translation": "الشكل المُولّد في جانب Java"
+    },
+    {
+      "source": "<code>Person(String, int)</code> コンストラクタ",
+      "translation": "مُنشئ <code>Person(String, int)</code>"
+    },
+    {
+      "source": "<code>val name: String</code> と <code>yamada.name</code>",
+      "translation": "<code>val name: String</code> و<code>yamada.name</code>"
+    },
+    {
+      "source": "保存用フィールドと <code>getName()</code>",
+      "translation": "الحقل المحفوظ و<code>getName()</code>"
+    },
+    {
+      "source": "<code>val age: Int</code> と <code>yamada.age</code>",
+      "translation": "<code>val age: Int</code> و<code>yamada.age</code>"
+    },
+    {
+      "source": "保存用フィールドと <code>getAge()</code>",
+      "translation": "الحقل المحفوظ و<code>getAge()</code>"
+    },
+    {
+      "source": "Javaのgetterを手で書かなくてよい理由は、Kotlinのプロパティ宣言からコンパイラが補っているためです。この完成コードの <code>val</code> プロパティにはsetterは生成されません。",
+      "translation": "السبب في عدم الحاجة إلى كتابة getter الخاص بـ Java يدويا هو أن المُصرّف يكمله بناء على تصريح الخاصية في Kotlin. لا يُولّد setter لخاصية <code>val</code> في هذه الشيفرة المكتملة."
+    },
+    {
+      "source": "一時的なメソッドを消して完成コードへ戻し、出力が <code>Yamada</code> / <code>20</code> の2行になった。Java側の <code>getName()</code> と <code>getAge()</code> も画面で確認した。",
+      "translation": "تُحذف الطريقة المؤقتة والشيفرة هي الشيفرة المكتملة، والمخرجات سطران <code>Yamada</code> / <code>20</code>. وتتأكد من وجود <code>getName()</code> و<code>getAge()</code> في جانب Java على الشاشة."
+    },
+    {
+      "source": "STEP 23 · 4コマ目 · 目安 12分",
+      "translation": "STEP 23 · الحصة 4 · حوالي 12 دقيقة"
+    },
+    {
+      "source": "ミニ練習：変えた行と出力を対応させる",
+      "translation": "تدريب مصغر: مطابقة الأسطر المُعدّلة مع المخرجات"
+    },
+    {
+      "source": "演習ごとに、開いている <code>main.kt</code> のパッケージ名を確認してから変更します。別のパッケージの出力が出たら、いま開いている <code>fun main()</code> の左の ▷ から実行し直してください。",
+      "translation": "تحقق من اسم حزمة <code>main.kt</code> المفتوح قبل إجراء التغييرات في كل تمرين. إذا ظهرت مخرجات حزمة أخرى، فشغّل مجددا من ▷ الموجود على يسار <code>fun main()</code> المفتوح حاليا."
+    },
+    {
+      "source": "① 条件とリストを変える（6分）",
+      "translation": "① تغيير الشرط والقائمة (6 دقائق)"
+    },
+    {
+      "source": "<code>ex05/main.kt</code> の <code>flag</code> を <code>false</code>、<code>yamada</code> の値を <code>\"Tanaka\"</code> に変えます。出力は <code>flag is false</code> / <code>string is Tanaka</code> の2行です。",
+      "translation": "غيّر <code>flag</code> إلى <code>false</code> وقيمة <code>yamada</code> إلى <code>\"Tanaka\"</code> في <code>ex05/main.kt</code>. المخرجات هي سطران <code>flag is false</code> / <code>string is Tanaka</code>."
+    },
+    {
+      "source": "<code>ex06/main.kt</code> の <code>listOf</code> の末尾へ <code>\"suzuki\"</code> を足します。<code>for</code> は変更せず、出力の4行目に <code>suzuki</code> が加わることを確認します。",
+      "translation": "أضف <code>\"suzuki\"</code> إلى نهاية <code>listOf</code> في <code>ex06/main.kt</code>. لا تغيّر <code>for</code>، وتأكد من إضافة <code>suzuki</code> في السطر الرابع من المخرجات."
+    },
+    {
+      "source": "② val のプロパティへの再代入を試す（3分）",
+      "translation": "② تجربة إعادة الإسناد إلى خاصية val (3 دقائق)"
+    },
+    {
+      "source": "<code>ex04/main.kt</code> の <code>val yamada = Person(...)</code> の直後に <code>yamada.age = 21</code> を足します。その行の赤い波線と、代入が認められないことを確認してから、足した行を消します。エラーの言い回しはIDEやKotlinの版で変わります。",
+      "translation": "أضف <code>yamada.age = 21</code> مباشرة بعد <code>val yamada = Person(...)</code> في <code>ex04/main.kt</code>. تأكد من الخط المتموّج الأحمر في ذلك السطر ومن عدم قبول الإسناد، ثم احذف السطر الذي أضفته. تختلف صياغة الخطأ باختلاف إصدار IDE أو Kotlin."
+    },
+    {
+      "source": "③ Java・Swiftでも、読み取り専用の値は書き換えられない",
+      "translation": "③ لا يمكن أيضا إعادة كتابة قيم القراءة فقط في Java وSwift"
+    },
+    {
+      "source": "<code>yamada</code> という変数が <code>val</code> であることと、<code>age</code> プロパティが <code>val</code> であることは別です。今回 <code>age</code> に代入できないのは、<code>Person</code> の宣言が <code>val age: Int</code> だからです。<code>yamada</code> を <code>var</code> にするだけでは、プロパティの代入は許可されません。",
+      "translation": "كون المتغير <code>yamada</code> هو <code>val</code> يختلف عن كون الخاصية <code>age</code> هي <code>val</code>. السبب في عدم القدرة على الإسناد لـ <code>age</code> هذه المرة هو أن التصريح في <code>Person</code> هو <code>val age: Int</code>. جعل <code>yamada</code> كـ <code>var</code> فقط لا يسمح بإسناد الخاصية."
+    },
+    {
+      "source": "④ 最後の3分で完成コードへ戻す",
+      "translation": "④ العودة إلى الشيفرة المكتملة في آخر 3 دقائق"
+    },
+    {
+      "source": "<code>ex05</code> は <code>flag = true</code>、<code>yamada = \"yamada\"</code> に戻します。",
+      "translation": "في <code>ex05</code> أعدها إلى <code>flag = true</code> و<code>yamada = \"yamada\"</code>."
+    },
+    {
+      "source": "<code>ex06</code> では <code>\"suzuki\"</code> を消し、3人のリストに戻します。",
+      "translation": "احذف <code>\"suzuki\"</code> في <code>ex06</code> وأعدها إلى قائمة من 3 أشخاص."
+    },
+    {
+      "source": "<code>ex04</code> から <code>yamada.age = 21</code> が消えていることを確かめます。3本をそれぞれ実行し、完成時の出力へ戻ったことを見ます。",
+      "translation": "تأكد من اختفاء <code>yamada.age = 21</code> من <code>ex04</code>. شغّل الملفات الثلاثة تباعا، وتأكد من عودة المخرجات إلى حالتها عند الاكتمال."
+    },
+    {
+      "source": "<code>age</code> への代入が拒否された行を消し、3本とも完成時の出力に戻っている。",
+      "translation": "السطر الذي رُفض فيه الإسناد إلى <code>age</code> محذوف، والمخرجات في الملفات الثلاثة عائدة إلى حالتها عند الاكتمال."
+    },
+    {
+      "source": "次へ：4コマ目の完成 →",
+      "translation": "الانتقال إلى اكتمال الحصة 4 ←"
+    },
+    {
+      "source": "STEP 24 · 4コマ目 · 目安 3分",
+      "translation": "STEP 24 · الحصة 4 · حوالي 3 دقائق"
+    },
+    {
+      "source": "4コマ目の完成",
+      "translation": "اكتمال الحصة 4"
+    },
+    {
+      "source": "① 3本を順に実行する",
+      "translation": "① تشغيل الملفات الثلاثة بالترتيب"
+    },
+    {
+      "source": "開いて実行するファイル",
+      "translation": "الملف الذي ستفتحه وتشغّله"
+    },
+    {
+      "source": "確認する出力",
+      "translation": "المخرجات التي ستتحقق منها"
+    },
+    {
+      "source": "3本の出力を1つの <code>main</code> へまとめる必要はありません。パッケージが違うので、それぞれの <code>fun main()</code> から実行します。",
+      "translation": "لا داعي لجمع المخرجات الثلاثة في <code>main</code> واحد. نظرا لاختلاف الحزم، شغّلها من كل <code>fun main()</code> على حدة."
+    },
+    {
+      "source": "② 書いたコードの差分を見直す",
+      "translation": "② مراجعة اختلافات الشيفرة التي كتبتها"
+    },
+    {
+      "source": "文字列の内容は <code>==</code>、リストの走査は <code>in</code>、プロパティは <code>インスタンス.名前</code>。知っている処理でも、Java・Swiftと同じ記号になる場所と違う場所があります。",
+      "translation": "محتوى السلاسل النصية هو <code>==</code>، ومسح القائمة هو <code>in</code>، والخاصية هي <code>インスタンス.名前</code> (النسخة.الاسم). حتى في المعالجات التي تعرفها، هناك مواضع تتطابق فيها الرموز مع Java وSwift ومواضع تختلف."
+    },
+    {
+      "source": "<code>src</code> に <code>ex01</code>〜<code>ex06</code> が並び、以前のコードが残っていることを確認します。今回増えたのはパッケージ3つで、プロジェクトは <code>K01HelloKotlin</code> の1つのままです。",
+      "translation": "تأكد من إدراج <code>ex01</code>–<code>ex06</code> في <code>src</code>، وبقاء الشيفرات السابقة. الزيادة هذه المرة هي 3 حزم، ويبقى المشروع <code>K01HelloKotlin</code> واحدا فقط."
+    },
+    {
+      "source": "3つの実行結果が表と一致し、練習で加えた行が残っていない。<code>src</code> に <code>ex04</code>・<code>ex05</code>・<code>ex06</code> がある。",
+      "translation": "تتطابق المخرجات الثلاثة مع الجدول، ولا توجد الأسطر التي أضفتها في التدريب. يوجد <code>ex04</code> و<code>ex05</code> و<code>ex06</code> في <code>src</code>."
+    },
+    {
+      "source": "次へ：5コマ目を始める →",
+      "translation": "الانتقال إلى بدء الحصة 5 ←"
+    },
+    {
+      "source": "STEP 25 · 5コマ目 · 目安 5分",
+      "translation": "STEP 25 · الحصة 5 · حوالي 5 دقائق"
+    },
+    {
+      "source": "5コマ目を始める",
+      "translation": "بدء الحصة 5"
+    },
+    {
+      "source": "今日のゴール",
+      "translation": "هدف اليوم"
+    },
+    {
+      "source": "<code>ex08</code> のアクセサ、<code>ex09</code> の <code>data class</code>、<code>ex07</code> の拡張関数を、この順に動かします。演習の番号は前年度資料の節に対応しているため、今日は番号順ではありません。使うプロジェクトは引き続き <code>K01HelloKotlin</code> です。",
+      "translation": "ستشغّل دوال الوصول في <code>ex08</code>، و<code>data class</code> في <code>ex09</code>، ودالة الامتداد في <code>ex07</code> بهذا الترتيب. أرقام التمارين تتوافق مع أقسام الدليل للعام الماضي، لذا فهي ليست بالترتيب الرقمي اليوم. المشروع الذي تستخدمه هو <code>K01HelloKotlin</code> كما كان."
+    },
+    {
+      "source": "① 自分のプロジェクトに Foo.kt を作る",
+      "translation": "① إنشاء Foo.kt في مشروعك"
+    },
+    {
+      "source": "IntelliJ IDEA の最近開いたプロジェクトから <code>K01HelloKotlin</code> を開きます。一覧にないときは <strong>開く…</strong> から、<code>書類/Kotlin/K01HelloKotlin</code> を選びます。すでに開いていればそのまま使います。",
+      "translation": "افتح <code>K01HelloKotlin</code> من المشاريع المفتوحة مؤخرا في IntelliJ IDEA. إذا لم يكن في القائمة، فاختر <code>書類/Kotlin/K01HelloKotlin</code> (المستندات ← Kotlin ← K01HelloKotlin) من <strong>開く…</strong> (فتح…). إذا كان مفتوحا بالفعل، فاستخدمه كما هو."
+    },
+    {
+      "source": "左の <code>src</code> に <code>ex01</code>〜<code>ex06</code> があることを確かめます。既存のパッケージは残します。",
+      "translation": "تأكد من وجود <code>ex01</code> إلى <code>ex06</code> في <code>src</code> على اليسار. اترك الحزم الحالية كما هي."
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex08</code> を作ります。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code>، وأنشئ <code>ex08</code> من <strong>新規 → パッケージ</strong> (جديد ← حزمة)."
+    },
+    {
+      "source": "<code>ex08</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。名前は <code>Foo</code>、種類は <strong>ファイル</strong> を選びます。大文字の <code>F</code> から始めます。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex08</code>، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). أدخل <code>Foo</code> في الاسم، واختر <strong>ファイル</strong> (ملف) في النوع. ابدأ بحرف <code>F</code> كبير."
+    },
+    {
+      "source": "できた <code>Foo.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "استبدل محتوى <code>Foo.kt</code> الذي أنشأته كاملا بما يلي، وشغّله من زر التشغيل على يسار <code>fun main()</code>."
+    },
+    {
+      "source": "Runツールウィンドウに <code>ex08</code> が1行出ます。別の出力が出たときは、上のツールバーではなく、いま開いた <code>Foo.kt</code> の <code>fun main()</code> の左から実行し直します。",
+      "translation": "يظهر <code>ex08</code> في سطر واحد في نافذة الأدوات Run. إذا ظهرت مخرجات أخرى، فأعد التشغيل من يسار <code>fun main()</code> في <code>Foo.kt</code> المفتوح الآن، وليس من شريط الأدوات في الأعلى."
+    },
+    {
+      "source": "Kotlinのトップレベル関数は、Javaのようにクラスで囲む必要がありません。ファイル名が <code>Foo.kt</code> でも <code>fun main()</code> から実行できます。Swiftのトップレベルに処理を書く形とは、入口を <code>main</code> という関数にするところが違います。",
+      "translation": "لا تحتاج الدالة في المستوى الأعلى (トップレベル関数) في Kotlin إلى إحاطتها بصنف كما في Java. يمكنك تشغيلها من <code>fun main()</code> حتى لو كان اسم الملف <code>Foo.kt</code>. يختلف هذا عن كتابة المعالجة في المستوى الأعلى في Swift، حيث تكون نقطة الدخول هي دالة تسمى <code>main</code>."
+    },
+    {
+      "source": "<code>src/ex08/Foo.kt</code> の1行目が <code>package ex08</code> で、Runツールウィンドウに <code>ex08</code> が出ている。",
+      "translation": "السطر الأول من <code>src/ex08/Foo.kt</code> هو <code>package ex08</code>، ويظهر <code>ex08</code> في نافذة الأدوات Run."
+    },
+    {
+      "source": "次へ：アクセサを自分で書く →",
+      "translation": "الانتقال إلى كتابة دوال الوصول بنفسك ←"
+    },
+    {
+      "source": "STEP 26 · 5コマ目 · 目安 23分",
+      "translation": "STEP 26 · الحصة 5 · حوالي 23 دقيقة"
+    },
+    {
+      "source": "アクセサを自分で書く（ex08）",
+      "translation": "كتابة دوال الوصول بنفسك (ex08)"
+    },
+    {
+      "source": "<code>foo.counter</code> に代入したときと、読んだときに別の処理が走ることを、コンソールの6行で確かめます。Javaのgetter / setter、Swiftのcomputed propertyに対応する書き方です。",
+      "translation": "تحقق من خلال الأسطر الستة في وحدة التحكم (コンソール) من أن معالجة مختلفة تعمل عند الإسناد إلى <code>foo.counter</code> وعند قراءته. هذه الصياغة تقابل getter / setter في Java، وcomputed property في Swift."
+    },
+    {
+      "source": "① Foo.kt 全体を次の内容にする",
+      "translation": "① استبدال محتوى Foo.kt كاملا بما يلي"
+    },
+    {
+      "source": "<code>src/ex08/Foo.kt</code> を開き、先ほどの <code>println(\"ex08\")</code> を含めて、ファイル全体を置き換えます。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
+      "translation": "افتح <code>src/ex08/Foo.kt</code> واستبدل الملف كاملا، بما في ذلك <code>println(\"ex08\")</code> السابقة. ضع كلا من <code>class Foo</code> و<code>fun main()</code> في المستوى الأول من الملف مباشرة."
+    },
+    {
+      "source": "src/ex08/Foo.kt · 完成コード",
+      "translation": "src/ex08/Foo.kt · الشيفرة المكتملة"
+    },
+    {
+      "source": "<code>fun main()</code> の左からRunします。<code>val foo</code> でも <code>foo.counter</code> に代入できる点に注目してください。固定しているのは <code>foo</code> が参照するオブジェクトで、<code>counter</code> は <code>var</code> です。",
+      "translation": "شغّل من يسار <code>fun main()</code>. لاحظ أنه يمكنك الإسناد إلى <code>foo.counter</code> حتى مع <code>val foo</code>. ما تم تثبيته هو الكائن الذي يشير إليه <code>foo</code>، بينما <code>counter</code> هو <code>var</code>."
+    },
+    {
+      "source": "書いた行",
+      "translation": "السطر المكتوب"
+    },
+    {
+      "source": "起きること",
+      "translation": "ما يحدث"
+    },
+    {
+      "source": "<code>set(value)</code> が呼ばれます。<code>value</code> は <code>-1</code> なので、<code>if (value &gt;= 0)</code> の中には進まず、保存している値は <code>0</code> のままです。",
+      "translation": "تُستدعى <code>set(value)</code>. وبما أن <code>value</code> هو <code>-1</code>، لا تستمر المعالجة داخل <code>if (value &gt;= 0)</code>، وتبقى القيمة المحفوظة كما هي <code>0</code>."
+    },
+    {
+      "source": "値を読むために <code>get()</code> が呼ばれ、getterの行が出ます。そのあと、返された <code>0</code> を外側の <code>println</code> が出します。",
+      "translation": "تُستدعى <code>get()</code> لقراءة القيمة، ويظهر سطر getter. بعد ذلك، تطبع <code>println</code> الخارجية القيمة <code>0</code> المُعادة."
+    },
+    {
+      "source": "setterの条件を満たすので <code>field = value</code> が実行され、保存値が <code>10</code> になります。次の読み取りでは <code>10</code> が返ります。",
+      "translation": "بما أن شرط setter متوفر، يُنفّذ <code>field = value</code>، وتصبح القيمة المحفوظة <code>10</code>. وستُعاد القيمة <code>10</code> في القراءة التالية."
+    },
+    {
+      "source": "次は保存値とアクセサだけの比較です。出力用の行は省き、負数を保存しない処理をそろえています。比較用のコードは <code>Foo.kt</code> へ追加しません。",
+      "translation": "التالي هو مقارنة للقيمة المحفوظة ودوال الوصول فقط. تم استبعاد أسطر الإخراج، وتوحيد معالجة عدم حفظ الأعداد السالبة. لا تُضف شيفرة المقارنة إلى <code>Foo.kt</code>."
+    },
+    {
+      "source": "Kotlinはプロパティの直下に <code>get()</code> / <code>set(value)</code> を置きます。使う側は <code>foo.counter</code> のままで、Javaの <code>getCounter()</code> / <code>setCounter(...)</code> のように呼び分けません。",
+      "translation": "في Kotlin، يوضَع <code>get()</code> / <code>set(value)</code> مباشرة تحت الخاصية. من جهة الاستخدام، يبقى التعبير <code>foo.counter</code> كما هو، ولا يتم الاستدعاء بشكل منفصل كما في <code>getCounter()</code> / <code>setCounter(...)</code> في Java."
+    },
+    {
+      "source": "<code>field</code> は、アクセサの中で保存値そのものを指す名前です。<strong>バッキングフィールド</strong>と呼びます。比較したJavaの <code>counter</code>、Swiftの <code>storedCounter</code> に対応し、Kotlinでは別の保存用プロパティを自分で宣言せずに使えます。<code>field</code> を <code>counter</code> に替えると、アクセサからまた同じアクセサを呼ぶことになるため、置き換えません。",
+      "translation": "<code>field</code> هو الاسم الذي يشير إلى القيمة المحفوظة نفسها داخل دوال الوصول. يُسمى <strong>الحقل الداعم</strong> (バッキングフィールド). وهو يقابل <code>counter</code> في Java، و<code>storedCounter</code> في Swift عند المقارنة، ويمكنك في Kotlin استخدامه دون الحاجة إلى التصريح عن خاصية حفظ أخرى بنفسك. إذا استبدلت <code>field</code> بـ <code>counter</code>، فسيؤدي ذلك إلى استدعاء دالة الوصول نفسها من داخلها، لذا لا تقم بالاستبدال."
+    },
+    {
+      "source": "<code>var counter = 0</code> の初期化では、このsetterは呼ばれません。出力が <code>setが呼ばれる： -1</code> から始まるのはそのためです。",
+      "translation": "لا يُستدعى setter هذا عند التهيئة <code>var counter = 0</code>. وهذا هو السبب في أن المخرجات تبدأ من <code>setが呼ばれる： -1</code>."
+    },
+    {
+      "source": "文字列の <code>$value</code> と <code>$field</code> は、その値を文字列へ埋め込む書き方です。Javaの文字列との <code>+</code>、Swiftの <code>\\(値)</code> に対応します。",
+      "translation": "يُستخدم <code>$value</code> و<code>$field</code> داخل السلسلة النصية لتضمين قيمهما فيها. وهذا يقابل <code>+</code> مع السلاسل النصية في Java، و<code>\\(値)</code> في Swift."
+    },
+    {
+      "source": "Runツールウィンドウにsetterとgetterの行が出ており、値だけの行は <code>0</code>、<code>10</code> の順になっている。",
+      "translation": "تظهر أسطر setter وgetter في نافذة الأدوات Run، وتكون الأسطر التي تحتوي على القيم فقط بالترتيب <code>0</code> ثم <code>10</code>."
+    },
+    {
+      "source": "次へ：data class とスマートキャスト →",
+      "translation": "الانتقال إلى data class والتحويل الذكي ←"
+    },
+    {
+      "source": "STEP 27 · 5コマ目 · 目安 35分",
+      "translation": "STEP 27 · الحصة 5 · حوالي 35 دقيقة"
+    },
+    {
+      "source": "data class とスマートキャスト（ex09）",
+      "translation": "data class والتحويل الذكي (ex09)"
+    },
+    {
+      "source": "同じ値で作った2つのオブジェクトを比較し、<code>data class</code> が生成するメソッドの働きを出力で確かめます。続けて、名前付き引数と既定引数で年齢だけを変えたコピーを作り、型を確かめたあとのスマートキャストを試します。",
+      "translation": "قارن كائنين تم إنشاؤهما بنفس القيم، وتحقق من عمل الطرق التي تولّدها <code>data class</code> في المخرجات. ثم أنشئ نسخة غُيِّر فيها العمر فقط باستخدام الوسيط المسمّى والوسيط الافتراضي، وجرّب التحويل الذكي بعد التحقق من النوع."
+    },
+    {
+      "source": "① ex09/main.kt を作って実行する（12分）",
+      "translation": "① إنشاء ex09/main.kt وتشغيله (12 دقيقة)"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex09</code> を作ります。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code>، وأنشئ <code>ex09</code> من <strong>新規 → パッケージ</strong> (جديد ← حزمة)."
+    },
+    {
+      "source": "<code>ex09</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex09</code>، ومن <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin)، اجعل الاسم <code>main</code> والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "<code>main.kt</code> 全体を次の内容にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
+      "translation": "اجعل محتوى <code>main.kt</code> بالكامل كما يلي. <code>Person</code> و<code>Person2</code> في النهاية يقعان <strong>خارج</strong> قوس الإغلاق الخاص بـ <code>main</code>."
+    },
+    {
+      "source": "このファイルの <code>fun main()</code> の左からRunします。",
+      "translation": "شغّل من يسار <code>fun main()</code> في هذا الملف."
+    },
+    {
+      "source": "src/ex09/main.kt · 完成コード",
+      "translation": "src/ex09/main.kt · الشيفرة المكتملة"
+    },
+    {
+      "source": "② 実行結果を上から確かめる",
+      "translation": "② التحقق من المخرجات من الأعلى"
+    },
+    {
+      "source": "出力は8行です。数値や末尾の文字列が実行環境により変わる行もあるため、次の表の内容で照合します。",
+      "translation": "الناتج مكون من 8 أسطر. ونظرا لأن بعض الأسطر تتغير فيها الأرقام أو السلاسل النصية في النهاية حسب بيئة التشغيل، طابقها مع محتوى الجدول التالي."
+    },
+    {
+      "source": "確かめる内容",
+      "translation": "ما تتحقق منه"
+    },
+    {
+      "source": "<code>yamada.hashCode()</code> と <code>yamada2.hashCode()</code> が同じ整数になっています。",
+      "translation": "يكون لـ <code>yamada.hashCode()</code> و<code>yamada2.hashCode()</code> نفس العدد الصحيح."
+    },
+    {
+      "source": "<code>tanaka.hashCode()</code> と <code>tanaka2.hashCode()</code> の整数が出ます。特定の数値や、2つが異なることは完成条件にしません。",
+      "translation": "يُعرض عددان صحيحان لـ <code>tanaka.hashCode()</code> و<code>tanaka2.hashCode()</code>. لا يشترط كشرط للاكتمال أن تكون الأرقام محددة أو أن يكون الاثنان مختلفين."
+    },
+    {
+      "source": "2人とも <code>Person(name=yamada, age=20)</code> と出ます。",
+      "translation": "يُعرض <code>Person(name=yamada, age=20)</code> لكليهما."
+    },
+    {
+      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は見本と一致しなくても構いません。",
+      "translation": "يتبع <code>ex09.Person2@</code> حروف وأرقام لكليهما. لا يشترط أن تتطابق الحروف والأرقام في النهاية مع المثال."
+    },
+    {
+      "source": "<code>copyYamada.hashCode:</code> のあとに整数が出ます。",
+      "translation": "يُعرض عدد صحيح بعد <code>copyYamada.hashCode:</code>."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（8分）",
+      "translation": "③ كيف تكتب ذلك في Java / Swift (8 دقائق)"
+    },
+    {
+      "source": "<code>data class</code> は、プライマリコンストラクタにある <code>name</code> と <code>age</code> をもとに <code>equals()</code>・<code>hashCode()</code>・<code>toString()</code> などを生成します。Javaの <code>record</code>、Swiftの <code>struct: Hashable</code> による等価比較やハッシュの自動合成に対応する機能です。生成される文字列や数値まで3言語で同じになるわけではありません。",
+      "translation": "تولّد <code>data class</code> كلا من <code>equals()</code> و<code>hashCode()</code> و<code>toString()</code> وغيرها بناء على <code>name</code> و<code>age</code> في المُنشئ الأساسي. وهي ميزة تقابل <code>record</code> في Java، والمقارنة الآلية والتوليد التلقائي للهاش باستخدام <code>struct: Hashable</code> في Swift. لا يعني هذا أن السلاسل النصية أو الأرقام المولدة ستكون متطابقة في اللغات الثلاث."
+    },
+    {
+      "source": "このコードの通常クラス <code>Person2</code> は、これらのメソッドを上書きしていません。そのため、別々に作った2人の <code>equals()</code> は <code>false</code> です。<strong>通常クラスでは値による比較を書けない、という意味ではありません。</strong>",
+      "translation": "لا يعيد الصنف العادي <code>Person2</code> في هذه الشيفرة تعريف هذه الطرق. لذلك، فإن <code>equals()</code> لشخصين تم إنشاؤهما بشكل منفصل تكون <code>false</code>. <strong>هذا لا يعني أنه لا يمكنك كتابة مقارنة حسب القيمة في الصنف العادي.</strong>"
+    },
+    {
+      "source": "<code>equals()</code> が <code>true</code> なら、<code>hashCode()</code> も同じ値になります。逆向きは成り立たず、ハッシュ値が同じというだけでは等価とは限りません。",
+      "translation": "إذا كانت <code>equals()</code> هي <code>true</code>، فسيكون لـ <code>hashCode()</code> القيمة نفسها. العكس ليس صحيحا، فمجرد تطابق قيم الهاش لا يعني بالضرورة التطابق."
+    },
+    {
+      "source": "<code>component1()</code> と <code>component2()</code> も自動生成され、コンストラクタで並べた順に <code>name</code>、<code>age</code> を返します。今回は完成コードの呼び出し方で確かめます。",
+      "translation": "يتم أيضا توليد <code>component1()</code> و<code>component2()</code> تلقائيا، وتعيدان <code>name</code> و<code>age</code> بالترتيب المُدرج في المُنشئ. سنتحقق هذه المرة من خلال طريقة الاستدعاء في الشيفرة المكتملة."
+    },
+    {
+      "source": "Kotlinの <code>data class</code> はクラスです。Swiftの <code>struct</code> と同じ値型になるわけではありません。",
+      "translation": "إن <code>data class</code> في Kotlin هو صنف. ولن يصبح نوع قيمة (value type) مثل <code>struct</code> في Swift."
+    },
+    {
+      "source": "④ copy の名前付き引数と既定引数（7分）",
+      "translation": "④ الوسيط المسمّى والوسيط الافتراضي لـ copy (7 دقائق)"
+    },
+    {
+      "source": "<code>val copyYamada = yamada.copy(age = 25)</code> の <code>age = 25</code> は、元の <code>yamada.age</code> への代入ではありません。<strong>名前付き引数</strong>で、<code>copy</code> の <code>age</code> 引数だけに <code>25</code> を渡しています。省いた <code>name</code> は元の <code>yamada.name</code> を使います。",
+      "translation": "إن <code>age = 25</code> في <code>val copyYamada = yamada.copy(age = 25)</code> ليست إسنادا إلى <code>yamada.age</code> الأصلية. إنها <strong>الوسيط المسمّى</strong> (名前付き引数)، حيث نمرر <code>25</code> فقط لوسيط <code>age</code> الخاص بـ <code>copy</code>. أما <code>name</code> الذي تم حذفه فيستخدم <code>yamada.name</code> الأصلية."
+    },
+    {
+      "source": "自動生成される <code>copy</code> の引数は、次の形です。これは宣言部分の説明で、ファイルへ追加するコードではありません。<code>引数名: 型 = 既定値</code> と書かれた引数は、呼び出し側で省けます。",
+      "translation": "تتخذ وسائط <code>copy</code> المولدة تلقائيا الشكل التالي. هذا توضيح لجزء التصريح، وليس شيفرة لإضافتها إلى الملف. يمكن للجهة المستدعية الاستغناء عن الوسيط المكتوب بالشكل <code>引数名: 型 = 既定値</code> (اسم الوسيط: النوع = القيمة الافتراضية)."
+    },
+    {
+      "source": "<code>yamada.copy(age = 25)</code> を一度 <code>yamada.copy()</code> に変え、Runします。",
+      "translation": "غيّر <code>yamada.copy(age = 25)</code> مؤقتا إلى <code>yamada.copy()</code>، وشغّل."
+    },
+    {
+      "source": "7行目が <code>copyYamada Person(name=yamada, age=20)</code> に変わります。両方の引数を省いたので、名前も年齢も元と同じ値です。",
+      "translation": "يتغير السطر 7 إلى <code>copyYamada Person(name=yamada, age=20)</code>. وبما أننا استغنينا عن كلا الوسيطين، فإن الاسم والعمر يحتفظان بنفس قيمتهما الأصلية."
+    },
+    {
+      "source": "<code>yamada.copy(age = 25)</code> に戻し、7行目が <code>age=25</code> に戻ることを確かめます。",
+      "translation": "أعدها إلى <code>yamada.copy(age = 25)</code>، وتحقق من عودة السطر 7 إلى <code>age=25</code>."
+    },
+    {
+      "source": "年齢だけ違うオブジェクトを作る書き方を比べます。",
+      "translation": "نقارن طريقة كتابة إنشاء كائن يختلف فيه العمر فقط."
+    },
+    {
+      "source": "Kotlinの名前付き引数は、呼び出す側が任意で付ける <code>age = 25</code> です。Swiftの <code>age: 25</code> は宣言側が決めた<strong>引数ラベル</strong>で、このイニシャライザでは省けません。記号の違いだけではありません。Kotlinの <code>copy</code> では、名前付き引数と既定引数を組み合わせることで、変更する引数だけを指定できます。<code>copy</code> は新しいオブジェクトを返し、元の <code>yamada</code> の年齢は <code>20</code> のままです。",
+      "translation": "الوسيط المسمّى في Kotlin هو <code>age = 25</code> الذي يضيفه المستدعي اختياريا. بينما <code>age: 25</code> في Swift هي <strong>تسمية الوسيط</strong> التي حددتها جهة التصريح، ولا يمكن الاستغناء عنها في هذا المُنشئ. لا يقتصر الاختلاف على الرموز فقط. ففي <code>copy</code> في Kotlin، يمكنك من خلال الجمع بين الوسيط المسمّى والوسيط الافتراضي تحديد الوسائط التي تريد تغييرها فقط. تعيد <code>copy</code> كائنا جديدا، ويبقى عمر <code>yamada</code> الأصلي <code>20</code> كما هو."
+    },
+    {
+      "source": "⑤ 型とnullを確かめてから使う（8分）",
+      "translation": "⑤ التحقق من النوع وnull قبل الاستخدام (8 دقائق)"
+    },
+    {
+      "source": "<strong>スマートキャスト</strong>は、条件で確かめた型として、その範囲で同じ変数を使える書き方です。Javaの <code>instanceof</code> によるパターンマッチ、Swiftの <code>as?</code> と <code>if let</code> に対応します。次の2関数を、ファイル末尾の <code>class Person2(...)</code> のあとへ一時的に追加します。",
+      "translation": "<strong>التحويل الذكي</strong> (スマートキャスト) هو طريقة كتابة تتيح استخدام المتغير نفسه كنوع تم التحقق منه بالشرط، وذلك ضمن هذا النطاق. يقابل مطابقة الأنماط باستخدام <code>instanceof</code> في Java، و<code>as?</code> و<code>if let</code> في Swift. أضف الدالتين التاليتين مؤقتا بعد <code>class Person2(...)</code> في نهاية الملف."
+    },
+    {
+      "source": "次の3行を、<code>main</code> の最後の <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> の<strong>あと、<code>main</code> の閉じかっこの前</strong>に追加してRunします。",
+      "translation": "أضف الأسطر الثلاثة التالية بعد <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> في نهاية <code>main</code> <strong>وقبل قوس الإغلاق الخاص بـ <code>main</code></strong>، ثم شغّل Run."
+    },
+    {
+      "source": "元の8行のあとに、次の2行だけが増えます。<code>showName(null)</code> では条件を満たさないため、出力は増えません。",
+      "translation": "ستتم إضافة السطرين التاليين فقط بعد الأسطر الـ 8 الأصلية. لا يزداد الناتج لأن <code>showName(null)</code> لا يفي بالشرط."
+    },
+    {
+      "source": "<code>Any</code> は、ここではJavaの <code>Object</code> やSwiftの <code>Any</code> に対応する、広い型として使っています。関数に入った時点では <code>value</code> が <code>Person</code> か分からないため、<code>is Person</code> で確かめます。",
+      "translation": "يُستخدم <code>Any</code> هنا كنوع واسع، يقابل <code>Object</code> في Java و <code>Any</code> في Swift. نظرًا لأننا لا نعرف ما إذا كان <code>value</code> من النوع <code>Person</code> عند الدخول إلى الدالة، نتحقق من ذلك باستخدام <code>is Person</code>."
+    },
+    {
+      "source": "<code>if (value is Person)</code> の中では、別の変数や明示的なキャストを用意せず、元の名前 <code>value.name</code> で使えます。同じように、<code>if (name != null)</code> の中では <code>name.count()</code> と書けます。Swiftなら後者は <code>if let name = name</code> で取り出す場面です。今回の引数は再代入されないため、条件で確かめた型をその中で使えます。",
+      "translation": "داخل <code>if (value is Person)</code>، يمكنك استخدام الاسم الأصلي <code>value.name</code> دون الحاجة إلى متغيّر آخر أو تحويل صريح. وبالمثل، داخل <code>if (name != null)</code> يمكنك كتابة <code>name.count()</code>. يقابل الأخير في Swift استخدام <code>if let name = name</code> لاستخراج القيمة. نظرًا لعدم إعادة الإسناد للوسيط في هذه الحالة، يمكنك استخدام النوع الذي تم التحقق منه بالشرط بداخلها."
+    },
+    {
+      "source": "確かめたら、追加した3つの呼び出しと <code>showPerson</code>・<code>showName</code> の2関数を削除し、再びRunして出力が8行に戻ることを確かめます。完成コードは①の形で残します。",
+      "translation": "بعد التحقق، احذف الاستدعاءات الثلاثة المضافة والدالتين <code>showPerson</code> و <code>showName</code>، ثم شغّل Run مرة أخرى وتأكد من عودة الناتج إلى 8 أسطر. احتفظ بالشيفرة المكتملة في شكل ①."
+    },
+    {
+      "source": "<code>ex09</code> の出力が8行に戻っている。1行目が <code>true</code> / <code>false</code>、7行目が <code>Person(name=yamada, age=25)</code> になっている。",
+      "translation": "يظهر أن ناتج <code>ex09</code> قد عاد إلى 8 أسطر. السطر 1 أصبح <code>true</code> / <code>false</code>، والسطر 7 أصبح <code>Person(name=yamada, age=25)</code>."
+    },
+    {
+      "source": "次へ：Int に拡張関数を足す →",
+      "translation": "الانتقال إلى إضافة دالة امتداد إلى Int ←"
+    },
+    {
+      "source": "STEP 28 · 5コマ目 · 目安 15分",
+      "translation": "الخطوة 28 · الحصة 5 · حوالي 15 دقيقة"
+    },
+    {
+      "source": "Int に拡張関数を足す（ex07）",
+      "translation": "إضافة دالة امتداد إلى Int (ex07)"
+    },
+    {
+      "source": "Swiftの <code>extension</code> と同じ発想で、<code>Int</code> に対して呼べる関数を書き、<code>5.plusTen()</code> で <code>15</code> を出します。",
+      "translation": "بنفس فكرة <code>extension</code> في Swift، سنكتب دالة يمكن استدعاؤها على <code>Int</code>، وسنطبع <code>15</code> بواسطة <code>5.plusTen()</code>."
+    },
+    {
+      "source": "① ex07/main.kt を作って実行する",
+      "translation": "① إنشاء ex07/main.kt وتشغيله"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> から <code>ex07</code> を作ります。今日作った <code>ex08</code>・<code>ex09</code> の中には作りません。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code>، وأنشئ <code>ex07</code> من <strong>新規 → パッケージ</strong> (جديد ← حزمة). لا تنشئه داخل <code>ex08</code> و <code>ex09</code> اللذين أنشأتهما اليوم."
+    },
+    {
+      "source": "<code>ex07</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex07</code>، وفي <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin) اجعل الاسم <code>main</code> والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。",
+      "translation": "استبدل محتوى الملف بالكامل بما يلي، ثم شغّل من يسار <code>fun main()</code> هذا."
+    },
+    {
+      "source": "src/ex07/main.kt · 完成コード",
+      "translation": "src/ex07/main.kt · الشيفرة المكتملة"
+    },
+    {
+      "source": "<code>5</code> に対して <code>plusTen()</code> を呼び、その戻り値を <code>result</code> に入れて出しています。",
+      "translation": "يستدعي <code>plusTen()</code> على <code>5</code>، ويضع القيمة المُعادة في <code>result</code> ثم يطبعها."
+    },
+    {
+      "source": "Kotlinでは <code>fun Int.plusTen()</code> のように、<strong>対象の型を関数名の前に書く</strong>と拡張関数になります。<code>Int</code> を <strong>レシーバ型</strong>と呼びます。Swiftの <code>extension Int</code> が対象にしている型と同じ役目です。",
+      "translation": "في Kotlin، تصبح الدالة دالة امتداد عند <strong>كتابة النوع المستهدف قبل اسم الدالة</strong>، كما في <code>fun Int.plusTen()</code>. يُسمى <code>Int</code> <strong>نوع المستقبِل</strong> (レシーバ型). وهو يؤدي نفس دور النوع المستهدف في <code>extension Int</code> في Swift."
+    },
+    {
+      "source": "本体の <code>this</code> は、呼び出しのドットの左にある値です。<code>5.plusTen()</code> なら <code>5</code> で、Swiftの <code>self</code> に対応します。",
+      "translation": "يمثل <code>this</code> في جسم الدالة القيمة الموجودة على يسار النقطة عند الاستدعاء. في <code>5.plusTen()</code> يكون <code>5</code>، وهو يقابل <code>self</code> في Swift."
+    },
+    {
+      "source": "Javaには同じ形の拡張関数がありません。比較したJavaでは、対象の値を <code>static</code> メソッドの引数として渡しています。",
+      "translation": "لا تحتوي Java على دالة امتداد بنفس الشكل. في المقارنة مع Java، يتم تمرير القيمة المستهدفة كوسيط لطريقة <code>static</code>."
+    },
+    {
+      "source": "<code>Int</code> 自体のソースを書き換えているわけではありません。今回作った <code>plusTen</code> は、<code>ex07</code> のファイルの直下にある関数です。",
+      "translation": "لا يتم إعادة كتابة شيفرة <code>Int</code> نفسها. دالة <code>plusTen</code> التي أنشأناها هذه المرة هي دالة في المستوى الأعلى لملف <code>ex07</code>."
+    },
+    {
+      "source": "<code>src/ex07/main.kt</code> の <code>5.plusTen()</code> を実行し、Runツールウィンドウに <code>15</code> が1行出ている。",
+      "translation": "يُعرض سطر واحد <code>15</code> في نافذة الأدوات Run بعد تنفيذ <code>5.plusTen()</code> في <code>src/ex07/main.kt</code>."
+    },
+    {
+      "source": "STEP 29 · 5コマ目 · 目安 9分",
+      "translation": "الخطوة 29 · الحصة 5 · حوالي 9 دقائق"
+    },
+    {
+      "source": "3つのファイルを1つずつ書き換え、そのファイルの <code>fun main()</code> の左からRunします。試したら、その場で元に戻します。",
+      "translation": "أعد كتابة الملفات الثلاثة واحدًا تلو الآخر، وشغّل كل ملف من يسار <code>fun main()</code> الخاص به. بعد التجربة، أعِدها إلى الحالة السابقة."
+    },
+    {
+      "source": "① 1か所変えてRunする",
+      "translation": "① تغيير موضع واحد والتشغيل"
+    },
+    {
+      "source": "練習",
+      "translation": "التدريب"
+    },
+    {
       "source": "変える場所",
       "translation": "أين تغيّره"
+    },
+    {
+      "source": "A · 負数を渡す",
+      "translation": "A · تمرير عدد سالب"
+    },
+    {
+      "source": "<code>ex08/Foo.kt</code> の後半の <code>foo.counter = 10</code> を <code>foo.counter = -5</code> にします。",
+      "translation": "استبدل <code>foo.counter = 10</code> بـ <code>foo.counter = -5</code> في النصف الثاني من <code>ex08/Foo.kt</code>."
+    },
+    {
+      "source": "B · 引数を省く",
+      "translation": "B · حذف الوسيط"
+    },
+    {
+      "source": "<code>ex09/main.kt</code> の <code>yamada.copy(age = 25)</code> を <code>yamada.copy()</code> にします。",
+      "translation": "استبدل <code>yamada.copy(age = 25)</code> بـ <code>yamada.copy()</code> في <code>ex09/main.kt</code>."
+    },
+    {
+      "source": "C · 呼び出す値を変える",
+      "translation": "C · تغيير القيمة المُستدعاة"
+    },
+    {
+      "source": "<code>ex07/main.kt</code> の <code>5.plusTen()</code> を <code>(-3).plusTen()</code> にします。負の値全体に関数を呼ぶため、<code>-3</code> をかっこで囲みます。",
+      "translation": "استبدل <code>5.plusTen()</code> بـ <code>(-3).plusTen()</code> في <code>ex07/main.kt</code>. نضع <code>-3</code> بين قوسين لاستدعاء الدالة على القيمة السالبة بأكملها."
+    },
+    {
+      "source": "② 試したあとに、結果を照合する",
+      "translation": "② مطابقة النتائج بعد التجربة"
+    },
+    {
+      "source": "Aの結果",
+      "translation": "نتيجة A"
+    },
+    {
+      "source": "4行目が <code>setが呼ばれる： -5</code> になり、そのあとのgetterが読む値と最後の値は <code>0</code> です。負数を2回渡しても保存値は初期値のままです。確かめたら <code>foo.counter = 10</code> に戻し、最後の値が <code>10</code> に戻ったことを確かめます。",
+      "translation": "يصبح السطر 4 <code>setが呼ばれる： -5</code>، وتكون القيمة التي يقرأها getter بعد ذلك والقيمة الأخيرة <code>0</code>. حتى مع تمرير عدد سالب مرتين، تظل القيمة المحفوظة كما هي عند القيمة الافتراضية. بعد التحقق، أعِدها إلى <code>foo.counter = 10</code>، وتأكد من عودة القيمة الأخيرة إلى <code>10</code>."
+    },
+    {
+      "source": "Bの結果",
+      "translation": "نتيجة B"
+    },
+    {
+      "source": "7行目が <code>copyYamada Person(name=yamada, age=20)</code> になります。<code>copy()</code> は元と同じ値を持つ新しい <code>Person</code> を返します。確かめたら <code>copy(age = 25)</code> に戻し、7行目が <code>age=25</code> に戻ったことを確かめます。",
+      "translation": "يصبح السطر 7 <code>copyYamada Person(name=yamada, age=20)</code>. تُعيد <code>copy()</code> كائن <code>Person</code> جديد بنفس قيم الأصل. بعد التحقق، أعِدها إلى <code>copy(age = 25)</code>، وتأكد من عودة السطر 7 إلى <code>age=25</code>."
+    },
+    {
+      "source": "Cの結果",
+      "translation": "نتيجة C"
+    },
+    {
+      "source": "<code>7</code> が出ます。<code>this</code> が <code>-3</code> なので、<code>-3 + 10</code> の結果です。確かめたら <code>5.plusTen()</code> に戻し、<code>15</code> が出ることを確かめます。",
+      "translation": "يُطبع <code>7</code>. نظرًا لأن <code>this</code> هو <code>-3</code>، فهذه نتيجة <code>-3 + 10</code>. بعد التحقق، أعِدها إلى <code>5.plusTen()</code>، وتأكد من ظهور <code>15</code>."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（練習C）",
+      "translation": "③ كيف تكتب ذلك في Java / Swift (التمرين C)"
+    },
+    {
+      "source": "STEP 28で比較した関数を使うと、呼び出しは次の形になります。",
+      "translation": "عند استخدام الدالة التي قارنتها في الخطوة 28، سيكون الاستدعاء بالشكل التالي."
+    },
+    {
+      "source": "KotlinとSwiftは、呼び出す値をドットの左に置けます。Javaの比較例では同じ値を引数に渡します。書き方が違っても、関数に渡る数は <code>-3</code> で、足す数は <code>10</code> のままです。",
+      "translation": "في Kotlin وSwift، يمكنك وضع القيمة التي تستدعيها على يسار النقطة. في مثال المقارنة بلغة Java، نمرّر نفس القيمة كوسيط. حتى لو اختلفت طريقة الكتابة، فإن العدد الممرّر إلى الدالة يظل <code>-3</code>، والعدد المُضاف يظل <code>10</code>."
+    },
+    {
+      "source": "練習後に3か所を元へ戻し、<code>ex08</code> の最後が <code>10</code>、<code>ex09</code> のコピーが <code>age=25</code>、<code>ex07</code> が <code>15</code> になっている。",
+      "translation": "أعد المواضع الثلاثة إلى حالتها السابقة بعد التمرين، وتأكد أن السطر الأخير في <code>ex08</code> هو <code>10</code>، ونسخة <code>ex09</code> هي <code>age=25</code>، و <code>ex07</code> هو <code>15</code>."
+    },
+    {
+      "source": "次へ：5コマ目の完成 →",
+      "translation": "الانتقال إلى إكمال الحصة 5 ←"
+    },
+    {
+      "source": "STEP 30 · 5コマ目 · 目安 3分",
+      "translation": "الخطوة 30 · الحصة 5 · حوالي 3 دقائق"
+    },
+    {
+      "source": "5コマ目の完成",
+      "translation": "إكمال الحصة 5"
+    },
+    {
+      "source": "① 最後の3分 · 完成した3本を実行する",
+      "translation": "① هذه آخر 3 دقائق · تشغيل الملفات الثلاثة المكتملة"
+    },
+    {
+      "source": "左のプロジェクトツールウィンドウから、次の3ファイルを順に開きます。それぞれの <code>fun main()</code> の左からRunし、下の表と照合します。",
+      "translation": "افتح الملفات الثلاثة التالية بالترتيب من نافذة أدوات المشروع (Project) على اليسار. شغّل من الزر الموجود على يسار كل <code>fun main()</code>، وطابق المخرجات مع الجدول أدناه."
+    },
+    {
+      "source": "② 完成チェック",
+      "translation": "② التحقق النهائي"
+    },
+    {
+      "source": "ファイル",
+      "translation": "الملف"
     },
     {
       "source": "画面で確かめること",
       "translation": "ما تتحقق منه على الشاشة"
     },
     {
+      "source": "出力は6行。値だけの行が <code>0</code>、<code>10</code> の順。",
+      "translation": "المخرجات 6 أسطر. أسطر القيم فقط هي <code>0</code> و <code>10</code> بالترتيب."
+    },
+    {
+      "source": "出力は8行。1行目は <code>true</code> / <code>false</code>、7行目のコピーは <code>Person(name=yamada, age=25)</code>。一時的に足した2関数と呼び出しは残っていない。",
+      "translation": "المخرجات 8 أسطر. السطر 1 هو <code>true</code> / <code>false</code>، والنسخة في السطر 7 هي <code>Person(name=yamada, age=25)</code>. لا توجد الدالتان اللتان أضفتهما مؤقتا ولا استدعاؤهما."
+    },
+    {
+      "source": "出力は <code>15</code> の1行。",
+      "translation": "المخرجات سطر واحد هو <code>15</code>."
+    },
+    {
+      "source": "<code>src</code> の中",
+      "translation": "داخل <code>src</code>"
+    },
+    {
+      "source": "<code>ex01</code>〜<code>ex09</code> の9パッケージが同じプロジェクトに並んでいる。",
+      "translation": "توجد 9 حزم من <code>ex01</code> إلى <code>ex09</code> متجاورة في نفس المشروع."
+    },
+    {
+      "source": "③ Java / Swift と、呼び出す側の形を比べる",
+      "translation": "③ المقارنة مع Java / Swift في شكل جهة الاستدعاء"
+    },
+    {
+      "source": "アクセサの保存処理は、それぞれSTEP 26で比較した形です。",
+      "translation": "معالجة الحفظ للموصِل (accessor) هي بنفس الشكل الذي قارنته لكل منهما في الخطوة 26."
+    },
+    {
+      "source": "KotlinとSwiftでは、プロパティを使う側の形を保ったまま、読み書きの処理を定義できます。今日のKotlinの完成コードでは、<code>foo.counter = 10</code> でsetterの行が、<code>println(foo.counter)</code> でgetterの行と値が順に出ます。",
+      "translation": "في Kotlin وSwift، يمكنك تعريف معالجة القراءة والكتابة مع الاحتفاظ بشكل جهة استخدام الخاصية. في الشيفرة المكتملة بلغة Kotlin اليوم، يظهر سطر setter عند <code>foo.counter = 10</code>، ويظهر سطر getter والقيمة تباعا عند <code>println(foo.counter)</code>."
+    },
+    {
+      "source": "3ファイルの出力が完成チェックと一致し、<code>src</code> に <code>ex01</code>〜<code>ex09</code> が並んでいる。",
+      "translation": "تتطابق مخرجات الملفات الثلاثة مع التحقق النهائي، وتوجد الحزم من <code>ex01</code> إلى <code>ex09</code> متجاورة في <code>src</code>."
+    },
+    {
+      "source": "次へ：6コマ目を始める →",
+      "translation": "الانتقال إلى بدء الحصة 6 ←"
+    },
+    {
+      "source": "STEP 31 · 6コマ目 · 目安 5分",
+      "translation": "الخطوة 31 · الحصة 6 · حوالي 5 دقائق"
+    },
+    {
+      "source": "6コマ目を始める",
+      "translation": "بدء الحصة 6"
+    },
+    {
+      "source": "<code>ex10</code> では、リストの各要素を <code>map</code> で変換します。<code>ex11</code> では、<code>by lazy</code> でプロパティを初めて読むときに計算し、2回目には保存した結果を使います。この2本で <code>K01HelloKotlin</code> の11演習がそろいます。",
+      "translation": "في <code>ex10</code>، نحوّل كل عنصر من القائمة باستخدام <code>map</code>. وفي <code>ex11</code>، نستخدم <code>by lazy</code> لإجراء الحساب عند قراءة الخاصية لأول مرة، ثم نستخدم النتيجة المحفوظة في المرة الثانية. بهذين الملفين، تكتمل 11 تمرينا في <code>K01HelloKotlin</code>."
+    },
+    {
+      "source": "① 同じプロジェクトに ex10 を作る",
+      "translation": "① إنشاء ex10 في نفس المشروع"
+    },
+    {
+      "source": "IntelliJ IDEA の最近開いたプロジェクトから <code>K01HelloKotlin</code> を開きます。一覧にないときは <strong>開く…</strong> から <code>書類/Kotlin/K01HelloKotlin</code> を選びます。すでに開いていればそのまま使います。",
+      "translation": "افتح <code>K01HelloKotlin</code> من المشاريع المفتوحة مؤخرا في IntelliJ IDEA. إذا لم يكن موجودا في القائمة، فاختر <code>書類/Kotlin/K01HelloKotlin</code> (المستندات ← Kotlin ← K01HelloKotlin) من <strong>開く…</strong> (فتح…&lrm;). وإذا كان مفتوحا بالفعل، فاستمر في استخدامه كما هو."
+    },
+    {
+      "source": "左の <code>src</code> に <code>ex01</code>〜<code>ex09</code> があることを確かめます。以前のパッケージは残します。",
+      "translation": "تأكد من وجود الحزم من <code>ex01</code> إلى <code>ex09</code> في <code>src</code> على اليسار. اترك الحزم السابقة كما هي."
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex10</code> を作ります。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code>، وأنشئ <code>ex10</code> من <strong>新規 → パッケージ</strong> (جديد ← حزمة)."
+    },
+    {
+      "source": "<code>ex10</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> から名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex10</code>، ومن <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin)، اجعل الاسم <code>main</code>، والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "<code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "استبدل محتوى <code>main.kt</code> بالكامل بما يلي، وشغّل من زر التشغيل الموجود على يسار <code>fun main()</code>."
+    },
+    {
+      "source": "Runツールウィンドウに <code>ex10</code> が1行出ます。別の出力が出たときは、いま開いた <code>ex10/main.kt</code> の <code>fun main()</code> の左から実行し直します。",
+      "translation": "يظهر السطر <code>ex10</code> في نافذة أدوات التشغيل (Run). إذا ظهرت مخرجات أخرى، فأعد التشغيل من يسار <code>fun main()</code> في ملف <code>ex10/main.kt</code> الذي فتحته للتو."
+    },
+    {
+      "source": "Kotlinではファイルの直下に <code>fun main()</code> を置きます。Javaのようにクラスで囲みません。今日もパッケージごとに <code>main</code> があるため、実行するファイルを選びます。",
+      "translation": "في Kotlin، نضع <code>fun main()</code> مباشرة تحت الملف، ولا نضعه داخل صنف كما في Java. وبما أن كل حزمة اليوم تحتوي أيضا على <code>main</code>، فعليك اختيار الملف الذي تريد تشغيله."
+    },
+    {
+      "source": "<code>src/ex10/main.kt</code> の先頭が <code>package ex10</code> で、Runツールウィンドウに <code>ex10</code> が出ている。",
+      "translation": "يبدأ ملف <code>src/ex10/main.kt</code> بـ <code>package ex10</code>، ويظهر <code>ex10</code> في نافذة أدوات التشغيل (Run)."
+    },
+    {
+      "source": "次へ：map でリストの要素を変換する →",
+      "translation": "الانتقال إلى تحويل عناصر القائمة باستخدام map ←"
+    },
+    {
+      "source": "STEP 32 · 6コマ目 · 目安 35分",
+      "translation": "الخطوة 32 · الحصة 6 · حوالي 35 دقيقة"
+    },
+    {
+      "source": "map でリストの要素を変換する（ex10）",
+      "translation": "تحويل عناصر القائمة باستخدام map (ex10)"
+    },
+    {
+      "source": "同じ名前のリストから、<code>San</code> を付けた文字列のリストと、<code>Person</code> のリストを作ります。JavaのStream APIの <code>map</code>、Swiftの配列の <code>map</code> に対応する書き方です。",
+      "translation": "من نفس قائمة الأسماء، ننشئ قائمة سلاسل نصية مضافا إليها <code>San</code>، وقائمة <code>Person</code>. يقابل هذا أسلوب الكتابة <code>map</code> في Stream API بلغة Java، و <code>map</code> للمصفوفة في Swift."
+    },
+    {
+      "source": "① main.kt 全体を次の内容にする（10分）",
+      "translation": "① استبدال محتوى main.kt بالكامل بما يلي (10 دقائق)"
+    },
+    {
+      "source": "<code>src/ex10/main.kt</code> を開き、先ほどの <code>println(\"ex10\")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
+      "translation": "افتح <code>src/ex10/main.kt</code>، واستبدل محتواه بالكامل بما في ذلك <code>println(\"ex10\")</code> السابقة. لاحظ أن الدالة <code>data class Person(...)</code> الأخيرة توجد خارج قوس الإغلاق الخاص بـ <code>main</code>."
+    },
+    {
+      "source": "src/ex10/main.kt · 完成コード",
+      "translation": "src/ex10/main.kt · النسخة المكتملة"
+    },
+    {
+      "source": "変数",
+      "translation": "المتغيّر"
+    },
+    {
+      "source": "型と中身",
+      "translation": "النوع والمحتوى"
+    },
+    {
+      "source": "<code>listOf(\"Yamada\", \"Tanaka\")</code> で作った、2つの文字列を順に読む <code>List&lt;String&gt;</code> です。",
+      "translation": "هي <code>List&lt;String&gt;</code> أُنشئت بواسطة <code>listOf(\"Yamada\", \"Tanaka\")</code>، وتُقرأ فيها سلسلتان نصيتان بالترتيب."
+    },
+    {
+      "source": "<code>map</code> が各要素へ <code> San</code> を付けた、新しい <code>List&lt;String&gt;</code> です。",
+      "translation": "هي <code>List&lt;String&gt;</code> جديدة أضاف فيها <code>map</code> النص <code> San</code> إلى كل عنصر."
+    },
+    {
+      "source": "各文字列を <code>Person(name)</code> に渡して作った、新しい <code>List&lt;Person&gt;</code> です。",
+      "translation": "هي <code>List&lt;Person&gt;</code> جديدة أُنشئت عن طريق تمرير كل سلسلة نصية إلى <code>Person(name)</code>."
+    },
+    {
+      "source": "この <code>Person</code> は、ファイルの最後に宣言した <code>ex10</code> のクラスです。<code>data class</code> が <code>toString()</code> を生成するため、2行目には <code>Person(name=...)</code> という中身が出ます。ほかのパッケージの <code>Person</code> は使いません。",
+      "translation": "هذا الصنف <code>Person</code> هو صنف معرّف في نهاية الملف للحزمة <code>ex10</code>. وبما أن <code>data class</code> تولّد <code>toString()</code>&lrm;، فسيظهر في السطر الثاني المحتوى <code>Person(name=...)</code>&lrm;. لن نستخدم صنف <code>Person</code> الموجود في حزم أخرى."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（10分）",
+      "translation": "③ كيف تكتب ذلك في Java / Swift (10 دقائق)"
+    },
+    {
+      "source": "まず、文字列から文字列への変換を比べます。比較用のコードは、完成コードへ追加しません。",
+      "translation": "أولا، نقارن تحويل السلسلة النصية إلى سلسلة نصية أخرى. شيفرة المقارنة هذه لن نضيفها إلى الشيفرة المكتملة."
+    },
+    {
+      "source": "Kotlinの <code>{ \"$it San\" }</code> は、<code>map</code> に渡す<strong>ラムダ式</strong>です。Javaの <code>name -&gt; name + \" San\"</code>、Swiftのクロージャ <code>{ \"\\($0) San\" }</code> に対応します。",
+      "translation": "الكتابة <code>{ \"$it San\" }</code> في Kotlin هي <strong>تعبير لامدا (ラムダ式)</strong> يُمرّر إلى <code>map</code>. وهي تقابل <code>name -&gt; name + \" San\"</code> في Java، والمغلّف (closure) <code>{ \"\\($0) San\" }</code> في Swift."
+    },
+    {
+      "source": "<code>it</code> は、引数が1つのラムダで、その引数の名前を省いたときに使える名前です。今回入るのはリストの要素1つで、最初は <code>\"Yamada\"</code>、次は <code>\"Tanaka\"</code> です。Swiftの <code>$0</code> にあたる位置です。",
+      "translation": "الكلمة المفتاحية <code>it</code> هي اسم يمكن استخدامه عند وجود لامدا بوسيط واحد وحذف اسم هذا الوسيط. وما يُمرّر هنا هو عنصر واحد من القائمة؛ في البداية <code>\"Yamada\"</code>، ثم <code>\"Tanaka\"</code>. وهو يقابل المتغيّر <code>$0</code> في Swift."
+    },
+    {
+      "source": "文字列の <code>$it</code> は、値を文字列へ埋め込む部分です。Javaの文字列との <code>+</code>、Swiftの <code>\\($0)</code> と比べられます。",
+      "translation": "الجزء <code>$it</code> في السلسلة النصية هو المكان الذي تُدمج فيه القيمة داخل السلسلة النصية. ويمكن مقارنته بالدمج باستخدام <code>+</code> مع السلاسل النصية في Java، أو باستخدام <code>\\($0)</code> في Swift."
+    },
+    {
+      "source": "Java例は <code>stream()</code> から <code>map</code> を通し、<code>toList()</code> で結果をリストに集めます。Kotlinでは、この <code>List</code> の <code>map</code> が結果のリストを返します。",
+      "translation": "في مثال Java، يتم تمرير الدالة <code>map</code> انطلاقا من <code>stream()</code>&lrm;، وتُجمّع النتائج في قائمة عبر <code>toList()</code>&lrm;. أما في Kotlin، فإن <code>map</code> المستدعاة من <code>List</code> تُعيد قائمة النتائج مباشرة."
+    },
+    {
+      "source": "Swiftは文字列を引用符付きで表示するなど、出力の表示形式には違いがあります。比べるのは要素の内容と順番です。",
+      "translation": "في Swift، تختلف صيغة عرض المخرجات، كإظهار السلاسل النصية بين علامتي تنصيص. وما نقارنه هنا هو محتوى العناصر وترتيبها."
+    },
+    {
+      "source": "④ ラムダの引数に名前を付ける（10分）",
+      "translation": "④ تسمية وسيط لامدا (10 دقائق)"
+    },
+    {
+      "source": "<code>result</code> を作る行だけを次の形に変えます。型注釈の <code>List&lt;String&gt;</code> は残します。",
+      "translation": "غيّر السطر الذي يُنشئ <code>result</code> فقط إلى الشكل التالي، مع الإبقاء على تحديد النوع صراحة كـ <code>List&lt;String&gt;</code>."
+    },
+    {
+      "source": "Runし、出力が先ほどの2行と同じであることを確かめます。",
+      "translation": "شغّل، وتأكد من أن المخرجات تماثل السطرين السابقين تماما."
+    },
+    {
+      "source": "確認したら、完成コードの <code>list.map { \"$it San\" }</code> に戻します。",
+      "translation": "بعد التحقق، أعِد الشيفرة إلى الشيفرة المكتملة <code>list.map { \"$it San\" }</code>."
+    },
+    {
+      "source": "<code>name -&gt;</code> で引数名を決めると、<code>it</code> の代わりに <code>name</code> を使えます。<code>-&gt;</code> よりうしろが処理で、<strong>最後の式が、その要素を変換した結果</strong>です。完成コードの2本目も同じ形ですが、最後が文字列ではなく <code>Person(name)</code> なので、結果の要素型が変わります。",
+      "translation": "عند تحديد اسم للوسيط باستخدام <code>name -&gt;</code>، يمكنك استخدام <code>name</code> بدلا من <code>it</code>. والجزء الذي يلي <code>-&gt;</code> يمثل المعالجة، حيث يكون <strong>التعبير الأخير هو نتيجة تحويل ذلك العنصر</strong>. الملف الثاني المكتمل له نفس البنية، ولكن التعبير الأخير فيه هو <code>Person(name)</code> بدلا من سلسلة نصية، لذا يتغيّر نوع عنصر النتيجة."
+    },
+    {
+      "source": "Kotlinは <code>{ 引数名 -&gt; 最後の式 }</code>、Swiftは <code>{ 引数名 in 最後の式 }</code> です。Javaの比較例は、矢印の右の式が結果になります。Kotlinのラムダでは、以前書いた <code>fun</code> の本体と異なり、この形で最後の式を結果にできます。<code>return</code> は足しません。",
+      "translation": "تُكتب اللامدا في Kotlin بصيغة <code>{ 引数名 -&gt; 最後の式 }</code> (اسم الوسيط -&gt; التعبير الأخير)، وفي Swift كـ <code>{ 引数名 in 最後の式 }</code> (اسم الوسيط in التعبير الأخير). في مثال Java، التعبير الموجود على يمين السهم هو النتيجة. في لامدا بـ Kotlin، وبخلاف متن الدالة <code>fun</code> الذي كتبناه سابقا، يمكنك جعل التعبير الأخير هو النتيجة بهذا الشكل. لا حاجة لإضافة <code>return</code>."
+    },
+    {
+      "source": "⑤ 元のリストが変わっていないことを確かめる（5分）",
+      "translation": "⑤ التأكد من عدم تغيّر القائمة الأصلية (5 دقائق)"
+    },
+    {
+      "source": "<code>main</code> の最後の <code>println(result2)</code> の次へ、一時的に <code>println(list)</code> を足してRunします。",
+      "translation": "أضف مؤقتا السطر <code>println(list)</code> بعد <code>println(result2)</code> الأخيرة في الدالة <code>main</code>، ثم شغّل."
+    },
+    {
+      "source": "3行目に <code>[Yamada, Tanaka]</code> が出ます。<code>San</code> を付けたのは変換結果で、元のリストの文字列は変わっていません。",
+      "translation": "يظهر السطر الثالث كـ <code>[Yamada, Tanaka]</code>. إضافة كلمة <code>San</code> تمثل نتيجة التحويل، بينما تبقى السلاسل النصية في القائمة الأصلية دون تغيير."
+    },
+    {
+      "source": "足した <code>println(list)</code> を消してRunし、出力を元の2行に戻します。",
+      "translation": "احذف سطر <code>println(list)</code> الذي أضفته وشغّل، ثم أعِد المخرجات إلى السطرين الأصليين."
+    },
+    {
+      "source": "この <code>map</code> は、元の要素を順に読み、各ラムダの結果を新しいリストへ並べます。<code>result</code> と <code>result2</code> は、同じ元の <code>list</code> をそれぞれ読んで作っています。",
+      "translation": "تقرأ الدالة <code>map</code> هذه العناصر الأصلية بالترتيب، وتُرتب نتائج كل لامدا في قائمة جديدة. يُنشأ المتغيّران <code>result</code> و <code>result2</code> من خلال قراءة نفس القائمة الأصلية <code>list</code> لكل منهما."
+    },
+    {
+      "source": "出力が <code>[Yamada San, Tanaka San]</code> と、名前が <code>Yamada</code>・<code>Tanaka</code> の <code>Person</code> 2人のリストの2行になっている。",
+      "translation": "المخرجات عبارة عن سطرين، هما القائمة <code>[Yamada San, Tanaka San]</code>، ثم قائمة من شخصين (<code>Person</code>) بالاسمين <code>Yamada</code> و <code>Tanaka</code>."
+    },
+    {
+      "source": "次へ：初めて読むときに計算する →",
+      "translation": "الانتقال إلى إجراء الحساب عند أول قراءة ←"
+    },
+    {
+      "source": "STEP 33 · 6コマ目 · 目安 30分",
+      "translation": "الخطوة 33 · الحصة 6 · حوالي 30 دقيقة"
+    },
+    {
+      "source": "初めて読むときに計算する（ex11）",
+      "translation": "إجراء الحساب عند أول قراءة (ex11)"
+    },
+    {
+      "source": "<code>foo.bar</code> を2回読んでも、<code>computed!</code> が1回だけ出ることを確かめます。Swiftの <code>lazy var</code> と初回計算の動きは似ています。Kotlinでは <code>by</code> を使い、プロパティの値を用意する処理を別のオブジェクトへ任せます。",
+      "translation": "تأكد من ظهور <code>computed!</code>&lrm; مرة واحدة فقط، حتى لو قرأت <code>foo.bar</code> مرتين. تتشابه طريقة عملها للحساب عند القراءة الأولى مع الخاصية <code>lazy var</code> في Swift. في Kotlin، نستخدم الكلمة المفتاحية <code>by</code> لتفويض مهمة توفير القيمة للخاصية إلى كائن آخر."
+    },
+    {
+      "source": "① ex11/main.kt を作る（8分）",
+      "translation": "① إنشاء ex11/main.kt (8 دقائق)"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code>، وأنشئ <code>ex11</code> من <strong>新規 → パッケージ</strong> (جديد ← حزمة)."
+    },
+    {
+      "source": "<code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex11</code>، ومن <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin)، اجعل الاسم <code>main</code>، والنوع <strong>ファイル</strong> (ملف)."
+    },
+    {
+      "source": "src/ex11/main.kt · 完成コード",
+      "translation": "src/ex11/main.kt · النسخة المكتملة"
+    },
+    {
+      "source": "mainの行",
+      "translation": "أسطر الدالة main"
+    },
+    {
+      "source": "<code>counter</code> は <code>5.0</code> で初期化されます。この時点では <code>lazy</code> のラムダの中は実行されません。",
+      "translation": "تُهيأ <code>counter</code> بالقيمة <code>5.0</code>. في هذه المرحلة، لا يتم تشغيل ما بداخل لامدا الخاصة بـ <code>lazy</code>."
+    },
+    {
+      "source": "1つ目の <code>println(foo.bar)</code>",
+      "translation": "الاستدعاء الأول <code>println(foo.bar)</code>"
+    },
+    {
+      "source": "<code>bar</code> を初めて読むためラムダが動き、<code>computed!</code> が出ます。最後の式 <code>counter + 1</code> の結果 <code>6.0</code> が保存され、その値を外側の <code>println</code> が出します。",
+      "translation": "لأنها أول مرة تُقرأ فيها <code>bar</code>، يتم تنفيذ ما بداخل اللامدا وتُطبع <code>computed!</code>&lrm;. ثم تُحفظ نتيجة التعبير الأخير <code>counter + 1</code> وهي <code>6.0</code>، وتقوم الدالة الخارجية <code>println</code> بطباعة هذه القيمة."
+    },
+    {
+      "source": "2つ目の <code>println(foo.bar)</code>",
+      "translation": "الاستدعاء الثاني <code>println(foo.bar)</code>"
+    },
+    {
+      "source": "保存された <code>6.0</code> を使います。ラムダを再実行しないため、<code>computed!</code> は増えません。",
+      "translation": "تُستخدم القيمة المحفوظة <code>6.0</code>. ولأن اللامدا لا تُعاد مرة أخرى، لن تُطبع <code>computed!</code>&lrm; مرة ثانية."
+    },
+    {
+      "source": "今回の <code>main</code> のように、同じオブジェクトの値を順に読む場合を比較します。Javaでは、計算済みかどうかと保存値を持つgetterを自分で書きます。",
+      "translation": "سنقارن الحالات التي تُقرأ فيها قيم نفس الكائن بالترتيب كما فعلنا في دالة <code>main</code> اليوم. في Java، يتعين عليك كتابة getter بنفسك للتحقق مما إذا تم الحساب بالفعل والاحتفاظ بالقيمة المحفوظة."
+    },
+    {
+      "source": "<code>by</code> は<strong>委譲</strong>の指定です。Kotlinのプロパティ <code>bar</code> の値を用意して保持する仕事を、<code>lazy { ... }</code> が返すオブジェクトへ任せています。この形のプロパティを<strong>委譲プロパティ</strong>と呼びます。",
+      "translation": "الكلمة المفتاحية <code>by</code> تحدّد <strong>التفويض (委譲)</strong>. لقد فوّضنا وظيفة إعداد والاحتفاظ بقيمة الخاصية <code>bar</code> في Kotlin إلى الكائن المُعاد بواسطة <code>lazy { ... }</code>. تُسمى هذه الخاصية بالخاصية المفوّضة (<strong>委譲プロパティ</strong>)."
+    },
+    {
+      "source": "<code>lazy</code> はKotlinの標準ライブラリの関数です。<code>{ ... }</code> のラムダは、計算する手順として渡します。今回も最後の式 <code>counter + 1</code> がラムダの結果です。",
+      "translation": "الكلمة المفتاحية <code>lazy</code> هي دالة في المكتبة القياسية لـ Kotlin. أما <code>{ ... }</code> فهو التعبير لامدا المُمرّر كخطوات للحساب. وهنا أيضا يكون التعبير الأخير <code>counter + 1</code> هو النتيجة المستخرجة من لامدا."
+    },
+    {
+      "source": "Swiftの <code>lazy var</code> は、初回まで計算を遅らせ、結果を保持する動きの比較です。<strong>Kotlinの <code>by</code> と同じ委譲の仕組みではありません。</strong>またSwift側は <code>var</code> で再代入できますが、今回のKotlinの <code>bar</code> は <code>val</code> です。",
+      "translation": "خاصية <code>lazy var</code> في Swift تُعتبر مقارنة لطريقة تأخير الحساب إلى القراءة الأولى والاحتفاظ بالنتيجة، لكن <strong>لا تستخدم نفس آلية التفويض الموجودة في الكلمة المفتاحية <code>by</code> في Kotlin.</strong> كما أن Swift تتيح إعادة التعيين عبر <code>var</code>، في حين أن <code>bar</code> في درس Kotlin اليوم معرّفة كـ <code>val</code>."
+    },
+    {
+      "source": "Javaの比較例はgetterの中で計算済みの印と保存値を管理します。Kotlinでは、その処理を <code>lazy</code> が受け持つため、自分で同じフィールドと条件分岐を書かずに済みます。",
+      "translation": "يقوم مثال المقارنة بلغة Java بإدارة علامة حالة الحساب والقيمة المحفوظة داخل getter. في Kotlin، تتحمل <code>lazy</code> هذه الوظيفة، مما يغنيك عن كتابة حقل مكرر وشرط تفرع متماثل بنفسك."
+    },
+    {
+      "source": "遅らせるのはラムダの中の計算です。<code>Foo()</code> の生成や <code>counter = 5.0</code> まで遅れるわけではありません。",
+      "translation": "يقتصر التأخير على العمليات الحسابية داخل اللامدا؛ مما يعني أنه لا يؤخر إنشاء <code>Foo()</code>&lrm; ولا <code>counter = 5.0</code>."
+    },
+    {
+      "source": "④ bar を読まなければ計算しない（4分）",
+      "translation": "④ عدم الحساب إلا إذا قُرئت bar (4 دقائق)"
+    },
+    {
+      "source": "<code>main</code> の2つの <code>println(foo.bar)</code> をいったん消し、代わりに <code>println(foo.counter)</code> を1行書きます。",
+      "translation": "احذف مؤقتا السطرين <code>println(foo.bar)</code> من الدالة <code>main</code>، واكتب مكانهما السطر <code>println(foo.counter)</code>."
+    },
+    {
+      "source": "Runすると <code>5.0</code> だけが出て、<code>computed!</code> は出ません。オブジェクトを作っても、<code>bar</code> を読まなければその計算は始まらないことを確かめます。",
+      "translation": "عند التشغيل، ستُطبع <code>5.0</code> فقط ولن تظهر <code>computed!</code>&lrm;. تحقق أنه حتى عند إنشاء الكائن، لا يبدأ الحساب الخاص به ما لم تُقرأ <code>bar</code>."
+    },
+    {
+      "source": "<code>println(foo.counter)</code> を消し、元の <code>println(foo.bar)</code> 2行へ戻します。",
+      "translation": "احذف <code>println(foo.counter)</code>، وأعِد السطرين <code>println(foo.bar)</code> كسابق عهدهما."
+    },
+    {
+      "source": "⑤ 初回の前後で counter を変える（8分）",
+      "translation": "⑤ تغيير counter بين قبل الاستدعاء الأول وبعده (8 دقائق)"
+    },
+    {
+      "source": "<code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。",
+      "translation": "اترك الصنف <code>class Foo</code> كما هو، واستبدل الدالة <code>main</code> فقط بالشكل التالي."
+    },
+    {
+      "source": "Runすると、次の3行が出ます。",
+      "translation": "عند التشغيل، ستظهر الأسطر الثلاثة التالية."
+    },
+    {
+      "source": "初めて読むときの <code>counter</code> は <code>10.0</code> なので、保存される結果は <code>11.0</code> です。そのあと <code>counter</code> を変えても、2回目の <code>bar</code> は保存値を返します。<code>bar</code> は、その時々の <code>counter + 1</code> を毎回計算するgetterとは動きが違います。",
+      "translation": "بما أن <code>counter</code> كانت <code>10.0</code> عند أول قراءة، فإن النتيجة المحفوظة هي <code>11.0</code>. حتى لو غيّرت <code>counter</code> بعد ذلك، ستُعيد القراءة الثانية لـ <code>bar</code> القيمة المحفوظة. وتختلف <code>bar</code> في عملها عن دالة getter التي تحسب نتيجة <code>counter + 1</code> الحالية في كل مرة تُستدعى فيها."
+    },
+    {
+      "source": "確認したら、追加した <code>foo.counter = ...</code> の2行を消します。Runして、完成コードの <code>computed!</code> / <code>6.0</code> / <code>6.0</code> に戻ることを確かめます。",
+      "translation": "بعد التأكد، احذف السطرين <code>foo.counter = ...</code> اللذين أضفتهما. شغّل وتأكد من العودة إلى الشيفرة المكتملة ذات <code>computed!</code>&lrm; / <code>6.0</code> / <code>6.0</code>."
+    },
+    {
+      "source": "完成コードへ戻り、<code>computed!</code> が1回、そのあと <code>6.0</code> が2回出ている。",
+      "translation": "عند العودة إلى النسخة المكتملة، تظهر <code>computed!</code>&lrm; مرة واحدة، ثم تظهر <code>6.0</code> مرتين."
+    },
+    {
+      "source": "STEP 34 · 6コマ目 · 目安 17分",
+      "translation": "الخطوة 34 · الحصة 6 · حوالي 17 دقيقة"
+    },
+    {
+      "source": "ミニ練習：変換する型と、計算する回数",
+      "translation": "تمرين قصير: أنواع التحويل وعدد مرات الحساب"
+    },
+    {
+      "source": "それぞれのファイルを開き、<code>fun main()</code> の左から実行します。エラーは文言を暗記せず、どの行と型の組み合わせで止まったかを確かめます。",
+      "translation": "افتح كل ملف، ونفّذ التشغيل عبر الضغط على الزر الموجود على يسار الدالة <code>fun main()</code>. عند ظهور أخطاء، لا تحفظ نصوص الأخطاء بل تحقق في أي سطر ومع أي نوع توقف التنفيذ."
+    },
+    {
+      "source": "① map の結果の型を確かめる（7分）",
+      "translation": "① التأكد من نوع نتيجة map (7 دقائق)"
+    },
+    {
+      "source": "<code>ex10/main.kt</code> の <code>val result2: List&lt;Person&gt;</code> を <code>val result2: List&lt;String&gt;</code> に変えます。右辺の <code>list.map { name -&gt; Person(name) }</code> は変えません。",
+      "translation": "غيّر تعريف <code>val result2: List&lt;Person&gt;</code> في ملف <code>ex10/main.kt</code> إلى <code>val result2: List&lt;String&gt;</code>، ولا تغيّر التعبير <code>list.map { name -&gt; Person(name) }</code> في الجانب الأيمن."
+    },
+    {
+      "source": "<code>Person(name)</code> を返す行に赤い波線が出て、実行できないことを確かめます。文字列を要素とする型を指定したのに、ラムダが <code>Person</code> を返しているためです。",
+      "translation": "تأكد من ظهور خط أحمر متموّج على السطر الذي يعيد <code>Person(name)</code> ومن توقف التنفيذ، لأننا حددنا نوعا عناصره من سلاسل نصية بينما اللامدا تُعيد نوع <code>Person</code>."
+    },
+    {
+      "source": "<code>List&lt;Person&gt;</code> に戻します。次に、元の <code>listOf(\"Yamada\", \"Tanaka\")</code> の末尾に <code>\"Suzuki\"</code> を足してRunします。",
+      "translation": "أعد الشيفرة إلى حالة <code>List&lt;Person&gt;</code>. بعد ذلك، أضف السلسلة <code>\"Suzuki\"</code> إلى نهاية القائمة الأصلية <code>listOf(\"Yamada\", \"Tanaka\")</code>، ثم شغّل."
+    },
+    {
+      "source": "2つの変換処理を変えなくても、どちらの結果も3要素になります。",
+      "translation": "سيُصبح ناتج كلتا عمليتي التحويل 3 عناصر، حتى بدون أي تعديل لعمليتي التحويل."
+    },
+    {
+      "source": "② Foo をもう1つ作る（7分）",
+      "translation": "② إنشاء Foo آخر (7 دقائق)"
+    },
+    {
+      "source": "<code>ex11/main.kt</code> の <code>main</code> の中で、2つ目の <code>println(foo.bar)</code> のあとへ次の3行を足します。<code>class Foo</code> の中身は変えません。",
+      "translation": "أضف الأسطر الثلاثة التالية بعد استدعاء <code>println(foo.bar)</code> الثاني في دالة <code>main</code> بملف <code>ex11/main.kt</code>. لا تقم بأي تغيير في محتوى الصنف <code>class Foo</code>."
+    },
+    {
+      "source": "Runすると、次の6行が出ます。",
+      "translation": "عند التشغيل، ستظهر الأسطر الستة التالية."
+    },
+    {
+      "source": "<code>foo</code> と <code>foo2</code> は別のオブジェクトです。それぞれの <code>bar</code> が初回に計算され、そのオブジェクトで再び読むと保存した値が使われます。",
+      "translation": "الكائنان <code>foo</code> و <code>foo2</code> منفصلان عن بعضهما. يُحسب المتغيّر <code>bar</code> لكل منهما في المرة الأولى المستقلة لكل كائن، وعند تكرار القراءة في نفس الكائن ستُستخدم القيمة المحفوظة الخاصة به."
+    },
+    {
+      "source": "③ Java / Swift でも別のオブジェクトを作る",
+      "translation": "③ إنشاء كائن جديد في Java / Swift أيضا"
+    },
+    {
+      "source": "STEP 33の各言語の <code>Foo</code> を使うと、呼び出しは次の形です。既存の <code>foo</code> を読んだあとに、新しいオブジェクトを読みます。",
+      "translation": "عند استخدام <code>Foo</code> لكل لغة كما ورد في الخطوة 33، سيصبح الاستدعاء على النحو التالي. حيث نقوم بقراءة الكائن الجديد بعد قراءة <code>foo</code> الحالي."
+    },
+    {
+      "source": "この <code>Foo</code> の <code>bar</code> は、すべての <code>Foo</code> で計算結果を1つだけ共有するものではありません。オブジェクトを2つ作り、それぞれで初めて読むと、<code>computed!</code> も2回になります。",
+      "translation": "الخاصية <code>bar</code> في هذا الصنف <code>Foo</code> لا تتشارك نتيجة حساب واحدة بين جميع كائنات <code>Foo</code>. وعند إنشاء كائنين منفصلين وقراءة كل منهما لأول مرة، تُطبع الرسالة <code>computed!</code>&lrm; مرتين أيضا."
+    },
+    {
+      "source": "④ 最後の3分 · 完成コードへ戻す",
+      "translation": "④ هذه آخر 3 دقائق · العودة إلى الشيفرة المكتملة"
+    },
+    {
+      "source": "<code>ex10</code> の <code>listOf</code> から <code>\"Suzuki\"</code> を消します。<code>result2</code> の型が <code>List&lt;Person&gt;</code> に戻っていることも確かめます。",
+      "translation": "احذف <code>\"Suzuki\"</code> من <code>listOf</code> في الملف <code>ex10</code>. وتأكد أيضا من عودة نوع <code>result2</code> إلى حالة <code>List&lt;Person&gt;</code>."
+    },
+    {
+      "source": "<code>ex11</code> へ追加した <code>foo2</code> の3行を消します。",
+      "translation": "احذف الأسطر الثلاثة الخاصة بـ <code>foo2</code> التي أضفتها إلى <code>ex11</code>.&lrm;"
+    },
+    {
+      "source": "2本を実行します。<code>ex10</code> は2人を並べた2行、<code>ex11</code> は <code>computed!</code> / <code>6.0</code> / <code>6.0</code> の3行に戻ります。",
+      "translation": "شغّل الملفين. سيعود <code>ex10</code> إلى سطرين يعرضان شخصين، وسيعود <code>ex11</code> إلى 3 أسطر هي <code>computed!</code> / <code>6.0</code> / <code>6.0</code>.&lrm;"
+    },
+    {
+      "source": "型を変えて止まった行を元に戻し、<code>ex10</code> の各リストが2要素、<code>ex11</code> の出力が3行に戻っている。",
+      "translation": "تمت إعادة السطر الذي توقف بسبب تغيير النوع إلى ما كان عليه، وعادت كل قائمة في <code>ex10</code> إلى عنصرين، وعاد الناتج من <code>ex11</code> إلى 3 أسطر."
+    },
+    {
+      "source": "次へ：K01の完成 →",
+      "translation": "الانتقال إلى K01の完成 ←"
+    },
+    {
+      "source": "STEP 35 · 6コマ目 · 目安 3分",
+      "translation": "STEP 35 · الحصة 6 · حوالي 3 دقائق"
+    },
+    {
+      "source": "K01の完成",
+      "translation": "اكتمال K01"
+    },
+    {
+      "source": "① 最後の3分 · 2本を順に実行する",
+      "translation": "① هذه آخر 3 دقائق. · تشغيل الملفين بالترتيب"
+    },
+    {
+      "source": "<code>ex10/main.kt</code> と <code>ex11/main.kt</code> を順に開き、それぞれの <code>fun main()</code> の左からRunします。",
+      "translation": "افتح <code>ex10/main.kt</code> و <code>ex11/main.kt</code> بالترتيب، وشغّل كل منهما من يسار <code>fun main()</code>.&lrm;"
+    },
+    {
+      "source": "1行目は <code>[Yamada San, Tanaka San]</code>。2行目は <code>[Person(name=Yamada), Person(name=Tanaka)]</code>。",
+      "translation": "السطر الأول هو <code>[Yamada San, Tanaka San]</code>.&lrm; السطر الثاني هو <code>[Person(name=Yamada), Person(name=Tanaka)]</code>.&lrm;"
+    },
+    {
+      "source": "<code>computed!</code> / <code>6.0</code> / <code>6.0</code> の3行。",
+      "translation": "3 أسطر هي <code>computed!</code> / <code>6.0</code> / <code>6.0</code>.&lrm;"
+    },
+    {
+      "source": "③ ラムダの最後に置いた式を比べる",
+      "translation": "③ مقارنة التعبير الموضوع في نهاية تعبير لامدا"
+    },
+    {
+      "source": "各言語の <code>list</code> は、STEP 32の2人の名前を持つリスト・配列です。",
+      "translation": "<code>list</code> في كل لغة هو قائمة أو مصفوفة تحتوي على اسمي الشخصين من STEP 32.&lrm;"
+    },
+    {
+      "source": "<code>map</code> では各要素を変換した値を、<code>lazy</code> では初回に計算する値を、ラムダから返しました。Kotlinの今回のラムダでは、最後の式がその結果になります。",
+      "translation": "تُعاد القيم المحولة لكل عنصر في <code>map</code>، والقيمة المحسوبة في المرة الأولى في <code>lazy</code>، من تعبير لامدا. في تعبير لامدا هذا في Kotlin، التعبير الأخير هو تلك النتيجة."
+    },
+    {
+      "source": "左の <code>src</code> に <code>ex01</code>〜<code>ex11</code> の11パッケージがあることを確かめます。<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> です。6コマで使ったプロジェクトは、最初に作った <code>K01HelloKotlin</code> の1つです。自分で書いたコードを、そのまま残しておきます。",
+      "translation": "تحقق من وجود 11 حزمة من <code>ex01</code> إلى <code>ex11</code> في <code>src</code> على اليسار. حزمة <code>ex08</code> تحتوي على <code>Foo.kt</code>، والبقية تحتوي على <code>main.kt</code>.&lrm; المشروع المستخدم في الحصص الست هو المشروع <code>K01HelloKotlin</code> الذي أنشأته في البداية. اترك الشيفرة التي كتبتها بنفسك كما هي."
+    },
+    {
+      "source": "2本の出力が完成チェックと一致し、<code>src</code> に <code>ex01</code>〜<code>ex11</code> の11パッケージが並んでいる。",
+      "translation": "يتطابق ناتج الملفين مع التحقق النهائي، وتصطف 11 حزمة من <code>ex01</code> إلى <code>ex11</code> في <code>src</code>.&lrm;"
+    },
+    {
+      "source": "次へ：完成プロジェクトを開いて比べる →",
+      "translation": "الانتقال إلى فتح المشروع المكتمل والمقارنة ←"
+    },
+    {
+      "source": "REFERENCE · 最初の授業から使える見本",
+      "translation": "REFERENCE · مثال يمكن استخدامه من الحصة الأولى"
+    },
+    {
+      "source": "完成プロジェクトを開いて比べる",
+      "translation": "فتح المشروع المكتمل والمقارنة"
+    },
+    {
+      "source": "授業は、自分で新規作成したプロジェクトで進めます。完成版は、動作確認とコード比較のための見本です。見本は、教科書といっしょに配られた<strong>教材のフォルダ</strong>に、そのまま開ける形で入っています。ダウンロードも展開も要りません。",
+      "translation": "ستتابع الحصص باستخدام المشروع الذي أنشأته جديدا بنفسك. النسخة المكتملة هي مثال للتحقق من عمل التطبيق ومقارنة الشيفرة. يوجد المثال المكتمل في <strong>مجلد المواد التعليمية</strong> الموزّع مع الكتاب المدرسي، بصيغة يمكن فتحها مباشرة. لا حاجة إلى تنزيل أو فك الضغط."
+    },
+    {
+      "source": "① 見本の場所を確かめる",
+      "translation": "① التحقق من موقع المثال"
+    },
+    {
+      "source": "Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。教材のフォルダをダブルクリックで開きます。名前は <code>kotlin-student-materials-</code> のうしろに日付と12文字の英数字が付いた形で、配られた版によって変わります。いま読んでいるこの教科書が入っているフォルダです。",
+      "translation": "افتح Finder، وانقر على <strong>書類</strong> (<code>Documents</code>) على اليسار. انقر مرتين لفتح مجلد المواد التعليمية. يتكون الاسم من <code>kotlin-student-materials-</code>&lrm; يليه التاريخ و 12 خانة من الحروف والأرقام، ويتغير حسب الإصدار الموزّع. إنه المجلد الذي يحتوي على هذا الكتاب المدرسي الذي تقرأه الآن."
+    },
+    {
+      "source": "その中の <code>samples</code> フォルダを開きます。<code>K01HelloKotlin</code> フォルダが見本です。場所を確かめるだけで、移動はしません。",
+      "translation": "افتح مجلد <code>samples</code> بداخله. مجلد <code>K01HelloKotlin</code> هو المثال. ستقوم بالتحقق من الموقع فقط ولن تنقله."
+    },
+    {
       "source": "使うもの",
       "translation": "ما تستخدمه"
+    },
+    {
+      "source": "フォルダの場所（ユーザ名と教材のフォルダは、自分のものに読み替える）",
+      "translation": "موقع المجلد (استبدل اسم المستخدم ومجلد المواد التعليمية باسمك ومجلدك)"
+    },
+    {
+      "source": "授業で作るプロジェクト",
+      "translation": "المشروع الذي تنشئه في الحصة"
+    },
+    {
+      "source": "完成版の見本",
+      "translation": "مثال النسخة المكتملة"
+    },
+    {
+      "source": "② IntelliJ IDEA で開く",
+      "translation": "② الفتح في IntelliJ IDEA"
+    },
+    {
+      "source": "フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、いちばん上のメニューバーから <strong>ファイル → 開く…</strong> を選びます。プロジェクトを1つも開いていないときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選びます。",
+      "translation": "أظهر شاشة اختيار المجلد. عند فتح مشروع الحصة، اختر <strong>ファイル → 開く…</strong> (ملف ← فتح…&lrm;) من شريط القوائم في الأعلى. وعندما لا تكون فاتحا لأي مشروع، اختر <strong>開く…</strong> (فتح…&lrm;) من القائمة في أعلى يسار شاشة Welcome.&lrm;"
+    },
+    {
+      "source": "①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。",
+      "translation": "اختر وافتح مجلد <code>K01HelloKotlin</code> الموجود داخل <code>samples</code> الذي تحققت منه في ①.&lrm;"
+    },
+    {
+      "source": "開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。",
+      "translation": "إذا سُئلت عن كيفية الفتح، فاختر <strong>新しいウィンドウ</strong> (نافذة جديدة)، وافتحه في نافذة مختلفة عن نافذة مشروع الحصة."
+    },
+    {
+      "source": "左の一覧で <code>src</code> を開き、いまの演習のパッケージを選びます。<code>ex01</code>〜<code>ex11</code> のうち、<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> を開きます。",
+      "translation": "افتح <code>src</code> من القائمة على اليسار، واختر حزمة التمرين الحالي. من <code>ex01</code> إلى <code>ex11</code>، افتح <code>Foo.kt</code> لحزمة <code>ex08</code>، وافتح <code>main.kt</code> للبقية."
+    },
+    {
+      "source": "動きを見たいときは、<code>fun main()</code> の左の ▷ を押します。",
+      "translation": "عندما تريد رؤية كيف يعمل، اضغط على ▷ على يسار <code>fun main()</code>.&lrm;"
+    },
+    {
+      "source": "③ 今のステップの部分だけを比べる",
+      "translation": "③ مقارنة جزء الخطوة الحالية فقط"
+    },
+    {
+      "source": "たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。5コマ目は、STEP 26なら <code>ex08/Foo.kt</code> の <code>get()</code>・<code>set()</code>、STEP 27なら <code>ex09/main.kt</code> の <code>Person</code>・<code>copy</code>、STEP 28なら <code>ex07/main.kt</code> の <code>plusTen</code> を比べます。6コマ目は、STEP 32なら <code>ex10/main.kt</code> の2つの <code>map</code>、STEP 33なら <code>ex11/main.kt</code> の <code>by lazy</code> と2つの読み取りを比べます。",
+      "translation": "على سبيل المثال، إذا تعثّرت في STEP 04، فانظر إلى السطرين <code>val number2</code> و <code>val number3</code> في المثال. قارن شيفرتك حرفا بحرف للتحقق من مواضع <code>.</code> ووجود <code>f</code>.&lrm; في الحصة 5، في STEP 26 قارن <code>get()</code> و <code>set()</code> في <code>ex08/Foo.kt</code>، وفي STEP 27 قارن <code>Person</code> و <code>copy</code> في <code>ex09/main.kt</code>، وفي STEP 28 قارن <code>plusTen</code> في <code>ex07/main.kt</code>.&lrm; في الحصة 6، في STEP 32 قارن الاستدعاءين لـ <code>map</code> في <code>ex10/main.kt</code>، وفي STEP 33 قارن <code>by lazy</code> وقراءتي الخاصية في <code>ex11/main.kt</code>.&lrm;"
+    },
+    {
+      "source": "見終わったら、授業で作っている <code>Documents/Kotlin/K01HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。",
+      "translation": "بعد الانتهاء من النظر، عُد إلى نافذة المشروع <code>Documents/Kotlin/K01HelloKotlin</code> الذي تنشئه في الحصة. تحقق من موضع واحد لإصلاحه، وشغّل (Run) للتحقق من النتيجة. إذا لم تفهم، فاعرض الشيفرتين على المعلم."
+    },
+    {
+      "source": "教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a1>K01HelloKotlin.zip</a1>）。展開してできた <code>K01HelloKotlin</code> フォルダを、②と同じように開きます。",
+      "translation": "إذا لم يكن مجلد المواد التعليمية بحوزتك، فيمكنك الحصول على المثال نفسه كملف ZIP (<a1>K01HelloKotlin.zip</a1>). افتح مجلد <code>K01HelloKotlin</code> الناتج عن فك الضغط، بالطريقة نفسها في ②.&lrm;"
+    },
+    {
+      "source": "HELP · 困ったらここ",
+      "translation": "HELP · إذا واجهتك مشكلة، فانظر هنا"
+    },
+    {
+      "source": "止まった場所から、一緒に直す",
+      "translation": "الإصلاح معا بدءا من المكان الذي توقفت فيه"
+    },
+    {
+      "source": "赤くなっている最初の行を見ます。<strong>2分考えても分からなければ</strong>、先生に「ステップ番号・ファイル名・画面」を見せましょう。",
+      "translation": "انظر إلى السطر الأول الذي يظهر باللون الأحمر. <strong>إذا لم تفهم بعد التفكير لمدة دقيقتين</strong>، فاعرض «رقم الخطوة، واسم الملف، والشاشة» على المعلم."
+    },
+    {
+      "source": "困ったこと",
+      "translation": "المشكلة"
+    },
+    {
+      "source": "最初に確認すること",
+      "translation": "أول ما يجب التحقق منه"
+    },
+    {
+      "source": "Playgroundで何も出ない",
+      "translation": "لا يظهر شيء في Playground"
+    },
+    {
+      "source": "<code>fun main()</code> があるか確認する。<code>println</code> の1行だけでは実行されません。",
+      "translation": "تحقق من وجود <code>fun main()</code>.&lrm; لن يتم التشغيل بوجود السطر <code>println</code> فقط."
+    },
+    {
+      "source": "新規プロジェクトの画面に Kotlin がない",
+      "translation": "لا توجد Kotlin في شاشة مشروع جديد"
+    },
+    {
+      "source": "左の一覧の、見出し <strong>新規プロジェクト</strong> の下を見る。下の <strong>ジェネレーター</strong> の中の項目ではありません。",
+      "translation": "انظر أسفل العنوان <strong>新規プロジェクト</strong> (مشروع جديد) في القائمة على اليسار. إنها ليست عنصرا ضمن <strong>ジェネレーター</strong> (المولِّدات) في الأسفل."
+    },
+    {
+      "source": "ビルドシステムに IntelliJ がない",
+      "translation": "لا يوجد IntelliJ في نظام البناء"
+    },
+    {
+      "source": "左の一覧で <strong>Kotlin</strong> を選んでいるか確認する。直らなければ画面を先生に見せる。",
+      "translation": "تحقق مما إذا كنت قد اخترت <strong>Kotlin</strong> في القائمة على اليسار. إذا لم يُحلّ الأمر، فاعرض الشاشة على المعلم."
+    },
+    {
+      "source": "JDK の欄が空",
+      "translation": "حقل JDK فارغ"
+    },
+    {
+      "source": "欄を開いて、出てきたものを選ぶ。何も出てこないときは、先生に画面を見せる。",
+      "translation": "افتح الحقل، واختر ما يظهر لك. إذا لم يظهر شيء، فاعرض الشاشة على المعلم."
+    },
+    {
+      "source": "緑の三角（▷）が出ない",
+      "translation": "لا يظهر المثلث الأخضر (▷)"
+    },
+    {
+      "source": "<code>fun main()</code> のつづりを1文字ずつ確認する。<code>main</code> は小文字で、うしろの <code>()</code> も必要。ファイルが <code>src</code> の中にあるかも確認する。",
+      "translation": "تحقق من تهجئة <code>fun main()</code> حرفا بحرف. كلمة <code>main</code> تُكتب بأحرف صغيرة، ويجب وجود <code>()</code> بعدها. تحقق أيضا مما إذا كان الملف داخل <code>src</code>.&lrm;"
+    },
+    {
+      "source": "<code>package ex01</code> の行が赤い",
+      "translation": "سطر <code>package ex01</code> باللون الأحمر"
+    },
+    {
+      "source": "ファイルの場所が <code>src/ex01/</code> か確認する。フォルダ名とパッケージ名を合わせる点はJavaと同じです。",
+      "translation": "تحقق مما إذا كان موقع الملف هو <code>src/ex01/</code>.&lrm; مطابقة اسم المجلد واسم الحزمة هي نقطة مشتركة مع Java.&lrm;"
+    },
+    {
+      "source": "<code>Unresolved reference</code> と出る",
+      "translation": "ظهور <code>Unresolved reference</code>"
+    },
+    {
+      "source": "名前のつづりを確認する。<code>println</code>・<code>number1</code>・<code>name</code> の大文字と小文字も区別する。",
+      "translation": "تحقق من تهجئة الأسماء. يتم التمييز بين الأحرف الكبيرة والصغيرة لكل من <code>println</code> و <code>number1</code> و <code>name</code>.&lrm;"
+    },
+    {
+      "source": "<code>val</code> に再代入できないというメッセージが出る",
+      "translation": "ظهور رسالة تفيد بأنه لا يمكن إعادة الإسناد إلى <code>val</code>"
+    },
+    {
+      "source": "STEP 05 の練習Bでは、変数 <code>number1</code> の <code>val</code> を確認します。STEP 23 の <code>yamada.age = 21</code> では、<code>Person</code> に宣言したプロパティ <code>val age</code> を確認します。<code>val yamada</code> の再代入ではありません。確認後は、練習で追加した代入行を消します。",
+      "translation": "في التمرين B من STEP 05، أنت تتحقق من الكلمة المفتاحية <code>val</code> الخاصة بالمتغيّر <code>number1</code>.&lrm; وفي <code>yamada.age = 21</code> من STEP 23، أنت تتحقق من الخاصية <code>val age</code> المُصرّح عنها في <code>Person</code>.&lrm; وليست إعادة إسناد لـ <code>val yamada</code>.&lrm; بعد التحقق، احذف سطر الإسناد الذي أضفته في التمرين."
+    },
+    {
+      "source": "実行しても何も出ない",
+      "translation": "لا يظهر شيء حتى بعد التشغيل"
+    },
+    {
+      "source": "画面の下の <strong>実行</strong> ツールウィンドウが開いているか確認する。閉じていたら <strong>表示 → ツールウィンドウ → 実行</strong> で開く。",
+      "translation": "تحقق مما إذا كانت نافذة الأدوات <strong>実行</strong> (تشغيل) مفتوحة أسفل الشاشة. إذا كانت مغلقة، فافتحها من <strong>表示 → ツールウィンドウ → 実行</strong> (عرض ← نوافذ الأدوات ← تشغيل)."
+    },
+    {
+      "source": "<code>プロセスは終了コード 1 で終了しました</code> と出る",
+      "translation": "ظهور <code>プロセスは終了コード 1 で終了しました</code> (انتهت العملية برمز الخروج 1)"
+    },
+    {
+      "source": "<code>0</code> 以外の数で終わったときは、途中で異常が起きています。その上に出ている赤い文字を、上から読む。",
+      "translation": "إذا انتهت العملية برقم غير <code>0</code>، فهذا يعني حدوث خطأ في المنتصف. اقرأ النص الأحمر الذي يظهر أعلاه من الأعلى."
+    },
+    {
+      "source": "出るけれど、内容が違う",
+      "translation": "يظهر الناتج ولكن المحتوى مختلف"
+    },
+    {
+      "source": "<code>println</code> のかっこの中を確認する。変数名を <code>&quot; &quot;</code> で囲むと、その名前の文字がそのまま出ます。",
+      "translation": "تحقق مما بداخل قوسي <code>println</code>.&lrm; إذا أحطت اسم المتغيّر بـ <code>&quot; &quot;</code>، فستُطبع حروف اسمه كما هي."
+    },
+    {
+      "source": "<code>String</code> の変数に <code>null</code> を入れた行が赤い",
+      "translation": "السطر الذي تم فيه إسناد <code>null</code> لمتغيّر من النوع <code>String</code> باللون الأحمر"
+    },
+    {
+      "source": "<code>?</code> の付かない型には <code>null</code> を入れられません。<code>null</code> を入れたいなら型を <code>String?</code> にし、入れないなら値を文字列に戻す（STEP 09）。",
+      "translation": "لا يمكنك إسناد <code>null</code> إلى نوع لا يحتوي على <code>?</code>.&lrm; إذا كنت تريد إسناد <code>null</code>، فغيّر النوع إلى <code>String?</code>، وإذا لم تكن تريد ذلك، فأعد القيمة لتكون سلسلة نصية (STEP 09)."
+    },
+    {
+      "source": "<code>String?</code> の変数を使った行が赤い",
+      "translation": "السطر الذي يستخدم متغيّرا من النوع <code>String?</code> باللون الأحمر"
+    },
+    {
+      "source": "STEP 10では <code>name2.count()</code> ではなく <code>name2?.count()</code> と書きます。STEP 27の <code>name.count()</code> は <code>if (name != null)</code> の中なら、そのまま書けます。いま試しているSTEPと条件の位置を確認します。",
+      "translation": "في STEP 10، تكتب <code>name2?.count()</code> بدلا من <code>name2.count()</code>.&lrm; أما استدعاء <code>name.count()</code> في STEP 27 فيمكن كتابته كما هو، إذا كان داخل <code>if (name != null)</code>.&lrm; تحقق من موقع STEP والشرط الذي تختبره الآن."
+    },
+    {
+      "source": "<code>fun</code> を書いた行が赤い",
+      "translation": "السطر الذي كتبت فيه <code>fun</code> باللون الأحمر"
+    },
+    {
+      "source": "引数が <code>名前: 型</code> の順になっているか確認する。Javaの <code>int a</code> の並びでは通りません（STEP 15）。",
+      "translation": "تحقق مما إذا كانت المُعامِلات بترتيب <code>名前: 型</code>. ترتيب <code>int a</code> الخاص بـ Java غير مقبول (STEP 15)."
+    },
+    {
+      "source": "<code>return</code> について指摘が出る",
+      "translation": "ظهور ملاحظة حول <code>return</code>"
+    },
+    {
+      "source": "かっこのうしろに <code>: Int</code> と書いたなら、<code>return</code> で値を返します。返さないなら <code>: Int</code> のほうを消します（STEP 15・STEP 17）。",
+      "translation": "إذا كتبت <code>: Int</code> بعد الأقواس، فيجب أن تُعيد قيمة باستخدام <code>return</code>.&lrm; إذا لم تكن تريد إرجاع قيمة، فاحذف <code>: Int</code> (STEP 15 و STEP 17)."
+    },
+    {
+      "source": "<code>sum(1, 2)</code> の行が赤い",
+      "translation": "سطر <code>sum(1, 2)</code> باللون الأحمر"
+    },
+    {
+      "source": "渡している引数の数と型が、宣言した <code>fun sum(a: Int, b: Int)</code> と合っているか確認する（STEP 17）。",
+      "translation": "تحقق مما إذا كان عدد ونوع الوسائط المُمرّرة يتطابق مع <code>fun sum(a: Int, b: Int)</code> المُصرّح عنها (STEP 17)."
+    },
+    {
+      "source": "<code>ex08</code> に <code>main.kt</code> がない",
+      "translation": "لا يوجد <code>main.kt</code> في <code>ex08</code>"
+    },
+    {
+      "source": "この演習だけは <code>Foo.kt</code> です。その中の <code>fun main()</code> から実行します（STEP 25・26）。",
+      "translation": "في هذا التمرين فقط، الملف هو <code>Foo.kt</code>.&lrm; شغّله من <code>fun main()</code> الموجود بداخله (STEP 25 و 26)."
+    },
+    {
+      "source": "<code>counter</code> の読み書きで同じ出力が続いて止まる",
+      "translation": "تتوقف العملية بعد استمرار ظهور نفس الناتج عند قراءة وكتابة <code>counter</code>"
+    },
+    {
+      "source": "<code>get()</code>・<code>set()</code> の中で保存値を読む・書く場所が <code>field</code> か確認します。そこを <code>counter</code> にすると同じアクセサを呼び直します（STEP 26）。",
+      "translation": "تحقق مما إذا كان المكان الذي تقرأ أو تكتب فيه القيمة المحفوظة داخل <code>get()</code> و <code>set()</code> هو <code>field</code>.&lrm; إذا جعلته <code>counter</code>، فسيتم استدعاء نفس دوال الوصول مرة أخرى (STEP 26)."
+    },
+    {
+      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が見本と違う",
+      "translation": "الأرقام في <code>ex09</code> أو نهاية <code>Person2@...</code> تختلف عن المثال"
+    },
+    {
+      "source": "通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。",
+      "translation": "بالنسبة للأصناف العادية، قد تتغير الأرقام المعروضة ونهايات السلاسل النصية التي تُرجعها <code>hashCode()</code> و <code>toString()</code> في كل مرة يتم فيها التشغيل. تحقق من خلال عدد الأسطر، ونتائج المقارنة، والاسم، والعمر الموجودة في الجدول في STEP 27.&lrm;"
+    },
+    {
+      "source": "<code>copy(age: 25)</code> が赤い",
+      "translation": "سطر <code>copy(age: 25)</code> باللون الأحمر"
+    },
+    {
+      "source": "Kotlinの名前付き引数は <code>copy(age = 25)</code> です。Swiftの引数ラベルの <code>:</code> とは記号が違います（STEP 27）。",
+      "translation": "الوسيط المسمّى في Kotlin هو <code>copy(age = 25)</code>.&lrm; وهو يختلف عن تسمية الوسيط في Swift التي تستخدم <code>:</code> (STEP 27)."
+    },
+    {
+      "source": "<code>value.name</code> や <code>name.count()</code> が赤い",
+      "translation": "سطر <code>value.name</code> أو <code>name.count()</code> باللون الأحمر"
+    },
+    {
+      "source": "一時的に書いた関数で、前者は <code>if (value is Person)</code>、後者は <code>if (name != null)</code> の中に置いたか確認します。条件の外では、確かめた型として使えません（STEP 27）。",
+      "translation": "تحقق مما إذا كنت قد وضعت الأول داخل <code>if (value is Person)</code> والثاني داخل <code>if (name != null)</code> في الدالة المكتوبة مؤقتا. لا يمكنك استخدامها كنوع تم التحقق منه خارج الشرط (STEP 27)."
+    },
+    {
+      "source": "<code>plusTen()</code> が見つからない",
+      "translation": "لم يتم العثور على <code>plusTen()</code>"
+    },
+    {
+      "source": "<code>ex07/main.kt</code> の <code>main</code> の外に <code>fun Int.plusTen(): Int</code> があるか確認します。呼び出しは <code>5.plusTen()</code> です（STEP 28）。",
+      "translation": "تحقق من وجود <code>fun Int.plusTen(): Int</code> خارج الدالة <code>main</code> في <code>ex07/main.kt</code>.&lrm; استدعاؤها يكون هكذا <code>5.plusTen()</code> (STEP 28)."
+    },
+    {
+      "source": "<code>map</code> の <code>Person(name)</code> が赤い",
+      "translation": "سطر <code>Person(name)</code> داخل <code>map</code> باللون الأحمر"
+    },
+    {
+      "source": "<code>result2</code> の型は <code>List&lt;Person&gt;</code> です。STEP 34の練習で <code>List&lt;String&gt;</code> に変えたままなら、元の型へ戻します。",
+      "translation": "نوع <code>result2</code> هو <code>List&lt;Person&gt;</code>.&lrm; إذا كنت قد تركته كـ <code>List&lt;String&gt;</code> بعد تمرين STEP 34، فأعده إلى النوع الأصلي."
+    },
+    {
+      "source": "<code>map</code> の中で <code>it</code> が見つからない",
+      "translation": "لم يتم العثور على <code>it</code> داخل <code>map</code>"
+    },
+    {
+      "source": "<code>name -&gt;</code> と引数名を書いたラムダでは、その名前 <code>name</code> を使います。STEP 32の完成コードと、名前を付ける一時変更を混ぜていないか確認します。",
+      "translation": "في تعبير لامدا الذي كتبت فيه اسم المُعامِل <code>name -&gt;</code>، استخدم هذا الاسم <code>name</code>.&lrm; تحقق مما إذا كنت قد خلطت بين الشيفرة المكتملة لـ STEP 32 والتعديل المؤقت لإضافة الاسم."
+    },
+    {
+      "source": "<code>computed!</code> が出ない",
+      "translation": "لا تظهر <code>computed!</code>"
+    },
+    {
+      "source": "<code>ex11/main.kt</code> で <code>foo.bar</code> を読んでいるか確認します。STEP 33④の <code>println(foo.counter)</code> だけの形では、遅らせた計算は始まりません。",
+      "translation": "تحقق مما إذا كنت تقرأ <code>foo.bar</code> في <code>ex11/main.kt</code>.&lrm; لن تبدأ الحسابات المؤجلة باستخدام الشكل <code>println(foo.counter)</code> فقط كما في STEP 33④.&lrm;"
+    },
+    {
+      "source": "<code>counter</code> を変えたのに <code>bar</code> が変わらない",
+      "translation": "لم تتغير <code>bar</code> على الرغم من تغيير <code>counter</code>"
+    },
+    {
+      "source": "最初の <code>foo.bar</code> を読む前と後で動きが違います。初回の計算結果は保存され、同じオブジェクトの2回目以降の読み取りに使われます（STEP 33⑤）。",
+      "translation": "يختلف السلوك قبل وبعد القراءة الأولى لـ <code>foo.bar</code>.&lrm; تُحفظ نتيجة الحسابات في المرة الأولى، وتُستخدم للقراءة في المرة الثانية فصاعدا لنفس الكائن (STEP 33⑤)."
+    },
+    {
+      "source": "<code>ex11</code> が6行のまま",
+      "translation": "ظل الناتج من <code>ex11</code> كما هو 6 أسطر"
+    },
+    {
+      "source": "STEP 34で足した <code>val foo2 = Foo()</code> と、その <code>bar</code> を読む2行が残っていないか確認します。完成コードは1つの <code>foo</code> を使う3行の出力です。",
+      "translation": "تحقق مما إذا كان السطر <code>val foo2 = Foo()</code> الذي أضفته في STEP 34، والسطران اللذان يقرأان خاصية <code>bar</code> الخاصة به لا يزالون موجودين. الشيفرة المكتملة هي ناتج مكون من 3 أسطر يستخدم <code>foo</code> واحدا."
+    },
+    {
+      "source": "赤い波線が消えない",
+      "translation": "الخط المتموّج الأحمر لا يختفي"
+    },
+    {
+      "source": "全角のスペースや、全角の引用符（<code>”</code>）が混ざっていないか確認する。英数字の入力に切り替えて、その行を書き直す。",
+      "translation": "تحقق من عدم وجود مسافات بكامل العرض أو علامات اقتباس بكامل العرض (<code>”</code>) مختلطة. قم بالتبديل إلى لوحة المفاتيح الإنجليزية وأعد كتابة هذا السطر."
+    },
+    {
+      "source": "プロジェクトが見つからない",
+      "translation": "لم يتم العثور على المشروع"
+    },
+    {
+      "source": "Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。",
+      "translation": "تتبع المسار <code>Documents/Kotlin/K01HelloKotlin</code> في Finder.&lrm; إذا لم تجده، فاعرض ما أدخلته في حقل <strong>場所</strong> (الموقع) عند الإنشاء، على المعلم."
+    },
+    {
+      "source": "一度にいくつも直すと、何が変わったか分かりにくくなります。1か所直して、もう一度Runしましょう。",
+      "translation": "إذا أصلحت العديد من الأشياء في وقت واحد، فسيصعب فهم ما تغير. أصلح موضعا واحدا ثم شغّل (Run) مرة أخرى."
+    },
+    {
+      "source": "もっと知りたいとき",
+      "translation": "إذا أردت معرفة المزيد"
+    },
+    {
+      "source": "授業はこの教科書だけで進められます。次の公式資料は、あとから調べたい人向けです（英語で書かれています）。",
+      "translation": "يمكنك متابعة الحصص باستخدام هذا الكتاب المدرسي فقط. الوثائق الرسمية التالية موجهة لمن يرغب في البحث لاحقا (مكتوبة باللغة الإنجليزية)."
+    },
+    {
+      "source": "Kotlin公式：Comparison to Java",
+      "translation": "وثائق Kotlin الرسمية: Comparison to Java"
+    },
+    {
+      "source": "Kotlin公式：Basic syntax",
+      "translation": "وثائق Kotlin الرسمية: Basic syntax"
+    },
+    {
+      "source": "Kotlin公式：Basic types",
+      "translation": "وثائق Kotlin الرسمية: Basic types"
+    },
+    {
+      "source": "Kotlin公式：Null safety",
+      "translation": "وثائق Kotlin الرسمية: Null safety"
+    },
+    {
+      "source": "Kotlin公式：Functions",
+      "translation": "وثائق Kotlin الرسمية: Functions"
+    },
+    {
+      "source": "Kotlin公式：Numbers",
+      "translation": "وثائق Kotlin الرسمية: Numbers"
+    },
+    {
+      "source": "Kotlin公式：ドキュメントの入口",
+      "translation": "وثائق Kotlin الرسمية: نقطة الدخول إلى التوثيق"
+    },
+    {
+      "source": "IntelliJ IDEA公式：Get started with Kotlin",
+      "translation": "وثائق IntelliJ IDEA الرسمية: Get started with Kotlin"
+    },
+    {
+      "source": "教材の対象：K01HelloKotlin（全6コマ・11演習） / IntelliJ IDEA 2026.3 EAP<br>STEP 02 の画像は、日本語表示の IntelliJ IDEA をMacで撮ったものです。ほかのステップの画面の場所は、本文の手順と表でたどります。",
+      "translation": "البيئة المستهدفة في المواد التعليمية: المشروع K01HelloKotlin (إجمالي 6 حصص، 11 تمرينا) / إصدار IntelliJ IDEA 2026.3 EAP<br>صورة STEP 02 مأخوذة لـ IntelliJ IDEA بواجهة يابانية على جهاز Mac.&lrm; بالنسبة لمواقع الشاشات في الخطوات الأخرى، تتبع الخطوات والجداول في النص."
+    },
+    {
+      "source": "チェックは自分用で、先生には送信されません。チェックの保存はブラウザの設定により使えない場合があります。JavaScriptを無効にしても本文とコードは読めます。印刷する場合は ⌘ P。補足・解答も展開して印刷されます（JavaScript無効時は手動で開いてください）。",
+      "translation": "علامات الاختيار هي لاستخدامك الشخصي ولن يتم إرسالها إلى المعلم. قد لا يعمل حفظ العلامات اعتمادا على إعدادات متصفحك. حتى إذا قمت بتعطيل JavaScript، فلا يزال بإمكانك قراءة النص والشيفرة. للطباعة، استخدم ⌘ P.&lrm; سيتم أيضا توسيع الإضافات والإجابات وطباعتها (إذا كانت JavaScript معطلة، فافتحها يدويا)."
     }
   ]
 }
