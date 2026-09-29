@@ -85,7 +85,7 @@
     {
       "code": "ko",
       "name": "한국어",
-      "distribute": false,
+      "distribute": true,
       "ui": {
         "copy": "복사",
         "copy_label": "{title}의 코드 복사",
