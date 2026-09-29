@@ -161,6 +161,16 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 完成プロジェクトZIP | ZIP del proyecto terminado | |
 | Runする / Run ▶ を押す | hacer Run / presionar Run ▶ | 「Runして〜」は Haz Run y …。見出しでは Ejecutar la aplicación generada con Run のように ejecutar と併用する |
 | 赤くなる / 赤いエラー | aparecer en rojo / error en rojo | 「R.idが赤い」は R.id aparece en rojo |
+| リポジトリ | repositorio | |
+| 検索 / 検索語 | buscar / palabra de búsqueda | |
+| 並び順 / ソート順 | orden de clasificación | Spinner の選択肢 |
+| 固定データ | datos fijos | 通信に対する固定データ |
+| 背面カメラ | cámara trasera | |
+| 端末内ストレージ | almacenamiento interno del dispositivo | |
+| 写真アプリ | aplicación de fotos | |
+| 金魚 | pez dorado | A04 FunnyCamera で使用 |
+| 透過PNG | PNG transparente | |
+| 合成カメラ | cámara compuesta | |
 
 ## IntelliJ IDEAの画面に出る日本語（K01。日本語のまま残し、訳をかっこで添える）
 
