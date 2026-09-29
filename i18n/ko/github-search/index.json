@@ -328,7 +328,7 @@
     },
     {
       "source": "指定AVDに入力欄・ソート順・検索ボタンが出て、一覧と通信中の印は出ていない。",
-      "translation": "지정된 AVD에 입력란·정렬 순서·검색 버튼이 표시되고, 목록과 통신 중 표시는 표시되지 않습니다."
+      "translation": "지정된 AVD에 입력란·「ソート順」(정렬 순서)·검색 버튼이 표시되고, 목록과 통신 중 표시는 표시되지 않습니다."
     },
     {
       "source": "STEP 04 · 11コマ目 · 目安 27分",
@@ -892,7 +892,7 @@
     },
     {
       "source": "ベストマッチ",
-      "translation": "베스트 매치"
+      "translation": "「ベストマッチ」(베스트 매치)"
     },
     {
       "source": "空文字。sortパラメータを送らない。",
@@ -900,15 +900,15 @@
     },
     {
       "source": "スター数",
-      "translation": "스타 수"
+      "translation": "「スター数」(스타 수)"
     },
     {
       "source": "フォーク数",
-      "translation": "포크 수"
+      "translation": "「フォーク数」(포크 수)"
     },
     {
       "source": "更新日時",
-      "translation": "수정일"
+      "translation": "「更新日時」(수정일)"
     },
     {
       "source": "パッケージに <code>MainActivity.kt</code>・<code>GithubSearchResponse.kt</code>・<code>RepositoryAdapter.kt</code>・<code>GithubApi.kt</code> があることを確認します。完成全文は、この教科書内のSTEP 07・09・13・14にあります。XMLはSTEP 03・08、設定はSTEP 02です。",
