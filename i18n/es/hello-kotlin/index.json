@@ -484,7 +484,7 @@
     },
     {
       "source": "分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。",
-      "translation": "Marca las partes que no entiendas con el número del paso. Puedes preguntar algo como: “No entiendo la relación entre <code>val</code> y el <code>var</code> de Java del STEP 03”."
+      "translation": "Marca las partes que no entiendas con el número del paso. Puedes preguntar algo como: 「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」 (No entiendo la relación entre val y el var de Java del STEP 03)."
     },
     {
       "source": "ここで止まって確認",
@@ -924,7 +924,7 @@
     },
     {
       "source": "名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。",
-      "translation": "Ingresa <code>main</code> como nombre, selecciona <strong>ファイル</strong> (Archivo) en la lista de abajo y presiona <kbd>Return</kbd>. <strong>No es la opción “Clase” de arriba.</strong> Si seleccionas “Clase”, se creará <code>class main</code> y no coincidirá con los siguientes pasos."
+      "translation": "Ingresa <code>main</code> como nombre, selecciona <strong>ファイル</strong> (Archivo) en la lista de abajo y presiona <kbd>Return</kbd>. <strong>No es 「クラス」 (Clase) de arriba.</strong> Si seleccionas 「クラス」 (Clase), se creará <code>class main</code> y no coincidirá con los siguientes pasos."
     },
     {
       "source": "新規 Kotlin ファイル/クラスのダイアログ。上の入力欄に main と入力され、下の一覧でクラスの次にあるファイルが選ばれている",
@@ -2024,7 +2024,7 @@
     },
     {
       "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code> と <code>ex02</code> が並んでいることを確かめます。",
-      "translation": "Abre <code>src</code> en la ventana de herramientas <strong>Proyecto</strong> (Proyecto) de la izquierda y asegúrate de que <code>ex01</code> y <code>ex02</code> estén uno al lado del otro."
+      "translation": "Abre <code>src</code> en la ventana de herramientas <strong>プロジェクト</strong> (Proyecto) de la izquierda y asegúrate de que <code>ex01</code> y <code>ex02</code> estén uno al lado del otro."
     },
     {
       "source": "<code>ex01</code> の <code>main.kt</code> を開きます。1コマ目に書いたコードが、そのまま残っています。",
@@ -2184,7 +2184,7 @@
     },
     {
       "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> と <code>ex02</code> があることを確かめます。どちらも消しません。",
-      "translation": "Asegúrate de que <code>src</code> esté en la ventana de herramientas <strong>Proyecto</strong> (Proyecto) de la izquierda, y que <code>ex01</code> y <code>ex02</code> estén debajo de él. No borres ninguno de los dos."
+      "translation": "Asegúrate de que <code>src</code> esté en la ventana de herramientas <strong>プロジェクト</strong> (Proyecto) de la izquierda, y que <code>ex01</code> y <code>ex02</code> estén debajo de él. No borres ninguno de los dos."
     },
     {
       "source": "② ex03 パッケージを作る",
@@ -2584,7 +2584,7 @@
     },
     {
       "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることを確かめます。",
-      "translation": "Abre <code>src</code> en la ventana de herramientas <strong>Proyecto</strong> (Proyecto) de la izquierda y asegúrate de que <code>ex01</code>, <code>ex02</code> y <code>ex03</code> estén uno al lado del otro."
+      "translation": "Abre <code>src</code> en la ventana de herramientas <strong>プロジェクト</strong> (Proyecto) de la izquierda y asegúrate de que <code>ex01</code>, <code>ex02</code> y <code>ex03</code> estén uno al lado del otro."
     },
     {
       "source": "<code>ex01</code> と <code>ex02</code> の <code>main.kt</code> を開きます。前の回に書いたコードが、そのまま残っています。",
