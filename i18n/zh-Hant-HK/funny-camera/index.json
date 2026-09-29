@@ -40,7 +40,7 @@
     },
     {
       "source": "STEP 02 カメラのライブラリをそろえる",
-      "translation": "STEP 02 準備好相機函式庫"
+      "translation": "STEP 02 準備好相機程式庫"
     },
     {
       "source": "STEP 03 カメラの使用を宣言する",
@@ -224,11 +224,11 @@
     },
     {
       "source": "カメラのライブラリをそろえる",
-      "translation": "準備好相機函式庫"
+      "translation": "準備好相機程式庫"
     },
     {
       "source": "次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。",
-      "translation": "請將以下3個檔案<strong>確認路徑並替換全文後</strong>再進行同步。這樣可以統一因建立日期不同而產生的函式庫差異。這是以在 Panda 2 建立的組態為前提，而不是只調低其他版本的 AGP 版本號的步驟。"
+      "translation": "請將以下3個檔案<strong>確認路徑並替換全文後</strong>再進行同步。這樣可以統一因建立日期不同而產生的程式庫差異。這是以在 Panda 2 建立的組態為前提，而不是只調低其他版本的 AGP 版本號的步驟。"
     },
     {
       "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
@@ -260,7 +260,7 @@
     },
     {
       "source": "依存関係",
-      "translation": "相依項目"
+      "translation": "依賴項目"
     },
     {
       "source": "使う場所",
@@ -284,7 +284,7 @@
     },
     {
       "source": "Javaと同じライブラリをKotlinから使えます。Kotlinではnewを書きません。camera-camera2は本文にimportがなくても実行時に必要です。",
-      "translation": "可以在 Kotlin 中使用與 Java 相同的函式庫。在 Kotlin 中不需要寫 new。camera-camera2 即使在內文中沒有 import，在執行時期也是必要的。"
+      "translation": "可以在 Kotlin 中使用與 Java 相同的程式庫。在 Kotlin 中不需要寫 new。camera-camera2 即使在內文中沒有 import，在執行時期也是必要的。"
     },
     {
       "source": "同期の赤いエラーがなくなり、カタログにCameraXの4つとlifecycleがある。",
@@ -364,7 +364,7 @@
     },
     {
       "source": "指を離したときにViewのクリック処理を呼ぶ。警告をSuppressで隠さない。",
-      "translation": "手指放開時呼叫 View 的點擊處理。不使用 Suppress 來隱藏警告。"
+      "translation": "手指放開時呼叫 View 的按一下處理。不使用 Suppress 來隱藏警告。"
     },
     {
       "source": "まだXMLに配置していないので、この時点では画面は変わりません。次のSTEPでこのクラスをタグ名に使います。",
@@ -464,7 +464,7 @@
     },
     {
       "source": "ボタンを1回押すと「プレビューを確認中です」が出ます。プレビューが黒いときは権限の状態を先生と確認し、連打で直そうとしません。",
-      "translation": "按一下按鈕會顯示「プレビューを確認中です」（正在確認預覽）。預覽畫面一片黑時，請與老師確認權限狀態，不要試圖用連續點擊來解決。"
+      "translation": "按一下按鈕會顯示「プレビューを確認中です」（正在確認預覽）。預覽畫面一片黑時，請與老師確認權限狀態，不要試圖用連續按下來解決。"
     },
     {
       "source": "Javaのgetter／setterをKotlinではプロパティの形で呼べます。cameraProviderFuture.get()は準備完了のリスナ内にあり、ここでPreviewを画面へ接続します。",
@@ -908,7 +908,7 @@
     },
     {
       "source": "空き容量など端末の状態を先生と確認。saveBitmapがfalseを返した結果です。連打しません。",
-      "translation": "請與老師確認儲存空間等裝置狀態。這是 saveBitmap 回傳 false 的結果。請勿連續點擊。"
+      "translation": "請與老師確認儲存空間等裝置狀態。這是 saveBitmap 回傳 false 的結果。請勿連續按下。"
     },
     {
       "source": "保存画像が見つからない",

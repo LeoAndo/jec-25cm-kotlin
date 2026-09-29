@@ -124,7 +124,7 @@
     },
     {
       "source": "文字を変更するボタンと、Snackbar・Toastを出すボタンがあるアプリ。各STEPを上から進めます。比較欄のJava／Swiftは読むためのもので、Kotlinのファイルには貼りません。",
-      "translation": "一個有變更文字的按鈕，以及顯示 Snackbar、Toast 的按鈕的應用程式。請從上到下依序進行各個 STEP。比較欄中的 Java／Swift 只是用來閱讀的，不要貼到 Kotlin 的檔案裡。"
+      "translation": "一個有變更文字的按鈕，以及顯示 Snackbar、Toast 的按鈕的應用程式。請從上到下依序進行各個 STEP。比較欄中的 Java／Swift 只是用來閱讀的，不要貼到 Kotlin 的檔案裏。"
     },
     {
       "source": "STEP 00 · 7コマ目 · 目安 5分",
@@ -212,7 +212,7 @@
     },
     {
       "source": "<code>ユーザ名</code> はMacの自分の名前に置き換えます。<strong>Save locationにはプロジェクト名まで含めます。</strong>最初のGradle同期には通信が必要です。Macから「書類」へのアクセスを聞かれたら、自分のプロジェクトを読むために許可します。",
-      "translation": "請把 <code>ユーザ名</code> (用戶名稱) 換成自己在 Mac 上的名稱。<strong>Save location 要包含專案名稱。</strong>第1次 Gradle 同步需要網絡連線。如果 Mac 詢問是否允許存取 文件 (Documents)，請允許，這樣才能讀取自己的專案。"
+      "translation": "請把 <code>ユーザ名</code> (用戶名稱) 換成自己在 Mac 上的名稱。<strong>Save location 要包含專案名稱。</strong>第1次 Gradle 同步需要網絡連線。如果 Mac 詢問是否允許存取「書類」（文件），請允許，這樣才能讀取自己的專案。"
     },
     {
       "source": "授業で使うライブラリの版をそろえる",
@@ -300,7 +300,7 @@
     },
     {
       "source": "指定名のエミュレータにAndroidのホーム画面が出ている。",
-      "translation": "指定名稱的模擬器上顯示著 Android 的主畫面。"
+      "translation": "指定名稱的模擬器上顯示着 Android 的主畫面。"
     },
     {
       "source": "STEP 03 · 7コマ目 · 目安 10分",
@@ -356,7 +356,7 @@
     },
     {
       "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
-      "translation": "請把整個內容替換成下面的 XML。不要貼到 <code>MainActivity.kt</code> 裡。"
+      "translation": "請把整個內容替換成下面的 XML。不要貼到 <code>MainActivity.kt</code> 裏。"
     },
     {
       "source": "activity_main.xml · 全文",
@@ -372,11 +372,11 @@
     },
     {
       "source": "文字と4つのボタンを並べた画面",
-      "translation": "排列著文字和4個按鈕的畫面"
+      "translation": "排列着文字和4個按鈕的畫面"
     },
     {
       "source": "文字と4つのボタンを並べた画面（指定AVDで撮影）",
-      "translation": "排列著文字和4個按鈕的畫面（在指定的 AVD 上截圖）"
+      "translation": "排列着文字和4個按鈕的畫面（在指定的 AVD 上截圖）"
     },
     {
       "source": "設定",
@@ -484,7 +484,7 @@
     },
     {
       "source": "自分のA01HelloAndroidで見出しと4つのボタンが表示されている。",
-      "translation": "自己的 A01HelloAndroid 上顯示著標題和4個按鈕。"
+      "translation": "自己的 A01HelloAndroid 上顯示着標題和4個按鈕。"
     },
     {
       "source": "STEP 07 · 8コマ目 · 目安 5分",
@@ -512,7 +512,7 @@
     },
     {
       "source": "前回の画面が出て、MainActivity.ktに4つのView取得が残っている。",
-      "translation": "出現上次的畫面，而且 MainActivity.kt 中還留著取得4個 View 的程式碼。"
+      "translation": "出現上次的畫面，而且 MainActivity.kt 中還留着取得4個 View 的程式碼。"
     },
     {
       "source": "STEP 08 · 8コマ目 · 目安 20分",
@@ -552,7 +552,7 @@
     },
     {
       "source": "<code>{ v -&gt; … }</code> はクリックされたときに実行するラムダです。<code>v</code> は押されたViewです。この処理では使いませんが、次のSnackbarで使います。Swiftのボタンのアクションにクロージャを渡す考え方にも対応します。",
-      "translation": "<code>{ v -&gt; … }</code> 是被點擊時執行的 Lambda。<code>v</code> 是被按下的 View。這個處理中不會用到它，但下一個 Snackbar 會用到。這也對應到 Swift 中把 closure 傳給按鈕動作的想法。"
+      "translation": "<code>{ v -&gt; … }</code> 是被按下時執行的 Lambda。<code>v</code> 是被按下的 View。這個處理中不會用到它，但下一個 Snackbar 會用到。這也對應到 Swift 中把 closure 傳給按鈕動作的想法。"
     },
     {
       "source": "KotlinではJavaの <code>setText</code> を <code>text.text = …</code> と書けます。ラムダは登録した時点では動かず、ボタンが押されたときに動きます。",
@@ -668,15 +668,15 @@
     },
     {
       "source": "時刻やプロセス番号は毎回変わります。比べるのはメッセージの部分です。過去の実行の行が残っていたら、最新の時刻を見ます。",
-      "translation": "時間和程序編號每次都會不同。要比較的是訊息的部分。如果還留著之前執行的行，請看最新的時間。"
+      "translation": "時間和程序編號每次都會不同。要比較的是訊息的部分。如果還留着之前執行的行，請看最新的時間。"
     },
     {
       "source": "外側のLogは画面の準備時、ラムダ内のLogはクリック時に出ます。Logcatは開発者向けです。アプリを使う人は画面の文字・Snackbar・Toastで結果を見ます。",
-      "translation": "外側的 Log 在準備畫面時輸出，Lambda 內的 Log 在點擊時輸出。Logcat 是給開發者看的。使用應用程式的人是透過畫面上的文字、Snackbar、Toast 來看結果。"
+      "translation": "外側的 Log 在準備畫面時輸出，Lambda 內的 Log 在按下時輸出。Logcat 是給開發者看的。使用應用程式的人是透過畫面上的文字、Snackbar、Toast 來看結果。"
     },
     {
       "source": "最新の起動ログにHello World!、クリック後のログにHello, Android!が出ている。",
-      "translation": "最新的啟動記錄中出現了 Hello World!，點擊後的記錄中出現了 Hello, Android! 的那一行。"
+      "translation": "最新的啟動記錄中出現了 Hello World!，按下後的記錄中出現了 Hello, Android! 的那一行。"
     },
     {
       "source": "STEP 11 · 8コマ目 · 目安 10分",
@@ -780,7 +780,7 @@
     },
     {
       "source": "idやパッケージ名は変えません。たとえばbtn1の文字だけを変えると、<code>getText()</code> がその文字を読むので、Snackbarの文言も一緒に変わります。",
-      "translation": "不要更改 id 和套件名稱。例如只改 btn1 的文字，<code>getText()</code> 會讀取那段文字，所以 Snackbar 的文字也會跟著改變。"
+      "translation": "不要更改 id 和套件名稱。例如只改 btn1 的文字，<code>getText()</code> 會讀取那段文字，所以 Snackbar 的文字也會跟着改變。"
     },
     {
       "source": "比較できる状態に戻す",
@@ -916,7 +916,7 @@
     },
     {
       "source": "STEP 10の端末と検索欄を確認し、Stop→Runとクリックをやり直します。",
-      "translation": "請確認 STEP 10 的裝置和搜尋欄，重新做一次 Stop→Run 和點擊。"
+      "translation": "請確認 STEP 10 的裝置和搜尋欄，重新做一次 Stop→Run 和按一下。"
     },
     {
       "source": "黄色い注意が出る",
@@ -928,7 +928,7 @@
     },
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
-      "translation": "提問時，請告訴老師教材資料夾中 <code>VERSION.json</code> 裡的版本和 STEP 編號。"
+      "translation": "提問時，請告訴老師教材資料夾中 <code>VERSION.json</code> 裏的版本和 STEP 編號。"
     },
     {
       "source": "公式資料",
