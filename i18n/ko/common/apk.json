@@ -132,7 +132,7 @@
     },
     {
       "source": "Finderで <strong>書類 → Kotlin</strong> を開きます。この授業で自分が作ったプロジェクトのフォルダが並んでいます。この中から1つ選びます。",
-      "translation": "Finder에서 <strong>書類(문서) → Kotlin</strong>을 엽니다. 이 수업에서 직접 만든 프로젝트의 폴더가 나란히 있습니다. 이 중에서 하나를 고릅니다."
+      "translation": "Finder에서 <strong>書類 → Kotlin</strong>(문서 → Kotlin)을 엽니다. 이 수업에서 직접 만든 프로젝트의 폴더가 나란히 있습니다. 이 중에서 하나를 고릅니다."
     },
     {
       "source": "この教材には、<code>A01HelloAndroid</code>・<code>A02CalcGame</code>・<code>A03GithubSearch</code>・<code>A04FunnyCamera</code> の教科書が入っています。この4つのうち、自分で作って完成させたアプリが候補です。提出時期までに自分で作ったアプリから選びます。",
@@ -156,7 +156,7 @@
     },
     {
       "source": "教材のフォルダの <code>samples</code> に入っているのは、先生が作った完成プロジェクト（見本）です。選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。",
-      "translation": "교재 폴더의 <code>samples</code>에 들어 있는 것은 선생님이 만든 완성 프로젝트(예제)입니다. 고르는 것은 <strong>書類(문서) → Kotlin</strong> 바로 아래에 있는, 직접 만든 프로젝트입니다."
+      "translation": "교재 폴더의 <code>samples</code>에 들어 있는 것은 선생님이 만든 완성 프로젝트(예제)입니다. 고르는 것은 <strong>書類 → Kotlin</strong>(문서 → Kotlin) 바로 아래에 있는, 직접 만든 프로젝트입니다."
     },
     {
       "source": "最後まで作れていない単元も、教科書を見ながら完成させれば選べます。選べるものが1つもないときは、先生に相談してください。",
@@ -180,7 +180,7 @@
     },
     {
       "source": "Finderで <strong>書類 → Kotlin</strong> を開きます。",
-      "translation": "Finder에서 <strong>書類(문서) → Kotlin</strong>을 엽니다."
+      "translation": "Finder에서 <strong>書類 → Kotlin</strong>(문서 → Kotlin)을 엽니다."
     },
     {
       "source": "アレンジするプロジェクトのフォルダ（<code>A01HelloAndroid</code>）を右クリックします。",
@@ -528,7 +528,7 @@
     },
     {
       "source": "手順5の完了通知で <strong>locate</strong> をクリックすると、Finderでその場所が開きます。通知を消してしまったときは、Finderで <strong>書類 → Kotlin → 自分のプロジェクト名</strong> の順に開き、そこから <strong>app → build → outputs → apk → debug</strong> の順に進みます。",
-      "translation": "5번 단계의 완료 알림에서 <strong>locate</strong>를 클릭하면 Finder에서 그 위치가 열립니다. 알림을 닫아 버렸을 때는 Finder에서 <strong>書類(문서) → Kotlin → 자신의 프로젝트 이름</strong> 순서로 열고, 거기에서 <strong>app → build → outputs → apk → debug</strong> 순서로 들어갑니다."
+      "translation": "5번 단계의 완료 알림에서 <strong>locate</strong>를 클릭하면 Finder에서 그 위치가 열립니다. 알림을 닫아 버렸을 때는 Finder에서 <strong>書類 → Kotlin → 自分のプロジェクト名</strong>(문서 → Kotlin → 자신의 프로젝트 이름) 순서로 열고, 거기에서 <strong>app → build → outputs → apk → debug</strong> 순서로 들어갑니다."
     },
     {
       "source": "<code>A01HelloAndroid</code> の場合の保存場所",
@@ -676,7 +676,7 @@
     },
     {
       "source": "Finderで <strong>書類 → Kotlin → 自分のプロジェクト名 → app → build → outputs → apk → debug</strong> の順に開く。",
-      "translation": "Finder에서 <strong>書類(문서) → Kotlin → 자신의 프로젝트 이름 → app → build → outputs → apk → debug</strong> 순서로 엽니다."
+      "translation": "Finder에서 <strong>書類 → Kotlin → 自分のプロジェクト名 → app → build → outputs → apk → debug</strong>(문서 → Kotlin → 자신의 프로젝트 이름 → app → build → outputs → apk → debug) 순서로 엽니다."
     },
     {
       "source": "Android Studio の左の一覧に <code>build</code> フォルダが見えない",
