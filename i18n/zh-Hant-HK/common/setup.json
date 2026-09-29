@@ -27,8 +27,8 @@
       "translation": "上課前的<br>準備"
     },
     {
-      "source": "教材を受け取ってから、はじめてのKotlinのプログラムが動くまで。上から順に1回だけ行います。まずブラウザだけで動かし、そのあとIntelliJ IDEAに移ります。2回目からは、教科書を開くところから始められます。",
-      "translation": "由收到教材，到執行第一個 Kotlin 程式，按頁面由上至下的順序做一次即可。先只用瀏覽器執行，再轉用 IntelliJ IDEA。第二次起便可直接開啟課本上課。"
+      "source": "教材を受け取ってから、授業を始めるまでの準備です。上から順に1回だけ行います。教材を「書類」に置き、使うアプリが入っていることを確かめます。2回目からは、教科書を開くところから始められます。",
+      "translation": "這是收到教材後、開始上課前的準備。請從上到下執行1次。將教材放在「書類（文件）」中，並確認要使用的應用程式已經安裝。從第2次開始，只要從開啟課本開始即可。"
     },
     {
       "source": "この資料の流れ",
@@ -43,40 +43,28 @@
       "translation": "② 確認所需工具"
     },
     {
-      "source": "③ ブラウザで動かす",
-      "translation": "③ 在瀏覽器中執行"
+      "source": "③ 後半の準備を知る",
+      "translation": "③ 了解後半部分的準備"
     },
     {
-      "source": "④ プロジェクトを作る",
-      "translation": "④ 建立專案"
+      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。うまくいかないときは、いちばん下の「4. うまくいかないとき」を見てください。",
+      "translation": "編號與下方標題相同。在②中，確認 Mac 已安裝所需的應用程式。遇到問題時，請看最下方的「4. 遇到問題時」。"
     },
     {
-      "source": "⑤ 実行して結果を読む",
-      "translation": "⑤ 執行並查看結果"
+      "source": "プロジェクトの作成と実行は教科書で行います",
+      "translation": "專案的建立與執行會在課本中進行"
     },
     {
-      "source": "⑥ 後半の準備を知る",
-      "translation": "⑥ 了解後半部分的準備"
-    },
-    {
-      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。③はブラウザだけで終わります。④で1行だけTerminalを使い、そのあとはIntelliJ IDEAの画面で操作します。うまくいかないときは、いちばん下の「7. うまくいかないとき」を見てください。",
-      "translation": "編號與下方標題相同。②確認 Mac 已安裝所需的應用程式。③只用瀏覽器就能完成。④只需在 Terminal 輸入一行指令，其後都在 IntelliJ IDEA 的介面操作。遇到問題時，請看最下方的「7. 遇到問題時」。"
-    },
-    {
-      "source": "JavaやSwiftとの違いだけを書いています",
-      "translation": "只說明與 Java 或 Swift 的分別"
-    },
-    {
-      "source": "この資料は、エディタの使い方そのものは説明しません。書いてあるのは、<strong>Kotlinのプロジェクトの作り方</strong>と、<strong>IntelliJ IDEAでの実行のしかた</strong>だけです。JavaやSwiftで同じことをやってきた経験は、そのまま使えます。",
-      "translation": "本資料不講解編輯器本身的用法，只說明<strong>如何建立 Kotlin 專案</strong>及<strong>如何在 IntelliJ IDEA 中執行程式</strong>。你在 Java 或 Swift 中做過相同操作的經驗，可以繼續運用。"
+      "source": "Kotlinのプロジェクトの作り方や、コードの書き方・実行のしかたは、第1単元（K01：HelloKotlin）の教科書で順を追って説明します。この資料では、教材の配置とアプリの確認だけを行います。",
+      "translation": "Kotlin 專案的建立方式、程式碼的撰寫方式與執行方式，會在第1單元（K01: HelloKotlin）的課本中循序漸進地說明。在這份資料中，只會進行教材的配置與應用程式的確認。"
     },
     {
       "source": "この準備が終わると",
       "translation": "完成準備後"
     },
     {
-      "source": "ブラウザとIntelliJ IDEAの両方で、Kotlinのプログラムを実行し、その結果を読めるようになります。ここまでできれば、第1単元の教科書を開いて始められます。",
-      "translation": "你便能在瀏覽器和 IntelliJ IDEA 中執行 Kotlin 程式，並查看結果。完成這些操作後，就可以開啟第1單元的課本開始學習。"
+      "source": "教材が手元にそろい、授業で使うアプリが開ける状態になります。ここまでできれば、第1単元の教科書を開いて始められます。",
+      "translation": "教材準備齊全，且上課要用的應用程式處於可以開啟的狀態。只要做到這裏，就能開啟第1單元的課本開始上課。"
     },
     {
       "source": "1. 教材を受け取り、「書類」に置く",
@@ -329,6 +317,182 @@
     {
       "source": "版が違うと、ボタンの名前や並びが教科書と少し違うことがあります。探しても見つからないときは、自分で設定を変えたり入れ直したりせず、その画面のまま先生に見せてください。",
       "translation": "版本不同時，按鈕名稱或排列方式可能與課本略有分別。如果找不到，不要自行更改設定或重新安裝，請保留目前的畫面給老師看。"
+    },
+    {
+      "source": "3. 後半で使う Android Studio とエミュレータ",
+      "translation": "3. 後半部分使用的 Android Studio 和模擬器"
+    },
+    {
+      "source": "7コマ目からは、<strong>Android Studio</strong> でスマートフォンのアプリを作ります。作ったアプリは、<strong>エミュレータ</strong>（Macの中で動く練習用のAndroid端末）で動かします。",
+      "translation": "由第7節課開始，會用 <strong>Android Studio</strong> 製作智能手機應用程式。製作的應用程式會在<strong>模擬器</strong>（在 Mac 內運作、供練習用的 Android 裝置）上執行。"
+    },
+    {
+      "source": "この準備の段階では、<strong>エミュレータを作る必要はありません</strong>。作り方は、後半の <a1>A01：HelloAndroidのSTEP 02</a1> で先生と確認します。ここでは、使う端末の名前だけ覚えておいてください。",
+      "translation": "在這個準備階段，<strong>毋須建立模擬器</strong>。建立方法會在後半部分的 <a1>A01：HelloAndroid 的 STEP 02</a1> 與老師一起確認。現在只需記住所用裝置的名稱。"
+    },
+    {
+      "source": "決めるもの",
+      "translation": "設定內容"
+    },
+    {
+      "source": "この授業での指定",
+      "translation": "本課程的指定內容"
+    },
+    {
+      "source": "エミュレータの名前",
+      "translation": "模擬器名稱"
+    },
+    {
+      "source": "作る場所",
+      "translation": "建立位置"
+    },
+    {
+      "source": "Android Studio の <strong>Device Manager</strong>",
+      "translation": "Android Studio 的 <strong>Device Manager</strong>"
+    },
+    {
+      "source": "名前は1文字も変えないでください",
+      "translation": "名稱中的每個字元都不要更改"
+    },
+    {
+      "source": "教科書の説明は、この名前で書いてあります。<code>Pixel</code> と <code>9a</code> の間は<strong>半角スペース</strong>です。下線の記号ではありません。名前が違うと、実行するときにどの端末を選べばよいか分からなくなります。",
+      "translation": "課本中的說明採用這個名稱。<code>Pixel</code> 與 <code>9a</code> 之間是<strong>半形空格</strong>，不是底線符號。如果名稱不同，執行時便可能不知道要選哪個裝置。"
+    },
+    {
+      "source": "後半で作るAndroidのプロジェクトも、前半と同じ <code>~/Documents/Kotlin</code> の中に置きます。前半のプロジェクトを消す必要はありません。",
+      "translation": "後半部分建立的 Android 專案，也與前半部分一樣，放在 <code>~/Documents/Kotlin</code> 內。毋須刪除前半部分的專案。"
+    },
+    {
+      "source": "Android Studio でも、書くのはKotlinです",
+      "translation": "在 Android Studio 編寫的也是 Kotlin"
+    },
+    {
+      "source": "前半で覚えた書き方は、そのまま使います。違うのは、結果が文字で出るか、スマートフォンの画面に出るかです。前半でつまずいたところは、後半に入る前に先生に聞いておいてください。",
+      "translation": "前半部分學到的寫法可以繼續使用。分別在於結果是以文字輸出，還是顯示在智能手機螢幕上。前半部分有不明白的地方，請在進入後半部分前向老師提問。"
+    },
+    {
+      "source": "完成プロジェクト（先生が作った見本）の開き方",
+      "translation": "如何開啟完成版專案（老師製作的範例）"
+    },
+    {
+      "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",
+      "translation": "步驟1放進「書類」（文件）的教材資料夾內，<code>samples</code> 存放了<strong>可直接開啟</strong>的完成版專案，毋須再下載或解壓縮。前半部分的 Kotlin 專案用 IntelliJ IDEA 的 <strong>Open</strong>，後半部分的 Android 專案用 Android Studio 的 <strong>Open</strong>，選擇 <code>samples</code> 內的相應資料夾。"
+    },
+    {
+      "source": "ここまでできたら、準備は終わりです。第1単元の教科書を開いて授業を始めましょう。",
+      "translation": "做到這裏，準備就完成了。開啟第1單元的課本開始上課吧。"
+    },
+    {
+      "source": "K01：HelloKotlin へ進む →",
+      "translation": "前往 K01：HelloKotlin →"
+    },
+    {
+      "source": "4. うまくいかないとき",
+      "translation": "4. 遇到問題時"
+    },
+    {
+      "source": "出たもの・起きたこと",
+      "translation": "顯示的內容或出現的情況"
+    },
+    {
+      "source": "やってみること",
+      "translation": "可嘗試的操作"
+    },
+    {
+      "source": "ダウンロードしたフォルダの名前に <code>(1)</code> や <code>-2</code> が付いている",
+      "translation": "下載的資料夾名稱後面有 <code>(1)</code> 或 <code>-2</code>"
+    },
+    {
+      "source": "古い教材を開いている可能性がある。自分で判断せず先生に見せる。",
+      "translation": "可能開啟了舊教材。不要自行判斷，請給老師看。"
+    },
+    {
+      "source": "Macに IntelliJ IDEA や Android Studio が見つからない",
+      "translation": "在 Mac 上找不到 IntelliJ IDEA 或 Android Studio"
+    },
+    {
+      "source": "貸与されたMacには入っているはずなので、自分で入れようとせず、先生に知らせる。",
+      "translation": "借用的 Mac 應該已經安裝。不要自行安裝，請告訴老師。"
+    },
+    {
+      "source": "前に作ったプロジェクトの場所が分からない",
+      "translation": "不知道之前建立的專案在哪裏"
+    },
+    {
+      "source": "<strong>File → Open Recent</strong> に出ていないか見る。<code>~/Documents/Kotlin</code> の中にあるはず。",
+      "translation": "查看 <strong>File → Open Recent</strong> 是否列出該專案。專案應該在 <code>~/Documents/Kotlin</code> 內。"
+    },
+    {
+      "source": "教科書に書いてある名前が、自分の画面にない",
+      "translation": "自己的畫面上沒有課本所寫的名稱"
+    },
+    {
+      "source": "IntelliJ IDEA や Android Studio の版が違うことがある。設定を変えず、その画面のまま先生に見せる。",
+      "translation": "可能是 IntelliJ IDEA 或 Android Studio 版本不同。不要更改設定，請保留目前的畫面給老師看。"
+    },
+    {
+      "source": "表にないことが起きたら、その画面のまま先生に見せてください。質問するときは、<code>VERSION.json</code> に書いてある教材の版を伝えてください。プロジェクトの作成やコードの実行で困ったときは、各教科書の「困ったとき」を見てください。",
+      "translation": "如果遇到表格以外的情況，請保留目前的畫面給老師看。提問時，請告知 <code>VERSION.json</code> 內的教材版本。在建立專案或執行程式碼遇到困難時，請查看各課本的「遇到問題時」。"
+    },
+    {
+      "source": "公式資料",
+      "translation": "官方資料"
+    },
+    {
+      "source": "IntelliJ IDEA：はじめに（英語）",
+      "translation": "IntelliJ IDEA：入門（英文）"
+    },
+    {
+      "source": "<a1>Android Developers：Android仮想デバイス（エミュレータ）の作成と管理</a1>（手順3）",
+      "translation": "<a1>Android Developers：建立及管理 Android 虛擬裝置（模擬器）</a1>（步驟3）"
+    },
+    {
+      "source": "公式資料は、この教材より詳しい代わりに、授業で使わない話も多く含みます。授業中は、まずこの資料と教科書を見てください。",
+      "translation": "官方資料比本教材詳細，但也包含很多課堂不會用到的內容。上課時，請先看本資料和課本。"
+    },
+    {
+      "source": "← もとのページへ戻る",
+      "translation": "← 返回原本的頁面"
+    },
+    {
+      "source": "対象：macOS / ブラウザ / IntelliJ IDEA / Android Studio · 確認日：2026年9月23日",
+      "translation": "適用環境：macOS / 瀏覽器 / IntelliJ IDEA / Android Studio · 確認日期：2026年9月23日"
+    },
+    {
+      "source": "教材を受け取ってから、はじめてのKotlinのプログラムが動くまで。上から順に1回だけ行います。まずブラウザだけで動かし、そのあとIntelliJ IDEAに移ります。2回目からは、教科書を開くところから始められます。",
+      "translation": "由收到教材，到執行第一個 Kotlin 程式，按頁面由上至下的順序做一次即可。先只用瀏覽器執行，再轉用 IntelliJ IDEA。第二次起便可直接開啟課本上課。"
+    },
+    {
+      "source": "③ ブラウザで動かす",
+      "translation": "③ 在瀏覽器中執行"
+    },
+    {
+      "source": "④ プロジェクトを作る",
+      "translation": "④ 建立專案"
+    },
+    {
+      "source": "⑤ 実行して結果を読む",
+      "translation": "⑤ 執行並查看結果"
+    },
+    {
+      "source": "⑥ 後半の準備を知る",
+      "translation": "⑥ 了解後半部分的準備"
+    },
+    {
+      "source": "番号は、下の見出しの番号と同じです。②では、使うアプリがMacに入っていることを確かめます。③はブラウザだけで終わります。④で1行だけTerminalを使い、そのあとはIntelliJ IDEAの画面で操作します。うまくいかないときは、いちばん下の「7. うまくいかないとき」を見てください。",
+      "translation": "編號與下方標題相同。②確認 Mac 已安裝所需的應用程式。③只用瀏覽器就能完成。④只需在 Terminal 輸入一行指令，其後都在 IntelliJ IDEA 的介面操作。遇到問題時，請看最下方的「7. 遇到問題時」。"
+    },
+    {
+      "source": "JavaやSwiftとの違いだけを書いています",
+      "translation": "只說明與 Java 或 Swift 的分別"
+    },
+    {
+      "source": "この資料は、エディタの使い方そのものは説明しません。書いてあるのは、<strong>Kotlinのプロジェクトの作り方</strong>と、<strong>IntelliJ IDEAでの実行のしかた</strong>だけです。JavaやSwiftで同じことをやってきた経験は、そのまま使えます。",
+      "translation": "本資料不講解編輯器本身的用法，只說明<strong>如何建立 Kotlin 專案</strong>及<strong>如何在 IntelliJ IDEA 中執行程式</strong>。你在 Java 或 Swift 中做過相同操作的經驗，可以繼續運用。"
+    },
+    {
+      "source": "ブラウザとIntelliJ IDEAの両方で、Kotlinのプログラムを実行し、その結果を読めるようになります。ここまでできれば、第1単元の教科書を開いて始められます。",
+      "translation": "你便能在瀏覽器和 IntelliJ IDEA 中執行 Kotlin 程式，並查看結果。完成這些操作後，就可以開啟第1單元的課本開始學習。"
     },
     {
       "source": "3. ブラウザだけで動かす（Kotlin Playground）",
@@ -647,80 +811,12 @@
       "translation": "完成以上操作，前半部分的準備就結束了。下一節課起可直接開啟課本上課。"
     },
     {
-      "source": "K01：HelloKotlin へ進む →",
-      "translation": "前往 K01：HelloKotlin →"
-    },
-    {
       "source": "6. 後半で使う Android Studio とエミュレータ",
       "translation": "6. 後半部分使用的 Android Studio 和模擬器"
     },
     {
-      "source": "7コマ目からは、<strong>Android Studio</strong> でスマートフォンのアプリを作ります。作ったアプリは、<strong>エミュレータ</strong>（Macの中で動く練習用のAndroid端末）で動かします。",
-      "translation": "由第7節課開始，會用 <strong>Android Studio</strong> 製作智能手機應用程式。製作的應用程式會在<strong>模擬器</strong>（在 Mac 內運作、供練習用的 Android 裝置）上執行。"
-    },
-    {
-      "source": "この準備の段階では、<strong>エミュレータを作る必要はありません</strong>。作り方は、後半の <a1>A01：HelloAndroidのSTEP 02</a1> で先生と確認します。ここでは、使う端末の名前だけ覚えておいてください。",
-      "translation": "在這個準備階段，<strong>毋須建立模擬器</strong>。建立方法會在後半部分的 <a1>A01：HelloAndroid 的 STEP 02</a1> 與老師一起確認。現在只需記住所用裝置的名稱。"
-    },
-    {
-      "source": "決めるもの",
-      "translation": "設定內容"
-    },
-    {
-      "source": "この授業での指定",
-      "translation": "本課程的指定內容"
-    },
-    {
-      "source": "エミュレータの名前",
-      "translation": "模擬器名稱"
-    },
-    {
-      "source": "作る場所",
-      "translation": "建立位置"
-    },
-    {
-      "source": "Android Studio の <strong>Device Manager</strong>",
-      "translation": "Android Studio 的 <strong>Device Manager</strong>"
-    },
-    {
-      "source": "名前は1文字も変えないでください",
-      "translation": "名稱中的每個字元都不要更改"
-    },
-    {
-      "source": "教科書の説明は、この名前で書いてあります。<code>Pixel</code> と <code>9a</code> の間は<strong>半角スペース</strong>です。下線の記号ではありません。名前が違うと、実行するときにどの端末を選べばよいか分からなくなります。",
-      "translation": "課本中的說明採用這個名稱。<code>Pixel</code> 與 <code>9a</code> 之間是<strong>半形空格</strong>，不是底線符號。如果名稱不同，執行時便可能不知道要選哪個裝置。"
-    },
-    {
-      "source": "後半で作るAndroidのプロジェクトも、前半と同じ <code>~/Documents/Kotlin</code> の中に置きます。前半のプロジェクトを消す必要はありません。",
-      "translation": "後半部分建立的 Android 專案，也與前半部分一樣，放在 <code>~/Documents/Kotlin</code> 內。毋須刪除前半部分的專案。"
-    },
-    {
-      "source": "Android Studio でも、書くのはKotlinです",
-      "translation": "在 Android Studio 編寫的也是 Kotlin"
-    },
-    {
-      "source": "前半で覚えた書き方は、そのまま使います。違うのは、結果が文字で出るか、スマートフォンの画面に出るかです。前半でつまずいたところは、後半に入る前に先生に聞いておいてください。",
-      "translation": "前半部分學到的寫法可以繼續使用。分別在於結果是以文字輸出，還是顯示在智能手機螢幕上。前半部分有不明白的地方，請在進入後半部分前向老師提問。"
-    },
-    {
-      "source": "完成プロジェクト（先生が作った見本）の開き方",
-      "translation": "如何開啟完成版專案（老師製作的範例）"
-    },
-    {
-      "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",
-      "translation": "步驟1放進「書類」（文件）的教材資料夾內，<code>samples</code> 存放了<strong>可直接開啟</strong>的完成版專案，毋須再下載或解壓縮。前半部分的 Kotlin 專案用 IntelliJ IDEA 的 <strong>Open</strong>，後半部分的 Android 專案用 Android Studio 的 <strong>Open</strong>，選擇 <code>samples</code> 內的相應資料夾。"
-    },
-    {
       "source": "7. うまくいかないとき",
       "translation": "7. 遇到問題時"
-    },
-    {
-      "source": "出たもの・起きたこと",
-      "translation": "顯示的內容或出現的情況"
-    },
-    {
-      "source": "やってみること",
-      "translation": "可嘗試的操作"
     },
     {
       "source": "Kotlin Playground の <strong>Run</strong> を押しても、何も出ない",
@@ -741,10 +837,6 @@
     {
       "source": "Macに IntelliJ IDEA が見つからない",
       "translation": "在 Mac 上找不到 IntelliJ IDEA"
-    },
-    {
-      "source": "貸与されたMacには入っているはずなので、自分で入れようとせず、先生に知らせる。",
-      "translation": "借用的 Mac 應該已經安裝。不要自行安裝，請告訴老師。"
     },
     {
       "source": "Welcome画面に <code>New Project</code> が見あたらない",
@@ -811,36 +903,12 @@
       "translation": "選擇 <strong>View → Tool Windows → Run</strong> 開啟。"
     },
     {
-      "source": "前に作ったプロジェクトの場所が分からない",
-      "translation": "不知道之前建立的專案在哪裏"
-    },
-    {
-      "source": "<strong>File → Open Recent</strong> に出ていないか見る。<code>~/Documents/Kotlin</code> の中にあるはず。",
-      "translation": "查看 <strong>File → Open Recent</strong> 是否列出該專案。專案應該在 <code>~/Documents/Kotlin</code> 內。"
-    },
-    {
-      "source": "ダウンロードしたフォルダの名前に <code>(1)</code> や <code>-2</code> が付いている",
-      "translation": "下載的資料夾名稱後面有 <code>(1)</code> 或 <code>-2</code>"
-    },
-    {
-      "source": "古い教材を開いている可能性がある。自分で判断せず先生に見せる。",
-      "translation": "可能開啟了舊教材。不要自行判斷，請給老師看。"
-    },
-    {
-      "source": "教科書に書いてある名前が、自分の画面にない",
-      "translation": "自己的畫面上沒有課本所寫的名稱"
-    },
-    {
       "source": "IntelliJ IDEA の版が違うことがある。設定を変えず、その画面のまま先生に見せる。",
       "translation": "可能是 IntelliJ IDEA 版本不同。不要更改設定，請保留目前的畫面給老師看。"
     },
     {
       "source": "表にないことが起きたら、その画面のまま先生に見せてください。Terminalの場合は、打った行と出た文字の両方が見えるようにしておくと早く分かります。質問するときは、<code>VERSION.json</code> に書いてある教材の版と、教科書のSTEP番号を伝えてください。",
       "translation": "如果遇到表格以外的情況，請保留目前的畫面給老師看。如在 Terminal 遇到問題，讓輸入的那一行和顯示的文字同時可見，有助更快了解情況。提問時，請告知 <code>VERSION.json</code> 內的教材版本，以及課本的 STEP 編號。"
-    },
-    {
-      "source": "公式資料",
-      "translation": "官方資料"
     },
     {
       "source": "<a1>Kotlin Playground</a1>（手順3）",
@@ -857,18 +925,6 @@
     {
       "source": "<a1>Android Developers：Android仮想デバイス（エミュレータ）の作成と管理</a1>（手順6）",
       "translation": "<a1>Android Developers：建立及管理 Android 虛擬裝置（模擬器）</a1>（步驟6）"
-    },
-    {
-      "source": "公式資料は、この教材より詳しい代わりに、授業で使わない話も多く含みます。授業中は、まずこの資料と教科書を見てください。",
-      "translation": "官方資料比本教材詳細，但也包含很多課堂不會用到的內容。上課時，請先看本資料和課本。"
-    },
-    {
-      "source": "← もとのページへ戻る",
-      "translation": "← 返回原本的頁面"
-    },
-    {
-      "source": "対象：macOS / ブラウザ / IntelliJ IDEA / Android Studio · 確認日：2026年9月23日",
-      "translation": "適用環境：macOS / 瀏覽器 / IntelliJ IDEA / Android Studio · 確認日期：2026年9月23日"
     }
   ]
 }
