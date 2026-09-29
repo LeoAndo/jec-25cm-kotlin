@@ -3,6 +3,14 @@
   "language": "mn",
   "entries": [
     {
+      "source": "A04 FunnyCamera — カメラにキャラクターを重ねよう | Kotlin演習",
+      "translation": "A04 FunnyCamera – Камерт дүр давхарлах | Kotlin дадлага"
+    },
+    {
+      "source": "Android Studio Panda 2で作る合成カメラ。90分×2コマで、カメラのプレビュー・ドラッグ・画像の合成と保存を進めます。",
+      "translation": "Android Studio Panda 2 програм дээр хийх холимог камер. 90 минутаар 2 удаа орж, камерын урьдчилан харах, чирэх, зураг нэгтгэх болон хадгалахыг сурна."
+    },
+    {
       "source": "本文へ移動",
       "translation": "Үндсэн агуулга руу шилжих"
     },
@@ -21,6 +29,66 @@
     {
       "source": "目次",
       "translation": "Агуулга"
+    },
+    {
+      "source": "STEP 00 今日の画面を先に見る",
+      "translation": "STEP 00 Өнөөдрийн дэлгэцийг түрүүлж харах"
+    },
+    {
+      "source": "STEP 01 自分のA04プロジェクトを作る",
+      "translation": "STEP 01 Өөрийн A04 төсөл үүсгэх"
+    },
+    {
+      "source": "STEP 02 カメラのライブラリをそろえる",
+      "translation": "STEP 02 Камерын сангуудыг бэлтгэх"
+    },
+    {
+      "source": "STEP 03 カメラの使用を宣言する",
+      "translation": "STEP 03 Камер ашиглахаа зарлах"
+    },
+    {
+      "source": "STEP 04 金魚を置いてドラッグ用のViewを作る",
+      "translation": "STEP 04 Алтан загас байрлуулж чирэх зориулалттай View үүсгэх"
+    },
+    {
+      "source": "STEP 05 映像・金魚・ボタンを重ねる",
+      "translation": "STEP 05 Дүрс, алтан загас болон товчийг давхарлах"
+    },
+    {
+      "source": "STEP 06 権限を受け取りプレビューを起動する",
+      "translation": "STEP 06 Эрх авч урьдчилан харахыг эхлүүлэх"
+    },
+    {
+      "source": "STEP 07 14コマ目の最後の3分",
+      "translation": "STEP 07 14-р хичээлийн цагийн сүүлийн 3 минут"
+    },
+    {
+      "source": "STEP 08 前回のプロジェクトを開き直す",
+      "translation": "STEP 08 Өмнөх төслийг дахин нээх"
+    },
+    {
+      "source": "STEP 09 プレビューと金魚を1枚に描く",
+      "translation": "STEP 09 Урьдчилан харах болон алтан загасыг 1 зурагт зурах"
+    },
+    {
+      "source": "STEP 10 JPEGを保存する完成コードへ進む",
+      "translation": "STEP 10 JPEG хадгалах бэлэн код руу үргэлжлүүлэх"
+    },
+    {
+      "source": "STEP 11 保存した画像を開いて比べる",
+      "translation": "STEP 11 Хадгалсан зургийг нээж харьцуулах"
+    },
+    {
+      "source": "STEP 12 権限を許可しない場合も確かめる",
+      "translation": "STEP 12 Эрх зөвшөөрөөгүй тохиолдлыг мөн шалгах"
+    },
+    {
+      "source": "STEP 13 自分の画面へアレンジする",
+      "translation": "STEP 13 Өөрийн дэлгэц рүү өөрчлөх"
+    },
+    {
+      "source": "STEP 14 15コマ目の最後の3分",
+      "translation": "STEP 14 15-р хичээлийн цагийн сүүлийн 3 минут"
     },
     {
       "source": "困ったとき",
@@ -43,20 +111,88 @@
       "translation": "Нийтлэг: Android Studio програмын өөр хувилбар"
     },
     {
+      "source": "カメラにキャラクターを<br>重ねよう",
+      "translation": "Камерын дүрс дээр<br>дүр давхарлах"
+    },
+    {
+      "source": "金魚を指で動かし、カメラの映像と組み合わせた1枚を保存します。",
+      "translation": "Алтан загасыг хуруугаараа хөдөлгөж, камерын дүрстэй нэгтгэсэн 1 зургийг хадгална."
+    },
+    {
+      "source": "対象：<code>A04FunnyCamera</code> / パッケージ：<code>jp.ac.jec.a04funnycamera</code><br>14〜15コマ目・各90分 / Android Studio Panda 2 / macOS",
+      "translation": "Зорилтот төсөл: <code>A04FunnyCamera</code> / Багц: <code>jp.ac.jec.a04funnycamera</code><br>14–15-р хичээлийн цаг, тус бүр 90 минут / Android Studio Panda 2 / macOS"
+    },
+    {
       "source": "この単元で作るもの",
       "translation": "Энэ бүлэгт бүтээх зүйл"
+    },
+    {
+      "source": "カメラの上にキャラクターを重ねるアプリ。14コマ目でプレビューとドラッグ、15コマ目で合成画像の保存へ進みます。",
+      "translation": "Камерын дүрс дээр дүр давхарладаг апп. 14-р хичээлийн цагт урьдчилан харах болон чирэх, 15-р хичээлийн цагт холимог зураг хадгалах руу үргэлжилнэ."
+    },
+    {
+      "source": "STEP 00 · 14コマ目 · 目安 5分",
+      "translation": "STEP 00 · 14-р хичээлийн цаг · Ойролцоогоор 5 минут"
+    },
+    {
+      "source": "今日の画面を先に見る",
+      "translation": "Өнөөдрийн дэлгэцийг түрүүлж харах"
+    },
+    {
+      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。見本の映像はエミュレータ内の仮想の部屋です。",
+      "translation": "Нээх IDE програм нь <strong>Android Studio Panda 2</strong> юм. Өнөөдөр камерын дүрс дээр алтан загас давхарлаж, хуруугаараа хөдөлгөнө. Дараагийн хичээлийн цагт тэрхүү хослолыг зураг болгон хадгална. Жишээ дүрс нь эмулятор доторх хийсвэр өрөө болно."
+    },
+    {
+      "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面",
+      "translation": "Камерын дүрс дээр алтан загас болон Take Picture товч давхарласан дэлгэц"
+    },
+    {
+      "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面（指定AVDで撮影）",
+      "translation": "Камерын дүрс дээр алтан загас болон Take Picture товч давхарласан дэлгэц (заасан AVD төхөөрөмж дээр авсан)"
+    },
+    {
+      "source": "教科書とAndroid Studioを並べます。実行先は <code>jec_25cm_kotlin_Pixel 9a</code>。別のAndroid Studioの版を使っている場合は、作成前に先生へ画面を見せてください。",
+      "translation": "Сурах бичиг болон Android Studio програмыг зэрэгцүүлнэ үү. Ажиллуулах төхөөрөмж нь <code>jec_25cm_kotlin_Pixel 9a</code> байна. Өөр Android Studio хувилбар ашиглаж байгаа бол, үүсгэхээсээ өмнө багшдаа дэлгэцээ үзүүлнэ үү."
     },
     {
       "source": "Java／Swiftとの比較",
       "translation": "Java / Swift хэлтэй харьцуулах"
     },
     {
+      "source": "Swiftのletに対応するKotlinのvalを使います。以後も比較欄のJava／Swiftは読むための見本で、Android Studioに貼るのはKotlinです。",
+      "translation": "Swift хэлний let-тэй харгалзах Kotlin хэлний val-г ашиглана. Үүнээс хойш харьцуулах хэсэгт байгаа Java/Swift нь унших зориулалттай жишээ бөгөөд, Android Studio програм руу хуулах нь Kotlin байх болно."
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "Энд зогсоод шалгана уу"
     },
     {
+      "source": "教科書とAndroid Studio Panda 2が開き、指定AVD名が実行先に見える。",
+      "translation": "Сурах бичиг болон Android Studio Panda 2 програм нээгдэж, заасан AVD нэр ажиллуулах хэсэгт харагдана."
+    },
+    {
       "source": "できたらチェックします。止まったときは、この画面を先生に見せましょう。",
       "translation": "Дууссан бол шалгана уу. Гацсан үед энэ дэлгэцийг багшдаа үзүүлнэ үү."
+    },
+    {
+      "source": "STEP 01 · 14コマ目 · 目安 12分",
+      "translation": "STEP 01 · 14-р хичээлийн цаг · Ойролцоогоор 12 минут"
+    },
+    {
+      "source": "自分のA04プロジェクトを作る",
+      "translation": "Өөрийн A04 төсөл үүсгэх"
+    },
+    {
+      "source": "<strong>New Project</strong>、または <strong>File → New → New Project…</strong> を選びます。",
+      "translation": "<strong>New Project</strong>, эсвэл <strong>File → New → New Project…</strong> цэсийг сонгоно уу."
+    },
+    {
+      "source": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> を選びます。<code>Empty Activity</code> はCompose用です。",
+      "translation": "<strong>Phone and Tablet → Empty Views Activity → Next</strong> цэсийг сонгоно уу. <code>Empty Activity</code> нь Compose-д зориулагдсан юм."
+    },
+    {
+      "source": "次の表を入力して <strong>Finish</strong>。Gradle同期が終わるまで待ちます。",
+      "translation": "Дараах хүснэгтийг оруулж <strong>Finish</strong> товчийг дарна уу. Gradle хэрэгсэл ижилтгэж дуустал хүлээнэ үү."
     },
     {
       "source": "項目",
@@ -67,20 +203,624 @@
       "translation": "Оруулах утга"
     },
     {
+      "source": "<code>ユーザ名</code> は自分のMacの名前に置き換えます。Save locationはプロジェクト名まで含めます。書類へのアクセスを聞かれたら自分の保存先を読むために許可します。同期の赤いエラーが消えないときは先生に画面を見せます。",
+      "translation": "<code>ユーザ名</code> хэсгийг өөрийн Mac төхөөрөмжийн нэрээр солино уу. Save location нь төсөл нэр хүртэл агуулна. Баримт бичиг рүү нэвтрэх зөвшөөрөл асуувал өөрийн хадгалах газрыг уншихын тулд зөвшөөрнө үү. Ижилтгэлийн улаан алдаа арилахгүй бол багшдаа дэлгэцээ үзүүлнэ үү."
+    },
+    {
+      "source": "左のProjectツールウィンドウは <strong>Project</strong> 表示にします。Kotlinファイルの置き場は <code>app/src/main/java/jp/ac/jec/a04funnycamera/</code>。以後この教科書で「パッケージ」と書いたら、この場所です。",
+      "translation": "Зүүн талын Project хэрэгслийн цонхыг <strong>Project</strong> харагдацаар тавина уу. Kotlin файлын байршил нь <code>app/src/main/java/jp/ac/jec/a04funnycamera/</code> байна. Үүнээс хойш энэхүү сурах бичигт «багц» гэж бичсэн байвал энэ газар юм."
+    },
+    {
+      "source": "Kotlinの : はJavaのextendsに対応します。親のコンストラクタを呼ぶ括弧も残します。Empty Views ActivityならXMLとActivityが組になります。",
+      "translation": "Kotlin хэлний : нь Java хэлний extends-тэй харгалзана. Эцэг класс-ын конструкторыг дуудах хаалтыг ч мөн үлдээнэ. Empty Views Activity байвал XML болон Activity нь хос болно."
+    },
+    {
+      "source": "自分の保存先にA04FunnyCameraができ、MainActivity.ktのpackageがjp.ac.jec.a04funnycameraになっている。",
+      "translation": "Өөрийн хадгалах газарт A04FunnyCamera төсөл үүсэж, MainActivity.kt файлын package нь jp.ac.jec.a04funnycamera болсон байна."
+    },
+    {
+      "source": "STEP 02 · 14コマ目 · 目安 15分",
+      "translation": "STEP 02 · 14-р хичээлийн цаг · Ойролцоогоор 15 минут"
+    },
+    {
+      "source": "カメラのライブラリをそろえる",
+      "translation": "Камерын сангуудыг бэлтгэх"
+    },
+    {
+      "source": "次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。",
+      "translation": "Дараах 3 файлыг <strong>замыг нь шалгаад бүтнээр нь сольсны дараа</strong> ижилтгэнэ үү. Үүсгэсэн өдрөөс хамаарсан сангийн ялгааг арилгана. Panda 2 дээр үүсгэсэн бүтэц байх шаардлагатай бөгөөд зөвхөн өөр хувилбарын AGP дугаарыг бууруулах алхам биш юм."
+    },
+    {
+      "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
+      "translation": "<code>gradle/libs.versions.toml</code> файл. CameraX-ийн 4 болон lifecycle-ийг ашиглана."
+    },
+    {
       "source": "libs.versions.toml · 全文",
       "translation": "libs.versions.toml · Бүх код"
+    },
+    {
+      "source": "プロジェクト直下の <code>build.gradle.kts</code>。",
+      "translation": "Төсөл доторх шууд <code>build.gradle.kts</code> файл."
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · Бүтнээр нь"
+    },
+    {
+      "source": "<code>app/build.gradle.kts</code>。こちらはappフォルダの中です。",
+      "translation": "<code>app/build.gradle.kts</code> файл. Энэ нь app хавтас дотор байна."
+    },
+    {
+      "source": "コード内の <code>TODO STEP01</code> は完成プロジェクトに残る作業時の目印で、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
+      "translation": "Код доторх <code>TODO STEP01</code> нь бэлэн төсөлд үлдэх ажлын тэмдэглэгээ бөгөөд энэ сурах бичгийн STEP дугаар биш юм. CameraX-ийн 4 мөр <code>implementation</code> нь аль хэдийн орсон байна. Бүтнээр нь сольсон бол дахин тэр мөрүүдийг нэмэх шаардлагагүй."
+    },
+    {
+      "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
+      "translation": "<strong>Sync Now</strong> (гараагүй бол <strong>File → Sync Project with Gradle Files</strong>) цэсийг ажиллуулна уу. SDK нэмэхийг асуувал агуулгыг шалгаад багштайгаа хамт үргэлжлүүлнэ үү. <code>gradle/wrapper/gradle-wrapper.properties</code> файлын Gradle нь <code>9.3.1</code>, AGP нь <code>9.1.1</code>, compileSdk нь <code>36.1</code>, targetSdk нь <code>36</code> байна. Ижилтгэлийн алдаа үлдвэл тэр дэлгэц дээрээ зогсоно уу."
+    },
+    {
+      "source": "依存関係",
+      "translation": "Хамаарал"
+    },
+    {
+      "source": "使う場所",
+      "translation": "Ашиглах газар"
+    },
+    {
+      "source": "CameraXが内部で使う背面カメラの実装",
+      "translation": "CameraX дотооддоо ашиглах арын камерын хэрэгжүүлэлт"
+    },
+    {
+      "source": "Activityにプレビューを結び付ける",
+      "translation": "Activity-тэй урьдчилан харахыг холбох"
+    },
+    {
+      "source": "XMLのPreviewView",
+      "translation": "XML файлын PreviewView"
+    },
+    {
+      "source": "保存処理を起動するlifecycleScope",
+      "translation": "Хадгалах үйлдлийг эхлүүлэх lifecycleScope"
+    },
+    {
+      "source": "Javaと同じライブラリをKotlinから使えます。Kotlinではnewを書きません。camera-camera2は本文にimportがなくても実行時に必要です。",
+      "translation": "Java хэлтэй адил санг Kotlin хэлнээс ашиглаж болно. Kotlin хэлд new гэж бичихгүй. camera-camera2 нь эх текст дотор import байхгүй ч ажиллуулах үед шаардлагатай."
+    },
+    {
+      "source": "同期の赤いエラーがなくなり、カタログにCameraXの4つとlifecycleがある。",
+      "translation": "Ижилтгэлийн улаан алдаа арилж, каталогид CameraX-ийн 4 болон lifecycle байна."
+    },
+    {
+      "source": "STEP 03 · 14コマ目 · 目安 10分",
+      "translation": "STEP 03 · 14-р хичээлийн цаг · Ойролцоогоор 10 минут"
+    },
+    {
+      "source": "カメラの使用を宣言する",
+      "translation": "Камер ашиглахаа зарлах"
+    },
+    {
+      "source": "<code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>uses-permission</code> はapplicationの外です。",
+      "translation": "<code>app/src/main/AndroidManifest.xml</code> файлыг бүтнээр нь солино уу. <code>uses-permission</code> нь application-ийн гадна байна."
+    },
+    {
+      "source": "AndroidManifest.xml · 全文",
+      "translation": "AndroidManifest.xml · Бүтнээр нь"
+    },
+    {
+      "source": "<code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。テーマ名は生成済みの <code>Theme.A04FunnyCamera</code> と一致させます。",
+      "translation": "<code>CAMERA</code> нь камер ашиглах зарлал юм. Үүгээр шууд зөвшөөрөл олгохгүй бөгөөд ажиллуулах үед харилцах цонхноос сонгоно. <code>camera.any</code> нь камер шаардлагатайг зарлах бөгөөд ар талыг сонгохыг дараа нь Kotlin дээр бичнэ. Загварын нэрийг үүсгэсэн <code>Theme.A04FunnyCamera</code>-тай тохируулна уу."
+    },
+    {
+      "source": "このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。",
+      "translation": "Энэ STEP-д файлыг хадгална. Эрхийн харилцах цонхыг ажиллуулах нь STEP 06 юм."
+    },
+    {
+      "source": "同じAndroid APIをJavaからも呼べます。権限名は文字列の手入力を避け、Manifest.permission.CAMERAを使います。",
+      "translation": "Ижил Android API-г Java хэлнээс ч дуудаж болно. Эрхийн нэрийг гараар бичихээс зайлсхийж, Manifest.permission.CAMERA-г ашиглана."
+    },
+    {
+      "source": "ManifestにCAMERAの宣言があり、applicationの外に置かれている。",
+      "translation": "Manifest файлд CAMERA-ийн зарлал байх бөгөөд application-ийн гадна байрласан байна."
+    },
+    {
+      "source": "STEP 04 · 14コマ目 · 目安 20分",
+      "translation": "STEP 04 · 14-р хичээлийн цаг · Ойролцоогоор 20 минут"
+    },
+    {
+      "source": "金魚を置いてドラッグ用のViewを作る",
+      "translation": "Алтан загас байрлуулж чирэх зориулалттай View үүсгэх"
+    },
+    {
+      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
+      "translation": "<a1>Алтан загасны зураг character.png-г хадгалж</a1>, Finder цонхноос өөрийн <code>A04FunnyCamera/app/src/main/res/drawable/</code> руу хуулна уу. Хадгалах үед өөр нэртэй болбол <code>character.png</code> болгон засаарай. Энэ нь <strong>drawable</strong> хавтасны шууд дотор байна. Зураг нь арын дэвсгэр тунгалаг 500×416 пиксел хэмжээтэй, бэлэн хувилбартай ижил байна."
+    },
+    {
+      "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
+      "translation": "Android Studio програм дээр <code>jp.ac.jec.a04funnycamera</code> багц дээр хулганы баруун товчийг дарж, <strong>New → Kotlin Class/File</strong> цэсийг сонгоно уу. Нэрд <code>DraggableImageView</code>, төрөлд <strong>Class</strong> сонгож үүсгээд, дараах бүтэн кодоор солино уу."
+    },
+    {
+      "source": "DraggableImageView.kt · 全文",
+      "translation": "DraggableImageView.kt · Бүтнээр нь"
+    },
+    {
+      "source": "処理",
+      "translation": "Боловсруулалт"
+    },
+    {
+      "source": "このコードでしていること",
+      "translation": "Энэ код юу хийж байна вэ"
+    },
+    {
+      "source": "親内のView位置x/yと、画面上の指の位置rawX/rawYの差を記録する。",
+      "translation": "Эцэг класс доторх View байршлын x/y болон дэлгэц дээрх хурууны байршлын rawX/rawY-ийн зөрүүг бүртгэнэ."
+    },
+    {
+      "source": "指の新しい位置に差を足して、最初につかんだ位置を保つ。",
+      "translation": "Хурууны шинэ байршил дээр зөрүүг нэмж, анх барьж авсан байршлыг хадгална."
+    },
+    {
+      "source": "親のpaddingとViewの大きさを引き、coerceInで端に止める。",
+      "translation": "Эцэг классын padding болон View-ийн хэмжээг хасаж, coerceIn ашиглан захад зогсооно."
+    },
+    {
+      "source": "指を離したときにViewのクリック処理を呼ぶ。警告をSuppressで隠さない。",
+      "translation": "Хуруугаа авах үед View-ийн товшилтын үйлдлийг дуудна. Анхааруулгыг Suppress-ээр нуухгүй."
+    },
+    {
+      "source": "まだXMLに配置していないので、この時点では画面は変わりません。次のSTEPでこのクラスをタグ名に使います。",
+      "translation": "XML файлд байрлуулаагүй байгаа тул энэ үед дэлгэц өөрчлөгдөхгүй. Дараагийн STEP-д энэ класс-ыг тагийн нэрэнд ашиглана."
+    },
+    {
+      "source": "プライマリコンストラクタは、Javaでクラス本体に書くコンストラクタの引数をクラス名の後へ出す形です。XMLから渡されるContextとAttributeSetを親へ渡します。",
+      "translation": "Үндсэн конструктор (プライマリコンストラクタ) нь Java хэл дээр класс-ын их биед бичдэг конструкторын аргументыг класс нэрийн ард гаргадаг хэлбэр юм. XML файлаас дамжуулах Context болон AttributeSet-ийг эцэг класс руу дамжуулна."
+    },
+    {
+      "source": "drawable/character.pngとDraggableImageView.ktがあり、先頭のpackageとフォルダが一致する。",
+      "translation": "drawable/character.png болон DraggableImageView.kt байх ба, эхний package болон хавтас таарч байна."
+    },
+    {
+      "source": "STEP 05 · 14コマ目 · 目安 10分",
+      "translation": "STEP 05 · 14-р хичээлийн цаг · Ойролцоогоор 10 минут"
+    },
+    {
+      "source": "映像・金魚・ボタンを重ねる",
+      "translation": "Дүрс, алтан загас болон товчийг давхарлах"
+    },
+    {
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。",
+      "translation": "<code>app/src/main/res/layout/activity_main.xml</code> файлыг нээж, <strong>Code</strong> харагдацаар бүтнээр нь солино уу."
     },
     {
       "source": "activity_main.xml · 全文",
       "translation": "activity_main.xml · Бүх код"
     },
     {
+      "source": "FrameLayoutは後に書いたViewが手前です。PreviewView → 金魚 → ボタンの順なので、金魚を下へ動かすとボタンに隠れる部分があります。XMLのカスタムViewはパッケージ名まで含むクラス名です。<code>@drawable/character</code> に拡張子は付けません。",
+      "translation": "FrameLayout нь сүүлд бичсэн View урд талд нь байна. PreviewView → Алтан загас → Товч гэсэн дараалалтай тул алтан загасыг доошлуулахад товчинд далдлагдах хэсэг гарна. XML файлын өөрийн View нь багц нэртэйгээ хамт класс-ын нэр байна. <code>@drawable/character</code> гэх мэтэд өргөтгөл бичихгүй."
+    },
+    {
+      "source": "この時点のPreviewはカメラ映像を表示しません。XMLの赤い参照が消えたら、STEP 06で起動します。",
+      "translation": "Энэ үеийн Preview нь камерын дүрсийг харуулахгүй. XML файлын улаан лавлагаа арилбал STEP 06 дээр ажиллуулна."
+    },
+    {
+      "source": "XMLとKotlinの接点はidです。Javaでも同じfindViewByIdを使えます。変数の型ImageViewは、子クラスDraggableImageViewを受け取れます。",
+      "translation": "XML файл болон Kotlin хэлний холбоос нь id юм. Java хэлтэй адил findViewById аргыг ашиглаж болно. Хувьсагчийн төрөл ImageView нь дэд класс DraggableImageView-ийг хүлээн авч чадна."
+    },
+    {
+      "source": "XMLのidがpreview_view・iv_character・btn_take_pictureで、drawableの参照が赤くなっていない。",
+      "translation": "XML файлын id нь preview_view, iv_character, btn_take_picture бөгөөд drawable лавлагаа улаан болоогүй байна."
+    },
+    {
+      "source": "STEP 06 · 14コマ目 · 目安 15分",
+      "translation": "STEP 06 · 14-р хичээлийн цаг · Ойролцоогоор 15 минут"
+    },
+    {
+      "source": "権限を受け取りプレビューを起動する",
+      "translation": "Эрх авч урьдчилан харахыг эхлүүлэх"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の全文に置き換えます。これは<strong>14コマ目の途中コード</strong>です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。",
+      "translation": "<code>MainActivity.kt</code> файлыг дараах бүтэн кодоор солино уу. Энэ нь <strong>14-р хичээлийн цагийн дунд үеийн код</strong> юм. Take Picture нь баталгаажуулах мессеж гаргах төдий бөгөөд одоогоор хадгалахгүй."
+    },
+    {
+      "source": "06-MainActivity.kt · 全文",
+      "translation": "06-MainActivity.kt · Бүтнээр нь"
+    },
+    {
+      "source": "実行設定 <strong>app</strong>、<code>jec_25cm_kotlin_Pixel 9a</code> を選び、<strong>Run ▶</strong>。カメラのダイアログで <strong>While using the app</strong>（アプリの使用中のみ）を選びます。既に許可済みならダイアログは出ません。仮想の部屋が表示されたら、金魚をつかんで上下左右へドラッグします。四辺で金魚のViewが止まります。",
+      "translation": "Ажиллуулах тохиргооноос <strong>app</strong> болон <code>jec_25cm_kotlin_Pixel 9a</code> сонгож, <strong>Run ▶</strong> товчийг дарна уу. Камерын харилцах цонхон дээр <strong>While using the app</strong> (апп ашиглах үед л) сонгоно уу. Аль хэдийн зөвшөөрсөн бол харилцах цонх гарахгүй. Хийсвэр өрөө харагдмагц алтан загасыг барьж дээш доош, баруун зүүн тийш чирнэ үү. Дөрвөн талдаа алтан загасны View зогсоно."
+    },
+    {
+      "source": "つながり",
+      "translation": "Холбоос"
+    },
+    {
+      "source": "役割",
+      "translation": "Үүрэг"
+    },
+    {
+      "source": "権限の結果をisGrantedで受け取り、許可ならstartCamera。拒否なら画面に案内。",
+      "translation": "Эрхийн үр дүнг isGranted-р хүлээн авч, зөвшөөрсөн бол startCamera дуудна. Татгалзсан бол дэлгэц дээр мэдээлнэ."
+    },
+    {
+      "source": "カメラの準備完了後に処理。getMainExecutorで画面を扱うスレッドへ渡す。",
+      "translation": "Камер бэлэн болсны дараа боловсруулна. getMainExecutor ашиглаж дэлгэцтэй харьцах thread рүү дамжуулна."
+    },
+    {
+      "source": "Previewの出力先をXMLのPreviewViewへ接続する。",
+      "translation": "Preview-н гаралтыг XML файлын PreviewView рүү холбоно."
+    },
+    {
+      "source": "背面を選ぶ。指定AVDでは仮想の部屋。",
+      "translation": "Арын камерыг сонгоно. Заасан AVD төхөөрөмжид хийсвэр өрөө байна."
+    },
+    {
+      "source": "このActivityのライフサイクルにプレビューを結び付ける。",
+      "translation": "Энэхүү Activity-ийн lifecycle-д урьдчилан харахыг холбоно."
+    },
+    {
+      "source": "起動失敗をSnackbarで表示する。",
+      "translation": "Ажиллаж чадаагүйг Snackbar ашиглан харуулна."
+    },
+    {
+      "source": "ボタンを1回押すと「プレビューを確認中です」が出ます。プレビューが黒いときは権限の状態を先生と確認し、連打で直そうとしません。",
+      "translation": "Товчийг 1 удаа дарахад «Урьдчилан харахыг шалгаж байна» гэж гарна. Урьдчилан харах хэсэг хар байвал эрхийн төлөвийг багштайгаа хамт шалгах ба, олон дахин дарж засах гэж оролдохгүй."
+    },
+    {
+      "source": "Javaのgetter／setterをKotlinではプロパティの形で呼べます。cameraProviderFuture.get()は準備完了のリスナ内にあり、ここでPreviewを画面へ接続します。",
+      "translation": "Java хэлний getter/setter-г Kotlin хэлд property хэлбэрээр дуудаж болно. cameraProviderFuture.get() нь бэлэн болсныг сонсогч (listener) дотор байх бөгөөд, энд Preview-г дэлгэц рүү холбоно."
+    },
+    {
+      "source": "仮想の部屋と金魚が表示され、金魚を四辺へ動かすと画面の内側で止まる。ボタンから途中段階の案内が出る。",
+      "translation": "Хийсвэр өрөө болон алтан загас гарч ирэх ба, алтан загасыг дөрвөн тал руу хөдөлгөхөд дэлгэцийн дотор талд зогсоно. Товчноос дунд үе шатны мэдээлэл гарч ирнэ."
+    },
+    {
+      "source": "STEP 07 · 14コマ目 · 目安 3分",
+      "translation": "STEP 07 · 14-р хичээлийн цаг · Ойролцоогоор 3 минут"
+    },
+    {
+      "source": "14コマ目の最後の3分",
+      "translation": "14-р хичээлийн цагийн сүүлийн 3 минут"
+    },
+    {
+      "source": "ファイルを保存し、金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。",
+      "translation": "Файлуудыг хадгалаад, алтан загасыг голд буцааж тавиад Take Picture товчийг 1 удаа дарна уу. Баталгаажуулах мессеж арилтал хүлээнэ үү. Дараагийн хичээлийн цагт ч мөн ижил <code>Documents/Kotlin/A04FunnyCamera</code>-г нээнэ."
+    },
+    {
+      "source": "途中で止まった人は、最後に画面が一致したSTEPを教科書のチェック欄で残します。14コマ目末の全文はSTEP 06です。",
+      "translation": "Дундаас нь зогссон хүмүүс дэлгэц таарсан хамгийн сүүлийн STEP-ийг сурах бичгийн шалгах нүдэнд тэмдэглэнэ үү. 14-р хичээлийн цагийн эцсийн бүтэн код нь STEP 06 юм."
+    },
+    {
+      "source": "coerceInはJavaのMath.minとMath.maxの組に対応します。この数値例の結果は100fです。完成コードでは親の大きさから範囲を計算しています。",
+      "translation": "coerceIn нь Java хэлний Math.min болон Math.max-ийн хослолтой харгалзана. Энэхүү тоон жишээний үр дүн нь 100f байна. Бэлэн код дээр эцэг класс-ын хэмжээнээс хязгаарыг тооцоолсон байна."
+    },
+    {
+      "source": "自分のA04が開き、プレビュー・金魚の移動・「プレビューを確認中です」の表示がそろっている。",
+      "translation": "Өөрийн A04 нээгдэж, урьдчилан харах, алтан загасны хөдөлгөөн болон «Урьдчилан харахыг шалгаж байна» гэсэн мэдээлэл бүрэн байна."
+    },
+    {
+      "source": "STEP 08 · 15コマ目 · 目安 5分",
+      "translation": "STEP 08 · 15-р хичээлийн цаг · Ойролцоогоор 5 минут"
+    },
+    {
+      "source": "前回のプロジェクトを開き直す",
+      "translation": "Өмнөх төслийг дахин нээх"
+    },
+    {
+      "source": "Android Studioの <strong>Open</strong> で、自分の <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。既に開いていればそのまま進みます。同期後に <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。",
+      "translation": "Android Studio програмын <strong>Open</strong> цэсээр өөрийн <code>Documents/Kotlin/A04FunnyCamera</code>-г нээнэ үү. Аль хэдийн нээлттэй байвал шууд үргэлжлүүлнэ үү. Ижилтгэлийн дараа <strong>app</strong> болон <code>jec_25cm_kotlin_Pixel 9a</code>-г сонгож Run хийнэ үү."
+    },
+    {
+      "source": "金魚が動き、Take Pictureから「プレビューを確認中です」が出る状態が出発点です。違っているときはSTEP 06の全文と照合します。今日はプレビューと金魚を1枚のJPEGへ保存します。",
+      "translation": "Алтан загас хөдөлж, Take Picture товчноос «Урьдчилан харахыг шалгаж байна» гэж гарч ирэх төлөв нь эхлэх цэг юм. Өөр байвал STEP 06-н бүтэн кодтой тулгана уу. Өнөөдөр урьдчилан харах болон алтан загасыг 1 JPEG зураг болгон хадгална."
+    },
+    {
+      "source": "lateinitは後で代入する非Nullのプロパティです。Javaのフィールドと同じ位置に置き、setContentViewの後でfindViewByIdから代入して使います。",
+      "translation": "lateinit нь сүүлд утга оноох Null биш property юм. Java хэлний field-тэй ижил газар байрлуулж, setContentView-ийн дараа findViewById-с утга оноож ашиглана."
+    },
+    {
+      "source": "自分の保存先のA04をRunし、プレビューと途中段階の確認メッセージが出る。",
+      "translation": "Өөрийн хадгалах газар дахь A04-ийг Run хийхэд урьдчилан харах болон дунд үе шатны баталгаажуулах мессеж гарч ирнэ."
+    },
+    {
+      "source": "STEP 09 · 15コマ目 · 目安 15分",
+      "translation": "STEP 09 · 15-р хичээлийн цаг · Ойролцоогоор 15 минут"
+    },
+    {
+      "source": "プレビューと金魚を1枚に描く",
+      "translation": "Урьдчилан харах болон алтан загасыг 1 зурагт зурах"
+    },
+    {
+      "source": "まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
+      "translation": "Эхлээд, дараах хослуулах хэсгийг уншина уу. <strong>Энэхүү хэсгийг битгий хуулаарай</strong>, харин STEP 10-н бүтэн кодоор сольсны дараа Run хийнэ үү. <code>previewView.bitmap</code> нь одоо урьдчилан харах хэсэгт харагдаж буй дүрсийг гаргаж авна. Бэлтгэхээс өмнө null байна."
+    },
+    {
+      "source": "順序",
+      "translation": "Дараалал"
+    },
+    {
+      "source": "画像に起きること",
+      "translation": "Зурагт гарах өөрчлөлт"
+    },
+    {
+      "source": "プレビューの範囲・大きさのBitmapを取り出す。カメラの最大解像度の写真ではない。",
+      "translation": "Урьдчилан харах хүрээ болон хэмжээний Bitmap-г гаргаж авна. Камерын хамгийн өндөр нягтралтай зураг биш юм."
+    },
+    {
+      "source": "上から描き込めるコピーを作る。",
+      "translation": "Дээрээс нь зурах боломжтой хуулбар үүсгэнэ."
+    },
+    {
+      "source": "描き込み先をそのコピーにする。",
+      "translation": "Зурах газрыг тэр хуулбар болгоно."
+    },
+    {
+      "source": "プレビュー左上を原点にして、金魚のViewの左上へ移動する。",
+      "translation": "Урьдчилан харах хэсгийн зүүн дээд өнцгийг эхлэл цэг болгож, алтан загасны View-ийн зүүн дээд өнцөг рүү шилжүүлнэ."
+    },
+    {
+      "source": "金魚のViewだけを描く。ボタンや画面全体は描かない。",
+      "translation": "Зөвхөн алтан загасны View-ийг зурна. Товч болон дэлгэцийг бүхэлд нь зурахгүй."
+    },
+    {
+      "source": "金魚とPreviewViewは同じ親の子です。<code>characterView.x - previewView.x</code> とyの差で、親内の位置を画像内の位置に変えます。ステータスバーを避けるpaddingがあっても、この差で位置が合います。",
+      "translation": "Алтан загас болон PreviewView нь ижил эцэг класс-ын хүүхдүүд юм. <code>characterView.x - previewView.x</code> болон y-ийн зөрүүгээр, эцэг доторх байршлыг зураг доторх байршил руу шилжүүлнэ. Status bar-г алгасах padding байсан ч энэ зөрүүгээр байрлал таарна."
+    },
+    {
+      "source": "JavaのgetBitmap()をKotlinでは.bitmapと書きます。nullの場合にreturnした後は、Kotlinのスマートキャストで非Nullとして使えます。",
+      "translation": "Java хэлний getBitmap()-ийг Kotlin хэлд .bitmap гэж бичнэ. null байх үед return хийсний дараа Kotlin хэлний smart cast (смарткаст)-аар null биш болгон ашиглаж болно."
+    },
+    {
+      "source": "MainActivity.ktはまだSTEP 06の状態で、抜粋のbitmap・translate・drawの3か所が教科書に見えている。",
+      "translation": "MainActivity.kt нь одоогоор STEP 06-н төлөвт байгаа бөгөөд сурах бичигт харагдаж буй bitmap, translate, draw гэсэн 3 хэсэг гарч байна."
+    },
+    {
+      "source": "STEP 10 · 15コマ目 · 目安 25分",
+      "translation": "STEP 10 · 15-р хичээлийн цаг · Ойролцоогоор 25 минут"
+    },
+    {
+      "source": "JPEGを保存する完成コードへ進む",
+      "translation": "JPEG хадгалах бэлэн код руу үргэлжлүүлэх"
+    },
+    {
+      "source": "<code>MainActivity.kt</code> を次の<strong>完成版の全文</strong>へ置き換えます。importも含みます。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。",
+      "translation": "<code>MainActivity.kt</code> файлыг дараах <strong>бэлэн хувилбарын бүтэн кодоор</strong> солино уу. import-ууд ч багтсан байна. 14-р хичээлийн цагийн эрх болон камерын холболтыг хэвээр үлдээж, товчноос дуудах <code>takeScreenshot</code> болон <code>saveBitmap</code> функц нэмнэ."
+    },
+    {
       "source": "MainActivity.kt · 全文",
       "translation": "MainActivity.kt · Бүтнээр нь"
     },
     {
+      "source": "保存の順序",
+      "translation": "Хадгалах дараалал"
+    },
+    {
+      "source": "このコードの意味",
+      "translation": "Энэ кодын утга"
+    },
+    {
+      "source": "名前・image/jpeg・Pictures/FunnyCamera・IS_PENDING=1を指定する。",
+      "translation": "Нэр, image/jpeg, Pictures/FunnyCamera болон IS_PENDING=1-г зааж өгнө."
+    },
+    {
+      "source": "MediaStoreに保存先を作る。戻り値のuriがnullならfalse。",
+      "translation": "MediaStore дотор хадгалах газар үүсгэнэ. Буцаах утга uri нь null байвал false байна."
+    },
+    {
+      "source": "出力先を開いてJPEGを書き、useの終了時に閉じる。",
+      "translation": "Гаралтыг нээж JPEG бичээд, use ажиллагаа дуусахад хаана."
+    },
+    {
+      "source": "JPEG品質95で書き込む。圧縮に成功したかをisWrittenへ保存する。",
+      "translation": "JPEG чанарыг 95-р бичнэ. Шахалт амжилттай болсныг isWritten хувьсагчид хадгална."
+    },
+    {
+      "source": "失敗ならdelete",
+      "translation": "Амжилтгүй бол delete"
+    },
+    {
+      "source": "出力先を作ったが書き込めなければ、その作りかけを削除してfalse。",
+      "translation": "Гаралт үүсгэсэн ч бичиж чадаагүй бол, дутуу үүсгэснээ устгаад false."
+    },
+    {
+      "source": "書き込み済みの画像を他のアプリからも見える状態にする。",
+      "translation": "Бичсэн зургийг бусад апп-д ч харагдах байдалд оруулна."
+    },
+    {
+      "source": "保存は <code>lifecycleScope.launch</code> から始め、圧縮・書き込みを <code>withContext(Dispatchers.IO)</code> の中へ置きます。そこを抜けるとメインスレッドへ戻り、trueなら「保存しました」、falseなら「保存に失敗しました」を表示します。Activityが破棄されるとlifecycleScopeのコルーチンはキャンセルされます。",
+      "translation": "Хадгалах үйлдлийг <code>lifecycleScope.launch</code>-с эхлүүлж, шахах болон бичих үйлдлийг <code>withContext(Dispatchers.IO)</code> дотор байрлуулна. Түүнээс гарснаар main thread рүү буцаж, true бол «Хадгаллаа», false бол «Хадгалж чадсангүй» гэж харуулна. Activity устгагдвал lifecycleScope-ийн coroutine цуцлагдана."
+    },
+    {
+      "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。",
+      "translation": "Энэхүү апп нь Android 12 болон түүнээс хойшх хувилбарт зориулагдсан юм. Өөрийн апп-аар үүсгэх зургийг MediaStore дотор хадгалахад зориулсан storage эрх нэмэхгүй. Энэ нь камер зөвшөөрөхтэй өөр асуудал юм. Бусад апп-ийн зураг унших <code>READ_MEDIA_IMAGES</code> зэрэг эрх ч шаардлагагүй. Хадгалаад Run хийвэл алтан загас хөдөлдөг дэлгэц рүүгээ буцна."
+    },
+    {
+      "source": "useはJavaのtry-with-resourcesと同じく、処理後にcloseします。ラムダのitが開いた出力先です。保存の結果はBooleanで画面側へ返します。",
+      "translation": "use нь Java хэлний try-with-resources-тэй ижил бөгөөд үйлдлийн дараа close хийнэ. it гэсэн lambda функц нь нээсэн гаралтын газар юм. Хадгалсан үр дүнг Boolean төрлөөр дэлгэц рүү буцаана."
+    },
+    {
+      "source": "MainActivity.ktにtakeScreenshotとsaveBitmapがあり、ビルドが通ってプレビューを表示できる。",
+      "translation": "MainActivity.kt файлд takeScreenshot болон saveBitmap функц байх ба, build амжилттай болж урьдчилан харах дэлгэц гарч байна."
+    },
+    {
+      "source": "STEP 11 · 15コマ目 · 目安 17分",
+      "translation": "STEP 11 · 15-р хичээлийн цаг · Ойролцоогоор 17 минут"
+    },
+    {
+      "source": "保存した画像を開いて比べる",
+      "translation": "Хадгалсан зургийг нээж харьцуулах"
+    },
+    {
+      "source": "仮想の部屋が表示されてから、金魚を下へ動かし、Take Pictureに少し重ねます。ボタンを1回押し、「保存しました」が消えるまで待ちます。",
+      "translation": "Хийсвэр өрөө гарсны дараа алтан загасыг доош хөдөлгөж, Take Picture товчтой бага зэрэг давхцуулна уу. Товчийг 1 удаа дарж, «Хадгаллаа» гэсэн бичиг арилтал хүлээнэ үү."
+    },
+    {
+      "source": "ボタンに金魚を重ねて保存し、保存しましたと出た画面",
+      "translation": "Товчин дээр алтан загас давхарлаж хадгалах ба хадгаллаа гэж гарсан дэлгэц"
+    },
+    {
+      "source": "ボタンに金魚を重ねて保存し、保存しましたと出た画面（指定AVDで撮影）",
+      "translation": "Товчин дээр алтан загас давхарлаж хадгалах ба хадгаллаа гэж гарсан дэлгэц (заасан AVD төхөөрөмж дээр авсан)"
+    },
+    {
+      "source": "エミュレータのホームへ戻り、アプリ一覧から <strong>Files</strong> を開きます。左上メニューの端末内ストレージ（指定AVDでは <code>sdk_gphone16k_arm64</code> と表示）から <strong>Pictures → FunnyCamera</strong> を開き、今の日時の <code>.jpg</code> を選びます。Filesで端末が出ていなければ、右上メニューの内部ストレージ表示を確認します。写真アプリを使う場合も、端末内のFunnyCameraフォルダを開きます。画像の上下に操作バーが重なる場合は、画像を1回タップして非表示にします。全画面の案内が出たら <strong>Got it</strong> を押します。",
+      "translation": "Эмуляторын Home дэлгэц рүү буцаж, апп-ын жагсаалтаас <strong>Files</strong>-ийг нээнэ үү. Зүүн дээд талын цэсийн төхөөрөмж доторх сангаас (заасан AVD дээр <code>sdk_gphone16k_arm64</code> гэж харагдана) <strong>Pictures → FunnyCamera</strong>-г нээж, өнөөдрийн огноо, цагтай <code>.jpg</code> файлыг сонгоно уу. Files-т төхөөрөмж гарахгүй бол баруун дээд талын цэсээс дотоод сан харуулах сонголтыг шалгана уу. Зургийн апп ашиглах үед ч төхөөрөмж доторх FunnyCamera хавтасыг нээнэ. Зургийн дээд доод хэсэгт үйлдлийн самбар давхцаж байвал, зургийг 1 удаа товшиж нууна уу. Бүтэн дэлгэцийн заавар гарч ирвэл <strong>Got it</strong> товчийг дарна уу."
+    },
+    {
+      "source": "保存画像にはボタンに隠れていた金魚も写ります。ボタン・Snackbar・ステータスバー・画面下のナビゲーションバーは入りません。PreviewViewの映像と金魚だけを描いた結果です。",
+      "translation": "Хадгалсан зурагт товчинд далдлагдсан алтан загас ч мөн багтана. Товч, Snackbar, status bar, дэлгэцийн доод талын navigation bar орохгүй. PreviewView-ийн дүрс болон алтан загасыг л зурсан үр дүн юм."
+    },
+    {
+      "source": "保存したJPEG。下側の金魚全体が写り、ボタンとSnackbarは入らない",
+      "translation": "Хадгалсан JPEG зураг. Доод талын алтан загас бүтнээрээ гарах ба товч болон Snackbar ороогүй байна"
+    },
+    {
+      "source": "指定AVDで保存したJPEG。画面全体ではなくプレビュー範囲が画像になる",
+      "translation": "Заасан AVD төхөөрөмж дээр хадгалсан JPEG зураг. Дэлгэц бүхэлдээ биш зөвхөн урьдчилан харах хэсэг зураг болно"
+    },
+    {
+      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、見本と同じ文字列にはなりません。",
+      "translation": "Шалгасны дараа A04 рүү буцна уу. Алтан загасны байрлалыг өөрчилж, дахин 1 удаа хадгалаад, шинэ цаг минуттай зураг нэмэгдэхийг шалгана уу. Цаг хугацаа нь төхөөрөмжийн тохиргооноос хамаарах тул жишээтэй ижил текст гарахгүй."
+    },
+    {
+      "source": "同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。",
+      "translation": "Ижил java.time API-аар файлын нэр үүсгэнэ. yyyy-MM-dd-HH-mm-ss-SSS нь он-сар-өдөр-цаг-минут-секунд-миллисекунд байна. MediaStore нь JPEG өргөтгөл нэмж өгнө."
+    },
+    {
+      "source": "Pictures/FunnyCameraに日時の異なるJPEGがあり、金魚が写ってボタンとSnackbarは写っていない。",
+      "translation": "Pictures/FunnyCamera хавтаст өөр огноо цаг бүхий JPEG зураг байх ба, алтан загас гарсан ч товч болон Snackbar гараагүй байна."
+    },
+    {
+      "source": "STEP 12 · 15コマ目 · 目安 10分",
+      "translation": "STEP 12 · 15-р хичээлийн цаг · Ойролцоогоор 10 минут"
+    },
+    {
+      "source": "権限を許可しない場合も確かめる",
+      "translation": "Эрх зөвшөөрөөгүй тохиолдлыг мөн шалгах"
+    },
+    {
+      "source": "作ったファイルを保存します。エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。",
+      "translation": "Үүсгэсэн файлуудаа хадгална уу. Эмуляторын <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> цэсийг нээж, <strong>Don’t allow</strong> (зөвшөөрөхгүй) болгоно уу. Android Studio програмаас дахин Run хийж, харилцах цонх гарвал зөвшөөрөхгүйг сонгоно уу. Дүрс хар байх бөгөөд камерын эрхийн талаарх мэдээлэл гарч ирнэ."
+    },
+    {
+      "source": "カメラを許可せず、権限が必要というSnackbarが出た画面",
+      "translation": "Камер зөвшөөрөөгүйгээс эрх шаардлагатай гэсэн Snackbar гарсан дэлгэц"
+    },
+    {
+      "source": "カメラを許可せず、権限が必要というSnackbarが出た画面（指定AVDで撮影）",
+      "translation": "Камер зөвшөөрөөгүйгээс эрх шаардлагатай гэсэн Snackbar гарсан дэлгэц (заасан AVD төхөөрөмж дээр авсан)"
+    },
+    {
+      "source": "確認後は同じ設定画面で <strong>Allow only while using the app</strong>（アプリの使用中のみ許可）に戻してRunし直します。映像が戻ったら保存を1回確認します。拒否を繰り返すとダイアログが出なくなる場合があるため、設定から戻します。",
+      "translation": "Шалгасны дараа ижил тохиргооны дэлгэцээс <strong>Allow only while using the app</strong> (апп ашиглах үед л зөвшөөрнө) рүү буцааж тавиад дахин Run хийнэ үү. Дүрс гараад ирвэл хадгалах үйлдлийг 1 удаа шалгана уу. Олон дахин татгалзвал харилцах цонх дахин гарахгүй байж болох тул тохиргооноос нь буцаана."
+    },
+    {
+      "source": "準備前のボタンでは <code>previewView.bitmap</code> がnullになり、完成版は保存せずreturnします。この分岐にはSnackbarがなく、Logcatだけに案内が出ます。「保存に失敗しました」はsaveBitmapがfalseを返す別の分岐です。保存失敗のために端末の容量を埋めたり、既存画像を消したりはしません。",
+      "translation": "Бэлтгэхээс өмнө товч дарахад <code>previewView.bitmap</code> нь null болох тул бэлэн хувилбар нь хадгалахгүйгээр return хийнэ. Энэ салаалалт дээр Snackbar байхгүй ба зөвхөн Logcat дээр мэдээлэл гарна. «Хадгалж чадсангүй» гэдэг нь saveBitmap функцээс false буцаадаг өөр салаалалт юм. Хадгалах үйлдэл бүтэлгүйтлээ гээд төхөөрөмжийн багтаамжийг дүүргэх юм уу, хуучин зураг устгахгүй."
+    },
+    {
+      "source": "Kotlinのifは値を返せます。Javaの三項演算子に対応します。ただしカメラの権限拒否はこの保存結果のifより前で扱います。",
+      "translation": "Kotlin хэлний if нь утга буцааж чадна. Энэ нь Java хэлний гурвалсан оператор (ternary operator)-той харгалзана. Гэхдээ камерын эрхээс татгалзахыг хадгалах үр дүнгийн if-ээс өмнө зохицуулна."
+    },
+    {
+      "source": "拒否時の権限の案内を確認し、許可へ戻した後にプレビューと保存しましたが再び表示される。",
+      "translation": "Татгалзсан үеийн эрхийн мэдээллийг шалгаад зөвшөөрөх рүү буцаасны дараа урьдчилан харах болон хадгаллаа гэдэг нь дахин гарч ирнэ."
+    },
+    {
+      "source": "STEP 13 · 15コマ目 · 目安 15分",
+      "translation": "STEP 13 · 15-р хичээлийн цаг · Ойролцоогоор 15 минут"
+    },
+    {
+      "source": "自分の画面へアレンジする",
+      "translation": "Өөрийн дэлгэц рүү өөрчлөх"
+    },
+    {
+      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。完成プロジェクトの見本は上書きしません。",
+      "translation": "Өөрийн төсөл дээр дараах газруудаас нэгийг нь өөрчлөөд, Run хийж дэлгэц болон хадгалсан зургийг харьцуулна уу. Анхны утгыг тэмдэглэж авсны дараа өөрчилж, нэг нэгээр нь шалгана уу. Бэлэн төслийн жишээг дарж хуулахгүй."
+    },
+    {
       "source": "場所",
       "translation": "Байршил"
+    },
+    {
+      "source": "変える値の例",
+      "translation": "Өөрчлөх утгын жишээ"
+    },
+    {
+      "source": "変わるところ",
+      "translation": "Өөрчлөгдөх зүйл"
+    },
+    {
+      "source": "activity_main.xmlのボタン",
+      "translation": "activity_main.xml-ийн товч"
+    },
+    {
+      "source": "android:textを「保存」にする",
+      "translation": "android:text-ийг «Хадгалах» болгох"
+    },
+    {
+      "source": "画面の文字が変わる。保存画像には文字は入らない。",
+      "translation": "Дэлгэцийн бичиг өөрчлөгдөнө. Хадгалсан зурагт энэ бичиг орохгүй."
+    },
+    {
+      "source": "activity_main.xmlの金魚",
+      "translation": "activity_main.xml-ийн алтан загас"
+    },
+    {
+      "source": "layout_widthとlayout_heightを200dpから160dpへ",
+      "translation": "layout_width болон layout_height-ийг 200dp-ээс 160dp болгох"
+    },
+    {
+      "source": "ドラッグするViewと保存画像内の金魚が小さくなる。",
+      "translation": "Чирэх View болон хадгалсан зураг доторх алтан загас жижиг болно."
+    },
+    {
+      "source": "layout_gravityをcenterからtop|center_horizontalへ",
+      "translation": "layout_gravity-г center-ээс top|center_horizontal болгох"
+    },
+    {
+      "source": "起動直後の位置が変わる。ドラッグ後は動かした位置を使う。",
+      "translation": "Ажиллаж эхлэх үеийн байрлал өөрчлөгдөнө. Чирсний дараа бол хөдөлгөсөн байрлалыг ашиглана."
+    },
+    {
+      "source": "画像の差し替えをするなら、利用してよい自分の透過PNGを同じ <code>character.png</code> という名前で入れ替えます。今回の500×416程度の大きさにします。大きな原寸画像はメモリを使うため避けます。id・パッケージ・カメラ権限・保存処理の呼び出しは変えません。",
+      "translation": "Зураг солих бол ашиглах эрхтэй өөрийн тунгалаг PNG зургийг ижил <code>character.png</code> нэртэйгээр солино уу. Энэ удаад ойролцоогоор 500×416 хэмжээтэй байлгаарай. Хэт том хэмжээтэй эх зураг нь санах ой их эзлэх тул зайлсхийнэ. id, багц, камерын эрх, хадгалах боловсруулалт дуудах зэргийг өөрчлөхгүй."
+    },
+    {
+      "source": "どの値を選ぶかに1つの正解はありません。保存画像まで開き、変えた場所に対応する変化が出るかを確認します。提出するアプリは、自分で作ったAndroidアプリの中から1つ選びます。提出先と締め切りは授業で案内します。",
+      "translation": "Аль утгыг сонгоход ганц зөв хариулт гэж байхгүй. Хадгалсан зургийг ч мөн нээж, өөрчилсөн газартай харгалзах өөрчлөлт гарч байгаа эсэхийг шалгана уу. Илгээх апп-даа өөрийн хийсэн Android апп-уудаас нэгийг нь сонгоно. Илгээх газар болон эцсийн хугацааг хичээл дээр зарлана."
+    },
+    {
+      "source": "JavaのsetXに対応するKotlinのxです。ここではAPIを増やさず、既に使っているサイズ・位置・文字を変えて、画面と保存結果の対応を見ます。",
+      "translation": "Java хэлний setX-тэй харгалзах Kotlin хэлний x юм. Энд API нэмэхгүйгээр, аль хэдийн ашиглаж буй хэмжээ, байрлал, бичгийг өөрчилж, дэлгэц болон хадгалсан үр дүнгийн хамаарлыг харна."
+    },
+    {
+      "source": "変えた文字・金魚の大きさ・初期位置のいずれかが画面に反映され、保存画像の違いも確認できる。",
+      "translation": "Өөрчилсөн бичиг, алтан загасны хэмжээ, эсвэл анхны байрлалын аль нэг нь дэлгэц дээр тусгагдаж, хадгалсан зурган дээрх ялгааг ч мөн шалгах боломжтой."
+    },
+    {
+      "source": "STEP 14 · 15コマ目 · 目安 3分",
+      "translation": "STEP 14 · 15-р хичээлийн цаг · Ойролцоогоор 3 минут"
+    },
+    {
+      "source": "15コマ目の最後の3分",
+      "translation": "15-р хичээлийн цагийн сүүлийн 3 минут"
+    },
+    {
+      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、このページ下の完成プロジェクトを使います。",
+      "translation": "Өөрийн төслийг хадгална уу. Камерын эрхийг ашиглах үед л зөвшөөрөх рүү буцааж тавиад, урьдчилан харах болон хадгалсан JPEG зургийг дарааллаар нь нээнэ үү. Кодоо харьцуулж харахыг хүсвэл энэ хуудасны доод хэсэгт байх бэлэн төслийг ашиглана уу."
+    },
+    {
+      "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
+      "translation": "Илгээх бэлтгэлдээ хажуугийн цэсний «Нийтлэг: Илгээх даалгавар ба APK» руу үргэлжлүүлнэ үү. Өөрчлөлт хийсэн өөрийн төслийн хуулбарыг ашиглан debug APK үүсгэнэ үү."
+    },
+    {
+      "source": "保存結果のBooleanはJavaと同じ役目です。Kotlinでは型名を変数名の後へ書きます。画面に出る文はこの戻り値で変わります。",
+      "translation": "Хадгалсан үр дүнгийн Boolean нь Java хэлтэй ижил үүрэгтэй. Kotlin хэлд төрлийн нэрийг хувьсагчийн нэрийн ард бичдэг. Дэлгэц дээр гарах өгүүлбэр нь энэ буцаах утгаас хамаарч өөрчлөгдөнө."
+    },
+    {
+      "source": "自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。",
+      "translation": "Өөрийн A04 төсөл хадгалагдаж, урьдчилан харах, чирэх болон хадгалсан JPEG-г шалгах боломжтой."
     },
     {
       "source": "見えている状態",
@@ -91,12 +831,136 @@
       "translation": "Шалгах газар"
     },
     {
+      "source": "同期が止まる",
+      "translation": "Ижилтгэл зогсох"
+    },
+    {
+      "source": "Panda 2か、STEP 02の3ファイルが正しい場所にあるかを確認。最初の原因行を先生に見せます。",
+      "translation": "Panda 2 байна уу, эсвэл STEP 02-ийн 3 файл зөв газартаа байгаа эсэхийг шалгана уу. Анхны шалтгаан болсон мөрийг багшдаа үзүүлнэ үү."
+    },
+    {
+      "source": "characterが赤い",
+      "translation": "character улаан болох"
+    },
+    {
+      "source": "drawable直下のcharacter.pngとXMLの@drawable/characterを照合。ファイル名の末尾に番号が付いていないか確認します。",
+      "translation": "drawable шууд доторх character.png болон XML файлын @drawable/character-тай тулгана уу. Файлын нэрийн төгсгөлд дугаар нэмэгдсэн эсэхийг шалгана уу."
+    },
+    {
       "source": "起動直後に閉じる",
       "translation": "Ачаалсны дараа шууд хаагдаж байна"
     },
     {
+      "source": "カスタムViewの完全なクラス名、パッケージ、コンストラクタの引数2つをSTEP 04・05と照合します。",
+      "translation": "Өөрийн үүсгэсэн View-ийн бүрэн класс-ын нэр, багц болон конструкторын 2 аргументыг STEP 04 болон 05-тай тулгана уу."
+    },
+    {
+      "source": "プレビューが黒い",
+      "translation": "Урьдчилан харах хэсэг хар байх"
+    },
+    {
+      "source": "カメラ権限、指定AVDの背面カメラ設定、STEP 06のsurfaceProviderとbindToLifecycleを確認。映像が出るまで保存しません。",
+      "translation": "Камерын эрх, заасан AVD-ийн арын камерын тохиргоо, STEP 06-н surfaceProvider болон bindToLifecycle зэргийг шалгана уу. Дүрс гартал хадгалах үйлдэл хийхгүй."
+    },
+    {
+      "source": "権限のダイアログが出ない",
+      "translation": "Эрхийн харилцах цонх гарахгүй"
+    },
+    {
+      "source": "既に許可しているか、拒否を繰り返している場合があります。設定のアプリ情報からCamera権限を確認し、変更後はRunし直します。",
+      "translation": "Аль хэдийн зөвшөөрсөн эсвэл олон дахин татгалзсан тохиолдол байж болно. Тохиргооны апп-ын мэдээллээс Camera эрхийг шалгаад, өөрчилсний дараа дахин Run хийнэ үү."
+    },
+    {
+      "source": "金魚がボタンに隠れる",
+      "translation": "Алтан загас товчинд далдлагдах"
+    },
+    {
+      "source": "XMLでボタンを後に書いた結果です。保存画像にはボタンが入らず、金魚全体が入ります。",
+      "translation": "XML файлд товчийг сүүлд бичсэний үр дүн юм. Хадгалсан зурагт товч орохгүй ба алтан загас бүтнээрээ орно."
+    },
+    {
+      "source": "金魚をつかめない",
+      "translation": "Алтан загасыг барьж болохгүй"
+    },
+    {
+      "source": "ボタンに隠れたところではボタンが先に反応します。見えている金魚の上側をドラッグします。",
+      "translation": "Товчинд далдлагдсан хэсэгт товч түрүүлж хариу үйлдэл үзүүлнэ. Харагдаж байгаа алтан загасны дээд талаас чирнэ үү."
+    },
+    {
+      "source": "押すとプレビューを確認中ですと出る",
+      "translation": "Дарахад урьдчилан харахыг шалгаж байна гэж гарах"
+    },
+    {
+      "source": "STEP 06の途中コードです。STEP 10の完成版で保存処理へ置き換わります。",
+      "translation": "Энэ нь STEP 06-н дунд үеийн код юм. STEP 10-н бэлэн хувилбарт хадгалах үйлдлээр солигдоно."
+    },
+    {
+      "source": "押しても保存の案内が出ない",
+      "translation": "Дарсан ч хадгалах тухай мэдээлэл гарахгүй"
+    },
+    {
+      "source": "プレビュー準備前のnull分岐はLogcatのみです。映像が見えてから押します。",
+      "translation": "Урьдчилан харах бэлтгэлийн өмнөх null салаалалт нь зөвхөн Logcat дээр байна. Дүрс харагдсаны дараа дарна уу."
+    },
+    {
+      "source": "保存に失敗しましたと出る",
+      "translation": "Хадгалж чадсангүй гэж гарах"
+    },
+    {
+      "source": "空き容量など端末の状態を先生と確認。saveBitmapがfalseを返した結果です。連打しません。",
+      "translation": "Сул зай зэрэг төхөөрөмжийн байдлыг багштайгаа хамт шалгана уу. saveBitmap функц false буцаасны үр дүн юм. Олон дахин дарахгүй."
+    },
+    {
+      "source": "保存画像が見つからない",
+      "translation": "Хадгалсан зураг олдохгүй"
+    },
+    {
+      "source": "Filesの端末内ストレージでPictures/FunnyCameraを確認。今の端末の日時のjpgを開きます。",
+      "translation": "Files-ийн төхөөрөмж доторх сангаас Pictures/FunnyCamera хавтасыг шалгана уу. Одоогийн төхөөрөмжийн огноо цагтай jpg-г нээнэ үү."
+    },
+    {
+      "source": "途中から再開したい",
+      "translation": "Дундаас нь үргэлжлүүлмээр байх"
+    },
+    {
+      "source": "14コマ目末はSTEP 06の全文。15コマ目はSTEP 08から、完成版全文はSTEP 10です。",
+      "translation": "14-р хичээлийн цагийн эцэст STEP 06-н бүтэн код байна. 15-р хичээлийн цаг нь STEP 08-аас, бэлэн хувилбарын бүтэн код нь STEP 10 болно."
+    },
+    {
+      "source": "配布ZIPを展開した中の <code>samples/A04FunnyCamera</code> をAndroid Studioの <strong>Open</strong> で開きます。自分の <code>Documents/Kotlin/A04FunnyCamera</code> と保存先で区別します。見本を閉じたら自分の保存先を開き直します。",
+      "translation": "Татаж авсан ZIP файлыг задлаад доторх <code>samples/A04FunnyCamera</code>-г Android Studio програмын <strong>Open</strong>-р нээнэ үү. Өөрийн <code>Documents/Kotlin/A04FunnyCamera</code>-аас хадгалсан газраар нь ялгана уу. Жишээг хаасны дараа өөрийн хадгалсан газрыг дахин нээнэ үү."
+    },
+    {
+      "source": "教科書だけを受け取った場合は <a1>A04FunnyCamera.zip</a1> を保存して展開し、中の <code>A04FunnyCamera</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
+      "translation": "Зөвхөн сурах бичиг хүлээн авсан тохиолдолд <a1>A04FunnyCamera.zip</a1>-г хадгалж задлаад, доторх <code>A04FunnyCamera</code> хавтасыг Open хийнэ үү. ZIP өөрийг нь болон доторх app-г сонгохгүй."
+    },
+    {
+      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。カメラの使用を許可して動作を比べます。見本はコードと動作の確認用です。",
+      "translation": "Ижилтгэлийн дараа ажиллуулах тохиргооноос <strong>app</strong> болон <code>jec_25cm_kotlin_Pixel 9a</code>-г сонгоод Run хийнэ үү. Камер ашиглахыг зөвшөөрөөд үйлдлийг нь харьцуулна уу. Жишээ нь код болон үйлдлийг шалгах зориулалттай."
+    },
+    {
       "source": "公式資料",
       "translation": "Албан ёсны баримт бичиг"
+    },
+    {
+      "source": "Android：CameraXのプレビュー",
+      "translation": "Android: CameraX-ийн урьдчилан харах"
+    },
+    {
+      "source": "Android：実行時の権限",
+      "translation": "Android: Ажиллах үеийн эрх"
+    },
+    {
+      "source": "Android：MediaStoreへの追加とIS_PENDING",
+      "translation": "Android: MediaStore-д нэмэх болон IS_PENDING"
+    },
+    {
+      "source": "Android：ViewsのlifecycleScope",
+      "translation": "Android: Views-ийн lifecycleScope"
+    },
+    {
+      "source": "確認日：2026年9月24日 / A04FunnyCamera、Panda 2の構成",
+      "translation": "Шалгасан огноо: 2026 оны 9 сарын 24 / A04FunnyCamera, Panda 2-ийн бүтэц"
     }
   ]
 }
