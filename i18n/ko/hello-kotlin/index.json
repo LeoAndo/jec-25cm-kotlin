@@ -824,15 +824,15 @@
     },
     {
       "source": "出てきたメニューの、いちばん上の <strong>'MainKt' の実行</strong> を選びます。キーボードの <kbd>^ ⇧ R</kbd> でも同じです。",
-      "translation": "나온 메뉴의 맨 위 <strong>'MainKt' の実行</strong>(Run 'MainKt')을 선택합니다. 키보드의 <kbd>^ ⇧ R</kbd>로도 같습니다."
+      "translation": "나온 메뉴의 맨 위 <strong>'MainKt' の実行</strong>(Run 'MainKt')를 선택합니다. 키보드의 <kbd>^ ⇧ R</kbd>로도 같습니다."
     },
     {
       "source": "エディタのfun mainの左にある緑の三角を押して出たメニュー。いちばん上の'MainKt' の実行が青く選ばれ、右端にショートカットの^⇧Rが出ている。その下に'MainKt' のデバッグなどが並ぶ",
-      "translation": "에디터의 fun main 왼쪽에 있는 초록색 삼각형을 눌러서 나온 메뉴. 맨 위의 'MainKt' の実行(Run 'MainKt')이 파란색으로 선택되어 있고, 오른쪽 끝에 단축키 ^⇧R이 나와 있다. 그 아래에 'MainKt' のデバッグ('MainKt' Debug) 등이 나열되어 있다"
+      "translation": "에디터의 fun main 왼쪽에 있는 초록색 삼각형을 눌러서 나온 메뉴. 맨 위의 'MainKt' の実行(Run 'MainKt')가 파란색으로 선택되어 있고, 오른쪽 끝에 단축키 ^⇧R이 나와 있다. 그 아래에 'MainKt' のデバッグ('MainKt' Debug) 등이 나열되어 있다"
     },
     {
       "source": "ガターの ▷ を押すと、いちばん上に <strong>'MainKt' の実行</strong> が出ます。 <a1>画像を大きく開く</a1>",
-      "translation": "거터의 ▷을 누르면 맨 위에 <strong>'MainKt' の実行</strong>(Run 'MainKt')이 나옵니다. <a1>이미지를 크게 열기</a1>"
+      "translation": "거터의 ▷을 누르면 맨 위에 <strong>'MainKt' の実行</strong>(Run 'MainKt')가 나옵니다. <a1>이미지를 크게 열기</a1>"
     },
     {
       "source": "⑤ 出た内容を確かめる",
@@ -968,7 +968,7 @@
     },
     {
       "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
-      "translation": "<code>fun main()</code> 줄의 왼쪽에 나오는 초록색 삼각형(▷)을 클릭하고, <strong>'MainKt' の実行</strong>(Run 'MainKt')을 선택합니다. 아래 <strong>실행</strong> 도구 창에 <code>Hello, Kotlin!</code>과 <code>プロセスは終了コード 0 で終了しました</code>가 나오면 성공입니다."
+      "translation": "<code>fun main()</code> 줄의 왼쪽에 나오는 초록색 삼각형(▷)을 클릭하고, <strong>'MainKt' の実行</strong>(Run 'MainKt')를 선택합니다. 아래 <strong>실행</strong> 도구 창에 <code>Hello, Kotlin!</code>과 <code>プロセスは終了コード 0 で終了しました</code>가 나오면 성공입니다."
     },
     {
       "source": "<code>i = 1</code> 〜 <code>i = 5</code> はもう出ません。消した <code>Main.kt</code> ではなく、いま書いた <code>ex01</code> の <code>main.kt</code> が動いているからです。",
@@ -976,7 +976,7 @@
     },
     {
       "source": "この「ガターの ▷ から <strong>'MainKt' の実行</strong> を選ぶ」操作を、この教科書では STEP 03 以降「Run」と書きます。STEP 01 の Kotlin Playground の <strong>Run</strong> ボタンと同じ意味です。",
-      "translation": "이 '거터의 ▷에서 <strong>'MainKt' の実行</strong>(Run 'MainKt')을 선택한다'는 조작을, 이 교과서에서는 STEP 03부터 'Run'이라고 씁니다. STEP 01의 Kotlin Playground의 <strong>Run</strong> 버튼과 같은 의미입니다."
+      "translation": "이 '거터의 ▷에서 <strong>'MainKt' の実行</strong>(Run 'MainKt')를 선택한다'는 조작을, 이 교과서에서는 STEP 03부터 'Run'이라고 씁니다. STEP 01의 Kotlin Playground의 <strong>Run</strong> 버튼과 같은 의미입니다."
     },
     {
       "source": "⑧ ファイル名とクラス名の関係",
@@ -1280,7 +1280,7 @@
     },
     {
       "source": "<code>name = &quot;Tanaka&quot;</code> の次の行に <code>number1 = 5</code> と書き足します。Runを押す前に、その行に出たエラーメッセージを読んでください。",
-      "translation": "<code>name = &quot;Tanaka&quot;</code>의 다음 줄에 <code>number1 = 5</code>라고 더 작성합니다. Run을 누르기 전에 그 줄에 나온 오류 메시지를 읽어 주세요."
+      "translation": "<code>name = &quot;Tanaka&quot;</code>의 다음 줄에 <code>number1 = 5</code>라고 더 작성합니다. Run을 누르기 전에 그 줄에 나온 오류 메시지를 읽습니다."
     },
     {
       "source": "読むのは次の3つです。<strong>どの行か・何をしようとしたと言っているか・どう直せと言っているか。</strong>",
@@ -1752,7 +1752,7 @@
     },
     {
       "source": "書き換えた行に赤い波線が出て、この型には <code>null</code> を代入できない、という<strong>おおよそその意味のメッセージ</strong>が出ます。Runしても実行されません。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言を覚える必要はありません。<strong>赤い波線が出たら、<code>?</code> の付いていない型に <code>null</code> を入れようとしている</strong>と読み替えてください。",
-      "translation": "바꾼 줄에 빨간색 물결선이 나타나고, 이 자료형에는 <code>null</code>을 대입할 수 없다는 <strong>대략적인 의미의 메시지</strong>가 표시됩니다. Run해도 실행되지 않습니다. 문구는 IntelliJ IDEA와 Kotlin의 버전에 따라 달라지므로, 문구를 외울 필요는 없습니다. <strong>빨간색 물결선이 나타나면 <code>?</code>가 붙지 않은 자료형에 <code>null</code>을 넣으려고 한다</strong>고 바꿔 읽어주세요."
+      "translation": "바꾼 줄에 빨간색 물결선이 나타나고, 이 자료형에는 <code>null</code>을 대입할 수 없다는 <strong>대략적인 의미의 메시지</strong>가 표시됩니다. Run해도 실행되지 않습니다. 문구는 IntelliJ IDEA와 Kotlin의 버전에 따라 달라지므로, 문구를 외울 필요는 없습니다. <strong>빨간색 물결선이 나타나면 <code>?</code>가 붙지 않은 자료형에 <code>null</code>을 넣으려고 한다</strong>고 바꿔 읽습니다."
     },
     {
       "source": "直し方は2つです。型を <code>String?</code> に変えるか、<code>null</code> をやめて文字列に戻すか。ここでは <code>&quot;Saito&quot;</code> に戻し、赤い波線が消えることを確かめます。",
@@ -2216,7 +2216,7 @@
     },
     {
       "source": "<strong>Kotlinは、関数をファイルの直下に書けます。</strong> これを<strong>トップレベル関数</strong>と呼びます。1コマ目から書いている <code>fun main()</code> が、その1つめです。Swiftのグローバル関数と同じ置き方です。",
-      "translation": "<strong>Kotlin은 함수를 파일 바로 아래에 작성할 수 있습니다.</strong> 이것을 <strong>최상위 함수</strong>(최상위 함수)라고 부릅니다. 1차시부터 작성해 온 <code>fun main()</code>이 그 첫 번째입니다. Swift의 전역 함수와 같은 배치 방식입니다."
+      "translation": "<strong>Kotlin은 함수를 파일 바로 아래에 작성할 수 있습니다.</strong> 이것을 <strong>최상위 함수</strong>(トップレベル関数)라고 부릅니다. 1차시부터 작성해 온 <code>fun main()</code>이 그 첫 번째입니다. Swift의 전역 함수와 같은 배치 방식입니다."
     },
     {
       "source": "Javaは、メソッドを必ずクラスの中に置きます。<strong>この回で書く <code>sum</code> も、Javaならクラスの中の <code>static</code> メソッドにあたります。</strong>",
@@ -2304,7 +2304,7 @@
     },
     {
       "source": "1コマ目で書いた変数の宣言を思い出してください。Kotlinは <code>val number1: Int = 1</code> と書き、<strong>名前が先、型があと</strong>でした。関数の引数も、同じ並びにそろえてあります。",
-      "translation": "1차시에서 작성한 변수 선언을 떠올려 보세요. Kotlin은 <code>val number1: Int = 1</code>이라고 적었고, <strong>이름이 먼저, 타입이 나중</strong>이었습니다. 함수의 인수도 같은 순서로 맞추어져 있습니다."
+      "translation": "1차시에서 작성한 변수 선언을 떠올려 봅니다. Kotlin은 <code>val number1: Int = 1</code>이라고 적었고, <strong>이름이 먼저, 타입이 나중</strong>이었습니다. 함수의 인수도 같은 순서로 맞추어져 있습니다."
     },
     {
       "source": "この並びだと、<strong>型を省いても形が崩れません。</strong> <code>val number1 = 1</code> のように、うしろの <code>: Int</code> を取るだけで済みます。Javaの <code>int number1 = 1;</code> は先頭が型なので、そこを省くと何も残りません。<strong>型を省ける言語は、型をうしろに置くほうが都合がよいのです。</strong> Swiftが同じ並びなのも、同じ理由です。",
@@ -2460,7 +2460,7 @@
     },
     {
       "source": "<code>sum</code> の引数を3つに増やします。<code>fun sum(a: Int, b: Int, c: Int): Int</code> にし、中身も <code>return a + b + c</code> に書き換えます。<strong><code>main</code> の <code>sum(1, 2)</code> はそのままにして</strong>、Runを押す前にその行を見てください。",
-      "translation": "<code>sum</code>의 인수를 세 개로 늘립니다. <code>fun sum(a: Int, b: Int, c: Int): Int</code>로 만들고, 내용도 <code>return a + b + c</code>로 고쳐 씁니다. <strong><code>main</code>의 <code>sum(1, 2)</code>는 그대로 두고</strong>, Run을 누르기 전에 그 줄을 확인하세요."
+      "translation": "<code>sum</code>의 인수를 세 개로 늘립니다. <code>fun sum(a: Int, b: Int, c: Int): Int</code>로 만들고, 내용도 <code>return a + b + c</code>로 고쳐 씁니다. <strong><code>main</code>의 <code>sum(1, 2)</code>는 그대로 두고</strong>, Run을 누르기 전에 그 줄을 확인합니다."
     },
     {
       "source": "<code>sum(1, 2)</code> の行に赤い波線が出て、Runできません。3つ必要な引数に2つしか渡していないので、<strong>足りない引数がある</strong>、というおおよそその意味のメッセージが出ます。",
@@ -2480,7 +2480,7 @@
     },
     {
       "source": "<code>sum</code> の戻り値の型を <code>: Int</code> から <code>: String</code> に書き換えます。中身の <code>return a + b</code> はそのままにして、Runを押す前にその行を見てください。",
-      "translation": "<code>sum</code>의 반환 타입을 <code>: Int</code>에서 <code>: String</code>으로 고쳐 씁니다. 내용의 <code>return a + b</code>는 그대로 두고, Run을 누르기 전에 그 줄을 확인하세요."
+      "translation": "<code>sum</code>의 반환 타입을 <code>: Int</code>에서 <code>: String</code>으로 고쳐 씁니다. 내용의 <code>return a + b</code>는 그대로 두고, Run을 누르기 전에 그 줄을 확인합니다."
     },
     {
       "source": "<code>return a + b</code> の行に赤い波線が出て、Runできません。<code>a + b</code> は <code>Int</code> なのに、<code>String</code> を返すと宣言しているからです。<strong>宣言した型と、返している型が合っていない</strong>、というおおよそその意味のメッセージが出ます。",
@@ -2496,7 +2496,7 @@
     },
     {
       "source": "<code>sum</code> の中の <code>return</code> だけを消して、<code>a + b</code> の1行にします。Runを押す前に、関数の閉じかっこ <code>}</code> のあたりを見てください。",
-      "translation": "<code>sum</code> 안의 <code>return</code>만 지워서 <code>a + b</code> 한 줄로 만듭니다. Run을 누르기 전에 함수의 닫는 괄호 <code>}</code> 부근을 확인하세요."
+      "translation": "<code>sum</code> 안의 <code>return</code>만 지워서 <code>a + b</code> 한 줄로 만듭니다. Run을 누르기 전에 함수의 닫는 괄호 <code>}</code> 부근을 확인합니다."
     },
     {
       "source": "赤い波線が出て、Runできません。<code>: Int</code> と宣言したのに値を返していないので、<strong><code>return</code> が足りない</strong>、というおおよそその意味のメッセージが出ます。",
@@ -3156,7 +3156,7 @@
     },
     {
       "source": "<code>fun main()</code> の左からRunします。<code>val foo</code> でも <code>foo.counter</code> に代入できる点に注目してください。固定しているのは <code>foo</code> が参照するオブジェクトで、<code>counter</code> は <code>var</code> です。",
-      "translation": "<code>fun main()</code> 왼쪽에서 Run합니다. <code>val foo</code>라도 <code>foo.counter</code>에 대입할 수 있다는 점에 주목해 주세요. 고정되어 있는 것은 <code>foo</code>가 참조하는 객체이며, <code>counter</code>는 <code>var</code>입니다."
+      "translation": "<code>fun main()</code> 왼쪽에서 Run합니다. <code>val foo</code>라도 <code>foo.counter</code>에 대입할 수 있다는 점에 주목합니다. 고정되어 있는 것은 <code>foo</code>가 참조하는 객체이며, <code>counter</code>는 <code>var</code>입니다."
     },
     {
       "source": "書いた行",
@@ -4064,7 +4064,7 @@
     },
     {
       "source": "開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。",
-      "translation": "여는 방법을 묻는다면 <strong>新しいウィンドウ</strong>(새 창)를 선택하여, 수업의 프로젝트와는 다른 창에서 엽니다."
+      "translation": "여는 방법을 묻는다면 <strong>新しいウィンドウ</strong>(새 창)을 선택하여, 수업의 프로젝트와는 다른 창에서 엽니다."
     },
     {
       "source": "左の一覧で <code>src</code> を開き、いまの演習のパッケージを選びます。<code>ex01</code>〜<code>ex11</code> のうち、<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> を開きます。",
