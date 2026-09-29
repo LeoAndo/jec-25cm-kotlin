@@ -35,6 +35,10 @@
       "translation": "Detente aquí y verifica"
     },
     {
+      "source": "役割",
+      "translation": "Función"
+    },
+    {
       "source": "項目",
       "translation": "Campo"
     },
@@ -53,6 +57,10 @@
     {
       "source": "変える場所",
       "translation": "Dónde cambiarlo"
+    },
+    {
+      "source": "画面で確かめること",
+      "translation": "Lo que debes verificar en pantalla"
     },
     {
       "source": "使うもの",
