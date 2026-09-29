@@ -3,12 +3,212 @@
   "language": "ar",
   "entries": [
     {
+      "source": "JavaとSwiftを書ける人のためのKotlin入門。全6コマ・11演習で、変数・Null安全・関数・条件式・繰り返し・クラス・アクセサ・data class・スマートキャスト・拡張関数・map・by lazyを、他言語との差分で確かめる授業用教科書。",
+      "translation": "مقدمة في Kotlin لمن يتقن Java وSwift. الكتاب المدرسي للحصص يتكون من 6 حصص و11 تمرينا، ويقارن مع اللغات الأخرى لتأكيد فهم المتغيّرات، والأمان من null (null safety)، والدوال، والتعبيرات الشرطية، والحلقات، والأصناف، وطرق الوصول، وdata class، والتحويل الذكي (smart cast)، ودوال الامتداد (extension function)، وmap، وby lazy."
+    },
+    {
+      "source": "K01HelloKotlin — Kotlinを書き始める | Kotlin演習",
+      "translation": "K01: HelloKotlin – بدء كتابة Kotlin | تمارين Kotlin"
+    },
+    {
       "source": "本文へ移動",
       "translation": "الانتقال إلى المحتوى الرئيسي"
     },
     {
       "source": "JEC / Kotlin演習",
       "translation": "JEC / تمارين Kotlin"
+    },
+    {
+      "source": "授業用教科書 · Kotlin + IntelliJ IDEA",
+      "translation": "الكتاب المدرسي · Kotlin + IntelliJ IDEA"
+    },
+    {
+      "source": "CONTENTS / 学習の順番",
+      "translation": "المحتويات / ترتيب التعلم"
+    },
+    {
+      "source": "学習ステップ",
+      "translation": "خطوات التعلم"
+    },
+    {
+      "source": "1コマ目 · STEP 00〜06",
+      "translation": "الحصة 1 · الخطوات 00–06"
+    },
+    {
+      "source": "00　この単元のゴール",
+      "translation": "00 هدف هذه الوحدة"
+    },
+    {
+      "source": "01　Playgroundで動かす",
+      "translation": "01 التشغيل في Playground"
+    },
+    {
+      "source": "02　プロジェクトを作る",
+      "translation": "02 إنشاء مشروع"
+    },
+    {
+      "source": "03　val と var",
+      "translation": "03 val و var"
+    },
+    {
+      "source": "04　数の型",
+      "translation": "04 أنواع الأعداد"
+    },
+    {
+      "source": "05　ミニ練習",
+      "translation": "05 تمرين قصير"
+    },
+    {
+      "source": "06　完成",
+      "translation": "06 اكتمال"
+    },
+    {
+      "source": "2コマ目 · STEP 07〜12",
+      "translation": "الحصة 2 · الخطوات 07–12"
+    },
+    {
+      "source": "07　2コマ目のゴール",
+      "translation": "07 هدف الحصة 2"
+    },
+    {
+      "source": "08　ex02 を作る",
+      "translation": "08 إنشاء ex02"
+    },
+    {
+      "source": "09　String と String?",
+      "translation": "09 String و String?"
+    },
+    {
+      "source": "10　安全呼び出し ?.",
+      "translation": "10 الاستدعاء الآمن ?."
+    },
+    {
+      "source": "11　ミニ練習",
+      "translation": "11 تمرين قصير"
+    },
+    {
+      "source": "12　完成",
+      "translation": "12 اكتمال"
+    },
+    {
+      "source": "3コマ目 · STEP 13〜18",
+      "translation": "الحصة 3 · الخطوات 13–18"
+    },
+    {
+      "source": "13　3コマ目のゴール",
+      "translation": "13 هدف الحصة 3"
+    },
+    {
+      "source": "14　ex03 を作る",
+      "translation": "14 إنشاء ex03"
+    },
+    {
+      "source": "15　戻り値のある関数",
+      "translation": "15 دالة لها قيمة مُعادة"
+    },
+    {
+      "source": "16　戻り値のない関数",
+      "translation": "16 دالة ليس لها قيمة مُعادة"
+    },
+    {
+      "source": "17　ミニ練習",
+      "translation": "17 تمرين قصير"
+    },
+    {
+      "source": "18　完成",
+      "translation": "18 اكتمال"
+    },
+    {
+      "source": "4コマ目 · STEP 19〜24",
+      "translation": "الحصة 4 · الخطوات 19–24"
+    },
+    {
+      "source": "19　4コマ目のゴール",
+      "translation": "19 هدف الحصة 4"
+    },
+    {
+      "source": "20　ex05 と条件式",
+      "translation": "20 ex05 والتعبيرات الشرطية"
+    },
+    {
+      "source": "21　ex06 と繰り返し",
+      "translation": "21 ex06 والحلقات"
+    },
+    {
+      "source": "22　ex04 とクラス",
+      "translation": "22 ex04 والأصناف"
+    },
+    {
+      "source": "23　ミニ練習",
+      "translation": "23 تمرين قصير"
+    },
+    {
+      "source": "24　完成",
+      "translation": "24 اكتمال"
+    },
+    {
+      "source": "5コマ目 · STEP 25〜30",
+      "translation": "الحصة 5 · الخطوات 25–30"
+    },
+    {
+      "source": "25　5コマ目を始める",
+      "translation": "25 بدء الحصة 5"
+    },
+    {
+      "source": "26　ex08 とアクセサ",
+      "translation": "26 ex08 وطرق الوصول"
+    },
+    {
+      "source": "27　ex09 と data class",
+      "translation": "27 ex09 و data class"
+    },
+    {
+      "source": "28　ex07 と拡張関数",
+      "translation": "28 ex07 ودوال الامتداد"
+    },
+    {
+      "source": "29　ミニ練習",
+      "translation": "29 تمرين قصير"
+    },
+    {
+      "source": "30　完成",
+      "translation": "30 اكتمال"
+    },
+    {
+      "source": "6コマ目 · STEP 31〜35",
+      "translation": "الحصة 6 · الخطوات 31–35"
+    },
+    {
+      "source": "31　6コマ目を始める",
+      "translation": "31 بدء الحصة 6"
+    },
+    {
+      "source": "32　ex10 と map",
+      "translation": "32 ex10 و map"
+    },
+    {
+      "source": "33　ex11 と lazy",
+      "translation": "33 ex11 و lazy"
+    },
+    {
+      "source": "34　ミニ練習",
+      "translation": "34 تمرين قصير"
+    },
+    {
+      "source": "35　K01の完成",
+      "translation": "35 اكتمال K01"
+    },
+    {
+      "source": "0 / 36 ステップ確認済み",
+      "translation": "الخطوات التي تم التحقق منها: 0 / 36"
+    },
+    {
+      "source": "学習の進み具合",
+      "translation": "التقدم"
+    },
+    {
+      "source": "自分用のチェックです。",
+      "translation": "هذا تحقق لك أنت.&lrm;"
     },
     {
       "source": "困ったとき",
@@ -31,28 +231,2376 @@
       "translation": "مشترك: إصدار مختلف من Android Studio"
     },
     {
+      "source": "Kotlinを<br>書き始める",
+      "translation": "بدء كتابة<br>Kotlin"
+    },
+    {
+      "source": "JavaとSwiftで書けることは、Kotlinでも書けます。<br>この単元では、知っている処理を「Kotlinならどう書くか」に置き換えます。",
+      "translation": "ما يمكنك كتابته في Java وSwift، يمكنك كتابته في Kotlin أيضا.<br>في هذه الوحدة، سنستبدل المعالجات التي تعرفها بكيفية كتابتها في Kotlin."
+    },
+    {
+      "source": "Java・Swift経験者向け",
+      "translation": "لمن لديه خبرة في Java وSwift"
+    },
+    {
+      "source": "全6コマ · 11演習を収録",
+      "translation": "تتضمن 6 حصص و11 تمرينا"
+    },
+    {
+      "source": "予習なしで始められる",
+      "translation": "يمكنك البدء بدون تحضير مسبق"
+    },
+    {
+      "source": "STEP 00 · 目安 5分",
+      "translation": "الخطوة 00 · حوالي 5 دقائق"
+    },
+    {
+      "source": "この単元のゴール",
+      "translation": "هدف هذه الوحدة"
+    },
+    {
+      "source": "この授業は <strong>Kotlin演習</strong> です。1コマ90分、全15コマで進みます。そのうち単元 <code>K01HelloKotlin</code> は<strong>全6コマ</strong>です。",
+      "translation": "هذه الحصة هي <strong>تمارين Kotlin</strong>. مدة الحصة الواحدة 90 دقيقة، وعددها 15 حصة في المجموع. منها الوحدة <code>K01HelloKotlin</code> المكوّنة من <strong>6 حصص</strong>."
+    },
+    {
+      "source": "この教科書1冊で、<strong>全6コマ・11演習</strong>を進めます。1コマ目はSTEP 00〜06、2コマ目はSTEP 07〜12、3コマ目はSTEP 13〜18、4コマ目はSTEP 19〜24、5コマ目はSTEP 25〜30、6コマ目はSTEP 31〜35です。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。",
+      "translation": "باستخدام هذا الكتاب المدرسي الواحد، ستتقدّم في <strong>6 حصص و11 تمرينا</strong>. الحصة 1 هي الخطوات 00–06، والحصة 2 هي الخطوات 07–12، والحصة 3 هي الخطوات 13–18، والحصة 4 هي الخطوات 19–24، والحصة 5 هي الخطوات 25–30، والحصة 6 هي الخطوات 31–35. <strong>سيحدّد المعلم أي جزء سندرسه اليوم في بداية الحصة.</strong> اقرأ من الخطوة المحدّدة بالترتيب."
+    },
+    {
+      "source": "6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>〜<code>ex11</code> のパッケージを足していきます。演習番号と授業順が違う回も、教科書のSTEPの順に進めます。",
+      "translation": "طوال الحصص الست، ستستخدم مشروعا واحدا فقط هو <code>K01HelloKotlin</code>. في كل مرة، ستضيف إليه الحزم من <code>ex01</code> إلى <code>ex11</code>. حتى لو اختلف رقم التمرين عن ترتيب الحصة، استمر بالترتيب الموجود في خطوات الكتاب المدرسي."
+    },
+    {
+      "source": "みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。",
+      "translation": "أنتم تتقنون بالفعل كتابة Java وSwift. لذلك، هذا الكتاب المدرسي لن يشرح ما هو المتغيّر أو ما هو النوع. سيتناول أمرين اثنين فقط:"
+    },
+    {
+      "source": "<strong>Kotlinではどう書くのか</strong>。",
+      "translation": "<strong>كيف نكتب ذلك في Kotlin؟</strong>"
+    },
+    {
+      "source": "<strong>JavaやSwiftと何が違い、なぜ違うのか</strong>。",
+      "translation": "<strong>ما الاختلاف عن Java وSwift، ولماذا هذا الاختلاف؟</strong>"
+    },
+    {
+      "source": "Kotlinはどこで動く言語か",
+      "translation": "أين تعمل لغة Kotlin؟"
+    },
+    {
+      "source": "Kotlinで書いたコードは、JVM（Java Virtual Machine）で動くJavaバイトコード（<code>class</code> ファイル）にコンパイルされます。つまり、Javaが動く環境ならKotlinも動きます。このような言語を <strong>JVM言語</strong> と呼びます。",
+      "translation": "تُصَرَّف الشيفرة المكتوبة بلغة Kotlin إلى شيفرة Java ثنائية (ملفات <code>class</code>) تعمل على آلة Java الافتراضية (JVM). بعبارة أخرى، يمكن لـ Kotlin أن تعمل في أي بيئة تدعم Java. تُسمّى هذه اللغات بـ <strong>لغات JVM</strong>."
+    },
+    {
+      "source": "Kotlinの特徴",
+      "translation": "مميزات Kotlin"
+    },
+    {
+      "source": "中身",
+      "translation": "التفاصيل"
+    },
+    {
+      "source": "すでに知っていることとの関係",
+      "translation": "العلاقة بما تعرفه بالفعل"
+    },
+    {
+      "source": "記述量が少ない",
+      "translation": "حجم شيفرة أقل"
+    },
+    {
+      "source": "同じ処理でも、Javaより短く書ける。",
+      "translation": "يمكن كتابة نفس المعالجة بشكل أقصر من Java."
+    },
+    {
+      "source": "省けた部分はコンパイラが補っています。何が省かれたのかを、この単元で1つずつ確かめます。",
+      "translation": "المُصَرِّف يعوّض الأجزاء المحذوفة. سنتأكّد مما حُذف خطوة بخطوة في هذه الوحدة."
+    },
+    {
+      "source": "Javaとの相互運用",
+      "translation": "التوافقية مع Java"
+    },
+    {
+      "source": "JavaのコードからKotlinを、KotlinのコードからJavaを呼べる。",
+      "translation": "يمكن استدعاء Kotlin من شيفرة Java، واستدعاء Java من شيفرة Kotlin."
+    },
+    {
+      "source": "全部をKotlinに書き換えなくても混在させられます。古いAndroidアプリにJavaが残っているのはこのためです。",
+      "translation": "يمكنك مزجهما دون الحاجة إلى إعادة كتابة كل شيء بلغة Kotlin. هذا هو السبب في بقاء Java في تطبيقات Android القديمة."
+    },
+    {
+      "source": "Null安全",
+      "translation": "الأمان من null (null safety)"
+    },
+    {
+      "source": "nullを入れられる型と、入れられない型を、言語が区別する。",
+      "translation": "تُميّز اللغة بين الأنواع التي تقبل القيمة null والأنواع التي لا تقبلها."
+    },
+    {
+      "source": "Swiftのオプショナルと同じ発想です。",
+      "translation": "نفس الفكرة في الخيار (Optional) في لغة Swift."
+    },
+    {
+      "source": "Javaの資産が使える",
+      "translation": "الاستفادة من مكتبات Java"
+    },
+    {
+      "source": "Java用のライブラリやフレームワークをそのまま使える。",
+      "translation": "يمكنك استخدام مكتبات وأطر عمل Java كما هي."
+    },
+    {
+      "source": "JVM言語だからです。Kotlin用に作り直されるのを待つ必要はありません。",
+      "translation": "لأنها لغة JVM. لا تحتاج لانتظار إعادة بناء المكتبة خصيصا لتناسب Kotlin."
+    },
+    {
+      "source": "同じ処理を3つの言語で並べる",
+      "translation": "كتابة نفس المعالجة بثلاث لغات"
+    },
+    {
+      "source": "名前を変数に入れて出力するだけのプログラムです。まず全体の差を見ます。細かいところは STEP 03 以降で1つずつ扱います。",
+      "translation": "برنامج بسيط يحفظ اسما في متغيّر ثم يطبعه. أولا سنلقي نظرة على الاختلافات العامة، وسنتناول التفاصيل واحدة تلو الأخرى بدءا من الخطوة 03."
+    },
+    {
+      "source": "Kotlinの入口は <code>fun main()</code> です。Javaのように、入口をクラスで包む必要がありません。<code>String[] args</code> にあたる引数も省けます。",
+      "translation": "نقطة الدخول في Kotlin هي <code>fun main()</code>. لا داعي لتغليف نقطة الدخول بصنف كما في Java. يمكن أيضا حذف الوسيط المقابل لـ <code>String[] args</code>."
+    },
+    {
+      "source": "Kotlinの <code>val</code> は、Javaの <code>final</code>、Swiftの <code>let</code> にあたります。",
+      "translation": "الكلمة المفتاحية <code>val</code> في Kotlin تقابل <code>final</code> في Java و <code>let</code> في Swift."
+    },
+    {
+      "source": "型注釈はSwiftと同じく省けます。右辺から型が決まります。",
+      "translation": "يمكنك حذف تحديد النوع صراحة (type annotation) تماما كما في Swift. يتم استنتاج النوع من الطرف الأيمن."
+    },
+    {
+      "source": "文末のセミコロンはSwiftと同じく要りません。Javaとはここが違います。",
+      "translation": "الفاصلة المنقوطة في نهاية السطر غير مطلوبة، تماما كما في Swift. هذا يختلف عن Java."
+    },
+    {
+      "source": "出力はKotlinが <code>println</code>、Javaが <code>System.out.println</code>、Swiftが <code>print</code> です。",
+      "translation": "دالة الطباعة في Kotlin هي <code>println</code>، وفي Java هي <code>System.out.println</code>، وفي Swift هي <code>print</code>."
+    },
+    {
+      "source": "JavaとSwiftを知っていれば、Kotlinは「差分」で覚えられます。この教科書は、その差分だけを並べていきます。",
+      "translation": "إذا كنت تعرف Java وSwift، يمكنك تعلم Kotlin من خلال التركيز على \"الاختلافات\". سيعرض هذا الكتاب المدرسي هذه الاختلافات فقط."
+    },
+    {
+      "source": "この単元で出てくるKotlinの言葉",
+      "translation": "كلمات Kotlin الواردة في هذه الوحدة"
+    },
+    {
+      "source": "Kotlinの言葉",
+      "translation": "كلمة Kotlin"
+    },
+    {
+      "source": "Javaでの対応",
+      "translation": "ما يقابلها في Java"
+    },
+    {
+      "source": "Swiftでの対応",
+      "translation": "ما يقابلها في Swift"
+    },
+    {
+      "source": "<code>final</code> を付けた変数",
+      "translation": "متغيّر بالكلمة المفتاحية <code>final</code>"
+    },
+    {
+      "source": "<code>final</code> を付けない変数",
+      "translation": "متغيّر بدون الكلمة المفتاحية <code>final</code>"
+    },
+    {
+      "source": "トップレベル関数",
+      "translation": "دالة في المستوى الأعلى — top-level function"
+    },
+    {
+      "source": "クラスの <code>static</code> メソッド",
+      "translation": "طريقة <code>static</code> الخاصة بصنف"
+    },
+    {
+      "source": "グローバル関数",
+      "translation": "دالة عامة (global function)"
+    },
+    {
+      "source": "<code>int</code> / <code>double</code> / <code>float</code> とそのラッパークラス",
+      "translation": "<code>int</code> / <code>double</code> / <code>float</code> وأصناف التغليف الخاصة بها (wrapper classes)"
+    },
+    {
+      "source": "1コマ目のゴール（コンソールに出る4行）",
+      "translation": "هدف الحصة 1 (4 أسطر تظهر في وحدة التحكم)"
+    },
+    {
+      "source": "Runの結果 · この4行が出れば完成",
+      "translation": "نتيجة Run · إذا ظهرت هذه الأسطر الأربعة فقد اكتمل العمل"
+    },
+    {
+      "source": "この4行を出すまでを、STEP 00 から STEP 06 までの7つのステップに分けて進みます。",
+      "translation": "سنقسّم العمل لإظهار هذه الأسطر الأربعة إلى 7 خطوات من الخطوة 00 إلى الخطوة 06."
+    },
+    {
+      "source": "1コマ目（90分）の進み方",
+      "translation": "طريقة المتابعة في الحصة 1 (90 دقيقة)"
+    },
+    {
+      "source": "時間",
+      "translation": "الوقت"
+    },
+    {
+      "source": "進めるステップ",
+      "translation": "الخطوات التي سننجزها"
+    },
+    {
+      "source": "やること",
+      "translation": "ما ستفعله"
+    },
+    {
+      "source": "前半（約35分）",
+      "translation": "النصف الأول (حوالي 35 دقيقة)"
+    },
+    {
+      "source": "Playgroundで1行動かし、IntelliJ IDEA に <code>K01HelloKotlin</code> プロジェクトを作る。",
+      "translation": "تشغيل سطر واحد في Playground، وإنشاء مشروع <code>K01HelloKotlin</code> في IntelliJ IDEA."
+    },
+    {
+      "source": "後半（約55分）",
+      "translation": "النصف الثاني (حوالي 55 دقيقة)"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code>、数の型を書き、4行の出力を完成させる。",
+      "translation": "كتابة <code>val</code> و <code>var</code> وأنواع الأعداد، وإكمال طباعة الأسطر الأربعة."
+    },
+    {
+      "source": "プロジェクトは <strong>自分で新規作成</strong>します。1コマ目の STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。",
+      "translation": "عليك <strong>إنشاء مشروع جديد بنفسك</strong>. ستُنشئ <code>K01HelloKotlin</code> في الخطوة 02 من الحصة 1. بدءا من الحصة 2، ستعيد فتح هذا المشروع لإكمال الكتابة فيه، لذا لن تنشئه من جديد."
+    },
+    {
+      "source": "<a1>完成プロジェクト</a1>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。",
+      "translation": "<a1>المشروع المكتمل</a1> هو دليل مرجعي يمكنك الرجوع إليه دائما منذ الحصة الأولى. استخدمه عندما تريد مقارنة الشيفرة التي كتبتها به."
+    },
+    {
+      "source": "この教科書の進め方",
+      "translation": "طريقة متابعة هذا الكتاب المدرسي"
+    },
+    {
+      "source": "書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。",
+      "translation": "قراءة طريقة الكتابة ← الإدخال ← التشغيل باستخدام Run ← التحقق من الفرق مع Java وSwift. سنتابع بهذا الترتيب. يمكنك البدء حتى لو لم تقم بالتحضير المسبق في المنزل."
+    },
+    {
+      "source": "分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。",
+      "translation": "ضع علامة برقم الخطوة في الأماكن التي لا تفهمها. يمكنك طرح أسئلة مثل «لا أفهم علاقة <code>val</code> في الخطوة 03 بـ <code>var</code> في Java.&lrm;»"
+    },
+    {
       "source": "ここで止まって確認",
       "translation": "توقّف هنا وتحقّق"
+    },
+    {
+      "source": "1コマ目に出す4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）を、上のゴールで確かめた。",
+      "translation": "تأكّدت من الأسطر الأربعة (<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>) التي ستطبعها في الحصة 1، في الهدف أعلاه."
+    },
+    {
+      "source": "できたらチェックします。できないときは、この画面を先生に見せましょう。",
+      "translation": "ضع علامة الاختيار عند الانتهاء. إذا تعثّرت، فاعرض هذه الشاشة على المعلم."
+    },
+    {
+      "source": "次へ：Playgroundで動かす →",
+      "translation": "الانتقال إلى التشغيل في Playground ←"
+    },
+    {
+      "source": "STEP 01 · 目安 10分",
+      "translation": "الخطوة 01 · حوالي 10 دقائق"
+    },
+    {
+      "source": "Kotlin Playgroundで動かす",
+      "translation": "التشغيل في Kotlin Playground"
+    },
+    {
+      "source": "このステップのゴール",
+      "translation": "هدف هذه الخطوة"
+    },
+    {
+      "source": "開発環境を用意する前に、ブラウザだけでKotlinの <code>fun main()</code> を実行します。",
+      "translation": "قبل إعداد بيئة التطوير، سنقوم بتشغيل <code>fun main()</code> بلغة Kotlin باستخدام المتصفح فقط."
+    },
+    {
+      "source": "統合開発環境の準備は一手間かかります。最初の1行を動かすだけなら、ブラウザで動く <strong>Kotlin Playground</strong> で十分です。",
+      "translation": "يستغرق إعداد بيئة التطوير المتكاملة بعض الجهد. إذا كنت ترغب فقط في تشغيل السطر الأول، فإن <strong>Kotlin Playground</strong> الذي يعمل في المتصفح يفي بالغرض."
+    },
+    {
+      "source": "① Playgroundを開く",
+      "translation": "1. فتح Playground"
+    },
+    {
+      "source": "ブラウザで <a1>https://play.kotlinlang.org/</a1> を開きます。",
+      "translation": "افتح الرابط <a1>https://play.kotlinlang.org</a1> في متصفحك."
+    },
+    {
+      "source": "エディタと、その下に実行結果のウィンドウがある画面が出ます。",
+      "translation": "ستظهر شاشة تحتوي على محرر ونافذة المخرجات أسفله."
+    },
+    {
+      "source": "画面の場所",
+      "translation": "مكان في الشاشة"
     },
     {
       "source": "役割",
       "translation": "الدور"
     },
     {
+      "source": "上の言語バージョンのメニュー",
+      "translation": "قائمة إصدار اللغة في الأعلى"
+    },
+    {
+      "source": "Kotlinのバージョンを切り替えます。既定で最新版です。授業では変更しません。",
+      "translation": "لتغيير إصدار Kotlin. الإعداد الافتراضي هو أحدث إصدار. لن نغيّره في الحصة."
+    },
+    {
+      "source": "共有のボタン",
+      "translation": "زر المشاركة"
+    },
+    {
+      "source": "いま書いているコードのURLを作ります。人に見せるときに使います。",
+      "translation": "يُنشئ URL للشيفرة التي تكتبها الآن. يُستخدم عندما تريد إطلاع الآخرين عليها."
+    },
+    {
+      "source": "<strong>Run</strong> ボタン",
+      "translation": "زر <strong>Run</strong>"
+    },
+    {
+      "source": "プログラムを実行します。",
+      "translation": "يشغّل البرنامج."
+    },
+    {
+      "source": "ショートカットのボタン",
+      "translation": "زر الاختصارات"
+    },
+    {
+      "source": "キーボードショートカットの一覧を出します。",
+      "translation": "يعرض قائمة باختصارات لوحة المفاتيح."
+    },
+    {
+      "source": "下の実行結果のウィンドウ",
+      "translation": "نافذة المخرجات في الأسفل"
+    },
+    {
+      "source": "出力が出る場所です。Runすると自動で開きます。",
+      "translation": "المكان الذي يظهر فيه الناتج. تفتح تلقائيا عند التشغيل (Run)."
+    },
+    {
+      "source": "② エディタの中身を置き換えて実行する",
+      "translation": "2. استبدال محتوى المحرر وتشغيله"
+    },
+    {
+      "source": "エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。",
+      "translation": "انقر داخل المحرر، ثم اختر كل المحتوى باستخدام <kbd>⌘ A</kbd>، والصق الشيفرة التالية."
+    },
+    {
+      "source": "Playgroundのエディタ · 全体を置き換える",
+      "translation": "محرر Playground · استبدال المحتوى بالكامل"
+    },
+    {
+      "source": "<strong>Run</strong> をクリックします。",
+      "translation": "انقر على <strong>Run</strong>."
+    },
+    {
+      "source": "下のウィンドウに <code>Hello, Kotlin!</code> が出れば成功です。",
+      "translation": "إذا ظهر <code>Hello, Kotlin!</code> في النافذة السفلية فقد نجح الأمر."
+    },
+    {
+      "source": "③ 同じことを、JavaとSwiftではどこで試すか",
+      "translation": "3. أين يمكن تجربة نفس الشيء في Java وSwift؟"
+    },
+    {
+      "source": "JavaのJShellやSwiftのREPLは、<strong>式を1つずつ</strong>打って結果を見る場所です。だから <code>System.out.println(…)</code> や <code>print(…)</code> の1行だけで動きます。",
+      "translation": "JShell في Java وREPL في Swift هي أماكن لكتابة <strong>تعبير واحد في كل مرة</strong> ورؤية نتيجته. لذلك فهي تعمل بمجرد كتابة سطر واحد مثل <code>System.out.println(…)</code> أو <code>print(…)</code>."
+    },
+    {
+      "source": "Kotlin Playgroundは、<strong>ファイル1つ分をまるごと実行する</strong>場所です。だから入口の <code>fun main()</code> が要ります。<code>println(&quot;Hello, Kotlin!&quot;)</code> だけを貼っても実行されません。",
+      "translation": "أما Kotlin Playground فهو مكان <strong>لتشغيل ملف كامل مرة واحدة</strong>. لذا ستحتاج إلى نقطة الدخول <code>fun main()</code>. إذا قمت بلصق <code>println(&quot;Hello, Kotlin!&quot;)</code> فقط فلن يتم التشغيل."
+    },
+    {
+      "source": "Swiftのように「トップレベルに書いた文がそのまま上から実行される」わけでもありません。Kotlinの入口は、常に <code>fun main()</code> です。",
+      "translation": "كما أنه لا يقوم «بتشغيل الجمل المكتوبة في المستوى الأعلى (top level) بالتسلسل من الأعلى إلى الأسفل» كما في Swift. نقطة الدخول في Kotlin هي دائما <code>fun main()</code>."
+    },
+    {
+      "source": "Playgroundの短所",
+      "translation": "عيوب Playground"
+    },
+    {
+      "source": "実行結果が出るまでに時間がかかります。サーバー側でコンパイルして実行しているためです。",
+      "translation": "يستغرق الأمر بعض الوقت حتى تظهر نتيجة التشغيل. وذلك لأن الشيفرة تُصَرَّف وتُشغَّل على الخادم."
+    },
+    {
+      "source": "コード補完がほとんど効きません。型を確かめたり、候補から選んだりする書き方ができません。",
+      "translation": "الإكمال التلقائي للشيفرة لا يعمل تقريبا. لا يمكنك التحقق من الأنواع أو اختيار الكتابة من قائمة المقترحات."
+    },
+    {
+      "source": "この2つがあるので、この先は統合開発環境を使います。Playgroundは、短いコードを人に見せるときや、あとで文法を思い出したいときに使ってください。",
+      "translation": "بسبب هذين العيبين، سنستخدم بيئة تطوير متكاملة من الآن فصاعدا. استخدم Playground فقط عندما تريد عرض شيفرة قصيرة لشخص ما، أو لتذكر قواعد النحو لاحقا."
+    },
+    {
+      "source": "Playgroundで <code>Hello, Kotlin!</code> を出せた。",
+      "translation": "تمكّنت من طباعة <code>Hello, Kotlin!</code> في Playground."
+    },
+    {
+      "source": "次へ：プロジェクトを作る →",
+      "translation": "الانتقال إلى إنشاء مشروع ←"
+    },
+    {
+      "source": "STEP 02 · 目安 20分",
+      "translation": "الخطوة 02 · حوالي 20 دقيقة"
+    },
+    {
+      "source": "IntelliJ IDEAでプロジェクトを作る",
+      "translation": "إنشاء مشروع في IntelliJ IDEA"
+    },
+    {
+      "source": "IntelliJ IDEA で <code>K01HelloKotlin</code> プロジェクトを作り、ウィザードが用意したコードをそのまま実行します。動くことを確かめてから、<code>src/ex01/main.kt</code> を自分で作ります。",
+      "translation": "سنقوم بإنشاء مشروع <code>K01HelloKotlin</code> في IntelliJ IDEA وتشغيل الشيفرة التي أعدّها المعالج كما هي. بعد التأكّد من عملها، سنقوم بإنشاء <code>src/ex01/main.kt</code> بأنفسنا."
+    },
+    {
+      "source": "授業ではMacと <strong>IntelliJ IDEA 2026.3 EAP</strong> を使います。IntelliJ IDEA は、学校から借りているMacに<strong>インストール済み</strong>です。Launchpadで探すか、Spotlight（<kbd>⌘ Space</kbd>）に <code>IntelliJ</code> と打って開きます。",
+      "translation": "في الحصة سنستخدم جهاز Mac و <strong>IntelliJ IDEA 2026.3 EAP</strong>. برنامج IntelliJ IDEA <strong>مُثبَّت بالفعل</strong> على جهاز Mac المعار من المدرسة. ابحث عنه في Launchpad، أو اكتب <code>IntelliJ</code> في Spotlight (<kbd>⌘ Space</kbd>) لفتحه."
+    },
+    {
+      "source": "① 新規プロジェクト… を選ぶ",
+      "translation": "1. اختيار 新規プロジェクト… (مشروع جديد…&lrm;)"
+    },
+    {
+      "source": "IntelliJ IDEA を開きます。最初に出るのがホーム画面です。",
+      "translation": "افتح IntelliJ IDEA. أول ما يظهر هو الشاشة الرئيسية (شاشة Welcome)."
+    },
+    {
+      "source": "左上の <strong>IntelliJ IDEA Home</strong> をクリックして、メニューを開きます。",
+      "translation": "انقر على <strong>IntelliJ IDEA Home</strong> في أعلى اليسار لفتح القائمة."
+    },
+    {
+      "source": "出てきた一覧から <strong>新規プロジェクト…</strong> を選びます。<strong>新規…</strong> ではありません。",
+      "translation": "من القائمة التي تظهر، اختر <strong>新規プロジェクト…</strong> (مشروع جديد…&lrm;). لا تختر <strong>新規…</strong> (جديد…&lrm;)."
+    },
+    {
+      "source": "すでに別のプロジェクトが開いているときは、いちばん上のメニューバーから <strong>ファイル → 新規 → プロジェクト…</strong> を選びます。",
+      "translation": "إذا كان هناك مشروع آخر مفتوحا بالفعل، فاختر <strong>ファイル → 新規 → プロジェクト…</strong> (ملف ← جديد ← مشروع…&lrm;) من شريط القوائم في الأعلى."
+    },
+    {
+      "source": "IntelliJ IDEAのホーム画面。左上のIntelliJ IDEA Homeから開いたメニューに、新規…、新規プロジェクト…、開く…が縦に並び、2番目の新規プロジェクト…が青く選ばれている",
+      "translation": "شاشة البداية في IntelliJ IDEA. في القائمة المفتوحة من IntelliJ IDEA Home في أعلى اليسار، تظهر خيارات 新規…&lrm; (جديد…&lrm;) و 新規プロジェクト…&lrm; (مشروع جديد…&lrm;) و 開く…&lrm; (فتح…&lrm;) مرتبة عموديا، والخيار الثاني 新規プロジェクト…&lrm; محدد باللون الأزرق."
+    },
+    {
+      "source": "ホーム画面の左上のメニューから <strong>新規プロジェクト…</strong> を選びます。 <a1>画像を大きく開く</a1>",
+      "translation": "اختر <strong>新規プロジェクト…</strong> (مشروع جديد…&lrm;) من القائمة الموجودة أعلى يسار شاشة البداية. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "② ダイアログに、表のとおり入力する",
+      "translation": "② إدخال البيانات في مربع الحوار كما في الجدول"
+    },
+    {
+      "source": "<strong>新規プロジェクト</strong> のダイアログが開きます。次の7か所を、表のとおりに入力・選択します。",
+      "translation": "يفتح مربع الحوار <strong>新規プロジェクト</strong> (مشروع جديد). أدخل وحدد الخيارات السبعة التالية كما هو موضح في الجدول."
+    },
+    {
       "source": "項目",
       "translation": "الحقل"
+    },
+    {
+      "source": "入力・選択する内容",
+      "translation": "البيانات المُدخلة والمُحددة"
+    },
+    {
+      "source": "左の一覧",
+      "translation": "القائمة اليسرى"
+    },
+    {
+      "source": "<strong>Kotlin</strong>。見出し <strong>新規プロジェクト</strong> の下に並ぶ4つのうちの2番目です。下の <strong>ジェネレーター</strong> の中からは選びません。",
+      "translation": "<strong>Kotlin</strong>. وهو الخيار الثاني من بين الخيارات الأربعة المدرجة تحت العنوان <strong>新規プロジェクト</strong> (مشروع جديد). لا تختر من داخل <strong>ジェネレーター</strong> (المولد) في الأسفل."
+    },
+    {
+      "source": "名前",
+      "translation": "الاسم"
     },
     {
       "source": "場所",
       "translation": "الموضع"
     },
     {
+      "source": "<code>~/Documents/Kotlin</code>（<strong>書類</strong> の中の <code>Kotlin</code> フォルダ。無ければ <strong>書類</strong> の中に作ります）。プロジェクト名は入れません。",
+      "translation": "<code>~/Documents/Kotlin</code> (مجلد <code>Kotlin</code> داخل <strong>書類</strong> (المستندات). إذا لم يكن موجودًا، فأنشئه داخل <strong>書類</strong> (المستندات)). لا تدخل اسم المشروع."
+    },
+    {
+      "source": "ビルドシステム",
+      "translation": "نظام البناء"
+    },
+    {
+      "source": "<strong>IntelliJ</strong>。<code>Kotlin</code>・<code>Maven</code>・<code>Gradle</code> は選びません。",
+      "translation": "<strong>IntelliJ</strong>. لا تختر <code>Kotlin</code> أو <code>Maven</code> أو <code>Gradle</code>."
+    },
+    {
+      "source": "一覧に出ているものを、そのまま使います。",
+      "translation": "استخدم الخيار الظاهر في القائمة كما هو."
+    },
+    {
+      "source": "サンプルコードの追加",
+      "translation": "إضافة كود تجريبي"
+    },
+    {
+      "source": "チェックを<strong>入れたまま</strong>にします。",
+      "translation": "اترك العلامة <strong>محددة</strong>."
+    },
+    {
+      "source": "コンパクトなプロジェクト構造を使用する",
+      "translation": "استخدام بنية مشروع مدمجة"
+    },
+    {
+      "source": "新規プロジェクトのダイアログ。左の一覧でKotlinが選ばれ、右は名前がK01HelloKotlin、場所が~/Documents/Kotlin、その下にプロジェクトは次に作成されます: ~/Documents/Kotlin/K01HelloKotlinと出ている。ビルドシステムはIntelliJ、JDKの欄、サンプルコードの追加とコンパクトなプロジェクト構造を使用するの両方にチェックが入り、右下に作成ボタンがある",
+      "translation": "مربع حوار مشروع جديد. القائمة اليسرى تظهر اختيار Kotlin، والجهة اليمنى تظهر الاسم K01HelloKotlin والموقع ~/Documents/Kotlin، وتحتها النص يُشير إلى إنشاء المشروع في ~/Documents/Kotlin/K01HelloKotlin. نظام البناء هو IntelliJ، حقل JDK، مع تحديد خياري إضافة كود تجريبي واستخدام بنية مشروع مدمجة، وزر إنشاء في الأسفل الأيمن."
+    },
+    {
+      "source": "表の7か所は、この画面の中にあります。<strong>JDK</strong> の欄に出る名前は、Macによって変わります。 <a1>画像を大きく開く</a1>",
+      "translation": "توجد الخيارات السبعة المذكورة في الجدول داخل هذه الشاشة. يتغير الاسم الظاهر في حقل <strong>JDK</strong> وفقًا لجهاز Mac الخاص بك. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "ビルドシステムに IntelliJ を選ぶ理由",
+      "translation": "سبب اختيار IntelliJ كنظام بناء"
+    },
+    {
+      "source": "Gradleを使わないので、ビルドの設定ファイルが増えず、自分が書いたKotlinのファイルだけを見ればよくなるからです。",
+      "translation": "لأننا لا نستخدم Gradle، لن تزيد ملفات إعدادات البناء، وسيكفيك فقط النظر إلى ملفات Kotlin التي كتبتها بنفسك."
+    },
+    {
+      "source": "入力できたら、<strong>場所</strong> の欄のすぐ下に出ている <strong>プロジェクトは次に作成されます: <code>~/Documents/Kotlin/K01HelloKotlin</code></strong> の行を読みます。この場所になっていることを確かめてから、右下の <strong>作成(C)</strong> を押します。",
+      "translation": "بعد الإدخال، اقرأ السطر <strong>プロジェクトは次に作成されます: <code>~/Documents/Kotlin/K01HelloKotlin</code></strong> (سيتم إنشاء المشروع في التالي: ...) الظاهر أسفل حقل <strong>場所</strong> (الموقع) مباشرةً. تأكد من أن هذا هو الموقع الصحيح، ثم اضغط على <strong>作成(C)</strong> (إنشاء(C)) في الأسفل الأيمن."
+    },
+    {
+      "source": "③ できあがった形を確かめる",
+      "translation": "③ التحقق من الشكل الناتج"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに、次の形ができます。",
+      "translation": "سيظهر الشكل التالي في نافذة الأداة <strong>プロジェクト</strong> (المشروع) على اليسار."
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> — プロジェクトのいちばん外側。右に <code>~/Documents/Kotlin/K01HelloKotlin</code> と出ます。",
+      "translation": "<code>K01HelloKotlin</code> – الجزء الخارجي للمشروع. يظهر على اليمين <code>~/Documents/Kotlin/K01HelloKotlin</code>."
+    },
+    {
+      "source": "<code>.idea</code> — IntelliJ IDEA が使う設定です。中は見ません。",
+      "translation": "<code>.idea</code> – الإعدادات التي يستخدمها IntelliJ IDEA. لا تنظر بداخلها."
+    },
+    {
+      "source": "<code>src</code> — ソースルート。これから書くKotlinのファイルは、すべてこの中に置きます。",
+      "translation": "<code>src</code> – جذر المصدر. ستضع جميع ملفات Kotlin التي ستكتبها من الآن فصاعدًا في هذا المجلد."
+    },
+    {
+      "source": "<code>Main.kt</code> — <code>src</code> の中にあります。<strong>サンプルコードの追加</strong> にチェックを入れたので作られた、そのまま動くサンプルです。",
+      "translation": "<code>Main.kt</code> – يوجد داخل <code>src</code>. وهو نموذج جاهز للتشغيل تم إنشاؤه لأنك حددت الخيار <strong>サンプルコードの追加</strong> (إضافة كود تجريبي)."
+    },
+    {
+      "source": "<code>.gitignore</code> — Gitが無視するファイルの一覧です。この単元では触りません。",
+      "translation": "<code>.gitignore</code> – قائمة الملفات التي يتجاهلها Git. لن نتعامل معها في هذه الوحدة."
+    },
+    {
+      "source": "右のエディタには <code>Main.kt</code> が開いています。<code>fun main()</code> の中に <code>val name = &quot;Kotlin&quot;</code>、<code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code>、そして <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code> が書かれています。",
+      "translation": "يُفتح <code>Main.kt</code> في المحرر على اليمين. ومكتوب داخل <code>fun main()</code> كل من <code>val name = &quot;Kotlin&quot;</code>، <code>println(&quot;Hello, &quot; + name + &quot;!&quot;)</code>، و <code>for (i in 1..5) { println(&quot;i = $i&quot;) }</code>."
+    },
+    {
+      "source": "できたプロジェクトの画面。左のツリーにK01HelloKotlinがあり、その中に.idea、src、srcの中にMain.kt、そして.gitignoreが並ぶ。右のエディタにはfun mainとval name = Kotlin、printlnの行、for (i in 1..5)のループが表示されている",
+      "translation": "شاشة المشروع المنشأ. تظهر شجرة المشروع على اليسار وبها K01HelloKotlin، وداخله .idea و src، وداخل src يوجد Main.kt وبجانبه .gitignore. يعرض المحرر على اليمين دوال fun main و val name = Kotlin، وسطر println، وحلقة for (i in 1..5)."
+    },
+    {
+      "source": "<code>src</code> の中に <code>Main.kt</code> があり、エディタに開いています。 <a1>画像を大きく開く</a1>",
+      "translation": "يوجد <code>Main.kt</code> داخل <code>src</code>، وهو مفتوح في المحرر. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "④ まず、そのまま実行する",
+      "translation": "④ أولًا، التشغيل كما هو"
+    },
+    {
+      "source": "自分でコードを書く前に、ウィザードが用意したこのサンプルを、1文字も変えずに実行します。",
+      "translation": "قبل كتابة الكود بنفسك، شغّل هذا النموذج الذي أعدّه المعالج السحري دون تغيير حرف واحد."
+    },
+    {
+      "source": "エディタで <code>Main.kt</code> を開きます。",
+      "translation": "افتح <code>Main.kt</code> في المحرر."
+    },
+    {
+      "source": "<code>fun main()</code> の行の左、行番号の右にある緑の三角 ▷（ガターのアイコン）をクリックします。",
+      "translation": "انقر على المثلث الأخضر ▷ (أيقونة الهامش الجانبي) الموجود على يسار سطر <code>fun main()</code> ويمين رقم السطر."
+    },
+    {
+      "source": "出てきたメニューの、いちばん上の <strong>'MainKt' の実行</strong> を選びます。キーボードの <kbd>^ ⇧ R</kbd> でも同じです。",
+      "translation": "اختر <strong>'MainKt' の実行</strong> (تشغيل 'MainKt') من أعلى القائمة التي تظهر. يمكنك أيضًا استخدام الاختصار <kbd>^ ⇧ R</kbd> من لوحة المفاتيح."
+    },
+    {
+      "source": "エディタのfun mainの左にある緑の三角を押して出たメニュー。いちばん上の'MainKt' の実行が青く選ばれ、右端にショートカットの^⇧Rが出ている。その下に'MainKt' のデバッグなどが並ぶ",
+      "translation": "القائمة الظاهرة بعد الضغط على المثلث الأخضر على يسار fun main في المحرر. الخيار الأول 'MainKt' の実行 (تشغيل 'MainKt') محدد باللون الأزرق، ويظهر الاختصار ^⇧R على أقصى اليمين. أسفله تظهر خيارات مثل 'MainKt' のデバッグ (تصحيح 'MainKt')."
+    },
+    {
+      "source": "ガターの ▷ を押すと、いちばん上に <strong>'MainKt' の実行</strong> が出ます。 <a1>画像を大きく開く</a1>",
+      "translation": "عند الضغط على ▷ في الهامش الجانبي، يظهر الخيار <strong>'MainKt' の実行</strong> (تشغيل 'MainKt') في الأعلى. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "⑤ 出た内容を確かめる",
+      "translation": "⑤ التحقق من المخرجات"
+    },
+    {
+      "source": "画面の下に <strong>実行</strong> ツールウィンドウが開き、次の内容が出ます。最初の実行は時間がかかることがあります。",
+      "translation": "تُفتح نافذة الأداة <strong>実行</strong> (تشغيل) أسفل الشاشة، وتظهر المحتويات التالية. قد تستغرق عملية التشغيل الأولى بعض الوقت."
+    },
+    {
+      "source": "実行ツールウィンドウ · この内容が出れば成功",
+      "translation": "نافذة أداة التشغيل · النجاح إذا ظهر هذا المحتوى"
+    },
+    {
+      "source": "画面の下に開いた実行ツールウィンドウ。MainKtタブの中にHello, Kotlin!、i = 1からi = 5までの5行、1行あけてプロセスは終了コード 0 で終了しましたが青い文字で出ている",
+      "translation": "نافذة أدوات التشغيل المفتوحة أسفل الشاشة. داخل علامة التبويب MainKt، تظهر Hello, Kotlin!، والأسطر الـ 5 من i = 1 إلى i = 5، وبعد سطر فارغ يظهر プロセスは終了コード 0 で終了しました بحروف زرقاء."
+    },
+    {
+      "source": "<strong>実行</strong> ツールウィンドウ。最後の行が <code>プロセスは終了コード 0 で終了しました</code> です。 <a1>画像を大きく開く</a1>",
+      "translation": "نافذة الأدوات <strong>実行</strong> (تشغيل). السطر الأخير هو <code>プロセスは終了コード 0 で終了しました</code>. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "最後の <code>プロセスは終了コード 0 で終了しました</code> は、<strong>プログラムが最後まで動いて、正常に終わった</strong>という意味です。出力の一部ではありません。",
+      "translation": "السطر الأخير، <code>プロセスは終了コード 0 で終了しました</code> (انتهت العملية برمز الخروج 0)، يعني أن <strong>البرنامج قد تم تنفيذه حتى النهاية وانتهى بشكل طبيعي</strong>. وليس جزءا من المخرجات."
+    },
+    {
+      "source": "この <code>0</code> は、Javaの <code>System.exit(0)</code>、Swiftの <code>exit(0)</code> に書く <code>0</code> と同じものです。<code>0</code> 以外の数で終わったときは、途中で異常が起きています。",
+      "translation": "هذا الـ <code>0</code> هو نفسه الـ <code>0</code> المكتوب في <code>System.exit(0)</code> في Java و <code>exit(0)</code> في Swift. إذا انتهى التشغيل برقم غير <code>0</code>، فهذا يعني حدوث خطأ ما أثناء التشغيل."
+    },
+    {
+      "source": "自分でコードを書く前に一度動かしておくと、あとで動かなくなったときに、<strong>自分が書いた行</strong>だけを疑えます。「そもそも環境が動いていないのでは」を先に消しておく、ということです。",
+      "translation": "من خلال التشغيل مرة واحدة قبل كتابة الكود بنفسك، يمكنك حصر الشك في <strong>الأسطر التي كتبتها بنفسك</strong> فقط إذا توقف الكود عن العمل لاحقًا. هذا يعني استبعاد احتمالية أن «البيئة نفسها لا تعمل من الأساس»&lrm;."
+    },
+    {
+      "source": "⑥ ex01 パッケージと main.kt を作る",
+      "translation": "⑥ إنشاء حزمة ex01 و main.kt"
+    },
+    {
+      "source": "動くことを確かめたら、ここからは自分のファイルを作ります。見本の <code>Main.kt</code> を先に消してから、<code>ex01</code> パッケージを作ります。",
+      "translation": "بمجرد التأكد من عمل الكود، سنبدأ بإنشاء ملفاتك الخاصة. احذف نموذج <code>Main.kt</code> أولًا، ثم أنشئ الحزمة <code>ex01</code>."
+    },
+    {
+      "source": "左のプロジェクトツリーで <code>src</code> の下の <code>Main.kt</code> を右クリックし、<strong>削除</strong> を選びます。確認のダイアログが出たら <strong>OK</strong> を押します。この単元では使いません。",
+      "translation": "في شجرة المشروع اليسرى، انقر بزر الماوس الأيمن على <code>Main.kt</code> ضمن <code>src</code> واختر <strong>削除</strong> (حذف). عند ظهور مربع حوار التأكيد، اضغط على <strong>OK</strong>. لن نستخدمه في هذه الوحدة."
+    },
+    {
+      "source": "ファイル Main.kt を削除しますか？ と尋ねる削除の確認ダイアログ。安全な削除とコメントと文字列内を検索にチェックが入っていて、右下にOKボタンがある",
+      "translation": "مربع حوار التأكيد للحذف يسأل عما إذا كنت تريد حذف ملف Main.kt. حُدد خيار الحذف الآمن والبحث داخل التعليقات والسلاسل النصية، مع وجود زر OK في الأسفل الأيمن."
+    },
+    {
+      "source": "見本の <code>Main.kt</code> を消します。チェックはそのままで <strong>OK</strong> を押します。 <a1>画像を大きく開く</a1>",
+      "translation": "احذف نموذج <code>Main.kt</code>. اترك العلامات محددة كما هي واضغط على <strong>OK</strong>. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。",
+      "translation": "انقر بزر الماوس الأيمن على <code>src</code> واختر <strong>新規 → パッケージ</strong> (جديد ← حزمة)."
+    },
+    {
+      "source": "プロジェクトツリーのsrcを右クリックして出たメニュー。新規の右に出たサブメニューでパッケージが選ばれている",
+      "translation": "القائمة الظاهرة بعد النقر بزر الماوس الأيمن على src في شجرة المشروع. تم اختيار الحزمة في القائمة الفرعية الظاهرة يمين خيار جديد."
+    },
+    {
+      "source": "<code>src</code> を右クリックして <strong>新規 → パッケージ</strong>。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。 <a1>画像を大きく開く</a1>",
+      "translation": "انقر بزر الماوس الأيمن على <code>src</code> واختر <strong>新規 → パッケージ</strong> (جديد ← حزمة). احرص على ألا تخطئ في اختيار <strong>Kotlin ファイル/クラス</strong> (ملف/صنف Kotlin) الموجود أعلاه مباشرةً. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex01</code> ができます。",
+      "translation": "أدخل <code>ex01</code> في الاسم واضغط على <kbd>Return</kbd>. سيتم إنشاء <code>ex01</code> تحت <code>src</code>."
+    },
+    {
+      "source": "新規パッケージと書かれた小さな入力欄に ex01 と入力されている",
+      "translation": "كُتب ex01 في حقل إدخال صغير بعنوان حزمة جديدة."
+    },
+    {
+      "source": "パッケージ名は <code>ex01</code>。すべて小文字で、記号は入れません。 <a1>画像を大きく開く</a1>",
+      "translation": "اسم الحزمة هو <code>ex01</code>. استخدم أحرفًا صغيرة فقط دون إدخال رموز. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "できた <code>ex01</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> ではなく <code>ex01</code> を右クリックします。</strong>",
+      "translation": "انقر بزر الماوس الأيمن على <code>ex01</code> الذي أنشأته، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). <strong>تأكد من النقر بزر الماوس الأيمن على <code>ex01</code> وليس <code>src</code>.</strong>"
+    },
+    {
+      "source": "プロジェクトツリーでsrcの下のex01を右クリックして出たメニュー。新規のサブメニューでKotlin ファイル/クラスが選ばれている",
+      "translation": "القائمة الظاهرة بعد النقر بزر الماوس الأيمن على ex01 ضمن src في شجرة المشروع. تم اختيار ملف/صنف Kotlin في القائمة الفرعية لخيار جديد."
+    },
+    {
+      "source": "今度は <code>ex01</code> を右クリックして <strong>新規 → Kotlin ファイル/クラス</strong>。 <a1>画像を大きく開く</a1>",
+      "translation": "هذه المرة انقر بزر الماوس الأيمن على <code>ex01</code> واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。",
+      "translation": "أدخل <code>main</code> في الاسم، ثم اختر <strong>ファイル</strong> (ملف) من القائمة السفلية واضغط على <kbd>Return</kbd>. <strong>لا تختر «クラス» (صنف) الموجود في الأعلى.</strong> إذا اخترت «クラス» (صنف)، فسيتم إنشاء <code>class main</code>، مما سيتعارض مع الخطوات اللاحقة."
+    },
+    {
+      "source": "新規 Kotlin ファイル/クラスのダイアログ。上の入力欄に main と入力され、下の一覧でクラスの次にあるファイルが選ばれている",
+      "translation": "مربع حوار ملف/صنف Kotlin جديد. تم إدخال main في حقل الإدخال العلوي، واختير الملف الموجود أسفل خيار الصنف في القائمة السفلية."
+    },
+    {
+      "source": "名前は <code>main</code>、種類は <strong>ファイル</strong>。上から2番目です。 <a1>画像を大きく開く</a1>",
+      "translation": "الاسم هو <code>main</code>، والنوع هو <strong>ファイル</strong> (ملف). وهو الخيار الثاني من الأعلى. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex01</code> が入っていることを確かめます。",
+      "translation": "تأكد من وجود <code>package ex01</code> في السطر الأول من <code>main.kt</code> الذي تم إنشاؤه."
+    },
+    {
+      "source": "エディタに開いたmain.kt。1行目にpackage ex01、3行目から5行目にfun main()の空の関数が入っている",
+      "translation": "ملف main.kt المفتوح في المحرر. السطر الأول يحتوي على package ex01، والأسطر من 3 إلى 5 تحتوي على الدالة الفارغة fun main()."
+    },
+    {
+      "source": "1行目の <code>package ex01</code> と、空の <code>fun main()</code> は IntelliJ IDEA が入れたものです。自分で打つ必要はありません。 <a1>画像を大きく開く</a1>",
+      "translation": "السطر الأول <code>package ex01</code> و الدالة الفارغة <code>fun main()</code> تم إدخالهما تلقائيًا بواسطة IntelliJ IDEA. لست بحاجة إلى كتابتهما بنفسك. <a1>فتح الصورة بحجم كبير</a1>"
+    },
+    {
+      "source": "1行目が <code>package ex01</code> になっていないとき",
+      "translation": "عندما لا يكون السطر الأول <code>package ex01</code>"
+    },
+    {
+      "source": "ファイルが <code>ex01</code> の中ではなく <code>src</code> の直下にできています。<code>main.kt</code> を右クリックして削除し、④からやり直します。<code>ex01</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "هذا يعني أن الملف قد أُنشئ مباشرة تحت <code>src</code> وليس داخل <code>ex01</code>. انقر بزر الماوس الأيمن على <code>main.kt</code> لحذفه، ثم ابدأ مجددًا من الخطوة ④. النقطة الفاصلة هي ما إذا كنت قد نقرت بزر الماوس الأيمن على <code>ex01</code> أم لا."
+    },
+    {
+      "source": "この単元は全6コマです。回を重ねるごとに、同じ <code>K01HelloKotlin</code> プロジェクトの <code>src</code> の下に、いまと同じ手順で <code>ex02</code>、<code>ex03</code> …とパッケージを足していきます。プロジェクトを作り直さないので、前の回に書いたコードを、いつでも開いて見返せます。",
+      "translation": "تتكون هذه الوحدة من 6 حصص. مع تقدم الحصص، سنضيف الحزم <code>ex02</code>، <code>ex03</code>... تحت نفس <code>src</code> في مشروع <code>K01HelloKotlin</code> بنفس الطريقة التي استخدمناها الآن. نظرًا لأننا لن نعيد إنشاء المشروع، يمكنك دائمًا فتح الكود الذي كتبته في الحصص السابقة ومراجعته."
+    },
+    {
+      "source": "⑦ ファイル全体を、次の内容にする",
+      "translation": "⑦ استبدال محتوى الملف بالكامل ليصبح كالتالي"
+    },
+    {
+      "source": "src/ex01/main.kt · 全体を置き換える",
+      "translation": "src/ex01/main.kt · استبدال المحتوى بالكامل"
+    },
+    {
+      "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
+      "translation": "انقر على المثلث الأخضر ▷ الظاهر على يسار سطر <code>fun main()</code>، ثم اختر <strong>'MainKt' の実行</strong> (تشغيل 'MainKt'). يعتبر الأمر ناجحًا إذا ظهرت <code>Hello, Kotlin!</code> ورسالة <code>プロセスは終了コード 0 で終了しました</code> (انتهت العملية برمز الخروج 0) في نافذة أداة <strong>実行</strong> (تشغيل) بالأسفل."
+    },
+    {
+      "source": "<code>i = 1</code> 〜 <code>i = 5</code> はもう出ません。消した <code>Main.kt</code> ではなく、いま書いた <code>ex01</code> の <code>main.kt</code> が動いているからです。",
+      "translation": "لن تظهر <code>i = 1</code> – <code>i = 5</code> بعد الآن. ذلك لأن الكود الذي يعمل حاليًا هو <code>main.kt</code> الخاص بـ <code>ex01</code> الذي كتبته للتو، وليس <code>Main.kt</code> الذي حذفته."
+    },
+    {
+      "source": "この「ガターの ▷ から <strong>'MainKt' の実行</strong> を選ぶ」操作を、この教科書では STEP 03 以降「Run」と書きます。STEP 01 の Kotlin Playground の <strong>Run</strong> ボタンと同じ意味です。",
+      "translation": "ستُشار إلى عملية «اختيار <strong>'MainKt' の実行</strong> (تشغيل 'MainKt') من ▷ في الهامش الجانبي»&lrm; باسم «Run»&lrm; في هذا الكتاب المدرسي بدءًا من STEP 03. وهي تحمل نفس معنى زر <strong>Run</strong> في Kotlin Playground في STEP 01."
+    },
+    {
+      "source": "⑧ ファイル名とクラス名の関係",
+      "translation": "⑧ العلاقة بين اسم الملف واسم الصنف"
+    },
+    {
+      "source": "Javaの「ファイル名と <code>public</code> クラス名を一致させる」という決まりが、Kotlinにはありません。ファイル名は <code>main.kt</code> のように小文字で構いません。",
+      "translation": "لا توجد في Kotlin قاعدة Java التي تنص على «مطابقة اسم الملف مع اسم الصنف الـ <code>public</code>»&lrm;. يمكن أن يكون اسم الملف بأحرف صغيرة مثل <code>main.kt</code>."
+    },
+    {
+      "source": "関数をクラスの外（トップレベル）に置けます。入口を入れるためだけのクラスを作らずに済みます。",
+      "translation": "يمكنك وضع الدوال خارج الأصناف (في المستوى الأعلى). هذا يغنيك عن إنشاء صنف فقط لاحتواء نقطة الدخول."
+    },
+    {
+      "source": "<code>package</code> 宣言があり、フォルダ構成と合わせる点はJavaと同じです。違うのは行末の <code>;</code> が要らないことです。Swiftには <code>package</code> 宣言そのものがありません。",
+      "translation": "تشترك لغة Kotlin مع لغة Java في وجود إعلان <code>package</code> وفي ضرورة مطابقته لهيكل المجلدات. يتمثل الاختلاف في عدم الحاجة إلى <code>;</code> في نهاية السطر. بينما في Swift، لا يوجد إعلان <code>package</code> على الإطلاق."
+    },
+    {
+      "source": "実行の設定名が <code>MainKt</code> になるのは、Kotlinが <code>main.kt</code> から <code>MainKt</code> というクラスを作ってバイトコードに落としているからです。クラスを書かなくても、JVMの上ではクラスになっています。",
+      "translation": "يعود سبب تسمية إعداد التشغيل بـ <code>MainKt</code> إلى أن لغة Kotlin تنشئ صنفًا باسم <code>MainKt</code> من ملف <code>main.kt</code> وتحوله إلى كود بايت. حتى وإن لم تكتب الصنف بنفسك، فإنه يُعامل كصنف في بيئة JVM."
+    },
+    {
+      "source": "大文字と小文字",
+      "translation": "الأحرف الكبيرة والأحرف الصغيرة"
+    },
+    {
+      "source": "ファイル名は <code>main.kt</code>、パッケージ名は <code>ex01</code> です。<code>Main.kt</code> や <code>Ex01</code> ではありません。Kotlinは大文字と小文字を区別します。",
+      "translation": "اسم الملف هو <code>main.kt</code>، واسم الحزمة هو <code>ex01</code>. وليسا <code>Main.kt</code> أو <code>Ex01</code>. تميز لغة Kotlin بين الأحرف الكبيرة والأحرف الصغيرة."
+    },
+    {
+      "source": "ウィザードのサンプルをそのまま実行して <code>プロセスは終了コード 0 で終了しました</code> を出し、そのあと <code>src/ex01/main.kt</code> を作って <code>Hello, Kotlin!</code> を出せた。",
+      "translation": "شغّلت نموذج المعالج السحري كما هو وحصلت على <code>プロセスは終了コード 0 で終了しました</code> (انتهت العملية برمز الخروج 0)، ثم أنشأت <code>src/ex01/main.kt</code> وتمكنت من عرض <code>Hello, Kotlin!</code>."
+    },
+    {
+      "source": "次へ：val と var →",
+      "translation": "التالي: val و var ←"
+    },
+    {
+      "source": "STEP 03 · 目安 20分",
+      "translation": "STEP 03 · الوقت التقديري: 20 دقيقة"
+    },
+    {
+      "source": "変数を宣言する（val と var）",
+      "translation": "الإعلان عن المتغيرات (val و var)"
+    },
+    {
+      "source": "<code>val</code> と <code>var</code> を使い分け、型注釈を省いて書きます。",
+      "translation": "استخدم <code>val</code> و <code>var</code> بناءً على الاستخدام المناسب، واكتب الكود متجاهلًا الشروحات التوضيحية للأنواع."
+    },
+    {
+      "source": "変更するファイル：src/ex01/main.kt",
+      "translation": "الملف المراد تعديله: src/ex01/main.kt"
+    },
+    {
+      "source": "Kotlinの変数宣言は、キーワードが2つあります。",
+      "translation": "يوجد في لغة Kotlin كلمتان مفتاحيتان للإعلان عن المتغيرات."
+    },
+    {
+      "source": "キーワード",
+      "translation": "الكلمة المفتاحية"
+    },
+    {
       "source": "意味",
       "translation": "المعنى"
     },
     {
+      "source": "再代入禁止。あとから別の値を入れるとコンパイルエラーになります。",
+      "translation": "يمنع إعادة التعيين. سيؤدي إدخال قيمة مختلفة لاحقًا إلى حدوث خطأ في الترجمة."
+    },
+    {
+      "source": "再代入可能。あとから別の値を入れられます。",
+      "translation": "يسمح بإعادة التعيين. يمكنك إدخال قيمة مختلفة لاحقًا."
+    },
+    {
+      "source": "① ファイル全体を、次の内容に置き換える",
+      "translation": "① استبدال محتوى الملف بالكامل ليصبح كالتالي"
+    },
+    {
+      "source": "main.kt · 全体を置き換える",
+      "translation": "main.kt · استبدال المحتوى بالكامل"
+    },
+    {
+      "source": "② 実行結果",
+      "translation": "② نتيجة التشغيل"
+    },
+    {
+      "source": "Runの結果",
+      "translation": "نتيجة Run"
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか",
+      "translation": "③ كيفية كتابة نفس الكود في لغتي Java و Swift"
+    },
+    {
+      "source": "<code>val</code> キーワードで宣言した変数は再代入禁止です。再代入するとコンパイルエラーになります。Javaの <code>final</code>、Swiftの <code>let</code> にあたります。",
+      "translation": "يمنع إعادة تعيين المتغيرات المعلنة بالكلمة المفتاحية <code>val</code>. إعادة التعيين ستؤدي إلى حدوث خطأ في الترجمة. تعادل هذه الكلمة المفتاحية <code>final</code> في لغة Java و <code>let</code> في لغة Swift."
+    },
+    {
+      "source": "<code>var</code> キーワードで宣言した変数は再代入可能です。Swiftの <code>var</code> と同じです。",
+      "translation": "يسمح بإعادة تعيين المتغيرات المعلنة بالكلمة المفتاحية <code>var</code>. وهي مماثلة لـ <code>var</code> في لغة Swift."
+    },
+    {
+      "source": "Javaは「再代入できる」のが既定で、<code>final</code> を足して止めます。KotlinとSwiftは逆で、宣言のキーワードそのもので分けます。<strong>迷ったらまず <code>val</code> で書き、再代入が要るときだけ <code>var</code> にする</strong>のがKotlinの書き方です。",
+      "translation": "الوضع الافتراضي في لغة Java هو «إمكانية إعادة التعيين»&lrm;، ونستخدم <code>final</code> لمنع ذلك. في لغتي Kotlin و Swift، الأمر معكوس؛ إذ يتم التمييز باستخدام الكلمة المفتاحية للإعلان نفسها. الطريقة الصحيحة للكتابة في لغة Kotlin هي <strong>الكتابة باستخدام <code>val</code> أولًا عند التردد، وتغييرها إلى <code>var</code> فقط عند الحاجة إلى إعادة التعيين</strong>."
+    },
+    {
+      "source": "Swiftと同様に型推論が効くため、変数宣言時の型の指定は省略できます。<code>val number1: Int = 1</code> と書くこともできますが、右辺から決まるときは書きません。",
+      "translation": "نظرًا لأن الاستدلال على النوع فعّال كما هو الحال في لغة Swift، يمكنك حذف تحديد النوع عند الإعلان عن المتغير. يمكنك كتابته بالشكل <code>val number1: Int = 1</code>، ولكننا لا نكتبه عندما يمكن تحديده من الطرف الأيمن للمعادلة."
+    },
+    {
+      "source": "Swiftと同様に文末のセミコロン（<code>;</code>）が不要です。",
+      "translation": "تمامًا كما في لغة Swift، الفاصلة المنقوطة (<code>;</code>) في نهاية الجملة غير ضرورية."
+    },
+    {
+      "source": "Javaの var と、Kotlinの var は別物",
+      "translation": "تختلف var في Java عن var في Kotlin"
+    },
+    {
+      "source": "Java 10以降にもローカル変数の <code>var</code> があります。ただしJavaの <code>var</code> は「型を書かない」という意味で、再代入できるかどうかとは関係ありません（<code>final var</code> と書けます）。",
+      "translation": "بدءًا من الإصدار Java 10 والإصدارات اللاحقة، أضيفت <code>var</code> كمتغير محلي. ومع ذلك، تعني <code>var</code> في لغة Java «عدم كتابة النوع» ولا علاقة لها بإمكانية إعادة التعيين (يمكنك كتابتها <code>final var</code>)."
+    },
+    {
+      "source": "Kotlinの <code>var</code> は「再代入できる」という意味で、型を書くかどうかとは関係ありません（<code>var name: String = &quot;Yamada&quot;</code> と書けます）。つづりが同じでも、分けている軸が違います。",
+      "translation": "بينما تعني <code>var</code> في لغة Kotlin «إمكانية إعادة التعيين» ولا علاقة لها بما إذا كنت تكتب النوع أم لا (يمكنك كتابتها <code>var name: String = &quot;Yamada&quot;</code>). على الرغم من تشابه التهجئة، إلا أن معيار التمييز مختلف."
+    },
+    {
+      "source": "押す前に予想する",
+      "translation": "التوقع قبل التشغيل"
+    },
+    {
+      "source": "<code>println(name)</code> では、<code>Yamada</code> と <code>Tanaka</code> のどちらが出るでしょうか。予想してから、Runで確かめましょう。",
+      "translation": "في <code>println(name)</code>، أي منهما سيظهر: <code>Yamada</code> أم <code>Tanaka</code>؟ توقّع الإجابة، ثم تأكد منها باستخدام Run."
+    },
+    {
+      "source": "確かめたあとに答えを見る",
+      "translation": "الاطلاع على الإجابة بعد التأكد"
+    },
+    {
+      "source": "<code>Tanaka</code> が出ます。JavaやSwiftと同じで、その行より上で最後に代入された値が入っています。",
+      "translation": "سيظهر <code>Tanaka</code>. وكما هو الحال في لغتي Java و Swift، فإنه يحتوي على آخر قيمة تم تعيينها قبل هذا السطر."
+    },
+    {
+      "source": "<code>val</code> と <code>var</code> で2行を出せた。",
+      "translation": "استخدمت <code>val</code> و <code>var</code> لعرض سطرين بنجاح."
+    },
+    {
+      "source": "次へ：数の型 →",
+      "translation": "التالي: أنواع الأرقام ←"
+    },
+    {
+      "source": "STEP 04 · 目安 15分",
+      "translation": "STEP 04 · الوقت التقديري: 15 دقيقة"
+    },
+    {
+      "source": "数の型を確かめる（Int・Double・Float）",
+      "translation": "التحقق من أنواع الأرقام (Int و Double و Float)"
+    },
+    {
+      "source": "<code>Int</code>・<code>Double</code>・<code>Float</code> をリテラルの書き方で作り分け、<code>println</code> で出します。",
+      "translation": "سنقوم بإنشاء <code>Int</code> و <code>Double</code> و <code>Float</code> باستخدام صيغ الكتابة الحرفية المختلفة، ونعرضها باستخدام <code>println</code>."
+    },
+    {
+      "source": "型",
+      "translation": "النوع"
+    },
+    {
+      "source": "リテラルの書き方",
+      "translation": "طريقة الكتابة الحرفية"
+    },
+    {
+      "source": "整数。既定の整数型です。",
+      "translation": "عدد صحيح. وهو نوع الأعداد الصحيحة الافتراضي."
+    },
+    {
+      "source": "小数点を書くと、この型になります。既定の浮動小数点型です。",
+      "translation": "إذا كتبت فاصلة عشرية، سيصبح من هذا النوع. وهو نوع أعداد الفاصلة العائمة الافتراضي."
+    },
+    {
+      "source": "うしろに <code>f</code> を付けると、この型になります。",
+      "translation": "إذا أضفت <code>f</code> في النهاية، سيصبح من هذا النوع."
+    },
+    {
+      "source": "① 追加する場所を見つける",
+      "translation": "① تحديد موقع الإضافة"
+    },
+    {
+      "source": "場所の目印 · この枠は入力しません",
+      "translation": "علامة الموقع · لا تقم بالكتابة في هذا الإطار"
+    },
+    {
+      "source": "② 値の行に2行追加する",
+      "translation": "② إضافة سطرين إلى سطر القيمة"
+    },
+    {
+      "source": "追加① · val number1 = 1 の下",
+      "translation": "إضافة ① · أسفل val number1 = 1"
+    },
+    {
+      "source": "③ 表示の行に2行追加する",
+      "translation": "③ إضافة سطرين إلى سطر العرض"
+    },
+    {
+      "source": "追加② · println(number1) の下",
+      "translation": "إضافة ② · أسفل println(number1)"
+    },
+    {
+      "source": "貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。",
+      "translation": "عند اللصق، سيقوم IntelliJ IDEA بمحاذاة المسافات البادئة للأسطر. إذا تساوت الأسطر مع البداية، فكل شيء على ما يرام."
+    },
+    {
+      "source": "④ 実行結果",
+      "translation": "④ نتيجة التشغيل"
+    },
+    {
+      "source": "Runの結果 · この4行が出れば成功",
+      "translation": "نتيجة Run · النجاح إذا ظهرت هذه الأسطر الأربعة"
+    },
+    {
+      "source": "<code>3.0f</code> と書いたのに、出るのは <code>3.0</code> です。<code>f</code> はリテラルの型を決める目印で、値そのものには入っていません。Javaで <code>System.out.println(3.0f)</code> としたときと同じ結果です。",
+      "translation": "على الرغم من كتابة <code>3.0f</code>، إلا أن القيمة المعروضة هي <code>3.0</code>. الحرف <code>f</code> هو علامة تحدد النوع الحرفي، ولا يتم تضمينها في القيمة نفسها. هذه النتيجة مماثلة لاستخدام <code>System.out.println(3.0f)</code> في لغة Java."
+    },
+    {
+      "source": "⑤ Java / Swift ではどう書くか（型）",
+      "translation": "⑤ كيفية كتابة نفس الكود في لغتي Java و Swift (الأنواع)"
+    },
+    {
+      "source": "<strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。",
+      "translation": "<strong>لا تفرق لغة Kotlin بين الأنواع الأولية وأصناف الغلاف كما في لغة Java.</strong> كل ما تكتبه هو <code>Int</code> فقط. والمترجم هو من يحدد ما إذا كان سيتم تحويله إلى كود بايت كـ <code>int</code> أم <code>Integer</code>."
+    },
+    {
+      "source": "だから、Javaで書くときに考えていた「ここは <code>int</code> か <code>Integer</code> か」「リストに入れるからボクシングされる」といった判断が、宣言のときには要りません。",
+      "translation": "لذلك، لست بحاجة إلى اتخاذ قرارات أثناء الإعلان مثل «هل ينبغي استخدام <code>int</code> أم <code>Integer</code> هنا؟» أو «سيتم إجراء تعبئة للقيمة نظرًا لأنها ستُضاف إلى قائمة»&lrm;، والتي كنت تفكر فيها عند البرمجة بلغة Java."
+    },
+    {
+      "source": "型の名前はSwiftと同じく <code>Int</code> / <code>Double</code> / <code>Float</code> で、大文字で始まります。Javaの <code>int</code> のように小文字の型はありません。",
+      "translation": "أسماء الأنواع تبدأ بأحرف كبيرة كـ <code>Int</code> / <code>Double</code> / <code>Float</code>، تمامًا كما في لغة Swift. ولا توجد أنواع بأحرف صغيرة مثل <code>int</code> في لغة Java."
+    },
+    {
+      "source": "小数のリテラルが既定で <code>Double</code> になる点は、KotlinもSwiftも同じです。",
+      "translation": "تتطابق لغة Kotlin مع لغة Swift في أن نوع القيم الحرفية للكسور العشرية هو <code>Double</code> بشكل افتراضي."
+    },
+    {
+      "source": "Swiftには <code>3.0f</code> という書き方がありません。Swiftで <code>Float</code> にしたいときは <code>let number3: Float = 3.0</code> のように型注釈で指定します。Kotlinはこの点ではJavaと同じく、接尾辞の <code>f</code> が使えます。",
+      "translation": "لا توجد طريقة الكتابة <code>3.0f</code> في لغة Swift. وإذا أردت أن يكون النوع <code>Float</code> في Swift، يجب عليك تحديده صراحة باستخدام الشروحات التوضيحية للأنواع كما في <code>let number3: Float = 3.0</code>. تتطابق لغة Kotlin في هذه النقطة مع لغة Java، إذ يمكنك استخدام اللاحقة <code>f</code>."
+    },
+    {
+      "source": "⑥ Java / Swift ではどう書くか（出力）",
+      "translation": "⑥ كيفية كتابة نفس الكود في لغتي Java و Swift (الإخراج)"
+    },
+    {
+      "source": "<code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。",
+      "translation": "<code>println</code> هي دالة ذات مستوى أعلى ضمن مكتبة Kotlin القياسية. ولا تتطلب حاوية مثل <code>System.out</code>، ولا تحتاج إلى إجراء <code>import</code>."
+    },
+    {
+      "source": "改行するのが <code>println</code>、改行しないのが <code>print</code> です。Javaの <code>System.out.println</code> と <code>System.out.print</code> の対応と同じです。",
+      "translation": "الدالة <code>println</code> تضيف سطرًا جديدًا، بينما لا تضيفه الدالة <code>print</code>. وهذا يعادل استخدام <code>System.out.println</code> و <code>System.out.print</code> في لغة Java."
+    },
+    {
+      "source": "Swiftの <code>print</code> は既定で改行するので、名前は同じでも、はたらきはKotlinの <code>println</code> のほうです。改行しないときは <code>terminator</code> を渡します。ここは読み替えが要ります。",
+      "translation": "الدالة <code>print</code> في لغة Swift تضيف سطرًا جديدًا بشكل افتراضي، لذلك فعلى الرغم من تشابه الاسم، إلا أنها تعمل مثل <code>println</code> في لغة Kotlin. وعندما لا ترغب في إضافة سطر جديد، يمكنك تمرير <code>terminator</code>. يجب الانتباه إلى هذا الاختلاف في طريقة العمل."
+    },
+    {
+      "source": "4行を出せた。",
+      "translation": "تمكنت من عرض 4 أسطر."
+    },
+    {
+      "source": "次へ：ミニ練習 →",
+      "translation": "التالي: تدريب مصغر ←"
+    },
+    {
+      "source": "STEP 05 · 目安 10分",
+      "translation": "STEP 05 · الوقت التقديري: 10 دقائق"
+    },
+    {
+      "source": "ミニ練習",
+      "translation": "تدريب مصغر"
+    },
+    {
+      "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。",
+      "translation": "من هذه النقطة فصاعدًا، ستقوم بإعادة كتابة الكود بنفسك. اتبع الترتيب: <strong>تغيير أمر واحد ← التوقع ← تنفيذ Run</strong>. لا تنظر إلى الإجابة قبل أن تجربها بنفسك."
+    },
+    {
+      "source": "練習A · 変数を1つ足す（必須・3分）",
+      "translation": "التدريب أ · إضافة متغير واحد (إلزامي · 3 دقائق)"
+    },
+    {
+      "source": "<code>val</code> の変数を1つと、それを出す <code>println</code> を1行足して、出力を5行にします。値も型も自分で決めます。型注釈は書かずに、変数名にマウスを重ねて、推論された型を確かめましょう。",
+      "translation": "أضف متغير <code>val</code> واحد، وسطر <code>println</code> لطباعته، لتصبح المخرجات 5 أسطر. حدد القيمة والنوع بنفسك. لا تكتب الشروحات التوضيحية للأنواع، بل مرّر الماوس فوق اسم المتغير للتحقق من النوع المُستدل عليه."
+    },
+    {
+      "source": "試したあと：確かめること",
+      "translation": "بعد المحاولة: ما يجب التحقق منه"
+    },
+    {
+      "source": "<code>4</code> と書けば <code>Int</code>、<code>4.5</code> と書けば <code>Double</code>、<code>4.5f</code> と書けば <code>Float</code> です。リテラルの書き方だけで型が決まっていることを、画面で確かめてください。",
+      "translation": "كتابة <code>4</code> تعني <code>Int</code>، وكتابة <code>4.5</code> تعني <code>Double</code>، وكتابة <code>4.5f</code> تعني <code>Float</code>. تحقق من الشاشة للتأكد من تحديد النوع بناءً على طريقة الكتابة الحرفية فقط."
+    },
+    {
+      "source": "練習B · 再代入して、コンパイルエラーを起こす（必須・4分）",
+      "translation": "التدريب ب · إعادة التعيين لإحداث خطأ في الترجمة (إلزامي · 4 دقائق)"
+    },
+    {
+      "source": "<code>name = &quot;Tanaka&quot;</code> の次の行に <code>number1 = 5</code> と書き足します。Runを押す前に、その行に出たエラーメッセージを読んでください。",
+      "translation": "أضف السطر <code>number1 = 5</code> أسفل السطر <code>name = &quot;Tanaka&quot;</code> مباشرةً. اقرأ رسالة الخطأ الظاهرة في ذلك السطر قبل الضغط على Run."
+    },
+    {
+      "source": "読むのは次の3つです。<strong>どの行か・何をしようとしたと言っているか・どう直せと言っているか。</strong>",
+      "translation": "اقرأ الأشياء الثلاثة التالية: <strong>في أي سطر وقع الخطأ؟ وما الذي حاول الكود فعله؟ وما هي طريقة الإصلاح المقترحة؟</strong>"
+    },
+    {
+      "source": "試したあと：答えと理由",
+      "translation": "بعد المحاولة: الإجابة والسبب"
+    },
+    {
+      "source": "書き足した行が赤くなり、再代入できないことを知らせるメッセージが出ます（言い回しはIDEの版によって変わります）。Runしても実行されません。<code>number1</code> は <code>val</code> で宣言したので、再代入できないからです。",
+      "translation": "سيتحول السطر الذي أضفته إلى اللون الأحمر، وستظهر رسالة تخبرك بعدم إمكانية إعادة التعيين (قد تختلف الصياغة باختلاف إصدار IDE). وحتى لو قمت بتشغيل الكود فلن يُنفذ. ذلك لأنك استخدمت <code>val</code> للإعلان عن <code>number1</code>، وبالتالي لا يمكن إعادة تعيين قيمته."
+    },
+    {
+      "source": "これは <strong>コンパイル時</strong> に止まるエラーです。実行してから気づく種類のものではありません。確かめたら、書き足した行を消して元に戻します。",
+      "translation": "هذا الخطأ يُوقف الكود <strong>أثناء الترجمة</strong>. وليس من نوع الأخطاء التي لا تكتشفها إلا بعد التشغيل. بعد التحقق من ذلك، امسح السطر الذي أضفته لإعادة الكود إلى حالته الأصلية."
+    },
+    {
+      "source": "同じ間違いを、JavaとSwiftでしたとき",
+      "translation": "عند ارتكاب نفس الخطأ في لغتي Java و Swift"
+    },
+    {
+      "source": "3つとも、コンパイル時に止まります。止まる条件も同じで、言い回しが違うだけです。",
+      "translation": "تتوقف جميعها عند التصريف. وشروط التوقف نفسها، لكن تختلف طريقة التعبير فقط."
+    },
+    {
+      "source": "Javaのメッセージは <code>final</code> を、Swiftのメッセージは <code>let</code> を名指しします。Kotlinは <code>'val'</code> を名指しします。<strong>メッセージに出てくるキーワードが、直す場所を指しています。</strong>",
+      "translation": "تشير رسالة Java إلى <code>final</code>، وتشير رسالة Swift إلى <code>let</code>. أما في Kotlin فتشير إلى <code>'val'</code>. <strong>الكلمة المفتاحية التي تظهر في الرسالة تشير إلى الموضع الذي يجب تصحيحه.</strong>"
+    },
+    {
+      "source": "直し方は2つです。宣言を <code>var</code> に変えるか、再代入をやめるか。ここでは再代入をやめて元に戻します。",
+      "translation": "هناك طريقتان للتصحيح. إما تغيير التصريح إلى <code>var</code>، أو التوقف عن إعادة الإسناد. سنتوقف هنا عن إعادة الإسناد ونعود إلى الحالة السابقة."
+    },
+    {
+      "source": "最後の3分 · 元に戻す",
+      "translation": "هذه آخر 3 دقائق. · العودة إلى الحالة السابقة"
+    },
+    {
+      "source": "練習Aで足した2行を消します。",
+      "translation": "احذف السطرين اللذين أضفتهما في التدريب A."
+    },
+    {
+      "source": "練習Bで書き足した <code>number1 = 5</code> の行を消します。",
+      "translation": "احذف سطر <code>number1 = 5</code> الذي أضفته في التدريب B."
+    },
+    {
+      "source": "Runし、STEP 00 のゴールと同じ4行に戻ったことを確かめます。",
+      "translation": "شغّل، وتحقق من العودة إلى الأسطر الأربعة نفسها كهدف STEP 00."
+    },
+    {
+      "source": "練習A・Bを試し、赤い波線が出た行を確かめた。最後に元の4行へ戻した。",
+      "translation": "جرّبت التدريبين A و B، وتحققت من الأسطر التي ظهر فيها الخط المتموّج الأحمر. وفي النهاية عدت إلى الأسطر الأربعة الأصلية."
+    },
+    {
+      "source": "次へ：完成 →",
+      "translation": "الانتقال إلى 完成 (المكتمل) ←"
+    },
+    {
+      "source": "STEP 06 · 目安 10分",
+      "translation": "STEP 06 · حوالي 10 دقائق"
+    },
+    {
+      "source": "完成",
+      "translation": "المشروع المكتمل"
+    },
+    {
+      "source": "① 完成チェック",
+      "translation": "① التحقق النهائي"
+    },
+    {
+      "source": "Runし、コンソールの出力を上から順に見ます。",
+      "translation": "شغّل، وتحقق من المخرجات في وحدة التحكم من الأعلى إلى الأسفل."
+    },
+    {
+      "source": "行",
+      "translation": "السطر"
+    },
+    {
+      "source": "出る内容",
+      "translation": "ما يظهر"
+    },
+    {
+      "source": "理由",
+      "translation": "السبب"
+    },
+    {
+      "source": "1行目",
+      "translation": "السطر 1"
+    },
+    {
+      "source": "<code>val number1 = 1</code>（<code>Int</code>）の値を出している。",
+      "translation": "يطبع قيمة <code>val number1 = 1</code> (من النوع <code>Int</code>)."
+    },
+    {
+      "source": "2行目",
+      "translation": "السطر 2"
+    },
+    {
+      "source": "<code>val number2 = 2.0</code>（<code>Double</code>）の値を出している。",
+      "translation": "يطبع قيمة <code>val number2 = 2.0</code> (من النوع <code>Double</code>)."
+    },
+    {
+      "source": "3行目",
+      "translation": "السطر 3"
+    },
+    {
+      "source": "<code>val number3 = 3.0f</code>（<code>Float</code>）の値を出している。<code>f</code> は出ない。",
+      "translation": "يطبع قيمة <code>val number3 = 3.0f</code> (من النوع <code>Float</code>). لا تُطبع <code>f</code>."
+    },
+    {
+      "source": "4行目",
+      "translation": "السطر 4"
+    },
+    {
+      "source": "<code>var name</code> に再代入した値を出している。",
+      "translation": "يطبع القيمة التي تمت إعادة إسنادها إلى <code>var name</code>."
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<code>val</code> の行と <code>var</code> の行を指さして説明します。",
+      "translation": "إذا كانت النتيجة كما في الجدول، فاعرض الشاشة على المعلم، وأشر إلى سطر <code>val</code> وسطر <code>var</code> واشرحهما."
+    },
+    {
+      "source": "入力したコードと照合する",
+      "translation": "مطابقة الشيفرة التي أدخلتها"
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex01</code> も忘れずに入れます。",
+      "translation": "هذه هي شيفرة <code>main.kt</code> كاملة التي أدخلتها حتى الآن. لا تنسَ إدخال <code>package ex01</code> في السطر 1."
+    },
+    {
+      "source": "main.kt · 完成コード",
+      "translation": "main.kt · الشيفرة المكتملة"
+    },
+    {
+      "source": "② 同じ4行を、JavaとSwiftで出すと",
+      "translation": "② المقارنة مع Java / Swift لنفس الأسطر الأربعة"
+    },
+    {
+      "source": "Kotlinで省いたのは、入口を包むクラス、型注釈、行末の <code>;</code>、<code>System.out</code> の4つです。処理そのものはJavaと同じです。",
+      "translation": "العناصر الأربعة التي حُذفت في Kotlin هي الصنف الذي يغلّف نقطة الدخول، وتحديد النوع صراحة، و <code>;</code> في نهاية السطر، و <code>System.out</code>. أما المعالجة نفسها فهي مطابقة لما في Java."
+    },
+    {
+      "source": "Swiftとの差は、入口の <code>fun main()</code> と <code>package</code> 宣言、そして <code>Float</code> リテラルの書き方だけです。",
+      "translation": "يقتصر الاختلاف عن Swift على <code>fun main()</code> كنقطة الدخول، وتصريح <code>package</code>، وطريقة كتابة قيم <code>Float</code>."
+    },
+    {
+      "source": "「短く書ける」というのは、書かなかったぶんをコンパイラが補っているということです。<strong>Javaで書いていたことが消えたわけではありません。</strong>",
+      "translation": "«الكتابة بشكل أقصر» تعني أن المصرّف يكمل الأجزاء التي لم تكتبها. <strong>هذا لا يعني أن ما كنت تكتبه في Java قد اختفى.</strong>"
+    },
+    {
+      "source": "③ 保存された場所を確かめる",
+      "translation": "③ التحقق من موقع الحفظ"
+    },
+    {
+      "source": "IntelliJ IDEA は、書いたコードを自動でファイルに保存します。保存の操作は要りません。",
+      "translation": "يحفظ IntelliJ IDEA الشيفرة التي تكتبها تلقائيا في ملف. لا تحتاج إلى إجراء عملية الحفظ."
+    },
+    {
+      "source": "Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。",
+      "translation": "افتح Finder وانقر على <strong>書類</strong> (المستندات) (<code>Documents</code>) على الجانب الأيسر."
+    },
+    {
+      "source": "その中の <code>Kotlin</code> フォルダを開き、<code>K01HelloKotlin</code> フォルダがあることを確かめます。",
+      "translation": "افتح مجلد <code>Kotlin</code> بداخله، وتحقق من وجود مجلد <code>K01HelloKotlin</code>."
+    },
+    {
+      "source": "この <code>Documents/Kotlin/K01HelloKotlin</code> フォルダが、今日作ったプロジェクトです。あとでもう一度開けるように、消したり、別の場所へ移動したり、名前を変えたりせずに、そのまま残します。",
+      "translation": "مجلد <code>Documents/Kotlin/K01HelloKotlin</code> هذا هو المشروع الذي أنشأته اليوم. اتركه كما هو دون حذفه أو نقله إلى مكان آخر أو تغيير اسمه، حتى تتمكن من فتحه مرة أخرى لاحقا."
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。保存されたフォルダの場所も確かめた。",
+      "translation": "أجريت التحقق النهائي وعرضت الشاشة على المعلم. كما تحققت من موقع المجلد المحفوظ."
+    },
+    {
+      "source": "1コマ目のまとめ",
+      "translation": "ملخص الحصة 1"
+    },
+    {
+      "source": "<strong><code>val</code> と <code>var</code> で宣言する → 型はリテラルから決まる → <code>println</code> で出す。</strong><br>JavaとSwiftで書いていたことを、Kotlinの書き方に置き換えました。",
+      "translation": "<strong>التصريح باستخدام <code>val</code> و <code>var</code> ← استنتاج النوع من القيم ← الطباعة باستخدام <code>println</code>.</strong><br>لقد استبدلت ما كنت تكتبه في Java و Swift بصياغة Kotlin."
+    },
+    {
+      "source": "STEP 07 · 2コマ目 · 目安 5分",
+      "translation": "STEP 07 · الحصة 2 · حوالي 5 دقائق"
+    },
+    {
+      "source": "2コマ目のゴール（Null安全）",
+      "translation": "هدف الحصة 2 (الأمان من null)"
+    },
+    {
+      "source": "ここからが<strong>2コマ目</strong>です。使うプロジェクトは1コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex02</code> パッケージを足して、その中に書きます。1コマ目に書いた <code>ex01</code> は、そのまま残します。",
+      "translation": "من هنا تبدأ <strong>الحصة 2</strong>. سنستخدم مشروع <code>K01HelloKotlin</code> نفسه الذي استخدمناه في الحصة 1، ولن ننشئ مشروعا جديدا. أضف حزمة <code>ex02</code> تحت <code>src</code>، واكتب بداخلها. اترك <code>ex01</code> الذي كتبته في الحصة 1 كما هو."
+    },
+    {
+      "source": "この回の主題は <strong>Null安全</strong> です。Kotlinは、<code>null</code> を入れられる型と、入れられない型を、言語のしくみとして分けます。Swiftのオプショナルに近い考え方で、Javaとはいちばん差が大きいところです。",
+      "translation": "موضوع هذه الحصة هو <strong>الأمان من null (null safety)</strong>. تفصل Kotlin بين الأنواع التي يمكن أن تحتوي على <code>null</code> والأنواع التي لا يمكنها ذلك، كجزء من بنية اللغة. هذا المفهوم قريب من مفهوم الخيارات (Optionals) في Swift، وهو يمثل الاختلاف الأكبر مقارنة بـ Java."
+    },
+    {
+      "source": "この回で出てくるKotlinの言葉",
+      "translation": "مصطلحات Kotlin التي تظهر في هذه الحصة"
+    },
+    {
+      "source": "<code>String</code>（<code>?</code> なし）",
+      "translation": "<code>String</code> (بدون <code>?</code>)"
+    },
+    {
+      "source": "<code>String</code>（<code>null</code> を入れられる）",
+      "translation": "<code>String</code> (يمكن أن يحتوي على <code>null</code>)"
+    },
+    {
+      "source": "対応物なし",
+      "translation": "لا يوجد مقابل"
+    },
+    {
+      "source": "<code>String?</code>（オプショナル）",
+      "translation": "<code>String?</code> (اختياري)"
+    },
+    {
+      "source": "<code>?.</code>（安全呼び出し）",
+      "translation": "<code>?.</code> (الاستدعاء الآمن)"
+    },
+    {
+      "source": "<code>if (name != null)</code> で囲む、または <code>Optional</code>",
+      "translation": "الإحاطة بـ <code>if (name != null)</code>، أو <code>Optional</code>"
+    },
+    {
+      "source": "<code>?.</code>（オプショナルチェイン）",
+      "translation": "<code>?.</code> (الاستدعاء الآمن المتسلسل)"
+    },
+    {
+      "source": "<code>count()</code>（文字数）",
+      "translation": "<code>count()</code> (عدد الأحرف)"
+    },
+    {
+      "source": "同じ「nullかもしれない文字列」を3つの言語で書く",
+      "translation": "كتابة نفس «السلسلة النصية التي قد تكون null» في اللغات الثلاث"
+    },
+    {
+      "source": "KotlinとSwiftは、<strong>型そのものに「<code>null</code> が入るかどうか」を書きます。</strong> <code>String</code> と <code>String?</code> は別の型です。",
+      "translation": "في Kotlin و Swift، <strong>يُكتب «ما إذا كان <code>null</code> مسموحا أم لا» في النوع نفسه.</strong> <code>String</code> و <code>String?</code> نوعان مختلفان."
+    },
+    {
+      "source": "Javaには、この区別がありません。どの参照型にも <code>null</code> を入れられるので、「入らない」ことを型で表せません。",
+      "translation": "لا يوجد هذا التمييز في Java. يمكن وضع <code>null</code> في أي نوع مرجعي، لذا لا يمكن التعبير عن «عدم السماح بـ null» من خلال النوع."
+    },
+    {
+      "source": "Kotlinの <code>null</code> は、Swiftの <code>nil</code> にあたります。書く文字が違うだけで、役目は同じです。",
+      "translation": "يقابل <code>null</code> في Kotlin <code>nil</code> في Swift. الأحرف المكتوبة مختلفة فقط، لكن الدور هو نفسه."
+    },
+    {
+      "source": "2コマ目のゴール（コンソールに出る3行）",
+      "translation": "هدف الحصة 2 (الأسطر الثلاثة التي تظهر في وحدة التحكم)"
+    },
+    {
+      "source": "Runの結果 · この3行が出れば完成",
+      "translation": "نتيجة Run · يكتمل العمل بظهور هذه الأسطر الثلاثة"
+    },
+    {
+      "source": "2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>は、STEP 10 で確かめます。",
+      "translation": "القيمة <code>null</code> في السطر 2 هي أيضا جزء من المخرجات. وليست خطأ. <strong>لماذا تظهر <code>null</code>؟</strong> سنتحقق من ذلك في STEP 10."
+    },
+    {
+      "source": "この90分の進み方",
+      "translation": "طريقة المتابعة في هذه الـ 90 دقيقة"
+    },
+    {
+      "source": "<code>ex02</code> を作り、<code>String</code> と <code>String?</code> の違いを、わざと出したコンパイルエラーで確かめる。",
+      "translation": "أنشئ <code>ex02</code>، وتحقق من الفرق بين <code>String</code> و <code>String?</code> من خلال خطأ تصريف متعمّد."
+    },
+    {
+      "source": "安全呼び出し <code>?.</code> を書き、3行の出力を完成させる。",
+      "translation": "اكتب الاستدعاء الآمن <code>?.</code>، وأكمل مخرجات الأسطر الثلاثة."
+    },
+    {
+      "source": "2コマ目に出す3行（<code>5</code> / <code>null</code> / <code>6</code>）を、上のゴールで確かめた。",
+      "translation": "تحققت من الأسطر الثلاثة (<code>5</code> / <code>null</code> / <code>6</code>) التي يجب عرضها في الحصة 2، من خلال الهدف أعلاه."
+    },
+    {
+      "source": "次へ：ex02 を作る →",
+      "translation": "الانتقال إلى إنشاء ex02 ←"
+    },
+    {
+      "source": "STEP 08 · 2コマ目 · 目安 5分",
+      "translation": "STEP 08 · الحصة 2 · حوالي 5 دقائق"
+    },
+    {
+      "source": "ex02 パッケージと main.kt を作る",
+      "translation": "إنشاء حزمة ex02 و main.kt"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex02</code> パッケージと、その中の <code>main.kt</code> を作ります。",
+      "translation": "أعد فتح مشروع <code>K01HelloKotlin</code>، وأنشئ حزمة <code>ex02</code> تحت <code>src</code>، و <code>main.kt</code> بداخلها."
+    },
+    {
+      "source": "<strong>STEP 02 の⑥と同じ操作です。</strong>違うのは、パッケージ名が <code>ex01</code> ではなく <code>ex02</code> になることだけです。手順は、下にもう一度すべて書きます。",
+      "translation": "<strong>إنها نفس العملية المذكورة في ⑥ من STEP 02.</strong> الاختلاف الوحيد هو أن اسم الحزمة سيكون <code>ex02</code> بدلا من <code>ex01</code>. الخطوات مكتوبة كاملة مرة أخرى أدناه."
+    },
+    {
+      "source": "① プロジェクトを開き直す",
+      "translation": "① إعادة فتح المشروع"
+    },
+    {
+      "source": "IntelliJ IDEA を開きます。<code>K01HelloKotlin</code> がすでに開いていれば、そのまま使います。",
+      "translation": "افتح IntelliJ IDEA. إذا كان <code>K01HelloKotlin</code> مفتوحا بالفعل، فاستخدمه كما هو."
+    },
+    {
+      "source": "開いていないときは、ホーム画面の左側に並ぶ、最近開いたプロジェクトの一覧から <code>K01HelloKotlin</code> をクリックします。",
+      "translation": "إذا لم يكن مفتوحا، فانقر على <code>K01HelloKotlin</code> من قائمة المشاريع التي فُتحت مؤخرا على الجانب الأيسر من الشاشة الرئيسية."
+    },
+    {
+      "source": "一覧に無いときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選び、<code>書類</code>（<code>Documents</code>）の中の <code>Kotlin</code> フォルダにある <code>K01HelloKotlin</code> フォルダを選んで開きます。",
+      "translation": "إذا لم يكن موجودا في القائمة، فاختر <strong>開く…</strong> (فتح…&lrm;) من القائمة الموجودة أعلى يسار الشاشة الرئيسية، وافتح مجلد <code>K01HelloKotlin</code> الموجود داخل مجلد <code>Kotlin</code> في <code>書類</code> (المستندات) (<code>Documents</code>)."
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> があることを確かめます。<code>ex01</code> は消しません。",
+      "translation": "تحقق من وجود <code>src</code> في نافذة الأدوات <strong>プロジェクト</strong> (المشروع) على اليسار، ووجود <code>ex01</code> أسفله. لا تحذف <code>ex01</code>."
+    },
+    {
+      "source": "② ex02 パッケージを作る",
+      "translation": "② إنشاء حزمة ex02"
+    },
+    {
+      "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>src</code>، واختر <strong>新規 → パッケージ</strong> (جديد ← حزمة). احذر من الخلط بينها وبين <strong>Kotlin ファイル/クラス</strong> (ملف/صنف Kotlin) الموجودة فوقها مباشرة."
+    },
+    {
+      "source": "名前に <code>ex02</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex02</code> ができます。すべて小文字で、記号は入れません。",
+      "translation": "أدخل <code>ex02</code> في الاسم واضغط على <kbd>Return</kbd>. سيتم إنشاء <code>ex02</code> تحت <code>src</code>. استخدم أحرفا صغيرة فقط، ولا تُدخل أي رموز."
+    },
+    {
+      "source": "③ main.kt を作る",
+      "translation": "③ إنشاء main.kt"
+    },
+    {
+      "source": "できた <code>ex02</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でもなく、<code>ex02</code> を右クリックします。</strong>",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex02</code> الذي تم إنشاؤه، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). <strong>انقر بزر الفأرة الأيمن على <code>ex02</code>، وليس على <code>src</code> ولا على <code>ex01</code>.</strong>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex02</code> が入っていることを確かめます。",
+      "translation": "تحقق من وجود <code>package ex02</code> في السطر 1 من <code>main.kt</code> الذي تم إنشاؤه."
+    },
+    {
+      "source": "1行目が <code>package ex02</code> になっていないとき",
+      "translation": "إذا لم يكن السطر 1 هو <code>package ex02</code>"
+    },
+    {
+      "source": "ファイルが <code>ex02</code> の中ではなく、<code>src</code> の直下か <code>ex01</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex02</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "لقد أُنشئ الملف تحت <code>src</code> مباشرة أو داخل <code>ex01</code> بدلا من <code>ex02</code>. انقر بزر الفأرة الأيمن على <code>main.kt</code> واحذفه، ثم ابدأ مرة أخرى من ③. الفاصل هنا هو ما إذا كنت قد نقرت بزر الفأرة الأيمن على <code>ex02</code> أم لا."
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージ）",
+      "translation": "④ كيف تكتب ذلك في Java / Swift (الحزمة)"
+    },
+    {
+      "source": "KotlinもJavaも、ファイルの先頭に <code>package</code> を書き、フォルダの構成と合わせます。違うのは行末の <code>;</code> が要らないことだけです。",
+      "translation": "في كل من Kotlin و Java، يُكتب <code>package</code> في بداية الملف ليتطابق مع بنية المجلد. الاختلاف الوحيد هو عدم الحاجة إلى <code>;</code> في نهاية السطر."
+    },
+    {
+      "source": "Swiftには、ファイルの先頭に書く <code>package</code> 宣言がありません。同じターゲットの中のファイルは、宣言なしで互いを見られます。",
+      "translation": "في Swift، لا يوجد تصريح <code>package</code> يُكتب في بداية الملف. يمكن للملفات الموجودة في نفس الهدف أن ترى بعضها بعضا دون تصريح."
+    },
+    {
+      "source": "<code>ex01</code> と <code>ex02</code> は別のパッケージなので、どちらにも <code>main.kt</code> があり、どちらにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。",
+      "translation": "بما أن <code>ex01</code> و <code>ex02</code> حزمتان مختلفتان، فلن يحدث تعارض حتى لو كان لكليهما <code>main.kt</code> ولكليهما <code>fun main()</code>. هذا يشبه إمكانية وضع نفس اسم الصنف في حزم مختلفة في Java."
+    },
+    {
+      "source": "<code>src/ex02/main.kt</code> を作り、1行目が <code>package ex02</code> になっていることを確かめた。<code>ex01</code> も残っている。",
+      "translation": "أنشأت <code>src/ex02/main.kt</code>، وتحققت من أن السطر 1 هو <code>package ex02</code>. ولا يزال <code>ex01</code> موجودا."
+    },
+    {
+      "source": "次へ：String と String? →",
+      "translation": "الانتقال إلى String و String? ←"
+    },
+    {
+      "source": "STEP 09 · 2コマ目 · 目安 25分",
+      "translation": "STEP 09 · الحصة 2 · حوالي 25 دقيقة"
+    },
+    {
+      "source": "nullを入れられない型と、入れられる型（String と String?）",
+      "translation": "الأنواع التي لا يمكن أن تحتوي على null، والأنواع التي يمكنها ذلك (String و String?)"
+    },
+    {
+      "source": "<code>String</code> と <code>String?</code> を書き分けます。<code>?</code> の付かない型に <code>null</code> を入れると、Runする前に止められることを、自分の画面で確かめます。",
+      "translation": "ميّز في الكتابة بين <code>String</code> و <code>String?</code>. وتحقق على شاشتك من أن إسناد <code>null</code> لنوع لا يحتوي على <code>?</code> سيوقفه المصرّف قبل التشغيل (Run)."
+    },
+    {
+      "source": "変更するファイル：src/ex02/main.kt",
+      "translation": "الملف الذي يجب تغييره: src/ex02/main.kt"
+    },
+    {
+      "source": "入れられる値",
+      "translation": "القيم التي يمكن إسنادها"
+    },
+    {
+      "source": "文字列だけ。<code>null</code> は入れられません。",
+      "translation": "سلسلة نصية فقط. لا يمكن إسناد <code>null</code>."
+    },
+    {
+      "source": "文字列か、<code>null</code> のどちらか。",
+      "translation": "إما سلسلة نصية، أو <code>null</code>."
+    },
+    {
+      "source": "型の最後に <code>?</code> を1文字足すかどうかだけで、別の型になります。",
+      "translation": "مجرد إضافة حرف <code>?</code> في نهاية النوع يجعله نوعا مختلفا تماما."
+    },
+    {
+      "source": "① ファイル全体を、次の内容にする",
+      "translation": "① اجعل الملف بالكامل كما يلي"
+    },
+    {
+      "source": "src/ex02/main.kt · 全体を置き換える",
+      "translation": "src/ex02/main.kt · استبدل النص كاملا"
+    },
+    {
+      "source": "ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。",
+      "translation": "هنا نكتب <code>: String</code> و <code>: String?</code> دون حذف النوع. في <code>val number1 = 1</code> في الحصة 1 اعتمدنا على استنتاج النوع، لكن بما أن موضوع هذه الحصة هو <strong>ما إذا كان النوع يحتوي على <code>?</code> أم لا</strong>، فسنكتبه بوضوح على الشاشة."
+    },
+    {
+      "source": "<code>Saito</code> は5文字なので <code>5</code> が出ます。<code>count()</code> は、文字列の文字数を返すKotlinの関数です。Javaの <code>length()</code>、Swiftの <code>count</code> にあたります。",
+      "translation": "بما أن <code>Saito</code> تتكون من 5 أحرف، ستُطبع <code>5</code>. دالة <code>count()</code> هي دالة في Kotlin تُرجع عدد أحرف السلسلة النصية. وتقابل <code>length()</code> في Java، و <code>count</code> في Swift."
+    },
+    {
+      "source": "name2 の行が薄い色になっていても大丈夫",
+      "translation": "لا بأس إذا كان سطر name2 بلون باهت"
+    },
+    {
+      "source": "<code>var name2: String? = null</code> は宣言しただけで、まだどこからも使っていません。IntelliJ IDEA が「使っていない」ことを薄い色で知らせることがありますが、STEP 10 で使うので、消さずにそのままにします。",
+      "translation": "السطر <code>var name2: String? = null</code> مجرد تصريح، ولم يُستخدم من أي مكان بعد. قد يُعلمك IntelliJ IDEA بـ «عدم استخدامه» من خلال جعله بلون باهت، لكن اتركه كما هو دون حذفه لأننا سنستخدمه في STEP 10."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（nullを入れられるか）",
+      "translation": "③ كيف تكتب ذلك في Java / Swift (إمكانية إسناد null)"
+    },
+    {
+      "source": "Kotlinは、型の最後に <code>?</code> が付いていなければ <code>null</code> を代入できません。<strong>コンパイルエラーになり、Runできません。</strong>",
+      "translation": "في Kotlin، لا يمكن إسناد <code>null</code> إذا لم ينته النوع بـ <code>?</code>. <strong>سيؤدي ذلك إلى خطأ تصريف، ولا يمكن تشغيله (Run).</strong>"
+    },
+    {
+      "source": "Swiftも同じ分け方です。<code>nil</code> を入れられるのは <code>String?</code> だけで、<code>String</code> には入れられません。<strong>KotlinのNull安全は、Swiftのオプショナルとほぼ同じ発想です。</strong>",
+      "translation": "يتبع Swift نفس التصنيف. لا يمكن إسناد <code>nil</code> إلا إلى <code>String?</code>، ولا يمكن إسناده إلى <code>String</code>. <strong>يعتبر الأمان من null في Kotlin قريبا جدا من فكرة الخيارات (Optionals) في Swift.</strong>"
+    },
+    {
+      "source": "Javaは、どの参照型にも <code>null</code> を入れられます。<code>String name = null;</code> はそのまま通り、<code>name.length()</code> を呼んだ瞬間に <code>NullPointerException</code> になります。",
+      "translation": "في Java، يمكن إسناد <code>null</code> إلى أي نوع مرجعي. سيمر <code>String name = null;</code> كما هو، وبمجرد استدعاء <code>name.length()</code>، سيحدث استثناء <code>NullPointerException</code>."
+    },
+    {
+      "source": "つまり<strong>Javaでは動かすまで分からないことが、KotlinとSwiftではコンパイル時に分かります。</strong> 同じ間違いに気づく時刻が、実行時から書いている最中に移ります。",
+      "translation": "بمعنى آخر، <strong>ما لا يُعرف إلا عند التشغيل في Java، يُعرف وقت التصريف في Kotlin و Swift.</strong> الوقت الذي يُكتشف فيه نفس الخطأ ينتقل من وقت التشغيل إلى وقت الكتابة."
+    },
+    {
+      "source": "Javaにも <code>Optional</code> や <code>@Nullable</code> はありますが、どちらも型そのものの決まりではありません。<code>String</code> の変数に <code>null</code> が入ることを、言語が止めてくれるわけではありません。",
+      "translation": "تحتوي Java أيضا على <code>Optional</code> و <code>@Nullable</code>، لكن أيا منهما ليس قاعدة خاصة بالنوع نفسه. لا تمنع اللغة إسناد <code>null</code> إلى متغيّر من النوع <code>String</code>."
+    },
+    {
+      "source": "④ わざとコンパイルエラーを出す（必須）",
+      "translation": "④ إحداث خطأ تصريف متعمّد (مطلوب)"
+    },
+    {
+      "source": "<code>val name1: String = &quot;Saito&quot;</code> の <code>&quot;Saito&quot;</code> を <code>null</code> に書き換えます。Runを押す前に、その行を見てください。",
+      "translation": "غيّر <code>&quot;Saito&quot;</code> في <code>val name1: String = &quot;Saito&quot;</code> إلى <code>null</code>. انظر إلى ذلك السطر قبل الضغط على Run."
+    },
+    {
+      "source": "見るのは次の3つです。<strong>どの行が赤くなったか・IDEが何を止めていると言っているか・どう直せと言っているか。</strong>",
+      "translation": "انظر إلى الأشياء الثلاثة التالية: <strong>أي سطر أصبح أحمر اللون، وما الذي يخبرك بيئة التطوير (IDE) بأنها توقفه، وكيف تخبرك بإصلاحه.</strong>"
+    },
+    {
+      "source": "試したあとに開く：何が起きたか",
+      "translation": "افتح هذا بعد التجربة: ما حدث"
+    },
+    {
+      "source": "書き換えた行に赤い波線が出て、この型には <code>null</code> を代入できない、という<strong>おおよそその意味のメッセージ</strong>が出ます。Runしても実行されません。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言を覚える必要はありません。<strong>赤い波線が出たら、<code>?</code> の付いていない型に <code>null</code> を入れようとしている</strong>と読み替えてください。",
+      "translation": "سيظهر خط متموّج أحمر في السطر الذي غيّرته، وتظهر رسالة تفيد <strong>بشكل عام</strong> بأنه لا يمكن إسناد <code>null</code> إلى هذا النوع. حتى لو نفذت Run، فلن يُشغّل. تتغير الصياغة باختلاف إصدارات IntelliJ IDEA و Kotlin، لذا لا داعي لحفظ نص الرسالة. <strong>إذا ظهر خط متموّج أحمر، فافهم أنك تحاول إسناد <code>null</code> إلى نوع لا يحتوي على <code>?</code>.</strong>"
+    },
+    {
+      "source": "直し方は2つです。型を <code>String?</code> に変えるか、<code>null</code> をやめて文字列に戻すか。ここでは <code>&quot;Saito&quot;</code> に戻し、赤い波線が消えることを確かめます。",
+      "translation": "هناك طريقتان للتصحيح. إما تغيير النوع إلى <code>String?</code>، أو التوقف عن استخدام <code>null</code> والعودة إلى سلسلة نصية. هنا سنعود إلى <code>&quot;Saito&quot;</code> ونتحقق من اختفاء الخط المتموّج الأحمر."
+    },
+    {
+      "source": "⑤ 同じ間違いを、JavaとSwiftでしたとき",
+      "translation": "⑤ عند ارتكاب الخطأ نفسه في Java و Swift"
+    },
+    {
+      "source": "KotlinとSwiftは、<strong>書いている最中</strong>に止まります。プログラムは1度も動きません。",
+      "translation": "يتوقف كل من Kotlin و Swift <strong>في أثناء الكتابة</strong>. ولن يُشغّل البرنامج أبدا."
+    },
+    {
+      "source": "Javaは、<strong>動かしてその行に着いたとき</strong>に落ちます。通らなかった経路の <code>null</code> は、そのまま残ります。",
+      "translation": "تتوقف Java <strong>عند تشغيل البرنامج والوصول إلى ذلك السطر</strong>. وتظل أي <code>null</code> في المسارات التي لم يتم المرور بها كما هي."
+    },
+    {
+      "source": "どちらも間違いは見つかりますが、<strong>見つかる時刻が違います。</strong> Kotlinが型に <code>?</code> を持ち込んだのは、この時刻を早めるためです。",
+      "translation": "كلاهما يكتشف الخطأ، لكن <strong>وقت الاكتشاف مختلف.</strong> أدخلت Kotlin <code>?</code> في الأنواع لتبكير هذا الوقت."
+    },
+    {
+      "source": "<code>String</code> と <code>String?</code> を書き分けて <code>5</code> を出せた。<code>?</code> の付かない型に <code>null</code> を入れるとRunできないことを、自分の画面で確かめた。",
+      "translation": "ميّزت في الكتابة بين <code>String</code> و <code>String?</code> وتمكنت من طباعة <code>5</code>. وتحققت على شاشتي من أنه لا يمكن تنفيذ Run عند محاولة إسناد <code>null</code> إلى نوع لا يحتوي على <code>?</code>."
+    },
+    {
+      "source": "次へ：安全呼び出し ?. →",
+      "translation": "الانتقال إلى الاستدعاء الآمن ?. ←"
+    },
+    {
+      "source": "STEP 10 · 2コマ目 · 目安 25分",
+      "translation": "STEP 10 · الحصة 2 · حوالي 25 دقيقة"
+    },
+    {
+      "source": "安全呼び出し（?.）",
+      "translation": "الاستدعاء الآمن (?.&lrm;)"
+    },
+    {
+      "source": "<code>?.</code> を使って、<code>null</code> かもしれない変数のメソッドを呼びます。3行の出力を完成させます。",
+      "translation": "استخدم <code>?.</code> لاستدعاء طريقة (method) لمتغيّر قد يكون <code>null</code>. أكمل طباعة الأسطر الثلاثة."
+    },
+    {
+      "source": "① ?. は何をするか",
+      "translation": "① ماذا يفعل ?.&lrm;"
+    },
+    {
+      "source": "書き方",
+      "translation": "طريقة الكتابة"
+    },
+    {
+      "source": "<code>name2</code> が <code>null</code> のとき",
+      "translation": "عندما يكون <code>name2</code> <code>null</code>"
+    },
+    {
+      "source": "<code>name2</code> に文字列が入っているとき",
+      "translation": "عندما يحتوي <code>name2</code> على سلسلة نصية"
+    },
+    {
+      "source": "<code>count()</code> を呼ばずに <code>null</code> を返す",
+      "translation": "يُرجع <code>null</code> دون استدعاء <code>count()</code>"
+    },
+    {
+      "source": "<code>count()</code> を呼んで、その結果を返す",
+      "translation": "يستدعي <code>count()</code>، ويُرجع النتيجة"
+    },
+    {
+      "source": "コンパイルエラー。<code>String?</code> には、そのままメソッドを呼べません",
+      "translation": "خطأ تصريف. لا يمكن استدعاء الطريقة مباشرة على <code>String?</code>"
+    },
+    {
+      "source": "呼べます。文字列を代入した行より後では、Kotlinが型を <code>String</code> として扱い直すためです（スマートキャスト）",
+      "translation": "يمكن استدعاؤها. لأن Kotlin تعيد التعامل مع النوع كـ <code>String</code> بعد السطر الذي أُسندت فيه السلسلة النصية (التحويل الذكي (smart cast))"
+    },
+    {
+      "source": "<strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。",
+      "translation": "<strong>يعني <code>?.</code> «إذا كان <code>null</code>، فلا تستدعه وأرجع <code>null</code>».</strong> إن التفريع بين الاستدعاء وعدم الاستدعاء مدمج في رمز واحد."
+    },
+    {
+      "source": "② ファイル全体を、次の内容にする",
+      "translation": "② اجعل الملف بالكامل كما يلي"
+    },
+    {
+      "source": "③ 実行結果",
+      "translation": "③ المخرجات"
+    },
+    {
+      "source": "Runの結果 · この3行が出れば成功",
+      "translation": "نتيجة Run · ينجح العمل بظهور هذه الأسطر الثلاثة"
+    },
+    {
+      "source": "<code>name1</code> は <code>String</code> で、<code>Saito</code> の5文字。<code>?</code> が付いていないので <code>?.</code> も要らない。",
+      "translation": "<code>name1</code> هو <code>String</code>، ويتكون من 5 أحرف في <code>Saito</code>. وبما أنه لا يحتوي على <code>?</code>، فليست هناك حاجة لـ <code>?.</code> أيضا."
+    },
+    {
+      "source": "<code>name2</code> が <code>null</code> なので、<code>count()</code> は呼ばれず <code>null</code> が返り、<code>println</code> がそれを出している。",
+      "translation": "بما أن <code>name2</code> <code>null</code>، فلا يُستدعى <code>count()</code> ويُرجع <code>null</code>، ثم يطبعه <code>println</code>."
+    },
+    {
+      "source": "<code>name2</code> に <code>Tanaka</code> を代入したので、<code>count()</code> が呼ばれて6が返る。",
+      "translation": "بما أننا أسندنا <code>Tanaka</code> إلى <code>name2</code>، يُستدعى <code>count()</code> وتُرجع النتيجة 6."
+    },
+    {
+      "source": "④ ?. が返す型は Int ではなく Int?",
+      "translation": "④ النوع الذي يُرجعه ?. ليس Int بل Int?"
+    },
+    {
+      "source": "<code>count()</code> は <code>Int</code> を返します。しかし <code>name2?.count()</code> 全体の型は <code>Int?</code> です。<code>name2</code> が <code>null</code> のときは <code>count()</code> が呼ばれず <code>null</code> が返るので、「<code>Int</code> か <code>null</code> のどちらか」になるからです。",
+      "translation": "يُرجع <code>count()</code> النوع <code>Int</code>. ومع ذلك، فإن النوع الإجمالي لـ <code>name2?.count()</code> هو <code>Int?</code>. لأنه عندما يكون <code>name2</code> <code>null</code>، فلا يُستدعى <code>count()</code> ويُرجع <code>null</code>، مما يعني أنه سيكون «إما <code>Int</code> وإما <code>null</code>»."
+    },
+    {
+      "source": "画面で確かめる",
+      "translation": "التحقق على الشاشة"
+    },
+    {
+      "source": "<code>fun main()</code> のいちばん最後の行の下に <code>val length = name2?.count()</code> と1行足し、<code>length</code> にマウスを重ねて、出てくる型を読みます。確かめたら、足した行を消します。",
+      "translation": "أضف سطرا <code>val length = name2?.count()</code> أسفل السطر الأخير من <code>fun main()</code>، وضع الفأرة على <code>length</code>، واقرأ النوع الذي يظهر. بعد التحقق، احذف السطر الذي أضفته."
+    },
+    {
+      "source": "<code>Int?</code> と出ます。<code>Int</code> ではありません。<strong><code>null</code> が返る可能性が、そのまま型に出ています。</strong> Swiftの <code>name2?.count</code> も同じで、結果は <code>Int?</code> です。",
+      "translation": "يظهر <code>Int?</code>. وليس <code>Int</code>. <strong>تنعكس إمكانية إرجاع <code>null</code> مباشرة في النوع.</strong> ينطبق الأمر ذاته على <code>name2?.count</code> في Swift، فالنتيجة هي <code>Int?</code>."
+    },
+    {
+      "source": "⑤ Java / Swift ではどう書くか",
+      "translation": "⑤ كيف تكتب ذلك في Java / Swift"
+    },
+    {
+      "source": "Kotlinの <code>?.</code> は、Swiftのオプショナルチェイン <code>?.</code> と<strong>ほぼ同じ</strong>です。書く記号も、<code>null</code> のときに呼ばないところも、返る型が <code>Int?</code> になるところも同じです。違うのは、Kotlinの <code>count()</code> が関数で、Swiftの <code>count</code> がプロパティであることくらいです。",
+      "translation": "الاستدعاء الآمن <code>?.</code> في Kotlin <strong>مطابق تقريبا</strong> للاستدعاء الآمن المتسلسل (optional chaining) <code>?.</code> في Swift. فالرموز المكتوبة، وعدم الاستدعاء عند وجود <code>null</code>، ونوع الإرجاع <code>Int?</code> كلها متماثلة. الاختلاف الوحيد هو أن <code>count()</code> في Kotlin هو دالة (function)، بينما <code>count</code> في Swift هو خاصية (property)."
+    },
+    {
+      "source": "Javaには <code>?.</code> がありません。<code>if (name2 != null)</code> で囲むか、<code>Optional.ofNullable(name2).map(String::length).orElse(null)</code> のように書きます。",
+      "translation": "في Java، لا يوجد <code>?.</code>. إما أن تحيطه بـ <code>if (name2 != null)</code>، أو تكتبه بهذا الشكل: <code>Optional.ofNullable(name2).map(String::length).orElse(null)</code>."
+    },
+    {
+      "source": "<strong>Javaの書き方は、囲むことを書く人が忘れないという前提の上に立っています。</strong> 忘れても書けてしまい、実行して初めて <code>NullPointerException</code> になります。",
+      "translation": "<strong>تعتمد كتابة Java على افتراض أن المبرمج لن ينسى كتابة الإحاطة (if).</strong> حتى إذا نسيها، يمكنه كتابة الكود، ولن يظهر <code>NullPointerException</code> إلا عند التشغيل."
+    },
+    {
+      "source": "Kotlinでは、<code>null</code> が入っているかもしれない位置で <code>?.</code> を忘れると、<strong>コンパイルエラー</strong>になります。Runできないので、忘れたまま先へ進めません。<strong>忘れられないのが、<code>if</code> で囲む書き方との違いです。</strong>",
+      "translation": "في Kotlin، إذا نسيت <code>?.</code> في موضع قد يحتوي على <code>null</code>، سيؤدي ذلك إلى <strong>خطأ تصريف</strong>. لا يمكنك تنفيذ Run، وبالتالي لن تتمكن من المضي قدما وأنت ناسٍ. <strong>استحالة النسيان هي الفرق بين هذا وبين طريقة الإحاطة بـ <code>if</code>.</strong>"
+    },
+    {
+      "source": "<strong>ただし「常にエラー」ではありません。</strong> 文字列を代入した行より後では、Kotlinがその変数を <code>String</code> として扱い直すので（スマートキャスト）、<code>name2.count()</code> と書いても通ります。<strong>この教材の完成コードは、<code>name2</code> を読む2回とも <code>?.</code> でそろえてあります</strong>ので、最後の行には次の注意が出ます。",
+      "translation": "<strong>ولكنه ليس «خطأ دائما».</strong> بعد السطر الذي أُسندت فيه سلسلة نصية، تعيد Kotlin التعامل مع هذا المتغيّر كـ <code>String</code> (التحويل الذكي (smart cast))، لذا سيمر <code>name2.count()</code>. <strong>في الشيفرة المكتملة لهذه المادة، تمت محاذاة كلتا المرتين اللتين يُقرأ فيهما <code>name2</code> لتبدأ بـ <code>?.</code></strong>، لذا يظهر التنبيه التالي في السطر الأخير."
+    },
+    {
+      "source": "最後の <code>?.</code> に、黄色い警告が出ます",
+      "translation": "تنبيه أصفر في آخر <code>?.</code>"
+    },
+    {
+      "source": "完成コードの最後の行 <code>println(name2?.count())</code> に、IntelliJ IDEA が警告を出します。<strong>間違いではありません。</strong> 直前の行で文字列を代入しているので、Kotlinはこの位置の <code>name2</code> を <code>String</code> として扱っています。<code>null</code> でないと分かっている相手に <code>?.</code> を付けているため、「その <code>?.</code> は要りません」と教えてくれています。",
+      "translation": "يُصدر IntelliJ IDEA تحذيرا أصفرا في السطر الأخير <code>println(name2?.count())</code> من الشيفرة المكتملة. <strong>هذا ليس خطأ.</strong> نظرا لإسناد سلسلة نصية في السطر السابق، تتعامل Kotlin مع <code>name2</code> في هذا الموضع كـ <code>String</code>. ولأننا نضع <code>?.</code> لمتغيّر يُعرف أنه ليس <code>null</code>، فإنه ينبهك قائلا: «هذا <code>?.</code> غير ضروري»."
+    },
+    {
+      "source": "この教材では、<strong><code>name2</code> を読む2回とも同じ書き方にそろえたいので、警告が出るまま残します。</strong> 消したいときは、最後の行だけ <code>println(name2.count())</code> にすれば警告は消えます。出力はどちらでも <code>6</code> です。",
+      "translation": "في هذه المادة، <strong>نريد توحيد طريقة الكتابة في كلتا المرتين اللتين نقرأ فيهما <code>name2</code>، لذا سنترك التحذير كما هو.</strong> إذا أردت إخفاءه، يمكنك إخفاء التحذير عن طريق كتابة <code>println(name2.count())</code> في السطر الأخير فقط. المخرجات هي <code>6</code> في كلتا الحالتين."
+    },
+    {
+      "source": "<strong>ここはSwiftと違うところです。</strong> Swiftは代入しても型が <code>String?</code> のままなので、<code>?.</code> かアンラップがいつでも要ります。Kotlinは、代入した内容から「ここではもう <code>null</code> ではない」と判断して、型を絞り込みます。",
+      "translation": "<strong>هذا هو الموضع الذي يختلف فيه Kotlin عن Swift.</strong> في Swift، يظل النوع <code>String?</code> حتى بعد الإسناد، لذا يلزمك دائمًا استخدام <code>?.</code> أو إلغاء التغليف (unwrap). أما Kotlin، فيحدد النوع ويضيّقه استنادًا إلى المحتوى المسند بحكم أنه «لم يعد <code>null</code> هنا»."
+    },
+    {
+      "source": "3行を出せた。<code>?.</code> が返す型が <code>Int?</code> であることを、マウスを重ねて確かめた。",
+      "translation": "تمكنت من عرض 3 أسطر. تأكدت من أن النوع الذي تعيده <code>?.</code> هو <code>Int?</code> من خلال تمرير الفأرة عليه."
+    },
+    {
+      "source": "STEP 11 · 2コマ目 · 目安 15分",
+      "translation": "STEP 11 · الحصة 2 · حوالي 15 دقيقة"
+    },
+    {
+      "source": "練習A · String? の変数をもう1つ足す（必須・7分）",
+      "translation": "التدريب A · إضافة متغيّر String? آخر (إلزامي · حوالي 7 دقائق)"
+    },
+    {
+      "source": "<code>fun main()</code> のいちばん最後の行（3つめの <code>println</code>）の下に、<code>String?</code> の変数を1つ足します。名前も値も自分で決めます。まず <code>null</code> を入れ、<code>?.count()</code> を付けた <code>println</code> を1行足して、出力を4行にします。Runして結果を見たら、こんどは <code>null</code> のかわりに好きな文字列を入れて、もう一度Runします。",
+      "translation": "أضف متغيّر <code>String?</code> واحدًا أسفل السطر الأخير في <code>fun main()</code> (أي <code>println</code> الثالث). اختر اسمه وقيمته بنفسك. في البداية، ضع فيه <code>null</code>، ثم أضف سطر <code>println</code> يحتوي على <code>?.count()</code> ليصبح الناتج 4 أسطر. بعد تشغيله بالنقر على Run والتحقق من النتيجة، ضع سلسلة نصية من اختيارك بدلًا من <code>null</code> وشغّله مرة أخرى."
+    },
+    {
+      "source": "<code>null</code> を入れたときは <code>null</code> と出ます。文字列を入れたときは、その文字列の文字数が出ます。自分が入れた文字列を数えて、出た数と合っているか確かめましょう。<strong>同じ1行が、入っている値によって数を出したり <code>null</code> を出したりします。</strong>これが <code>?.</code> のはたらきです。",
+      "translation": "عندما تضع <code>null</code>، سيظهر لك <code>null</code>. وعندما تضع سلسلة نصية، سيظهر لك عدد حروفها. تحقق من أن العدد المعروض يطابق عدد حروف السلسلة النصية التي أدخلتها. <strong>يُخرج نفس السطر العدد أو <code>null</code> بحسب القيمة الموجودة.</strong> هذه هي وظيفة <code>?.</code>."
+    },
+    {
+      "source": "練習B · ?. を . にしてみる（必須・5分）",
+      "translation": "التدريب B · تجربة تغيير ?. إلى . (إلزامي · حوالي 5 دقائق)"
+    },
+    {
+      "source": "練習Aで足した行の <code>?.</code> を <code>.</code> に書き換えます。Runを押す前に、その行を見てください。",
+      "translation": "غيّر <code>?.</code> في السطر الذي أضفته في التدريب A إلى <code>.</code> فقط. انظر إلى ذلك السطر قبل النقر على Run."
+    },
+    {
+      "source": "その行に赤い波線が出て、Runできません。<code>String?</code> の変数には、メソッドをそのまま呼べないからです。メッセージの文言はバージョンで変わるので、覚えなくて構いません。<strong>読み替えるのは「<code>?</code> の付いた型を、<code>?</code> なしで扱おうとしている」の1つだけです。</strong>",
+      "translation": "يظهر خط مموّج أحمر تحت هذا السطر، ولا يمكنك تشغيل البرنامج. لأن متغيّر <code>String?</code> لا يمكنه استدعاء طريقة مباشرة. ستتغيّر رسالة الخطأ حسب الإصدار، لذا لا تحتاج إلى حفظها. <strong>كل ما عليك فهمه هو «محاولة التعامل مع نوع ينتهي بـ <code>?</code> بدون <code>?</code>».&lrm;</strong>"
+    },
+    {
+      "source": "確かめたら <code>?.</code> に戻し、赤い波線が消えることを確かめます。",
+      "translation": "بعد التأكد من ذلك، أعدها إلى <code>?.</code> وتحقق من اختفاء الخط المموّج الأحمر."
+    },
+    {
+      "source": "同じことを、JavaとSwiftでしたとき",
+      "translation": "كيف تكتب نفس الشيء في Java و Swift"
+    },
+    {
+      "source": "KotlinとSwiftは、<code>?</code> の付いた型にそのままメソッドを呼ぶコードを、コンパイル時に止めます。",
+      "translation": "تُوقِف Kotlin و Swift الشيفرة أثناء التصريف (compile) إذا حاولت استدعاء طريقة مباشرة لنوع ينتهي بـ <code>?</code>."
+    },
+    {
+      "source": "Javaは止めません。<code>null</code> かどうかを確かめるのは、書く人の仕事です。",
+      "translation": "بينما لا توقفها Java. التأكد مما إذا كانت القيمة <code>null</code> أم لا هو مسؤولية المبرمج."
+    },
+    {
+      "source": "<strong><code>?.</code> は「安全に書くための心がけ」ではなく、「書かないと通らない」しくみです。</strong> ここがJavaといちばん違うところです。",
+      "translation": "<strong><code>?.</code> ليس «نصيحة لكتابة آمنة»، بل هي آلية «لن تعمل الشيفرة بدونها».&lrm;</strong> هذا هو الاختلاف الأكبر بينها وبين Java."
+    },
+    {
+      "source": "<code>?.</code> が元どおりになっていることを確かめます。",
+      "translation": "تأكد من أن <code>?.</code> قد عادت كما كانت."
+    },
+    {
+      "source": "Runし、STEP 10 と同じ3行に戻ったことを確かめます。",
+      "translation": "شغّل البرنامج وتأكد من أنه عاد إلى الأسطر الثلاثة نفسها كما في STEP 10."
+    },
+    {
+      "source": "練習A・Bを試し、<code>?.</code> を <code>.</code> にした行が赤くなることを確かめた。最後に元の3行へ戻した。",
+      "translation": "جرّبت التدريبين A و B، وتأكدت من ظهور الخط الأحمر في السطر عند تغيير <code>?.</code> إلى <code>.</code> فقط. أخيرًا أعدتها إلى الأسطر الثلاثة الأصلية."
+    },
+    {
+      "source": "STEP 12 · 2コマ目 · 目安 15分",
+      "translation": "STEP 12 · الحصة 2 · حوالي 15 دقيقة"
+    },
+    {
+      "source": "<code>val name1: String</code> には <code>null</code> が入らないので、<code>?.</code> なしで <code>count()</code> を呼べる。",
+      "translation": "بما أن <code>val name1: String</code> لا يقبل <code>null</code>، فيمكن استدعاء <code>count()</code> بدون <code>?.</code>."
+    },
+    {
+      "source": "<code>var name2: String?</code> が <code>null</code> のとき、<code>?.</code> が <code>count()</code> を呼ばずに <code>null</code> を返している。",
+      "translation": "عندما يكون <code>var name2: String?</code> هو <code>null</code>، تُعيد <code>?.</code> قيمة <code>null</code> دون استدعاء <code>count()</code>."
+    },
+    {
+      "source": "同じ <code>name2?.count()</code> でも、文字列が入っていれば <code>count()</code> が呼ばれる。",
+      "translation": "حتى مع <code>name2?.count()</code> نفسها، يُستدعى <code>count()</code> إذا كان يحتوي على سلسلة نصية."
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<code>?</code> を書いた場所と <code>?.</code> を書いた場所を指さして説明します。",
+      "translation": "عندما يصبح مثلما في الجدول، اعرض شاشتك على المعلم واشرح له مؤشرًا على مكان كتابتك <code>?</code> و <code>?.</code>."
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex02</code> も忘れずに入れます。",
+      "translation": "هذه هي كل محتويات <code>main.kt</code> التي أدخلتها حتى الآن. لا تنسَ إدخال <code>package ex02</code> في السطر الأول."
+    },
+    {
+      "source": "② 同じ3行を、JavaとSwiftで出すと",
+      "translation": "② كيف تكتب الأسطر الثلاثة نفسها في Java و Swift"
+    },
+    {
+      "source": "Kotlinの <code>println(name2?.count())</code> の1行が、Javaでは <code>if</code> と <code>else</code> に分かれます。2回出てくるので、ここでは <code>printLength</code> というメソッドにまとめました。<strong>Javaでは「<code>null</code> のとき何を出すか」も自分で書きます。</strong> Kotlinは <code>?.</code> が <code>null</code> を返し、<code>println</code> がそれをそのまま出します。",
+      "translation": "السطر الواحد <code>println(name2?.count())</code> في Kotlin يُقسّم في Java إلى <code>if</code> و <code>else</code>. وبما أنه يظهر مرتين، فقد جمعناه هنا في طريقة تُدعى <code>printLength</code>. <strong>في Java، عليك أيضًا كتابة «ماذا سيُعرض عندما يكون <code>null</code>».&lrm;</strong> أما في Kotlin، تُعيد <code>?.</code> قيمة <code>null</code>، ويطبعها <code>println</code> كما هي."
+    },
+    {
+      "source": "Swiftの書き方はKotlinとほぼ同じです。ただし<strong>実行時の形が違います。</strong> Swiftの <code>String?</code> はオプショナルという入れ物に包まれた別の値なので、そのまま表示すると包まれていることが分かる形で出ます。Kotlinの <code>String?</code> は、実行時には文字列そのものか <code>null</code> かのどちらかで、包む入れ物がありません。だから <code>println(name2?.count())</code> は、数か <code>null</code> をそのまま出します。",
+      "translation": "طريقة الكتابة في Swift مطابقة تقريبًا لـ Kotlin. ومع ذلك، <strong>يختلف شكلها عند التشغيل.</strong> بما أن <code>String?</code> في Swift هو قيمة منفصلة مغلّفة في حاوية تسمى اختياري (Optional)، فعند طباعتها مباشرة، ستظهر بطريقة تُبيّن أنها مغلّفة. بينما في Kotlin، يكون <code>String?</code> عند التشغيل إما السلسلة النصية نفسها أو <code>null</code>، ولا توجد حاوية تغلفها. لذا فإن <code>println(name2?.count())</code> ستطبع العدد أو <code>null</code> كما هو."
+    },
+    {
+      "source": "Kotlinの <code>?</code> と <code>?.</code> は、<strong>コンパイラのための印</strong>です。実行時の値が増えるわけではありません。ここがSwiftのオプショナルと似て見えて、中身が違うところです。",
+      "translation": "علامتا <code>?</code> و <code>?.</code> في Kotlin هما <strong>علامتان للمصرّف (compiler)</strong>. ولا تزيدان القيم أثناء التشغيل. هنا تكمن نقطة التشابه الظاهرية مع Swift Optional مع اختلاف المضمون."
+    },
+    {
+      "source": "③ ex01 と ex02 が並んでいることを確かめる",
+      "translation": "③ تأكد من ظهور ex01 و ex02 معًا"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code> と <code>ex02</code> が並んでいることを確かめます。",
+      "translation": "في نافذة الأدوات <strong>المشروع</strong> (Project) على اليسار، افتح <code>src</code> وتأكد من ظهور <code>ex01</code> و <code>ex02</code> معًا."
+    },
+    {
+      "source": "<code>ex01</code> の <code>main.kt</code> を開きます。1コマ目に書いたコードが、そのまま残っています。",
+      "translation": "افتح <code>main.kt</code> الموجود في <code>ex01</code>. ستجد أن الشيفرة التي كتبتها في الحصة الأولى لا تزال موجودة كما هي."
+    },
+    {
+      "source": "<code>fun main()</code> が2つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。",
+      "translation": "يوجد اثنان من <code>fun main()</code>، لكن نظرًا لاختلاف الحزمة، فهما برنامجان مختلفان. افتح الملف الذي تريد تشغيله وانقر على ▷ الموجودة على يسار <code>fun main()</code> الخاص به."
+    },
+    {
+      "source": "プロジェクトは <code>K01HelloKotlin</code> の1つだけを使い続けます。回を重ねるごとに <code>src</code> の下のパッケージが増えていくので、前に書いたコードをいつでも開いて見返せます。",
+      "translation": "سنستمر في استخدام مشروع <code>K01HelloKotlin</code> الوحيد. مع تقدم الحصص، ستزداد الحزم أسفل <code>src</code>، لتتمكن من فتح ورؤية الشيفرة التي كتبتها سابقًا في أي وقت."
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code> と <code>ex02</code> が同じプロジェクトに並んでいることも確かめた。",
+      "translation": "أجريت التحقق النهائي، وعرضت شاشتي على المعلم. تأكدت أيضًا من ظهور <code>ex01</code> و <code>ex02</code> معًا في المشروع نفسه."
+    },
+    {
+      "source": "この回のまとめ",
+      "translation": "ملخص هذه الحصة"
+    },
+    {
+      "source": "<strong><code>?</code> を付けた型だけが <code>null</code> を持てる → 呼ぶときは <code>?.</code> を付ける → 返ってくるのも <code>?</code> の付いた型。</strong><br>Javaでは実行時に <code>NullPointerException</code> で気づいていたことを、Kotlinでは書いている最中に見つけられます。Swiftのオプショナルで知っている考え方が、そのまま使えます。",
+      "translation": "<strong>النوع الذي ينتهي بـ <code>?</code> هو وحده الذي يقبل <code>null</code> ← نضع <code>?.</code> عند استدعائه ← ما يُعاد هو أيضًا نوع ينتهي بـ <code>?</code>.</strong><br>ما كنت تكتشفه في Java أثناء التشغيل عبر <code>NullPointerException</code>، يمكنك اكتشافه في Kotlin أثناء كتابة الشيفرة. يمكنك استخدام نفس المفاهيم التي تعرفها في Swift Optional."
+    },
+    {
+      "source": "STEP 13 · 3コマ目 · 目安 5分",
+      "translation": "STEP 13 · الحصة 3 · حوالي 5 دقائق"
+    },
+    {
+      "source": "3コマ目のゴール（関数）",
+      "translation": "هدف الحصة 3 (الدالة)"
+    },
+    {
+      "source": "ここからが<strong>3コマ目</strong>です。使うプロジェクトは1コマ目・2コマ目と同じ <code>K01HelloKotlin</code> で、作り直しません。<code>src</code> の下に <code>ex03</code> パッケージを足して、その中に書きます。すでにある <code>ex01</code> と <code>ex02</code> は、そのまま残します。",
+      "translation": "تبدأ هنا <strong>الحصة 3</strong>. المشروع الذي ستستخدمه هو <code>K01HelloKotlin</code> نفسه المستخدم في الحصتين 1 و 2، ولن تُنشئ مشروعًا جديدًا. أضف حزمة <code>ex03</code> أسفل <code>src</code>، واكتب بداخلها. اترك <code>ex01</code> و <code>ex02</code> الموجودتين كما هما."
+    },
+    {
+      "source": "この回の主題は <strong>関数の宣言</strong> です。やることはJavaのメソッド、Swiftの関数とまったく同じですが、<strong>書く順番と記号が、JavaともSwiftとも違います。</strong> 何を書くかではなく、どこに何を書くかを覚える回です。",
+      "translation": "الموضوع الأساسي لهذه الحصة هو <strong>التصريح عن الدالة</strong>. ما سنفعله مطابق تمامًا لطريقة Java ودالة Swift، لكن <strong>ترتيب الكتابة والرموز يختلف عن كل من Java و Swift.</strong> هذه الحصة مخصصة لتتعلم أين تكتب وماذا تكتب، وليس فقط ماذا تكتب."
+    },
+    {
+      "source": "キーワードなし（修飾子と戻り値の型で始める）",
+      "translation": "بدون كلمة مفتاحية (تبدأ بالمُعدِّل ونوع القيمة المُعادة)"
+    },
+    {
+      "source": "引数 <code>a: Int</code>",
+      "translation": "المُعامِل <code>a: Int</code>"
+    },
+    {
+      "source": "<code>int a</code>（型が先、名前があと）",
+      "translation": "<code>int a</code> (النوع أولًا، ثم الاسم)"
+    },
+    {
+      "source": "<code>a: Int</code>（名前が先、型があと）",
+      "translation": "<code>a: Int</code> (الاسم أولًا، ثم النوع)"
+    },
+    {
+      "source": "戻り値 <code>: Int</code>",
+      "translation": "القيمة المُعادة <code>: Int</code>"
+    },
+    {
+      "source": "メソッド名の前の <code>int</code>",
+      "translation": "<code>int</code> الموجودة قبل اسم الطريقة"
+    },
+    {
+      "source": "戻り値を書かない",
+      "translation": "لا تكتب القيمة المُعادة"
+    },
+    {
+      "source": "<code>void</code> と書く",
+      "translation": "تكتب <code>void</code>"
+    },
+    {
+      "source": "<code>-&gt; Void</code> を省く",
+      "translation": "تتخطى <code>-&gt; Void</code>"
+    },
+    {
+      "source": "同じ関数を3つの言語で書く",
+      "translation": "كتابة الدالة نفسها في 3 لغات"
+    },
+    {
+      "source": "2つの <code>Int</code> を受け取って、足した <code>Int</code> を返す関数です。中身は3つとも同じで、違うのは形だけです。",
+      "translation": "إنها دالة تتلقى مُعامِلين من نوع <code>Int</code>، وتعيد مجموعهما كـ <code>Int</code>. المحتوى متطابق في الثلاثة، والاختلاف في الشكل فقط."
+    },
+    {
+      "source": "Kotlinは <code>fun</code> で始めます。Swiftの <code>func</code> にあたります。Javaには、この位置に置くキーワードがありません。",
+      "translation": "تبدأ Kotlin بـ <code>fun</code>. وهي تعادل <code>func</code> في Swift. أما في Java، فلا توجد كلمة مفتاحية توضع في هذا المكان."
+    },
+    {
+      "source": "引数は、Kotlinが <code>a: Int</code>、Swiftも <code>a: Int</code>、Javaだけが <code>int a</code> です。<strong>KotlinとSwiftは名前が先で、Javaは型が先です。</strong>",
+      "translation": "بالنسبة للمُعامِلات، تُكتب في Kotlin على شكل <code>a: Int</code>، وفي Swift أيضًا <code>a: Int</code>، وفي Java وحدها <code>int a</code>. <strong>في Kotlin و Swift يُكتب الاسم أولًا، بينما في Java يُكتب النوع أولًا.</strong>"
+    },
+    {
+      "source": "戻り値の型は、Kotlinがかっこのうしろの <code>: Int</code>、Swiftがかっこのうしろの <code>-&gt; Int</code>、Javaがメソッド名の前の <code>int</code> です。<strong>3つとも位置か記号が違います。</strong>",
+      "translation": "أما نوع القيمة المُعادة، فيُكتب في Kotlin بعد القوسين <code>: Int</code>، وفي Swift بعد القوسين <code>-&gt; Int</code>، وفي Java قبل اسم الطريقة <code>int</code>. <strong>تختلف الثلاثة إما في الموقع أو الرمز.</strong>"
+    },
+    {
+      "source": "値を返す <code>return</code> は、JavaともSwiftとも同じ書き方です。行末に <code>;</code> が要らない点は、1コマ目・2コマ目と同じです。",
+      "translation": "طريقة كتابة <code>return</code> لإرجاع القيمة مطابقة لـ Java و Swift. وعدم الحاجة إلى <code>;</code> في نهاية السطر يطابق ما تعلمته في الحصتين 1 و 2."
+    },
+    {
+      "source": "並びと位置は STEP 15 で1つずつ確かめます。ここでは「3つとも違う形になる」ことだけ見ておきます。",
+      "translation": "سنتأكد من الترتيب والمواقع واحدة تلو الأخرى في STEP 15. هنا، اكتفِ بملاحظة أن «الثلاثة تتخذ أشكالًا مختلفة».&lrm;"
+    },
+    {
+      "source": "3コマ目のゴール（コンソールに出る2行）",
+      "translation": "هدف الحصة 3 (السطران الظاهران في وحدة التحكم)"
+    },
+    {
+      "source": "Runの結果 · この2行が出れば完成",
+      "translation": "نتيجة التشغيل · يكتمل العمل بظهور هذين السطرين"
+    },
+    {
+      "source": "同じ <code>3</code> が2行出ます。<strong>1行目と2行目では、<code>3</code> を出している場所が違います。</strong> どちらがどこで出しているのかは、STEP 16 で確かめます。",
+      "translation": "يظهر نفس الرقم <code>3</code> في سطرين. <strong>المكان الذي يُخرج <code>3</code> في السطر الأول يختلف عن السطر الثاني.</strong> سنتأكد في STEP 16 من أيهما يُخرج في أي مكان."
+    },
+    {
+      "source": "前半（約40分）",
+      "translation": "النصف الأول (حوالي 40 دقيقة)"
+    },
+    {
+      "source": "<code>ex03</code> を作り、戻り値のある関数 <code>sum</code> を書いて1行目を出す。",
+      "translation": "أنشئ <code>ex03</code>، واكتب دالة <code>sum</code> ذات قيمة مُعادة لإخراج السطر الأول."
+    },
+    {
+      "source": "後半（約50分）",
+      "translation": "النصف الثاني (حوالي 50 دقيقة)"
+    },
+    {
+      "source": "戻り値のない関数 <code>sum2</code> を足し、2行の出力を完成させる。",
+      "translation": "أضف دالة <code>sum2</code> بدون قيمة مُعادة، وأكمل إخراج السطرين."
+    },
+    {
+      "source": "3コマ目に出す2行（<code>3</code> / <code>3</code>）を、上のゴールで確かめた。",
+      "translation": "تأكدت من السطرين المطلوب إخراجهما في الحصة 3 (<code>3</code> / <code>3</code>) في الهدف أعلاه."
+    },
+    {
+      "source": "次へ：ex03 を作る →",
+      "translation": "الانتقال إلى إنشاء ex03 ←"
+    },
+    {
+      "source": "STEP 14 · 3コマ目 · 目安 5分",
+      "translation": "STEP 14 · الحصة 3 · حوالي 5 دقائق"
+    },
+    {
+      "source": "ex03 パッケージと main.kt を作る",
+      "translation": "إنشاء حزمة ex03 و main.kt"
+    },
+    {
+      "source": "<code>K01HelloKotlin</code> プロジェクトを開き直し、<code>src</code> の下に <code>ex03</code> パッケージと、その中の <code>main.kt</code> を作ります。",
+      "translation": "أعد فتح مشروع <code>K01HelloKotlin</code>، وأنشئ حزمة <code>ex03</code> أسفل <code>src</code>، وبداخلها <code>main.kt</code>."
+    },
+    {
+      "source": "<strong>STEP 08 と同じ操作です。</strong>違うのは、パッケージ名が <code>ex02</code> ではなく <code>ex03</code> になることだけです。手順は、下にもう一度すべて書きます。",
+      "translation": "<strong>وهي نفس عملية STEP 08.</strong> الاختلاف الوحيد هو أن اسم الحزمة سيصبح <code>ex03</code> بدلًا من <code>ex02</code>. سنكتب جميع الخطوات مرة أخرى أدناه."
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> と <code>ex02</code> があることを確かめます。どちらも消しません。",
+      "translation": "تأكد من وجود <code>src</code> في نافذة الأدوات <strong>المشروع</strong> (Project) على اليسار، وأسفله <code>ex01</code> و <code>ex02</code>. لا تحذف أيًا منهما."
+    },
+    {
+      "source": "② ex03 パッケージを作る",
+      "translation": "② إنشاء حزمة ex03"
+    },
+    {
+      "source": "名前に <code>ex03</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex03</code> ができます。すべて小文字で、記号は入れません。",
+      "translation": "أدخل الاسم <code>ex03</code> واضغط على <kbd>Return</kbd>. ستُنشأ <code>ex03</code> أسفل <code>src</code>. استخدم أحرفًا صغيرة فقط، ولا تُدخل أي رموز."
+    },
+    {
+      "source": "できた <code>ex03</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でも <code>ex02</code> でもなく、<code>ex03</code> を右クリックします。</strong>",
+      "translation": "انقر بزر الفأرة الأيمن على <code>ex03</code> التي تم إنشاؤها، واختر <strong>新規 → Kotlin ファイル/クラス</strong> (جديد ← ملف/صنف Kotlin). <strong>انقر بزر الفأرة الأيمن على <code>ex03</code>، وليس على <code>src</code> أو <code>ex01</code> أو <code>ex02</code>.</strong>"
+    },
+    {
+      "source": "できた <code>main.kt</code> の1行目に <code>package ex03</code> が入っていることを確かめます。",
+      "translation": "تأكد من وجود <code>package ex03</code> في السطر الأول من ملف <code>main.kt</code> الذي تم إنشاؤه."
+    },
+    {
+      "source": "1行目が <code>package ex03</code> になっていないとき",
+      "translation": "عندما لا يكون السطر الأول <code>package ex03</code>"
+    },
+    {
+      "source": "ファイルが <code>ex03</code> の中ではなく、<code>src</code> の直下か、<code>ex01</code>・<code>ex02</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex03</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "أُنشئ الملف أسفل <code>src</code> مباشرةً أو داخل <code>ex01</code> أو <code>ex02</code>، وليس داخل <code>ex03</code>. انقر بزر الفأرة الأيمن على <code>main.kt</code> واحذفه، ثم أعد المحاولة من ③. النقر بزر الفأرة الأيمن على <code>ex03</code> هو ما يحدد مكان الإنشاء."
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージと、関数を置く場所）",
+      "translation": "④ كيف تكتب ذلك في Java / Swift (الحزمة، والمكان الذي توضع فيه الدالة)"
+    },
+    {
+      "source": "<strong>Kotlinは、関数をファイルの直下に書けます。</strong> これを<strong>トップレベル関数</strong>と呼びます。1コマ目から書いている <code>fun main()</code> が、その1つめです。Swiftのグローバル関数と同じ置き方です。",
+      "translation": "<strong>في Kotlin، يمكنك كتابة الدالة مباشرة أسفل الملف.</strong> ويُسمى هذا <strong>دالة في المستوى الأعلى</strong> (トップレベル関数). والدالة <code>fun main()</code> التي نكتبها منذ الحصة الأولى هي أول مثال على ذلك. إنها طريقة الوضع نفسها المستخدمة للدالة العامة (global function) في Swift."
+    },
+    {
+      "source": "Javaは、メソッドを必ずクラスの中に置きます。<strong>この回で書く <code>sum</code> も、Javaならクラスの中の <code>static</code> メソッドにあたります。</strong>",
+      "translation": "في Java، يجب وضع الطريقة دائمًا داخل صنف. <strong>والدالة <code>sum</code> التي سنكتبها في هذه الحصة تعادل طريقة <code>static</code> داخل صنف في Java.</strong>"
+    },
+    {
+      "source": "<code>ex01</code>・<code>ex02</code>・<code>ex03</code> は別のパッケージなので、どれにも <code>main.kt</code> があり、どれにも <code>fun main()</code> があっても衝突しません。Javaで別パッケージに同じクラス名を置けるのと同じです。",
+      "translation": "بما أن <code>ex01</code> و <code>ex02</code> و <code>ex03</code> هي حزم مختلفة، فلا بأس بوجود <code>main.kt</code> و <code>fun main()</code> في كل منها دون حدوث تعارض. هذا يشبه إمكانية وضع نفس اسم الصنف في حزم مختلفة في Java."
+    },
+    {
+      "source": "<code>src/ex03/main.kt</code> を作り、1行目が <code>package ex03</code> になっていることを確かめた。<code>ex01</code> と <code>ex02</code> も残っている。",
+      "translation": "أنشأت <code>src/ex03/main.kt</code>، وتأكدت من أن السطر الأول هو <code>package ex03</code>. و <code>ex01</code> و <code>ex02</code> لا يزالان موجودين."
+    },
+    {
+      "source": "次へ：戻り値のある関数 →",
+      "translation": "الانتقال إلى دالة ذات قيمة مُعادة ←"
+    },
+    {
+      "source": "STEP 15 · 3コマ目 · 目安 30分",
+      "translation": "STEP 15 · الحصة 3 · حوالي 30 دقيقة"
+    },
+    {
+      "source": "戻り値のある関数（fun sum）",
+      "translation": "دالة ذات قيمة مُعادة (fun sum)"
+    },
+    {
+      "source": "<code>fun</code> で関数を宣言し、引数を <code>名前: 型</code>、戻り値を末尾の <code>: 型</code> で書きます。<code>return</code> で返した値を <code>main</code> で受け取り、1行目の <code>3</code> を出します。",
+      "translation": "صرّح عن الدالة باستخدام <code>fun</code>، واكتب المُعامِل على شكل <code>名前: 型</code>، والقيمة المُعادة في النهاية على شكل <code>: 型</code>. استلم القيمة المُعادة بـ <code>return</code> في <code>main</code>، وأخرج <code>3</code> في السطر الأول."
+    },
+    {
+      "source": "変更するファイル：src/ex03/main.kt",
+      "translation": "الملف الذي ستغيّره: src/ex03/main.kt"
+    },
+    {
+      "source": "src/ex03/main.kt · 全体を置き換える",
+      "translation": "src/ex03/main.kt · استبدل النص كاملا بما يلي"
+    },
+    {
+      "source": "<code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。",
+      "translation": "يُوضع كل من <code>fun main()</code> و <code>fun sum(…)</code> مباشرة أسفل الملف. <strong>لا تجعلهما متداخلين.</strong> ترتيب الكتابة حر، فحتى لو كتبت <code>sum</code> أسفل <code>main</code>، يمكنك استدعاؤها من <code>main</code>."
+    },
+    {
+      "source": "<code>sum(1, 2)</code> が <code>3</code> を返し、その値が <code>ret</code> に入り、<code>println(ret)</code> が出しています。<strong><code>sum</code> の中には <code>println</code> がありません。</strong> 出しているのは <code>main</code> のほうです。",
+      "translation": "تُعيد <code>sum(1, 2)</code> القيمة <code>3</code>، وتُحفظ هذه القيمة في <code>ret</code>، ويُخرجها <code>println(ret)</code>. <strong>لا يوجد <code>println</code> داخل <code>sum</code>.</strong> مَن يقوم بالإخراج هو <code>main</code>."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（関数の宣言）",
+      "translation": "③ كيف تكتب ذلك في Java / Swift (التصريح عن الدالة)"
+    },
+    {
+      "source": "やっていることは3つとも同じです。<strong>違うのは、同じ部品をどの順番に並べるかだけです。</strong>",
+      "translation": "ما نفعله متطابق في اللغات الثلاث. <strong>الاختلاف الوحيد هو ترتيب المكوّنات نفسها.</strong>"
+    },
+    {
+      "source": "Kotlinの <code>fun</code> は、Swiftの <code>func</code> にあたります。Javaには対応する語がなく、修飾子（<code>static</code>）と戻り値の型から始まります。",
+      "translation": "تعادل <code>fun</code> في Kotlin الكلمة <code>func</code> في Swift. أما في Java فلا توجد كلمة مقابلة، وتبدأ بالمُعدِّل (<code>static</code>) ونوع القيمة المُعادة."
+    },
+    {
+      "source": "Kotlinの呼び出しは <code>sum(1, 2)</code> で、Javaと同じ形です。受け取った値を <code>val</code> に入れるところも、Javaの <code>final</code> 付きの変数と同じです。",
+      "translation": "طريقة استدعاء Kotlin هي <code>sum(1, 2)</code>، وهي بنفس شكل Java. وطريقة حفظ القيمة المُستلمة في <code>val</code> تشبه أيضًا متغيّر Java المرفق بـ <code>final</code>."
+    },
+    {
+      "source": "④ 引数は「名前: 型」 — Swiftと同じ並び、Javaと逆",
+      "translation": "④ المُعامِلات على شكل «الاسم: النوع» — نفس الترتيب في Swift، وعكس Java"
+    },
+    {
       "source": "言語",
       "translation": "اللغة"
+    },
+    {
+      "source": "引数の書き方",
+      "translation": "طريقة كتابة المُعامِلات"
+    },
+    {
+      "source": "先に書くもの",
+      "translation": "ما يُكتب أولًا"
+    },
+    {
+      "source": "<strong>Javaの並びで <code>fun sum(Int a, Int b)</code> と書くと、通りません。</strong> Runする前に赤い波線が出て、引数に型が書かれていない、というおおよそその意味のメッセージが出ます。言い回しは IntelliJ IDEA と Kotlin のバージョンで変わるので、文言は覚えなくて構いません。読み替えるのは<strong>「名前と型の順番が逆になっている」</strong>の1つだけです。",
+      "translation": "<strong>إذا كتبتها بترتيب Java هكذا <code>fun sum(Int a, Int b)</code>، فلن تعمل الشيفرة.</strong> سيظهر خط مموّج أحمر قبل أن تضغط على Run، وستظهر رسالة تفيد تقريبًا بأنه لم يُكتب نوع للمُعامِل. تختلف الصياغة حسب إصدار IntelliJ IDEA و Kotlin، لذا لا حاجة لحفظ نص الرسالة. كل ما عليك فهمه هو <strong>«ترتيب الاسم والنوع معكوس»</strong> فقط."
+    },
+    {
+      "source": "なぜKotlinは名前を先に書くのか",
+      "translation": "لماذا تكتب Kotlin الاسم أولًا"
+    },
+    {
+      "source": "1コマ目で書いた変数の宣言を思い出してください。Kotlinは <code>val number1: Int = 1</code> と書き、<strong>名前が先、型があと</strong>でした。関数の引数も、同じ並びにそろえてあります。",
+      "translation": "تذكر التصريح عن المتغيّر الذي كتبته في الحصة الأولى. تُكتب في Kotlin على النحو <code>val number1: Int = 1</code>، أي <strong>الاسم أولًا، ثم النوع</strong>. وقد جُعلت مُعامِلات الدالة مطابقة لهذا الترتيب."
+    },
+    {
+      "source": "この並びだと、<strong>型を省いても形が崩れません。</strong> <code>val number1 = 1</code> のように、うしろの <code>: Int</code> を取るだけで済みます。Javaの <code>int number1 = 1;</code> は先頭が型なので、そこを省くと何も残りません。<strong>型を省ける言語は、型をうしろに置くほうが都合がよいのです。</strong> Swiftが同じ並びなのも、同じ理由です。",
+      "translation": "بهذا الترتيب، <strong>لا يختل الشكل حتى لو حُذف النوع.</strong> يكفي إزالة <code>: Int</code> من النهاية، لتصبح <code>val number1 = 1</code>. أما <code>int number1 = 1;</code> في Java فيبدأ بالنوع، وإذا حذفته فلن يتبقى شيء. <strong>بالنسبة للغات التي تسمح بحذف النوع، من الأنسب وضع النوع في النهاية.</strong> وهذا هو نفس السبب الذي يجعل الترتيب في Swift مشابهًا."
+    },
+    {
+      "source": "ただし、<strong>関数の引数の型だけは省けません。</strong> 呼ぶ側が何を渡してよいか決まらなくなるからです。ここはSwiftも同じです。",
+      "translation": "ومع ذلك، <strong>لا يمكن حذف نوع مُعامِل الدالة وحده.</strong> لأن الطرف الذي يستدعي الدالة لن يعرف ماذا يمرر. وهذا الأمر ينطبق على Swift أيضًا."
+    },
+    {
+      "source": "⑤ 戻り値は末尾に「: 型」 — 3言語で位置か記号が違う",
+      "translation": "⑤ القيمة المُعادة في النهاية على شكل «: النوع» — يختلف الموقع أو الرمز في اللغات الثلاث"
+    },
+    {
+      "source": "宣言の1行目",
+      "translation": "السطر الأول من التصريح"
+    },
+    {
+      "source": "戻り値の型を書く場所",
+      "translation": "مكان كتابة نوع القيمة المُعادة"
+    },
+    {
+      "source": "かっこのうしろに <code>: Int</code>",
+      "translation": "<code>: Int</code> بعد القوسين"
+    },
+    {
+      "source": "メソッド名の前に <code>int</code>",
+      "translation": "<code>int</code> قبل اسم الطريقة"
+    },
+    {
+      "source": "かっこのうしろに <code>-&gt; Int</code>",
+      "translation": "<code>-&gt; Int</code> بعد القوسين"
+    },
+    {
+      "source": "<strong>KotlinとSwiftは場所が同じで、記号だけが違います。</strong> Kotlinは <code>:</code>、Swiftは <code>-&gt;</code> です。Swiftの書き方で <code>fun sum(a: Int, b: Int) -&gt; Int</code> と書くと、Kotlinでは通りません。",
+      "translation": "<strong>تتفق Kotlin و Swift في المكان، ويختلفان في الرمز فقط.</strong> تستخدم Kotlin <code>:</code>، بينما تستخدم Swift <code>-&gt;</code>. وإذا كتبتها بطريقة Swift هكذا <code>fun sum(a: Int, b: Int) -&gt; Int</code>، فلن تعمل في Kotlin."
+    },
+    {
+      "source": "Kotlinが <code>:</code> を使うのは、<strong>変数の型注釈と同じ記号にそろえるため</strong>です。<code>val ret: Int</code> と <code>fun sum(…): Int</code> で、「<code>:</code> のうしろが型」という読み方が1つで済みます。",
+      "translation": "السبب وراء استخدام Kotlin لـ <code>:</code> هو <strong>لتطابق الرمز مع تحديد نوع المتغيّر صراحة</strong>. ففي <code>val ret: Int</code> و <code>fun sum(…): Int</code>، تكفي قراءة واحدة وهي أن «ما بعد <code>:</code> هو النوع».&lrm;"
+    },
+    {
+      "source": "Javaだけが、名前より前に型を書きます。引数の <code>int a</code> と同じで、<strong>Javaは型を先に書く言語だから</strong>です。",
+      "translation": "Java وحدها تكتب النوع قبل الاسم. تمامًا كما في المُعامِل <code>int a</code>، <strong>لأن Java لغة تكتب النوع أولًا.</strong>"
+    },
+    {
+      "source": "Kotlinでは、<code>: Int</code> と書いたら <code>return</code> で必ず値を返します。返さずに <code>}</code> まで進むと、<code>return</code> が足りない、というおおよそその意味のエラーになり、Runできません。",
+      "translation": "في Kotlin، إذا كتبت <code>: Int</code> فيجب عليك إعادة القيمة بـ <code>return</code> دائمًا. إذا وصلت إلى <code>}</code> بدون إرجاع قيمة، فسيظهر خطأ معناه تقريبًا أن <code>return</code> مفقود، ولن تتمكن من تشغيل البرنامج."
+    },
+    {
+      "source": "<code>sum</code> を書いて <code>3</code> を出せた。",
+      "translation": "كتبت <code>sum</code> وتمكنت من عرض <code>3</code>."
+    },
+    {
+      "source": "次へ：戻り値のない関数 →",
+      "translation": "الانتقال إلى دالة بدون قيمة مُعادة ←"
+    },
+    {
+      "source": "STEP 16 · 3コマ目 · 目安 20分",
+      "translation": "STEP 16 · الحصة 3 · حوالي 20 دقيقة"
+    },
+    {
+      "source": "戻り値のない関数（fun sum2）",
+      "translation": "دالة بدون قيمة مُعادة (fun sum2)"
+    },
+    {
+      "source": "戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。",
+      "translation": "لنكتب دالة بدون قيمة مُعادة. في Kotlin، <strong>لا تكتب شيئًا</strong> في النهاية. أخرج الرقم <code>3</code> في السطر الثاني لتكتمل المخرجات."
+    },
+    {
+      "source": "足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。",
+      "translation": "ما تمت إضافته هو السطر <code>sum2(1, 2)</code> داخل <code>main</code>، والتصريح عن <code>sum2</code> في الأسفل. <strong>لا تكتب شيئًا بعد قوسين <code>sum2</code>.</strong> لا تضع نوعًا مثل <code>: Int</code> ولا أي رمز آخر."
+    },
+    {
+      "source": "Runの結果 · この2行が出れば成功",
+      "translation": "نتيجة التشغيل · يكتمل العمل بظهور هذين السطرين"
+    },
+    {
+      "source": "出している場所",
+      "translation": "مكان الإخراج"
+    },
+    {
+      "source": "<code>sum</code> が返した値を、<code>main</code> の <code>println(ret)</code> が出している。",
+      "translation": "القيمة التي تعيدها <code>sum</code>، يُخرجها السطر <code>println(ret)</code> داخل <code>main</code>."
+    },
+    {
+      "source": "<code>sum2</code> の中の <code>println(a + b)</code> が出している。<code>main</code> は受け取っていない。",
+      "translation": "يُخرجه السطر <code>println(a + b)</code> داخل <code>sum2</code>. بينما لا تستلم <code>main</code> أي شيء."
+    },
+    {
+      "source": "同じ <code>3</code> でも、<strong>出している場所が違います。</strong> <code>sum</code> は計算結果を返すだけで出力せず、<code>sum2</code> は計算結果を返さずに、関数の中で出力します。",
+      "translation": "رغم أنه الرقم <code>3</code> نفسه، إلا أن <strong>مكان إخراجه يختلف.</strong> دالة <code>sum</code> تعيد نتيجة الحساب فقط دون إخراجها، أما <code>sum2</code> فتخرج النتيجة داخل الدالة نفسها دون أن تعيدها."
+    },
+    {
+      "source": "③ Java / Swift ではどう書くか（戻り値がないとき）",
+      "translation": "③ كيف تكتب ذلك في Java / Swift (عندما لا تكون هناك قيمة مُعادة)"
+    },
+    {
+      "source": "<strong>Kotlinは、戻り値がないときに何も書きません。</strong> Swiftも <code>-&gt; Void</code> を省けるので、書き上がりは同じ形になります。",
+      "translation": "<strong>في Kotlin، لا تكتب شيئًا عندما لا توجد قيمة مُعادة.</strong> وفي Swift يمكنك أيضًا الاستغناء عن <code>-&gt; Void</code>، لذا فالشكل النهائي للشيفرة هو نفسه."
+    },
+    {
+      "source": "Javaだけは <code>void</code> を必ず書きます。<strong>メソッド名の前に必ず何かを置く文法だから</strong>です。前を空にはできないので、「無い」ことを表す語が要ります。",
+      "translation": "في Java وحدها يجب كتابة <code>void</code> دائمًا. <strong>ذلك لأن قواعد اللغة تتطلب وضع شيء ما قبل اسم الطريقة.</strong> وبما أنه لا يمكن ترك المكان فارغًا، يُستخدم مصطلح للتعبير عن «العدم».&lrm;"
+    },
+    {
+      "source": "KotlinとSwiftは、戻り値の型をかっこの<strong>うしろ</strong>に置きます。うしろは、書かなければそこで終わるだけです。だから「無い」ことを表す語を用意しなくて済みます。<strong>書く位置の違いが、そのまま省けるかどうかの違いになっています。</strong>",
+      "translation": "في Kotlin و Swift يُوضع نوع القيمة المُعادة <strong>بعد</strong> القوسين. وإذا لم يُكتب شيء بعد القوسين، ينتهي الأمر ببساطة هناك. لهذا لا تحتاج لابتكار مصطلح يعبر عن «العدم». <strong>اختلاف مكان الكتابة هو ما يحدد إمكانية حذفها أم لا.</strong>"
+    },
+    {
+      "source": "④ 何も書かないとき、Kotlinは何を返しているのか",
+      "translation": "④ ماذا تعيد Kotlin عندما لا نكتب شيئًا"
+    },
+    {
+      "source": "Kotlinには、戻り値がないことを表す <code>Unit</code> という型があります。<code>sum2</code> のように何も書かなかった関数は、<code>Unit</code> を返す関数として扱われます。<code>fun sum2(a: Int, b: Int): Unit</code> と書いても同じ意味ですが、<strong>ふつうは書きません。</strong>省くのが既定の書き方です。",
+      "translation": "في Kotlin يوجد نوع يُسمى <code>Unit</code> يشير إلى عدم وجود قيمة مُعادة. إذا لم تكتب شيئًا للدالة مثل <code>sum2</code>، فتُعامل كدالة تعيد <code>Unit</code>. وكتابة <code>fun sum2(a: Int, b: Int): Unit</code> لها نفس المعنى، ولكن <strong>عادةً لا تُكتب هكذا.</strong> فالطريقة الافتراضية هي الاستغناء عنها."
+    },
+    {
+      "source": "<code>main</code> の中の <code>sum2(1, 2)</code> を <code>val ret2 = sum2(1, 2)</code> に書き換え、その下に <code>println(ret2)</code> を1行足してRunします。確かめたら、足した行を消し、<code>sum2(1, 2)</code> の形に戻します。",
+      "translation": "غيّر <code>sum2(1, 2)</code> الموجودة داخل <code>main</code> لتصبح <code>val ret2 = sum2(1, 2)</code>، وأضف تحتها سطر <code>println(ret2)</code> ثم انقر على Run. بعد التحقق، احذف السطر المضاف، وأعدها إلى شكل <code>sum2(1, 2)</code>."
+    },
+    {
+      "source": "出力は3行になり、3行目に <code>kotlin.Unit</code> と出ます。<strong>「何も返さない」ように見える関数も、値を1つ返しています。</strong>ふだんはその値を受け取らないので、目に見えないだけです。",
+      "translation": "تصبح المخرجات 3 أسطر، حيث يظهر <code>kotlin.Unit</code> في السطر الثالث. <strong>حتى الدالة التي تبدو وكأنها «لا تعيد شيئًا»، تعيد في الحقيقة قيمة واحدة.</strong> ولكن بما أننا لا نستلم هذه القيمة عادةً، فهي غير مرئية فقط."
+    },
+    {
+      "source": "Javaの <code>void</code> は型ではないので、<code>int x = sum2(1, 2);</code> のように結果を変数へ入れることはできません。Swiftの <code>Void</code> は空のタプル <code>()</code> の別名で、Kotlinの <code>Unit</code> と同じ発想です。<strong>Javaだけが「値が無い」を型の外側で表しています。</strong>",
+      "translation": "بما أن <code>void</code> في Java ليست نوعًا، لا يمكنك وضع النتيجة في متغيّر كما في <code>int x = sum2(1, 2);</code>. أما <code>Void</code> في Swift فهو اسم بديل للمصفوفة (tuple) الفارغة <code>()</code>، وهو نفس مفهوم <code>Unit</code> في Kotlin. <strong>في Java وحدها يُعبّر عن «عدم وجود قيمة» من خارج نطاق الأنواع.</strong>"
+    },
+    {
+      "source": "書くときに覚えるのは1つだけです。<strong>戻り値がなければ、かっこのうしろには何も書かない。</strong>",
+      "translation": "ما يجب عليك تذكره عند الكتابة هو شيء واحد فقط. <strong>إذا لم تكن هناك قيمة مُعادة، لا تكتب شيئًا بعد القوسين.</strong>"
+    },
+    {
+      "source": "<code>: Unit</code> と書いても動きますが、この教材では書きません。<strong>Kotlinのふつうの書き方は、省いた形です。</strong>",
+      "translation": "ستعمل الدالة حتى لو كتبت <code>: Unit</code>، لكننا لن نستخدم هذه الطريقة في هذه المادة. <strong>الطريقة المعتادة للكتابة في Kotlin هي الشكل المحذوف.</strong>"
+    },
+    {
+      "source": "2行を出せた。<code>val ret2 = sum2(1, 2)</code> に書き換えて <code>kotlin.Unit</code> が出ることを確かめ、元の形に戻した。",
+      "translation": "تمكنت من عرض السطرين. تأكدت من ظهور <code>kotlin.Unit</code> عند التغيير إلى <code>val ret2 = sum2(1, 2)</code>، ثم أعدتها إلى شكلها الأصلي."
+    },
+    {
+      "source": "STEP 17 · 3コマ目 · 目安 15分",
+      "translation": "STEP 17 · الحصة 3 · حوالي 15 دقيقة"
+    },
+    {
+      "source": "ここからは自分で書き換えます。<strong>1つ変える → 予想する → Runする</strong>の順です。答えは、試してから開きましょう。<strong>エラーのメッセージは、文言ではなく意味だけを読みます。</strong>言い回しは IntelliJ IDEA と Kotlin のバージョンで変わります。",
+      "translation": "من هنا ستغيّر الكود بنفسك. بالترتيب التالي: <strong>غيّر شيئًا واحدًا ← توقّع ← انقر Run.</strong> افتح الإجابة بعد أن تجرب بنفسك. <strong>بالنسبة لرسائل الخطأ، اقرأ المعنى فقط وليس النص الحرفي.</strong> فالصياغة تتغير حسب إصدار IntelliJ IDEA و Kotlin."
+    },
+    {
+      "source": "練習A · 引数を3つに増やす（必須・6分）",
+      "translation": "التدريب A · زيادة المُعامِلات إلى 3 (إلزامي · حوالي 6 دقائق)"
+    },
+    {
+      "source": "<code>sum</code> の引数を3つに増やします。<code>fun sum(a: Int, b: Int, c: Int): Int</code> にし、中身も <code>return a + b + c</code> に書き換えます。<strong><code>main</code> の <code>sum(1, 2)</code> はそのままにして</strong>、Runを押す前にその行を見てください。",
+      "translation": "زِد مُعامِلات <code>sum</code> إلى 3. غيّر التصريح ليصبح <code>fun sum(a: Int, b: Int, c: Int): Int</code>، واجعل المحتوى <code>return a + b + c</code>. <strong>اترك <code>sum(1, 2)</code> داخل <code>main</code> كما هي</strong>، وانظر إلى ذلك السطر قبل أن تنقر على Run."
+    },
+    {
+      "source": "<code>sum(1, 2)</code> の行に赤い波線が出て、Runできません。3つ必要な引数に2つしか渡していないので、<strong>足りない引数がある</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "يظهر خط مموّج أحمر في سطر <code>sum(1, 2)</code> ولا يمكنك تشغيل البرنامج. نظرًا لأنك مررت مُعامِلين لدالة تتطلب 3، ستظهر رسالة تعني تقريبًا <strong>وجود مُعامِل ناقص</strong>."
+    },
+    {
+      "source": "呼び出しを <code>sum(1, 2, 3)</code> に直すとRunでき、1行目が <code>6</code> になります。確かめたら、宣言も呼び出しも元の2つに戻します。",
+      "translation": "بمجرد إصلاح الاستدعاء إلى <code>sum(1, 2, 3)</code> ستتمكن من التشغيل، وسيصبح السطر الأول <code>6</code>. بعد التحقق من ذلك، أعد كلًا من التصريح والاستدعاء كما كانا في البداية."
+    },
+    {
+      "source": "Javaでも同じ間違いはコンパイルエラーになります。<strong>引数の数が合っているかは、KotlinもJavaもSwiftも、動かす前に確かめてくれます。</strong>",
+      "translation": "في Java يتسبب هذا الخطأ عينه في حدوث خطأ في التصريف. <strong>اللغات الثلاث Kotlin و Java و Swift تتحقق مما إذا كان عدد المُعامِلات صحيحًا قبل تشغيل البرنامج.</strong>"
+    },
+    {
+      "source": "練習B · 戻り値の型を変える（必須・4分）",
+      "translation": "التدريب B · تغيير نوع القيمة المُعادة (إلزامي · حوالي 4 دقائق)"
+    },
+    {
+      "source": "<code>sum</code> の戻り値の型を <code>: Int</code> から <code>: String</code> に書き換えます。中身の <code>return a + b</code> はそのままにして、Runを押す前にその行を見てください。",
+      "translation": "غيّر نوع القيمة المُعادة لـ <code>sum</code> من <code>: Int</code> إلى <code>: String</code>. اترك المحتوى <code>return a + b</code> كما هو، وانظر إلى ذلك السطر قبل أن تنقر على Run."
+    },
+    {
+      "source": "<code>return a + b</code> の行に赤い波線が出て、Runできません。<code>a + b</code> は <code>Int</code> なのに、<code>String</code> を返すと宣言しているからです。<strong>宣言した型と、返している型が合っていない</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "يظهر خط مموّج أحمر في سطر <code>return a + b</code> ولا يمكنك تشغيل البرنامج. لأن نتيجة <code>a + b</code> هي <code>Int</code>، ومع ذلك صرّحت بأن الدالة تعيد <code>String</code>. ستظهر رسالة تعني تقريبًا <strong>أن النوع المُصرّح به لا يتطابق مع النوع المُعاد</strong>."
+    },
+    {
+      "source": "<strong>末尾に書いた <code>: 型</code> は、飾りではなく約束です。</strong> Kotlinは、その約束が守られているかを、書いている最中に確かめます。Javaの <code>static String sum(...)</code>、Swiftの <code>-&gt; String</code> でも、同じように止まります。確かめたら <code>: Int</code> に戻します。",
+      "translation": "<strong><code>: 型</code> الذي يُكتب في النهاية ليس للزينة بل هو التزام.</strong> تتحقق Kotlin من الالتزام بهذا العهد أثناء كتابة الشيفرة. وسيتوقف البرنامج عن العمل بنفس الطريقة مع <code>static String sum(...)</code> في Java، أو <code>-&gt; String</code> في Swift. بعد التحقق من ذلك، أعدها إلى <code>: Int</code>."
+    },
+    {
+      "source": "練習C · return を消す（必須・2分）",
+      "translation": "التدريب C · حذف return (إلزامي · حوالي دقيقتين)"
+    },
+    {
+      "source": "<code>sum</code> の中の <code>return</code> だけを消して、<code>a + b</code> の1行にします。Runを押す前に、関数の閉じかっこ <code>}</code> のあたりを見てください。",
+      "translation": "احذف <code>return</code> فقط من داخل <code>sum</code>، ليبقى السطر <code>a + b</code> فقط. انظر بالقرب من قوس الإغلاق الخاص بالدالة <code>}</code> قبل أن تنقر على Run."
+    },
+    {
+      "source": "赤い波線が出て、Runできません。<code>: Int</code> と宣言したのに値を返していないので、<strong><code>return</code> が足りない</strong>、というおおよそその意味のメッセージが出ます。",
+      "translation": "يظهر خط مموّج أحمر، ولا يمكنك تشغيل البرنامج. لأنك صرّحت بأن الدالة تعيد <code>: Int</code> ولكنك لم تُعد أية قيمة، ستظهر رسالة تعني تقريبًا <strong>وجود <code>return</code> ناقص</strong>."
+    },
+    {
+      "source": "直し方は2つです。<code>return</code> を書き戻すか、<code>: Int</code> のほうを消して <code>sum2</code> と同じ「戻り値のない関数」にするかです。ここでは <code>return</code> を書き戻します。",
+      "translation": "توجد طريقتان للإصلاح. إما بإرجاع كلمة <code>return</code>، أو بحذف <code>: Int</code> لجعلها «دالة لا تعيد قيمة» مثل <code>sum2</code>. سنُرجع هنا كلمة <code>return</code>."
+    },
+    {
+      "source": "同じ3つの間違いを、JavaとSwiftでしたとき",
+      "translation": "عند ارتكاب الأخطاء الثلاثة نفسها في Java و Swift"
+    },
+    {
+      "source": "引数の数・戻り値の型・<code>return</code> の有無は、<strong>3つの言語すべてが動かす前に確かめます。</strong> ここはKotlinで新しく覚えることではありません。",
+      "translation": "تتحقق <strong>اللغات الثلاث جميعها من عدد المُعامِلات ونوع القيمة المُعادة ووجود <code>return</code> قبل التشغيل.</strong> هذا ليس مفهومًا جديدًا تتعلمه في Kotlin."
+    },
+    {
+      "source": "ただし <code>return</code> の省略だけは違います。<strong>Swiftは、本体が1つの式だけなら <code>return</code> を省けます。</strong> Kotlinは、かっこ <code>{ }</code> で本体を書いた関数では省けません。<code>: Int</code> と宣言したら、<code>return</code> で返します。",
+      "translation": "الاستثناء الوحيد هو الاستغناء عن <code>return</code>. <strong>ففي Swift، يمكنك الاستغناء عن <code>return</code> إذا كان محتوى الدالة عبارة عن تعبير (expression) واحد فقط.</strong> أما في Kotlin فلا يمكنك حذفه في الدوال التي يُكتب محتواها بين قوسين <code>{ }</code>. فإذا صرّحت بأن الدالة تعيد <code>: Int</code>، يجب عليك إعادتها بـ <code>return</code>."
+    },
+    {
+      "source": "2コマ目と同じで、<strong>覚えるのはメッセージの文言ではなく、どの行が赤くなったかと、その意味です。</strong>",
+      "translation": "كما في الحصة الثانية، <strong>ما يهمك هو تذكّر السطر الذي أصبح أحمر ومعناه، وليس نص الرسالة الحرفي.</strong>"
+    },
+    {
+      "source": "練習A・B・Cで書き換えたところを、すべて元に戻します。",
+      "translation": "أعد كل ما غيّرته في التدريبات A و B و C إلى ما كان عليه."
+    },
+    {
+      "source": "<code>fun sum(a: Int, b: Int): Int</code> と <code>return a + b</code>、<code>sum(1, 2)</code> の3か所を確かめます。",
+      "translation": "تأكد من 3 أماكن: <code>fun sum(a: Int, b: Int): Int</code> و <code>return a + b</code> و <code>sum(1, 2)</code>."
+    },
+    {
+      "source": "Runし、STEP 16 と同じ2行に戻ったことを確かめます。",
+      "translation": "شغّل البرنامج، وتأكد من عودة المخرجات إلى السطرين نفسيهما كما في STEP 16."
+    },
+    {
+      "source": "練習A・B・Cを試し、引数の数・戻り値の型・<code>return</code> が合っていないと動かせないことを確かめた。最後に元の2行へ戻した。",
+      "translation": "جرّبت التدريبات A و B و C، وتأكدت من عدم إمكانية التشغيل إذا كان عدد المُعامِلات، أو نوع القيمة المُعادة، أو <code>return</code> غير متطابق. أخيرًا أعدتها إلى السطرين الأصليين."
+    },
+    {
+      "source": "STEP 18 · 3コマ目 · 目安 15分",
+      "translation": "STEP 18 · الحصة 3 · حوالي 15 دقيقة"
+    },
+    {
+      "source": "<code>sum(1, 2)</code> が返した値が <code>ret</code> に入り、<code>main</code> の <code>println(ret)</code> が出している。",
+      "translation": "القيمة التي تعيدها <code>sum(1, 2)</code> تُحفظ في <code>ret</code>، ويُخرجها السطر <code>println(ret)</code> داخل <code>main</code>."
+    },
+    {
+      "source": "<code>sum2(1, 2)</code> は計算結果を返さず、<code>sum2</code> の中の <code>println(a + b)</code> が出している。",
+      "translation": "لا تعيد <code>sum2(1, 2)</code> نتيجة الحساب، ويُخرجه السطر <code>println(a + b)</code> داخل <code>sum2</code>."
+    },
+    {
+      "source": "表のとおりになったら、先生に画面を見せ、<strong><code>: Int</code> と書いた場所と、何も書かなかった場所</strong>を指さして説明します。",
+      "translation": "عندما يصبح مثلما في الجدول، اعرض شاشتك على المعلم، واشرح له مؤشرًا على <strong>المكان الذي كتبت فيه <code>: Int</code> والمكان الذي لم تكتب فيه شيئًا</strong>."
+    },
+    {
+      "source": "ここまで入力した <code>main.kt</code> の全体です。1行目の <code>package ex03</code> も忘れずに入れます。",
+      "translation": "هذه هي كل محتويات <code>main.kt</code> التي أدخلتها حتى الآن. لا تنسَ إدخال <code>package ex03</code> في السطر الأول."
+    },
+    {
+      "source": "② Javaの完成コードと、Swiftの関数宣言を比べる",
+      "translation": "② مقارنة الشيفرة المكتملة لـ Java مع التصريح عن دالة Swift"
+    },
+    {
+      "source": "Javaで増えたのは、<strong>入口を包むクラスと、<code>void</code> と、行末の <code>;</code> の3つ</strong>です。処理そのものは同じです。",
+      "translation": "ما زاد في Java هو <strong>الصنف الذي يغلف نقطة الدخول، وكلمة <code>void</code>، والفاصلة المنقوطة <code>;</code> في نهاية السطر.</strong> بينما ظلت طريقة المعالجة نفسها."
+    },
+    {
+      "source": "Kotlinは <code>sum</code> も <code>sum2</code> もファイルの直下に置けます。Javaは、どちらもクラスの中の <code>static</code> メソッドにします。<strong>1コマ目から <code>fun main()</code> をクラスなしで書けていたのと、同じしくみです。</strong>",
+      "translation": "في Kotlin، يمكنك وضع كل من <code>sum</code> و <code>sum2</code> مباشرة أسفل الملف. أما في Java، فستجعلهما طريقتا <code>static</code> داخل صنف. <strong>هذه هي الآلية نفسها التي سمحت لك بكتابة <code>fun main()</code> بدون صنف منذ الحصة الأولى.</strong>"
+    },
+    {
+      "source": "Swiftの2つの宣言は、Kotlinと形がよく似ています。<strong>宣言の先頭行で違うのは <code>fun</code> と <code>func</code>、そして戻り値の <code>: Int</code> と <code>-&gt; Int</code> の2か所です。</strong>本体の出力は、1コマ目と同じく <code>println</code> と <code>print</code> の違いがあります。",
+      "translation": "التصريحان في Swift يشبهان كثيرًا ما في Kotlin. <strong>في السطر الأول من التصريح، يكمن الاختلاف في كلمتي <code>fun</code> و <code>func</code>، والقيمة المُعادة <code>: Int</code> و <code>-&gt; Int</code> فقط.</strong> أما إخراج المحتوى، فيوجد اختلاف بين <code>println</code> و <code>print</code> تمامًا كما في الحصة الأولى."
+    },
+    {
+      "source": "戻り値のない <code>sum2</code> は、Kotlinでも Swift でもかっこのうしろが空です。<strong>Javaだけが <code>void</code> を書きます。</strong>",
+      "translation": "في الدالة التي لا تعيد قيمة <code>sum2</code>، يُترك ما بعد القوسين فارغًا في كل من Kotlin و Swift. <strong>وحدها Java التي تتطلب كتابة <code>void</code>.</strong>"
+    },
+    {
+      "source": "③ ex01・ex02・ex03 が並んでいることを確かめる",
+      "translation": "③ تأكد من ظهور ex01 و ex02 و ex03 معًا"
+    },
+    {
+      "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることを確かめます。",
+      "translation": "في نافذة الأدوات <strong>المشروع</strong> (Project) على اليسار، افتح <code>src</code> وتأكد من ظهور <code>ex01</code> و <code>ex02</code> و <code>ex03</code> معًا."
+    },
+    {
+      "source": "<code>ex01</code> と <code>ex02</code> の <code>main.kt</code> を開きます。前の回に書いたコードが、そのまま残っています。",
+      "translation": "افتح <code>main.kt</code> من <code>ex01</code> و <code>ex02</code>. ستجد أن الشيفرة التي كتبتها في الحصص السابقة لا تزال موجودة كما هي."
+    },
+    {
+      "source": "<code>fun main()</code> が3つありますが、パッケージが違うので別のプログラムです。動かしたいほうのファイルを開き、その <code>fun main()</code> の左の ▷ を押します。",
+      "translation": "يوجد ثلاثة من <code>fun main()</code>، لكن نظرًا لاختلاف الحزمة، فهي برامج مختلفة. افتح الملف الذي تريد تشغيله وانقر على ▷ الموجودة على يسار <code>fun main()</code> الخاص به."
+    },
+    {
+      "source": "完成チェックを行い、先生に画面を見せた。<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が同じプロジェクトに並んでいることも確かめた。",
+      "translation": "أجريت التحقق النهائي، وعرضت شاشتي على المعلم. تأكدت أيضًا من ظهور <code>ex01</code> و <code>ex02</code> و <code>ex03</code> معًا في المشروع نفسه."
+    },
+    {
+      "source": "<strong><code>fun</code> で始める → 引数は <code>名前: 型</code> → 戻り値はかっこのうしろに <code>: 型</code> → 無いときは何も書かない。</strong><br>引数の並びはSwiftと同じでJavaと逆、戻り値の型は3つの言語で書く位置か記号が違います。書く順番や記号が違うだけで、やっていることはJavaのメソッド、Swiftの関数とまったく同じです。",
+      "translation": "<strong>تبدأ بـ <code>fun</code> ← المُعامِل على شكل <code>名前: 型</code> ← القيمة المُعادة تكتب بعد القوسين على شكل <code>: 型</code> ← وإذا لم تكن هناك قيمة مُعادة لا نكتب شيئًا.</strong><br>ترتيب المُعامِلات يماثل Swift وعكس Java، بينما يختلف موقع أو رمز نوع القيمة المُعادة في اللغات الثلاث. والاختلاف يقتصر على ترتيب الكتابة والرموز، لكن ما يحدث مطابق تمامًا لطريقة Java ودالة Swift."
     },
     {
       "source": "変える場所",
