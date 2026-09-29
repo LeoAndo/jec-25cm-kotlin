@@ -160,7 +160,7 @@
     },
     {
       "source": "検索語と並び順を選び、GitHubの公開リポジトリを一覧にするアプリです。行には所有者・リポジトリ名・スター数・フォーク数が出ます。行を押しても別の画面には移動しません。11コマ目は入力画面、12コマ目は通信しない2件の見本、13コマ目は実際の検索へ進みます。",
-      "translation": "這是一款選擇搜尋詞與排序方式，將 GitHub 的公開 Repository 列出的應用程式。單列中會顯示擁有者、Repository 名稱、Star 數、Fork 數。即使點擊單列也不會移動到其他畫面。第11堂課是輸入畫面，第12堂課是不進行通訊的2筆範例，第13堂課將進行實際的搜尋。"
+      "translation": "這是一款選擇搜尋詞與排序方式，將 GitHub 的公開 Repository 列出的應用程式。單列中會顯示擁有者、Repository 名稱、Star 數、Fork 數。即使按一下單列也不會移動到其他畫面。第11堂課是輸入畫面，第12堂課是不進行通訊的2筆範例，第13堂課將進行實際的搜尋。"
     },
     {
       "source": "kotlinを検索した一例。名前・数・順序は検索時点で変わる",
@@ -264,11 +264,11 @@
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
-      "translation": "接下來是 <code>app/build.gradle.kts</code>。在這裏啟用 serialization 外掛程式與要使用的套件。"
+      "translation": "接下來是 <code>app/build.gradle.kts</code>。在這裏啟用 serialization 外掛程式與要使用的程式庫。"
     },
     {
       "source": "<strong>Sync Now</strong>、出なければ <strong>File → Sync Project with Gradle Files</strong> を選び、赤いエラーが消えるまで待ちます。AGP 9.1.1はKotlinのビルド機能を内蔵しているので、別の <code>org.jetbrains.kotlin.android</code> は足しません。カタログの <code>kotlin</code> はここではserializationプラグインの版です。",
-      "translation": "點選 <strong>Sync Now</strong>，如果沒有出現則選擇 <strong>File → Sync Project with Gradle Files</strong>，等待紅色錯誤消失。AGP 9.1.1 內建了 Kotlin 的建置功能，所以不用加入其他的 <code>org.jetbrains.kotlin.android</code>。目錄中的 <code>kotlin</code> 在這裏是指 serialization 外掛程式的版本。"
+      "translation": "按一下 <strong>Sync Now</strong>，如果沒有出現則選擇 <strong>File → Sync Project with Gradle Files</strong>，等待紅色錯誤消失。AGP 9.1.1 內建了 Kotlin 的建置功能，所以不用加入其他的 <code>org.jetbrains.kotlin.android</code>。目錄中的 <code>kotlin</code> 在這裏是指 serialization 外掛程式的版本。"
     },
     {
       "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
@@ -280,7 +280,7 @@
     },
     {
       "source": "次のコマで使う <code>@Serializable</code> は、Swiftの <code>Codable</code> と同じくJSON変換に使います。その変換処理を生成できるように、今回はライブラリだけでなくプラグインも設定します。",
-      "translation": "下一堂課會用到的 <code>@Serializable</code>，與 Swift 的 <code>Codable</code> 一樣用於 JSON 轉換。為了產生該轉換處理，這次不僅設定套件，也設定了外掛程式。"
+      "translation": "下一堂課會用到的 <code>@Serializable</code>，與 Swift 的 <code>Codable</code> 一樣用於 JSON 轉換。為了產生該轉換處理，這次不僅設定程式庫，也設定了外掛程式。"
     },
     {
       "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
@@ -304,7 +304,7 @@
     },
     {
       "source": "実行設定 <strong>app</strong> と指定AVDで <strong>Run ▶</strong>。まず <code>Hello World!</code> を確認します。",
-      "translation": "選擇執行設定 <strong>app</strong> 與指定的 AVD 並點選 <strong>Run ▶</strong>。首先確認 <code>Hello World!</code>。"
+      "translation": "選擇執行設定 <strong>app</strong> 與指定的 AVD 並按一下 <strong>Run ▶</strong>。首先確認 <code>Hello World!</code>。"
     },
     {
       "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
@@ -412,7 +412,7 @@
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
-      "translation": "兩者都註冊了點擊時的處理。現在的 <code>search</code> 只用來確認輸入。通訊處理會在第13堂課加入。"
+      "translation": "兩者都註冊了按下時的處理。現在的 <code>search</code> 只用來確認輸入。通訊處理會在第13堂課加入。"
     },
     {
       "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
@@ -452,7 +452,7 @@
     },
     {
       "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "在套件上點右鍵，選擇 <strong>New → Kotlin Class/File</strong>，將名稱設為 <code>GithubSearchResponse</code>，種類選擇 <strong>File</strong>。將建立好的 <code>GithubSearchResponse.kt</code> 整個取代。以下是在同一個檔案中寫入3個類別的形式。"
+      "translation": "在套件上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>，將名稱設為 <code>GithubSearchResponse</code>，種類選擇 <strong>File</strong>。將建立好的 <code>GithubSearchResponse.kt</code> 整個取代。以下是在同一個檔案中寫入3個類別的形式。"
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -488,7 +488,7 @@
     },
     {
       "source": "Swiftの <code>Codable</code> と同様に、宣言した型へJSONを変換します。名前が違うとき、Swiftは <code>CodingKeys</code>、Kotlinのこのライブラリは <code>@SerialName</code> を使います。<code>data class</code> の <code>==</code> は、ここで宣言したプロパティの値を比較します。",
-      "translation": "與 Swift 的 <code>Codable</code> 一樣，能將 JSON 轉換為宣告好的型別。當名稱不同時，Swift 使用 <code>CodingKeys</code>，而在這個 Kotlin 套件中則使用 <code>@SerialName</code>。<code>data class</code> 的 <code>==</code> 會比較這裏宣告的屬性值。"
+      "translation": "與 Swift 的 <code>Codable</code> 一樣，能將 JSON 轉換為宣告好的型別。當名稱不同時，Swift 使用 <code>CodingKeys</code>，而在這個 Kotlin 程式庫中則使用 <code>@SerialName</code>。<code>data class</code> 的 <code>==</code> 會比較這裏宣告的屬性值。"
     },
     {
       "source": "GithubSearchResponse.ktに3つのdata classがあり、SerializableとSerialNameの赤い波線が消えている。",
@@ -532,7 +532,7 @@
     },
     {
       "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "在套件上點右鍵，選擇 <strong>New → Kotlin Class/File</strong>。將名稱設為 <code>RepositoryAdapter</code>，種類選擇 <strong>File</strong>，並使用下列內容整個取代。"
+      "translation": "在套件上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>。將名稱設為 <code>RepositoryAdapter</code>，種類選擇 <strong>File</strong>，並使用下列內容整個取代。"
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -652,7 +652,7 @@
     },
     {
       "source": "<strong>実際の検索は先生の合図で、少人数ずつ行います。</strong>認証なしの検索APIは1分間に10回までです。同じ外部IPで通信する教室では複数の端末がこの枠を共有するため、全員で連打しません。通信待ちの間はコードと固定データの照合を進めます。",
-      "translation": "<strong>實際的搜尋需聽從老師指示，以少人數的方式進行。</strong>未經驗證的搜尋 API 限制為每分鐘 10 次。在以同一個外部 IP 進行通訊的教室裏，多台裝置會共用這個額度，所以不要所有人一起連續點擊。等待通訊期間請繼續將程式碼與固定資料進行對照。"
+      "translation": "<strong>實際的搜尋需聽從老師指示，以少人數的方式進行。</strong>未經驗證的搜尋 API 限制為每分鐘 10 次。在以同一個外部 IP 進行通訊的教室裏，多台裝置會共用這個額度，所以不要所有人一起連續按下。等待通訊期間請繼續將程式碼與固定資料進行對照。"
     },
     {
       "source": "選んだ位置から、表示ラベルではなくAPI用の値を取り出します。KotlinのPairの <code>second</code> はSwiftのタプルの2番目に対応します。",
@@ -804,7 +804,7 @@
     },
     {
       "source": "以下の通信確認も先生の合図で行います。待ち時間に同じ検索を連打しません。名前・順位・スター数の一致は確認条件にしません。",
-      "translation": "以下的網絡連線確認也請在老師指示後進行。在等待時間請勿連續點擊相同的搜尋。名稱、名次、Star 數的一致性不作確認條件。"
+      "translation": "以下的網絡連線確認也請在老師指示後進行。在等待時間請勿連續按下相同的搜尋。名稱、名次、Star 數的一致性不作確認條件。"
     },
     {
       "source": "操作・状態",
@@ -856,7 +856,7 @@
     },
     {
       "source": "失敗用の例は検証時に存在しなかったユーザー名です。授業時にも同じ結果になるとは限らないので、先生が事前確認した条件を使います。ネットワーク設定を変えたり、制限に達するまで連打したりして失敗を作る必要はありません。通信環境や利用制限でも同じ失敗経路に入ります。",
-      "translation": "用來測試失敗的範例是驗證時不存在的用戶名稱。由於上課時未必會有相同的結果，請使用老師事先確認過的條件。不需要更改網絡設定，或是連續點擊直到達到限制來製造失敗。網絡連線環境或使用限制也會進入相同的失敗路徑。"
+      "translation": "用來測試失敗的範例是驗證時不存在的用戶名稱。由於上課時未必會有相同的結果，請使用老師事先確認過的條件。不需要更改網絡設定，或是連續按下直到達到限制來製造失敗。網絡連線環境或使用限制也會進入相同的失敗路徑。"
     },
     {
       "source": "一覧の0件と通信失敗は別です。0件は正しい応答の空リスト、失敗は通信やJSON変換が完了しなかった場合です。完成コードはHTTPの状態コード別に説明を出し分けていません。長いToastは画面に収まりきらないことがあります。",
@@ -916,7 +916,7 @@
     },
     {
       "source": "画面下に隠れた行は一覧を上へゆっくりスワイプして確認します。行をタップしても画面は変わりません。リポジトリ名をブラウザで開く機能はこの完成版にはありません。",
-      "translation": "隱藏在畫面下方的行，可以將清單慢慢向上滑動來確認。點擊行也不會改變畫面。這個完成版中並沒有在瀏覽器開啟儲存庫名稱的功能。"
+      "translation": "隱藏在畫面下方的行，可以將清單慢慢向上滑動來確認。按一下行也不會改變畫面。這個完成版中並沒有在瀏覽器開啟 Repository 名稱的功能。"
     },
     {
       "source": "Adapterで使うのは内容の <code>==</code>。Kotlinの参照比較は <code>===</code> です。画面の各行はAPIが返したリストから作り、端末内で並べ替え直してはいません。",
@@ -956,7 +956,7 @@
     },
     {
       "source": "「検索」を「リポジトリ検索」へ",
-      "translation": "將「検索」（搜尋）改為「リポジトリ検索」（儲存庫搜尋）"
+      "translation": "將「検索」（搜尋）改為「リポジトリ検索」（Repository 搜尋）"
     },
     {
       "source": "ボタンの文字が変わる",
@@ -1092,7 +1092,7 @@
     },
     {
       "source": "まず連打をやめ、入力条件と回線・利用制限を先生と確認します。何度もRunすることでは制限は解除されません。",
-      "translation": "請先停止連續點擊，並與老師確認輸入條件、網絡與使用限制。重複按 Run 並不會解除限制。"
+      "translation": "請先停止連續按下，並與老師確認輸入條件、網絡連線與使用限制。重複按 Run 並不會解除限制。"
     },
     {
       "source": "通信中の印が見えない",
@@ -1100,7 +1100,7 @@
     },
     {
       "source": "速い応答では一瞬です。わざと連打せず、STEP 14のsetLoadingと呼び出し順を照合します。",
-      "translation": "回應很快時會一閃而過。請勿刻意連續點擊，並核對 STEP 14 的 setLoading 與呼叫順序。"
+      "translation": "回應很快時會一閃而過。請勿刻意連續按下，並核對 STEP 14 的 setLoading 與呼叫順序。"
     },
     {
       "source": "見本と順位・件数が違う",
@@ -1136,7 +1136,7 @@
     },
     {
       "source": "GitHub：リポジトリ検索APIと検索の制限",
-      "translation": "GitHub：儲存庫搜尋 API 與搜尋限制"
+      "translation": "GitHub：Repository 搜尋 API 與搜尋限制"
     },
     {
       "source": "GitHub：認証なしのIP単位の制限",
