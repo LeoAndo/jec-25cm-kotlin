@@ -4,7 +4,7 @@
   "entries": [
     {
       "source": "JavaとSwiftを書ける人のためのKotlin入門。全6コマ・11演習で、変数・Null安全・関数・条件式・繰り返し・クラス・アクセサ・data class・スマートキャスト・拡張関数・map・by lazyを、他言語との差分で確かめる授業用教科書。",
-      "translation": "適合會寫 Java 和 Swift 的人的 Kotlin 入門。全 6 堂課、11 個演習，用與其他語言的差異來確認變數、Null 安全、函式、條件式、迴圈、類別、存取子、data class、智慧型轉型、擴充函式、map、by lazy 的課堂用教科書。"
+      "translation": "適合會寫 Java 和 Swift 的人的 Kotlin 入門。全 6 堂課、11 個演習，用與其他語言的差異來確認變數、空值安全、函式、條件式、迴圈、類別、存取子、data class、智慧型轉型、擴充函式、map、by lazy 的課堂用課本。"
     },
     {
       "source": "K01HelloKotlin — Kotlinを書き始める | Kotlin演習",
@@ -20,7 +20,7 @@
     },
     {
       "source": "授業用教科書 · Kotlin + IntelliJ IDEA",
-      "translation": "課堂用教科書 · Kotlin + IntelliJ IDEA"
+      "translation": "課堂用課本 · Kotlin + IntelliJ IDEA"
     },
     {
       "source": "CONTENTS / 学習の順番",
@@ -264,15 +264,15 @@
     },
     {
       "source": "この教科書1冊で、<strong>全6コマ・11演習</strong>を進めます。1コマ目はSTEP 00〜06、2コマ目はSTEP 07〜12、3コマ目はSTEP 13〜18、4コマ目はSTEP 19〜24、5コマ目はSTEP 25〜30、6コマ目はSTEP 31〜35です。<strong>今日どこをやるかは、授業のはじめに先生が指定します。</strong>指定されたSTEPから、前から順に読み進めてください。",
-      "translation": "用這1本教科書，就能進行<strong>全6堂課、11個演習</strong>。第1堂課是 STEP 00〜06，第2堂課是 STEP 07〜12，第3堂課是 STEP 13〜18，第4堂課是 STEP 19〜24，第5堂課是 STEP 25〜30，第6堂課是 STEP 31〜35。<strong>今天要做哪裡，老師會在開始上課時指定。</strong>請從指定的 STEP 開始，從頭依序往下讀。"
+      "translation": "用這1本課本，就能進行<strong>全6堂課、11個演習</strong>。第1堂課是 STEP 00〜06，第2堂課是 STEP 07〜12，第3堂課是 STEP 13〜18，第4堂課是 STEP 19〜24，第5堂課是 STEP 25〜30，第6堂課是 STEP 31〜35。<strong>今天要做哪裡，老師會在開始上課時指定。</strong>請從指定的 STEP 開始，從頭依序往下讀。"
     },
     {
       "source": "6コマのあいだ、プロジェクトは <code>K01HelloKotlin</code> の1つだけを使います。回を重ねるごとに、その中へ <code>ex01</code>〜<code>ex11</code> のパッケージを足していきます。演習番号と授業順が違う回も、教科書のSTEPの順に進めます。",
-      "translation": "在這6堂課中，專案只會用到 <code>K01HelloKotlin</code> 這1個。隨著堂數增加，會在裡面加上 <code>ex01</code>〜<code>ex11</code> 的套件。即使是演習編號與上課順序不同的時候，也請依照教科書上的 STEP 順序進行。"
+      "translation": "在這6堂課中，專案只會用到 <code>K01HelloKotlin</code> 這1個。隨著堂數增加，會在裡面加上 <code>ex01</code>〜<code>ex11</code> 的套件。即使是演習編號與上課順序不同的時候，也請依照課本上的 STEP 順序進行。"
     },
     {
       "source": "みなさんはすでにJavaとSwiftを書けます。ですからこの教科書は、変数とは何か、型とは何か、という話はしません。扱うのは次の2つだけです。",
-      "translation": "各位都已經會寫 Java 和 Swift 了。所以這本教科書不會講什麼是變數、什麼是型別。只會講以下2點："
+      "translation": "各位都已經會寫 Java 和 Swift 了。所以這本課本不會講什麼是變數、什麼是型別。只會講以下2點："
     },
     {
       "source": "<strong>Kotlinではどう書くのか</strong>。",
@@ -328,7 +328,7 @@
     },
     {
       "source": "Null安全",
-      "translation": "Null 安全"
+      "translation": "空值安全"
     },
     {
       "source": "nullを入れられる型と、入れられない型を、言語が区別する。",
@@ -368,7 +368,7 @@
     },
     {
       "source": "型注釈はSwiftと同じく省けます。右辺から型が決まります。",
-      "translation": "型別註解和 Swift 一樣可以省略。會從右邊決定型別。"
+      "translation": "型別註記和 Swift 一樣可以省略。會從右邊決定型別。"
     },
     {
       "source": "文末のセミコロンはSwiftと同じく要りません。Javaとはここが違います。",
@@ -380,7 +380,7 @@
     },
     {
       "source": "JavaとSwiftを知っていれば、Kotlinは「差分」で覚えられます。この教科書は、その差分だけを並べていきます。",
-      "translation": "只要知道 Java 和 Swift，就能用「差異」來記住 Kotlin。這本教科書只會並列那些差異。"
+      "translation": "只要知道 Java 和 Swift，就能用「差異」來記住 Kotlin。這本課本只會並列那些差異。"
     },
     {
       "source": "この単元で出てくるKotlinの言葉",
@@ -476,7 +476,7 @@
     },
     {
       "source": "この教科書の進め方",
-      "translation": "這本教科書的進行方式"
+      "translation": "這本課本的進行方式"
     },
     {
       "source": "書き方を読む → 入力する → Runで動かす → Java・Swiftとの差を確かめる。この順で進めます。家で予習していなくても始められます。",
@@ -484,7 +484,7 @@
     },
     {
       "source": "分からないところには、ステップ番号で印を付けましょう。「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」のように質問できます。",
-      "translation": "在不懂的地方，用步驟編號做個記號吧。可以像「我不懂 STEP 03 的 <code>val</code> 與 Java 的 <code>var</code> 之間的關係」這樣提問。"
+      "translation": "在不懂的地方，用步驟編號做個記號吧。可以像「STEP 03の、<code>val</code> と Javaの <code>var</code> の関係が分かりません」（我不懂 STEP 03 的 val 與 Java 的 var 之間的關係）這樣提問。"
     },
     {
       "source": "ここで止まって確認",
@@ -679,6 +679,10 @@
       "translation": "如果已經開啟了其他專案，請從最上方的選單列選擇 <strong>ファイル（檔案）→ 新規（新增）→ プロジェクト…（專案…）</strong>。"
     },
     {
+      "source": "ホーム画面の左上のメニューから <strong>新規プロジェクト…</strong> を選びます。 <a1>画像を大きく開く</a1>",
+      "translation": "從主畫面左上角的選單中選擇 <strong>新規プロジェクト…</strong>（新增專案…）。<a1>放大開啟圖片</a1>"
+    },
+    {
       "source": "② ダイアログに、表のとおり入力する",
       "translation": "② 依照表格在對話方塊中輸入"
     },
@@ -812,7 +816,7 @@
     },
     {
       "source": "<code>fun main()</code> の行の左、行番号の右にある緑の三角 ▷（ガターのアイコン）をクリックします。",
-      "translation": "按一下 <code>fun main()</code> 行的左邊、行號右邊的綠色三角形 ▷ (Gutter 的圖示)。"
+      "translation": "按一下 <code>fun main()</code> 行的左邊、行號右邊的綠色三角形 ▷ （邊欄的圖示）。"
     },
     {
       "source": "出てきたメニューの、いちばん上の <strong>'MainKt' の実行</strong> を選びます。キーボードの <kbd>^ ⇧ R</kbd> でも同じです。",
@@ -824,7 +828,7 @@
     },
     {
       "source": "ガターの ▷ を押すと、いちばん上に <strong>'MainKt' の実行</strong> が出ます。 <a1>画像を大きく開く</a1>",
-      "translation": "按下 Gutter 的 ▷ 後，最上面會出現 <strong>'MainKt' の実行</strong> (執行 'MainKt')。 <a1>放大顯示圖片</a1>"
+      "translation": "按下 邊欄的 ▷ 後，最上面會出現 <strong>'MainKt' の実行</strong> (執行 'MainKt')。 <a1>放大顯示圖片</a1>"
     },
     {
       "source": "⑤ 出た内容を確かめる",
@@ -888,7 +892,7 @@
     },
     {
       "source": "<code>src</code> を右クリックして <strong>新規 → パッケージ</strong>。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。 <a1>画像を大きく開く</a1>",
-      "translation": "對 <code>src</code> 按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。小心不要選到正上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 類別/檔案）。 <a1>放大圖片</a1>"
+      "translation": "對 <code>src</code> 按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。小心不要選到正上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 檔案/類別）。 <a1>放大圖片</a1>"
     },
     {
       "source": "名前に <code>ex01</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex01</code> ができます。",
@@ -904,7 +908,7 @@
     },
     {
       "source": "できた <code>ex01</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> ではなく <code>ex01</code> を右クリックします。</strong>",
-      "translation": "對產生出來的 <code>ex01</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 類別/檔案）。<strong>是對 <code>ex01</code> 按右鍵，而不是對 <code>src</code>。</strong>"
+      "translation": "對產生出來的 <code>ex01</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。<strong>是對 <code>ex01</code> 按右鍵，而不是對 <code>src</code>。</strong>"
     },
     {
       "source": "プロジェクトツリーでsrcの下のex01を右クリックして出たメニュー。新規のサブメニューでKotlin ファイル/クラスが選ばれている",
@@ -912,7 +916,7 @@
     },
     {
       "source": "今度は <code>ex01</code> を右クリックして <strong>新規 → Kotlin ファイル/クラス</strong>。 <a1>画像を大きく開く</a1>",
-      "translation": "這次是對 <code>ex01</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 類別/檔案）。 <a1>放大圖片</a1>"
+      "translation": "這次是對 <code>ex01</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。 <a1>放大圖片</a1>"
     },
     {
       "source": "名前に <code>main</code> と入力し、下の一覧から <strong>ファイル</strong> を選んで <kbd>Return</kbd> を押します。<strong>いちばん上の「クラス」ではありません。</strong>「クラス」を選ぶと <code>class main</code> が作られ、このあとの手順と合わなくなります。",
@@ -1528,7 +1532,7 @@
     },
     {
       "source": "Runの結果 · この3行が出れば完成",
-      "translation": "執行結果 · 顯示這3行就算完成"
+      "translation": "Run 的結果 · 顯示這3行就算完成"
     },
     {
       "source": "2行目の <code>null</code> も出力の一部です。エラーではありません。<strong>なぜ <code>null</code> と出るのか</strong>は、STEP 10 で確かめます。",
@@ -1596,7 +1600,7 @@
     },
     {
       "source": "<code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> を選びます。すぐ上の <strong>Kotlin ファイル/クラス</strong> と間違えないようにします。",
-      "translation": "在 <code>src</code> 上按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。小心不要選錯成上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 類別/檔案）。"
+      "translation": "在 <code>src</code> 上按右鍵，選擇 <strong>新規 → パッケージ</strong>（新增 → 套件）。小心不要選錯成上方的 <strong>Kotlin ファイル/クラス</strong>（Kotlin 檔案/類別）。"
     },
     {
       "source": "名前に <code>ex02</code> と入力して <kbd>Return</kbd> を押します。<code>src</code> の下に <code>ex02</code> ができます。すべて小文字で、記号は入れません。",
@@ -1608,11 +1612,23 @@
     },
     {
       "source": "できた <code>ex02</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でもなく、<code>ex02</code> を右クリックします。</strong>",
-      "translation": "在剛建立的 <code>ex02</code> 上按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 類別/檔案）。<strong>要在 <code>ex02</code> 上按右鍵，而不是 <code>src</code> 或 <code>ex01</code>。</strong>"
+      "translation": "在剛建立的 <code>ex02</code> 上按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。<strong>要在 <code>ex02</code> 上按右鍵，而不是 <code>src</code> 或 <code>ex01</code>。</strong>"
     },
     {
       "source": "できた <code>main.kt</code> の1行目に <code>package ex02</code> が入っていることを確かめます。",
       "translation": "確認剛建立的 <code>main.kt</code> 的第1行是 <code>package ex02</code>。"
+    },
+    {
+      "source": "1行目が <code>package ex02</code> になっていないとき",
+      "translation": "第1行不是 <code>package ex02</code> 時"
+    },
+    {
+      "source": "ファイルが <code>ex02</code> の中ではなく、<code>src</code> の直下か <code>ex01</code> の中にできています。<code>main.kt</code> を右クリックして削除し、③からやり直します。<code>ex02</code> を右クリックしたかどうかが分かれ目です。",
+      "translation": "檔案建立在 <code>src</code> 正下方或 <code>ex01</code> 內部，而不是在 <code>ex02</code> 內部。請在 <code>main.kt</code> 上按右鍵並刪除，從③重新開始。關鍵在於是否在 <code>ex02</code> 上按了右鍵。"
+    },
+    {
+      "source": "④ Java / Swift ではどう書くか（パッケージ）",
+      "translation": "④ 與 Java／Swift 的比較（套件）"
     },
     {
       "source": "KotlinもJavaも、ファイルの先頭に <code>package</code> を書き、フォルダの構成と合わせます。違うのは行末の <code>;</code> が要らないことだけです。",
@@ -1751,6 +1767,10 @@
       "translation": "Java 則是<strong>在執行並跑到那一行時</strong>才會當機。沒有走到的路徑裡的 <code>null</code> 就會被遺留下來。"
     },
     {
+      "source": "どちらも間違いは見つかりますが、<strong>見つかる時刻が違います。</strong> Kotlinが型に <code>?</code> を持ち込んだのは、この時刻を早めるためです。",
+      "translation": "兩者都能發現錯誤，但<strong>發現的時間點不同。</strong>Kotlin 將 <code>?</code> 引進型別中，就是為了提早這個時間點。"
+    },
+    {
       "source": "<code>String</code> と <code>String?</code> を書き分けて <code>5</code> を出せた。<code>?</code> の付かない型に <code>null</code> を入れるとRunできないことを、自分の画面で確かめた。",
       "translation": "成功區分了 <code>String</code> 和 <code>String?</code> 的寫法，並輸出了 <code>5</code>。在自己的畫面上確認了如果把 <code>null</code> 放入沒有 <code>?</code> 的型別，就會無法執行（Run）。"
     },
@@ -1800,7 +1820,7 @@
     },
     {
       "source": "呼べます。文字列を代入した行より後では、Kotlinが型を <code>String</code> として扱い直すためです（スマートキャスト）",
-      "translation": "可以呼叫。因為在指派字串的那行之後，Kotlin 會將型別重新視為 <code>String</code>（智慧轉型）"
+      "translation": "可以呼叫。因為在指派字串的那行之後，Kotlin 會將型別重新視為 <code>String</code>（智慧轉型，スマートキャスト）"
     },
     {
       "source": "<strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。",
@@ -1816,7 +1836,7 @@
     },
     {
       "source": "Runの結果 · この3行が出れば成功",
-      "translation": "執行結果 · 顯示這3行就算成功"
+      "translation": "Run 的結果 · 顯示這3行就算成功"
     },
     {
       "source": "<code>name1</code> は <code>String</code> で、<code>Saito</code> の5文字。<code>?</code> が付いていないので <code>?.</code> も要らない。",
@@ -1872,7 +1892,7 @@
     },
     {
       "source": "<strong>ただし「常にエラー」ではありません。</strong> 文字列を代入した行より後では、Kotlinがその変数を <code>String</code> として扱い直すので（スマートキャスト）、<code>name2.count()</code> と書いても通ります。<strong>この教材の完成コードは、<code>name2</code> を読む2回とも <code>?.</code> でそろえてあります</strong>ので、最後の行には次の注意が出ます。",
-      "translation": "<strong>不過並不是「一定會出錯」。</strong>在指派字串的那行之後，Kotlin 會將該變數重新視為 <code>String</code>（智慧轉型），所以即使寫成 <code>name2.count()</code> 也能通過。<strong>本教材的完成版程式碼，為了統一寫法，兩次讀取 <code>name2</code> 都使用了 <code>?.</code></strong>，因此最後一行會出現以下的提示。"
+      "translation": "<strong>不過並不是「一定會出錯」。</strong>在指派字串的那行之後，Kotlin 會將該變數重新視為 <code>String</code>（智慧轉型，スマートキャスト），所以即使寫成 <code>name2.count()</code> 也能通過。<strong>本教材的完成版程式碼，為了統一寫法，兩次讀取 <code>name2</code> 都使用了 <code>?.</code></strong>，因此最後一行會出現以下的提示。"
     },
     {
       "source": "最後の <code>?.</code> に、黄色い警告が出ます",
@@ -1885,6 +1905,10 @@
     {
       "source": "この教材では、<strong><code>name2</code> を読む2回とも同じ書き方にそろえたいので、警告が出るまま残します。</strong> 消したいときは、最後の行だけ <code>println(name2.count())</code> にすれば警告は消えます。出力はどちらでも <code>6</code> です。",
       "translation": "在本教材中，<strong>為了讓兩次讀取 <code>name2</code> 保持相同的寫法，所以會保留警告。</strong>如果想消除警告，只要把最後一行改成 <code>println(name2.count())</code> 即可。兩者的輸出結果都是 <code>6</code>。"
+    },
+    {
+      "source": "<strong>ここはSwiftと違うところです。</strong> Swiftは代入しても型が <code>String?</code> のままなので、<code>?.</code> かアンラップがいつでも要ります。Kotlinは、代入した内容から「ここではもう <code>null</code> ではない」と判断して、型を絞り込みます。",
+      "translation": "<strong>這裡與 Swift 不同。</strong>Swift 在賦值後型別依然是 <code>String?</code>，因此隨時需要 <code>?.</code> 或拆包。Kotlin 則會根據賦值的內容判斷「這裡已經不是 <code>null</code>」，進而限縮型別。"
     },
     {
       "source": "3行を出せた。<code>?.</code> が返す型が <code>Int?</code> であることを、マウスを重ねて確かめた。",
@@ -2156,7 +2180,7 @@
     },
     {
       "source": "左の <strong>プロジェクト</strong> ツールウィンドウに <code>src</code> があり、その下に <code>ex01</code> と <code>ex02</code> があることを確かめます。どちらも消しません。",
-      "translation": "確認左邊的 <strong>專案</strong>（專案）工具視窗裡有 <code>src</code>，底下有 <code>ex01</code> 和 <code>ex02</code>。兩個都不要刪除。"
+      "translation": "確認左邊的 <strong>プロジェクト</strong>（專案）工具視窗裡有 <code>src</code>，底下有 <code>ex01</code> 和 <code>ex02</code>。兩個都不要刪除。"
     },
     {
       "source": "② ex03 パッケージを作る",
@@ -2168,7 +2192,7 @@
     },
     {
       "source": "できた <code>ex03</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。<strong><code>src</code> でも <code>ex01</code> でも <code>ex02</code> でもなく、<code>ex03</code> を右クリックします。</strong>",
-      "translation": "對著建立好的 <code>ex03</code> 按右鍵，選擇 <strong>新增 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 類別/檔案）。<strong>不是對 <code>src</code> 或是 <code>ex01</code>、<code>ex02</code> 按右鍵，而是對著 <code>ex03</code> 按右鍵。</strong>"
+      "translation": "對著建立好的 <code>ex03</code> 按右鍵，選擇 <strong>新規 → Kotlin ファイル/クラス</strong>（新增 → Kotlin 檔案/類別）。<strong>不是對 <code>src</code> 或是 <code>ex01</code>、<code>ex02</code> 按右鍵，而是對著 <code>ex03</code> 按右鍵。</strong>"
     },
     {
       "source": "できた <code>main.kt</code> の1行目に <code>package ex03</code> が入っていることを確かめます。",
@@ -2556,7 +2580,7 @@
     },
     {
       "source": "左の <strong>プロジェクト</strong> ツールウィンドウで <code>src</code> を開き、<code>ex01</code>・<code>ex02</code>・<code>ex03</code> が並んでいることを確かめます。",
-      "translation": "在左側的 <strong>專案</strong>（專案）工具視窗展開 <code>src</code>，確認 <code>ex01</code>、<code>ex02</code>、<code>ex03</code> 有並列在一起。"
+      "translation": "在左側的 <strong>プロジェクト</strong>（專案）工具視窗展開 <code>src</code>，確認 <code>ex01</code>、<code>ex02</code>、<code>ex03</code> 有並列在一起。"
     },
     {
       "source": "<code>ex01</code> と <code>ex02</code> の <code>main.kt</code> を開きます。前の回に書いたコードが、そのまま残っています。",
