@@ -10,7 +10,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 - [K01：HelloKotlin — Kotlinを動かしてみよう](docs/hello-kotlin/index.html)
 - [完成プロジェクト（初回から参照可能）](docs/hello-kotlin/downloads/K01HelloKotlin.zip)
-- [共通資料：授業を始めるまでの準備（教材の受け取りから最初の実行まで）](docs/common/setup.html)
+- [共通資料：授業を始めるまでの準備（教材の受け取りから使うアプリの確認まで）](docs/common/setup.html)
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
 - [共通資料：ちがうAndroid Studioのバージョンで進めるとき](docs/common/other-versions.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
