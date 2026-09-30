@@ -9,10 +9,11 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 ## 教科書一覧
 
 - [K01：HelloKotlin — Kotlinを動かしてみよう](docs/hello-kotlin/index.html)
-- [完成プロジェクト（初回から参照可能）](docs/hello-kotlin/downloads/K01HelloKotlin.zip)
+- [完成プロジェクト（K01HelloKotlin）](docs/hello-kotlin/downloads/K01HelloKotlin.zip)
 - [共通資料：授業を始めるまでの準備（教材の受け取りから使うアプリの確認まで）](docs/common/setup.html)
 - [共通資料：提出課題とAPKの作り方（自分で作ったアプリを1つ選んで提出する）](docs/common/apk.html)
 - [共通資料：ちがうAndroid Studioのバージョンで進めるとき](docs/common/other-versions.html)
+- [共通資料：困ったとき（エラーの調べ方と完成プロジェクトの確認）](docs/common/help.html)
 - [教員用：K01HelloKotlinの授業の進め方・確認項目](teacher/hello-kotlin/index.html)
 - [A01：HelloAndroid — Kotlinで画面を動かそう](docs/hello-android/index.html)
 - [A01の完成プロジェクト](docs/hello-android/downloads/A01HelloAndroid.zip)
@@ -41,7 +42,7 @@ JEC（25CM）の「Kotlin演習」で使う教材です。**1コマ90分**、**�
 
 **授業で指定するときは、日付と末尾の12文字をセットで示します。** Google Classroomの投稿にもその日のZIP名を載せ、学生は開く前にフォルダ名と照合します。同じコミットから作り直したZIPは同じ名前になります。過去の公開版の検出は版タグで行い、日付だけの旧ZIP名もリリーススクリプトの入力として引き続き受け付けます。
 
-展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。IntelliJ IDEA か Android Studio の Open で `samples/K01HelloKotlin` のように選ぶだけで開け、初回から参考資料として使えます（各教科書からZIPでも受け取れます）。
+展開後、はじめて授業を受ける学生は [共通資料：授業を始めるまでの準備](docs/common/setup.html) をブラウザで開き、上から順に準備します（同梱の `はじめに.txt` でも、単元一覧より前に案内しています）。準備が済んだら、その日の単元の教科書（第1回なら `docs/hello-kotlin/index.html`）をブラウザで開きます。完成プロジェクトは、展開済みの見本として配布物の `samples` フォルダに入っています。自力でエラーを解決できないときの参考資料として [共通資料：困ったとき](docs/common/help.html) に開き方を案内しています。
 
 学生用ZIPには `docs` 一式と、展開済みの完成プロジェクト（`samples`）、開き方・版情報を収録します。**日本語・英語・中国語（簡体）・台湾華語（繁体字）・韓国語の5言語で配布します**（英語は2026-09-25に `distribute: true` にした。#56。中国語（簡体）は2026-09-25、#126。台湾華語（繁体字）は2026-09-30、#142。韓国語は2026-09-30、#150）。展開してできたフォルダの中身は、言語を選ぶ入口の `index.html` と `docs` / `samples` / `はじめに.txt` / `VERSION.json` の5つです。英語の教科書は `docs/en/`、中国語（簡体）の教科書は `docs/zh-Hans/`、台湾華語（繁体字）の教科書は `docs/zh-Hant-TW/`、韓国語の教科書は `docs/ko/` に入り、`はじめに.txt` にも各言語の案内が付きます。ほかの5言語は `distribute: false` なので入りません（「多言語展開」）。翻訳を終えた言語を `distribute: true` にすると、その言語も入口と `はじめに.txt` に加わります。`teacher` フォルダと、教員が確認に使うひな形（`Panda2KotlinEmptyViewsActivity` / `Quail4KotlinEmptyViewsActivity`）は収録しません。GitHubが自動で表示する **Source code (zip)** はリポジトリ全体のため、学生用ZIPには使いません。なお、このリポジトリ自体はPublicなので、教員用ファイルもGitHub上では閲覧できます。
 
