@@ -91,10 +91,6 @@
       "translation": "遇到問題時"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "開啟完成版專案"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "共用：上課前的準備"
     },
@@ -105,6 +101,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "共用：不同的 Android Studio 版本"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "共用：遇到問題時"
     },
     {
       "source": "Kotlinで<br>画面を動かそう",
@@ -835,18 +835,6 @@
       "translation": "在自己的應用程式上4個項目都符合，可以更改的位置也能在 STEP 12 的表格中找到。"
     },
     {
-      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
-      "translation": "範例已解壓縮在發放的教材資料夾中的 <code>samples/A01HelloAndroid</code>。請用 Android Studio 的 <strong>Open</strong> 選擇 <code>A01HelloAndroid</code> 資料夾，而不是 <code>app</code>。在另一個視窗開啟，等待 Gradle 同步後，在指定的 AVD 上 Run。"
-    },
-    {
-      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
-      "translation": "比較完之後，請回到自己建立的 <code>Documents/Kotlin/A01HelloAndroid</code>。範例從第1次就可以參考。"
-    },
-    {
-      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
-      "translation": "如果發放的形式中沒有範例資料夾，請取得<a1>完成版專案 ZIP</a1>，解壓縮後用 Open 開啟該資料夾。"
-    },
-    {
       "source": "起きたこと",
       "translation": "出現的情況"
     },
@@ -929,6 +917,10 @@
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
       "translation": "提問時，請告訴老師教材資料夾中 <code>VERSION.json</code> 裏的版本和 STEP 編號。"
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "如果錯誤仍未解決，請參閱<a1>共用資料：遇到問題時</a1>的「查看完成專案（範例）」。"
     },
     {
       "source": "公式資料",

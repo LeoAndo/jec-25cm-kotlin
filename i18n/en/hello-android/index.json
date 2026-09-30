@@ -91,10 +91,6 @@
       "translation": "If you get stuck"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Open the completed project"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Shared: Getting ready for class"
     },
@@ -105,6 +101,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "Shared: A different Android Studio version"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Shared: If you get stuck"
     },
     {
       "source": "Kotlinで<br>画面を動かそう",
@@ -835,18 +835,6 @@
       "translation": "All four items work in your own app, and the parts you can change are in the table in STEP 12."
     },
     {
-      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
-      "translation": "The sample is already extracted to <code>samples/A01HelloAndroid</code> in the materials folder you received. In Android Studio, use <strong>Open</strong> and select the <code>A01HelloAndroid</code> folder, not <code>app</code>. Open it in a separate window, wait for the Gradle sync, and run it on the designated AVD."
-    },
-    {
-      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
-      "translation": "When you finish comparing, go back to the <code>Documents/Kotlin/A01HelloAndroid</code> that you made. You may refer to the sample from the start."
-    },
-    {
-      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
-      "translation": "If your materials do not include the sample folder, get the <a1>completed project ZIP</a1>, then use Open to open the extracted folder."
-    },
-    {
       "source": "起きたこと",
       "translation": "What happened"
     },
@@ -929,6 +917,10 @@
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
       "translation": "When you ask a question, tell your teacher the version in <code>VERSION.json</code> in the materials folder and the STEP number."
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared: If you get stuck</a1>."
     },
     {
       "source": "公式資料",

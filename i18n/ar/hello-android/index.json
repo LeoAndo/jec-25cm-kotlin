@@ -91,10 +91,6 @@
       "translation": "إذا واجهتك مشكلة"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "فتح المشروع المكتمل"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "مشترك: الاستعداد لبدء الحصص"
     },
@@ -105,6 +101,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "مشترك: إصدار مختلف من Android Studio"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "مشترك: إذا واجهتك مشكلة"
     },
     {
       "source": "Kotlinで<br>画面を動かそう",
@@ -835,18 +835,6 @@
       "translation": "تعمل العناصر الأربعة في تطبيقك، وتجد المواضع التي يمكنك تغييرها في جدول STEP 12."
     },
     {
-      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
-      "translation": "المثال مفكوك الضغط بالفعل في <code>samples/A01HelloAndroid</code> داخل مجلد المواد التعليمية الموزّعة. من <strong>Open</strong> في Android Studio، اختر مجلد <code>A01HelloAndroid</code> وليس <code>app</code>. افتحه في نافذة منفصلة، وانتظر مزامنة Gradle، ثم شغّله على جهاز AVD المحدّد."
-    },
-    {
-      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
-      "translation": "بعد انتهاء المقارنة، ارجع إلى <code>Documents/Kotlin/A01HelloAndroid</code> الذي أنشأته بنفسك. يمكنك الرجوع إلى المثال من المرة الأولى."
-    },
-    {
-      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
-      "translation": "إذا كانت المواد الموزّعة لا تتضمن مجلد المثال، فاحصل على <a1>ملف ZIP للمشروع المكتمل</a1>، وافتح المجلد الناتج عن فك الضغط عبر Open."
-    },
-    {
       "source": "起きたこと",
       "translation": "ما حدث"
     },
@@ -929,6 +917,10 @@
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
       "translation": "عندما تسأل، أخبر المعلم بالإصدار المكتوب في <code>VERSION.json</code> في مجلد المواد التعليمية وبرقم STEP."
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "إذا لم تُحل المشكلة، يُرجى الرجوع إلى \"فحص المشروع المكتمل (النموذج)\" في <a1>المواد المشتركة: إذا واجهتك مشكلة</a1>."
     },
     {
       "source": "公式資料",

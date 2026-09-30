@@ -111,10 +111,6 @@
       "translation": "إذا واجهتك مشكلة"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "فتح المشروع المكتمل"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "مشترك: الاستعداد لبدء الحصص"
     },
@@ -125,6 +121,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "مشترك: إصدار مختلف من Android Studio"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "مشترك: إذا واجهتك مشكلة"
     },
     {
       "source": "GitHubのリポジトリを<br>検索しよう",
@@ -1119,16 +1119,8 @@
       "translation": "تابع من بعد الخطوة STEP التي تطابقت عندها الشاشة في آخر مرة. يمكنك مطابقة الشيفرة الكاملة مع STEP 04 في نهاية الحصة 11، ومع STEP 10 في نهاية الحصة 12."
     },
     {
-      "source": "配布ZIPを展開した中の <code>samples/A03GithubSearch</code> をAndroid Studioの <strong>Open</strong> で開きます。<strong>This Window</strong> を選ぶ前に保存先を確認し、自分の <code>Documents/Kotlin/A03GithubSearch</code> と取り違えないようにします。見本を閉じたら自分の保存先を開き直します。",
-      "translation": "افتح <code>samples/A03GithubSearch</code> الموجود داخل المجلد الناتج عن فك ضغط ملف ZIP الموزّع، عبر <strong>Open</strong> في Android Studio. تحقق من موقع الحفظ قبل اختيار <strong>This Window</strong> حتى لا تخلط بينه وبين مجلدك <code>Documents/Kotlin/A03GithubSearch</code>. وبعد إغلاق المثال، أعد فتح موقع الحفظ الخاص بك."
-    },
-    {
-      "source": "教科書だけを受け取った場合は <a1>A03GithubSearch.zip</a1> を保存して展開し、中の <code>A03GithubSearch</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
-      "translation": "إذا كنت قد تسلّمت الكتاب المدرسي وحده، فاحفظ <a1>A03GithubSearch.zip</a1> وفك ضغطه، ثم افتح مجلد <code>A03GithubSearch</code> الموجود بداخله عبر Open. لا تختر ملف ZIP نفسه ولا مجلد app الداخلي."
-    },
-    {
-      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。通信には回線が必要で、検索回数の制限も同じです。見本はコードと動作を比べる資料です。",
-      "translation": "بعد المزامنة، اختر إعداد التشغيل <strong>app</strong> وجهاز <code>jec_25cm_kotlin_Pixel 9a</code> ثم شغّل التطبيق بـ Run. يتطلب الاتصال وجود شبكة، وتنطبق عليه قيود عدد مرات البحث نفسها. المثال هو مرجع لمقارنة الشيفرة وسلوك التطبيق."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "إذا لم تُحل المشكلة، يُرجى الرجوع إلى \"فحص المشروع المكتمل (النموذج)\" في <a1>المواد المشتركة: إذا واجهتك مشكلة</a1>."
     },
     {
       "source": "公式資料",

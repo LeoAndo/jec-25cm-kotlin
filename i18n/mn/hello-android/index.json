@@ -91,10 +91,6 @@
       "translation": "Асуудал гарвал"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "Бэлэн төслийг нээх"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "Нийтлэг: Хичээл эхлэхээс өмнөх бэлтгэл"
     },
@@ -105,6 +101,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "Нийтлэг: Android Studio програмын өөр хувилбар"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "Нийтлэг: Асуудал гарвал"
     },
     {
       "source": "Kotlinで<br>画面を動かそう",
@@ -835,18 +835,6 @@
       "translation": "Өөрийн апп дээрээ 4 зүйлийг шалгах боломжтой бөгөөд өөрчилж болох хэсгүүд нь STEP 12-ийн хүснэгтэд байна."
     },
     {
-      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
-      "translation": "Загвар төслийг тараасан сургалтын материалын <code>samples/A01HelloAndroid</code> хавтсанд задалсан байгаа. Android Studio-ийн <strong>Open</strong> цэсээр <code>app</code> биш <code>A01HelloAndroid</code> хавтсыг сонгоно уу. Өөр цонхонд нээж, Gradle синхрончлол дуусахыг хүлээгээд заасан AVD төхөөрөмж дээр Run хийнэ үү."
-    },
-    {
-      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
-      "translation": "Харьцуулж дууссаны дараа өөрийн үүсгэсэн <code>Documents/Kotlin/A01HelloAndroid</code> руу буцна уу. Загвар төслийг эхнээс нь харах боломжтой."
-    },
-    {
-      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
-      "translation": "Загвар төслийн хавтас байхгүй бол, <a1>Дууссан төслийн ZIP</a1>-ийг татан авч, задалсан хавтсыг Open хийнэ үү."
-    },
-    {
       "source": "起きたこと",
       "translation": "Тохиолдсон асуудал"
     },
@@ -929,6 +917,10 @@
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
       "translation": "Асуулт асуухдаа сургалтын материалын <code>VERSION.json</code> доторх хувилбар болон STEP дугаарыг хэлнэ үү."
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Алдаа шийдэгдэхгүй байвал <a1>Нийтлэг материал: Асуудал гарвал</a1> хэсгийн «Бэлэн төсөл (жишээ)-ийг шалгах» тайлбарыг үзнэ үү."
     },
     {
       "source": "公式資料",
