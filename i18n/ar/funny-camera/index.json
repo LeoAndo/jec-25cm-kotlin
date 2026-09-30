@@ -95,10 +95,6 @@
       "translation": "إذا واجهتك مشكلة"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "فتح المشروع المكتمل"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "مشترك: الاستعداد لبدء الحصص"
     },
@@ -109,6 +105,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "مشترك: إصدار مختلف من Android Studio"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "مشترك: إذا واجهتك مشكلة"
     },
     {
       "source": "カメラにキャラクターを<br>重ねよう",
@@ -927,16 +927,8 @@
       "translation": "النص الكامل لنهاية الحصة 14 موجود في STEP 06. تبدأ الحصة 15 من STEP 08، والنص الكامل للنسخة المكتملة في STEP 10."
     },
     {
-      "source": "配布ZIPを展開した中の <code>samples/A04FunnyCamera</code> をAndroid Studioの <strong>Open</strong> で開きます。自分の <code>Documents/Kotlin/A04FunnyCamera</code> と保存先で区別します。見本を閉じたら自分の保存先を開き直します。",
-      "translation": "افتح <code>samples/A04FunnyCamera</code> الموجود داخل ملف ZIP الموزّع بعد فك ضغطه عبر <strong>Open</strong> في Android Studio. ميّزه عن <code>Documents/Kotlin/A04FunnyCamera</code> الخاص بك من خلال موقع الحفظ. بعد إغلاق المثال، أعد فتح موقع الحفظ الخاص بك."
-    },
-    {
-      "source": "教科書だけを受け取った場合は <a1>A04FunnyCamera.zip</a1> を保存して展開し、中の <code>A04FunnyCamera</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
-      "translation": "إذا كنت قد تسلّمت الكتاب المدرسي وحده، فاحفظ <a1>A04FunnyCamera.zip</a1> وفك ضغطه، ثم افتح مجلد <code>A04FunnyCamera</code> الموجود بداخله عبر Open. لا تختر ملف ZIP نفسه ولا مجلد app الداخلي."
-    },
-    {
-      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。カメラの使用を許可して動作を比べます。見本はコードと動作の確認用です。",
-      "translation": "بعد المزامنة، اختر إعدادات التشغيل <strong>app</strong> و<code>jec_25cm_kotlin_Pixel 9a</code>، ثم اضغط Run. اسمح باستخدام الكاميرا وقارن السلوك. المثال مخصص للتحقق من الشيفرة وسلوك التطبيق."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "إذا لم تُحل المشكلة، يُرجى الرجوع إلى \"فحص المشروع المكتمل (النموذج)\" في <a1>المواد المشتركة: إذا واجهتك مشكلة</a1>."
     },
     {
       "source": "公式資料",

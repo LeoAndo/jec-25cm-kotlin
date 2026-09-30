@@ -95,10 +95,6 @@
       "translation": "遇到问题时"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "打开完成项目"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "通用：上课前的准备"
     },
@@ -109,6 +105,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "通用：遇到问题时"
     },
     {
       "source": "時間を計って<br>計算ゲームを作ろう",
@@ -127,8 +127,8 @@
       "translation": "本单元要制作的东西"
     },
     {
-      "source": "停止中の時間を除いて再開できるタイマー付きの計算ゲーム。前から順に、自分のプロジェクトへコードを書き足します。完成コードと見本は初めから参照できます。",
-      "translation": "一个带计时器的计算游戏，计时器可以继续计时，且不计入停止期间的时间。从前往后按顺序，把代码添加到自己的项目里。完成代码和示例从一开始就可以参考。"
+      "source": "停止中の時間を除いて再開できるタイマー付きの計算ゲーム。前から順に、自分のプロジェクトへコードを書き足します。",
+      "translation": "一个带计时器的计算游戏，计时器可以继续计时，且不计入停止期间的时间。从前往后按顺序，把代码添加到自己的项目里。"
     },
     {
       "source": "STEP 00 · 9コマ目 · 目安 5分",
@@ -975,16 +975,8 @@
       "translation": "用 STEP 12 的全文核对 onCreate 的结尾和 startQuestion 的位置。"
     },
     {
-      "source": "配布ZIPを展開したフォルダの <code>samples/A02CalcGame</code> を、Android Studioの <strong>Open</strong> から開きます。<strong>This Window</strong> で自分のプロジェクトと取り違えないよう、開くフォルダ名と保存先を確認します。見本を閉じたら自分の <code>Documents/Kotlin/A02CalcGame</code> を開き直します。",
-      "translation": "用 Android Studio 的 <strong>Open</strong> 打开分发的 ZIP 解压后的文件夹中的 <code>samples/A02CalcGame</code>。为了在 <strong>This Window</strong> 中不与自己的项目弄混，确认要打开的文件夹名称和保存位置。关闭示例后，重新打开自己的 <code>Documents/Kotlin/A02CalcGame</code>。"
-    },
-    {
-      "source": "教科書だけを受け取った場合は、<a1>A02CalcGame.zip</a1> を保存して展開し、その中の <code>A02CalcGame</code> をOpenします。ZIPそのものや内側の <code>app</code> フォルダは選びません。",
-      "translation": "如果只收到了课本，就保存并解压 <a1>A02CalcGame.zip</a1>，用 Open 打开其中的 <code>A02CalcGame</code>。不要选 ZIP 本身或里面的 <code>app</code> 文件夹。"
-    },
-    {
-      "source": "Gradle同期を待ち、実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選んでRunします。見本は動作確認と比較用で、そのまま提出するものではありません。",
-      "translation": "等待 Gradle 同步，选择运行配置 <strong>app</strong> 和 <code>jec_25cm_kotlin_Pixel 9a</code>，然后点击 Run。示例用于确认动作和比较，不能直接提交。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "如果错误仍未解决，请参考<a1>通用资料：遇到问题时</a1>中的“查看完成项目（示例）”。"
     },
     {
       "source": "公式資料",

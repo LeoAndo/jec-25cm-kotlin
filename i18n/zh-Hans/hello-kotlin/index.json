@@ -215,10 +215,6 @@
       "translation": "遇到问题时"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "打开完成项目"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "通用：上课前的准备"
     },
@@ -229,6 +225,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "通用：使用不同版本的 Android Studio"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "通用：遇到问题时"
     },
     {
       "source": "Kotlinを<br>書き始める",
@@ -469,10 +469,6 @@
     {
       "source": "プロジェクトは <strong>自分で新規作成</strong>します。1コマ目の STEP 02 で <code>K01HelloKotlin</code> を作ります。2コマ目からは、このプロジェクトを開き直して続きを書くので、作り直しません。",
       "translation": "项目由<strong>自己新建</strong>。在第1节课的 STEP 02 创建 <code>K01HelloKotlin</code>。从第2节课起，重新打开这个项目继续写，不再重新创建。"
-    },
-    {
-      "source": "<a1>完成プロジェクト</a1>は、最初の授業からいつでも見られる参考資料です。自分で書いたコードと比べるときに使います。",
-      "translation": "<a1>完成项目</a1>是从第一节课起随时可以查看的参考资料。用来和自己写的代码作比较。"
     },
     {
       "source": "この教科書の進め方",
@@ -4007,90 +4003,6 @@
       "translation": "两个程序的输出与完成检查一致，<code>src</code> 中排列着 <code>ex01</code>～<code>ex11</code> 这11个包。"
     },
     {
-      "source": "次へ：完成プロジェクトを開いて比べる →",
-      "translation": "下一步：打开完成项目进行比较 →"
-    },
-    {
-      "source": "REFERENCE · 最初の授業から使える見本",
-      "translation": "REFERENCE · 从第一节课起就能使用的示例"
-    },
-    {
-      "source": "完成プロジェクトを開いて比べる",
-      "translation": "打开完成项目进行比较"
-    },
-    {
-      "source": "授業は、自分で新規作成したプロジェクトで進めます。完成版は、動作確認とコード比較のための見本です。見本は、教科書といっしょに配られた<strong>教材のフォルダ</strong>に、そのまま開ける形で入っています。ダウンロードも展開も要りません。",
-      "translation": "课堂上，使用的是自己新建的项目。完成版是用于确认运行结果和比较代码的示例。示例以可直接打开的形式，放在与课本一起分发的<strong>教材文件夹</strong>中。不需要下载，也不需要解压。"
-    },
-    {
-      "source": "① 見本の場所を確かめる",
-      "translation": "① 确认示例的位置"
-    },
-    {
-      "source": "Finderを開き、左側の <strong>書類</strong>（<code>Documents</code>）をクリックします。教材のフォルダをダブルクリックで開きます。名前は <code>kotlin-student-materials-</code> のうしろに日付と12文字の英数字が付いた形で、配られた版によって変わります。いま読んでいるこの教科書が入っているフォルダです。",
-      "translation": "打开 Finder，点击左侧的 <strong>書類</strong>（文稿，<code>Documents</code>）。双击打开教材文件夹。它的名称是 <code>kotlin-student-materials-</code> 后接日期和12位英文字母与数字，会随分发的版本而变化。它就是存放你正在阅读的这本课本的文件夹。"
-    },
-    {
-      "source": "その中の <code>samples</code> フォルダを開きます。<code>K01HelloKotlin</code> フォルダが見本です。場所を確かめるだけで、移動はしません。",
-      "translation": "打开其中的 <code>samples</code> 文件夹。<code>K01HelloKotlin</code> 文件夹就是示例。只确认位置，不要移动它。"
-    },
-    {
-      "source": "使うもの",
-      "translation": "所需工具"
-    },
-    {
-      "source": "フォルダの場所（ユーザ名と教材のフォルダは、自分のものに読み替える）",
-      "translation": "文件夹的位置（其中的 ユーザ名 指自己的用户名，教材のフォルダ 指自己的教材文件夹）"
-    },
-    {
-      "source": "授業で作るプロジェクト",
-      "translation": "课堂上创建的项目"
-    },
-    {
-      "source": "完成版の見本",
-      "translation": "完成版的示例"
-    },
-    {
-      "source": "② IntelliJ IDEA で開く",
-      "translation": "② 在 IntelliJ IDEA 中打开"
-    },
-    {
-      "source": "フォルダを選ぶ画面を出します。授業のプロジェクトを開いているときは、いちばん上のメニューバーから <strong>ファイル → 開く…</strong> を選びます。プロジェクトを1つも開いていないときは、ホーム画面の左上のメニューから <strong>開く…</strong> を選びます。",
-      "translation": "调出选择文件夹的界面。已打开课堂项目时，从最上方的菜单栏选择 <strong>ファイル → 開く…</strong>（文件 → 打开...）。一个项目都没有打开时，从主界面左上角的菜单选择 <strong>開く…</strong>（打开...）。"
-    },
-    {
-      "source": "①で確かめた <code>samples</code> の中の <code>K01HelloKotlin</code> フォルダを選んで開きます。",
-      "translation": "选择并打开在①中确认过的 <code>samples</code> 里的 <code>K01HelloKotlin</code> 文件夹。"
-    },
-    {
-      "source": "開き方を聞かれたら <strong>新しいウィンドウ</strong> を選び、授業のプロジェクトとは別のウィンドウで開きます。",
-      "translation": "如果询问打开方式，选择 <strong>新しいウィンドウ</strong>（新窗口），在与课堂项目不同的窗口中打开。"
-    },
-    {
-      "source": "左の一覧で <code>src</code> を開き、いまの演習のパッケージを選びます。<code>ex01</code>〜<code>ex11</code> のうち、<code>ex08</code> は <code>Foo.kt</code>、ほかは <code>main.kt</code> を開きます。",
-      "translation": "在左侧列表中展开 <code>src</code>，选择当前练习的包。<code>ex01</code>～<code>ex11</code> 中，<code>ex08</code> 打开 <code>Foo.kt</code>，其他打开 <code>main.kt</code>。"
-    },
-    {
-      "source": "動きを見たいときは、<code>fun main()</code> の左の ▷ を押します。",
-      "translation": "想查看运行效果时，点击 <code>fun main()</code> 左侧的 ▷。"
-    },
-    {
-      "source": "③ 今のステップの部分だけを比べる",
-      "translation": "③ 只比较当前步骤的部分"
-    },
-    {
-      "source": "たとえば STEP 04 で困ったら、見本の <code>val number2</code> と <code>val number3</code> の2行を見ます。自分のコードと、<code>.</code> の位置や <code>f</code> の有無を1文字ずつ比べましょう。5コマ目は、STEP 26なら <code>ex08/Foo.kt</code> の <code>get()</code>・<code>set()</code>、STEP 27なら <code>ex09/main.kt</code> の <code>Person</code>・<code>copy</code>、STEP 28なら <code>ex07/main.kt</code> の <code>plusTen</code> を比べます。6コマ目は、STEP 32なら <code>ex10/main.kt</code> の2つの <code>map</code>、STEP 33なら <code>ex11/main.kt</code> の <code>by lazy</code> と2つの読み取りを比べます。",
-      "translation": "例如在 STEP 04 遇到问题时，查看示例中的 <code>val number2</code> 和 <code>val number3</code> 这两行。与自己的代码逐个字符比较，看 <code>.</code> 的位置和有没有 <code>f</code>。第5节课：STEP 26 比较 <code>ex08/Foo.kt</code> 的 <code>get()</code>、<code>set()</code>，STEP 27 比较 <code>ex09/main.kt</code> 的 <code>Person</code>、<code>copy</code>，STEP 28 比较 <code>ex07/main.kt</code> 的 <code>plusTen</code>。第6节课：STEP 32 比较 <code>ex10/main.kt</code> 的两个 <code>map</code>，STEP 33 比较 <code>ex11/main.kt</code> 的 <code>by lazy</code> 和两次读取。"
-    },
-    {
-      "source": "見終わったら、授業で作っている <code>Documents/Kotlin/K01HelloKotlin</code> のウィンドウに戻ります。直す場所を1つ確認し、Runして結果を確かめます。分からないときは、先生に2つのコードを見せましょう。",
-      "translation": "看完后，回到课堂上正在创建的 <code>Documents/Kotlin/K01HelloKotlin</code> 的窗口。确认一处要修改的地方，点击 Run 确认结果。不明白时，把两份代码给老师看。"
-    },
-    {
-      "source": "教材のフォルダが手元にないときは、同じ見本をZIPで受け取れます（<a1>K01HelloKotlin.zip</a1>）。展開してできた <code>K01HelloKotlin</code> フォルダを、②と同じように開きます。",
-      "translation": "手边没有教材文件夹时，可以用 ZIP 的形式获取同一个示例（<a1>K01HelloKotlin.zip</a1>）。解压后得到的 <code>K01HelloKotlin</code> 文件夹，按与②相同的方法打开。"
-    },
-    {
       "source": "HELP · 困ったらここ",
       "translation": "HELP · 遇到问题看这里"
     },
@@ -4347,6 +4259,10 @@
       "translation": "一次修改多处，就不容易看出是什么变了。改一处，再点击 Run 一次。"
     },
     {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "如果错误仍未解决，请参考<a1>通用资料：遇到问题时</a1>中的“查看完成项目（示例）”。"
+    },
+    {
       "source": "もっと知りたいとき",
       "translation": "想了解更多时"
     },
@@ -4400,11 +4316,6 @@
       "source": "場所",
       "where": "td",
       "translation": "場所（位置）"
-    },
-    {
-      "source": "使うもの",
-      "where": "th",
-      "translation": "要使用的东西"
     }
   ]
 }

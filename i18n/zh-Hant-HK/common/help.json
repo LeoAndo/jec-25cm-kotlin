@@ -1,0 +1,146 @@
+{
+  "source": "docs/common/help.html",
+  "language": "zh-Hant-HK",
+  "entries": [
+    {
+      "source": "困ったとき | Kotlin演習",
+      "translation": "遇到問題時 | Kotlin練習"
+    },
+    {
+      "source": "本文へ移動",
+      "translation": "跳至正文"
+    },
+    {
+      "source": "JEC / Kotlin演習",
+      "translation": "JEC / Kotlin練習"
+    },
+    {
+      "source": "もとのページへ戻る",
+      "translation": "返回原本的頁面"
+    },
+    {
+      "source": "KOTLIN PROGRAMMING EXERCISES / 共通資料・授業サポート",
+      "translation": "KOTLIN PROGRAMMING EXERCISES / 共用資料與課堂支援"
+    },
+    {
+      "source": "困ったとき",
+      "translation": "遇到問題時"
+    },
+    {
+      "source": "コードが赤くなった、アプリが動かない、原因が分からない。<br>エラーに向き合い、自分で解決するための調べ方をまとめています。",
+      "translation": "程式碼變紅了、應用程式無法執行、不知道原因是什麼。<br>這裡整理了面對錯誤並自行查找解決方案的方法。"
+    },
+    {
+      "source": "このページの内容",
+      "translation": "本頁內容"
+    },
+    {
+      "source": "1. エラーが起きたときの調べ方",
+      "translation": "1. 發生錯誤時的排查方法"
+    },
+    {
+      "source": "2. 共通資料を活用する",
+      "translation": "2. 善用共用資料"
+    },
+    {
+      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
+      "translation": "3. 實在無法解決時（查看完成專案）"
+    },
+    {
+      "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
+      "translation": "在寫程式時出現錯誤是很正常的。錯誤訊息中一定會註明「哪個檔案的哪一行有甚麼問題」。不要慌張，從上至下依次確認。"
+    },
+    {
+      "source": "<strong>各単元の「困ったとき」表を確認する</strong><br>教科書の末尾にある「困ったとき」には、その単元でよくある間違いと確認場所がまとまっています。",
+      "translation": "<strong>查看各單元的「遇到問題時」表格</strong><br>教科書末尾的「遇到問題時」整理了該單元的常見錯誤和確認位置。"
+    },
+    {
+      "source": "<strong>最初の赤い行を見る</strong><br>エラーが何行も出ているときは、一番上の「最初の赤い行」を直します。最初の1つを直すと、あとのエラーがまとめて消えることがよくあります。",
+      "translation": "<strong>查看第一行紅字</strong><br>出現多行錯誤時，先修正最上方的「第一行紅字」。修正了第一個錯誤後，後續的錯誤往往會一併消失。"
+    },
+    {
+      "source": "<strong>直前のSTEPと見比べる</strong><br>手順を1つ飛ばしていないか、大文字・小文字やスペル（綴り）が教科書と違っていないかを確認します。",
+      "translation": "<strong>與前一個STEP比對</strong><br>確認是否跳過了一個步驟，大小寫或拼字是否與教科書不一致。"
+    },
+    {
+      "source": "<strong>先生に質問するときは</strong><br>「STEP番号・編集したファイル・最初の赤い行・実行した操作」を伝えると、原因が早く分かります。",
+      "translation": "<strong>向老師提問時</strong><br>告知「STEP編號、修改過的檔案、第一行紅字、執行的操作」，能更快找出原因。"
+    },
+    {
+      "source": "状況に応じて、次の共通資料を参考にしてください。",
+      "translation": "請根據不同情況參考以下共用資料。"
+    },
+    {
+      "source": "困っていること",
+      "translation": "遇到的問題"
+    },
+    {
+      "source": "参考にする共通資料",
+      "translation": "參考的共用資料"
+    },
+    {
+      "source": "授業前の準備や教材の配置を確認したい",
+      "translation": "想確認課前準備和教材的存放位置"
+    },
+    {
+      "source": "<a1>共通資料：授業を始めるまでの準備</a1> を確認します。",
+      "translation": "請查看<a1>共用資料：開始上課前的準備</a1>。"
+    },
+    {
+      "source": "Android Studioのバージョンが違う",
+      "translation": "Android Studio 的版本不同"
+    },
+    {
+      "source": "<a1>共通資料：ちがうAndroid Studioのバージョンで進めるとき</a1> を確認します。",
+      "translation": "請查看<a1>共用資料：使用不同 Android Studio 版本進行時</a1>。"
+    },
+    {
+      "source": "提出課題の作り方や提出方法を知りたい",
+      "translation": "想了解繳交作業的製作方法與繳交方式"
+    },
+    {
+      "source": "<a1>共通資料：提出課題とAPKの作り方</a1> を確認します。",
+      "translation": "請查看<a1>共用資料：繳交作業與 APK 製作方法</a1>。"
+    },
+    {
+      "source": "どうしても自分のコードの間違いが見つからないときや、プログラム本来の動きを確認したいときは、先生が作った<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
+      "translation": "如果實在找不到自己程式碼中的錯誤，或者想確認程式原本的運作效果，可以打開老師製作的<strong>完成專案（範例）</strong>，與自己的程式碼進行比對。"
+    },
+    {
+      "source": "完成プロジェクトは「答え合わせ用」です",
+      "translation": "完成專案用於「核對答案」"
+    },
+    {
+      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
+      "translation": "直接從完成專案中複製程式碼，或者修改完成專案後繳交，都不能算作繳交了自己的作業。在範例中確認差異後，請務必<strong>返回自己建立的專案，親自動手修改</strong>。"
+    },
+    {
+      "source": "見本の開き方",
+      "translation": "開啟範例的方法"
+    },
+    {
+      "source": "<strong>書類</strong>（<code>Documents</code>）にある教材のフォルダ（<code>kotlin-student-materials-日付</code>）を開きます。",
+      "translation": "開啟位於<strong>文件</strong>（<code>Documents</code>）中的教材資料夾（<code>kotlin-student-materials-日付</code>）。"
+    },
+    {
+      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>K01HelloKotlin</code>、<code>A02CalcGame</code> など）を確認します。",
+      "translation": "在其中的 <code>samples</code> 資料夾中，找到對應單元的資料夾（例如：<code>K01HelloKotlin</code>、<code>A02CalcGame</code> 等）。"
+    },
+    {
+      "source": "IntelliJ IDEA または Android Studio の <strong>Open</strong> で該当フォルダを選んで開きます。",
+      "translation": "在 IntelliJ IDEA 或 Android Studio 中透過 <strong>Open</strong> 選取對應資料夾並開啟。"
+    },
+    {
+      "source": "見本で正しいコードや動作を確認したら見本を閉じ、自分のプロジェクト（<code>Documents/Kotlin/単元名</code>）を開き直して作業を続けます。",
+      "translation": "在範例中確認正確的程式碼或運作效果後關閉範例，重新開啟自己的專案（<code>Documents/Kotlin/単元名</code>）繼續作業。"
+    },
+    {
+      "source": "取り違えに注意",
+      "translation": "注意不要混淆"
+    },
+    {
+      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部に表示される保存先パスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
+      "translation": "範例與自己的應用程式專案名稱相同。請確認視窗上方顯示的儲存路徑，避免誤編輯了範例。"
+    }
+  ]
+}

@@ -111,10 +111,6 @@
       "translation": "遇到問題時"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "開啟完成版專案"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "共用：課前準備"
     },
@@ -125,6 +121,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "共用：不同的 Android Studio 版本"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "共用：遇到問題時"
     },
     {
       "source": "GitHubのリポジトリを<br>検索しよう",
@@ -1119,16 +1119,8 @@
       "translation": "請從最後畫面一致的 STEP 的下一個繼續。第11堂課末可以使用 STEP 04、第12堂課末可以使用 STEP 10 的全文來對照。"
     },
     {
-      "source": "配布ZIPを展開した中の <code>samples/A03GithubSearch</code> をAndroid Studioの <strong>Open</strong> で開きます。<strong>This Window</strong> を選ぶ前に保存先を確認し、自分の <code>Documents/Kotlin/A03GithubSearch</code> と取り違えないようにします。見本を閉じたら自分の保存先を開き直します。",
-      "translation": "請用 Android Studio 的 <strong>Open</strong> 開啟發放的 ZIP 解壓縮後的 <code>samples/A03GithubSearch</code>。在選擇 <strong>This Window</strong> 之前先確認儲存位置，避免和自己的 <code>Documents/Kotlin/A03GithubSearch</code> 弄混。關閉範例後，請重新開啟自己的儲存位置。"
-    },
-    {
-      "source": "教科書だけを受け取った場合は <a1>A03GithubSearch.zip</a1> を保存して展開し、中の <code>A03GithubSearch</code> フォルダをOpenします。ZIP自体や内側のappは選びません。",
-      "translation": "如果只收到課本，請儲存並解壓縮 <a1>A03GithubSearch.zip</a1>，用 Open 開啟其中的 <code>A03GithubSearch</code> 資料夾。不要選 ZIP 本身或內側的 app。"
-    },
-    {
-      "source": "同期後に実行設定 <strong>app</strong> と <code>jec_25cm_kotlin_Pixel 9a</code> を選びRunします。通信には回線が必要で、検索回数の制限も同じです。見本はコードと動作を比べる資料です。",
-      "translation": "同步完成後，選擇執行組態 <strong>app</strong> 與 <code>jec_25cm_kotlin_Pixel 9a</code> 並按 Run。連線需要網路連線，搜尋次數的限制也相同。範例是用來比較程式碼與動作的參考資料。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "如果錯誤仍未解決，請參閱<a1>共用資料：遇到問題時</a1>的「確認完成專案（範本）」。"
     },
     {
       "source": "公式資料",

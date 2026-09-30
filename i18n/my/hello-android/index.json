@@ -91,10 +91,6 @@
       "translation": "အဆင်မပြေသည့်အခါ"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "ပြီးစီးပြီးသော project ကို ဖွင့်ရန်"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "အထွေထွေ: အတန်းမစမီ ပြင်ဆင်ရန်"
     },
@@ -105,6 +101,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "အထွေထွေ: မတူညီသော Android Studio ဗားရှင်း"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "အထွေထွေ: အဆင်မပြေသည့်အခါ"
     },
     {
       "source": "Kotlinで<br>画面を動かそう",
@@ -835,18 +835,6 @@
       "translation": "ကိုယ့်အက်ပ်တွင် အချက် 4 ချက်ကို စစ်ဆေးနိုင်ပြီး ပြောင်းနိုင်သောနေရာများကို STEP 12 ၏ ဇယားတွင် တွေ့နိုင်ပါသည်။"
     },
     {
-      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
-      "translation": "နမူနာကို ဖြန့်ဝေထားသော သင်ခန်းစာဖိုင်တွဲအတွင်းရှိ <code>samples/A01HelloAndroid</code> တွင် ဖြည်ပြီးသား ထည့်ထားပါသည်။ Android Studio ၏ <strong>Open</strong> ဖြင့် <code>app</code> မဟုတ်ဘဲ <code>A01HelloAndroid</code> ဖိုင်တွဲကို ရွေးပါ။ သီးခြားဝင်းဒိုးတွင် ဖွင့်ပြီး Gradle sync ကို စောင့်ကာ သတ်မှတ်ထားသော AVD တွင် Run လုပ်ပါ။"
-    },
-    {
-      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
-      "translation": "နှိုင်းယှဉ်ပြီးလျှင် ကိုယ်တိုင် ဖန်တီးထားသော <code>Documents/Kotlin/A01HelloAndroid</code> သို့ ပြန်သွားပါ။ နမူနာကို ပထမအကြိမ်ကတည်းက ကြည့်ရှုနိုင်ပါသည်။"
-    },
-    {
-      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
-      "translation": "နမူနာဖိုင်တွဲ မပါသော ဖြန့်ဝေပုံစံဖြစ်လျှင် <a1>ပြီးစီးပြီးသော project ZIP</a1> ကို ရယူပြီး ဖြည်ထားသော ဖိုင်တွဲကို Open ဖြင့် ဖွင့်ပါ။"
-    },
-    {
       "source": "起きたこと",
       "translation": "ဖြစ်ပျက်သည့်အရာ"
     },
@@ -929,6 +917,10 @@
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
       "translation": "မေးသည့်အခါ သင်ခန်းစာဖိုင်တွဲရှိ <code>VERSION.json</code> ထဲက ဗားရှင်းနှင့် STEP နံပါတ်ကို ပြောပြပါ။"
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "Error မပြေလည်ပါက <a1>အထွေထွေလမ်းညွှန် - အဆင်မပြေသည့်အခါ</a1> ၏ “ပြီးစီးထားသော project (နမူနာ) ကို စစ်ဆေးခြင်း” ကို ကိုးကားပါ။"
     },
     {
       "source": "公式資料",

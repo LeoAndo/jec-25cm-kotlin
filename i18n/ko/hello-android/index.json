@@ -91,10 +91,6 @@
       "translation": "막혔을 때"
     },
     {
-      "source": "完成プロジェクトを開く",
-      "translation": "완성 프로젝트 열기"
-    },
-    {
       "source": "共通：はじめの準備",
       "translation": "공통: 수업 시작 전 준비"
     },
@@ -105,6 +101,10 @@
     {
       "source": "共通：ちがうAndroid Studioの版",
       "translation": "공통: 다른 Android Studio 버전"
+    },
+    {
+      "source": "共通：困ったとき",
+      "translation": "공통: 막혔을 때"
     },
     {
       "source": "Kotlinで<br>画面を動かそう",
@@ -835,18 +835,6 @@
       "translation": "자신의 앱에서 네 항목을 확인할 수 있고, 바꿀 수 있는 곳을 STEP 12의 표에서 찾을 수 있습니다."
     },
     {
-      "source": "見本は、配布した教材のフォルダ内の <code>samples/A01HelloAndroid</code> に展開済みです。Android Studioの <strong>Open</strong> で、<code>app</code> ではなく <code>A01HelloAndroid</code> フォルダを選びます。別のウィンドウで開き、Gradle同期を待って指定AVDでRunします。",
-      "translation": "예제는 배포한 교재 폴더 안의 <code>samples/A01HelloAndroid</code>에 압축이 풀린 상태로 들어 있습니다. Android Studio의 <strong>Open</strong>에서 <code>app</code>이 아니라 <code>A01HelloAndroid</code> 폴더를 선택합니다. 별도의 창에서 열고, Gradle 동기화를 기다린 뒤 지정된 AVD에서 Run을 누릅니다."
-    },
-    {
-      "source": "比較が終わったら、自分で作った <code>Documents/Kotlin/A01HelloAndroid</code> に戻ります。見本は初回から参照して構いません。",
-      "translation": "비교가 끝나면 직접 만든 <code>Documents/Kotlin/A01HelloAndroid</code>로 돌아갑니다. 예제는 처음부터 참조해도 됩니다."
-    },
-    {
-      "source": "見本のフォルダがない配布形態では、<a1>完成プロジェクトZIP</a1>を受け取り、展開したフォルダをOpenします。",
-      "translation": "예제 폴더가 없는 배포 형태에서는 <a1>완성 프로젝트 ZIP</a1>을 받아, 압축을 푼 폴더를 Open으로 엽니다."
-    },
-    {
       "source": "起きたこと",
       "translation": "발생한 현상"
     },
@@ -929,6 +917,10 @@
     {
       "source": "質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。",
       "translation": "질문할 때는 교재 폴더의 <code>VERSION.json</code>에 있는 버전과 STEP 번호를 알려 드립니다."
+    },
+    {
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
+      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 막혔을 때</a1>의 '완성 프로젝트(예제) 확인'을 참고하세요."
     },
     {
       "source": "公式資料",
