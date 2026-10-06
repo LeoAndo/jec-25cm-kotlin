@@ -195,7 +195,7 @@ def prepare(repo, metadata):
     commits = without_sample_guidance(subprocess.check_output(
         ["git", "log", "--no-merges", "--format=- %s (%h)", commit_range], cwd=ROOT, text=True,
     ).strip())
-    student_notes = os.environ.get("STUDENT_NOTES", "").strip()
+    student_notes = without_sample_guidance(os.environ.get("STUDENT_NOTES", "").strip())
     projects = load_projects()
     body = (
         f"# Kotlin演習 教材 {version}\n\n"

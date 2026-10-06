@@ -1464,14 +1464,16 @@ class SampleGuidanceCheckTest(unittest.TestCase):
         self.assertIn("docs/hello-android/index.html:3", errors[0])
 
     def test_link_to_project_archive_is_rejected(self):
-        """完成プロジェクトZIPへのリンクは、文言や引用符にかかわらず検出する。別ページからの相対パスも解決する。"""
+        """完成プロジェクトZIPへのリンクは、文言や引用符にかかわらず検出する。別ページからの相対パスや絶対URLも解決する。"""
         errors = self._check({
             "docs/hello-android/index.html": "<p>ダウンロード</p>\n<a href='downloads/A01HelloAndroid.zip' download>答え</a>",
             "docs/common/help.html": '<a href="../hello-android/downloads/A01HelloAndroid.zip?from=x">見本</a>',
+            "docs/common/setup.html": '<a href="https://example.com/downloads/A01HelloAndroid.zip">見本</a>',
         })
-        self.assertEqual(len(errors), 2, errors)
+        self.assertEqual(len(errors), 3, errors)
         self.assertIn("docs/common/help.html:1", errors[0])
-        self.assertIn("docs/hello-android/index.html:2", errors[1])
+        self.assertIn("docs/common/setup.html:1", errors[1])
+        self.assertIn("docs/hello-android/index.html:2", errors[2])
         self.assertTrue(all("完成プロジェクトZIPへリンク" in error for error in errors), errors)
 
     def test_validate_runs_the_check(self):
