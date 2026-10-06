@@ -3,7 +3,7 @@
 <body class="plain"><a class="skip" href="#main">本文へ移動</a><header class="topbar"><span class="brand">JEC / Kotlin演習</span><a href="../../docs/hello-android/index.html">A01HelloAndroidの教科書へ戻る</a></header><main id="main"><div class="hero"><p class="eyebrow">KOTLIN演習 / 教員用ガイド</p><h1>A01HelloAndroid<br>授業の進め方</h1><p class="lede">Java・Swift学習済みの学生が、KotlinでXMLの部品を取得し、クリック時の処理を画面へつなぐ2コマです。7〜8コマ目、各90分。</p><p>パッケージ：<code>jp.ac.jec.a01helloandroid</code> / Android Studio Panda 2 / 指定AVD：<code>jec_25cm_kotlin_Pixel 9a</code></p></div>
 <section><h2>1. 授業前の準備</h2><ul>
 <li>学生のMacでPanda 2のNew ProjectからEmpty Views Activityを選べることを確認する。教員の既定環境はQuail 4なので、操作確認にはPanda 2を明示して起動する。</li>
-<li>配布版のdocsとsamplesを同じ構成で用意する。学生は自分のDocuments/Kotlin/A01HelloAndroidを作る。samplesは比較用で、完成見本をそのまま提出しない。</li>
+<li>配布版のdocsとsamplesを同じ構成で用意する。学生は自分のDocuments/Kotlin/A01HelloAndroidを作る。samplesは教科書からは案内しない（README「授業用教科書の基本方針」13）。完成見本をそのまま提出させない。</li>
 <li>Minimum SDKはAPI 31、Kotlin、Kotlin DSL、パッケージjp.ac.jec.a01helloandroid。Save locationはプロジェクト名まで入れる。</li>
 <li>SDKとライブラリの初回ダウンロードが学内ネットワークで通るか、授業前に1台で確認する。ダウンロード待ちが20分を超える場合は、教員の端末で実行結果を見せて、学生はXMLの入力を進める。配布見本を自作として扱わない。</li>
 <li>指定AVDを起動する。表示名は <code>jec_25cm_kotlin_Pixel 9a</code>。内部のAVD識別子は空白が下線になる場合があるが、教科書・Device Managerの表示名は空白を使う。画像の実測環境はAPI 37.1・arm64-v8a・ライトテーマ。学生のシステムイメージは教室の配布環境で確認し、API 31以上かつCPUに合うものを授業前に指定する。</li>
@@ -37,7 +37,7 @@
 <section><h2>5. 終了時の確認と再開地点</h2><table><thead><tr><th>区切り</th><th>画面で確認すること</th><th>次の再開位置</th></tr></thead><tbody>
 <tr><td>7コマ目</td><td>Hello World!と4つのボタン。MainActivityには4つのView取得。クリック処理はまだない。</td><td>STEP 07で同じプロジェクトをOpen。</td></tr>
 <tr><td>8コマ目</td><td>起動時Hello World!、変更後Hello, Android!、Snackbarの1、Toastの2、Logcatに2種類の文字。</td><td>アレンジを続けるならSTEP 12。提出時は共通APK資料。</td></tr>
-</tbody></table><p>未完了の学生は、最後に画面が一致したSTEPの次から再開する。教科書のチェックを教員へ送る機能はない。完成見本を開いているだけの学生は、自分の保存先へ戻っているか確認する。</p>
+</tbody></table><p>未完了の学生は、最後に画面が一致したSTEPの次から再開する。教科書のチェックを教員へ送る機能はない。教科書からは案内していないが、完成見本を開いている学生がいたら、自分の保存先へ戻らせる。</p>
 <h3>理解確認に使う短い問い</h3><table><thead><tr><th>問い</th><th>期待する答えと確認操作</th></tr></thead><tbody><tr><td>btn1の表示を変えると何が変わるか</td><td>ボタンとSnackbarの文字。getText()で読んでいるため。XMLの文字だけを変更してRunする。</td></tr><tr><td>val textなのに文字を変えられるのはなぜか</td><td>参照の再代入と、参照先Viewのプロパティ変更は別。クリック後の見出しを見る。</td></tr><tr><td>3でメッセージが出ないのはなぜか</td><td>クリック処理を登録していない。XMLのstyleがあることと動作は別。</td></tr></tbody></table></section>
 <section><h2>6. 照合用コードと保守</h2><ul><li><a href="code/01-libs.versions.toml">01-libs.versions.toml</a>：STEP 01の設定全文。完成版とバイト一致。</li><li><a href="code/04-activity_main.xml">04-activity_main.xml</a>：STEP 04の画面全文。完成版とバイト一致。</li><li><a href="code/05-MainActivity.kt">05-MainActivity.kt</a>：STEP 05終了時の途中コード。通知・Logはまだなく、画面表示とView取得のみ。生成時の記法とは異なる部分があるが、完成版の骨格で照合できる。</li><li><a href="code/11-MainActivity.kt">11-MainActivity.kt</a>：STEP 11の完成全文。完成版とバイト一致。</li></ul>
 <p>完成ソースはA01HelloAndroidにある。変更する場合は教科書の全文、複製、配布ZIPを更新する。A01のsessionsは2。サイドバーにはconfigに登録された全単元を単元番号順に並べ、A01のtopbarは直前のK01を指す。</p>
