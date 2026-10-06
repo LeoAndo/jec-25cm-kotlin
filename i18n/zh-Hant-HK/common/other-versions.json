@@ -143,8 +143,8 @@
       "translation": "POINT：IDE 的版本和專案的設定是兩回事"
     },
     {
-      "source": "Quail 4でPanda 2の完成見本をOpenしても、見本のAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、配布された設定を保って照合します。",
-      "translation": "即使在 Quail 4 用 Open 開啟 Panda 2 的完成版範例，也毋須把範例的 AGP 或 Gradle 改為 Quail 4 的值。關閉建議更新的 AGP Upgrade Assistant，保持派發的設定進行核對。"
+      "source": "Panda 2で作ったプロジェクトをQuail 4でOpenしても、そのプロジェクトのAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、そのプロジェクトの設定を保ちます。",
+      "translation": "即使在Quail 4中透過Open開啟在Panda 2中製作的專案，也不需要將該專案的AGP或Gradle更改為Quail 4的數值。關閉建議升級的AGP Upgrade Assistant，保持該專案的設定。"
     },
     {
       "source": "3. Quail 4でのA01の読み替え",
@@ -199,20 +199,16 @@
       "translation": "STEP 11 至 13：核對全文與修改"
     },
     {
-      "source": "教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体を完成見本から上書きしません。文字と余白のアレンジは同じ場所です。",
-      "translation": "與課本的整個 <code>MainActivity.kt</code> 和 XML 核對。要比較的只是這兩個檔案，不要用完成版範例覆寫 Quail 4 的整套 Gradle 設定。文字和邊距的改動位置相同。"
-    },
-    {
-      "source": "完成見本は <code>samples/A01HelloAndroid</code> です。別ウィンドウで開いて比べ、入力を続けるときは自分の <code>Documents/Kotlin/A01HelloAndroid</code> へ戻ります。完成見本は自分の提出作品として扱いません。",
-      "translation": "完成版範例是 <code>samples/A01HelloAndroid</code>。在另一個視窗開啟來比較，繼續輸入時回到自己的 <code>Documents/Kotlin/A01HelloAndroid</code>。完成版範例不能當作自己的繳交作品。"
+      "source": "教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体は書き換えません。文字と余白のアレンジは同じ場所です。",
+      "translation": "與教材中 <code>MainActivity.kt</code> 的全文和XML進行核對。比較的只有這兩個檔案，不要重寫Quail 4的整個Gradle設定。文字和邊距的拓展位置是相同的。"
     },
     {
       "source": "4. 生成される設定の違い",
       "translation": "4. 自動產生的設定差異"
     },
     {
-      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材のひな形・完成版、Quail 4列は比較用ひな形の実測値です。",
-      "translation": "把左邊的 Project 工具視窗切換為 <strong>Project</strong> 檢視，便可以開啟以下檔案。這是<strong>用來比對的表格</strong>，不是要改寫的值的清單。Panda 2 一欄是教材的範本和完成版，Quail 4 一欄是用作比較的範本實際測得的值。"
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材の基準にしたひな形、Quail 4列は比較用ひな形の実測値です。",
+      "translation": "將左側的Project工具視窗切換為 <strong>Project</strong> 檢視，即可開啟以下檔案。這是一個<strong>用於對照的表格</strong>，不是用來改寫數值的清單。Panda 2欄是作為教材標準的範本，Quail 4欄是用作對比的範本的實測值。"
     },
     {
       "source": "見る場所",
@@ -383,8 +379,8 @@
       "translation": "Quail 4 目前 IDE 畫面的選單位置、Panda 3、其他 Studio 版本，以及日後製成教材的 A02 及之後單元的分階段程式碼。這些都不視為已確認。"
     },
     {
-      "source": "Quail 4の設定に書き換えた完成見本を配ることはしません。配布する完成見本と教科書本文の基準はPanda 2です。",
-      "translation": "不會派發改寫成 Quail 4 設定的完成版範例。派發的完成版範例和課本正文都以 Panda 2 為基準。"
+      "source": "Quail 4の設定に書き換えた教科書は用意しません。教科書本文の基準はPanda 2です。",
+      "translation": "不提供改寫為Quail 4設定的教材。教材正文的標準是Panda 2。"
     },
     {
       "source": "公式資料",

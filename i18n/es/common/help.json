@@ -43,10 +43,6 @@
       "translation": "2. Aprovechar el material común"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "3. Si de verdad no logras resolverlo (Comprobar el proyecto terminado)"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "Tener errores al programar es completamente natural. En los mensajes de error siempre se indica «qué problema hay en qué línea de qué archivo». Mantén la calma y comprueba en orden de arriba a abajo."
     },
@@ -101,46 +97,6 @@
     {
       "source": "<a1>共通資料：提出課題とAPKの作り方</a1> を確認します。",
       "translation": "Consulta <a1>Material común: Tareas a entregar y cómo crear un APK</a1>."
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、プログラム本来の動きを確認したいときは、先生が作った<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "Cuando de ninguna forma encuentres el error en tu código o quieras comprobar el funcionamiento previsto del programa, puedes abrir el <strong>proyecto terminado (ejemplo)</strong> hecho por el profesor y compararlo con tu código."
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "El proyecto terminado es para «comprobar las respuestas»"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "Copiar directamente el código del proyecto terminado o modificar el proyecto terminado para entregarlo no cuenta como entregar tu propia tarea. Tras comprobar las diferencias con el ejemplo, asegúrate de <strong>volver al proyecto que creaste tú mismo y corregirlo con tus propias manos</strong>."
-    },
-    {
-      "source": "見本の開き方",
-      "translation": "Cómo abrir el ejemplo"
-    },
-    {
-      "source": "<strong>書類</strong>（<code>Documents</code>）にある教材のフォルダ（<code>kotlin-student-materials-日付</code>）を開きます。",
-      "translation": "Abre la carpeta del material de clase (<code>kotlin-student-materials-日付</code>) que está en <strong>Documentos</strong> (<code>Documents</code>)."
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>K01HelloKotlin</code>、<code>A02CalcGame</code> など）を確認します。",
-      "translation": "Dentro de la carpeta <code>samples</code> que contiene, localiza la carpeta de la unidad correspondiente (por ejemplo: <code>K01HelloKotlin</code>, <code>A02CalcGame</code>, etc.)."
-    },
-    {
-      "source": "IntelliJ IDEA または Android Studio の <strong>Open</strong> で該当フォルダを選んで開きます。",
-      "translation": "Abre la carpeta correspondiente seleccionándola con <strong>Open</strong> en IntelliJ IDEA o Android Studio."
-    },
-    {
-      "source": "見本で正しいコードや動作を確認したら見本を閉じ、自分のプロジェクト（<code>Documents/Kotlin/単元名</code>）を開き直して作業を続けます。",
-      "translation": "Una vez comprobado el código correcto o el funcionamiento con el ejemplo, ciérralo, vuelve a abrir tu propio proyecto (<code>Documents/Kotlin/単元名</code>) y continúa trabajando."
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "Cuidado con confundir los proyectos"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部に表示される保存先パスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "El ejemplo y tu propia aplicación tienen el mismo nombre de proyecto. Comprueba la ruta de guardado que aparece en la parte superior de la ventana para asegurarte de no editar el ejemplo por error."
     }
   ]
 }

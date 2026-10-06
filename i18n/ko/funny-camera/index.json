@@ -139,8 +139,8 @@
       "translation": "오늘의 화면 먼저 보기"
     },
     {
-      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。見本の映像はエミュレータ内の仮想の部屋です。",
-      "translation": "열 IDE는 <strong>Android Studio Panda 2</strong>입니다. 오늘은 카메라 영상 위에 금붕어를 겹치고 손가락으로 움직입니다. 다음 차시에서 그 조합을 이미지로 저장합니다. 예제의 영상은 에뮬레이터 안의 가상 방입니다."
+      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。教科書の画像に写る映像は、エミュレータ内の仮想の部屋です。",
+      "translation": "열 IDE는 <strong>Android Studio Panda 2</strong>입니다. 오늘은 카메라 영상 위에 금붕어를 겹치고 손가락으로 움직입니다. 다음 교시에는 그 조합을 이미지로 저장합니다. 교재 이미지에 비치는 영상은 에뮬레이터 내의 가상 방입니다."
     },
     {
       "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面",
@@ -251,8 +251,8 @@
       "translation": "<code>app/build.gradle.kts</code>. 이쪽은 app 폴더 안입니다."
     },
     {
-      "source": "コード内の <code>TODO STEP01</code> は完成プロジェクトに残る作業時の目印で、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
-      "translation": "코드 안의 <code>TODO STEP01</code>은 완성 프로젝트에 남아 있는 작업 표시이며, 이 교과서의 STEP 번호가 아닙니다. CameraX의 4개 행 <code>implementation</code>은 이미 들어가 있습니다. 전문을 교체했다면 같은 줄을 다시 추가할 필요는 없습니다."
+      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
+      "translation": "코드 내의 <code>TODO STEP01</code>은 작업 시의 표시로 남겨둔 주석이며, 이 교재의 STEP 번호가 아닙니다. CameraX의 4개 줄 <code>implementation</code>은 이미 들어가 있습니다. 전문을 교체했다면 같은 줄을 다시 추가할 필요가 없습니다."
     },
     {
       "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
@@ -331,8 +331,8 @@
       "translation": "금붕어를 배치하고 드래그용 View 만들기"
     },
     {
-      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
-      "translation": "<a1>금붕어 이미지 character.png를 저장</a1>하고, Finder에서 자신의 <code>A04FunnyCamera/app/src/main/res/drawable/</code>로 복사합니다. 저장할 때 다른 이름이 되었다면 <code>character.png</code>로 고칩니다. <strong>drawable</strong> 바로 아래입니다. 이미지는 배경이 투명한 500x416 픽셀이며, 완성 버전과 동일한 것입니다."
+      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルです。",
+      "translation": "<a1>금붕어 이미지 character.png를 저장</a1>하고, Finder에서 자신의 <code>A04FunnyCamera/app/src/main/res/drawable/</code>로 복사합니다. 저장할 때 다른 이름이 되었다면 <code>character.png</code>로 고칩니다. <strong>drawable</strong> 바로 아래입니다. 이미지는 배경이 투명한 500×416 픽셀입니다."
     },
     {
       "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
@@ -679,8 +679,8 @@
       "translation": "지정된 AVD에서 저장한 JPEG. 화면 전체가 아닌 미리보기 범위가 이미지가 됨"
     },
     {
-      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、見本と同じ文字列にはなりません。",
-      "translation": "확인했으면 A04로 돌아옵니다. 금붕어의 위치를 바꾸고 한 번만 더 저장하여 새로운 일시의 이미지가 추가되는지 확인합니다. 일시는 기기 설정에 따르므로 예제와 같은 문자열이 되지는 않습니다."
+      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、教科書の画像と同じ文字列にはなりません。",
+      "translation": "확인했으면 A04로 돌아갑니다. 금붕어의 위치를 바꾸고 한 번 더 저장하여 새 일시의 이미지가 늘어나는 것을 확인합니다. 일시는 단말기의 설정에 따르므로 교재의 이미지와 같은 문자열이 되지 않습니다."
     },
     {
       "source": "同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。",
@@ -735,8 +735,8 @@
       "translation": "자신의 화면으로 변형하기"
     },
     {
-      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。完成プロジェクトの見本は上書きしません。",
-      "translation": "자신의 프로젝트에서 다음 중 한 곳을 변경하고 Run하여 화면과 저장 이미지를 비교합니다. 원래 값을 적어 둔 뒤 변경하고, 하나씩 확인합니다. 완성 프로젝트 예제는 덮어쓰지 않습니다."
+      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。",
+      "translation": "자신의 프로젝트에서 다음 중 1곳을 바꾸고 Run하여 화면과 저장된 이미지를 비교합니다. 원래 값을 적어두고 변경하며 하나씩 확인합니다."
     },
     {
       "source": "場所",
@@ -807,8 +807,8 @@
       "translation": "15차시의 마지막 3분"
     },
     {
-      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、このページ下の完成プロジェクトを使います。",
-      "translation": "자신의 프로젝트를 저장합니다. 카메라 권한을 앱 사용 중에만 허용으로 되돌려 두고, 미리보기와 저장된 JPEG를 순서대로 엽니다. 코드를 대조해 보고 싶을 때는 이 페이지 아래의 완성 프로젝트를 사용합니다."
+      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
+      "translation": "자신의 프로젝트를 저장합니다. 카메라 권한을 사용 중에만 허용으로 되돌려 두고, 미리보기와 저장한 JPEG를 차례로 엽니다. 코드를 비교해 보고 싶을 때는 STEP 10의 전문과 비교합니다."
     },
     {
       "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
@@ -927,8 +927,8 @@
       "translation": "14차시 마지막은 STEP 06의 전문입니다. 15차시는 STEP 08부터이며, 완성 버전 전문은 STEP 10입니다."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 막혔을 때</a1>의 '완성 프로젝트(예제) 확인'을 참고하세요."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 문제가 생겼을 때</a1>의 조사 방법을 시도해 보세요. 그래도 해결되지 않을 때는 STEP 번호와 화면을 선생님에게 보여주세요."
     },
     {
       "source": "公式資料",

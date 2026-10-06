@@ -143,8 +143,8 @@
       "translation": "POINT: The IDE version and the project settings are separate"
     },
     {
-      "source": "Quail 4でPanda 2の完成見本をOpenしても、見本のAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、配布された設定を保って照合します。",
-      "translation": "Even if you open the Panda 2 completed sample with Open in Quail 4, you do not need to change the sample's AGP or Gradle to Quail 4's values. Close the AGP Upgrade Assistant, which suggests upgrading, and keep the distributed settings when you compare."
+      "source": "Panda 2で作ったプロジェクトをQuail 4でOpenしても、そのプロジェクトのAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、そのプロジェクトの設定を保ちます。",
+      "translation": "Even if you open a project created in Panda 2 with Open in Quail 4, you do not need to change that project's AGP or Gradle to Quail 4's values. Close the AGP Upgrade Assistant, which suggests upgrading, and keep the project's settings."
     },
     {
       "source": "3. Quail 4でのA01の読み替え",
@@ -199,20 +199,16 @@
       "translation": "STEP 11–13: Full comparison and customization"
     },
     {
-      "source": "教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体を完成見本から上書きしません。文字と余白のアレンジは同じ場所です。",
-      "translation": "Compare your code with the full <code>MainActivity.kt</code> and the XML in the textbook. Compare only these two files; do not overwrite all of Quail 4's Gradle settings with those from the completed sample. Text and spacing customizations are in the same places."
-    },
-    {
-      "source": "完成見本は <code>samples/A01HelloAndroid</code> です。別ウィンドウで開いて比べ、入力を続けるときは自分の <code>Documents/Kotlin/A01HelloAndroid</code> へ戻ります。完成見本は自分の提出作品として扱いません。",
-      "translation": "The completed sample is <code>samples/A01HelloAndroid</code>. Open it in a separate window to compare, and go back to your own <code>Documents/Kotlin/A01HelloAndroid</code> when you continue typing. The completed sample does not count as your own work for submission."
+      "source": "教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体は書き換えません。文字と余白のアレンジは同じ場所です。",
+      "translation": "Compare your code with the full <code>MainActivity.kt</code> and the XML in the textbook. Compare only these two files; do not rewrite all of Quail 4's Gradle settings. Text and spacing customizations are in the same places."
     },
     {
       "source": "4. 生成される設定の違い",
       "translation": "4. Differences in generated settings"
     },
     {
-      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材のひな形・完成版、Quail 4列は比較用ひな形の実測値です。",
-      "translation": "Switch the Project tool window on the left to the <strong>Project</strong> view, and you can open the following files. This is <strong>a table for comparing</strong>, not a list of values to rewrite. The Panda 2 column shows the course's template project and completed version; the Quail 4 column shows the actual values in the template project used for comparison."
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材の基準にしたひな形、Quail 4列は比較用ひな形の実測値です。",
+      "translation": "Switch the Project tool window on the left to the <strong>Project</strong> view, and you can open the following files. This is <strong>a table for comparing</strong>, not a list of values to rewrite. The Panda 2 column shows the template project that served as the course standard; the Quail 4 column shows the actual values in the template project used for comparison."
     },
     {
       "source": "見る場所",
@@ -383,8 +379,8 @@
       "translation": "Menu positions in the current Quail 4 IDE screens, Panda 3, other Studio versions, and the step-by-step code for A02 and later units, which will be turned into materials in the future. These are not treated as verified either."
     },
     {
-      "source": "Quail 4の設定に書き換えた完成見本を配ることはしません。配布する完成見本と教科書本文の基準はPanda 2です。",
-      "translation": "Completed samples rewritten for Quail 4 settings are not distributed. The distributed completed samples and the textbook text are based on Panda 2."
+      "source": "Quail 4の設定に書き換えた教科書は用意しません。教科書本文の基準はPanda 2です。",
+      "translation": "Textbooks rewritten for Quail 4 settings are not provided. The textbook text is based on Panda 2."
     },
     {
       "source": "公式資料",

@@ -695,12 +695,12 @@
       "translation": "MainActivity.kt · 全文"
     },
     {
-      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
-      "translation": "<code>@Override</code> 是来自 Java 的注解。在 Kotlin 中表示重写的是 <code>override</code> 关键字，这里原样保留了示例的写法。边距处理中的 <code>Insets</code> 持有4条边的值。本单元只确认生成部分的作用，不涉及整个机制。"
+      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは上の全文の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
+      "translation": "<code>@Override</code> 是源自Java的注解。在Kotlin中表示重写使用的是 <code>override</code> 关键字，这里原样保留了上方全文的写法。处理边距的 <code>Insets</code> 包含4条边的值。在这一单元中仅确认生成部分的作用，不涉及整体机制。"
     },
     {
-      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。見本の <code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに比較します。",
-      "translation": "XML 的 <code>id</code> 与 Kotlin 的 <code>R.id</code> 一致，是连接成立的条件。示例中的 <code>text</code>、<code>button</code>、<code>btn1</code>、<code>btn2</code> 不改名称，直接比较。"
+      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに、上の全文と比較します。",
+      "translation": "XML的 <code>id</code> 与Kotlin的 <code>R.id</code> 一致是连接的条件。不要更改 <code>text</code>、<code>button</code>、<code>btn1</code>、<code>btn2</code> 的名称，与上方全文进行对比。"
     },
     {
       "source": "全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。",
@@ -827,8 +827,8 @@
       "translation": "Logcat 中也显示启动时和更改后的文字。"
     },
     {
-      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。完成見本をそのまま提出する形にはしません。",
-      "translation": "继续修改时，入口是 STEP 12 的表格。使用自己创建的 <code>Documents/Kotlin/A01HelloAndroid</code>。不能把完成示例原样提交。"
+      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。",
+      "translation": "继续进行拓展时的入口是STEP 12的表格。使用自己创建的 <code>Documents/Kotlin/A01HelloAndroid</code>。"
     },
     {
       "source": "自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。",
@@ -919,8 +919,8 @@
       "translation": "提问时，告知教材文件夹中 <code>VERSION.json</code> 里的版本和 STEP 编号。"
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "如果错误仍未解决，请参考<a1>通用资料：遇到问题时</a1>中的“查看完成项目（示例）”。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "错误无法解决时，请尝试<a1>共同资料：遇到问题时</a1>中的排查方法。如果依然无法解决，请将STEP编号和画面出示给老师看。"
     },
     {
       "source": "公式資料",

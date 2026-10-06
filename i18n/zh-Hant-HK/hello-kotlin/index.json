@@ -3263,8 +3263,8 @@
       "translation": "兩人都顯示 <code>Person(name=yamada, age=20)</code>。"
     },
     {
-      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は見本と一致しなくても構いません。",
-      "translation": "兩人都顯示 <code>ex09.Person2@</code>，後面接着英數字。結尾的英數字不需要與範例完全一致。"
+      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は教科書の例と一致しなくても構いません。",
+      "translation": "兩人的 <code>ex09.Person2@</code> 後面都會接英數字。末尾的英數字不需要與教材示例完全一致。"
     },
     {
       "source": "<code>copyYamada.hashCode:</code> のあとに整数が出ます。",
@@ -4167,8 +4167,8 @@
       "translation": "請確認在 <code>get()</code>・<code>set()</code> 裏面，讀取或寫入儲存值的地方是否為 <code>field</code>。如果寫成 <code>counter</code>，就會重新呼叫相同的存取子（STEP 26）。"
     },
     {
-      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が見本と違う",
-      "translation": "<code>ex09</code> 的數值或 <code>Person2@...</code> 的結尾和範例不一樣"
+      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が教科書の例と違う",
+      "translation": "<code>ex09</code> 的數值或 <code>Person2@...</code> 的末尾與教材示例不同"
     },
     {
       "source": "通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。",
@@ -4259,8 +4259,8 @@
       "translation": "如果一次修改好幾個地方，就會很難知道哪裏改變了。請先修改1個地方，然後再按一次 Run 吧。"
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "如果錯誤仍未解決，請參閱<a1>共用資料：遇到問題時</a1>的「查看完成專案（範例）」。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "錯誤無法解決時，請嘗試<a1>共通資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請將STEP編號和畫面出示給老師看。"
     },
     {
       "source": "もっと知りたいとき",

@@ -323,8 +323,8 @@
       "translation": "Java에서도 같은 XML과 <code>R.id.btn_start</code>를 사용합니다. XML 자체를 Java용으로 다시 쓸 필요는 없습니다."
     },
     {
-      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。",
-      "translation": "<code>android:text</code>는 실행 시, <code>tools:text</code>는 에디터 미리보기용입니다. <code>tools:ignore=\"ButtonStyle\"</code>은 완성 예제에 있는 에디터용 지정이며, 클릭 처리를 만드는 지정이 아닙니다."
+      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は教科書のXMLにあるエディタ向け指定で、クリック処理を作る指定ではありません。",
+      "translation": "<code>android:text</code>는 실행 시, <code>tools:text</code>는 에디터의 미리보기용입니다. <code>tools:ignore=\"ButtonStyle\"</code>은 교재의 XML에 있는 에디터용 지정이며, 클릭 처리를 만드는 지정이 아닙니다."
     },
     {
       "source": "指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。",
@@ -887,8 +887,8 @@
       "translation": "Java에서는 <code>correctNo++;</code>와 <code>txtMessage.setText(message);</code>에 대응합니다. 계산한 결과를 View에 넘기는 흐름은 같습니다."
     },
     {
-      "source": "完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
-      "translation": "완성 예제는 코드와 동작을 비교하기 위한 자료입니다. 직접 만든 프로젝트를 남기고, 변형도 그 안의 변경할 곳을 확인하면서 진행합니다."
+      "source": "自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
+      "translation": "직접 만든 프로젝트를 남겨두고, 그 안의 변경 부분을 확인하면서 기능 추가를 진행합니다."
     },
     {
       "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
@@ -975,8 +975,8 @@
       "translation": "STEP 12의 전문에서 onCreate의 끝과 startQuestion의 위치를 대조합니다."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 막혔을 때</a1>의 '완성 프로젝트(예제) 확인'을 참고하세요."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "오류가 해결되지 않을 때는 <a1>공통 자료: 문제가 생겼을 때</a1>의 조사 방법을 시도해 보세요. 그래도 해결되지 않을 때는 STEP 번호와 화면을 선생님에게 보여주세요."
     },
     {
       "source": "公式資料",

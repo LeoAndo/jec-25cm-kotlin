@@ -323,8 +323,8 @@
       "translation": "Java also uses the same XML and <code>R.id.btn_start</code>. You do not need to rewrite the XML itself for Java."
     },
     {
-      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。",
-      "translation": "<code>android:text</code> is used when the app runs, and <code>tools:text</code> is for the editor preview. <code>tools:ignore=\"ButtonStyle\"</code> is a setting for the editor that comes from the completed sample; it does not create any click handling."
+      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は教科書のXMLにあるエディタ向け指定で、クリック処理を作る指定ではありません。",
+      "translation": "<code>android:text</code> is used when the app runs, and <code>tools:text</code> is for the editor preview. <code>tools:ignore=\"ButtonStyle\"</code> is a setting for the editor in the textbook's XML; it does not create any click handling."
     },
     {
       "source": "指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。",
@@ -887,8 +887,8 @@
       "translation": "In Java, these correspond to <code>correctNo++;</code> and <code>txtMessage.setText(message);</code>. The flow of passing the calculated result to a View is the same."
     },
     {
-      "source": "完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
-      "translation": "The completed sample is there for comparing code and behavior. Keep the project you built yourself, and do your customizing in it, checking each place you change."
+      "source": "自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
+      "translation": "Keep the project you built yourself, and do your customizing in it, checking each place you change."
     },
     {
       "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
@@ -975,8 +975,8 @@
       "translation": "Use the full file in STEP 12 to check where onCreate ends and where startQuestion is."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared: If you get stuck</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "If the error persists, try the troubleshooting steps in <a1>Common: Troubleshooting</a1>. If it is still not resolved, show the STEP number and the screen to your teacher."
     },
     {
       "source": "公式資料",

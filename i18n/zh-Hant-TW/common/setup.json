@@ -151,16 +151,16 @@
       "translation": "應該看到的結果"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
-      "translation": "開啟「書類」（文件）中的資料夾後，裡面有 <code>docs</code> 和 <code>samples</code> 這2個資料夾，以及 <code>はじめに.txt</code> 和 <code>VERSION.json</code> 這2個檔案。含有翻譯的版本中，還有選擇語言的入口 <code>index.html</code>，共<strong>5個項目</strong>。"
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> フォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もある。",
+      "translation": "開啟「文件」中的資料夾，會看到 <code>docs</code> 資料夾以及 <code>はじめに.txt</code> 和 <code>VERSION.json</code> 兩個檔案。在包含翻譯的版本中，還會用用於選擇語言的入口 <code>index.html</code>。"
     },
     {
       "source": "<code>index.html</code> があるとき",
       "translation": "有 <code>index.html</code> 時"
     },
     {
-      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
-      "translation": "請用瀏覽器開啟 <code>index.html</code>，選擇要閱讀的語言。如果要用日文閱讀，直接繼續閱讀這一頁即可。沒有 <code>index.html</code> 的版本，就直接繼續閱讀這一頁。<strong>只有在上面4個項目中有缺少的時候</strong>，請先不要繼續，給老師看。"
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上に挙げたもののうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "用瀏覽器開啟 <code>index.html</code> 並選擇閱讀語言。用日語閱讀時，直接閱讀本頁即可。沒有 <code>index.html</code> 的版本直接閱讀本頁即可。<strong>僅當上面列出的項目有缺失時</strong>，才不要繼續往下進行並出示給老師看。"
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",
@@ -369,14 +369,6 @@
     {
       "source": "前半で覚えた書き方は、そのまま使います。違うのは、結果が文字で出るか、スマートフォンの画面に出るかです。前半でつまずいたところは、後半に入る前に先生に聞いておいてください。",
       "translation": "前半學到的寫法可以直接沿用。不同的是，結果是以文字顯示，還是顯示在智慧型手機的畫面上。前半卡住的地方，請在進入後半之前先問老師。"
-    },
-    {
-      "source": "完成プロジェクト（先生が作った見本）の開き方",
-      "translation": "如何開啟完成版專案（老師製作的範例）"
-    },
-    {
-      "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",
-      "translation": "在步驟1放到「書類」（文件）中的教材資料夾裡，<code>samples</code> 中放有<strong>可以直接開啟</strong>的完成版專案。不需要下載，也不需要解壓縮。前半的 Kotlin 專案用 IntelliJ IDEA 的 <strong>Open</strong>，後半的 Android 專案用 Android Studio 的 <strong>Open</strong>，選擇 <code>samples</code> 中的資料夾。"
     },
     {
       "source": "ここまでできたら、準備は終わりです。第1単元の教科書を開いて授業を始めましょう。",

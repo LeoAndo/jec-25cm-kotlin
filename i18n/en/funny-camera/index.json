@@ -139,8 +139,8 @@
       "translation": "See today's screen first"
     },
     {
-      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。見本の映像はエミュレータ内の仮想の部屋です。",
-      "translation": "The IDE to open is <strong>Android Studio Panda 2</strong>. Today you place a goldfish over the camera feed and move it with your finger. In the next lesson, you save that combination as an image. The camera feed in the sample shows a virtual room inside the emulator."
+      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。教科書の画像に写る映像は、エミュレータ内の仮想の部屋です。",
+      "translation": "The IDE to open is <strong>Android Studio Panda 2</strong>. Today you place a goldfish over the camera feed and move it with your finger. In the next lesson, you save that combination as an image. The camera feed shown in the textbook images shows a virtual room inside the emulator."
     },
     {
       "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面",
@@ -251,8 +251,8 @@
       "translation": "<code>app/build.gradle.kts</code>. This one is inside the app folder."
     },
     {
-      "source": "コード内の <code>TODO STEP01</code> は完成プロジェクトに残る作業時の目印で、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
-      "translation": "The <code>TODO STEP01</code> in the code is a work marker left in the completed project; it is not a STEP number in this textbook. The four CameraX <code>implementation</code> lines are already included. After you replace the whole file, you do not need to add the same lines again."
+      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
+      "translation": "The <code>TODO STEP01</code> in the code is a comment left as a work marker; it is not a STEP number in this textbook. The four CameraX <code>implementation</code> lines are already included. After you replace the whole file, you do not need to add the same lines again."
     },
     {
       "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
@@ -331,8 +331,8 @@
       "translation": "Add the goldfish and create a View for dragging"
     },
     {
-      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
-      "translation": "<a1>Save the goldfish image character.png</a1>, then copy it in Finder into your own <code>A04FunnyCamera/app/src/main/res/drawable/</code>. If it was saved under a different name, rename it to <code>character.png</code>. It goes directly inside <strong>drawable</strong>. The image is 500×416 pixels with a transparent background, the same one used in the completed version."
+      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルです。",
+      "translation": "<a1>Save the goldfish image character.png</a1>, then copy it in Finder into your own <code>A04FunnyCamera/app/src/main/res/drawable/</code>. If it was saved under a different name, rename it to <code>character.png</code>. It goes directly inside <strong>drawable</strong>. The image is 500×416 pixels with a transparent background."
     },
     {
       "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
@@ -679,8 +679,8 @@
       "translation": "A JPEG saved on the designated AVD. The image covers the preview area, not the whole screen."
     },
     {
-      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、見本と同じ文字列にはなりません。",
-      "translation": "After checking, go back to A04. Change the goldfish's position, save one more time, and check that a new image with a new date and time is added. The date and time depend on the device settings, so the text will not match the sample."
+      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、教科書の画像と同じ文字列にはなりません。",
+      "translation": "After checking, go back to A04. Change the goldfish's position, save one more time, and check that a new image with a new date and time is added. The date and time depend on the device settings, so the text will not match the textbook's image."
     },
     {
       "source": "同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。",
@@ -735,8 +735,8 @@
       "translation": "Customize the screen your way"
     },
     {
-      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。完成プロジェクトの見本は上書きしません。",
-      "translation": "In your own project, change one of the following places, Run, and compare the screen and the saved image. Note the original value before you change it, and check one change at a time. Do not overwrite the completed sample project."
+      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。",
+      "translation": "In your own project, change one of the following places, Run, and compare the screen and the saved image. Note the original value before you change it, and check one change at a time."
     },
     {
       "source": "場所",
@@ -807,8 +807,8 @@
       "translation": "The last 3 minutes of Lesson 15"
     },
     {
-      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、このページ下の完成プロジェクトを使います。",
-      "translation": "Save your project. Set the camera permission back to \"Allow only while using the app\", then open the preview and the saved JPEG in turn. If you want to compare code, use the completed project at the bottom of this page."
+      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
+      "translation": "Save your project. Set the camera permission back to \"Allow only while using the app\", then open the preview and the saved JPEG in turn. If you want to compare code, compare it with the full code in STEP 10."
     },
     {
       "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
@@ -927,8 +927,8 @@
       "translation": "For the end of Lesson 14, use the full code in STEP 06. Lesson 15 starts from STEP 08, and the full completed code is in STEP 10."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared: If you get stuck</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "If the error persists, try the troubleshooting steps in <a1>Common: Troubleshooting</a1>. If it is still not resolved, show the STEP number and the screen to your teacher."
     },
     {
       "source": "公式資料",

@@ -119,12 +119,12 @@
       "translation": "Los números coinciden con los encabezados de abajo. Como solo eliges una aplicación, terminas al hacer los pasos del 2 al 7 en orden, una sola vez cada uno."
     },
     {
-      "source": "完成プロジェクト（見本）をそのまま出しても、提出にはなりません",
-      "translation": "Entregar un proyecto terminado (ejemplo) tal cual no cuenta como entrega"
+      "source": "提出するのは、自分で作ったプロジェクトです",
+      "translation": "Lo que se entrega es el proyecto que creaste tú mismo"
     },
     {
-      "source": "教材のフォルダの <code>samples</code> に入っている完成プロジェクトは、先生が作った見本です。提出するのは、<strong>自分で作ったプロジェクトにアレンジを加えたもの</strong>です。見本をそのままAPKにして出しても、提出として数えません。",
-      "translation": "Los proyectos terminados que están en <code>samples</code>, dentro de la carpeta de los materiales, son ejemplos creados por tu docente. Lo que entregas es <strong>un proyecto creado por ti, con tu personalización</strong>. Si conviertes un ejemplo en APK tal cual y lo entregas, no cuenta como entrega."
+      "source": "授業で自分で作ったプロジェクトに、<strong>アレンジを加えたもの</strong>を提出します。",
+      "translation": "Entregarás el proyecto que creaste tú mismo en clase, <strong>con tus propias modificaciones añadidas</strong>."
     },
     {
       "source": "2. アプリを1つ選ぶ",
@@ -151,12 +151,12 @@
       "translation": "<code>K01HelloKotlin</code>, que creaste con IntelliJ IDEA en la unidad de la primera mitad, es un programa de consola que muestra los resultados en texto. No es una aplicación que se instale en un celular, así que <strong>no tiene forma de generar un APK</strong>. Para la tarea solo sirven los proyectos creados con Android Studio."
     },
     {
-      "source": "<code>samples</code> フォルダの中のものは、選べません",
-      "translation": "No puedes elegir nada de la carpeta <code>samples</code>"
+      "source": "選ぶのは、<code>書類 → Kotlin</code> のすぐ下のフォルダです",
+      "translation": "La carpeta que debes seleccionar es la que está directamente dentro de <code>書類 → Kotlin</code>"
     },
     {
-      "source": "教材のフォルダの <code>samples</code> に入っているのは、先生が作った完成プロジェクト（見本）です。選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。",
-      "translation": "Lo que está en <code>samples</code>, dentro de la carpeta de los materiales, son los proyectos terminados (ejemplos) creados por tu docente. Lo que eliges es un proyecto creado por ti, que está directamente dentro de <strong>書類 (Documentos) → Kotlin</strong>."
+      "source": "選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。ほかの場所に同じ名前のフォルダがあっても、そちらは選びません。",
+      "translation": "Debes elegir el proyecto que creaste tú mismo justo debajo de <strong>Documentos → Kotlin</strong>. Aunque haya una carpeta con el mismo nombre en otra ubicación, no elijas esa."
     },
     {
       "source": "最後まで作れていない単元も、教科書を見ながら完成させれば選べます。選べるものが1つもないときは、先生に相談してください。",

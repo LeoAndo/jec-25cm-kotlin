@@ -119,12 +119,12 @@
       "translation": "编号与下方标题的编号一致。因为只选一个应用，所以从2到7按从上到下的顺序各做一次即可完成。"
     },
     {
-      "source": "完成プロジェクト（見本）をそのまま出しても、提出にはなりません",
-      "translation": "直接提交完成项目（示例），不算提交"
+      "source": "提出するのは、自分で作ったプロジェクトです",
+      "translation": "要提交的是自己制作的项目"
     },
     {
-      "source": "教材のフォルダの <code>samples</code> に入っている完成プロジェクトは、先生が作った見本です。提出するのは、<strong>自分で作ったプロジェクトにアレンジを加えたもの</strong>です。見本をそのままAPKにして出しても、提出として数えません。",
-      "translation": "教材文件夹中 <code>samples</code> 里的完成项目，是老师制作的示例。要提交的是<strong>自己创建并加以修改的项目</strong>。把示例直接做成 APK 提交，不算作提交。"
+      "source": "授業で自分で作ったプロジェクトに、<strong>アレンジを加えたもの</strong>を提出します。",
+      "translation": "提交在课堂上自己制作的、<strong>添加了自定义拓展的项目</strong>。"
     },
     {
       "source": "2. アプリを1つ選ぶ",
@@ -151,12 +151,12 @@
       "translation": "前半程单元中用 IntelliJ IDEA 创建的 <code>K01HelloKotlin</code>，是以文字输出结果的控制台程序。它不是安装到智能手机上的应用，所以<strong>没有制作 APK 的机制</strong>。作业只限于用 Android Studio 创建的项目。"
     },
     {
-      "source": "<code>samples</code> フォルダの中のものは、選べません",
-      "translation": "不能选 <code>samples</code> 文件夹中的项目"
+      "source": "選ぶのは、<code>書類 → Kotlin</code> のすぐ下のフォルダです",
+      "translation": "选择的是 <code>書類 → Kotlin</code> 正下方的文件夹"
     },
     {
-      "source": "教材のフォルダの <code>samples</code> に入っているのは、先生が作った完成プロジェクト（見本）です。選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。",
-      "translation": "教材文件夹中的 <code>samples</code> 里放的是老师制作的完成项目（示例）。要选的是直接位于 <strong>書類（文稿）→ Kotlin</strong> 中、自己创建的项目。"
+      "source": "選ぶのは、<strong>書類 → Kotlin</strong> のすぐ下にある、自分で作ったプロジェクトです。ほかの場所に同じ名前のフォルダがあっても、そちらは選びません。",
+      "translation": "选择的是位于 <strong>文稿 → Kotlin</strong> 正下方的、自己制作的项目。即使其他位置有同名文件夹，也不要选择。"
     },
     {
       "source": "最後まで作れていない単元も、教科書を見ながら完成させれば選べます。選べるものが1つもないときは、先生に相談してください。",
