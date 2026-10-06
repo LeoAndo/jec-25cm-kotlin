@@ -136,25 +136,25 @@ description: Add a new Android teaching unit (A01-) to this Kotlin course reposi
 - 表示名は `<番号>：<ラベル>`。単元名から先頭の番号を切り離してつなぐので、`A02CalcGame` なら `A02：CalcGame`、`K01HelloKotlin` なら **`K01：HelloKotlin`**（`K01：K01HelloKotlin` にしない）。
 - ほかの単元は `<a href="../<スラッグ>/index.html">`、**自単元は `<span aria-current="page">`**。
 - 単元の項目は、**文字だけの `<a>` か `<span>`**。中に `<strong>` などの別タグを入れない。
-- 「困ったとき」「完成プロジェクトを開く」と共通資料へのリンクは、単元として数えない。共通資料へのリンクには `?from=<自分のスラッグ>` を付ける。
+- 「困ったとき」と共通資料へのリンクは、単元として数えない。サイドバーにも本文にも、完成プロジェクトへのリンク（`#sample-project` やZIP）は置かない（README「授業用教科書の基本方針」13。`check-teaching-materials.py` が落とす）。共通資料へのリンクには `?from=<自分のスラッグ>` を付ける。
 - **純Kotlin系は `K01：HelloKotlin` の1項目だけ**で、Kotlinの回（`exNN`）を足しても増えない。増えるのはAndroid単元だけなので、新しい項目はいつもK01のうしろに並ぶ。
 
 **既存の K01 の教科書（`docs/hello-kotlin/index.html`）に A01 を足す**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><span aria-current="page">K01：HelloKotlin</span><a href="../hello-android/index.html">A01：HelloAndroid</a><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
+<div class="resources"><a href="#help">困ったとき</a><span aria-current="page">K01：HelloKotlin</span><a href="../hello-android/index.html">A01：HelloAndroid</a><a href="../common/setup.html?from=hello-kotlin">共通：はじめの準備</a><a href="../common/apk.html?from=hello-kotlin">共通：提出課題とAPK</a></div>
 ```
 
 **新しい A01 の教科書（`docs/hello-android/index.html`）には、全単元を並べる**
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><span aria-current="page">A01：HelloAndroid</span><a href="../common/setup.html?from=hello-android">共通：はじめの準備</a><a href="../common/apk.html?from=hello-android">共通：提出課題とAPK</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><span aria-current="page">A01：HelloAndroid</span><a href="../common/setup.html?from=hello-android">共通：はじめの準備</a><a href="../common/apk.html?from=hello-android">共通：提出課題とAPK</a></div>
 ```
 
 **次の A02 を足したときは、A01 のうしろに並べる**（`docs/calc-game/index.html` のサイドバー）
 
 ```html
-<div class="resources"><a href="#help">困ったとき</a><a href="#sample-project">完成プロジェクトを開く</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><a href="../hello-android/index.html">A01：HelloAndroid</a><span aria-current="page">A02：CalcGame</span><a href="../common/setup.html?from=calc-game">共通：はじめの準備</a><a href="../common/apk.html?from=calc-game">共通：提出課題とAPK</a></div>
+<div class="resources"><a href="#help">困ったとき</a><a href="../hello-kotlin/index.html">K01：HelloKotlin</a><a href="../hello-android/index.html">A01：HelloAndroid</a><span aria-current="page">A02：CalcGame</span><a href="../common/setup.html?from=calc-game">共通：はじめの準備</a><a href="../common/apk.html?from=calc-game">共通：提出課題とAPK</a></div>
 ```
 
 **topbar は、直前の単元へのリンク1つ。** ブランドは `JEC / Kotlin演習` にそろえる。A01の直前の単元はK01なので、次のようになる。
@@ -210,4 +210,4 @@ cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembl
 
 Kotlinの回を足したときは、IntelliJ IDEA で `K01HelloKotlin` を開き、その `exNN` の `fun main()` を実行して、コンソール出力が教科書に書いたとおりかを確かめる。
 
-`package-student-materials.py` が作った配布ZIPを展開し、入口から教科書・完成プロジェクト・共通資料へのリンクがたどれることも確かめる。
+`package-student-materials.py` が作った配布ZIPを展開し、入口から教科書・共通資料へのリンクがたどれることと、`samples/` に新しい単元の完成プロジェクトが入っていることも確かめる（教科書からは案内しない）。

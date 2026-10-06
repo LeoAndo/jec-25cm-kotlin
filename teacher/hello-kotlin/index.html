@@ -21,7 +21,7 @@
 
 <section><h2>1. 授業前の準備</h2>
 <ul><li><strong>受講生像を全員の教員で共有します。</strong>受講生は Java と Swift を学習済みで、変数・型・条件分岐・繰り返し・クラスといった概念そのものの説明は不要です。説明するのは <strong>Kotlinでの書き方</strong>と、<strong>Java / Swift との違い</strong>、そして<strong>違う理由</strong>の3つです。</li>
-<li>学生には、教科書の <code>docs</code> フォルダと、展開済みの完成プロジェクトを入れた <code>samples</code> フォルダを、構成を保って配布します（完成プロジェクトのZIPも <code>docs</code> の中に残しています）。完成版は初回から自由に参照できます。<code>teacher</code> フォルダは配布しません。</li>
+<li>学生には、教科書の <code>docs</code> フォルダと、展開済みの完成プロジェクトを入れた <code>samples</code> フォルダを、構成を保って配布します（完成プロジェクトのZIPも <code>docs</code> の中に残しています）。ただし、教科書・共通資料・<code>はじめに.txt</code> からは完成版へ案内しません（README「授業用教科書の基本方針」13）。<code>teacher</code> フォルダは配布しません。</li>
 <li>学生のMacで <code>docs/hello-kotlin/index.html</code> をブラウザで開けることを確認します。教材そのものにCDN・Webフォントは使いません。</li>
 <li><strong>Kotlin Playground（<a href="https://play.kotlinlang.org/">https://play.kotlinlang.org/</a>）が、学内のネットワークとブラウザで開けることを授業前に確かめます。</strong>STEP 01でここから始めます。開けない教室では、STEP 01を教員の画面の実演だけにして、STEP 02のIntelliJ IDEAへ進みます。</li>
 <li>貸与PCには IntelliJ IDEA がインストール済みです。導入の手順は教材に書いていません。<strong>授業前に1台で新規プロジェクトの画面まで進み、JDKの欄に候補が出ることを確かめます。</strong>教科書は「一覧に出ているものを、そのまま使います」と書いています。版をそろえる必要はありません。この単元のコードは、一覧に出ている版なら動きます。</li>
@@ -74,9 +74,9 @@ getが呼ばれる：　10
 <tr><td>STEP 34①</td><td>result2の宣言をList&lt;String&gt;に変えると型の不一致で止まる。List&lt;Person&gt;に戻してSuzukiを加えると両方のリストが3要素になる。</td><td>Suzukiを消し、各リスト2要素の2行。</td></tr>
 <tr><td>STEP 34②③</td><td>foo2を作りbarを2回読むと、computed! / 6.0 / 6.0がもう1組増えて6行。</td><td>foo2の3行を消し、完成3行。</td></tr>
 </tbody></table>
-<h3>完成版を公開して進める</h3>
-<p><strong>各単元の初回に、学生自身がIDEからプロジェクトを新規作成することを固定方針とします。</strong>K01の2コマ目以降は、同じプロジェクトを開き直して続けます。完成版は、動く状態の確認と、自分のコードとの比較に使います。見本を読むときは今のステップの部分を指定します。理解は、各回のミニ練習（変わった出力や、代入が止まった行）と、「6. 机間巡視の確認項目」の短い問いで確認します。</p>
-<p>見本は、配布する教材のフォルダの <code>samples/K01HelloKotlin</code> に、展開済みで入っています。学生はダウンロードも展開もせず、IntelliJ IDEA の <strong>Open</strong> で選ぶだけで開けます。学生が作る場所は <code>Documents/Kotlin/K01HelloKotlin</code> です。<a href="../../docs/hello-kotlin/index.html#sample-project">学生向けの完成版の開き方</a>を初回に案内します。</p>
+<h3>完成版は配布するが、教科書からは案内しない</h3>
+<p><strong>各単元の初回に、学生自身がIDEからプロジェクトを新規作成することを固定方針とします。</strong>K01の2コマ目以降は、同じプロジェクトを開き直して続けます。教科書から完成版へ案内すると、学生が自分で書かずに見本を開いて写してしまうため、教科書・共通資料（<a href="../../docs/common/help.html">困ったとき</a>を含む）には完成版の開き方も置き場所も書いていません（#264）。エラーが解決しない学生には、STEP番号と画面を見せてもらって対応します。理解は、各回のミニ練習（変わった出力や、代入が止まった行）と、「6. 机間巡視の確認項目」の短い問いで確認します。</p>
+<p>完成版は、配布する教材のフォルダの <code>samples/K01HelloKotlin</code> に、展開済みで入っています。教員が授業中に見せる、または個別に案内すると判断したときは、IntelliJ IDEA の <strong>Open</strong> でこのフォルダを選ばせます。学生が作る場所は <code>Documents/Kotlin/K01HelloKotlin</code> で、見本とプロジェクト名が同じなので、ウィンドウの保存先を確かめさせます。</p>
 <h3>教材コードの基準となる環境</h3>
 <p>以下はこのリポジトリの設定値です。「最新バージョン」の指定ではありません。新規作成した環境と差がある場合は、授業前に教員が確認します。</p>
 <table><thead><tr><th>項目</th><th>値・確認先</th></tr></thead><tbody>
@@ -109,7 +109,7 @@ getが呼ばれる：　10
 <tr><td>導入の最初だけ <strong>Kotlin Playground</strong> を使い、STEP 02からは IntelliJ IDEA に移る</td><td>環境構築で最初の10分を失うと、比較に使う時間がなくなる。ブラウザなら全員が同じ画面で1行目を動かせる。一方でPlaygroundはコード補完が効かず実行も遅いので、学習の本体には向かない。</td><td>詳しくは「4. Playground と IntelliJ IDEA の使い分け」を参照。Playgroundは10分で切り上げる。</td></tr>
 <tr><td>ビルドシステムに <strong>Gradle ではなく IntelliJ</strong> を選ばせる</td><td>1コマ目で見せたいのは <code>val</code> / <code>var</code> と型推論の差分だけ。Gradleを入れると、設定ファイル・同期待ち・依存関係の説明が増え、比較の時間を食う。<strong>できあがるフォルダの形も変わり、以降6コマぶんの画面と手順が教科書と食い違う。</strong>Gradleは後半のAndroid系の単元で扱う。</td><td>STEP 02の表で <strong>ビルドシステム</strong> を <code>IntelliJ</code> と指定している。ここは学生が最も間違えやすい場所なので、<strong>机間巡視で最初に見る</strong>（「3. 90分の進め方」の STEP 02、「6. 机間巡視の確認項目」）。HELPにも「ビルドシステムに IntelliJ がない」の行を置いている。</td></tr>
 <tr><td><strong>「サンプルコードの追加」をONのまま</strong>作らせ、自分でコードを書く前に<strong>まず1回実行させる</strong></td><td>動く状態から始めれば、あとで動かなくなったときに疑う場所が<strong>自分が書き換えた行だけ</strong>になる。空のプロジェクトから始めると、JDKの選択・実行構成・書いたコードのどれが原因かを切り分けられず、質問が「動きません」で止まる。ウィザードが作る <code>Main.kt</code> は、<code>fun main()</code> がクラスの外にあるKotlinの形そのものでもある。</td><td>STEP 02で、まず <code>src/Main.kt</code> をそのまま実行させ、コンソールに出力が出ることを全員で確認する。そのあと <code>Main.kt</code> を消し、<code>ex01</code> パッケージと <code>main.kt</code> を作らせる。</td></tr>
-<tr><td>学生にも <code>src/ex01/</code> パッケージを作らせ、<code>package ex01</code> を書かせる</td><td>リポジトリの完成プロジェクト <code>K01HelloKotlin</code> は、6コマぶんの演習を <code>src/exNN/</code> で分ける構成にしている。学生の手元も同じ形にしておくと、見本と1対1で比べられ、行き先を言葉で指定できる。2コマ目以降に <code>ex02</code>、<code>ex03</code> …を足していくときも、同じ操作の繰り返しで済む。</td><td>STEP 02で作らせる。Javaのパッケージと同じ考え方だと1文で伝え、Kotlinではフォルダ構成と一致させなくてもよいという細部には触れない。</td></tr>
+<tr><td>学生にも <code>src/ex01/</code> パッケージを作らせ、<code>package ex01</code> を書かせる</td><td>リポジトリの完成プロジェクト <code>K01HelloKotlin</code> は、6コマぶんの演習を <code>src/exNN/</code> で分ける構成にしている。学生の手元も同じ形にしておくと、教員が完成コードと1対1で比べられ、行き先を言葉で指定できる。2コマ目以降に <code>ex02</code>、<code>ex03</code> …を足していくときも、同じ操作の繰り返しで済む。</td><td>STEP 02で作らせる。Javaのパッケージと同じ考え方だと1文で伝え、Kotlinではフォルダ構成と一致させなくてもよいという細部には触れない。</td></tr>
 <tr><td><code>val</code> の再代入エラーを、STEP 05の練習Bで<strong>わざと出させる</strong></td><td>Javaの <code>final</code>、Swiftの <code>let</code> を知っているので、説明より「自分の画面に出たエラー文」のほうが対応付けが早い。STEP 03は <code>val</code> と <code>var</code> の書き分けに使い、エラーを出すのは書き分けを一度書いたあとにする。</td><td>STEP 05の練習Bで <code>number1 = 5</code> を書き足させ、その行の赤い波線と、再代入が拒否されたことを確認させてから消させる。あわせて「<code>val</code> は再代入禁止であって、中身が変わらない保証ではない」ことを口で言う。</td></tr>
 <tr><td>型を明示せず（<code>val number1: Int = 1</code> と書かせず）、型推論のままにする</td><td>完成コード <code>K01HelloKotlin/src/ex01/main.kt</code> がその形であり、教材と完成版をバイト単位で一致させているため。Swiftの型推論を知っている受講生には、書かないほうが差分が見えやすい。</td><td>STEP 04で「名前にマウスを重ねると、決まった型が出る」と案内し、Swiftと効き方が違う場面（<code>Float</code>）だけを取り上げる。</td></tr>
 <tr><td>コメント <code>// Double</code> / <code>// Float</code> を完成コードに残す</td><td>完成プロジェクトの書き方をそのまま教材にしているため。型推論に任せた行がどの型になったかを、後から読み返す手がかりになる。</td><td>STEP 04で「型推論の結果をコメントで補っている」とだけ説明する。KDocの書き方は扱わない。</td></tr>
@@ -325,7 +325,7 @@ getが呼ばれる：　10
 <ul>
 <li><strong>最近開いたプロジェクトの一覧に <code>K01HelloKotlin</code> があるか。</strong>あればそれを開かせます。1コマ目の見回りで保存先をそろえてあるので、大半はここで済みます。</li>
 <li>一覧に無い学生には、Finderで <code>Documents/Kotlin/K01HelloKotlin</code> を開かせ、IntelliJ IDEA の <strong>Open</strong> で選ばせます。<strong>「無いから作り直す」をさせないでください。</strong>作り直すと <code>ex01</code> が消え、この回の「先週の <code>val</code> の行と見比べる」ができなくなります。</li>
-<li>本当に見つからない学生には、配布した完成版（<code>samples/K01HelloKotlin</code>）を開かせ、その回のあいだはそこに <code>ex02</code> を作らせます。授業後に、本人のプロジェクトの所在を一緒に探します。</li>
+<li>本当に見つからない学生には、配布した完成版（<code>samples/K01HelloKotlin</code>）を開かせ（教科書からは案内していないので、教員が場所を伝えます）、その回のあいだはそこに <code>ex02</code> を作らせます。授業後に、本人のプロジェクトの所在を一緒に探します。</li>
 </ul>
 <p><code>ex02</code> パッケージと <code>main.kt</code> を作る操作は、1コマ目のSTEP 02でやったものと同じです。<strong>手順を読み上げ直さず、画面を見て回るだけにします。</strong>「先週と同じ操作です」と言えることが、1つのプロジェクトを使い続ける決め方の効果そのものです。</p>
 <h3>3コマ目（<code>ex03</code> ＝ 関数の宣言）の90分</h3>
@@ -469,7 +469,7 @@ getが呼ばれる：　10
 <tr><td>setterのログが出たので-1が保存されたと思う</td><td>ログはifの前で出ている。</td><td><code>if (value &gt;= 0)</code> と、続くgetterが出す0を対応させる。</td></tr>
 <tr><td>初期化でset 0が出ないので動作がおかしいと思う</td><td>初期化とプロパティへの代入を同じものとして扱っている。</td><td>初期化ではsetterを呼ばない。最初のログは代入した-1。</td></tr>
 <tr><td><code>val foo</code> をvarに変えようとする</td><td>変数の再代入とプロパティの更新を混同している。</td><td>変えるのは <code>var counter</code> の保存値。fooはvalのまま完成出力が出ることを確認。</td></tr>
-<tr><td>Person2のhash値や末尾が見本と違う</td><td>実行ごとに変わり得る値を固定出力として比較している。</td><td>STEP 27②の観点に戻る。数値を変更して合わせない。hash値の不一致も必須にしない。</td></tr>
+<tr><td>Person2のhash値や末尾が教科書の例と違う</td><td>実行ごとに変わり得る値を固定出力として比較している。</td><td>STEP 27②の観点に戻る。数値を変更して合わせない。hash値の不一致も必須にしない。</td></tr>
 <tr><td>data classはSwift structと同じ値型だと思う</td><td>自動生成の比較を型の性質全体の一致と受け取っている。</td><td>等価比較やハッシュの合成が比較点。Kotlinではclassである、と比較欄の注意を示す。</td></tr>
 <tr><td><code>copy(age: 25)</code> と書く</td><td>Swiftの引数ラベルの記号が残っている。</td><td><code>age = 25</code> に直す。宣言側で必須のラベルを決めるSwiftと、呼び出し側で任意に名前を付けるKotlinの違いを確認。</td></tr>
 <tr><td>copyで元のyamadaの年齢も変わると思う</td><td>名前付き引数を代入と受け取っている。</td><td>新しいPersonを返す呼び出し。元の年齢は20。必要なら宣言・呼び出し・結果の3か所を指す。</td></tr>
@@ -513,7 +513,7 @@ getが呼ばれる：　10
 <tr><td><code>val</code> と <code>var</code> の使い分け</td><td><code>name</code> だけが <code>var</code>。ほかの3つは <code>val</code>。</td><td>「あとから入れ替えるのはどれですか」と聞き、その行だけ <code>var</code> にさせる。</td></tr>
 <tr><td><code>number3</code> の行</td><td><code>3.0f</code> と書いてある。マウスを重ねると <code>Float</code> と出る。</td><td>「型は何になっていますか」と聞き、画面で確かめさせる。</td></tr>
 <tr><td>出力（<strong>Run</strong> のあと）</td><td>コンソールに <code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code> の4行。</td><td>「何行出るはずですか」と先に言わせてから、もう一度実行させる。</td></tr>
-<tr><td>STEP 05のあとの状態</td><td>練習で書き足した行が消えている。</td><td>完成版と1行ずつ見比べさせる。</td></tr>
+<tr><td>STEP 05のあとの状態</td><td>練習で書き足した行が消えている。</td><td>教科書のコードと1行ずつ見比べさせる。</td></tr>
 </tbody></table>
 <h3>理解確認に使う短い問い（1コマ目）</h3>
 <p>Java / Swift の知識に引っかける問い方にします。用語を暗記できたかは見ません。</p>
@@ -540,7 +540,7 @@ getが呼ばれる：　10
 <tr><td>文字数の取り方</td><td><code>count()</code> と書いてある。</td><td><code>length</code> に書き換えていたら「授業では <code>count()</code> にそろえます」と言って戻させる。結果は同じだが、完成コードと照合できなくなる。</td></tr>
 <tr><td><strong>出力（Run のあと）</strong></td><td>コンソールに <code>5</code> / <code>null</code> / <code>6</code> の<strong>3行</strong>。</td><td>「何行出るはずですか」と先に言わせてから、もう一度実行させる。<strong>4行（<code>1</code> / <code>2.0</code> / <code>3.0</code> / <code>Tanaka</code>）が出ていたら、先週の <code>ex01</code> を実行しています。</strong><code>ex02/main.kt</code> を開かせ、その <code>fun main()</code> の左の ▷ から実行させる。</td></tr>
 <tr><td><code>ex01</code> の出力</td><td>あとから <code>ex01</code> を実行しても、1コマ目の4行がそのまま出る。</td><td><code>ex01/main.kt</code> に今日のコードを書いていないかを見る。書いていたら <code>ex02</code> へ移させ、<code>ex01</code> を元に戻させる。</td></tr>
-<tr><td>STEP 11のあとの状態</td><td>練習で足した変数と <code>println</code> が消えていて、<code>?.</code> が元に戻っている。</td><td>完成版と1行ずつ見比べさせる。最後の3分を必ず取る。</td></tr>
+<tr><td>STEP 11のあとの状態</td><td>練習で足した変数と <code>println</code> が消えていて、<code>?.</code> が元に戻っている。</td><td>教科書のコードと1行ずつ見比べさせる。最後の3分を必ず取る。</td></tr>
 </tbody></table>
 <h3>理解確認に使う短い問い（2コマ目）</h3>
 <p>1コマ目と同じく、Java / Swift の知識に引っかける問い方にします。<strong>「<code>?</code> を付ける」と覚えただけの学生は、2つ目と3つ目の問いで止まります。</strong></p>
@@ -563,7 +563,7 @@ getが呼ばれる：　10
 <tr><td><code>sum2</code> の戻り値</td><td>何も書いていない。</td><td><code>: void</code> なら消させる。<code>: Unit</code> なら「動きますが、この教材では書きません」と言って消させる。</td></tr>
 <tr><td><code>sum</code> と <code>sum2</code> の位置</td><td><code>fun main()</code> の閉じかっこの<strong>外</strong>に、2本が並んでいる。</td><td>「<code>main</code> の <code>}</code> はどこですか」と聞き、2本を外へ移させる。</td></tr>
 <tr><td><strong>出力（Run のあと）</strong></td><td>コンソールに <code>3</code> / <code>3</code> の<strong>2行</strong>。</td><td>「何行出るはずですか」と先に聞いてから、もう一度実行させる。<code>5</code> / <code>null</code> / <code>6</code> が出ていたら、先週の <code>ex02</code> を実行しています。</td></tr>
-<tr><td>STEP 17のあとの状態</td><td><code>fun sum(a: Int, b: Int): Int</code>、<code>return a + b</code>、<code>sum(1, 2)</code> の3か所が元どおり。</td><td>完成版と1行ずつ見比べさせる。最後の3分を必ず取る。</td></tr>
+<tr><td>STEP 17のあとの状態</td><td><code>fun sum(a: Int, b: Int): Int</code>、<code>return a + b</code>、<code>sum(1, 2)</code> の3か所が元どおり。</td><td>教科書のコードと1行ずつ見比べさせる。最後の3分を必ず取る。</td></tr>
 </tbody></table>
 <h3>理解確認に使う短い問い（3コマ目）</h3>
 <p>1コマ目・2コマ目と同じく、Java / Swift の知識に引っかける問い方にします。</p>
@@ -673,7 +673,7 @@ getが呼ばれる：　10
 </section>
 
 <section><h2>8. 遅れた学生の再開地点と到達度の確認</h2>
-<p>下記は教員の照合用です。学生には、公開済みの完成プロジェクトと本人のコードを比べさせ、直す場所を案内します。修正後は実行してから次へ進みます。</p>
+<p>下記は教員の照合用です。学生には、教科書のコードと本人のコードを比べさせ、直す場所を案内します。修正後は実行してから次へ進みます。</p>
 <h3>1コマ目（<code>ex01</code>）の再開地点</h3>
 <table><thead><tr><th>確認するステップ</th><th>照合するコード</th><th>そのとき出る出力</th></tr></thead><tbody>
 <tr><td>STEP 02完了</td><td><a href="../../docs/hello-kotlin/index.html#step-2">教科書STEP 02の <code>main.kt</code></a></td><td>自分で書いた1行がコンソールに出る</td></tr>

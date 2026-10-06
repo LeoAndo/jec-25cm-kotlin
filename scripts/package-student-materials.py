@@ -206,8 +206,8 @@ def build(output_dir):
     languages = add_localized_materials(files)
     check_links(files)
 
-    # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。学生はダウンロードも展開もせず、
-    # IntelliJ IDEA か Android Studio のOpenで選ぶだけになる。
+    # 完成プロジェクトを、展開済みの見本として samples/ にも収録する。
+    # ただし、はじめに.txt や教科書からは案内しない（README「授業用教科書の基本方針」13）。
     # 中身は配布物に入れるZIPと同じなので、新たにcommitするファイルはない。
     # リンク検査のあとで足すので、検査の対象は教科書と多言語の入口で、samples の中は検査しない。
     executables = set()
@@ -231,7 +231,6 @@ def build(output_dir):
     for project in projects:
         number, label = split_unit(project["name"])
         unit_lines += f"  {number} {label}：{project['docs'][0]}\n"
-    sample_example = f"samples/{projects[0]['root']}" if projects else "samples"
     files["はじめに.txt"] = (
         "Kotlin演習 学生用教材\n\n"
         f"教材の版：{version}\n\n"
@@ -239,11 +238,7 @@ def build(output_dir):
         "2. はじめて授業を受けるときは、docs/common/setup.html をブラウザで開き、上から順に準備します。\n"
         "   教材の置き場所を決めるところから、使うアプリの確認までを説明しています。この準備は1回だけです。次からは3から始められます。\n"
         "3. 授業で使う単元の教科書をブラウザで開きます。\n"
-        f"{unit_lines}"
-        "4. 完成プロジェクト（先生が作った見本）は、samples フォルダに入っています。展開は済んでいるので、\n"
-        f"   IntelliJ IDEA か Android Studio の Open で {sample_example} のように選ぶだけで開けます。\n"
-        "   コンソールアプリのプロジェクトは IntelliJ IDEA で、\n"
-        "   Androidアプリのプロジェクトは Android Studio で開いてください。\n\n"
+        f"{unit_lines}\n"
         "教科書はオフラインで利用できます。IntelliJ IDEAやAndroid Studioの準備とビルドにはネット接続が必要です。\n"
         "教材を更新するときは別のフォルダに展開し、自分で作ったプロジェクトを上書きしないでください。\n"
         "授業中は先生が指定した版を使ってください。質問時には教材の版とSTEP番号を伝えてください。\n"

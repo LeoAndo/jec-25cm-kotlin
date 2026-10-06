@@ -211,7 +211,7 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 
 <p>もう一度Runします。上から時間、START・STOP・RESET、空白の問題欄、1〜9の数字が並びます。この段階では、ボタンに処理は付いていません。XMLプレビューに出る問題文は <code>tools:text</code> の見本なので、実行画面では空白です。</p>
 <table><thead><tr><th>場所</th><th>指定と効果</th></tr></thead><tbody><tr><td>外側のLinearLayout</td><td><code>orientation="vertical"</code> で縦に並べる。idは生成コードが参照する <code>main</code> のまま。</td></tr><tr><td>数字の3行</td><td><code>orientation="horizontal"</code> で横に並べる。</td></tr><tr><td>STOP・RESET</td><td><code>android:enabled="false"</code> で開始前は押せなくする。</td></tr><tr><td>間隔と文字サイズ</td><td><code>dp</code> は余白などの寸法、<code>sp</code> は文字サイズ。</td></tr></tbody></table><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p>XMLの <code>@+id/btn_start</code> を、Kotlinから <code>R.id.btn_start</code> で参照します。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>Javaでも同じXMLと <code>R.id.btn_start</code> を使います。XML自体をJava用に書き直す必要はありません。</p></div></div>
-<div class="note"><p class="box-title">POINT</p><p><code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore="ButtonStyle"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。</p></div>
+<div class="note"><p class="box-title">POINT</p><p><code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore="ButtonStyle"</code> は教科書のXMLにあるエディタ向け指定で、クリック処理を作る指定ではありません。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-02"><span>指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-3"><p class="step-meta">STEP 03 · 9コマ目 · 目安 15分</p><h2>Viewを取得し、経過時間を保存する場所を用意する</h2>
@@ -667,7 +667,7 @@ int number = Integer.parseInt(btn.getText().toString());</code></pre>
 
 <section id="step-14"><p class="step-meta">STEP 14 · 10コマ目 · 目安 3分</p><h2>10コマ目の完成状態を確認する</h2>
 <p>最後の3分です。自分のアプリで、開始前に数字を押す→START→STOP→START→10問回答→RESETを順に試します。時間や問題の数字は画像と違ってかまいません。</p><ul><li>STOPの前後で問題が同じで、休んだ時間は加わらない。</li><li>10問後に正解数と秒数が出る。</li><li>RESET後は <code>00:00</code> と空白の問題欄になり、もう一度1問目から始められる。</li></ul><p>自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。</p><h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin / Android</p><p><code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。</p></div><div class="compare-item"><p class="compare-lang" translate="no">Java / Android</p><p>Javaでは <code>correctNo++;</code> と <code>txtMessage.setText(message);</code> に対応します。計算した結果をViewへ渡す流れは同じです。</p></div></div>
-<div class="note"><p class="box-title">POINT</p><p>完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。</p></div>
+<div class="note"><p class="box-title">POINT</p><p>自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-14"><span>停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えている状態</th><th>確認する場所</th></tr></thead><tbody>
 <tr><td>Gradle同期が失敗する</td><td>Panda 2かを見て、STEP 01の設定全文と照合します。ほかの版なら先生に画面を見せます。</td></tr>
@@ -680,6 +680,6 @@ int number = Integer.parseInt(btn.getText().toString());</code></pre>
 <tr><td>数字を押すとまだ数字のSnackbarが出る</td><td>STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。</td></tr>
 <tr><td>かっこが合わない</td><td>STEP 12の全文で、onCreateの終わりとstartQuestionの位置を照合します。</td></tr>
 </tbody></table>
-<p>エラーが解決しないときは、<a href="../common/help.html?from=calc-game">共通資料：困ったとき</a>の「完成プロジェクト（見本）の確認」を参照してください。</p></section>
+<p>エラーが解決しないときは、<a href="../common/help.html?from=calc-game">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section>
 <section id="references"><h2>公式資料</h2><ul><li><a href="https://developer.android.com/reference/android/widget/Chronometer">Chronometer：基準時刻とstart・stop</a></li><li><a href="https://developer.android.com/reference/android/os/SystemClock">SystemClock：elapsedRealtime</a></li><li><a href="https://kotlinlang.org/docs/properties.html#late-initialized-properties-and-variables">Kotlin：lateinitプロパティ</a></li><li><a href="https://kotlinlang.org/docs/returns.html">Kotlin：ラベル付きreturn</a></li><li><a href="https://developer.android.com/reference/java/util/concurrent/ThreadLocalRandom">ThreadLocalRandom：乱数の範囲</a></li></ul></section>
 <footer class="footer"><p>確認日：2026年9月24日 / Android Studio Panda 2 / A02CalcGame</p></footer></main></div><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>

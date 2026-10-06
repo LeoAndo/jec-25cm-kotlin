@@ -297,13 +297,13 @@ class MainActivity : AppCompatActivity() {
         })
     }
 }</code></pre>
-<p><code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。</p>
+<p><code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは上の全文の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。</p>
 <h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val string = text.getText().toString()
 text.text = "Hello, Android!"</code></pre>
 </div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>String string = text.getText().toString();
 text.setText("Hello, Android!");</code></pre>
 </div></div>
-<div class="note"><p class="box-title">POINT</p><p>XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。見本の <code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに比較します。</p></div>
+<div class="note"><p class="box-title">POINT</p><p>XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに、上の全文と比較します。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-12"><p class="step-meta">STEP 12 · 8コマ目 · 目安 17分</p><h2>自分で変えられる場所を試す</h2>
@@ -329,7 +329,7 @@ Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show();</code></pre>
 <h3>Javaではどう書くか</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>text.text = "Hello, Android!"</code></pre>
 </div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>text.setText("Hello, Android!");</code></pre>
 </div></div>
-<div class="note"><p class="box-title">POINT</p><p>アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。完成見本をそのまま提出する形にはしません。</p></div>
+<div class="note"><p class="box-title">POINT</p><p>アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。</p></div>
 <div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="help"><h2>困ったとき</h2><table><thead><tr><th>起きたこと</th><th>確かめる場所</th></tr></thead><tbody>
 <tr><td>activity_main.xmlがない</td><td>Empty ActivityではなくEmpty Views Activityを選んだか確認。作り直す前に先生に見せます。</td></tr>
@@ -342,6 +342,6 @@ Snackbar.make(v, btn1Str, Snackbar.LENGTH_SHORT).show();</code></pre>
 <tr><td>Logcatに出ない</td><td>STEP 10の端末と検索欄を確認し、Stop→Runとクリックをやり直します。</td></tr>
 <tr><td>黄色い注意が出る</td><td>エラーと区別し、該当行を先生に見せます。Suppressで隠しません。未使用のvやXMLの文字を直接書くことへの提案は、教材の完成コードにもある書き方です。</td></tr>
 </tbody></table><p>質問するときは、教材フォルダの <code>VERSION.json</code> にある版とSTEP番号を伝えます。</p>
-<p>エラーが解決しないときは、<a href="../common/help.html?from=hello-android">共通資料：困ったとき</a>の「完成プロジェクト（見本）の確認」を参照してください。</p></section>
+<p>エラーが解決しないときは、<a href="../common/help.html?from=hello-android">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section>
 <section><h2>公式資料</h2><ul><li><a href="https://developer.android.com/studio/projects/create-project">Android Studio：プロジェクトの作成</a></li><li><a href="https://developer.android.com/studio/run/managing-avds">仮想デバイスの作成と管理</a></li><li><a href="https://developer.android.com/develop/ui/views/notifications/snackbar/showing">Snackbarの表示</a></li><li><a href="https://developer.android.com/studio/debug/logcat">Logcat</a></li></ul></section>
 <footer class="footer"><p>画面は <code>jec_25cm_kotlin_Pixel 9a</code> のライトテーマで確認。時刻・OSの表示は環境によって異なります。確認日：2026年9月24日。</p><p>チェックは自分用で送信されません。JavaScriptが無効でも本文とコードは読めます。印刷は ⌘ P。</p></footer></main></div><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>
