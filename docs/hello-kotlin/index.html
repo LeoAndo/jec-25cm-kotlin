@@ -1729,7 +1729,7 @@ class Person2(val name: String, val age: Int)</code></pre>
 <tr><td>2</td><td><code>yamada.hashCode()</code> と <code>yamada2.hashCode()</code> が同じ整数になっています。</td></tr>
 <tr><td>3</td><td><code>tanaka.hashCode()</code> と <code>tanaka2.hashCode()</code> の整数が出ます。特定の数値や、2つが異なることは完成条件にしません。</td></tr>
 <tr><td>4</td><td>2人とも <code>Person(name=yamada, age=20)</code> と出ます。</td></tr>
-<tr><td>5</td><td>2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は見本と一致しなくても構いません。</td></tr>
+<tr><td>5</td><td>2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は教科書の例と一致しなくても構いません。</td></tr>
 <tr><td>6</td><td><code>name: yamada, age: 20</code></td></tr>
 <tr><td>7</td><td><code>copyYamada Person(name=yamada, age=25)</code></td></tr>
 <tr><td>8</td><td><code>copyYamada.hashCode:</code> のあとに整数が出ます。</td></tr>
@@ -2275,7 +2275,7 @@ print(foo2.bar)</code></pre></div>
 <tr><td><code>sum(1, 2)</code> の行が赤い</td><td>渡している引数の数と型が、宣言した <code>fun sum(a: Int, b: Int)</code> と合っているか確認する（STEP 17）。</td></tr>
 <tr><td><code>ex08</code> に <code>main.kt</code> がない</td><td>この演習だけは <code>Foo.kt</code> です。その中の <code>fun main()</code> から実行します（STEP 25・26）。</td></tr>
 <tr><td><code>counter</code> の読み書きで同じ出力が続いて止まる</td><td><code>get()</code>・<code>set()</code> の中で保存値を読む・書く場所が <code>field</code> か確認します。そこを <code>counter</code> にすると同じアクセサを呼び直します（STEP 26）。</td></tr>
-<tr><td><code>ex09</code> の数値や <code>Person2@...</code> の末尾が見本と違う</td><td>通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。</td></tr>
+<tr><td><code>ex09</code> の数値や <code>Person2@...</code> の末尾が教科書の例と違う</td><td>通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。</td></tr>
 <tr><td><code>copy(age: 25)</code> が赤い</td><td>Kotlinの名前付き引数は <code>copy(age = 25)</code> です。Swiftの引数ラベルの <code>:</code> とは記号が違います（STEP 27）。</td></tr>
 <tr><td><code>value.name</code> や <code>name.count()</code> が赤い</td><td>一時的に書いた関数で、前者は <code>if (value is Person)</code>、後者は <code>if (name != null)</code> の中に置いたか確認します。条件の外では、確かめた型として使えません（STEP 27）。</td></tr>
 <tr><td><code>plusTen()</code> が見つからない</td><td><code>ex07/main.kt</code> の <code>main</code> の外に <code>fun Int.plusTen(): Int</code> があるか確認します。呼び出しは <code>5.plusTen()</code> です（STEP 28）。</td></tr>
@@ -2288,7 +2288,7 @@ print(foo2.bar)</code></pre></div>
 <tr><td>プロジェクトが見つからない</td><td>Finderで <code>Documents/Kotlin/K01HelloKotlin</code> をたどる。見つからないときは、作ったときの <strong>場所</strong> の入力を先生に見せる。</td></tr>
 </tbody></table>
 <p>一度にいくつも直すと、何が変わったか分かりにくくなります。1か所直して、もう一度Runしましょう。</p>
-<p>エラーが解決しないときは、<a href="../common/help.html?from=hello-kotlin">共通資料：困ったとき</a>の「完成プロジェクト（見本）の確認」を参照してください。</p></section>
+<p>エラーが解決しないときは、<a href="../common/help.html?from=hello-kotlin">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section>
 <section id="references"><h2>もっと知りたいとき</h2><p>授業はこの教科書だけで進められます。次の公式資料は、あとから調べたい人向けです（英語で書かれています）。</p><ul>
 <li><a href="https://kotlinlang.org/docs/comparison-to-java.html">Kotlin公式：Comparison to Java</a></li>
 <li><a href="https://kotlinlang.org/docs/basic-syntax.html">Kotlin公式：Basic syntax</a></li>

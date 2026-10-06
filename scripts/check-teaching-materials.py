@@ -795,6 +795,53 @@ def check_progress_keys(root: Path, errors: list[str]) -> None:
             seen[parser.key] = shown
 
 
+# 教科書の本文に出してはいけない語。完成プロジェクトの存在や置き場所を知らせることになる。
+# 配布物の案内文（scripts/release-student-materials.py のリリースノート）も、この語で絞り込む。
+SAMPLE_GUIDANCE_WORDS = ("完成プロジェクト", "samples")
+TAG = re.compile(r"<[^>]*>")
+LINK_ATTRIBUTE = re.compile(r"""\b(?:href|src)\s*=\s*(?:"([^"]*)"|'([^']*)')""")
+
+
+def check_no_sample_guidance(root: Path, config: dict, errors: list[str]) -> None:
+    """教科書（docs/ のHTML）から完成プロジェクトへ案内していないか確かめる（#264）。
+
+    完成プロジェクトは学生用ZIPに同梱する（samples/ と docs/<スラッグ>/downloads/ のZIP）が、
+    教科書からは案内しない（README「授業用教科書の基本方針」13）。
+    本文（タグの外）に SAMPLE_GUIDANCE_WORDS があるか、完成プロジェクトZIPへのリンクがあれば落とす。
+    属性の中（画像のファイル名など）は本文ではないので、語の検査からは外す。
+    タグが複数行にまたがっても属性を本文と取り違えないよう、ファイル全体でタグを外してから行ごとに見る。
+    """
+    docs = root / "docs"
+    if not docs.is_dir():
+        return
+    archives = {project["archive"] for project in config["projects"] if project.get("archive")}
+    for path in sorted(docs.rglob("*.html")):
+        if any(part in IGNORED_PARTS for part in path.relative_to(root).parts):
+            continue
+        try:
+            text = read(path)
+        except (OSError, UnicodeDecodeError):
+            continue
+        name = display(root, path)
+        # タグを、中に含まれていた改行だけに置き換える。行番号を元のファイルと合わせるため。
+        body = TAG.sub(lambda match: "\n" * match.group(0).count("\n"), text)
+        for line_number, line in enumerate(body.splitlines(), 1):
+            plain = html.unescape(line)
+            for word in SAMPLE_GUIDANCE_WORDS:
+                if word in plain:
+                    add(errors, root, path, line_number,
+                        f"教科書から完成プロジェクトへは案内しません（README「授業用教科書の基本方針」13）: {word}")
+        for match in LINK_ATTRIBUTE.finditer(text):
+            value = match.group(1) if match.group(1) is not None else match.group(2)
+            target = re.split(r"[?#]", html.unescape(value), maxsplit=1)[0]
+            if not target or "://" in target:
+                continue
+            resolved = posixpath.normpath(posixpath.join(posixpath.dirname(name), target))
+            if resolved in archives:
+                add(errors, root, path, text.count("\n", 0, match.start()) + 1,
+                    f"教科書から完成プロジェクトZIPへリンクしています（README「授業用教科書の基本方針」13）: {value}")
+
+
 def validate(root: Path) -> list[str]:
     config_path = root / CONFIG
     if not config_path.is_file():
@@ -814,6 +861,7 @@ def validate(root: Path) -> list[str]:
     check_sidebar_units(root, config, errors)
     check_project_layout(root, config, errors)
     check_progress_keys(root, errors)
+    check_no_sample_guidance(root, config, errors)
     for project in config["projects"]:
         check_project(root, project, errors)
         check_mirrors(root, project, errors)

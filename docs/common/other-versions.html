@@ -33,7 +33,7 @@
 <tr><td>Build configuration language</td><td><strong>Kotlin DSL（build.gradle.kts）</strong></td></tr>
 </tbody></table>
 <p>実行先の表示名は、版が違っても <code>jec_25cm_kotlin_Pixel 9a</code> です。Device Managerに既にあれば、その端末を使います。なければA01のSTEP 02で先生が指定するシステムイメージを使って作ります。実機が接続されている場合も、Runの実行先が指定AVDになっているか確かめます。</p>
-<div class="note"><p class="box-title">POINT：IDEの版とプロジェクトの設定は別</p><p>Quail 4でPanda 2の完成見本をOpenしても、見本のAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、配布された設定を保って照合します。</p></div>
+<div class="note"><p class="box-title">POINT：IDEの版とプロジェクトの設定は別</p><p>Panda 2で作ったプロジェクトをQuail 4でOpenしても、そのプロジェクトのAGPやGradleをQuail 4の値へ変更する必要はありません。更新をすすめるAGP Upgrade Assistantは閉じ、そのプロジェクトの設定を保ちます。</p></div>
 </section>
 
 <section id="a01"><h2>3. Quail 4でのA01の読み替え</h2>
@@ -44,13 +44,12 @@
 <tr><td>STEP 02〜03：端末・初回Run</td><td>指定AVDを選び、生成直後の <code>Hello World!</code> を確かめます。SDKやJDKのダウンロード中は進行表示を確認します。</td></tr>
 <tr><td>STEP 04：activity_main.xml</td><td>教科書のXML全文を使います。<code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> のidを変えません。</td></tr>
 <tr><td>STEP 05〜10：Kotlinの処理を追加</td><td>教科書と同じコードを入力します。生成された余白処理は残し、<code>onCreate</code> の中へ追加します。文字変更・Snackbar・Toast・Logcatの確認結果は同じです。</td></tr>
-<tr><td>STEP 11〜13：全文照合・アレンジ</td><td>教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体を完成見本から上書きしません。文字と余白のアレンジは同じ場所です。</td></tr>
+<tr><td>STEP 11〜13：全文照合・アレンジ</td><td>教科書の <code>MainActivity.kt</code> 全文とXMLを照合します。比較するのはこの2ファイルで、Quail 4のGradle設定全体は書き換えません。文字と余白のアレンジは同じ場所です。</td></tr>
 </tbody></table>
-<p>完成見本は <code>samples/A01HelloAndroid</code> です。別ウィンドウで開いて比べ、入力を続けるときは自分の <code>Documents/Kotlin/A01HelloAndroid</code> へ戻ります。完成見本は自分の提出作品として扱いません。</p>
 </section>
 
 <section id="differences"><h2>4. 生成される設定の違い</h2>
-<p>左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材のひな形・完成版、Quail 4列は比較用ひな形の実測値です。</p>
+<p>左のProjectツールウィンドウを <strong>Project</strong> 表示にすると、次のファイルを開けます。これは<strong>見比べる表</strong>で、値を書き換える一覧ではありません。Panda 2列は教材の基準にしたひな形、Quail 4列は比較用ひな形の実測値です。</p>
 <table><thead><tr><th>見る場所</th><th>Panda 2：教材の基準</th><th>Quail 4：保つ設定</th></tr></thead><tbody>
 <tr><td><code>gradle/libs.versions.toml</code></td><td>AGP 9.1.1、coreKtx 1.17.0、<code>androidx.activity:activity</code> 1.13.0</td><td>AGP 9.4.1、coreKtx 1.19.0、<code>androidx.activity:activity-ktx</code> 1.13.0</td></tr>
 <tr><td><code>app/build.gradle.kts</code> のcompileSdk</td><td><code>release(36) { minorApiLevel = 1 }</code></td><td><code>release(37)</code></td></tr>
@@ -87,7 +86,7 @@
 <tr><td>Quail 4構成での実行</td><td>上の検証コピーの完成コードを指定AVD <code>jec_25cm_kotlin_Pixel 9a</code>（API 37.1）で実行し、文字変更、1のSnackbar、2のToast、起動時とクリック後のLogcatを確認しました。</td></tr>
 <tr><td>ここでは未確認</td><td>Quail 4の現在のIDE画面のメニュー位置、Panda 3、ほかのStudio版、今後教材化するA02以降の段階別コード。これらも確認済みとは扱いません。</td></tr>
 </tbody></table>
-<p>Quail 4の設定に書き換えた完成見本を配ることはしません。配布する完成見本と教科書本文の基準はPanda 2です。</p>
+<p>Quail 4の設定に書き換えた教科書は用意しません。教科書本文の基準はPanda 2です。</p>
 </section>
 <section><h2>公式資料</h2><ul><li><a href="https://developer.android.com/studio/projects/create-project">Android Studio：プロジェクトの作成</a></li><li><a href="https://developer.android.com/build/agp-upgrade-assistant">AGP Upgrade Assistantが変更する設定</a></li><li><a href="https://docs.gradle.org/current/userguide/gradle_daemon.html#sec:daemon_jvm_criteria">Gradle DaemonのJVM選択</a></li></ul></section>
 <footer class="footer"><p><a href="../hello-android/index.html" data-back>← もとのページへ戻る</a></p><p>対象：macOS / 基準：Android Studio Panda 2 / 確認日：2026年9月24日</p></footer>

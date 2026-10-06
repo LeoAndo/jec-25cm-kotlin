@@ -216,6 +216,9 @@ class PackageStudentMaterialsTest(unittest.TestCase):
         self.assertIn("  A01 HelloAndroid：docs/hello-android/index.html", instructions)
         self.assertIn("IntelliJ IDEA", instructions)
         self.assertIn("Android Studio", instructions)
+        # 完成プロジェクトは samples/ に収録するが、案内文では触れない（#264）。
+        self.assertNotIn("samples", instructions)
+        self.assertNotIn("完成プロジェクト", instructions)
 
     def test_added_unit_appears_without_touching_the_script(self):
         """単元を設定に足すだけで、配布物の案内にも見本にも反映される。"""
@@ -585,8 +588,23 @@ class StudentReleaseTest(unittest.TestCase):
         self.assertIn("- `K01 HelloKotlin：docs/hello-kotlin/index.html`", text)
         self.assertIn("- `K02 NullSafety：docs/null-safety/index.html`", text)
         self.assertIn("- `A01 HelloAndroid：docs/hello-android/index.html`", text)
-        self.assertIn("`samples/K01HelloKotlin`", text)
-        self.assertIn("IntelliJ IDEA", text)
+        # 完成プロジェクトは samples/ に収録するが、リリースノートでは触れない（#264）。
+        self.assertNotIn("samples", text)
+        self.assertNotIn("完成プロジェクト", text)
+
+    def test_release_notes_hide_lines_about_sample_projects(self):
+        """PRタイトルやコミットの件名から、完成プロジェクトに触れる行だけを除く（#264）。"""
+        generated = "* K01HelloKotlinの説明を修正 #2\n* 教科書から完成プロジェクトへの案内をなくす #3"
+        commits = "- 修正 (abc123)\n- samples の案内を削除 (def456)"
+        with patch.object(release, "api", side_effect=lambda path, payload=None: {"body": generated}
+                          if path.endswith("/generate-notes") else self.api_response(path, payload)), \
+                patch.object(release.subprocess, "check_output", return_value=commits):
+            release.prepare(self.repo, self.metadata)
+        text = (self.dist / "release-notes.md").read_text(encoding="utf-8")
+        self.assertIn("* K01HelloKotlinの説明を修正 #2", text)
+        self.assertIn("- 修正 (abc123)", text)
+        self.assertNotIn("完成プロジェクト", text)
+        self.assertNotIn("samples", text)
 
     def test_download_guidance_covers_every_configured_language(self):
         """翻訳を配る言語を増やしたときに、公開案内の書き忘れを見つける。"""

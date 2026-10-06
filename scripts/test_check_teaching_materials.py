@@ -1415,5 +1415,78 @@ class ProgressKeyTest(unittest.TestCase):
             self._write(root, "docs/common/setup.html", self._page("jec-kotlin-setup-v1", 1))
             self.assertEqual(self._check(root), [])
 
+
+class SampleGuidanceCheckTest(unittest.TestCase):
+    """教科書（docs/ のHTML）から完成プロジェクトへ案内していないかの検査（#264）。"""
+
+    CONFIG = {"projects": [{"name": "A01HelloAndroid", "archive": "docs/hello-android/downloads/A01HelloAndroid.zip"}]}
+
+    def _check(self, pages: dict[str, str]) -> list[str]:
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            for page, text in pages.items():
+                path = root / page
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(text, encoding="utf-8")
+            errors: list[str] = []
+            CHECKER.check_no_sample_guidance(root, self.CONFIG, errors)
+            return errors
+
+    def test_textbook_without_sample_guidance_is_accepted(self):
+        """画像の置き場所（downloads/）へのリンクや、属性の中の語は案内にあたらない。"""
+        errors = self._check({
+            "docs/hello-android/index.html": (
+                '<p><a href="downloads/character.png">画像</a></p>\n'
+                '<img src="images/samples.png"\n alt="完成プロジェクトの画面">\n'
+                "<p>完成版を起動したときの画面</p>"
+            ),
+        })
+        self.assertEqual(errors, [])
+
+    def test_sample_guidance_words_are_rejected(self):
+        """本文に「完成プロジェクト」「samples」が出たら、共通資料でも行番号つきで検出する。"""
+        errors = self._check({
+            "docs/hello-android/index.html": "<p>見比べるときは</p>\n<p>完成プロジェクトを開きます。</p>",
+            "docs/common/help.html": "<p><code>samples</code> フォルダを開きます。</p>",
+        })
+        self.assertEqual(len(errors), 2, errors)
+        self.assertIn("docs/common/help.html:1", errors[0])
+        self.assertIn("samples", errors[0])
+        self.assertIn("docs/hello-android/index.html:2", errors[1])
+        self.assertIn("完成プロジェクト", errors[1])
+
+    def test_line_numbers_follow_tags_spanning_lines(self):
+        """複数行にまたがるタグのあとでも、本文の行番号は元のファイルと合う。"""
+        errors = self._check({
+            "docs/hello-android/index.html": '<img src="a.png"\n alt="x">\n<p>samples を開く</p>',
+        })
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("docs/hello-android/index.html:3", errors[0])
+
+    def test_link_to_project_archive_is_rejected(self):
+        """完成プロジェクトZIPへのリンクは、文言や引用符にかかわらず検出する。別ページからの相対パスも解決する。"""
+        errors = self._check({
+            "docs/hello-android/index.html": "<p>ダウンロード</p>\n<a href='downloads/A01HelloAndroid.zip' download>答え</a>",
+            "docs/common/help.html": '<a href="../hello-android/downloads/A01HelloAndroid.zip?from=x">見本</a>',
+        })
+        self.assertEqual(len(errors), 2, errors)
+        self.assertIn("docs/common/help.html:1", errors[0])
+        self.assertIn("docs/hello-android/index.html:2", errors[1])
+        self.assertTrue(all("完成プロジェクトZIPへリンク" in error for error in errors), errors)
+
+    def test_validate_runs_the_check(self):
+        """validate() の流れからも呼ばれる。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            (root / "config").mkdir()
+            (root / "config/teaching-materials.json").write_text(
+                json.dumps({"scan_roots": [], "terms": [], "projects": []}), encoding="utf-8")
+            (root / "docs/common").mkdir(parents=True)
+            (root / "docs/common/help.html").write_text("<p>完成プロジェクトの開き方</p>", encoding="utf-8")
+            errors = CHECKER.validate(root)
+            self.assertTrue(any("docs/common/help.html:1" in error and "基本方針」13" in error
+                                for error in errors), errors)
+
+
 if __name__ == "__main__":
     unittest.main()
