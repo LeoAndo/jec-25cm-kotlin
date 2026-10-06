@@ -695,12 +695,12 @@
       "translation": "MainActivity.kt · Бүтнээр нь"
     },
     {
-      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
-      "translation": "<code>@Override</code> нь Java хэлээс гаралтай тэмдэглэгээ (annotation) юм. Kotlin-д override хийхийг заахдаа <code>override</code> түлхүүр үгийг ашигладаг бөгөөд энд жишээ кодын бичилтийг хэвээр үлдээсэн. Зай авахтай холбоотой <code>Insets</code> нь 4 талын утгыг агуулдаг. Энэ хичээлээр зөвхөн үүссэн хэсгийн үүргийг тайлбарлах ба ерөнхий бүтцийг нь дэлгэрэнгүй тайлбарлахгүй."
+      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは上の全文の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
+      "translation": "<code>@Override</code> нь Java хэлээс гаралтай тэмдэглэгээ (annotation) юм. Kotlin-д override хийхийг заахдаа <code>override</code> түлхүүр үгийг ашигладаг бөгөөд энд дээрх бүтэн кодын бичилтийг хэвээр үлдээсэн. Зай авахтай холбоотой <code>Insets</code> нь 4 талын утгыг агуулдаг. Энэ хичээлээр зөвхөн үүссэн хэсгийн үүргийг шалгах ба ерөнхий бүтцийг нь дэлгэрэнгүй авч үзэхгүй."
     },
     {
-      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。見本の <code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに比較します。",
-      "translation": "XML-ийн <code>id</code> болон Kotlin-ийн <code>R.id</code> ижил байх нь холболтын нөхцөл юм. Жишээн дэх <code>text</code>, <code>button</code>, <code>btn1</code>, <code>btn2</code> гэсэн нэрсийг өөрчлөхгүйгээр харьцуулна уу."
+      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに、上の全文と比較します。",
+      "translation": "XML-ийн <code>id</code> болон Kotlin-ийн <code>R.id</code> ижил байх нь холболтын нөхцөл юм. <code>text</code>, <code>button</code>, <code>btn1</code>, <code>btn2</code> гэсэн нэрсийг өөрчлөхгүйгээр дээрх бүтэн кодтой харьцуулна уу."
     },
     {
       "source": "全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。",
@@ -827,8 +827,8 @@
       "translation": "Logcat дээр мөн ачаалах үеийн болон өөрчилсний дараах текстүүд гарна."
     },
     {
-      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。完成見本をそのまま提出する形にはしません。",
-      "translation": "Өөрийнхөөрөө өөрчлөөд үргэлжлүүлэх бол STEP 12-ийн хүснэгтээс харна уу. Өөрийн үүсгэсэн <code>Documents/Kotlin/A01HelloAndroid</code>-г ашиглана. Дууссан загвар төслийг шууд илгээхгүй."
+      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。",
+      "translation": "Өөрийнхөөрөө өөрчлөөд үргэлжлүүлэх үүд нь STEP 12-ын хүснэгт юм. Өөрийн үүсгэсэн <code>Documents/Kotlin/A01HelloAndroid</code>-г ашиглана."
     },
     {
       "source": "自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。",
@@ -919,8 +919,8 @@
       "translation": "Асуулт асуухдаа сургалтын материалын <code>VERSION.json</code> доторх хувилбар болон STEP дугаарыг хэлнэ үү."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "Алдаа шийдэгдэхгүй байвал <a1>Нийтлэг материал: Асуудал гарвал</a1> хэсгийн «Бэлэн төсөл (жишээ)-ийг шалгах» тайлбарыг үзнэ үү."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "Алдаа шийдэгдэхгүй бол <a1>Нийтлэг материал: Асуудал гарсан үед</a1> хэсгийн шалгах аргуудыг туршиж үзнэ үү. Тэгээд ч шийдэгдэхгүй бол STEP дугаар болон дэлгэцийг багшдаа үзүүлнэ үү."
     },
     {
       "source": "公式資料",

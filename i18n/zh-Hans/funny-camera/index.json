@@ -139,8 +139,8 @@
       "translation": "先看今天的界面"
     },
     {
-      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。見本の映像はエミュレータ内の仮想の部屋です。",
-      "translation": "要打开的 IDE 是 <strong>Android Studio Panda 2</strong>。今天在相机画面上叠加金鱼，并用手指移动它。下一节课把这个组合保存为图片。示例中的画面是模拟器内的虚拟房间。"
+      "source": "開くIDEは <strong>Android Studio Panda 2</strong> です。今日はカメラ映像の上に金魚を重ね、指で動かします。次のコマでその組み合わせを画像として保存します。教科書の画像に写る映像は、エミュレータ内の仮想の部屋です。",
+      "translation": "要打开的IDE是 <strong>Android Studio Panda 2</strong>。今天我们将把金鱼叠加在摄像头画面上并用手指移动。下一节课将该组合保存为图片。教材图片中显示的画面是模拟器内的虚拟房间。"
     },
     {
       "source": "カメラの映像に金魚とTake Pictureボタンが重なる画面",
@@ -251,8 +251,8 @@
       "translation": "<code>app/build.gradle.kts</code>。这个在 app 文件夹中。"
     },
     {
-      "source": "コード内の <code>TODO STEP01</code> は完成プロジェクトに残る作業時の目印で、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
-      "translation": "代码中的 <code>TODO STEP01</code> 是完成项目中保留的开发时的标记，不是本课本的 STEP 编号。CameraX 的4行 <code>implementation</code> 已经包含在内。全文替换后，不需要再添加同样的行。"
+      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
+      "translation": "代码中的 <code>TODO STEP01</code> 是作为作业标记保留的注释，并不是本教材的STEP编号。CameraX的4行 <code>implementation</code> 已经包含在内。替换全文后，不需要再次添加相同的行。"
     },
     {
       "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
@@ -331,8 +331,8 @@
       "translation": "放入金鱼并创建用于拖动的 View"
     },
     {
-      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルで、完成版と同じものです。",
-      "translation": "<a1>保存金鱼图片 character.png</a1>，然后在 Finder 中把它复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code>。如果保存时变成了其他名称，改回 <code>character.png</code>。直接放在 <strong>drawable</strong> 文件夹里。图片是背景透明的500×416像素，与完成版相同。"
+      "source": "<a1>金魚の画像 character.png を保存</a1>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルです。",
+      "translation": "<a1>保存金鱼图片 character.png</a1>，从Finder复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code> 中。保存时如果变成了其他名称，请改成 <code>character.png</code>。直接放在 <strong>drawable</strong> 目录下。图片是背景透明的500×416像素。"
     },
     {
       "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
@@ -679,8 +679,8 @@
       "translation": "在指定的 AVD 上保存的 JPEG。图片是预览范围，而不是整个屏幕"
     },
     {
-      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、見本と同じ文字列にはなりません。",
-      "translation": "确认后回到 A04。改变金鱼的位置，再保存一次，确认多出一张新日期时间的图片。日期时间取决于设备的设置，所以不会与示例的字符串相同。"
+      "source": "確認したらA04へ戻ります。金魚の位置を変え、もう1回だけ保存して、新しい日時の画像が増えることを確かめます。日時は端末の設定によるため、教科書の画像と同じ文字列にはなりません。",
+      "translation": "确认完毕后返回A04。改变金鱼的位置，再保存1次，确认增加了新日期的图片。日期取决于设备的设置，因此不会与教材图片的文字完全一致。"
     },
     {
       "source": "同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。",
@@ -735,8 +735,8 @@
       "translation": "修改成自己的界面"
     },
     {
-      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。完成プロジェクトの見本は上書きしません。",
-      "translation": "在自己的项目中，更改下面的其中1处，点击 Run，比较界面和保存的图片。先记下原来的值再更改，一处一处地确认。不要覆盖完成项目的示例。"
+      "source": "自分のプロジェクトで、次のうち1か所を変え、Runして画面と保存画像を比べます。元の値を控えてから変更し、1つずつ確かめます。",
+      "translation": "在自己的项目中更改以下其中一处，点击Run并对比画面和保存的图片。在修改前记录原来的值，逐一进行确认。"
     },
     {
       "source": "場所",
@@ -807,8 +807,8 @@
       "translation": "第15节课的最后3分钟"
     },
     {
-      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、このページ下の完成プロジェクトを使います。",
-      "translation": "保存自己的项目。把相机权限改回“仅在使用该应用时允许”，依次打开预览和保存的 JPEG。想对照代码时，使用本页下方的完成项目。"
+      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
+      "translation": "保存自己的项目。将相机权限恢复为仅在使用中允许，然后依次打开预览和保存的JPEG。想要对比代码时，请与STEP 10的全文对比。"
     },
     {
       "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
@@ -927,8 +927,8 @@
       "translation": "第14节课结束时的全文在 STEP 06。第15节课从 STEP 08 开始，完成版全文在 STEP 10。"
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "如果错误仍未解决，请参考<a1>通用资料：遇到问题时</a1>中的“查看完成项目（示例）”。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "错误无法解决时，请尝试<a1>共同资料：遇到问题时</a1>中的排查方法。如果依然无法解决，请将STEP编号和画面出示给老师看。"
     },
     {
       "source": "公式資料",

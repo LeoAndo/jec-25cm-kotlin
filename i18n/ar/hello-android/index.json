@@ -695,12 +695,12 @@
       "translation": "MainActivity.kt · النص الكامل"
     },
     {
-      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは見本の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
-      "translation": "<code>@Override</code> تعليق توضيحي (annotation) موروث من Java. ما يدل على إعادة التعريف في Kotlin هو الكلمة المفتاحية <code>override</code>، وقد أبقينا هنا طريقة الكتابة كما في المثال. <code>Insets</code> في شيفرة الهوامش يحمل قيم الجوانب الأربعة. في هذه الوحدة، تتحقق من دور الجزء المولّد فقط، ولا تتناول الآلية بأكملها."
+      "source": "<code>@Override</code> はJava由来の注釈です。Kotlinでオーバーライドを示すのは <code>override</code> キーワードで、ここでは上の全文の書き方をそのまま残しています。余白処理の <code>Insets</code> は4辺の値を持ちます。この単元では生成部分の役割だけ確認し、仕組みの全体は扱いません。",
+      "translation": "<code>@Override</code> هو تعليق توضيحي مشتق من Java. في Kotlin، يُشار إلى التجاوز باستخدام الكلمة المفتاحية <code>override</code>، وهنا أبقينا على طريقة كتابة النص الكامل أعلاه كما هي. يحتوي <code>Insets</code> الخاص بالهوامش على قيم للجوانب الأربعة. في هذه الوحدة سنكتفي بالتحقق من دور الجزء الذي تم إنشاؤه فقط، ولن نتطرق إلى الآلية بأكملها."
     },
     {
-      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。見本の <code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに比較します。",
-      "translation": "شرط الربط هو تطابق <code>id</code> في XML مع <code>R.id</code> في Kotlin. قارن <code>text</code> و<code>button</code> و<code>btn1</code> و<code>btn2</code> في المثال دون تغيير أسمائها."
+      "source": "XMLの <code>id</code> とKotlinの <code>R.id</code> が一致していることが接続の条件です。<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> は名前を変えずに、上の全文と比較します。",
+      "translation": "تطابق <code>id</code> في XML مع <code>R.id</code> في Kotlin هو شرط الاتصال. قارن <code>text</code> و<code>button</code> و<code>btn1</code> و<code>btn2</code> بالنص الكامل أعلاه دون تغيير أسمائها."
     },
     {
       "source": "全文を照合し、文字変更・Snackbar・Toast・Logcatがそれぞれ動いている。",
@@ -827,8 +827,8 @@
       "translation": "يظهر في Logcat أيضا النص عند بدء التشغيل والنص بعد التغيير."
     },
     {
-      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。完成見本をそのまま提出する形にはしません。",
-      "translation": "نقطة البداية لمتابعة التخصيص هي جدول STEP 12. استخدم <code>Documents/Kotlin/A01HelloAndroid</code> الذي أنشأته بنفسك. لا تسلّم المثال المكتمل كما هو."
+      "source": "アレンジを続けるときの入り口はSTEP 12の表です。自分が作った <code>Documents/Kotlin/A01HelloAndroid</code> を使います。",
+      "translation": "نقطة البداية لمتابعة التعديل المخصص هي الجدول الموجود في الخطوة 12. استخدم <code>Documents/Kotlin/A01HelloAndroid</code> الذي أنشأته بنفسك."
     },
     {
       "source": "自分のアプリで4項目を確認でき、変更できる場所がSTEP 12の表で見つかる。",
@@ -919,8 +919,8 @@
       "translation": "عندما تسأل، أخبر المعلم بالإصدار المكتوب في <code>VERSION.json</code> في مجلد المواد التعليمية وبرقم STEP."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "إذا لم تُحل المشكلة، يُرجى الرجوع إلى \"فحص المشروع المكتمل (النموذج)\" في <a1>المواد المشتركة: إذا واجهتك مشكلة</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "إذا لم يتم حل الخطأ، جرب طرق الفحص الموضحة في <a1>المواد المشتركة: عند مواجهة مشكلة</a1>. وإذا لم يتم حله بعد ذلك، اعرض رقم الخطوة والشاشة على المعلم."
     },
     {
       "source": "公式資料",

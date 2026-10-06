@@ -43,10 +43,6 @@
       "translation": "2. Using the shared guides"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "3. When you still cannot resolve it (Checking the completed project)"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "Errors are a natural part of programming. Error messages always tell you \"which line of which file has what problem.\" Stay calm and check from top to bottom."
     },
@@ -101,46 +97,6 @@
     {
       "source": "<a1>共通資料：提出課題とAPKの作り方</a1> を確認します。",
       "translation": "Check <a1>Shared: The assignment and the APK</a1>."
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、プログラム本来の動きを確認したいときは、先生が作った<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "When you cannot find mistakes in your own code or want to check the intended behavior of the program, you can open the <strong>completed project (sample)</strong> prepared by the teacher and compare it with your code."
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "The completed project is for “checking your work”"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "Copying code directly from the completed project or modifying and submitting the completed project does not count as submitting your own assignment. Once you check the differences with the sample, always <strong>return to the project you created yourself and fix it by hand</strong>."
-    },
-    {
-      "source": "見本の開き方",
-      "translation": "How to open the sample"
-    },
-    {
-      "source": "<strong>書類</strong>（<code>Documents</code>）にある教材のフォルダ（<code>kotlin-student-materials-日付</code>）を開きます。",
-      "translation": "Open the course materials folder (<code>kotlin-student-materials-日付</code>) in <strong>Documents</strong> (<code>Documents</code>)."
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>K01HelloKotlin</code>、<code>A02CalcGame</code> など）を確認します。",
-      "translation": "Check the folder for the relevant unit (such as <code>K01HelloKotlin</code>, <code>A02CalcGame</code>, etc.) in the <code>samples</code> folder inside."
-    },
-    {
-      "source": "IntelliJ IDEA または Android Studio の <strong>Open</strong> で該当フォルダを選んで開きます。",
-      "translation": "Select and open the folder using <strong>Open</strong> in IntelliJ IDEA or Android Studio."
-    },
-    {
-      "source": "見本で正しいコードや動作を確認したら見本を閉じ、自分のプロジェクト（<code>Documents/Kotlin/単元名</code>）を開き直して作業を続けます。",
-      "translation": "Once you have verified the correct code or behavior with the sample, close the sample, reopen your own project (<code>Documents/Kotlin/単元名</code>), and continue your work."
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "Be careful not to mix them up"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部に表示される保存先パスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "The sample and your own app have the same project name. Check the save destination path displayed at the top of the window to avoid accidentally editing the sample."
     }
   ]
 }

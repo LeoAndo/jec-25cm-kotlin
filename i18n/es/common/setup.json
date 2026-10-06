@@ -151,16 +151,16 @@
       "translation": "Lo que deberías ver"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
-      "translation": "Al abrir la carpeta dentro de 「書類」 (Documentos), se encuentran dos carpetas llamadas <code>docs</code> y <code>samples</code>, y dos archivos llamados <code>はじめに.txt</code> y <code>VERSION.json</code>. En las versiones que incluyen traducciones, también está <code>index.html</code>, la página para elegir el idioma, con lo que hay <strong>cinco elementos</strong> en total."
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> フォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もある。",
+      "translation": "Al abrir la carpeta dentro de \"Documentos\", encontrarás la carpeta <code>docs</code> y dos archivos: <code>はじめに.txt</code> y <code>VERSION.json</code>. En las versiones que incluyen traducción, también encontrarás <code>index.html</code> como punto de entrada para seleccionar el idioma."
     },
     {
       "source": "<code>index.html</code> があるとき",
       "translation": "Si la carpeta contiene <code>index.html</code>"
     },
     {
-      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
-      "translation": "Abre <code>index.html</code> en tu navegador y elige el idioma en el que deseas leer. Si vas a leer en japonés, puedes continuar leyendo directamente esta página. En las versiones que no incluyen <code>index.html</code>, continúa leyendo directamente esta página. <strong>Solo si falta alguno de los cuatro elementos anteriores</strong>, detente y muéstraselo a tu docente antes de continuar."
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上に挙げたもののうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "Abre <code>index.html</code> en el navegador y elige el idioma en el que deseas leer. Si vas a leer en japonés, puedes continuar leyendo esta página directamente. En las versiones sin <code>index.html</code>, continúa leyendo esta página directamente. <strong>Solo si falta alguno de los elementos indicados arriba</strong>, no continúes y muéstraselo al profesor."
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",
@@ -369,14 +369,6 @@
     {
       "source": "前半で覚えた書き方は、そのまま使います。違うのは、結果が文字で出るか、スマートフォンの画面に出るかです。前半でつまずいたところは、後半に入る前に先生に聞いておいてください。",
       "translation": "La forma de escribir que aprendiste en la primera mitad se utiliza tal cual. La diferencia radica en si el resultado aparece en texto o en la pantalla de un celular. Si tuviste dificultades con algo en la primera mitad, pregúntale a tu docente antes de entrar a la segunda."
-    },
-    {
-      "source": "完成プロジェクト（先生が作った見本）の開き方",
-      "translation": "Cómo abrir los proyectos terminados (los ejemplos creados por tu docente)"
-    },
-    {
-      "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",
-      "translation": "Dentro de la carpeta de materiales que colocaste en 「書類」 (Documentos) en el paso 1, en <code>samples</code> vienen los proyectos terminados en un formato listo para <strong>abrirse directamente</strong>. No necesitas descargar ni descomprimir nada. Para los proyectos de Kotlin de la primera mitad, usa <strong>Open</strong> en IntelliJ IDEA; para los proyectos de Android de la segunda mitad, usa <strong>Open</strong> en Android Studio, y selecciona la carpeta dentro de <code>samples</code>."
     },
     {
       "source": "ここまでできたら、準備は終わりです。第1単元の教科書を開いて授業を始めましょう。",

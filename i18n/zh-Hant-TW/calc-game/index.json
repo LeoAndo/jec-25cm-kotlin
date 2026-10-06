@@ -323,8 +323,8 @@
       "translation": "在 Java 中也是使用同樣的 XML 和 <code>R.id.btn_start</code>。不需要為了 Java 重寫 XML 本身。"
     },
     {
-      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は完成見本にあるエディタ向け指定で、クリック処理を作る指定ではありません。",
-      "translation": "<code>android:text</code> 是執行時用的，<code>tools:text</code> 是給編輯器預覽用的。<code>tools:ignore=\"ButtonStyle\"</code> 是完成範例中給編輯器的設定，不是用來建立點擊處理的設定。"
+      "source": "<code>android:text</code> は実行時、<code>tools:text</code> はエディタのプレビュー用です。<code>tools:ignore=\"ButtonStyle\"</code> は教科書のXMLにあるエディタ向け指定で、クリック処理を作る指定ではありません。",
+      "translation": "<code>android:text</code> 用於執行時，<code>tools:text</code> 用於編輯器的預覽。<code>tools:ignore=\"ButtonStyle\"</code> 是教材XML中面向編輯器的設定，並不是用來編寫點擊處理的設定。"
     },
     {
       "source": "指定AVDに00:00、3つの操作ボタン、1〜9が表示され、問題欄は空白になっている。",
@@ -887,8 +887,8 @@
       "translation": "在 Java 中對應到 <code>correctNo++;</code> 和 <code>txtMessage.setText(message);</code>。把計算結果傳給 View 的流程相同。"
     },
     {
-      "source": "完成見本はコードと動作を比べるための資料です。自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
-      "translation": "完成範例是用來比較程式碼和動作的資料。請保留自己建立的專案，自訂也要在其中一邊確認更改的位置一邊進行。"
+      "source": "自分で作ったプロジェクトを残し、アレンジもその中の変更箇所を確かめながら進めます。",
+      "translation": "保留自己製作的專案，一邊確認其中的修改位置一邊進行自訂拓展。"
     },
     {
       "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
@@ -975,8 +975,8 @@
       "translation": "請用 STEP 12 的全文，對照 onCreate 的結尾和 startQuestion 的位置。"
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "如果錯誤仍未解決，請參閱<a1>共用資料：遇到問題時</a1>的「確認完成專案（範本）」。"
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "錯誤無法解決時，請嘗試<a1>共通資料：遇到問題時</a1>中的排查方法。如果依然無法解決，請將STEP編號和畫面出示給老師看。"
     },
     {
       "source": "公式資料",

@@ -3263,8 +3263,8 @@
       "translation": "Both show <code>Person(name=yamada, age=20)</code>."
     },
     {
-      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は見本と一致しなくても構いません。",
-      "translation": "Both show <code>ex09.Person2@</code> followed by letters and digits. The letters and digits at the end do not have to match the sample."
+      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は教科書の例と一致しなくても構いません。",
+      "translation": "Both show <code>ex09.Person2@</code> followed by letters and digits. The letters and digits at the end do not have to match the textbook's example."
     },
     {
       "source": "<code>copyYamada.hashCode:</code> のあとに整数が出ます。",
@@ -4167,8 +4167,8 @@
       "translation": "Check that <code>get()</code> and <code>set()</code> read and write the stored value through <code>field</code>. If you use <code>counter</code> there, the same accessor is called again (STEP 26)."
     },
     {
-      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が見本と違う",
-      "translation": "The numbers in <code>ex09</code> or the end of <code>Person2@...</code> differ from the sample"
+      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が教科書の例と違う",
+      "translation": "The numbers in <code>ex09</code> or the end of <code>Person2@...</code> differ from the textbook's example"
     },
     {
       "source": "通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。",
@@ -4259,8 +4259,8 @@
       "translation": "If you fix several things at once, it is hard to tell what changed. Fix one place, then run it again."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "If you cannot resolve an error, refer to \"Checking the completed project (sample)\" in <a1>Shared: If you get stuck</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "If the error persists, try the troubleshooting steps in <a1>Common: Troubleshooting</a1>. If it is still not resolved, show the STEP number and the screen to your teacher."
     },
     {
       "source": "もっと知りたいとき",

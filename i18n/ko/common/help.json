@@ -43,10 +43,6 @@
       "translation": "2. 공통 자료 활용하기"
     },
     {
-      "source": "3. どうしても解決しないときは（完成プロジェクトの確認）",
-      "translation": "3. 도저히 해결되지 않을 때는 (완성 프로젝트 확인)"
-    },
-    {
       "source": "プログラミングでエラーが出るのは自然なことです。エラーメッセージには「どのファイルの何行目で、何が問題か」が書かれています。焦らずに上から順に確認しましょう。",
       "translation": "프로그래밍에서 오류가 발생하는 것은 자연스러운 일입니다. 오류 메시지에는 '어떤 파일의 몇 번째 줄에 어떤 문제가 있는지'가 적혀 있습니다. 당황하지 말고 위에서부터 차례대로 확인해 봅시다."
     },
@@ -101,46 +97,6 @@
     {
       "source": "<a1>共通資料：提出課題とAPKの作り方</a1> を確認します。",
       "translation": "<a1>공통 자료: 제출 과제와 APK 만들기</a1>를 확인합니다."
-    },
-    {
-      "source": "どうしても自分のコードの間違いが見つからないときや、プログラム本来の動きを確認したいときは、先生が作った<strong>完成プロジェクト（見本）</strong>を開いて自分のコードと見比べることができます。",
-      "translation": "도저히 자신의 코드에서 잘못된 부분을 찾을 수 없거나 프로그램 본래의 동작을 확인하고 싶을 때는, 선생님이 만든 <strong>완성 프로젝트(예제)</strong>를 열어 자신의 코드와 비교해 볼 수 있습니다."
-    },
-    {
-      "source": "完成プロジェクトは「答え合わせ用」です",
-      "translation": "완성 프로젝트는 '정답 대조용'입니다"
-    },
-    {
-      "source": "完成プロジェクトからコードをそのままコピーしたり、完成プロジェクトを改造して提出しても、自分の課題の提出にはなりません。見本で違いを確認したら、必ず<strong>自分で作ったプロジェクトに戻り、自分の手で修正</strong>してください。",
-      "translation": "완성 프로젝트에서 코드를 그대로 복사하거나 완성 프로젝트를 수정해서 제출하더라도 자신의 과제를 제출한 것으로 인정되지 않습니다. 예제에서 차이점을 확인했다면 반드시 <strong>자신이 만든 프로젝트로 돌아가 직접 손으로 수정</strong>하세요."
-    },
-    {
-      "source": "見本の開き方",
-      "translation": "예제를 여는 방법"
-    },
-    {
-      "source": "<strong>書類</strong>（<code>Documents</code>）にある教材のフォルダ（<code>kotlin-student-materials-日付</code>）を開きます。",
-      "translation": "<strong>문서</strong>(<code>Documents</code>)에 있는 교재 폴더(<code>kotlin-student-materials-日付</code>)를 엽니다."
-    },
-    {
-      "source": "その中にある <code>samples</code> フォルダから、該当する単元のフォルダ（例：<code>K01HelloKotlin</code>、<code>A02CalcGame</code> など）を確認します。",
-      "translation": "그 안에 있는 <code>samples</code> 폴더에서 해당 단원의 폴더(예: <code>K01HelloKotlin</code>, <code>A02CalcGame</code> 등)를 확인합니다."
-    },
-    {
-      "source": "IntelliJ IDEA または Android Studio の <strong>Open</strong> で該当フォルダを選んで開きます。",
-      "translation": "IntelliJ IDEA 또는 Android Studio의 <strong>Open</strong>으로 해당 폴더를 선택하여 엽니다."
-    },
-    {
-      "source": "見本で正しいコードや動作を確認したら見本を閉じ、自分のプロジェクト（<code>Documents/Kotlin/単元名</code>）を開き直して作業を続けます。",
-      "translation": "예제에서 올바른 코드나 동작을 확인했다면 예제를 닫고, 자신의 프로젝트(<code>Documents/Kotlin/単元名</code>)를 다시 열어 작업을 계속합니다."
-    },
-    {
-      "source": "取り違えに注意",
-      "translation": "혼동하지 않도록 주의"
-    },
-    {
-      "source": "見本と自分のアプリは同じプロジェクト名です。ウィンドウ上部に表示される保存先パスを確認し、見本のほうを編集してしまわないよう注意しましょう。",
-      "translation": "예제와 자신의 앱은 프로젝트 이름이 같습니다. 창 상단에 표시되는 저장 위치 경로를 확인하여 예제 쪽을 편집하지 않도록 주의합시다."
     }
   ]
 }

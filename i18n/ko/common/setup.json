@@ -151,16 +151,16 @@
       "translation": "성공 여부 확인"
     },
     {
-      "source": "「書類」の中のフォルダを開くと、<code>docs</code> と <code>samples</code> という2つのフォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もあり、合わせて<strong>5つ</strong>になる。",
-      "translation": "「書類」(문서) 안의 폴더를 열면 <code>docs</code>와 <code>samples</code>라는 폴더 두 개, <code>はじめに.txt</code>와 <code>VERSION.json</code>이라는 파일 두 개가 있습니다. 번역이 포함된 버전에는 언어를 선택하는 시작 페이지인 <code>index.html</code>도 있어 모두 <strong>다섯 개</strong>입니다."
+      "source": "「書類」の中のフォルダを開くと、<code>docs</code> フォルダと、<code>はじめに.txt</code>、<code>VERSION.json</code> という2つのファイルがある。翻訳を含む版では、言語を選ぶ入口の <code>index.html</code> もある。",
+      "translation": "\"문서\" 안의 폴더를 열면 <code>docs</code> 폴더와 <code>はじめに.txt</code>, <code>VERSION.json</code>이라는 2개의 파일이 있습니다. 번역이 포함된 버전에는 언어를 선택하는 입구인 <code>index.html</code>도 있습니다."
     },
     {
       "source": "<code>index.html</code> があるとき",
       "translation": "<code>index.html</code>이 있을 때"
     },
     {
-      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上の4つのうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
-      "translation": "<code>index.html</code>을 브라우저에서 열고 읽을 언어를 선택합니다. 일본어로 읽을 때는 이 페이지를 그대로 읽어 나가도 됩니다. <code>index.html</code>이 없는 버전에서는 이 페이지를 그대로 읽어 나갑니다. <strong>위의 네 개 중 빠진 것이 있을 때만</strong> 다음 단계로 진행하지 않고 선생님께 보여 드립니다."
+      "source": "<code>index.html</code> をブラウザで開き、読む言語を選びます。日本語で読むときは、このページをそのまま読み進めて構いません。<code>index.html</code> がない版では、このページをそのまま読み進めます。<strong>上に挙げたもののうち、足りないものがあるときだけ</strong>、先に進まずに先生に見せてください。",
+      "translation": "<code>index.html</code>을 브라우저에서 열고 읽을 언어를 선택합니다. 일본어로 읽을 때는 이 페이지를 그대로 읽어나가도 됩니다. <code>index.html</code>이 없는 버전에서는 이 페이지를 그대로 읽어나갑니다. <strong>위에 나열한 것 중 부족한 것이 있을 때만</strong> 더 이상 진행하지 말고 선생님에게 보여주세요."
     },
     {
       "source": "どの版（バージョン）の教材かを見分ける",
@@ -369,14 +369,6 @@
     {
       "source": "前半で覚えた書き方は、そのまま使います。違うのは、結果が文字で出るか、スマートフォンの画面に出るかです。前半でつまずいたところは、後半に入る前に先生に聞いておいてください。",
       "translation": "전반부에서 배운 작성 방법을 그대로 사용합니다. 다른 점은 결과가 문자로 나오는지, 스마트폰 화면에 나오는지입니다. 전반부에서 어려웠던 부분은 후반부에 들어가기 전에 선생님께 질문합니다."
-    },
-    {
-      "source": "完成プロジェクト（先生が作った見本）の開き方",
-      "translation": "완성 프로젝트(선생님이 만든 예제)를 여는 방법"
-    },
-    {
-      "source": "手順1で「書類」に置いた教材のフォルダの中の <code>samples</code> に、完成プロジェクトが<strong>そのまま開ける形</strong>で入っています。ダウンロードも展開も要りません。前半のKotlinのプロジェクトは IntelliJ IDEA の <strong>Open</strong>、後半のAndroidのプロジェクトは Android Studio の <strong>Open</strong> で、<code>samples</code> の中のフォルダを選びます。",
-      "translation": "1번 단계에서 「書類」(문서)에 넣은 교재 폴더 안의 <code>samples</code>에 완성 프로젝트가 <strong>바로 열 수 있는 형태</strong>로 들어 있습니다. 다운로드하거나 압축을 풀 필요는 없습니다. 전반부 Kotlin 프로젝트는 IntelliJ IDEA의 <strong>Open</strong>으로, 후반부 Android 프로젝트는 Android Studio의 <strong>Open</strong>으로 <code>samples</code> 안의 폴더를 선택합니다."
     },
     {
       "source": "ここまでできたら、準備は終わりです。第1単元の教科書を開いて授業を始めましょう。",

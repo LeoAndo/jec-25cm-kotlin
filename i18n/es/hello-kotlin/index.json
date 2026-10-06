@@ -3263,8 +3263,8 @@
       "translation": "Para ambos, aparece <code>Person(name=yamada, age=20)</code>."
     },
     {
-      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は見本と一致しなくても構いません。",
-      "translation": "Para ambos, <code>ex09.Person2@</code> va seguido de caracteres alfanuméricos. No importa si los caracteres alfanuméricos finales no coinciden con el ejemplo."
+      "source": "2人とも <code>ex09.Person2@</code> のあとに英数字が続きます。末尾の英数字は教科書の例と一致しなくても構いません。",
+      "translation": "En ambos casos, a <code>ex09.Person2@</code> le siguen caracteres alfanuméricos. No es necesario que los caracteres alfanuméricos finales coincidan con el ejemplo del libro de texto."
     },
     {
       "source": "<code>copyYamada.hashCode:</code> のあとに整数が出ます。",
@@ -4167,8 +4167,8 @@
       "translation": "Verifica si el lugar donde lees o escribes el valor guardado dentro de <code>get()</code> y <code>set()</code> es <code>field</code>. Si usas <code>counter</code> allí, volverá a llamar al mismo descriptor de acceso (STEP 26)."
     },
     {
-      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が見本と違う",
-      "translation": "Los números o el final de <code>Person2@...</code> de <code>ex09</code> son diferentes del ejemplo"
+      "source": "<code>ex09</code> の数値や <code>Person2@...</code> の末尾が教科書の例と違う",
+      "translation": "Los valores numéricos de <code>ex09</code> o el final de <code>Person2@...</code> son diferentes del ejemplo del libro de texto"
     },
     {
       "source": "通常のクラスの <code>hashCode()</code> と <code>toString()</code> は、表示する数値や末尾が実行ごとに変わることがあります。STEP 27の表にある行数・比較結果・名前・年齢で確かめます。",
@@ -4259,8 +4259,8 @@
       "translation": "Si corriges muchas cosas a la vez, será difícil saber qué cambió. Corrige un lugar y haz Run nuevamente."
     },
     {
-      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の「完成プロジェクト（見本）の確認」を参照してください。",
-      "translation": "Si no logras resolver el error, consulta «Comprobar el proyecto terminado (ejemplo)» en <a1>Material común: Si tienes problemas</a1>."
+      "source": "エラーが解決しないときは、<a1>共通資料：困ったとき</a1>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。",
+      "translation": "Si el error no se resuelve, prueba los métodos de comprobación en <a1>Materiales comunes: Qué hacer en caso de problemas</a1>. Si aun así no se resuelve, muestra el número de STEP y la pantalla al profesor."
     },
     {
       "source": "もっと知りたいとき",
