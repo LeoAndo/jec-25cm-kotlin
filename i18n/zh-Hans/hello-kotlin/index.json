@@ -579,16 +579,16 @@
       "translation": "输出显示的地方。点击 Run 后会自动打开。"
     },
     {
-      "source": "② エディタの中身を置き換えて実行する",
-      "translation": "② 替换编辑器中的内容并运行"
+      "source": "② 見本を消し、3行を入力して実行する",
+      "translation": "② 删除示例，输入3行并运行"
     },
     {
-      "source": "エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。",
-      "translation": "点击编辑器内部，用 <kbd>⌘ A</kbd> 全选，然后粘贴下面的代码。"
+      "source": "エディタには、Playgroundの見本が最初から入っています。この見本は使いません。Playgroundの側で中身が変わることがあり、直す場所を示せないためです。エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んで消してから、次の全文を入力します。",
+      "translation": "编辑器中一开始就有 Playground 的示例。不使用这个示例。这是因为 Playground 那边有时会更改示例的内容，无法指出要改的地方。点击编辑器内部，用 <kbd>⌘ A</kbd> 全选并删除，然后输入下面的全文。"
     },
     {
-      "source": "Playgroundのエディタ · 全体を置き換える",
-      "translation": "Playground 的编辑器 · 替换全部内容"
+      "source": "Playgroundのエディタ · 全文",
+      "translation": "Playground 的编辑器 · 全文"
     },
     {
       "source": "<strong>Run</strong> をクリックします。",
@@ -955,12 +955,16 @@
       "translation": "本单元共6节课。每上一节课，就在同一个 <code>K01HelloKotlin</code> 项目的 <code>src</code> 下，按与现在相同的步骤依次添加 <code>ex02</code>、<code>ex03</code>……等包。因为不会重新创建项目，所以之前几节课写的代码随时都能打开查看。"
     },
     {
-      "source": "⑦ ファイル全体を、次の内容にする",
-      "translation": "⑦ 将整个文件改为以下内容"
+      "source": "⑦ main.kt に、println の1行を書く",
+      "translation": "⑦ 在 main.kt 中编写1行 println"
     },
     {
-      "source": "src/ex01/main.kt · 全体を置き換える",
-      "translation": "src/ex01/main.kt · 替换整个文件"
+      "source": "<code>main.kt</code> は、いま作った新しいファイルなので、中身を次の全文にします。<code>package ex01</code> と <code>fun main()</code> の行は、⑥で見たとおり IntelliJ IDEA が入れています。自分で入力するのは、<code>{</code> と <code>}</code> のあいだの <code>println</code> の1行です。",
+      "translation": "<code>main.kt</code> 是刚创建的新文件，所以把内容改成下面的全文。<code>package ex01</code> 和 <code>fun main()</code> 的行，如⑥中所见，已由 IntelliJ IDEA 自动加入。需要自己输入的，是 <code>{</code> 和 <code>}</code> 之间的 <code>println</code> 这1行。"
+    },
+    {
+      "source": "src/ex01/main.kt · 全文",
+      "translation": "src/ex01/main.kt · 全文"
     },
     {
       "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
@@ -1047,12 +1051,28 @@
       "translation": "可以重新赋值。之后可以再赋其他值。"
     },
     {
-      "source": "① ファイル全体を、次の内容に置き換える",
-      "translation": "① 将整个文件替换为以下内容"
+      "source": "① println の行を、変数の宣言と表示に書き換える",
+      "translation": "① 把 println 那一行改写成变量的声明和输出"
     },
     {
-      "source": "main.kt · 全体を置き換える",
-      "translation": "main.kt · 替换整个文件"
+      "source": "STEP 02 で書いた <code>main.kt</code> を直します。<code>println(&quot;Hello, Kotlin!&quot;)</code> の行を消し、同じ場所に、変数の宣言と表示の行を足します。",
+      "translation": "改 STEP 02 写好的 <code>main.kt</code>。删除 <code>println(&quot;Hello, Kotlin!&quot;)</code> 那一行，在同一位置添加变量声明和输出的行。"
+    },
+    {
+      "source": "前のSTEPで書いたファイルを直すときは、このあとも、<strong>直す行に色を付けた枠</strong>で示します。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。",
+      "translation": "改上一个 STEP 写好的文件时，后面也都用<strong>给要改的行加上颜色的框</strong>来表示。<span1>绿色粗体的行</span1>是要添加的行，<span2>红色带删除线的行</span2>是要删除的行。<span3>灰色字的行</span3>是文件中已有的行，不需要输入。把这些行当作标记，用来找到要改的地方。"
+    },
+    {
+      "source": "足す行",
+      "translation": "要添加的行"
+    },
+    {
+      "source": "消す行",
+      "translation": "要删除的行"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "已有的行"
     },
     {
       "source": "② 実行結果",
@@ -1155,36 +1175,12 @@
       "translation": "在后面加上 <code>f</code> 就是这个类型。"
     },
     {
-      "source": "① 追加する場所を見つける",
-      "translation": "① 找到要添加的位置"
+      "source": "① 値の行と表示の行に、2行ずつ足す",
+      "translation": "① 在值的部分和输出的部分各添加2行"
     },
     {
-      "source": "場所の目印 · この枠は入力しません",
-      "translation": "位置标记 · 这个框不需要输入"
-    },
-    {
-      "source": "② 値の行に2行追加する",
-      "translation": "② 在值的部分添加2行"
-    },
-    {
-      "source": "追加① · val number1 = 1 の下",
-      "translation": "添加① · val number1 = 1 的下方"
-    },
-    {
-      "source": "③ 表示の行に2行追加する",
-      "translation": "③ 在输出的部分添加2行"
-    },
-    {
-      "source": "追加② · println(number1) の下",
-      "translation": "添加② · println(number1) 的下方"
-    },
-    {
-      "source": "貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。",
-      "translation": "粘贴后，IntelliJ IDEA 会自动对齐行首的缩进。只要与其他行的开头对齐就可以。"
-    },
-    {
-      "source": "④ 実行結果",
-      "translation": "④ 运行结果"
+      "source": "STEP 03 で書いた <code>main.kt</code> に、緑の行を足します。足す場所は2か所で、<code>val number1 = 1</code> の下と、<code>println(number1)</code> の下です。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "在 STEP 03 写好的 <code>main.kt</code> 中添加绿色的行。要添加的地方有2处：<code>val number1 = 1</code> 的下方和 <code>println(number1)</code> 的下方。灰色字的行是已有的行，所以不需要输入。"
     },
     {
       "source": "Runの結果 · この4行が出れば成功",
@@ -1195,8 +1191,8 @@
       "translation": "写的是 <code>3.0f</code>，输出的却是 <code>3.0</code>。<code>f</code> 是决定字面量类型的标记，并不包含在值本身中。与在 Java 中写 <code>System.out.println(3.0f)</code> 的结果相同。"
     },
     {
-      "source": "⑤ Java / Swift ではどう書くか（型）",
-      "translation": "⑤ 在 Java / Swift 中怎么写（类型）"
+      "source": "③ Java / Swift ではどう書くか（型）",
+      "translation": "③ 在 Java / Swift 中怎么写（类型）"
     },
     {
       "source": "<strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。",
@@ -1219,8 +1215,8 @@
       "translation": "Swift 没有 <code>3.0f</code> 这种写法。在 Swift 中想要 <code>Float</code> 时，要像 <code>let number3: Float = 3.0</code> 这样用类型注解指定。在这一点上 Kotlin 与 Java 相同，可以使用后缀 <code>f</code>。"
     },
     {
-      "source": "⑥ Java / Swift ではどう書くか（出力）",
-      "translation": "⑥ 在 Java / Swift 中怎么写（输出）"
+      "source": "④ Java / Swift ではどう書くか（出力）",
+      "translation": "④ 在 Java / Swift 中怎么写（输出）"
     },
     {
       "source": "<code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。",
@@ -1683,12 +1679,16 @@
       "translation": "只差类型末尾有没有加一个 <code>?</code>，就成了不同的类型。"
     },
     {
-      "source": "① ファイル全体を、次の内容にする",
-      "translation": "① 把整个文件改成下面的内容"
+      "source": "① main.kt の中身を、次の全文にする",
+      "translation": "① 把 main.kt 的内容改成下面的全文"
     },
     {
-      "source": "src/ex02/main.kt · 全体を置き換える",
-      "translation": "src/ex02/main.kt · 替换整个文件"
+      "source": "<code>main.kt</code> は、前のSTEPで作った新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "<code>main.kt</code> 是上一个 STEP 创建的新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。"
+    },
+    {
+      "source": "src/ex02/main.kt · 全文",
+      "translation": "src/ex02/main.kt · 全文"
     },
     {
       "source": "ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。",
@@ -1827,8 +1827,12 @@
       "translation": "<strong><code>?.</code> 的意思是“如果是 <code>null</code> 就不调用，直接返回 <code>null</code>”。</strong>调用还是不调用的分支，装进了一个符号里。"
     },
     {
-      "source": "② ファイル全体を、次の内容にする",
-      "translation": "② 把整个文件改成下面的内容"
+      "source": "② name2 を使う3行を足す",
+      "translation": "② 添加使用 name2 的3行"
+    },
+    {
+      "source": "STEP 09 で書いた <code>main.kt</code> に、緑の3行を足します。足す場所は、<code>var name2: String? = null</code> の下です。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "在 STEP 09 写好的 <code>main.kt</code> 中添加绿色的3行。要添加的地方是 <code>var name2: String? = null</code> 的下方。灰色字的行是已有的行，所以不需要输入。"
     },
     {
       "source": "③ 実行結果",
@@ -2247,8 +2251,8 @@
       "translation": "要更改的文件：src/ex03/main.kt"
     },
     {
-      "source": "src/ex03/main.kt · 全体を置き換える",
-      "translation": "src/ex03/main.kt · 替换整个文件"
+      "source": "src/ex03/main.kt · 全文",
+      "translation": "src/ex03/main.kt · 全文"
     },
     {
       "source": "<code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。",
@@ -2369,6 +2373,14 @@
     {
       "source": "戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。",
       "translation": "写一个没有返回值的函数。在 Kotlin 中，末尾<strong>什么都不写</strong>。输出第2行的 <code>3</code>，完成输出。"
+    },
+    {
+      "source": "① sum2 の呼び出しと宣言を足す",
+      "translation": "① 添加 sum2 的调用和声明"
+    },
+    {
+      "source": "STEP 15 で書いた <code>main.kt</code> に、緑の行を足します。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "在 STEP 15 写好的 <code>main.kt</code> 中添加绿色的行。灰色字的行是已有的行，所以不需要输入。"
     },
     {
       "source": "足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。",
@@ -2731,16 +2743,16 @@
       "translation": "右键点击新建的 <code>ex05</code>，选择<strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）。名称填 <code>main</code>，类型选<strong>ファイル</strong>（文件）。"
     },
     {
-      "source": "<code>src/ex05/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex05</code> が2行にならないようにします。",
-      "translation": "打开 <code>src/ex05/main.kt</code>，把内容改成下面的完成代码。注意开头的 <code>package ex05</code> 不要出现2行。"
+      "source": "<code>src/ex05/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "打开 <code>src/ex05/main.kt</code>。这是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。"
     },
     {
       "source": "このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。",
       "translation": "从这个文件中 <code>fun main()</code> 左侧的 ▷ 运行。不要和之前练习的运行按钮弄混。"
     },
     {
-      "source": "src/ex05/main.kt · ファイル全体",
-      "translation": "src/ex05/main.kt · 整个文件"
+      "source": "src/ex05/main.kt · 全文",
+      "translation": "src/ex05/main.kt · 全文"
     },
     {
       "source": "② 実行結果を見る",
@@ -2807,12 +2819,12 @@
       "translation": "右键点击新建的 <code>ex06</code>，选择<strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）。名称填 <code>main</code>，类型选<strong>ファイル</strong>（文件）。"
     },
     {
-      "source": "<code>src/ex06/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex06</code> が2行にならないようにします。",
-      "translation": "打开 <code>src/ex06/main.kt</code>，把内容改成下面的完成代码。注意开头的 <code>package ex06</code> 不要出现2行。"
+      "source": "<code>src/ex06/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "打开 <code>src/ex06/main.kt</code>。这是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。"
     },
     {
-      "source": "src/ex06/main.kt · ファイル全体",
-      "translation": "src/ex06/main.kt · 整个文件"
+      "source": "src/ex06/main.kt · 全文",
+      "translation": "src/ex06/main.kt · 全文"
     },
     {
       "source": "<code>listOf</code> に並べた文字列が、同じ順で1行ずつ出ます。<code>persons</code> は文字列のリスト <code>List&lt;String&gt;</code>、その中から取り出す <code>person</code> は <code>String</code> です。",
@@ -2875,12 +2887,12 @@
       "translation": "右键点击新建的 <code>ex04</code>，选择<strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）。名称填 <code>main</code>，类型选<strong>ファイル</strong>（文件）。"
     },
     {
-      "source": "<code>src/ex04/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex04</code> が2行にならないようにします。",
-      "translation": "打开 <code>src/ex04/main.kt</code>，把内容改成下面的完成代码。注意开头的 <code>package ex04</code> 不要出现2行。"
+      "source": "<code>src/ex04/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "打开 <code>src/ex04/main.kt</code>。这是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。"
     },
     {
-      "source": "src/ex04/main.kt · ファイル全体",
-      "translation": "src/ex04/main.kt · 整个文件"
+      "source": "src/ex04/main.kt · 全文",
+      "translation": "src/ex04/main.kt · 全文"
     },
     {
       "source": "<code>Person(\"Yamada\", 20)</code> で渡した値を、<code>yamada.name</code> と <code>yamada.age</code> で読みます。<code>name</code> と <code>age</code> は <strong>プロパティ</strong>です。Javaのフィールドとgetterをまとめた宣言、Swiftの保存用プロパティに対応します。",
@@ -3107,8 +3119,8 @@
       "translation": "右键点击 <code>ex08</code>，选择 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件）。名称填 <code>Foo</code>，类型选 <strong>ファイル</strong>（文件）。以大写的 <code>F</code> 开头。"
     },
     {
-      "source": "できた <code>Foo.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
-      "translation": "把新建的 <code>Foo.kt</code> 整个文件改成下面的内容，从 <code>fun main()</code> 左侧的运行按钮点击 Run。"
+      "source": "できた <code>Foo.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "生成的 <code>Foo.kt</code> 是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。写好后，从 <code>fun main()</code> 左侧的运行按钮点击 Run。"
     },
     {
       "source": "Runツールウィンドウに <code>ex08</code> が1行出ます。別の出力が出たときは、上のツールバーではなく、いま開いた <code>Foo.kt</code> の <code>fun main()</code> の左から実行し直します。",
@@ -3139,12 +3151,16 @@
       "translation": "通过控制台的6行输出，确认给 <code>foo.counter</code> 赋值时和读取它时会执行不同的处理。这种写法对应 Java 的 getter / setter、Swift 的 computed property。"
     },
     {
-      "source": "① Foo.kt 全体を次の内容にする",
-      "translation": "① 把 Foo.kt 整个文件改成下面的内容"
+      "source": "① Foo.kt に、クラスと main の中身を書く",
+      "translation": "① 在 Foo.kt 中编写类和 main 的内容"
     },
     {
-      "source": "<code>src/ex08/Foo.kt</code> を開き、先ほどの <code>println(\"ex08\")</code> を含めて、ファイル全体を置き換えます。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
-      "translation": "打开 <code>src/ex08/Foo.kt</code>，把包括刚才的 <code>println(\"ex08\")</code> 在内的整个文件替换掉。<code>class Foo</code> 和 <code>fun main()</code> 都直接放在文件的顶层。"
+      "source": "<code>src/ex08/Foo.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println(\"ex08\")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
+      "translation": "打开 <code>src/ex08/Foo.kt</code>，按下面框里的内容来改。刚才的 <code>println(\"ex08\")</code> 是用来确认能运行的临时行，所以把它删除。添加绿色的行，删除红色的行。灰色字的行是已有的行，所以不需要输入。<code>class Foo</code> 和 <code>fun main()</code> 都直接放在文件的顶层。"
+    },
+    {
+      "source": "照合用：ここまでの <code>Foo.kt</code> の全文",
+      "translation": "核对用：到目前为止的 <code>Foo.kt</code> 的全文"
     },
     {
       "source": "src/ex08/Foo.kt · 完成コード",
@@ -3227,8 +3243,8 @@
       "translation": "右键点击 <code>ex09</code>，通过 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件），名称填 <code>main</code>，类型选 <strong>ファイル</strong>（文件）。"
     },
     {
-      "source": "<code>main.kt</code> 全体を次の内容にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
-      "translation": "把 <code>main.kt</code> 整个文件改成下面的内容。末尾的 <code>Person</code> 和 <code>Person2</code> 在 <code>main</code> 右花括号的<strong>外面</strong>。"
+      "source": "<code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
+      "translation": "<code>main.kt</code> 是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。末尾的 <code>Person</code> 和 <code>Person2</code> 在 <code>main</code> 右花括号的<strong>外面</strong>。"
     },
     {
       "source": "このファイルの <code>fun main()</code> の左からRunします。",
@@ -3387,8 +3403,8 @@
       "translation": "右键点击 <code>ex07</code>，通过 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件），名称填 <code>main</code>，类型选 <strong>ファイル</strong>（文件）。"
     },
     {
-      "source": "ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。",
-      "translation": "把整个文件改成下面的内容，从这个 <code>fun main()</code> 的左侧点击 Run。"
+      "source": "新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。",
+      "translation": "这是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。写好后，从这个 <code>fun main()</code> 的左侧点击 Run。"
     },
     {
       "source": "src/ex07/main.kt · 完成コード",
@@ -3611,8 +3627,8 @@
       "translation": "右键点击 <code>ex10</code>，通过 <strong>新規 → Kotlin ファイル/クラス</strong>（新建 → Kotlin 类/文件），名称填 <code>main</code>，类型选 <strong>ファイル</strong>（文件）。"
     },
     {
-      "source": "<code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
-      "translation": "把 <code>main.kt</code> 整个文件改成下面的内容，从 <code>fun main()</code> 左侧的运行按钮点击 Run。"
+      "source": "<code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "<code>main.kt</code> 是新文件，所以把内容改成下面的全文。IntelliJ IDEA 自动加入的行不要删除，直接使用，再补上缺少的行。注意同一行不要出现2次。写好后，从 <code>fun main()</code> 左侧的运行按钮点击 Run。"
     },
     {
       "source": "Runツールウィンドウに <code>ex10</code> が1行出ます。別の出力が出たときは、いま開いた <code>ex10/main.kt</code> の <code>fun main()</code> の左から実行し直します。",
@@ -3643,12 +3659,16 @@
       "translation": "从同一个名字列表，创建一个加上了 <code>San</code> 的字符串列表和一个 <code>Person</code> 列表。这种写法对应 Java Stream API 的 <code>map</code>、Swift 数组的 <code>map</code>。"
     },
     {
-      "source": "① main.kt 全体を次の内容にする（10分）",
-      "translation": "① 把 main.kt 整个文件改成下面的内容（10分钟）"
+      "source": "① main.kt に、2つの map を書く（10分）",
+      "translation": "① 在 main.kt 中编写2个 map（10分钟）"
     },
     {
-      "source": "<code>src/ex10/main.kt</code> を開き、先ほどの <code>println(\"ex10\")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
-      "translation": "打开 <code>src/ex10/main.kt</code>，把包括刚才的 <code>println(\"ex10\")</code> 在内的整个文件替换掉。最后的 <code>data class Person(...)</code> 在 <code>main</code> 右花括号的外面。"
+      "source": "<code>src/ex10/main.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println(\"ex10\")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
+      "translation": "打开 <code>src/ex10/main.kt</code>，按下面框里的内容来改。刚才的 <code>println(\"ex10\")</code> 是用来确认能运行的临时行，所以把它删除。添加绿色的行，删除红色的行。灰色字的行是已有的行，所以不需要输入。最后的 <code>data class Person(...)</code> 在 <code>main</code> 右花括号的外面。"
+    },
+    {
+      "source": "照合用：ここまでの <code>main.kt</code> の全文",
+      "translation": "核对用：到目前为止的 <code>main.kt</code> 的全文"
     },
     {
       "source": "src/ex10/main.kt · 完成コード",
@@ -3855,8 +3875,8 @@
       "translation": "⑤ 在第一次读取的前后修改 counter（8分钟）"
     },
     {
-      "source": "<code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。",
-      "translation": "保持 <code>class Foo</code> 不变，只把 <code>main</code> 替换成下面的形式。"
+      "source": "<code>class Foo</code> はそのままにして、<code>main</code> に緑の2行を一時的に足します。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "保持 <code>class Foo</code> 不变，在 <code>main</code> 中临时添加绿色的2行。灰色字的行是已有的行，所以不需要输入。"
     },
     {
       "source": "Runすると、次の3行が出ます。",
