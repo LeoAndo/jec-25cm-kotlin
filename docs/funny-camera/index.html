@@ -211,7 +211,7 @@ dependencies {
 &lt;/manifest&gt;</code></pre>
 </details>
 <p><code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。</p>
-<p>このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。</p>
+<p>このSTEPでは、まだRunしません。権限のダイアログを動かすのはSTEP 06です。</p>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>requestCameraPermission.launch(Manifest.permission.CAMERA)</code></pre>
 </div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>requestCameraPermission.launch(Manifest.permission.CAMERA);</code></pre>
 </div></div>
@@ -565,7 +565,7 @@ class MainActivity : AppCompatActivity() {
 <div class="note"><p class="box-title">POINT</p><p>Javaのgetter／setterをKotlinではプロパティの形で呼べます。cameraProviderFuture.get()は準備完了のリスナ内にあり、ここでPreviewを画面へ接続します。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-06"><span>仮想の部屋と金魚が表示され、金魚を四辺へ動かすと画面の内側で止まる。ボタンから途中段階の案内が出る。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-7"><p class="step-meta">STEP 07 · 14コマ目 · 目安 3分</p><h2>14コマ目の最後の3分</h2>
-<p>ファイルを保存し、金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。</p>
+<p>金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。</p>
 <p>途中で止まった人は、最後に画面が一致したSTEPを教科書のチェック欄で残します。14コマ目末の全文はSTEP 06です。</p>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val newX = 120f
 val x = newX.coerceIn(0f, 100f)</code></pre>
@@ -942,7 +942,7 @@ class MainActivity : AppCompatActivity() {
 </details>
 <table><thead><tr><th>保存の順序</th><th>このコードの意味</th></tr></thead><tbody><tr><td>ContentValues</td><td>名前・image/jpeg・Pictures/FunnyCamera・IS_PENDING=1を指定する。</td></tr><tr><td>insert</td><td>MediaStoreに保存先を作る。戻り値のuriがnullならfalse。</td></tr><tr><td>openOutputStream → use</td><td>出力先を開いてJPEGを書き、useの終了時に閉じる。</td></tr><tr><td>compress(..., 95, it)</td><td>JPEG品質95で書き込む。圧縮に成功したかをisWrittenへ保存する。</td></tr><tr><td>失敗ならdelete</td><td>出力先を作ったが書き込めなければ、その作りかけを削除してfalse。</td></tr><tr><td>IS_PENDING=0</td><td>書き込み済みの画像を他のアプリからも見える状態にする。</td></tr></tbody></table>
 <p>保存は <code>lifecycleScope.launch</code> から始め、圧縮・書き込みを <code>withContext(Dispatchers.IO)</code> の中へ置きます。そこを抜けるとメインスレッドへ戻り、trueなら「保存しました」、falseなら「保存に失敗しました」を表示します。Activityが破棄されるとlifecycleScopeのコルーチンはキャンセルされます。</p>
-<p>このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。</p>
+<p>このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。Runすると、金魚が動く画面に戻ります。</p>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>outputStream.use {
     isWritten = bitmap.compress(Bitmap.CompressFormat.JPEG, 95, it)
 }</code></pre>
@@ -966,7 +966,7 @@ class MainActivity : AppCompatActivity() {
 <div class="note"><p class="box-title">POINT</p><p>同じjava.time APIでファイル名を作ります。yyyy-MM-dd-HH-mm-ss-SSSは年・月・日・時・分・秒・ミリ秒。MediaStoreがJPEGの拡張子を付けます。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-11"><span>Pictures/FunnyCameraに日時の異なるJPEGがあり、金魚が写ってボタンとSnackbarは写っていない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-12"><p class="step-meta">STEP 12 · 15コマ目 · 目安 10分</p><h2>権限を許可しない場合も確かめる</h2>
-<p>作ったファイルを保存します。エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。</p>
+<p>エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。</p>
 <figure><img src="images/denied.png" alt="カメラを許可せず、権限が必要というSnackbarが出た画面" width="270" height="606" loading="lazy"><figcaption>カメラを許可せず、権限が必要というSnackbarが出た画面（指定AVDで撮影）</figcaption></figure>
 <p>確認後は同じ設定画面で <strong>Allow only while using the app</strong>（アプリの使用中のみ許可）に戻してRunし直します。映像が戻ったら保存を1回確認します。拒否を繰り返すとダイアログが出なくなる場合があるため、設定から戻します。</p>
 <p>準備前のボタンでは <code>previewView.bitmap</code> がnullになり、完成版は保存せずreturnします。この分岐にはSnackbarがなく、Logcatだけに案内が出ます。「保存に失敗しました」はsaveBitmapがfalseを返す別の分岐です。保存失敗のために端末の容量を埋めたり、既存画像を消したりはしません。</p>
@@ -986,7 +986,7 @@ class MainActivity : AppCompatActivity() {
 <div class="note"><p class="box-title">POINT</p><p>JavaのsetXに対応するKotlinのxです。ここではAPIを増やさず、既に使っているサイズ・位置・文字を変えて、画面と保存結果の対応を見ます。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>変えた文字・金魚の大きさ・初期位置のいずれかが画面に反映され、保存画像の違いも確認できる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-14"><p class="step-meta">STEP 14 · 15コマ目 · 目安 3分</p><h2>15コマ目の最後の3分</h2>
-<p>自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。</p>
+<p>カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。</p>
 <p>提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。</p>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val isSaved: Boolean = saveBitmap(screenshot)</code></pre>
 </div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>boolean isSaved = saveBitmap(screenshot);</code></pre>
