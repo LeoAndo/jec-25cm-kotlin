@@ -51,8 +51,8 @@
       "translation": "STEP 04 입력과 Spinner를 Kotlin에 연결하기"
     },
     {
-      "source": "STEP 05 11コマ目の画面を確認して保存する",
-      "translation": "STEP 05 11차시의 화면 확인하고 저장하기"
+      "source": "STEP 05 11コマ目の画面を確認する",
+      "translation": "STEP 05 11차시의 화면 확인하기"
     },
     {
       "source": "STEP 06 12コマ目：入力画面から再開する",
@@ -75,8 +75,8 @@
       "translation": "STEP 10 고정 데이터를 RecyclerView에 전달하기"
     },
     {
-      "source": "STEP 11 12コマ目の2行を確認して保存する",
-      "translation": "STEP 11 12차시의 2개 행 확인하고 저장하기"
+      "source": "STEP 11 12コマ目の2行を確認する",
+      "translation": "STEP 11 12차시의 2개 행 확인하기"
     },
     {
       "source": "STEP 12 13コマ目：2行の画面から再開する",
@@ -243,24 +243,32 @@
       "translation": "통신과 목록에 사용할 설정 준비하기"
     },
     {
-      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
-      "translation": "Panda 2에서도 생성 날짜에 따라 라이브러리 버전이 달라집니다. 다음 <strong>3개 설정 파일의 내용 전체를 바꾼 뒤</strong> 동기화합니다. <code>build.gradle.kts</code>는 2곳에 있으므로 경로를 확인합니다. 다른 버전에서 생성한 구성에 AGP 번호만 낮추어 적용하지 않습니다."
+      "source": "通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。",
+      "translation": "통신과 목록에 사용할 라이브러리를 다음 <strong>3개 설정 파일에 추가한 뒤</strong> 동기화합니다. <code>build.gradle.kts</code>는 2곳에 있으므로 경로를 확인합니다."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "이 뒤에 나오는 틀에는 파일에서 <strong>고칠 곳만</strong> 싣습니다. <span1>초록색 굵은 글씨 줄</span1>은 추가할 줄, <span2>빨간색 취소선 줄</span2>은 지울 줄입니다. <span3>흐린 글씨 줄</span3>은 이미 파일에 있는 줄입니다. 입력하지 않고, 고칠 곳을 찾는 표시로 삼습니다. <code>⋮</code>는 그 사이의 바꾸지 않는 줄을 생략했다는 표시입니다."
     },
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "첫 번째는 <code>gradle/libs.versions.toml</code>입니다. Ktor는 통신, serialization은 JSON 변환, RecyclerView와 CardView는 목록, lifecycle은 화면과 연결된 통신 시작에 사용합니다."
     },
     {
-      "source": "libs.versions.toml · 全文",
-      "translation": "libs.versions.toml · 전문"
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "<code>[versions]</code>에서는 흐린 글씨 줄의 숫자도 자신의 파일과 비교합니다. Panda 2라도 만든 날짜에 따라 라이브러리 버전이 달라지기 때문입니다. 숫자가 다른 줄은 여기에 있는 숫자로 고쳐 씁니다. Panda 2가 아닌 버전으로 만든 프로젝트에서는 고쳐 쓰기 전에 선생님께 보여 드립니다. <code>agp</code>의 숫자만 낮추면 다른 설정과 맞지 않게 됩니다."
+    },
+    {
+      "source": "足す行",
+      "translation": "추가할 줄"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "이미 있는 줄"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
       "translation": "다음은 프로젝트 최상위 폴더의 <code>build.gradle.kts</code>입니다."
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · 전문"
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
@@ -271,8 +279,28 @@
       "translation": "<strong>Sync Now</strong>, 표시되지 않으면 <strong>File → Sync Project with Gradle Files</strong>를 선택하고 빨간색 오류가 사라질 때까지 기다립니다. AGP 9.1.1은 Kotlin 빌드 기능을 내장하고 있으므로 다른 <code>org.jetbrains.kotlin.android</code>는 추가하지 않습니다. 카탈로그의 <code>kotlin</code>은 여기에서는 serialization 플러그인 버전입니다."
     },
     {
-      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
-      "translation": "이어서 <code>app/src/main/AndroidManifest.xml</code>의 내용 전체를 바꿉니다. <code>INTERNET</code>은 <code>application</code>의 바깥쪽, <code>windowSoftInputMode</code>는 <code>activity</code>의 속성입니다. 통신을 위한 실행 시 권한 다이얼로그는 표시되지 않습니다."
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported=\"true\"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "이어서 <code>app/src/main/AndroidManifest.xml</code>을 고칩니다. <code>INTERNET</code>은 <code>application</code>의 바깥쪽, <code>windowSoftInputMode</code>는 <code>activity</code>의 속성입니다. <code>android:exported=\"true\"</code> 줄은 끝에 있는 <code>&gt;</code>를 다음 줄로 옮기므로, 지울 줄과 추가할 줄 양쪽에 나옵니다. 통신을 위한 실행 시 권한 다이얼로그는 표시되지 않습니다."
+    },
+    {
+      "source": "消す行",
+      "translation": "지울 줄"
+    },
+    {
+      "source": "照合用：直したあとの4つのファイルの全文",
+      "translation": "대조용: 고친 뒤의 4개 파일 전문"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 전문"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · 전문"
+    },
+    {
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · 전문"
     },
     {
       "source": "AndroidManifest.xml · 全文",
@@ -283,8 +311,8 @@
       "translation": "다음 차시에서 사용할 <code>@Serializable</code>은 Swift의 <code>Codable</code>과 마찬가지로 JSON 변환에 사용합니다. 그 변환 처리를 생성할 수 있도록 이번에는 라이브러리뿐만 아니라 플러그인도 설정합니다."
     },
     {
-      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
-      "translation": "3개 설정과 Manifest가 저장되고 Gradle 동기화의 빨간색 오류가 사라져 있습니다."
+      "source": "3つの設定とManifestに足す行が入り、Gradle同期の赤いエラーが消えている。",
+      "translation": "3개 설정과 Manifest에 추가할 줄이 들어가 있고, Gradle 동기화의 빨간색 오류가 사라져 있습니다."
     },
     {
       "source": "STEP 03 · 11コマ目 · 目安 20分",
@@ -307,8 +335,8 @@
       "translation": "실행 설정 <strong>app</strong>과 지정된 AVD에서 <strong>Run ▶</strong>을 누릅니다. 먼저 <code>Hello World!</code>를 확인합니다."
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
-      "translation": "<code>app/src/main/res/layout/activity_main.xml</code>을 열고 오른쪽 위의 <strong>Code</strong>에서 내용 전체를 바꿉니다."
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "<code>app/src/main/res/layout/activity_main.xml</code>을 열고 오른쪽 위의 <strong>Code</strong>로 전환합니다. 생성된 <code>Hello World!</code> 화면은 사용하지 않으므로, 내용을 다음 전문으로 교체합니다."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +367,12 @@
       "translation": "입력과 Spinner를 Kotlin에 연결하기"
     },
     {
-      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
-      "translation": "패키지 안의 <code>MainActivity.kt</code>를 다음 <strong>11차시의 중간 코드</strong>로 전체 내용을 바꿉니다. import도 포함합니다. 나중에 검색으로 연결하기 전에 입력과 선택지를 확인합니다."
+      "source": "パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "패키지 안의 <code>MainActivity.kt</code>를 열고, 초록색 줄을 추가하여 <strong>11차시의 중간 코드</strong>로 만듭니다. import에도 추가할 줄이 있습니다. 흐린 글씨 줄은 프로젝트를 만들었을 때부터 있는 줄입니다. 나중에 검색으로 연결하기 전에 입력과 선택지를 확인합니다."
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "대조용: 여기까지의 <code>MainActivity.kt</code> 전문"
     },
     {
       "source": "04-MainActivity.kt · 全文",
@@ -403,20 +435,20 @@
       "translation": "STEP 05 · 11차시 · 약 3분"
     },
     {
-      "source": "11コマ目の画面を確認して保存する",
-      "translation": "11차시의 화면 확인하고 저장하기"
+      "source": "11コマ目の画面を確認する",
+      "translation": "11차시의 화면 확인하기"
     },
     {
-      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
-      "translation": "마지막 3분입니다. 검색어를 지우고 누르면 안내, <code>kotlin</code>을 입력하고 누르면 「入力: kotlin」(입력: kotlin)이 표시됩니다. 목록은 비어 있는 상태가 정상입니다. <strong>File → Save All</strong>로 저장합니다. 다음 시간에는 이 동일한 프로젝트를 엽니다."
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次はこの同じプロジェクトを開きます。",
+      "translation": "마지막 3분입니다. 검색어를 지우고 누르면 안내, <code>kotlin</code>을 입력하고 누르면 「入力: kotlin」(입력: kotlin)이 표시됩니다. 목록은 비어 있는 상태가 정상입니다. 작성한 내용은 Android Studio가 자동으로 저장하므로 저장 조작은 필요하지 않습니다. 다음 시간에는 이 동일한 프로젝트를 엽니다."
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
       "translation": "둘 다 클릭 시의 처리를 등록하고 있습니다. 지금의 <code>search</code>는 입력 확인만 수행합니다. 통신하는 처리는 13차시에 넣습니다."
     },
     {
-      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
-      "translation": "MainActivity.kt가 저장되고, 입력 확인 Toast가 표시되며, 목록은 비어 있습니다."
+      "source": "入力確認のToastが出て、一覧は空のままである。",
+      "translation": "입력 확인 Toast가 표시되며, 목록은 비어 있습니다."
     },
     {
       "source": "STEP 06 · 12コマ目 · 目安 5分",
@@ -451,8 +483,8 @@
       "translation": "JSON에 대응하는 data class 만들기"
     },
     {
-      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "패키지를 마우스 오른쪽 버튼으로 클릭하고 <strong>New → Kotlin Class/File</strong>을 선택한 후 이름을 <code>GithubSearchResponse</code>, 종류를 <strong>File</strong>로 지정합니다. 생성된 <code>GithubSearchResponse.kt</code>의 내용 전체를 바꿉니다. 다음은 한 파일에 3개 클래스를 작성하는 형태입니다."
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "패키지를 마우스 오른쪽 버튼으로 클릭하고 <strong>New → Kotlin Class/File</strong>을 선택한 후 이름을 <code>GithubSearchResponse</code>, 종류를 <strong>File</strong>로 지정합니다. 생성된 <code>GithubSearchResponse.kt</code>는 새 파일이므로 내용을 다음 전문으로 합니다. 다음은 한 파일에 3개 클래스를 작성하는 형태입니다."
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -503,8 +535,8 @@
       "translation": "목록의 한 행을 XML로 만들기"
     },
     {
-      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
-      "translation": "<code>app/src/main/res/layout</code>을 마우스 오른쪽 버튼으로 클릭하고 <strong>New → Layout Resource File</strong>을 선택합니다. File name을 <code>list_item</code>으로 하여 만듭니다. Root element는 생성 후에 내용 전체를 바꿀 것이므로 기본값 그대로 두어도 괜찮습니다. Code 표시로 전환하고 다음 코드로 내용 전체를 바꿉니다."
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。",
+      "translation": "<code>app/src/main/res/layout</code>을 마우스 오른쪽 버튼으로 클릭하고 <strong>New → Layout Resource File</strong>을 선택합니다. File name을 <code>list_item</code>으로 하여 만듭니다. Root element는 기본값 그대로 두어도 괜찮습니다. 만든 직후의 내용은 사용하지 않으므로, Code 표시로 전환하고 내용을 다음 전문으로 교체합니다."
     },
     {
       "source": "list_item.xml · 全文",
@@ -531,8 +563,8 @@
       "translation": "Adapter로 데이터를 한 행에 연결하기"
     },
     {
-      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "패키지를 마우스 오른쪽 버튼으로 클릭하고 <strong>New → Kotlin Class/File</strong>을 선택합니다. 이름을 <code>RepositoryAdapter</code>, 종류를 <strong>File</strong>로 지정하고 다음 내용으로 전체를 바꿉니다."
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "패키지를 마우스 오른쪽 버튼으로 클릭하고 <strong>New → Kotlin Class/File</strong>을 선택합니다. 이름을 <code>RepositoryAdapter</code>, 종류를 <strong>File</strong>로 지정합니다. 새 파일이므로 내용을 다음 전문으로 합니다."
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -587,8 +619,8 @@
       "translation": "고정 데이터를 RecyclerView에 전달하기"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
-      "translation": "<code>MainActivity.kt</code>의 내용 전체를 다음 12차시의 중간 코드로 바꿉니다. 11차시의 입력 확인을 남겨 두고, <code>repositoryAdapter</code> 생성, RecyclerView와의 연결, 고정 데이터의 <code>submitList</code>를 추가한 형태입니다."
+      "source": "<code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。",
+      "translation": "<code>MainActivity.kt</code>에 초록색 줄을 추가하여 12차시의 중간 코드로 만듭니다. 11차시의 입력 확인을 남겨 두고, <code>repositoryAdapter</code> 생성, RecyclerView와의 연결, 고정 데이터의 <code>submitList</code>를 추가합니다. 추가할 곳은 import·프로퍼티·<code>onCreate</code> 3곳입니다."
     },
     {
       "source": "10-MainActivity.kt · 全文",
@@ -623,20 +655,20 @@
       "translation": "STEP 11 · 12차시 · 약 3분"
     },
     {
-      "source": "12コマ目の2行を確認して保存する",
-      "translation": "12차시의 2개 행 확인하고 저장하기"
+      "source": "12コマ目の2行を確認する",
+      "translation": "12차시의 2개 행 확인하기"
     },
     {
-      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
-      "translation": "마지막 3분입니다. 2개 행의 4개 항목을 고정 데이터와 대조하고, 입력을 바꾸어 검색해도 목록의 2개 행은 바뀌지 않는 것을 확인합니다. <strong>File → Save All</strong>로 저장합니다. 아직 통신 코드는 없습니다. 다음 시간에는 같은 프로젝트에 API를 호출하는 파일을 추가합니다."
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "마지막 3분입니다. 2개 행의 4개 항목을 고정 데이터와 대조하고, 입력을 바꾸어 검색해도 목록의 2개 행은 바뀌지 않는 것을 확인합니다. 아직 통신 코드는 없습니다. 다음 시간에는 같은 프로젝트에 API를 호출하는 파일을 추가합니다."
     },
     {
       "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
       "translation": "Java의 제네릭과 마찬가지로 <code>&lt;GithubRepository&gt;</code>는 요소의 타입입니다. 지금은 고정값이며, 다음에는 통신을 통해 얻은 같은 타입의 목록을 동일한 Adapter에 전달합니다."
     },
     {
-      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
-      "translation": "2개 행이 고정 데이터대로 표시되고, MainActivity.kt·모델·Adapter·2개의 XML이 저장되어 있습니다."
+      "source": "2行が固定データどおりで、ProjectツールウィンドウにMainActivity.kt・モデル・Adapter・2つのXMLが並んでいる。",
+      "translation": "2개 행이 고정 데이터대로 표시되고, Project 도구 창에 MainActivity.kt·모델·Adapter·2개의 XML이 나열되어 있습니다."
     },
     {
       "source": "STEP 12 · 13コマ目 · 目安 5分",
@@ -671,8 +703,8 @@
       "translation": "Ktor로 검색 API를 호출하는 파일 만들기"
     },
     {
-      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
-      "translation": "패키지에서 <strong>New → Kotlin Class/File</strong>을 선택합니다. 이름을 <code>GithubApi</code>, 종류를 <strong>File</strong>로 지정하고 내용 전체를 바꿉니다."
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "패키지에서 <strong>New → Kotlin Class/File</strong>을 선택합니다. 이름을 <code>GithubApi</code>, 종류를 <strong>File</strong>로 지정합니다. 새 파일이므로 내용을 다음 전문으로 합니다."
     },
     {
       "source": "GithubApi.kt · 全文",
@@ -719,8 +751,8 @@
       "translation": "전송 대상은 <code>https://api.github.com/search/repositories</code>입니다. <code>q</code>가 검색어, <code>sort</code>가 정렬 순서, <code>per_page</code>가 한 번에 수신하는 상한입니다. 이 앱은 첫 페이지를 최대 30건만 수신하며, 스크롤해도 다음 페이지를 가져오지는 않습니다. API 키 입력이나 로그인은 없습니다."
     },
     {
-      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
-      "translation": "이 파일을 저장하는 것만으로는 통신이 시작되지 않습니다. 다음 STEP에서 호출하는 쪽 코드를 작성합니다."
+      "source": "このファイルを書いただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "이 파일을 작성한 것만으로는 통신이 시작되지 않습니다. 다음 STEP에서 호출하는 쪽 코드를 작성합니다."
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
@@ -739,8 +771,8 @@
       "translation": "입력·통신·목록 연결하기"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "<code>MainActivity.kt</code>의 내용 전체를 다음 <strong>완성 코드</strong>로 바꿉니다. 고정 데이터의 <code>submitList(listOf(…))</code>를 제거하고, <code>search</code> 안에서 통신을 호출합니다. 생성 시의 인셋 처리, View를 가져오는 코드, Spinner 구성은 남겨 둡니다."
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。",
+      "translation": "<code>MainActivity.kt</code>에서 초록색 줄을 추가하고 빨간색 줄을 지워서 <strong>완성 코드</strong>로 만듭니다. 고정 데이터의 <code>submitList(listOf(…))</code>를 제거하고, <code>search</code> 안에서 통신을 호출합니다. 생성 시의 인셋 처리, View를 가져오는 코드, Spinner 구성은 남겨 둡니다. 고칠 곳은 import·프로퍼티·<code>onCreate</code>·<code>search</code>와 새로 추가할 <code>setLoading</code>까지 5곳입니다."
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -923,8 +955,8 @@
       "translation": "Adapter에서 사용하는 것은 내용의 <code>==</code>입니다. Kotlin의 참조 비교는 <code>===</code>입니다. 화면의 각 행은 API가 반환한 목록으로 만들며 기기 내에서 다시 정렬하지는 않습니다."
     },
     {
-      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
-      "translation": "스타 수 순서로 수치가 내림차순으로 나열되고, 4개의 Kotlin 파일과 2개의 XML이 저장되어 있습니다."
+      "source": "スター数順で数値が降順に並び、Projectツールウィンドウに4つのKotlinファイルと2つのXMLが並んでいる。",
+      "translation": "스타 수 순서로 수치가 내림차순으로 나열되고, Project 도구 창에 4개의 Kotlin 파일과 2개의 XML이 나열되어 있습니다."
     },
     {
       "source": "STEP 17 · 13コマ目 · 目安 12分",
@@ -935,8 +967,8 @@
       "translation": "변형할 수 있는 곳을 하나 시험해 보기"
     },
     {
-      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
-      "translation": "다음 중 하나를 선택하여 저장하고 Run합니다. 텍스트와 여백 변경은 통신 전 화면이나 고정 데이터에서도 확인할 수 있습니다. 통신이 필요한 변경은 선생님의 신호를 기다립니다."
+      "source": "次のうち1つを選んで変更し、Runします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "다음 중 하나를 선택하여 변경하고 Run합니다. 텍스트와 여백 변경은 통신 전 화면이나 고정 데이터에서도 확인할 수 있습니다. 통신이 필요한 변경은 선생님의 신호를 기다립니다."
     },
     {
       "source": "変える場所",
@@ -999,16 +1031,16 @@
       "translation": "충분한 결과가 있는 검색이라도 1회 목록은 최대 10건이 됩니다."
     },
     {
-      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
-      "translation": "실습 후에는 변경 전으로 되돌리고 저장합니다. 제출 시 남겨 둘 변형은 스스로 결정할 수 있습니다. id, JSON의 SerialName, sort의 API용 값은 그대로 둡니다. <code>PER_PAGE</code>는 1–100 범위이지만 이번에는 30과 10으로 시험해 봅니다."
+      "source": "練習後は変更前へ戻します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "실습 후에는 변경 전으로 되돌립니다. 제출 시 남겨 둘 변형은 스스로 결정할 수 있습니다. id, JSON의 SerialName, sort의 API용 값은 그대로 둡니다. <code>PER_PAGE</code>는 1–100 범위이지만 이번에는 30과 10으로 시험해 봅니다."
     },
     {
       "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
       "translation": "Kotlin의 상수는 <code>const val</code>, Java는 <code>static final</code>입니다. 변경하는 값과 목록의 건수가 대응합니다. 검색된 총건수를 10으로 변경하는 설정은 아닙니다."
     },
     {
-      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
-      "translation": "선택한 변경의 효과가 화면에 나타나고, 실습 후에는 원래 값과 표시로 되돌려 저장되어 있습니다."
+      "source": "選んだ変更の効果が画面に現れ、練習後にRunすると元の値と表示へ戻っている。",
+      "translation": "선택한 변경의 효과가 화면에 나타나고, 실습 후에 Run하면 원래 값과 표시로 돌아와 있습니다."
     },
     {
       "source": "STEP 18 · 13コマ目 · 目安 3分",
@@ -1019,16 +1051,16 @@
       "translation": "13차시의 완성 상태 확인하기"
     },
     {
-      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
-      "translation": "마지막 3분입니다. 검색하여 표시된 행의 4개 항목, 사라진 통신 중 표시, 누를 수 있는 검색 버튼을 확인합니다. <strong>File → Save All</strong>로 저장합니다. 다음 시간에 열 자신의 저장 위치와 4개의 Kotlin 파일이 Project 도구 창에 보이는지 확인합니다."
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "마지막 3분입니다. 검색하여 표시된 행의 4개 항목, 사라진 통신 중 표시, 누를 수 있는 검색 버튼을 확인합니다. 다음 시간에 열 자신의 저장 위치와 4개의 Kotlin 파일이 Project 도구 창에 보이는지 확인합니다."
     },
     {
       "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
       "translation": "12차시와 동일한 Adapter에 이번에는 통신 결과 목록을 전달하고 있습니다. 데이터를 가져오는 작업과 한 행에 표시하는 작업을 별도 파일로 분리한 형태입니다."
     },
     {
-      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
-      "translation": "검색 결과의 4개 항목이 표시되고, 통신 중 표시가 사라졌으며, 소스 코드와 XML이 저장되어 있습니다."
+      "source": "検索結果の4項目が表示され、通信中の印が消え、Projectツールウィンドウに4つのKotlinファイルが見えている。",
+      "translation": "검색 결과의 4개 항목이 표시되고, 통신 중 표시가 사라지고, Project 도구 창에 4개의 Kotlin 파일이 보입니다."
     },
     {
       "source": "見えている状態",

@@ -223,8 +223,12 @@
       "translation": "統一課堂上使用的函式庫版本"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "即使同樣是 Panda 2，函式庫的版本也會隨建立日期而不同。請把左側 Project 工具視窗的檢視切換成 <strong>Project</strong>，開啟 <code>gradle → libs.versions.toml</code>，把整個內容替換成下面的內容。這不是 Kotlin 的程式碼，而是指定要使用的元件和版本的設定。"
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "即使同樣是 Panda 2，函式庫的版本也會隨建立日期而不同。請把左側 Project 工具視窗的檢視切換成 <strong>Project</strong>，開啟 <code>gradle → libs.versions.toml</code>，把開頭 <code>[versions]</code> 的數字和下面的內容對照。只把數字不同的行改寫成下面的數字。<code>[libraries]</code> 以下的部分不要更改。這不是 Kotlin 的程式碼，而是指定要使用的元件和版本的設定。"
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "對照用：<code>libs.versions.toml</code> 的全文"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -267,8 +271,8 @@
       "translation": "請在上方選擇執行組態 <strong>app</strong> 和指定的 AVD，按一下 <strong>Run ▶</strong>。先確認出現 <code>Hello World!</code>。"
     },
     {
-      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替え、全文を次で置き換えます。",
-      "translation": "請把左側的 Project 工具視窗切換成 <strong>Project</strong> 檢視，開啟 <code>app/src/main/res/layout/activity_main.xml</code>。切換到編輯器右上角的 <strong>Code</strong>，把全文替換成下面的內容。"
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "請把左側的 Project 工具視窗切換成 <strong>Project</strong> 檢視，開啟 <code>app/src/main/res/layout/activity_main.xml</code>。切換到編輯器右上角的 <strong>Code</strong>。自動產生的 <code>Hello World!</code> 畫面不會用到，所以請把內容替換成下面的全文。"
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +343,32 @@
       "translation": "取得 View，準備儲存經過時間的位置"
     },
     {
-      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。",
-      "translation": "請開啟 <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code>，把全文替換成下面的內容。目前先做到把畫面和 Kotlin 連結起來為止。"
+      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、次の枠のとおりに直します。まずは画面とKotlinをつなぐところまでです。",
+      "translation": "請開啟 <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code>，依照下面的框框修改。目前先做到把畫面和 Kotlin 連結起來為止。"
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "在這之後的框框裡，檔案的內容<strong>只列出要修改的地方</strong>。<span1>綠色粗體的行</span1>是要加入的行，<span2>紅色加上刪除線的行</span2>是要刪除的行。<span3>字較淡的行</span3>是檔案中已有的行，不要輸入。請把這些行當作標記，用來找出要修改的地方。<code>⋮</code> 是表示中間不更改的行已省略的記號。"
+    },
+    {
+      "source": "<code>enableEdgeToEdge()</code> の行は、頭に <code>this.</code> を付けた形に直します。Javaの <code>this.メソッド()</code> と同じ書き方で、付けなくても動きは変わりません。",
+      "translation": "<code>enableEdgeToEdge()</code> 那一行，請改成在開頭加上 <code>this.</code> 的形式。這和 Java 的 <code>this.メソッド()</code>（メソッド 是「方法」的意思）是同樣的寫法，不加的話動作也不會改變。"
+    },
+    {
+      "source": "足す行",
+      "translation": "要加入的行"
+    },
+    {
+      "source": "消す行",
+      "translation": "要刪除的行"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "已有的行"
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "對照用：<code>MainActivity.kt</code> 到這裡為止的全文"
     },
     {
       "source": "MainActivity.kt · STEP 03終了時の全文",
@@ -479,8 +507,8 @@
       "translation": "最後的3分鐘。請依序按 START→STOP→START→STOP→RESET。也要確認自己專案的儲存位置是 <code>Documents/Kotlin/A02CalcGame</code>。"
     },
     {
-      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。次回は同じプロジェクトを開きます。",
-      "translation": "這裡只有時間會動。題目欄是空白的、數字按鈕還沒有處理，這就是這個階段的完成狀態。下次要開啟同一個專案。"
+      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次回は同じプロジェクトを開きます。",
+      "translation": "這裡只有時間會動。題目欄是空白的、數字按鈕還沒有處理，這就是這個階段的完成狀態。寫好的內容 Android Studio 會自動儲存，所以不需要手動執行儲存的操作。下次要開啟同一個專案。"
     },
     {
       "source": "<code>elapsedTimeMillis</code> をクラスのプロパティに置いたので、STOPとSTARTの両方から同じ値を使えます。",
@@ -579,12 +607,8 @@
       "translation": "把 START、STOP、RESET 和題目的狀態連結起來"
     },
     {
-      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナを、まとめて次に置き換えます</strong>。View取得の行は残します。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
-      "translation": "請把 <code>onCreate</code> 內 START、STOP、RESET 的<strong>3個監聽器，一起替換成下面的內容</strong>。取得 View 的那幾行要保留。START 只在第1次出題，STOP 停止作答，RESET 也會把題號和答對題數歸零。"
-    },
-    {
-      "source": "MainActivity.kt · 3つのリスナを置き換える",
-      "translation": "MainActivity.kt · 替換3個監聽器"
+      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナに、緑の行を足します</strong>。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
+      "translation": "請在 <code>onCreate</code> 內 START、STOP、RESET 的<strong>3個監聽器中，加入綠色的行</strong>。START 只在第1次出題，STOP 停止作答，RESET 也會把題號和答對題數歸零。"
     },
     {
       "source": "Run→STARTで「1問目: 10 - 数字 =」が出ます。数字は毎回変わるので、画像と同じになる必要はありません。",
@@ -671,12 +695,8 @@
       "translation": "計分，並在10題結束時顯示時間和結果"
     },
     {
-      "source": "<code>import</code> 一覧へ <code>import java.util.concurrent.TimeUnit</code> を追加します。前のSTEPで足した <code>val numberButtonIds</code> から <code>for</code> を閉じる <code>}</code> までを、次に置き換えます。押した数字だけを出す仮のSnackbarはなくなります。",
-      "translation": "請在 <code>import</code> 清單中加入 <code>import java.util.concurrent.TimeUnit</code>。把上一個 STEP 加入的 <code>val numberButtonIds</code> 到結束 <code>for</code> 的 <code>}</code> 為止，替換成下面的內容。只顯示按下數字的暫時性 Snackbar 會被移除。"
-    },
-    {
-      "source": "MainActivity.kt · 数字ボタンの処理全体を置き換える",
-      "translation": "MainActivity.kt · 替換數字按鈕的整段處理"
+      "source": "前のSTEPで足した数字ボタンの処理を、<strong>採点する形に直します</strong>。緑の行を足し、赤い行を消します。<code>import</code> にも1行足します。押した数字だけを出す仮のSnackbarはなくなります。",
+      "translation": "請把上一個 STEP 加入的數字按鈕的處理，<strong>改成會計分的形式</strong>。加入綠色的行，刪除紅色的行。<code>import</code> 也要加入1行。只顯示所按數字的那個臨時 Snackbar 就不會再出現了。"
     },
     {
       "source": "Run→STARTで10問答えます。1問だけ、計算結果と違う数字を押し、残り9問は正しい数字を押してください。最後は「9問正解しました！時間は○秒です」となり、時間が止まります。10問目の正誤も数えた後で終了する順です。",
@@ -875,8 +895,8 @@
       "translation": "RESET 後變成 <code>00:00</code> 和空白的題目欄，可以再從第1題開始。"
     },
     {
-      "source": "自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
-      "translation": "請儲存自己專案的 <code>MainActivity.kt</code> 和 <code>activity_main.xml</code>。要繼續自訂時，請從 STEP 13 的表格確認要更改的位置和效果，再進行。"
+      "source": "アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
+      "translation": "要繼續自訂時，請先從 STEP 13 的表中確認要更改的位置和效果，再進行。"
     },
     {
       "source": "<code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。",
@@ -891,8 +911,8 @@
       "translation": "保留自己製作的專案，一邊確認其中的修改位置一邊進行自訂拓展。"
     },
     {
-      "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
-      "translation": "停止、繼續、10題的結果、重置都能運作，自己的 MainActivity.kt 和 XML 已儲存。"
+      "source": "自分のアプリで、停止・再開・10問の結果・リセットが動いている。",
+      "translation": "在自己的應用程式中，停止、繼續、10題的結果、重置都能運作。"
     },
     {
       "source": "見えている状態",
@@ -963,8 +983,8 @@
       "translation": "按數字時還是出現數字的 Snackbar"
     },
     {
-      "source": "STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。",
-      "translation": "這是 STEP 10 的中途狀態。請在 STEP 11 替換數字按鈕的整段處理。"
+      "source": "STEP 10の途中状態です。STEP 11で、仮のSnackbarを採点の処理に直します。",
+      "translation": "這是 STEP 10 的中途狀態。請在 STEP 11 把臨時的 Snackbar 改成計分的處理。"
     },
     {
       "source": "かっこが合わない",

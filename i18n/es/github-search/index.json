@@ -51,8 +51,8 @@
       "translation": "STEP 04 Conectar la entrada y el Spinner en Kotlin"
     },
     {
-      "source": "STEP 05 11コマ目の画面を確認して保存する",
-      "translation": "STEP 05 Verificar y guardar la pantalla de la clase 11"
+      "source": "STEP 05 11コマ目の画面を確認する",
+      "translation": "STEP 05 Verificar la pantalla de la clase 11"
     },
     {
       "source": "STEP 06 12コマ目：入力画面から再開する",
@@ -75,8 +75,8 @@
       "translation": "STEP 10 Pasar datos fijos al RecyclerView"
     },
     {
-      "source": "STEP 11 12コマ目の2行を確認して保存する",
-      "translation": "STEP 11 Verificar y guardar las 2 filas de la clase 12"
+      "source": "STEP 11 12コマ目の2行を確認する",
+      "translation": "STEP 11 Verificar las 2 filas de la clase 12"
     },
     {
       "source": "STEP 12 13コマ目：2行の画面から再開する",
@@ -243,24 +243,32 @@
       "translation": "Preparar la configuración para la comunicación y la lista"
     },
     {
-      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
-      "translation": "Incluso en Panda 2, las versiones de las bibliotecas pueden variar según la fecha de creación. <strong>Reemplaza el contenido completo de los siguientes 3 archivos de configuración antes de sincronizar</strong>. Hay dos archivos <code>build.gradle.kts</code>, así que verifica las rutas. No tomes una configuración generada con otra versión y le bajes únicamente el número de AGP."
+      "source": "通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。",
+      "translation": "Agrega las bibliotecas que se usan para la comunicación y la lista <strong>a los siguientes 3 archivos de configuración antes de sincronizar</strong>. Hay dos archivos <code>build.gradle.kts</code>, así que verifica las rutas."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "A partir de aquí, los recuadros muestran <strong>solo los lugares del archivo que hay que modificar</strong>. Las <span1>líneas verdes en negrita</span1> son las líneas a agregar, y las <span2>líneas rojas tachadas</span2> son las líneas a borrar. Las <span3>líneas en gris</span3> son líneas que ya están en el archivo; no las escribas. Úsalas como referencia para encontrar el lugar que hay que modificar. <code>⋮</code> es la marca que indica que se omitieron las líneas intermedias que no cambian."
     },
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "El primero es <code>gradle/libs.versions.toml</code>. Ktor se usa para la comunicación, serialization para la conversión de JSON, RecyclerView y CardView para la lista, y lifecycle para iniciar la comunicación vinculada a la pantalla."
     },
     {
-      "source": "libs.versions.toml · 全文",
-      "translation": "libs.versions.toml · Archivo completo"
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "En <code>[versions]</code>, compara también los números de las líneas en gris con los de tu archivo. Esto se debe a que, aunque sea Panda 2, las versiones de las bibliotecas cambian según la fecha de creación. En las líneas donde el número sea distinto, cámbialo por el número que aparece aquí. Si creaste el proyecto con una versión que no sea Panda 2, muéstraselo a tu docente antes de cambiar los números. Si bajas solo el número de <code>agp</code>, dejará de coincidir con las demás configuraciones."
+    },
+    {
+      "source": "足す行",
+      "translation": "Líneas a agregar"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "Líneas que ya están"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
       "translation": "El siguiente es <code>build.gradle.kts</code> en la raíz del proyecto."
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · Archivo completo"
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
@@ -271,8 +279,28 @@
       "translation": "Selecciona <strong>Sync Now</strong> (o <strong>File → Sync Project with Gradle Files</strong> si no aparece) y espera hasta que desaparezcan los errores en rojo. AGP 9.1.1 incluye la función de compilación de Kotlin integrada, por lo que no agregamos otro <code>org.jetbrains.kotlin.android</code>. Aquí, <code>kotlin</code> en el catálogo de versiones corresponde a la versión del plugin de serialization."
     },
     {
-      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
-      "translation": "A continuación, reemplaza el contenido completo de <code>app/src/main/AndroidManifest.xml</code>. <code>INTERNET</code> va fuera de <code>application</code>, y <code>windowSoftInputMode</code> es un atributo de <code>activity</code>. No aparecerá ningún diálogo de permisos en tiempo de ejecución para la comunicación."
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported=\"true\"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "A continuación, modifica <code>app/src/main/AndroidManifest.xml</code>. <code>INTERNET</code> va fuera de <code>application</code>, y <code>windowSoftInputMode</code> es un atributo de <code>activity</code>. En la línea <code>android:exported=\"true\"</code>, el <code>&gt;</code> del final pasa a la línea siguiente, así que esa línea aparece tanto entre las líneas a borrar como entre las líneas a agregar. No aparecerá ningún diálogo de permisos en tiempo de ejecución para la comunicación."
+    },
+    {
+      "source": "消す行",
+      "translation": "Líneas a borrar"
+    },
+    {
+      "source": "照合用：直したあとの4つのファイルの全文",
+      "translation": "Para comparar: los 4 archivos completos, ya modificados"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · Archivo completo"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · Archivo completo"
+    },
+    {
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · Archivo completo"
     },
     {
       "source": "AndroidManifest.xml · 全文",
@@ -283,8 +311,8 @@
       "translation": "<code>@Serializable</code>, que usarás en la siguiente clase, se utiliza para la conversión de JSON al igual que <code>Codable</code> en Swift. Para poder generar este proceso de conversión, esta vez configuramos no solo la biblioteca sino también el plugin."
     },
     {
-      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
-      "translation": "Las 3 configuraciones y el Manifest están guardados, y los errores en rojo de la sincronización de Gradle han desaparecido."
+      "source": "3つの設定とManifestに足す行が入り、Gradle同期の赤いエラーが消えている。",
+      "translation": "Las líneas a agregar están en las 3 configuraciones y en el Manifest, y los errores en rojo de la sincronización de Gradle han desaparecido."
     },
     {
       "source": "STEP 03 · 11コマ目 · 目安 20分",
@@ -307,8 +335,8 @@
       "translation": "Presiona <strong>Run ▶</strong> con la configuración de ejecución <strong>app</strong> y el AVD designado. Primero verifica que aparezca <code>Hello World!</code>."
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
-      "translation": "Abre <code>app/src/main/res/layout/activity_main.xml</code>, haz clic en <strong>Code</strong> en la esquina superior derecha y reemplaza todo su contenido."
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "Abre <code>app/src/main/res/layout/activity_main.xml</code> y cambia a <strong>Code</strong> en la esquina superior derecha. Como la pantalla <code>Hello World!</code> generada no se usa, reemplaza el contenido por el siguiente archivo completo."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +367,12 @@
       "translation": "Conectar la entrada y el Spinner en Kotlin"
     },
     {
-      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
-      "translation": "Reemplaza el contenido completo de <code>MainActivity.kt</code> en el paquete con el siguiente <strong>código en progreso de la clase 11</strong>, incluyendo los import. Verifica la entrada y las opciones antes de conectarlo a la búsqueda más adelante."
+      "source": "パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "Abre el <code>MainActivity.kt</code> que está en el paquete y agrega las líneas verdes para que quede como el <strong>código en progreso de la clase 11</strong>. También hay líneas a agregar en los import. Las líneas en gris son las que ya están ahí desde que creaste el proyecto. Verifica la entrada y las opciones antes de conectarlo a la búsqueda más adelante."
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "Para comparar: el archivo <code>MainActivity.kt</code> completo hasta este punto"
     },
     {
       "source": "04-MainActivity.kt · 全文",
@@ -403,20 +435,20 @@
       "translation": "STEP 05 · Clase 11 · Aprox. 3 min"
     },
     {
-      "source": "11コマ目の画面を確認して保存する",
-      "translation": "Verificar y guardar la pantalla de la clase 11"
+      "source": "11コマ目の画面を確認する",
+      "translation": "Verificar la pantalla de la clase 11"
     },
     {
-      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
-      "translation": "Últimos 3 minutos. Al borrar la palabra de búsqueda y presionar el botón aparece un aviso; al ingresar <code>kotlin</code> y presionar el botón aparece 「入力: kotlin」 (Entrada: kotlin). Es normal que la lista permanezca vacía. Guarda con <strong>File → Save All</strong>. La próxima vez abrirás este mismo proyecto."
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次はこの同じプロジェクトを開きます。",
+      "translation": "Últimos 3 minutos. Al borrar la palabra de búsqueda y presionar el botón aparece un aviso; al ingresar <code>kotlin</code> y presionar el botón aparece 「入力: kotlin」 (Entrada: kotlin). Es normal que la lista permanezca vacía. Android Studio guarda automáticamente lo que escribiste, así que no necesitas realizar la acción de guardar. La próxima vez abrirás este mismo proyecto."
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
       "translation": "Ambos registran el procesamiento al hacer clic. Por ahora, <code>search</code> solo realiza la verificación de entrada. El procesamiento de comunicación se agregará en la clase 13."
     },
     {
-      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
-      "translation": "MainActivity.kt está guardado, aparece el Toast de verificación de entrada y la lista permanece vacía."
+      "source": "入力確認のToastが出て、一覧は空のままである。",
+      "translation": "Aparece el Toast de verificación de entrada y la lista permanece vacía."
     },
     {
       "source": "STEP 06 · 12コマ目 · 目安 5分",
@@ -451,8 +483,8 @@
       "translation": "Crear las data class correspondientes al JSON"
     },
     {
-      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "Haz clic derecho en el paquete, selecciona <strong>New → Kotlin Class/File</strong>, ponle el nombre <code>GithubSearchResponse</code> y elige el tipo <strong>File</strong>. Reemplaza el contenido completo del archivo <code>GithubSearchResponse.kt</code> creado. A continuación se muestran 3 clases escritas en un solo archivo."
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "Haz clic derecho en el paquete, selecciona <strong>New → Kotlin Class/File</strong>, ponle el nombre <code>GithubSearchResponse</code> y elige el tipo <strong>File</strong>. Como el <code>GithubSearchResponse.kt</code> que se creó es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. A continuación se muestran 3 clases escritas en un solo archivo."
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -503,8 +535,8 @@
       "translation": "Crear una fila de la lista en XML"
     },
     {
-      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
-      "translation": "Haz clic derecho en <code>app/src/main/res/layout</code> y selecciona <strong>New → Layout Resource File</strong>. Asígnale el File name <code>list_item</code> y créalo. Como después reemplazarás todo su contenido, puedes dejar el Root element con su valor predeterminado. Cambia a la vista Code y reemplaza todo el contenido con lo siguiente."
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。",
+      "translation": "Haz clic derecho en <code>app/src/main/res/layout</code> y selecciona <strong>New → Layout Resource File</strong>. Asígnale el File name <code>list_item</code> y créalo. Puedes dejar el Root element con su valor predeterminado. Como lo que trae el archivo recién creado no se usa, cambia a la vista Code y reemplaza el contenido por el siguiente archivo completo."
     },
     {
       "source": "list_item.xml · 全文",
@@ -531,8 +563,8 @@
       "translation": "Vincular los datos a una fila con el Adapter"
     },
     {
-      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "Haz clic derecho en el paquete y selecciona <strong>New → Kotlin Class/File</strong>. Asigna el nombre <code>RepositoryAdapter</code>, elige el tipo <strong>File</strong> y reemplaza todo el contenido con lo siguiente."
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "Haz clic derecho en el paquete y selecciona <strong>New → Kotlin Class/File</strong>. Asigna el nombre <code>RepositoryAdapter</code> y elige el tipo <strong>File</strong>. Como es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo."
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -587,8 +619,8 @@
       "translation": "Pasar datos fijos al RecyclerView"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
-      "translation": "Reemplaza el contenido completo de <code>MainActivity.kt</code> con el siguiente código en progreso de la clase 12. Este conserva la verificación de entrada de la clase 11 y añade la creación de <code>repositoryAdapter</code>, la conexión con RecyclerView y el <code>submitList</code> de datos fijos."
+      "source": "<code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。",
+      "translation": "Agrega las líneas verdes a <code>MainActivity.kt</code> para que quede como el código en progreso de la clase 12. Conserva la verificación de entrada de la clase 11 y agrega la creación de <code>repositoryAdapter</code>, la conexión con RecyclerView y el <code>submitList</code> de datos fijos. Los lugares donde agregas líneas son 3: los import, las propiedades y <code>onCreate</code>."
     },
     {
       "source": "10-MainActivity.kt · 全文",
@@ -623,20 +655,20 @@
       "translation": "STEP 11 · Clase 12 · Aprox. 3 min"
     },
     {
-      "source": "12コマ目の2行を確認して保存する",
-      "translation": "Verificar y guardar las 2 filas de la clase 12"
+      "source": "12コマ目の2行を確認する",
+      "translation": "Verificar las 2 filas de la clase 12"
     },
     {
-      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
-      "translation": "Últimos 3 minutos. Coteja los 4 campos de las 2 filas con los datos fijos y confirma que al cambiar la entrada y presionar buscar no cambian las 2 filas de la lista. <strong>File → Save All</strong>. Aún no hay código de comunicación. En la siguiente clase agregarás a este mismo proyecto el archivo que llama a la API."
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "Últimos 3 minutos. Coteja los 4 campos de las 2 filas con los datos fijos y confirma que al cambiar la entrada y presionar buscar no cambian las 2 filas de la lista. Aún no hay código de comunicación. En la siguiente clase agregarás a este mismo proyecto el archivo que llama a la API."
     },
     {
       "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
       "translation": "Al igual que con los genéricos en Java, <code>&lt;GithubRepository&gt;</code> es el tipo de los elementos. Ahora son valores fijos; a continuación pasarás al mismo Adapter una lista del mismo tipo obtenida de la comunicación."
     },
     {
-      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
-      "translation": "Las 2 filas coinciden con los datos fijos, y MainActivity.kt, el modelo, el Adapter y los 2 archivos XML están guardados."
+      "source": "2行が固定データどおりで、ProjectツールウィンドウにMainActivity.kt・モデル・Adapter・2つのXMLが並んでいる。",
+      "translation": "Las 2 filas coinciden con los datos fijos, y en la ventana de herramientas Project aparecen MainActivity.kt, el modelo, el Adapter y los 2 archivos XML."
     },
     {
       "source": "STEP 12 · 13コマ目 · 目安 5分",
@@ -671,8 +703,8 @@
       "translation": "Crear el archivo para llamar a la API de búsqueda con Ktor"
     },
     {
-      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
-      "translation": "En el paquete, selecciona <strong>New → Kotlin Class/File</strong>. Asigna el nombre <code>GithubApi</code>, elige el tipo <strong>File</strong> y reemplaza todo su contenido."
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "En el paquete, selecciona <strong>New → Kotlin Class/File</strong>. Asigna el nombre <code>GithubApi</code> y elige el tipo <strong>File</strong>. Como es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo."
     },
     {
       "source": "GithubApi.kt · 全文",
@@ -719,8 +751,8 @@
       "translation": "El destino es <code>https://api.github.com/search/repositories</code>. <code>q</code> es la palabra de búsqueda, <code>sort</code> es el orden de clasificación y <code>per_page</code> es el límite recibido en una sola petición. Esta aplicación recibe únicamente la primera página con un máximo de 30 elementos, y al desplazarse no obtiene la siguiente página. No requiere ingresar clave de API ni iniciar sesión."
     },
     {
-      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
-      "translation": "Guardar este archivo no iniciará la comunicación por sí solo. En el siguiente STEP escribirás el código que lo llama."
+      "source": "このファイルを書いただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "Escribir este archivo no iniciará la comunicación por sí solo. En el siguiente STEP escribirás el código que lo llama."
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
@@ -739,8 +771,8 @@
       "translation": "Conectar la entrada, la comunicación y la lista"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "Reemplaza el contenido completo de <code>MainActivity.kt</code> con el siguiente <strong>código terminado</strong>. Quita el <code>submitList(listOf(…))</code> de datos fijos y llama a la comunicación desde dentro de <code>search</code>. El manejo generado de los insets, la obtención de las View y la configuración del Spinner se conservan."
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。",
+      "translation": "En <code>MainActivity.kt</code>, agrega las líneas verdes y borra las líneas rojas para que quede como el <strong>código terminado</strong>. Quita el <code>submitList(listOf(…))</code> de datos fijos y llama a la comunicación desde dentro de <code>search</code>. El manejo generado de los insets, la obtención de las View y la configuración del Spinner se conservan. Los lugares que hay que modificar son 5: los import, las propiedades, <code>onCreate</code>, <code>search</code> y el nuevo <code>setLoading</code> que agregas."
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -923,8 +955,8 @@
       "translation": "En el Adapter se usa la igualdad de contenido <code>==</code>. La comparación de referencia en Kotlin es <code>===</code>. Cada fila de la pantalla se crea a partir de la lista devuelta por la API; no se vuelve a ordenar dentro del dispositivo."
     },
     {
-      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
-      "translation": "Los valores numéricos están ordenados de forma descendente por número de estrellas, y los 4 archivos de Kotlin y los 2 XML están guardados."
+      "source": "スター数順で数値が降順に並び、Projectツールウィンドウに4つのKotlinファイルと2つのXMLが並んでいる。",
+      "translation": "Los valores numéricos están ordenados de forma descendente por número de estrellas, y en la ventana de herramientas Project aparecen los 4 archivos de Kotlin y los 2 XML."
     },
     {
       "source": "STEP 17 · 13コマ目 · 目安 12分",
@@ -935,8 +967,8 @@
       "translation": "Probar una personalización"
     },
     {
-      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
-      "translation": "Elige una de las siguientes opciones, guarda y haz Run. Los cambios de texto y márgenes se pueden comprobar en la pantalla antes de la comunicación o con los datos fijos. Para cambios que requieran comunicación, espera la señal de tu docente."
+      "source": "次のうち1つを選んで変更し、Runします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "Elige una de las siguientes opciones, aplica el cambio y haz Run. Los cambios de texto y márgenes se pueden comprobar en la pantalla antes de la comunicación o con los datos fijos. Para cambios que requieran comunicación, espera la señal de tu docente."
     },
     {
       "source": "変える場所",
@@ -999,16 +1031,16 @@
       "translation": "Incluso en búsquedas con suficientes resultados, la lista muestra como máximo 10 elementos a la vez"
     },
     {
-      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
-      "translation": "Tras practicar, vuelve a los valores originales y guarda. Puedes decidir qué personalización dejar para la entrega. Mantén los id, el SerialName de JSON y los valores de sort para la API sin cambios. Aunque <code>PER_PAGE</code> puede variar de 1 a 100, en esta ocasión prueba con 30 y 10."
+      "source": "練習後は変更前へ戻します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "Tras practicar, vuelve a los valores originales. Puedes decidir qué personalización dejar para la entrega. Mantén los id, el SerialName de JSON y los valores de sort para la API sin cambios. Aunque <code>PER_PAGE</code> puede variar de 1 a 100, en esta ocasión prueba con 30 y 10."
     },
     {
       "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
       "translation": "Las constantes se declaran con <code>const val</code> en Kotlin y con <code>static final</code> en Java. El valor modificado corresponde al número de elementos de la lista. No es una configuración para cambiar el total de resultados encontrados a 10."
     },
     {
-      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
-      "translation": "El efecto del cambio elegido aparece en pantalla, y tras la práctica se vuelve al valor y visualización originales y se guarda."
+      "source": "選んだ変更の効果が画面に現れ、練習後にRunすると元の値と表示へ戻っている。",
+      "translation": "El efecto del cambio elegido aparece en pantalla y, al hacer Run tras la práctica, el valor y la visualización vuelven a ser los originales."
     },
     {
       "source": "STEP 18 · 13コマ目 · 目安 3分",
@@ -1019,16 +1051,16 @@
       "translation": "Verificar el estado final de la clase 13"
     },
     {
-      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
-      "translation": "Últimos 3 minutos. Verifica los 4 elementos de las filas obtenidas en la búsqueda, la desaparición del indicador de carga y que se pueda presionar el botón de búsqueda. <strong>File → Save All</strong>. Confirma tu ubicación de guardado para la próxima vez y que los 4 archivos de Kotlin sean visibles en la ventana de herramientas Project."
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "Últimos 3 minutos. Verifica los 4 elementos de las filas obtenidas en la búsqueda, la desaparición del indicador de carga y que se pueda presionar el botón de búsqueda. Confirma tu ubicación de guardado para la próxima vez y que los 4 archivos de Kotlin sean visibles en la ventana de herramientas Project."
     },
     {
       "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
       "translation": "Esta vez se le pasa la lista de resultados de la comunicación al mismo Adapter de la clase 12. De este modo, la obtención de datos y la tarea de mostrarlos en una fila quedan separadas en archivos distintos."
     },
     {
-      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
-      "translation": "Se muestran los 4 elementos de los resultados de búsqueda, el indicador de carga desaparece y los archivos fuente y XML están guardados."
+      "source": "検索結果の4項目が表示され、通信中の印が消え、Projectツールウィンドウに4つのKotlinファイルが見えている。",
+      "translation": "Se muestran los 4 elementos de los resultados de la búsqueda, el indicador de carga ha desaparecido y los 4 archivos de Kotlin se ven en la ventana de herramientas Project."
     },
     {
       "source": "見えている状態",

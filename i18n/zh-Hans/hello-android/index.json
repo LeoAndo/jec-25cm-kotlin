@@ -219,8 +219,12 @@
       "translation": "统一课堂上使用的库的版本"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "即使同样是 Panda 2，库的版本也会随创建日期而变化。把左侧的 Project 工具窗口切换为 <strong>Project</strong> 视图，打开 <code>gradle → libs.versions.toml</code>，把全部内容替换为下面的内容。这不是 Kotlin 代码，而是指定所用组件及其版本的设置。"
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "即使同样是 Panda 2，库的版本也会随创建日期而变化。把左侧的 Project 工具窗口切换为 <strong>Project</strong> 视图，打开 <code>gradle → libs.versions.toml</code>，把开头 <code>[versions]</code> 部分的数字与下面的内容对照。只把数字不同的行改写成下面的数字。<code>[libraries]</code> 及以下的部分不要改。这不是 Kotlin 代码，而是指定所用组件及其版本的设置。"
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "核对用：<code>libs.versions.toml</code> 的全文"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -355,8 +359,8 @@
       "translation": "选择编辑器右上角的 <strong>Code</strong>。如果只显示图标，把鼠标悬停在上面找到 Code。"
     },
     {
-      "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
-      "translation": "把全部内容替换为下面的 XML。不要粘贴到 <code>MainActivity.kt</code> 中。"
+      "source": "生成されたXMLは使わないので、内容全体を次のXMLに入れ替えます。<code>MainActivity.kt</code> には貼りません。",
+      "translation": "因为不使用生成的 XML，所以把全部内容替换为下面的 XML。不要粘贴到 <code>MainActivity.kt</code> 中。"
     },
     {
       "source": "activity_main.xml · 全文",

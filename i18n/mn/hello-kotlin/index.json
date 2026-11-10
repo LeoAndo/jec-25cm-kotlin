@@ -579,16 +579,16 @@
       "translation": "Үр дүн хэвлэгдэн гарах газар. Run хийхэд автоматаар нээгдэнэ."
     },
     {
-      "source": "② エディタの中身を置き換えて実行する",
-      "translation": "② Засварлагч доторх кодыг солиод ажиллуулах"
+      "source": "② 見本を消し、3行を入力して実行する",
+      "translation": "② Жишээ кодыг устгаж, 3 мөр бичиж оруулаад ажиллуулах"
     },
     {
-      "source": "エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。",
-      "translation": "Засварлагч дотор дарж, <kbd>⌘ A</kbd> дарж бүгдийг нь сонгоод дараах кодыг хуулж тавина уу."
+      "source": "エディタには、Playgroundの見本が最初から入っています。この見本は使いません。Playgroundの側で中身が変わることがあり、直す場所を示せないためです。エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んで消してから、次の全文を入力します。",
+      "translation": "Засварлагч дотор Playground сайтын жишээ код анхнаасаа орсон байдаг. Энэ жишээ кодыг ашиглахгүй. Учир нь Playground талд жишээ кодын агуулга өөрчлөгдөх тохиолдол байдаг тул засах газрыг зааж өгөх боломжгүй юм. Засварлагч дотор дарж, <kbd>⌘ A</kbd> товчлолоор бүгдийг нь сонгож устгаад, дараах бүтэн кодыг бичиж оруулна уу."
     },
     {
-      "source": "Playgroundのエディタ · 全体を置き換える",
-      "translation": "Playground-ийн засварлагч · Бүхлээр нь солих"
+      "source": "Playgroundのエディタ · 全文",
+      "translation": "Playground-ийн засварлагч · Бүтэн код"
     },
     {
       "source": "<strong>Run</strong> をクリックします。",
@@ -955,12 +955,16 @@
       "translation": "Энэ бүлэг нийт 6 хичээлтэй. Хичээл ахих тусам, ижилхэн <code>K01HelloKotlin</code> төслийн <code>src</code> дотор яг дээрхтэй адил дарааллаар <code>ex02</code>, <code>ex03</code> … багцуудыг нэмж үүсгэнэ. Төслийг шинээр дахин үүсгэхгүй тул, өмнөх хичээлүүд дээр бичсэн кодоо хэзээ ч нээж харах боломжтой."
     },
     {
-      "source": "⑦ ファイル全体を、次の内容にする",
-      "translation": "⑦ Файлыг бүхэлд нь дараах байдлаар өөрчлөх"
+      "source": "⑦ main.kt に、println の1行を書く",
+      "translation": "⑦ main.kt файлд println бүхий 1 мөр бичих"
     },
     {
-      "source": "src/ex01/main.kt · 全体を置き換える",
-      "translation": "src/ex01/main.kt · Бүхлээр нь солих"
+      "source": "<code>main.kt</code> は、いま作った新しいファイルなので、中身を次の全文にします。<code>package ex01</code> と <code>fun main()</code> の行は、⑥で見たとおり IntelliJ IDEA が入れています。自分で入力するのは、<code>{</code> と <code>}</code> のあいだの <code>println</code> の1行です。",
+      "translation": "<code>main.kt</code> нь дөнгөж сая үүсгэсэн шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. <code>package ex01</code> болон <code>fun main()</code> мөрүүдийг ⑥ хэсэгт харсанчлан IntelliJ IDEA програм оруулсан байна. Өөрөө бичиж оруулах зүйл нь <code>{</code> болон <code>}</code> хоёрын хоорондох <code>println</code> бүхий 1 мөр юм."
+    },
+    {
+      "source": "src/ex01/main.kt · 全文",
+      "translation": "src/ex01/main.kt · Бүтэн код"
     },
     {
       "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
@@ -1047,12 +1051,28 @@
       "translation": "Дахин утга оноох боломжтой. Дараа нь өөр утга оноож болно."
     },
     {
-      "source": "① ファイル全体を、次の内容に置き換える",
-      "translation": "① Файлын бүх агуулгыг дараах байдлаар солих"
+      "source": "① println の行を、変数の宣言と表示に書き換える",
+      "translation": "① println мөрийг хувьсагч зарлах болон хэвлэх мөрүүд болгож өөрчлөх"
     },
     {
-      "source": "main.kt · 全体を置き換える",
-      "translation": "main.kt – Бүх агуулгыг солих"
+      "source": "STEP 02 で書いた <code>main.kt</code> を直します。<code>println(&quot;Hello, Kotlin!&quot;)</code> の行を消し、同じ場所に、変数の宣言と表示の行を足します。",
+      "translation": "STEP 02 дээр бичсэн <code>main.kt</code> файлыг засна уу. <code>println(&quot;Hello, Kotlin!&quot;)</code> мөрийг устгаж, яг тэр газарт нь хувьсагч зарлах болон хэвлэх мөрүүдийг нэмнэ үү."
+    },
+    {
+      "source": "前のSTEPで書いたファイルを直すときは、このあとも、<strong>直す行に色を付けた枠</strong>で示します。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。",
+      "translation": "Өмнөх STEP дээр бичсэн файлыг засах үед үүнээс хойш ч <strong>засах мөрүүдийг өнгөөр тэмдэглэсэн хүрээн дотор</strong> харуулна. <span1>Ногоон тод үсэгтэй мөр</span1> нь нэмэх мөр, <span2>улаан дундуур зураастай мөр</span2> нь устгах мөр юм. <span3>Бүдэг үсэгтэй мөр</span3> нь файлд аль хэдийн байгаа мөр бөгөөд түүнийг бичиж оруулахгүй. Эдгээр мөрийг засах газраа олох тэмдэг болгон ашиглана."
+    },
+    {
+      "source": "足す行",
+      "translation": "Нэмэх мөр"
+    },
+    {
+      "source": "消す行",
+      "translation": "Устгах мөр"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "Байгаа мөр"
     },
     {
       "source": "② 実行結果",
@@ -1155,36 +1175,12 @@
       "translation": "Хойно нь <code>f</code> залгавал энэ төрөл болно."
     },
     {
-      "source": "① 追加する場所を見つける",
-      "translation": "① Нэмэх газрыг олох"
+      "source": "① 値の行と表示の行に、2行ずつ足す",
+      "translation": "① Утга оноох хэсэг болон хэвлэх хэсэгт тус бүр 2 мөр нэмэх"
     },
     {
-      "source": "場所の目印 · この枠は入力しません",
-      "translation": "Байршлын тэмдэг – Энэ хүрээнд оруулахгүй"
-    },
-    {
-      "source": "② 値の行に2行追加する",
-      "translation": "② Утга оноох хэсэгт 2 мөр нэмэх"
-    },
-    {
-      "source": "追加① · val number1 = 1 の下",
-      "translation": "Нэмэлт ① – val number1 = 1 мөрийн дор"
-    },
-    {
-      "source": "③ 表示の行に2行追加する",
-      "translation": "③ Хэвлэх хэсэгт 2 мөр нэмэх"
-    },
-    {
-      "source": "追加② · println(number1) の下",
-      "translation": "Нэмэлт ② – println(number1) мөрийн дор"
-    },
-    {
-      "source": "貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。",
-      "translation": "Хуулах үед IntelliJ IDEA програм мөрийн эхлэлийн зайг автоматаар тохируулна. Бусад мөртэй эхлэл нь тэгширсэн байвал болно."
-    },
-    {
-      "source": "④ 実行結果",
-      "translation": "④ Гаралт"
+      "source": "STEP 03 で書いた <code>main.kt</code> に、緑の行を足します。足す場所は2か所で、<code>val number1 = 1</code> の下と、<code>println(number1)</code> の下です。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "STEP 03 дээр бичсэн <code>main.kt</code> файлд ногоон мөрүүдийг нэмнэ үү. Нэмэх газар нь <code>val number1 = 1</code> мөрийн доор болон <code>println(number1)</code> мөрийн доор гэсэн 2 газар юм. Бүдэг үсэгтэй мөр нь файлд аль хэдийн байгаа мөр тул түүнийг бичиж оруулахгүй."
     },
     {
       "source": "Runの結果 · この4行が出れば成功",
@@ -1195,8 +1191,8 @@
       "translation": "<code>3.0f</code> гэж бичсэн боловч гаралт нь <code>3.0</code> байна. <code>f</code> нь литералын төрлийг тодорхойлох тэмдэг бөгөөд утга өөрт нь байдаггүй. Java хэлд <code>System.out.println(3.0f)</code> гэж бичсэн үетэй ижил үр дүн юм."
     },
     {
-      "source": "⑤ Java / Swift ではどう書くか（型）",
-      "translation": "⑤ Java / Swift хэлд хэрхэн бичих вэ? (төрөл)"
+      "source": "③ Java / Swift ではどう書くか（型）",
+      "translation": "③ Java / Swift хэлд хэрхэн бичих вэ? (төрөл)"
     },
     {
       "source": "<strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。",
@@ -1219,8 +1215,8 @@
       "translation": "Swift хэлд <code>3.0f</code> гэж бичих арга байдаггүй. Swift хэлд <code>Float</code> болгохыг хүсвэл <code>let number3: Float = 3.0</code> гэж төрлийн тэмдэглэгээгээр зааж өгдөг. Kotlin хэл нь энэ тал дээр Java хэлтэй адил <code>f</code> дагавар ашиглаж болно."
     },
     {
-      "source": "⑥ Java / Swift ではどう書くか（出力）",
-      "translation": "⑥ Java / Swift хэлд хэрхэн бичих вэ? (гаралт)"
+      "source": "④ Java / Swift ではどう書くか（出力）",
+      "translation": "④ Java / Swift хэлд хэрхэн бичих вэ? (гаралт)"
     },
     {
       "source": "<code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。",
@@ -1683,12 +1679,16 @@
       "translation": "Төрлийн нэрийн төгсгөлд <code>?</code> тэмдэгтийг ганц л нэмж бичих эсэхээс шалтгаалан бүхэлдээ өөр төрөл болдог."
     },
     {
-      "source": "① ファイル全体を、次の内容にする",
-      "translation": "① Файлын бүх агуулгыг дараах байдлаар солих"
+      "source": "① main.kt の中身を、次の全文にする",
+      "translation": "① main.kt файлын агуулгыг дараах бүтэн кодтой адил болгох"
     },
     {
-      "source": "src/ex02/main.kt · 全体を置き換える",
-      "translation": "src/ex02/main.kt – Бүх агуулгыг солих"
+      "source": "<code>main.kt</code> は、前のSTEPで作った新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "<code>main.kt</code> нь өмнөх STEP дээр үүсгэсэн шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу."
+    },
+    {
+      "source": "src/ex02/main.kt · 全文",
+      "translation": "src/ex02/main.kt · Бүтэн код"
     },
     {
       "source": "ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。",
@@ -1827,8 +1827,12 @@
       "translation": "<strong><code>?.</code> нь «Хэрэв <code>null</code> байвал дуудалгүйгээр шууд <code>null</code> буцаа» гэсэн утгатай.</strong> Функцийг дуудах уу үгүй юу гэсэн нөхцөл шалгах логик энэ ганц тэмдэгтэд агуулагдаж байгаа хэрэг юм."
     },
     {
-      "source": "② ファイル全体を、次の内容にする",
-      "translation": "② Файлын бүх агуулгыг дараах байдлаар солих"
+      "source": "② name2 を使う3行を足す",
+      "translation": "② name2 хувьсагчийг ашиглах 3 мөр нэмэх"
+    },
+    {
+      "source": "STEP 09 で書いた <code>main.kt</code> に、緑の3行を足します。足す場所は、<code>var name2: String? = null</code> の下です。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "STEP 09 дээр бичсэн <code>main.kt</code> файлд ногоон 3 мөрийг нэмнэ үү. Нэмэх газар нь <code>var name2: String? = null</code> мөрийн доор юм. Бүдэг үсэгтэй мөр нь файлд аль хэдийн байгаа мөр тул түүнийг бичиж оруулахгүй."
     },
     {
       "source": "③ 実行結果",
@@ -2247,8 +2251,8 @@
       "translation": "Өөрчлөх файл: src/ex03/main.kt"
     },
     {
-      "source": "src/ex03/main.kt · 全体を置き換える",
-      "translation": "src/ex03/main.kt · Бүхэлд нь солих"
+      "source": "src/ex03/main.kt · 全文",
+      "translation": "src/ex03/main.kt · Бүтэн код"
     },
     {
       "source": "<code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。",
@@ -2369,6 +2373,14 @@
     {
       "source": "戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。",
       "translation": "Буцаах утгагүй функц бичнэ. Kotlin хэл дээр төгсгөлд нь <strong>юу ч бичихгүй</strong>. 2 дахь мөрний <code>3</code>-ийг гаргаж, гаралтыг гүйцээнэ."
+    },
+    {
+      "source": "① sum2 の呼び出しと宣言を足す",
+      "translation": "① sum2 функцийн дуудалт болон зарлалтыг нэмэх"
+    },
+    {
+      "source": "STEP 15 で書いた <code>main.kt</code> に、緑の行を足します。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "STEP 15 дээр бичсэн <code>main.kt</code> файлд ногоон мөрүүдийг нэмнэ үү. Бүдэг үсэгтэй мөр нь файлд аль хэдийн байгаа мөр тул түүнийг бичиж оруулахгүй."
     },
     {
       "source": "足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。",
@@ -2731,16 +2743,16 @@
       "translation": "Үүссэн <code>ex05</code> багц дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス</strong> (Шинэ → Kotlin файл/класс) цэсийг сонгоно уу. Нэрийг <code>main</code>, төрлийг <strong>ファイル</strong> (Файл) гэж сонгоно уу."
     },
     {
-      "source": "<code>src/ex05/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex05</code> が2行にならないようにします。",
-      "translation": "<code>src/ex05/main.kt</code> файлыг нээж, агуулгыг нь дараах бэлэн код болгоно уу. Эхний <code>package ex05</code> мөр нь 2 мөр болохгүй байхаар анхаарна уу."
+      "source": "<code>src/ex05/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "<code>src/ex05/main.kt</code> файлыг нээнэ үү. Шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу."
     },
     {
       "source": "このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。",
       "translation": "Энэ файлын <code>fun main()</code> хэсгийн зүүн талд байрлах ▷ товчийг дарж ажиллуулна уу. Өмнөх дадлагын ажиллуулах товчтой андуурахаас болгоомжилно уу."
     },
     {
-      "source": "src/ex05/main.kt · ファイル全体",
-      "translation": "src/ex05/main.kt – файл бүхлээрээ"
+      "source": "src/ex05/main.kt · 全文",
+      "translation": "src/ex05/main.kt · Бүтэн код"
     },
     {
       "source": "② 実行結果を見る",
@@ -2807,12 +2819,12 @@
       "translation": "Үүссэн <code>ex06</code> багц дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス</strong> (Шинэ → Kotlin файл/класс) цэсийг сонгоно уу. Нэрийг <code>main</code>, төрлийг <strong>ファイル</strong> (Файл) гэж сонгоно уу."
     },
     {
-      "source": "<code>src/ex06/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex06</code> が2行にならないようにします。",
-      "translation": "<code>src/ex06/main.kt</code> файлыг нээж, агуулгыг нь дараах бэлэн код болгоно уу. Эхний <code>package ex06</code> мөр нь 2 мөр болохгүй байхаар анхаарна уу."
+      "source": "<code>src/ex06/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "<code>src/ex06/main.kt</code> файлыг нээнэ үү. Шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу."
     },
     {
-      "source": "src/ex06/main.kt · ファイル全体",
-      "translation": "src/ex06/main.kt – файл бүхлээрээ"
+      "source": "src/ex06/main.kt · 全文",
+      "translation": "src/ex06/main.kt · Бүтэн код"
     },
     {
       "source": "<code>listOf</code> に並べた文字列が、同じ順で1行ずつ出ます。<code>persons</code> は文字列のリスト <code>List&lt;String&gt;</code>、その中から取り出す <code>person</code> は <code>String</code> です。",
@@ -2875,12 +2887,12 @@
       "translation": "Үүссэн <code>ex04</code> багц дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス</strong> (Шинэ → Kotlin файл/класс) цэсийг сонгоно уу. Нэрийг <code>main</code>, төрлийг <strong>ファイル</strong> (Файл) гэж сонгоно уу."
     },
     {
-      "source": "<code>src/ex04/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex04</code> が2行にならないようにします。",
-      "translation": "<code>src/ex04/main.kt</code> файлыг нээж, агуулгыг нь дараах бэлэн код болгоно уу. Эхний <code>package ex04</code> мөр нь 2 мөр болохгүй байхаар анхаарна уу."
+      "source": "<code>src/ex04/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "<code>src/ex04/main.kt</code> файлыг нээнэ үү. Шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу."
     },
     {
-      "source": "src/ex04/main.kt · ファイル全体",
-      "translation": "src/ex04/main.kt – файл бүхлээрээ"
+      "source": "src/ex04/main.kt · 全文",
+      "translation": "src/ex04/main.kt · Бүтэн код"
     },
     {
       "source": "<code>Person(\"Yamada\", 20)</code> で渡した値を、<code>yamada.name</code> と <code>yamada.age</code> で読みます。<code>name</code> と <code>age</code> は <strong>プロパティ</strong>です。Javaのフィールドとgetterをまとめた宣言、Swiftの保存用プロパティに対応します。",
@@ -3107,8 +3119,8 @@
       "translation": "<code>ex08</code> багц дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス</strong> (Шинэ → Kotlin файл/класс) цэсийг сонгоно уу. Нэрийг <code>Foo</code>, төрлийг <strong>ファイル</strong> (Файл) гэж сонгоно уу. Том <code>F</code> үсгээр эхэлнэ."
     },
     {
-      "source": "できた <code>Foo.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
-      "translation": "Үүссэн <code>Foo.kt</code> файлын агуулгыг бүхлээр нь дараах байдлаар өөрчилж, <code>fun main()</code> хэсгийн зүүн талд байрлах ажиллуулах товчноос Run хийнэ үү."
+      "source": "できた <code>Foo.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "Үүссэн <code>Foo.kt</code> нь шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу. Бичиж дуусаад, <code>fun main()</code> хэсгийн зүүн талд байрлах ажиллуулах товчноос Run хийнэ үү."
     },
     {
       "source": "Runツールウィンドウに <code>ex08</code> が1行出ます。別の出力が出たときは、上のツールバーではなく、いま開いた <code>Foo.kt</code> の <code>fun main()</code> の左から実行し直します。",
@@ -3139,12 +3151,16 @@
       "translation": "<code>foo.counter</code> хувьсагчид утга оноох болон унших үед өөр логик ажиллаж байгааг консолын 6 мөрөөр шалгана уу. Энэ нь Java хэлний getter / setter, Swift хэлний computed property-тай төстэй бичих арга юм."
     },
     {
-      "source": "① Foo.kt 全体を次の内容にする",
-      "translation": "① Foo.kt файлын агуулгыг бүхлээр нь дараах байдлаар өөрчлөх"
+      "source": "① Foo.kt に、クラスと main の中身を書く",
+      "translation": "① Foo.kt файлд класс болон main функцийн агуулгыг бичих"
     },
     {
-      "source": "<code>src/ex08/Foo.kt</code> を開き、先ほどの <code>println(\"ex08\")</code> を含めて、ファイル全体を置き換えます。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
-      "translation": "<code>src/ex08/Foo.kt</code> файлыг нээж, түрүүчийн <code>println(\"ex08\")</code> мөрийг оруулаад файл бүхлээрээ солино уу. <code>class Foo</code> болон <code>fun main()</code>-г хоёуланг нь файлын яг доор байрлуулна уу."
+      "source": "<code>src/ex08/Foo.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println(\"ex08\")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
+      "translation": "<code>src/ex08/Foo.kt</code> файлыг нээж, дараах хүрээн доторх кодын дагуу засна уу. Түрүүчийн <code>println(\"ex08\")</code> мөр нь ажиллаж байгааг шалгах зориулалттай түр мөр тул устгана уу. Ногоон мөрүүдийг нэмж, улаан мөрүүдийг устгана уу. Бүдэг үсэгтэй мөр нь файлд аль хэдийн байгаа мөр тул түүнийг бичиж оруулахгүй. <code>class Foo</code> болон <code>fun main()</code>-г хоёуланг нь файлын яг доор байрлуулна уу."
+    },
+    {
+      "source": "照合用：ここまでの <code>Foo.kt</code> の全文",
+      "translation": "Тулгаж шалгахад: Одоог хүртэлх <code>Foo.kt</code> файлын бүтэн код"
     },
     {
       "source": "src/ex08/Foo.kt · 完成コード",
@@ -3227,8 +3243,8 @@
       "translation": "<code>ex09</code> дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス (Шинэ → Kotlin файл/класс)</strong>-г сонгон нэрийг <code>main</code>, төрлийг <strong>ファイル (Файл)</strong> болгоно уу."
     },
     {
-      "source": "<code>main.kt</code> 全体を次の内容にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
-      "translation": "<code>main.kt</code> файлыг бүхэлд нь дараах агуулгаар солино уу. Төгсгөлийн <code>Person</code> болон <code>Person2</code> нь <code>main</code> функцийн хаалтын <strong>гадна</strong> байна."
+      "source": "<code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
+      "translation": "<code>main.kt</code> нь шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу. Төгсгөлийн <code>Person</code> болон <code>Person2</code> нь <code>main</code> функцийн хаах хаалтын <strong>гадна</strong> байна."
     },
     {
       "source": "このファイルの <code>fun main()</code> の左からRunします。",
@@ -3336,7 +3352,7 @@
     },
     {
       "source": "次の3行を、<code>main</code> の最後の <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> の<strong>あと、<code>main</code> の閉じかっこの前</strong>に追加してRunします。",
-      "translation": "Дараах 3 мөрийг <code>main</code>-ийн хамгийн сүүлийн <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code>-ийн <strong>ард, <code>main</code>-ийн хаалтын өмнө</strong> нэмж Run хийнэ үү."
+      "translation": "Дараах 3 мөрийг <code>main</code>-ийн хамгийн сүүлийн <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code>-ийн <strong>ард, <code>main</code>-ийн хаах хаалтын өмнө</strong> нэмж Run хийнэ үү."
     },
     {
       "source": "元の8行のあとに、次の2行だけが増えます。<code>showName(null)</code> では条件を満たさないため、出力は増えません。",
@@ -3387,8 +3403,8 @@
       "translation": "<code>ex07</code> дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス (Шинэ → Kotlin файл/класс)</strong>-г сонгон нэрийг <code>main</code>, төрлийг <strong>ファイル (Файл)</strong> болгоно уу."
     },
     {
-      "source": "ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。",
-      "translation": "Файлыг бүхэлд нь дараах агуулгатай болгож, энэ <code>fun main()</code>-ийн зүүн талаас Run хийнэ үү."
+      "source": "新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。",
+      "translation": "Шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу. Бичиж дуусаад, энэ <code>fun main()</code> мөрийн зүүн талаас Run хийнэ үү."
     },
     {
       "source": "src/ex07/main.kt · 完成コード",
@@ -3611,8 +3627,8 @@
       "translation": "<code>ex10</code> дээр хулганы баруун товчийг дарж, <strong>新規 → Kotlin ファイル/クラス (Шинэ → Kotlin файл/класс)</strong>-г сонгон нэрийг <code>main</code>, төрлийг <strong>ファイル (Файл)</strong> болгоно уу."
     },
     {
-      "source": "<code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
-      "translation": "<code>main.kt</code> файлыг бүхэлд нь дараах агуулгаар сольж, <code>fun main()</code>-ийн зүүн талын ажиллуулах товчоос Run хийнэ үү."
+      "source": "<code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "<code>main.kt</code> нь шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. IntelliJ IDEA програмын оруулсан мөрүүдийг устгалгүй ашиглаж, дутуу мөрүүдийг нэмж бичнэ үү. Ижил мөр 2 удаа орохгүй байхаар анхаарна уу. Бичиж дуусаад, <code>fun main()</code>-ийн зүүн талын ажиллуулах товчоос Run хийнэ үү."
     },
     {
       "source": "Runツールウィンドウに <code>ex10</code> が1行出ます。別の出力が出たときは、いま開いた <code>ex10/main.kt</code> の <code>fun main()</code> の左から実行し直します。",
@@ -3643,12 +3659,16 @@
       "translation": "Ижил нэртэй жагсаалтаас <code>San</code> залгасан тэмдэгт мөрийн жагсаалт болон <code>Person</code>-ийн жагсаалтыг үүсгэнэ. Java-ийн Stream API-ийн <code>map</code>, Swift-ийн хүснэгтийн (array) <code>map</code>-тай харгалзах бичиглэл юм."
     },
     {
-      "source": "① main.kt 全体を次の内容にする（10分）",
-      "translation": "① main.kt файлыг бүхэлд нь дараах агуулгатай болгох (10 минут)"
+      "source": "① main.kt に、2つの map を書く（10分）",
+      "translation": "① main.kt файлд 2 ширхэг map бичих (10 минут)"
     },
     {
-      "source": "<code>src/ex10/main.kt</code> を開き、先ほどの <code>println(\"ex10\")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
-      "translation": "<code>src/ex10/main.kt</code>-г нээж, түрүүчийн <code>println(\"ex10\")</code>-г оруулаад бүхэлд нь солино. Хамгийн сүүлийн <code>data class Person(...)</code> нь <code>main</code> функцийн хаалтын гадна байна."
+      "source": "<code>src/ex10/main.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println(\"ex10\")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
+      "translation": "<code>src/ex10/main.kt</code>-г нээж, дараах хүрээн доторх кодын дагуу засна уу. Түрүүчийн <code>println(\"ex10\")</code> мөр нь ажиллаж байгааг шалгах зориулалттай түр мөр тул устгана уу. Ногоон мөрүүдийг нэмж, улаан мөрүүдийг устгана уу. Бүдэг үсэгтэй мөр нь файлд аль хэдийн байгаа мөр тул түүнийг бичиж оруулахгүй. Хамгийн сүүлийн <code>data class Person(...)</code> нь <code>main</code> функцийн хаах хаалтын гадна байна."
+    },
+    {
+      "source": "照合用：ここまでの <code>main.kt</code> の全文",
+      "translation": "Тулгаж шалгахад: Одоог хүртэлх <code>main.kt</code> файлын бүтэн код"
     },
     {
       "source": "src/ex10/main.kt · 完成コード",
@@ -3855,8 +3875,8 @@
       "translation": "⑤ Анхны удаагийн өмнө болон хойно counter-ийг өөрчлөх (8 минут)"
     },
     {
-      "source": "<code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。",
-      "translation": "<code>class Foo</code>-г хэвээр үлдээж, <code>main</code>-ийг л дараах хэлбэр рүү солино."
+      "source": "<code>class Foo</code> はそのままにして、<code>main</code> に緑の2行を一時的に足します。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "<code>class Foo</code>-г хэвээр үлдээж, <code>main</code> функцэд ногоон 2 мөрийг түр зуур нэмнэ үү. Бүдэг үсэгтэй мөр нь файлд аль хэдийн байгаа мөр тул түүнийг бичиж оруулахгүй."
     },
     {
       "source": "Runすると、次の3行が出ます。",

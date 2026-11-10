@@ -51,8 +51,8 @@
       "translation": "STEP 04 把輸入和 Spinner 連結到 Kotlin"
     },
     {
-      "source": "STEP 05 11コマ目の画面を確認して保存する",
-      "translation": "STEP 05 確認第11堂課的畫面並儲存"
+      "source": "STEP 05 11コマ目の画面を確認する",
+      "translation": "STEP 05 確認第11堂課的畫面"
     },
     {
       "source": "STEP 06 12コマ目：入力画面から再開する",
@@ -75,8 +75,8 @@
       "translation": "STEP 10 把固定資料傳給 RecyclerView"
     },
     {
-      "source": "STEP 11 12コマ目の2行を確認して保存する",
-      "translation": "STEP 11 確認第12堂課的2列並儲存"
+      "source": "STEP 11 12コマ目の2行を確認する",
+      "translation": "STEP 11 確認第12堂課的2列"
     },
     {
       "source": "STEP 12 13コマ目：2行の画面から再開する",
@@ -243,24 +243,32 @@
       "translation": "準備連線與清單所用的設定"
     },
     {
-      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
-      "translation": "即使同樣是 Panda 2，函式庫的版本也會隨建立日期而不同。請先將下列<strong>3個設定檔全文替換之後</strong>再進行同步。因為有2處 <code>build.gradle.kts</code>，請確認路徑。請不要直接在用其他版本產生的組態中只調降 AGP 版本號碼來套用。"
+      "source": "通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。",
+      "translation": "請先將連線與清單所用的函式庫<strong>加入下列3個設定檔之後</strong>再進行同步。因為有2處 <code>build.gradle.kts</code>，請確認路徑。"
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "在這之後的框框裡，檔案的內容<strong>只列出要修改的地方</strong>。<span1>綠色粗體的行</span1>是要加入的行，<span2>紅色加上刪除線的行</span2>是要刪除的行。<span3>字較淡的行</span3>是檔案中已有的行，不要輸入。請把這些行當作標記，用來找出要修改的地方。<code>⋮</code> 是表示中間不更改的行已省略的記號。"
     },
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "首先是 <code>gradle/libs.versions.toml</code>。Ktor 用於連線，serialization 用於 JSON 轉換，RecyclerView 和 CardView 用於清單，lifecycle 用於啟動與畫面綁定的連線。"
     },
     {
-      "source": "libs.versions.toml · 全文",
-      "translation": "libs.versions.toml · 全文"
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "<code>[versions]</code> 的部分，字較淡的行也要把數字和自己的檔案對照。這是因為即使同樣是 Panda 2，函式庫的版本也會隨建立日期而不同。數字不同的行，請改寫成這裡的數字。如果專案是用 Panda 2 以外的版本建立的，請在改寫之前先給老師看。如果只降低 <code>agp</code> 的數字，就會和其他設定對不上。"
+    },
+    {
+      "source": "足す行",
+      "translation": "要加入的行"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "已有的行"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
       "translation": "接下來是專案根目錄下的 <code>build.gradle.kts</code>。"
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · 全文"
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
@@ -271,8 +279,28 @@
       "translation": "請選擇 <strong>Sync Now</strong>，如果沒有出現則選擇 <strong>File → Sync Project with Gradle Files</strong>，並等待紅色錯誤消失。因為 AGP 9.1.1 內建了 Kotlin 的建置功能，所以不需要額外加入 <code>org.jetbrains.kotlin.android</code>。版本目錄（catalog）中的 <code>kotlin</code> 在這裡是指 serialization 外掛程式的版本。"
     },
     {
-      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
-      "translation": "接著將 <code>app/src/main/AndroidManifest.xml</code> 全文替換。<code>INTERNET</code> 位於 <code>application</code> 外側，<code>windowSoftInputMode</code> 則是 <code>activity</code> 的屬性。進行連線時不會出現執行時期的允許權限對話方塊。"
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported=\"true\"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "接著修改 <code>app/src/main/AndroidManifest.xml</code>。<code>INTERNET</code> 位於 <code>application</code> 外側，<code>windowSoftInputMode</code> 則是 <code>activity</code> 的屬性。<code>android:exported=\"true\"</code> 那一行，因為要把結尾的 <code>&gt;</code> 移到下一行，所以在要刪除的行和要加入的行中都會出現。進行連線時不會出現執行時期的允許權限對話方塊。"
+    },
+    {
+      "source": "消す行",
+      "translation": "要刪除的行"
+    },
+    {
+      "source": "照合用：直したあとの4つのファイルの全文",
+      "translation": "對照用：4個檔案修改後的全文"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · 全文"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · 全文"
+    },
+    {
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · 全文"
     },
     {
       "source": "AndroidManifest.xml · 全文",
@@ -283,8 +311,8 @@
       "translation": "下一堂課要使用的 <code>@Serializable</code>，和 Swift 的 <code>Codable</code> 一樣用於 JSON 轉換。為了能夠產生該轉換處理，這次不僅設定函式庫，也設定外掛程式。"
     },
     {
-      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
-      "translation": "3個設定檔和 Manifest 均已儲存，Gradle 同步的紅色錯誤已消失。"
+      "source": "3つの設定とManifestに足す行が入り、Gradle同期の赤いエラーが消えている。",
+      "translation": "3個設定檔和 Manifest 都已加上要加入的行，Gradle 同步的紅色錯誤已消失。"
     },
     {
       "source": "STEP 03 · 11コマ目 · 目安 20分",
@@ -307,8 +335,8 @@
       "translation": "請以執行組態 <strong>app</strong> 和指定的 AVD 按一下 <strong>Run ▶</strong>。首先確認 <code>Hello World!</code>。"
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
-      "translation": "請開啟 <code>app/src/main/res/layout/activity_main.xml</code>，在右上角的 <strong>Code</strong> 中將全文替換。"
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "請開啟 <code>app/src/main/res/layout/activity_main.xml</code>，切換到右上角的 <strong>Code</strong>。自動產生的 <code>Hello World!</code> 畫面不會用到，所以請把內容替換成下面的全文。"
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +367,12 @@
       "translation": "把輸入和 Spinner 連結到 Kotlin"
     },
     {
-      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
-      "translation": "請將套件內的 <code>MainActivity.kt</code> 全文替換為下列<strong>第11堂課進行中的程式碼</strong>。import 也要包含在內。在稍後連結到搜尋之前，先確認輸入與選項。"
+      "source": "パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "請開啟套件內的 <code>MainActivity.kt</code>，加入綠色的行，讓它成為<strong>第11堂課進行中的程式碼</strong>。import 的部分也有要加入的行。字較淡的行，是建立專案時就有的行。在稍後連結到搜尋之前，先確認輸入與選項。"
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "對照用：<code>MainActivity.kt</code> 到這裡為止的全文"
     },
     {
       "source": "04-MainActivity.kt · 全文",
@@ -403,20 +435,20 @@
       "translation": "STEP 05 · 第11堂課 · 約3分鐘"
     },
     {
-      "source": "11コマ目の画面を確認して保存する",
-      "translation": "確認第11堂課的畫面並儲存"
+      "source": "11コマ目の画面を確認する",
+      "translation": "確認第11堂課的畫面"
     },
     {
-      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
-      "translation": "這是最後的3分鐘。清除搜尋詞後按下會出現提示，輸入 <code>kotlin</code> 後按下則會顯示「入力: kotlin」（輸入: kotlin）。清單保持空白是正常的。請以 <strong>File → Save All</strong> 儲存。下次會開啟同一個專案。"
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次はこの同じプロジェクトを開きます。",
+      "translation": "這是最後的3分鐘。清除搜尋詞後按下會出現提示，輸入 <code>kotlin</code> 後按下則會顯示「入力: kotlin」（輸入: kotlin）。清單保持空白是正常的。寫好的內容 Android Studio 會自動儲存，所以不需要手動執行儲存的操作。下次會開啟同一個專案。"
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
       "translation": "兩者都註冊了點擊時的處理。目前的 <code>search</code> 只有確認輸入。進行連線的處理會在第13堂課加入。"
     },
     {
-      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
-      "translation": "MainActivity.kt 已儲存，出現確認輸入的 Toast，清單保持空白。"
+      "source": "入力確認のToastが出て、一覧は空のままである。",
+      "translation": "出現確認輸入的 Toast，清單保持空白。"
     },
     {
       "source": "STEP 06 · 12コマ目 · 目安 5分",
@@ -451,8 +483,8 @@
       "translation": "建立對應 JSON 的 data class"
     },
     {
-      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "請在套件上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>，名稱設定為 <code>GithubSearchResponse</code>，種類選擇 <strong>File</strong>。將建立的 <code>GithubSearchResponse.kt</code> 全文替換。以下是在1個檔案中撰寫3個類別的形式。"
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "請在套件上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>，名稱設定為 <code>GithubSearchResponse</code>，種類選擇 <strong>File</strong>。建立的 <code>GithubSearchResponse.kt</code> 是新的檔案，所以請把內容寫成下面的全文。以下是在1個檔案中撰寫3個類別的形式。"
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -503,8 +535,8 @@
       "translation": "用 XML 製作清單中的單列"
     },
     {
-      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
-      "translation": "請在 <code>app/src/main/res/layout</code> 上按右鍵，選擇 <strong>New → Layout Resource File</strong>。File name 設為 <code>list_item</code> 並建立。Root element 因為建立後會替換全文，保持預設值即可。切換到 Code 檢視，將全文替換為下列內容。"
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。",
+      "translation": "請在 <code>app/src/main/res/layout</code> 上按右鍵，選擇 <strong>New → Layout Resource File</strong>。File name 設為 <code>list_item</code> 並建立。Root element 保持預設值即可。剛建立時的內容不會用到，所以請切換到 Code 檢視，把內容替換成下面的全文。"
     },
     {
       "source": "list_item.xml · 全文",
@@ -531,8 +563,8 @@
       "translation": "用 Adapter 將資料綁定到單列"
     },
     {
-      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "請在套件上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>。名稱輸入 <code>RepositoryAdapter</code>，種類選擇 <strong>File</strong>，將全文替換為下列內容。"
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "請在套件上按右鍵，選擇 <strong>New → Kotlin Class/File</strong>。名稱輸入 <code>RepositoryAdapter</code>，種類選擇 <strong>File</strong>。因為是新的檔案，請把內容寫成下面的全文。"
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -587,8 +619,8 @@
       "translation": "把固定資料傳給 RecyclerView"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
-      "translation": "將 <code>MainActivity.kt</code> 全文替換為下列第12堂課進行中的程式碼。這是保留第11堂課的輸入確認，並加入了建立 <code>repositoryAdapter</code>、與 RecyclerView 連結，以及傳入固定資料的 <code>submitList</code> 的形式。"
+      "source": "<code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。",
+      "translation": "請在 <code>MainActivity.kt</code> 中加入綠色的行，讓它成為第12堂課進行中的程式碼。保留第11堂課的輸入確認，並加入建立 <code>repositoryAdapter</code>、與 RecyclerView 連結，以及傳入固定資料的 <code>submitList</code>。要加入的地方是 import、屬性、<code>onCreate</code> 這3處。"
     },
     {
       "source": "10-MainActivity.kt · 全文",
@@ -623,20 +655,20 @@
       "translation": "STEP 11 · 第12堂課 · 約3分鐘"
     },
     {
-      "source": "12コマ目の2行を確認して保存する",
-      "translation": "確認第12堂課的2列並儲存"
+      "source": "12コマ目の2行を確認する",
+      "translation": "確認第12堂課的2列"
     },
     {
-      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
-      "translation": "這是最後的3分鐘。將2列的4個項目與固定資料進行對照，確認即使變更輸入再搜尋，清單中的2列也不會改變。請執行 <strong>File → Save All</strong>。目前還沒有連線的程式碼。接下來會在同一個專案中加入呼叫 API 的檔案。"
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "這是最後的3分鐘。將2列的4個項目與固定資料進行對照，確認即使變更輸入再搜尋，清單中的2列也不會改變。目前還沒有連線的程式碼。接下來會在同一個專案中加入呼叫 API 的檔案。"
     },
     {
       "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
       "translation": "與 Java 的泛型相同，<code>&lt;GithubRepository&gt;</code> 代表元素的型別。現在是固定值，接下來則會將連線取得的同型別清單傳給同一個 Adapter。"
     },
     {
-      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
-      "translation": "2列皆符合固定資料，且 MainActivity.kt、模型、Adapter 與2個 XML 都已儲存。"
+      "source": "2行が固定データどおりで、ProjectツールウィンドウにMainActivity.kt・モデル・Adapter・2つのXMLが並んでいる。",
+      "translation": "2列皆符合固定資料，且 Project 工具視窗中排列著 MainActivity.kt、模型、Adapter 與2個 XML。"
     },
     {
       "source": "STEP 12 · 13コマ目 · 目安 5分",
@@ -671,8 +703,8 @@
       "translation": "建立用 Ktor 呼叫搜尋 API 的檔案"
     },
     {
-      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
-      "translation": "請在套件中選擇 <strong>New → Kotlin Class/File</strong>。名稱輸入 <code>GithubApi</code>，種類選擇 <strong>File</strong>，並將全文替換。"
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "請在套件中選擇 <strong>New → Kotlin Class/File</strong>。名稱輸入 <code>GithubApi</code>，種類選擇 <strong>File</strong>。因為是新的檔案，請把內容寫成下面的全文。"
     },
     {
       "source": "GithubApi.kt · 全文",
@@ -719,8 +751,8 @@
       "translation": "傳送目的地為 <code>https://api.github.com/search/repositories</code>。<code>q</code> 是搜尋詞，<code>sort</code> 是排序順序，<code>per_page</code> 是1次接收的上限。此應用程式最多只接收第一頁的30筆資料，即使捲動也不會取得下一頁。不需要輸入 API 金鑰或登入。"
     },
     {
-      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
-      "translation": "光是儲存此檔案並不會開始連線。下一個 STEP 會撰寫呼叫端的程式碼。"
+      "source": "このファイルを書いただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "光是寫好此檔案並不會開始連線。下一個 STEP 會撰寫呼叫端的程式碼。"
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
@@ -739,8 +771,8 @@
       "translation": "連結輸入、連線與清單"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "將 <code>MainActivity.kt</code> 全文替換為下列的<strong>完成版程式碼</strong>。移除固定資料的 <code>submitList(listOf(…))</code>，並從 <code>search</code> 中呼叫連線處理。建立時自動產生的 inset 處理、取得 View 以及組裝 Spinner 的部分都會保留。"
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。",
+      "translation": "請在 <code>MainActivity.kt</code> 中加入綠色的行、刪除紅色的行，讓它成為<strong>完成版程式碼</strong>。移除固定資料的 <code>submitList(listOf(…))</code>，並從 <code>search</code> 中呼叫連線處理。建立時自動產生的 inset 處理、取得 View 以及組裝 Spinner 的部分都會保留。要修改的地方是 import、屬性、<code>onCreate</code>、<code>search</code>，以及新加入的 <code>setLoading</code> 這5處。"
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -923,8 +955,8 @@
       "translation": "Adapter 中使用的是比較內容的 <code>==</code>。Kotlin 的參照比較是 <code>===</code>。畫面上的每一列是由 API 回傳的清單所建立，並沒有在裝置內重新排序。"
     },
     {
-      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
-      "translation": "依 Star 數排序且數值呈降冪排列，4個 Kotlin 檔案與2個 XML 皆已儲存。"
+      "source": "スター数順で数値が降順に並び、Projectツールウィンドウに4つのKotlinファイルと2つのXMLが並んでいる。",
+      "translation": "依 Star 數排序且數值呈降冪排列，Project 工具視窗中排列著4個 Kotlin 檔案與2個 XML。"
     },
     {
       "source": "STEP 17 · 13コマ目 · 目安 12分",
@@ -935,8 +967,8 @@
       "translation": "試試1個可以自訂的位置"
     },
     {
-      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
-      "translation": "請從下列選擇1項，儲存後按 Run。文字與邊距的變更也可以在連線前的畫面或固定資料中確認。需要連線的變更請等待老師指示。"
+      "source": "次のうち1つを選んで変更し、Runします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "請從下列選擇1項進行變更，然後按 Run。文字與邊距的變更也可以在連線前的畫面或固定資料中確認。需要連線的變更請等待老師指示。"
     },
     {
       "source": "変える場所",
@@ -999,16 +1031,16 @@
       "translation": "即使是有充分搜尋結果的搜尋，1次顯示的清單也最多只有10筆"
     },
     {
-      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
-      "translation": "練習後請改回變更前並儲存。繳交時要保留哪些自訂內容可以自己決定。id、JSON 的 SerialName，以及傳給 API 的 sort 值請保持原樣。<code>PER_PAGE</code> 的範圍是1〜100，但這次請用 30 和 10 來嘗試。"
+      "source": "練習後は変更前へ戻します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "練習後請改回變更前的狀態。繳交時要保留哪些自訂內容可以自己決定。id、JSON 的 SerialName，以及傳給 API 的 sort 值請保持原樣。<code>PER_PAGE</code> 的範圍是1〜100，但這次請用 30 和 10 來嘗試。"
     },
     {
       "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
       "translation": "Kotlin 的常數使用 <code>const val</code>，Java 則是 <code>static final</code>。更改的值會與清單的筆數相對應。這並不是將找到的總筆數改為10的設定。"
     },
     {
-      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
-      "translation": "所選變更的效果已顯現在畫面上，練習後已恢復為原本的數值與顯示並儲存。"
+      "source": "選んだ変更の効果が画面に現れ、練習後にRunすると元の値と表示へ戻っている。",
+      "translation": "所選變更的效果已顯現在畫面上，練習後按 Run，已恢復為原本的數值與顯示。"
     },
     {
       "source": "STEP 18 · 13コマ目 · 目安 3分",
@@ -1019,16 +1051,16 @@
       "translation": "確認第13堂課的完成狀態"
     },
     {
-      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
-      "translation": "這是最後的3分鐘。請確認搜尋後出現的單列4個項目、載入中圖示已消失，以及搜尋按鈕可以按下。執行 <strong>File → Save All</strong>。確認下次要開啟的自己的儲存位置，以及4個 Kotlin 檔案已顯示在 Project 工具視窗中。"
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "這是最後的3分鐘。請確認搜尋後出現的單列4個項目、載入中圖示已消失，以及搜尋按鈕可以按下。確認下次要開啟的自己的儲存位置，以及4個 Kotlin 檔案已顯示在 Project 工具視窗中。"
     },
     {
       "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
       "translation": "將連線結果的清單傳給了與第12堂課相同的 Adapter。這是將取得資料與顯示在單列上的工作分開在不同檔案的形式。"
     },
     {
-      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
-      "translation": "搜尋結果的4個項目已顯示，載入中圖示已消失，原始碼與 XML 已儲存。"
+      "source": "検索結果の4項目が表示され、通信中の印が消え、Projectツールウィンドウに4つのKotlinファイルが見えている。",
+      "translation": "搜尋結果的4個項目已顯示，載入中圖示已消失，Project 工具視窗中看得到4個 Kotlin 檔案。"
     },
     {
       "source": "見えている状態",

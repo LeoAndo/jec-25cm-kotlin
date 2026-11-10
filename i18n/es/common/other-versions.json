@@ -87,8 +87,8 @@
       "translation": "Sigue las adaptaciones para A01 de esta página. Continúa mientras tu configuración coincida con la tabla de abajo y la sincronización y Run funcionen. Si hay diferencias o errores que no están en la tabla, muéstraselos a tu docente."
     },
     {
-      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
-      "translation": "<strong>No se ha probado.</strong> Toma como punto de partida los pasos de Panda 2, pero no está confirmado que funcione igual. Muestra tu versión a tu docente en el STEP 00 de A01 y consulta antes de reemplazar todo el archivo de configuración en el STEP 01. Si las pantallas o la configuración generada son distintas, muéstraselas a tu docente tal como están."
+      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01で版の数字を書き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
+      "translation": "<strong>No se ha probado.</strong> Toma como punto de partida los pasos de Panda 2, pero no está confirmado que funcione igual. Muestra tu versión a tu docente en el STEP 00 de A01 y consulta antes de cambiar los números de versión en el STEP 01. Si las pantallas o la configuración generada son distintas, muéstraselas a tu docente tal como están."
     },
     {
       "source": "上記以外・版が分からない",
@@ -167,12 +167,12 @@
       "translation": "Crea tu proyecto con los seis campos de arriba. Aunque el orden en la pantalla sea distinto, haz coincidir Empty Views Activity, Kotlin, API 31 y Kotlin DSL."
     },
     {
-      "source": "STEP 01：libs.versions.toml全文の置き換え",
-      "translation": "STEP 01: reemplazo completo de libs.versions.toml"
+      "source": "STEP 01：libs.versions.toml の数字の書き換え",
+      "translation": "STEP 01: cambio de los números de libs.versions.toml"
     },
     {
-      "source": "<strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。",
-      "translation": "<strong>No hagas este reemplazo.</strong> Conserva juntos el <code>gradle/libs.versions.toml</code> y la configuración de compilación que creó Quail 4, y compáralos con la siguiente tabla de diferencias. Si pones solo el AGP 9.1.1 de Panda 2, no coincide con la forma en que Quail 4 escribe <code>optimization</code>. Si ya lo reemplazaste, muéstraselo a tu docente."
+      "source": "<strong>この書き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に書き換えた場合は先生に見せます。",
+      "translation": "<strong>No hagas este cambio.</strong> Conserva juntos el <code>gradle/libs.versions.toml</code> y la configuración de compilación que creó Quail 4, y compáralos con la siguiente tabla de diferencias. Si pones solo el AGP 9.1.1 de Panda 2, no coincide con la forma en que Quail 4 escribe <code>optimization</code>. Si ya hiciste el cambio, muéstraselo a tu docente."
     },
     {
       "source": "STEP 02〜03：端末・初回Run",

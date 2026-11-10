@@ -579,16 +579,16 @@
       "translation": "Lugar donde aparece la salida. Se abre automáticamente al hacer Run."
     },
     {
-      "source": "② エディタの中身を置き換えて実行する",
-      "translation": "② Reemplazar el contenido del editor y ejecutar"
+      "source": "② 見本を消し、3行を入力して実行する",
+      "translation": "② Borrar el ejemplo, escribir 3 líneas y ejecutar"
     },
     {
-      "source": "エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。",
-      "translation": "Haz clic dentro del editor, selecciona todo con <kbd>⌘ A</kbd> y pega el siguiente código."
+      "source": "エディタには、Playgroundの見本が最初から入っています。この見本は使いません。Playgroundの側で中身が変わることがあり、直す場所を示せないためです。エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んで消してから、次の全文を入力します。",
+      "translation": "El editor ya trae desde el principio un ejemplo del Playground. Este ejemplo no se usa, porque el Playground puede cambiar su contenido y entonces no se puede indicar el lugar que hay que modificar. Haz clic dentro del editor, selecciona todo con <kbd>⌘ A</kbd>, bórralo y luego escribe el siguiente archivo completo."
     },
     {
-      "source": "Playgroundのエディタ · 全体を置き換える",
-      "translation": "Editor del Playground · Reemplazar todo"
+      "source": "Playgroundのエディタ · 全文",
+      "translation": "Editor del Playground · Archivo completo"
     },
     {
       "source": "<strong>Run</strong> をクリックします。",
@@ -955,12 +955,16 @@
       "translation": "Esta unidad tiene un total de 6 clases. A medida que avanzas en las clases, agregarás paquetes como <code>ex02</code>, <code>ex03</code>, etc., debajo del <code>src</code> del mismo proyecto <code>K01HelloKotlin</code> con los mismos pasos de ahora. Como no vuelves a crear el proyecto, puedes abrir y revisar el código que escribiste en las clases anteriores en cualquier momento."
     },
     {
-      "source": "⑦ ファイル全体を、次の内容にする",
-      "translation": "⑦ Cambia todo el archivo al siguiente contenido"
+      "source": "⑦ main.kt に、println の1行を書く",
+      "translation": "⑦ Escribe 1 línea de println en main.kt"
     },
     {
-      "source": "src/ex01/main.kt · 全体を置き換える",
-      "translation": "src/ex01/main.kt · Reemplazar todo"
+      "source": "<code>main.kt</code> は、いま作った新しいファイルなので、中身を次の全文にします。<code>package ex01</code> と <code>fun main()</code> の行は、⑥で見たとおり IntelliJ IDEA が入れています。自分で入力するのは、<code>{</code> と <code>}</code> のあいだの <code>println</code> の1行です。",
+      "translation": "Como <code>main.kt</code> es un archivo nuevo que acabas de crear, haz que su contenido quede igual al siguiente archivo completo. Las líneas <code>package ex01</code> y <code>fun main()</code> ya las agregó IntelliJ IDEA, como viste en ⑥. Lo que escribes tú es 1 línea: la de <code>println</code>, entre <code>{</code> y <code>}</code>."
+    },
+    {
+      "source": "src/ex01/main.kt · 全文",
+      "translation": "src/ex01/main.kt · Archivo completo"
     },
     {
       "source": "<code>fun main()</code> の行の左に出る緑の三角 ▷ をクリックし、<strong>'MainKt' の実行</strong> を選びます。下の <strong>実行</strong> ツールウィンドウに <code>Hello, Kotlin!</code> と <code>プロセスは終了コード 0 で終了しました</code> が出れば成功です。",
@@ -1047,12 +1051,28 @@
       "translation": "Posible reasignar. Puedes asignarle otro valor más adelante."
     },
     {
-      "source": "① ファイル全体を、次の内容に置き換える",
-      "translation": "① Cambia todo el archivo al siguiente contenido"
+      "source": "① println の行を、変数の宣言と表示に書き換える",
+      "translation": "① Cambia la línea de println por líneas que declaran variables y las muestran"
     },
     {
-      "source": "main.kt · 全体を置き換える",
-      "translation": "main.kt · Reemplazar todo"
+      "source": "STEP 02 で書いた <code>main.kt</code> を直します。<code>println(&quot;Hello, Kotlin!&quot;)</code> の行を消し、同じ場所に、変数の宣言と表示の行を足します。",
+      "translation": "Modifica el <code>main.kt</code> que escribiste en el STEP 02. Borra la línea <code>println(&quot;Hello, Kotlin!&quot;)</code> y, en el mismo lugar, agrega las líneas que declaran las variables y las muestran."
+    },
+    {
+      "source": "前のSTEPで書いたファイルを直すときは、このあとも、<strong>直す行に色を付けた枠</strong>で示します。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。",
+      "translation": "A partir de aquí, cuando haya que modificar un archivo que escribiste en un STEP anterior, los cambios se muestran en <strong>un recuadro que marca con colores las líneas que hay que modificar</strong>. Las <span1>líneas verdes en negrita</span1> son las líneas a agregar, y las <span2>líneas rojas tachadas</span2> son las líneas a borrar. Las <span3>líneas en gris</span3> son líneas que ya están en el archivo; no las escribas. Úsalas como referencia para encontrar el lugar que hay que modificar."
+    },
+    {
+      "source": "足す行",
+      "translation": "Líneas a agregar"
+    },
+    {
+      "source": "消す行",
+      "translation": "Líneas a borrar"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "Líneas que ya están"
     },
     {
       "source": "② 実行結果",
@@ -1155,36 +1175,12 @@
       "translation": "Si agregas <code>f</code> al final, se convierte en este tipo."
     },
     {
-      "source": "① 追加する場所を見つける",
-      "translation": "① Encuentra el lugar para agregar"
+      "source": "① 値の行と表示の行に、2行ずつ足す",
+      "translation": "① Agrega 2 líneas a las líneas de valores y 2 a las que los muestran"
     },
     {
-      "source": "場所の目印 · この枠は入力しません",
-      "translation": "Marca del lugar · No ingreses en este recuadro"
-    },
-    {
-      "source": "② 値の行に2行追加する",
-      "translation": "② Agrega 2 líneas a las líneas de valores"
-    },
-    {
-      "source": "追加① · val number1 = 1 の下",
-      "translation": "Adición ① · Debajo de val number1 = 1"
-    },
-    {
-      "source": "③ 表示の行に2行追加する",
-      "translation": "③ Agrega 2 líneas a las líneas de visualización"
-    },
-    {
-      "source": "追加② · println(number1) の下",
-      "translation": "Adición ② · Debajo de println(number1)"
-    },
-    {
-      "source": "貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。",
-      "translation": "Al pegar, IntelliJ IDEA alineará la sangría al principio de la línea. Está bien si está alineado con las otras líneas."
-    },
-    {
-      "source": "④ 実行結果",
-      "translation": "④ Salida"
+      "source": "STEP 03 で書いた <code>main.kt</code> に、緑の行を足します。足す場所は2か所で、<code>val number1 = 1</code> の下と、<code>println(number1)</code> の下です。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "Agrega las líneas verdes al <code>main.kt</code> que escribiste en el STEP 03. Los lugares donde agregas líneas son 2: debajo de <code>val number1 = 1</code> y debajo de <code>println(number1)</code>. Las líneas en gris son líneas que ya están, así que no las escribas."
     },
     {
       "source": "Runの結果 · この4行が出れば成功",
@@ -1195,8 +1191,8 @@
       "translation": "Aunque escribiste <code>3.0f</code>, aparece <code>3.0</code>. La <code>f</code> es una marca que determina el tipo del literal y no se incluye en el valor en sí. Es el mismo resultado que cuando ejecutas <code>System.out.println(3.0f)</code> en Java."
     },
     {
-      "source": "⑤ Java / Swift ではどう書くか（型）",
-      "translation": "⑤ Cómo se escribe en Java y Swift (Tipos)"
+      "source": "③ Java / Swift ではどう書くか（型）",
+      "translation": "③ Cómo se escribe en Java y Swift (Tipos)"
     },
     {
       "source": "<strong>Kotlinには、Javaのプリミティブ型とラッパークラスの区別がありません。</strong> 書くのは <code>Int</code> 1つだけです。<code>int</code> と <code>Integer</code> のどちらとしてバイトコードに落とすかは、コンパイラが決めます。",
@@ -1219,8 +1215,8 @@
       "translation": "En Swift no existe la forma de escribir <code>3.0f</code>. Si quieres que sea <code>Float</code> en Swift, lo especificas con una anotación de tipo como <code>let number3: Float = 3.0</code>. Kotlin es igual que Java en este aspecto, ya que puedes usar el sufijo <code>f</code>."
     },
     {
-      "source": "⑥ Java / Swift ではどう書くか（出力）",
-      "translation": "⑥ Cómo se escribe en Java y Swift (Salida)"
+      "source": "④ Java / Swift ではどう書くか（出力）",
+      "translation": "④ Cómo se escribe en Java y Swift (Salida)"
     },
     {
       "source": "<code>println</code> はKotlin標準ライブラリのトップレベル関数です。<code>System.out</code> のような入れ物も、<code>import</code> も要りません。",
@@ -1683,12 +1679,16 @@
       "translation": "Con solo agregar o no un carácter <code>?</code> al final del tipo, se convierte en un tipo diferente."
     },
     {
-      "source": "① ファイル全体を、次の内容にする",
-      "translation": "① Cambiar todo el archivo al siguiente contenido"
+      "source": "① main.kt の中身を、次の全文にする",
+      "translation": "① Hacer que el contenido de main.kt quede igual al siguiente archivo completo"
     },
     {
-      "source": "src/ex02/main.kt · 全体を置き換える",
-      "translation": "src/ex02/main.kt · Reemplazar todo"
+      "source": "<code>main.kt</code> は、前のSTEPで作った新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "Como <code>main.kt</code> es un archivo nuevo que creaste en el STEP anterior, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces."
+    },
+    {
+      "source": "src/ex02/main.kt · 全文",
+      "translation": "src/ex02/main.kt · Archivo completo"
     },
     {
       "source": "ここでは型を省かずに <code>: String</code> と <code>: String?</code> を書きます。1コマ目の <code>val number1 = 1</code> では型推論に任せましたが、この回は<strong>型に <code>?</code> が付いているかどうか</strong>が主題なので、画面に見える形で書きます。",
@@ -1827,8 +1827,12 @@
       "translation": "<strong><code>?.</code> significa “si es <code>null</code>, devuelve <code>null</code> sin llamarlo”.</strong> La bifurcación de llamar o no llamar está contenida en un solo símbolo."
     },
     {
-      "source": "② ファイル全体を、次の内容にする",
-      "translation": "② Cambiar todo el archivo al siguiente contenido"
+      "source": "② name2 を使う3行を足す",
+      "translation": "② Agregar las 3 líneas que usan name2"
+    },
+    {
+      "source": "STEP 09 で書いた <code>main.kt</code> に、緑の3行を足します。足す場所は、<code>var name2: String? = null</code> の下です。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "Agrega las 3 líneas verdes al <code>main.kt</code> que escribiste en el STEP 09. El lugar donde las agregas es debajo de <code>var name2: String? = null</code>. Las líneas en gris son líneas que ya están, así que no las escribas."
     },
     {
       "source": "③ 実行結果",
@@ -2247,8 +2251,8 @@
       "translation": "Archivo a modificar: src/ex03/main.kt"
     },
     {
-      "source": "src/ex03/main.kt · 全体を置き換える",
-      "translation": "src/ex03/main.kt · Reemplazar todo"
+      "source": "src/ex03/main.kt · 全文",
+      "translation": "src/ex03/main.kt · Archivo completo"
     },
     {
       "source": "<code>fun main()</code> と <code>fun sum(…)</code> は、どちらもファイルの直下に並べます。<strong>入れ子にしません。</strong> 書く順番は自由で、<code>sum</code> を <code>main</code> より下に書いても、<code>main</code> から呼べます。",
@@ -2369,6 +2373,14 @@
     {
       "source": "戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。",
       "translation": "Vas a escribir una función sin valor de retorno. En Kotlin, <strong>no escribes nada</strong> al final. Muestra el <code>3</code> en la segunda línea y completa la salida."
+    },
+    {
+      "source": "① sum2 の呼び出しと宣言を足す",
+      "translation": "① Agregar la llamada y la declaración de sum2"
+    },
+    {
+      "source": "STEP 15 で書いた <code>main.kt</code> に、緑の行を足します。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "Agrega las líneas verdes al <code>main.kt</code> que escribiste en el STEP 15. Las líneas en gris son líneas que ya están, así que no las escribas."
     },
     {
       "source": "足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。",
@@ -2731,15 +2743,15 @@
       "translation": "Haz clic derecho en el paquete <code>ex05</code> creado, y selecciona <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin). Para el nombre, ingresa <code>main</code>, y para el tipo, selecciona <strong>ファイル</strong> (Archivo)."
     },
     {
-      "source": "<code>src/ex05/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex05</code> が2行にならないようにします。",
-      "translation": "Abre <code>src/ex05/main.kt</code> y reemplaza su contenido con el siguiente código terminado. Asegúrate de que <code>package ex05</code> al principio no ocupe dos líneas."
+      "source": "<code>src/ex05/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "Abre <code>src/ex05/main.kt</code>. Como es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces."
     },
     {
       "source": "このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。",
       "translation": "Ejecuta desde el símbolo ▷ a la izquierda de <code>fun main()</code> en este archivo. No lo confundas con el botón de ejecución de las prácticas anteriores."
     },
     {
-      "source": "src/ex05/main.kt · ファイル全体",
+      "source": "src/ex05/main.kt · 全文",
       "translation": "src/ex05/main.kt · Archivo completo"
     },
     {
@@ -2807,11 +2819,11 @@
       "translation": "Haz clic derecho en el paquete <code>ex06</code> creado, y selecciona <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin). Para el nombre, ingresa <code>main</code>, y para el tipo, selecciona <strong>ファイル</strong> (Archivo)."
     },
     {
-      "source": "<code>src/ex06/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex06</code> が2行にならないようにします。",
-      "translation": "Abre <code>src/ex06/main.kt</code> y reemplaza su contenido con el siguiente código terminado. Asegúrate de que <code>package ex06</code> al principio no ocupe dos líneas."
+      "source": "<code>src/ex06/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "Abre <code>src/ex06/main.kt</code>. Como es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces."
     },
     {
-      "source": "src/ex06/main.kt · ファイル全体",
+      "source": "src/ex06/main.kt · 全文",
       "translation": "src/ex06/main.kt · Archivo completo"
     },
     {
@@ -2875,11 +2887,11 @@
       "translation": "Haz clic derecho en el paquete <code>ex04</code> creado, y selecciona <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin). Para el nombre, ingresa <code>main</code>, y para el tipo, selecciona <strong>ファイル</strong> (Archivo)."
     },
     {
-      "source": "<code>src/ex04/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex04</code> が2行にならないようにします。",
-      "translation": "Abre <code>src/ex04/main.kt</code> y reemplaza su contenido con el siguiente código terminado. Asegúrate de que <code>package ex04</code> al principio no ocupe dos líneas."
+      "source": "<code>src/ex04/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。",
+      "translation": "Abre <code>src/ex04/main.kt</code>. Como es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces."
     },
     {
-      "source": "src/ex04/main.kt · ファイル全体",
+      "source": "src/ex04/main.kt · 全文",
       "translation": "src/ex04/main.kt · Archivo completo"
     },
     {
@@ -3107,8 +3119,8 @@
       "translation": "Haz clic derecho en <code>ex08</code> y selecciona <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin). Para el nombre, escribe <code>Foo</code> y para el tipo, elige <strong>ファイル</strong> (Archivo). Empieza con una <code>F</code> mayúscula."
     },
     {
-      "source": "できた <code>Foo.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
-      "translation": "Reemplaza todo el contenido del <code>Foo.kt</code> creado con lo siguiente y haz Run desde el botón de ejecución a la izquierda de <code>fun main()</code>."
+      "source": "できた <code>Foo.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "Como el <code>Foo.kt</code> que se creó es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces. Cuando termines de escribir, haz Run desde el botón de ejecución a la izquierda de <code>fun main()</code>."
     },
     {
       "source": "Runツールウィンドウに <code>ex08</code> が1行出ます。別の出力が出たときは、上のツールバーではなく、いま開いた <code>Foo.kt</code> の <code>fun main()</code> の左から実行し直します。",
@@ -3139,12 +3151,16 @@
       "translation": "Comprueba en las 6 líneas de la consola que se ejecutan procesos diferentes al asignar y al leer <code>foo.counter</code>. Esta sintaxis corresponde a getter / setter en Java y a computed property en Swift."
     },
     {
-      "source": "① Foo.kt 全体を次の内容にする",
-      "translation": "① Reemplazar todo Foo.kt con el siguiente contenido"
+      "source": "① Foo.kt に、クラスと main の中身を書く",
+      "translation": "① Escribir la clase y el contenido de main en Foo.kt"
     },
     {
-      "source": "<code>src/ex08/Foo.kt</code> を開き、先ほどの <code>println(\"ex08\")</code> を含めて、ファイル全体を置き換えます。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
-      "translation": "Abre <code>src/ex08/Foo.kt</code> y reemplaza todo el archivo, incluyendo el <code>println(\"ex08\")</code> anterior. Coloca <code>class Foo</code> y <code>fun main()</code> directamente en la raíz del archivo."
+      "source": "<code>src/ex08/Foo.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println(\"ex08\")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。",
+      "translation": "Abre <code>src/ex08/Foo.kt</code> y modifícalo como indica el siguiente recuadro. El <code>println(\"ex08\")</code> anterior es una línea provisional para comprobar que funciona, así que bórrala. Agrega las líneas verdes y borra las líneas rojas. Las líneas en gris son líneas que ya están, así que no las escribas. Coloca <code>class Foo</code> y <code>fun main()</code> directamente en la raíz del archivo."
+    },
+    {
+      "source": "照合用：ここまでの <code>Foo.kt</code> の全文",
+      "translation": "Para comparar: el archivo <code>Foo.kt</code> completo hasta este punto"
     },
     {
       "source": "src/ex08/Foo.kt · 完成コード",
@@ -3227,8 +3243,8 @@
       "translation": "Haz clic derecho en <code>ex09</code>, y en <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin) escribe <code>main</code> para el nombre y <strong>ファイル</strong> (Archivo) para el tipo."
     },
     {
-      "source": "<code>main.kt</code> 全体を次の内容にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
-      "translation": "Reemplaza todo <code>main.kt</code> con lo siguiente. Al final, <code>Person</code> y <code>Person2</code> están <strong>fuera</strong> del paréntesis de cierre de <code>main</code>."
+      "source": "<code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。",
+      "translation": "Como <code>main.kt</code> es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces. Al final, <code>Person</code> y <code>Person2</code> están <strong>fuera</strong> de la llave de cierre de <code>main</code>."
     },
     {
       "source": "このファイルの <code>fun main()</code> の左からRunします。",
@@ -3336,7 +3352,7 @@
     },
     {
       "source": "次の3行を、<code>main</code> の最後の <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> の<strong>あと、<code>main</code> の閉じかっこの前</strong>に追加してRunします。",
-      "translation": "Agrega las siguientes 3 líneas al último <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> de <code>main</code>, <strong>después de este y antes del paréntesis de cierre de <code>main</code></strong>, y haz Run."
+      "translation": "Agrega las siguientes 3 líneas al último <code>println(\"copyYamada.hashCode: $copyYamadaHash\")</code> de <code>main</code>, <strong>después de este y antes de la llave de cierre de <code>main</code></strong>, y haz Run."
     },
     {
       "source": "元の8行のあとに、次の2行だけが増えます。<code>showName(null)</code> では条件を満たさないため、出力は増えません。",
@@ -3387,8 +3403,8 @@
       "translation": "Haz clic derecho en <code>ex07</code>, y en <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin) escribe <code>main</code> para el nombre y <strong>ファイル</strong> (Archivo) para el tipo."
     },
     {
-      "source": "ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。",
-      "translation": "Reemplaza todo el archivo con lo siguiente y haz Run desde la izquierda de este <code>fun main()</code>."
+      "source": "新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。",
+      "translation": "Como es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces. Cuando termines de escribir, haz Run desde la izquierda de este <code>fun main()</code>."
     },
     {
       "source": "src/ex07/main.kt · 完成コード",
@@ -3611,8 +3627,8 @@
       "translation": "Haz clic derecho en <code>ex10</code> y en <strong>新規 → Kotlin ファイル/クラス</strong> (Nuevo → Clase/archivo de Kotlin), establece el nombre en <code>main</code> y el tipo en <strong>ファイル</strong> (Archivo)."
     },
     {
-      "source": "<code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。",
-      "translation": "Reemplaza todo el contenido de <code>main.kt</code> con lo siguiente, y haz Run desde el botón de ejecución a la izquierda de <code>fun main()</code>."
+      "source": "<code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。",
+      "translation": "Como <code>main.kt</code> es un archivo nuevo, haz que su contenido quede igual al siguiente archivo completo. Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces. Cuando termines de escribir, haz Run desde el botón de ejecución a la izquierda de <code>fun main()</code>."
     },
     {
       "source": "Runツールウィンドウに <code>ex10</code> が1行出ます。別の出力が出たときは、いま開いた <code>ex10/main.kt</code> の <code>fun main()</code> の左から実行し直します。",
@@ -3643,12 +3659,16 @@
       "translation": "A partir de la lista con el mismo nombre, creas una lista de cadenas con <code>San</code> agregado y una lista de <code>Person</code>. Es la forma correspondiente al <code>map</code> de la API Stream de Java y al <code>map</code> de arreglos de Swift."
     },
     {
-      "source": "① main.kt 全体を次の内容にする（10分）",
-      "translation": "① Cambiar todo el contenido de main.kt por lo siguiente (10 min)"
+      "source": "① main.kt に、2つの map を書く（10分）",
+      "translation": "① Escribir dos map en main.kt (10 min)"
     },
     {
-      "source": "<code>src/ex10/main.kt</code> を開き、先ほどの <code>println(\"ex10\")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
-      "translation": "Abre <code>src/ex10/main.kt</code> y reemplaza todo el contenido, incluido el <code>println(\"ex10\")</code> anterior. El último <code>data class Person(...)</code> está fuera del paréntesis de cierre de <code>main</code>."
+      "source": "<code>src/ex10/main.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println(\"ex10\")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。",
+      "translation": "Abre <code>src/ex10/main.kt</code> y modifícalo como indica el siguiente recuadro. El <code>println(\"ex10\")</code> anterior es una línea provisional para comprobar que funciona, así que bórrala. Agrega las líneas verdes y borra las líneas rojas. Las líneas en gris son líneas que ya están, así que no las escribas. El último <code>data class Person(...)</code> está fuera de la llave de cierre de <code>main</code>."
+    },
+    {
+      "source": "照合用：ここまでの <code>main.kt</code> の全文",
+      "translation": "Para comparar: el archivo <code>main.kt</code> completo hasta este punto"
     },
     {
       "source": "src/ex10/main.kt · 完成コード",
@@ -3855,8 +3875,8 @@
       "translation": "⑤ Cambiar counter antes y después de la primera vez (8 min)"
     },
     {
-      "source": "<code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。",
-      "translation": "Deja <code>class Foo</code> tal como está y reemplaza solo <code>main</code> a la siguiente forma."
+      "source": "<code>class Foo</code> はそのままにして、<code>main</code> に緑の2行を一時的に足します。薄い字の行は、すでにある行なので入力しません。",
+      "translation": "Deja <code>class Foo</code> tal como está y agrega temporalmente las 2 líneas verdes a <code>main</code>. Las líneas en gris son líneas que ya están, así que no las escribas."
     },
     {
       "source": "Runすると、次の3行が出ます。",

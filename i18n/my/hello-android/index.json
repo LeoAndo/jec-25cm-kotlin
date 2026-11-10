@@ -219,8 +219,12 @@
       "translation": "အတန်းထဲတွင် အသုံးပြုမည့် library ဗားရှင်းများကို တူညီအောင် ညှိရန်"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "Panda 2 အချင်းချင်းဖြစ်သော်လည်း ဖန်တီးသည့် နေ့စွဲပေါ်မူတည်၍ library ဗားရှင်းများ ကွဲပြားနိုင်ပါသည်။ ဘယ်ဘက်ရှိ Project ရလဒ်ပြဝင်းဒိုး၏ ပြသမှုကို <strong>Project</strong> သို့ ပြောင်းလဲ၍ <code>gradle → libs.versions.toml</code> ကို ဖွင့်ကာ၊ အကြောင်းအရာ တစ်ခုလုံးကို အောက်ပါအတိုင်း အစားထိုးပါ။ ၎င်းမှာ Kotlin ၏ ကုဒ် မဟုတ်ဘဲ၊ အသုံးပြုမည့် အစိတ်အပိုင်းများနှင့် ဗားရှင်းများကို သတ်မှတ်ပေးသည့် ဆက်တင်ဖြစ်ပါသည်။"
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "Panda 2 အချင်းချင်းဖြစ်သော်လည်း ဖန်တီးသည့် နေ့စွဲပေါ်မူတည်၍ library ဗားရှင်းများ ကွဲပြားနိုင်ပါသည်။ ဘယ်ဘက်ရှိ Project tool window ၏ ပြသမှုကို <strong>Project</strong> သို့ ပြောင်းလဲ၍ <code>gradle → libs.versions.toml</code> ကို ဖွင့်ကာ၊ အစပိုင်းရှိ <code>[versions]</code> ၏ ကိန်းဂဏန်းများကို အောက်ပါတို့နှင့် နှိုင်းယှဉ်ကြည့်ပါ။ ကိန်းဂဏန်း မတူသော စာကြောင်းများကိုသာ အောက်ပါ ကိန်းဂဏန်းများအတိုင်း ပြောင်းရေးပါ။ <code>[libraries]</code> မှစ၍ အောက်ပိုင်းကို မပြောင်းပါနှင့်။ ၎င်းမှာ Kotlin ၏ ကုဒ် မဟုတ်ဘဲ၊ အသုံးပြုမည့် အစိတ်အပိုင်းများနှင့် ဗားရှင်းများကို သတ်မှတ်ပေးသည့် ဆက်တင်ဖြစ်ပါသည်။"
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "တိုက်စစ်ရန်: <code>libs.versions.toml</code> ၏ အပြည့်အစုံ"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -355,8 +359,8 @@
       "translation": "အယ်ဒီတာ၏ ညာဘက်အပေါ်ရှိ <strong>Code</strong> ကို ရွေးပါ။ အိုင်ကွန်များသာ ပေါ်နေလျှင် မောက်စ်ကို တင်ကြည့်ပြီး Code ကို ရှာပါ။"
     },
     {
-      "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
-      "translation": "အကြောင်းအရာတစ်ခုလုံးကို အောက်ပါ XML ဖြင့် အစားထိုးပါ။ <code>MainActivity.kt</code> ထဲသို့ မထည့်ပါနှင့်။"
+      "source": "生成されたXMLは使わないので、内容全体を次のXMLに入れ替えます。<code>MainActivity.kt</code> には貼りません。",
+      "translation": "အလိုအလျောက် ဖန်တီးထားသော XML ကို မသုံးသောကြောင့် အကြောင်းအရာတစ်ခုလုံးကို အောက်ပါ XML ဖြင့် အစားထိုးပါ။ <code>MainActivity.kt</code> ထဲသို့ မထည့်ပါနှင့်။"
     },
     {
       "source": "activity_main.xml · 全文",

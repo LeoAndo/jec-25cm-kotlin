@@ -51,8 +51,8 @@
       "translation": "STEP 04 ربط الإدخال وSpinner بـ Kotlin"
     },
     {
-      "source": "STEP 05 11コマ目の画面を確認して保存する",
-      "translation": "STEP 05 التحقق من شاشة الحصة 11 وحفظها"
+      "source": "STEP 05 11コマ目の画面を確認する",
+      "translation": "STEP 05 التحقق من شاشة الحصة 11"
     },
     {
       "source": "STEP 06 12コマ目：入力画面から再開する",
@@ -75,8 +75,8 @@
       "translation": "STEP 10 تمرير بيانات ثابتة إلى RecyclerView"
     },
     {
-      "source": "STEP 11 12コマ目の2行を確認して保存する",
-      "translation": "STEP 11 التحقق من السطرين في الحصة 12 وحفظهما"
+      "source": "STEP 11 12コマ目の2行を確認する",
+      "translation": "STEP 11 التحقق من السطرين في الحصة 12"
     },
     {
       "source": "STEP 12 13コマ目：2行の画面から再開する",
@@ -243,24 +243,32 @@
       "translation": "تجهيز الإعدادات المستخدمة في الاتصال والقائمة"
     },
     {
-      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
-      "translation": "حتى في Panda 2، تختلف إصدارات المكتبات بحسب تاريخ الإنشاء. قم بالمزامنة بعد <strong>استبدال ملفات الإعدادات الثلاثة التالية بالكامل</strong>. يوجد <code>build.gradle.kts</code> في موضعين، فتحقق من المسار. ولا تطبّق بنية مولّدة بإصدار آخر بمجرد خفض رقم AGP."
+      "source": "通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。",
+      "translation": "أضف المكتبات المستخدمة في الاتصال والقائمة <strong>إلى ملفات الإعدادات الثلاثة التالية أولا</strong>، ثم قم بالمزامنة. يوجد <code>build.gradle.kts</code> في موضعين، فتحقق من المسار."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "تعرض الإطارات التالية من الملف <strong>المواضع التي تعدّلها فقط</strong>. <span1>الأسطر الخضراء بخط عريض</span1> هي أسطر للإضافة، و<span2>الأسطر الحمراء المشطوبة</span2> هي أسطر للحذف. أما <span3>الأسطر ذات اللون الباهت</span3> فهي أسطر موجودة مسبقا في الملف، فلا تكتبها. استخدمها علامة للعثور على موضع التعديل. والرمز <code>⋮</code> يعني أن هناك أسطرا في الوسط لا تتغيّر، ولذلك لم تُعرض هنا."
     },
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "الملف الأول هو <code>gradle/libs.versions.toml</code>. يُستخدم Ktor للاتصال بالشبكة، وserialization لتحويل JSON، وRecyclerView وCardView للقائمة، وlifecycle لبدء الاتصال المرتبط بالشاشة."
     },
     {
-      "source": "libs.versions.toml · 全文",
-      "translation": "libs.versions.toml · النص الكامل"
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "في <code>[versions]</code>، قارن أيضا الأرقام الموجودة في الأسطر ذات اللون الباهت بما في ملفك. وذلك لأن إصدارات المكتبات تختلف بحسب تاريخ الإنشاء حتى في Panda 2. في الأسطر التي يختلف فيها الرقم، غيّره إلى الرقم المكتوب هنا. وإذا أنشأت المشروع بإصدار غير Panda 2، فاعرضه على المعلم قبل التغيير. إذا خفضت رقم <code>agp</code> وحده، فلن يتوافق مع الإعدادات الأخرى."
+    },
+    {
+      "source": "足す行",
+      "translation": "أسطر للإضافة"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "أسطر موجودة مسبقا"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
       "translation": "الملف التالي هو <code>build.gradle.kts</code> مباشرة أسفل المشروع."
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · النص الكامل"
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
@@ -271,8 +279,28 @@
       "translation": "اختر <strong>Sync Now</strong>، وإذا لم يظهر فاختر <strong>File → Sync Project with Gradle Files</strong>، وانتظر حتى يختفي الخطأ الأحمر. يتضمن AGP 9.1.1 وظائف بناء Kotlin مسبقا، لذا لا تضف <code>org.jetbrains.kotlin.android</code> منفصلا. تشير <code>kotlin</code> في الكتالوج هنا إلى إصدار ملحق serialization."
     },
     {
-      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
-      "translation": "بعد ذلك، استبدل النص الكامل لـ <code>app/src/main/AndroidManifest.xml</code>. يوضع <code>INTERNET</code> خارج <code>application</code>، والخاصية <code>windowSoftInputMode</code> هي سمة لـ <code>activity</code>. لن يظهر مربع حوار أذونات وقت التشغيل للاتصال بالشبكة."
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported=\"true\"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "بعد ذلك، عدّل <code>app/src/main/AndroidManifest.xml</code>. يوضع <code>INTERNET</code> خارج <code>application</code>، والخاصية <code>windowSoftInputMode</code> هي سمة لـ <code>activity</code>. أما سطر <code>android:exported=\"true\"</code> فيظهر ضمن «أسطر للحذف» وضمن «أسطر للإضافة» معا، لأنك تنقل <code>&gt;</code> الذي في آخره إلى السطر التالي. لن يظهر مربع حوار أذونات وقت التشغيل للاتصال بالشبكة."
+    },
+    {
+      "source": "消す行",
+      "translation": "أسطر للحذف"
+    },
+    {
+      "source": "照合用：直したあとの4つのファイルの全文",
+      "translation": "للمطابقة: النص الكامل للملفات الأربعة بعد التعديل"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · النص الكامل"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · النص الكامل"
+    },
+    {
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · النص الكامل"
     },
     {
       "source": "AndroidManifest.xml · 全文",
@@ -283,8 +311,8 @@
       "translation": "يُستخدم <code>@Serializable</code> الذي ستستخدمه في الحصة القادمة لتحويل JSON، تماما مثل <code>Codable</code> في Swift. ولإمكانية توليد معالجة التحويل تلك، نقوم هذه المرة بضبط الملحق أيضا بالإضافة إلى المكتبة."
     },
     {
-      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
-      "translation": "حُفظت الإعدادات الثلاثة وملف Manifest، واختفى الخطأ الأحمر في مزامنة Gradle."
+      "source": "3つの設定とManifestに足す行が入り、Gradle同期の赤いエラーが消えている。",
+      "translation": "الأسطر المطلوب إضافتها موجودة في الإعدادات الثلاثة وملف Manifest، واختفى الخطأ الأحمر في مزامنة Gradle."
     },
     {
       "source": "STEP 03 · 11コマ目 · 目安 20分",
@@ -307,8 +335,8 @@
       "translation": "انقر <strong>Run ▶</strong> باستخدام إعداد التشغيل <strong>app</strong> وجهاز AVD المحدّد. وتحقق أولا من ظهور <code>Hello World!</code>."
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
-      "translation": "افتح <code>app/src/main/res/layout/activity_main.xml</code>، واستبدل النص بالكامل من <strong>Code</strong> في أعلى اليمين."
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "افتح <code>app/src/main/res/layout/activity_main.xml</code>، وانتقل إلى <strong>Code</strong> في أعلى اليمين. لن تستخدم شاشة <code>Hello World!</code> المولّدة، لذا استبدل محتوى الملف بالنص الكامل التالي."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +367,12 @@
       "translation": "ربط الإدخال وSpinner بـ Kotlin"
     },
     {
-      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
-      "translation": "استبدل النص الكامل لـ <code>MainActivity.kt</code> داخل الحزمة بـ <strong>الشيفرة المرحلية للحصة 11</strong> التالية. ضمّن عبارات import أيضا. قبل ربطه بالبحث لاحقا، تحقق من الإدخال والخيارات."
+      "source": "パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "افتح <code>MainActivity.kt</code> داخل الحزمة، وأضف الأسطر الخضراء لتحصل على <strong>الشيفرة المرحلية للحصة 11</strong>. وهناك أسطر للإضافة ضمن أسطر import أيضا. الأسطر ذات اللون الباهت هي أسطر موجودة منذ إنشاء المشروع. قبل ربطه بالبحث لاحقا، تحقق من الإدخال والخيارات."
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "للمطابقة: النص الكامل لـ <code>MainActivity.kt</code> حتى هذه النقطة"
     },
     {
       "source": "04-MainActivity.kt · 全文",
@@ -403,20 +435,20 @@
       "translation": "STEP 05 · الحصة 11 · حوالي 3 دقائق"
     },
     {
-      "source": "11コマ目の画面を確認して保存する",
-      "translation": "التحقق من شاشة الحصة 11 وحفظها"
+      "source": "11コマ目の画面を確認する",
+      "translation": "التحقق من شاشة الحصة 11"
     },
     {
-      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
-      "translation": "هذه آخر 3 دقائق. إذا مسحت كلمة البحث وضغطت يظهر تنبيه، وإذا أدخلت <code>kotlin</code> وضغطت تظهر 「入力: kotlin」 (الإدخال: kotlin). وبقاء القائمة فارغة أمر طبيعي. احفظ من <strong>File → Save All</strong>. في المرة القادمة، ستفتح هذا المشروع نفسه."
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次はこの同じプロジェクトを開きます。",
+      "translation": "هذه آخر 3 دقائق. إذا مسحت كلمة البحث وضغطت يظهر تنبيه، وإذا أدخلت <code>kotlin</code> وضغطت تظهر 「入力: kotlin」 (الإدخال: kotlin). وبقاء القائمة فارغة أمر طبيعي. يحفظ Android Studio ما تكتبه تلقائيا، لذا لا تحتاج إلى إجراء عملية الحفظ. في المرة القادمة، ستفتح هذا المشروع نفسه."
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
       "translation": "كلاهما يسجّل معالجة عند النقر. الدالة <code>search</code> الحالية تقتصر على التحقق من الإدخال فقط. أما معالجة الاتصال بالشبكة فسنضيفها في الحصة 13."
     },
     {
-      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
-      "translation": "حُفظ MainActivity.kt، وتظهر رسالة Toast للتحقق من الإدخال، وتظل القائمة فارغة."
+      "source": "入力確認のToastが出て、一覧は空のままである。",
+      "translation": "تظهر رسالة Toast للتحقق من الإدخال، وتظل القائمة فارغة."
     },
     {
       "source": "STEP 06 · 12コマ目 · 目安 5分",
@@ -451,8 +483,8 @@
       "translation": "إنشاء data class المطابق لـ JSON"
     },
     {
-      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "انقر بزر الفأرة الأيمن على الحزمة، واختر <strong>New → Kotlin Class/File</strong>، واجعل الاسم <code>GithubSearchResponse</code> والنوع <strong>File</strong>. استبدل النص الكامل لملف <code>GithubSearchResponse.kt</code> الناتج. الشيفرة التالية مكتوبة بصيغة 3 أصناف في ملف واحد."
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "انقر بزر الفأرة الأيمن على الحزمة، واختر <strong>New → Kotlin Class/File</strong>، واجعل الاسم <code>GithubSearchResponse</code> والنوع <strong>File</strong>. الملف <code>GithubSearchResponse.kt</code> الناتج ملف جديد، لذا اجعل محتواه النص الكامل التالي. الشيفرة التالية مكتوبة بصيغة 3 أصناف في ملف واحد."
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -503,8 +535,8 @@
       "translation": "إنشاء سطر واحد من القائمة في XML"
     },
     {
-      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
-      "translation": "انقر بزر الفأرة الأيمن على <code>app/src/main/res/layout</code> واختر <strong>New → Layout Resource File</strong>. أنشئ الملف مع تعيين File name إلى <code>list_item</code>. يمكن ترك Root element على قيمته الافتراضية لأنك ستستبدل النص بالكامل بعد الإنشاء. بدّل إلى عرض Code، واستبدل النص بالكامل بما يلي."
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。",
+      "translation": "انقر بزر الفأرة الأيمن على <code>app/src/main/res/layout</code> واختر <strong>New → Layout Resource File</strong>. أنشئ الملف مع تعيين File name إلى <code>list_item</code>. يمكن ترك Root element على قيمته الافتراضية. لن تستخدم المحتوى الموجود مباشرة بعد الإنشاء، لذا بدّل إلى عرض Code، واستبدل محتوى الملف بالنص الكامل التالي."
     },
     {
       "source": "list_item.xml · 全文",
@@ -531,8 +563,8 @@
       "translation": "ربط البيانات بسطر واحد باستخدام Adapter"
     },
     {
-      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "انقر بزر الفأرة الأيمن على الحزمة واختر <strong>New → Kotlin Class/File</strong>. اجعل الاسم <code>RepositoryAdapter</code> والنوع <strong>File</strong>، واستبدل النص كاملا بما يلي."
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "انقر بزر الفأرة الأيمن على الحزمة واختر <strong>New → Kotlin Class/File</strong>. اجعل الاسم <code>RepositoryAdapter</code> والنوع <strong>File</strong>. ولأنه ملف جديد، اجعل محتواه النص الكامل التالي."
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -587,8 +619,8 @@
       "translation": "تمرير بيانات ثابتة إلى RecyclerView"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
-      "translation": "استبدل النص الكامل لـ <code>MainActivity.kt</code> بالشيفرة المرحلية للحصة 12 التالية. مع الإبقاء على التحقق من الإدخال من الحصة 11، يُضاف هنا إنشاء <code>repositoryAdapter</code> والربط مع RecyclerView واستدعاء <code>submitList</code> للبيانات الثابتة."
+      "source": "<code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。",
+      "translation": "أضف الأسطر الخضراء إلى <code>MainActivity.kt</code> لتحصل على الشيفرة المرحلية للحصة 12. مع الإبقاء على التحقق من الإدخال من الحصة 11، يُضاف هنا إنشاء <code>repositoryAdapter</code> والربط مع RecyclerView واستدعاء <code>submitList</code> للبيانات الثابتة. مواضع الإضافة ثلاثة: أسطر import، والخصائص، و<code>onCreate</code>."
     },
     {
       "source": "10-MainActivity.kt · 全文",
@@ -623,20 +655,20 @@
       "translation": "STEP 11 · الحصة 12 · حوالي 3 دقائق"
     },
     {
-      "source": "12コマ目の2行を確認して保存する",
-      "translation": "التحقق من السطرين في الحصة 12 وحفظهما"
+      "source": "12コマ目の2行を確認する",
+      "translation": "التحقق من السطرين في الحصة 12"
     },
     {
-      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
-      "translation": "هذه آخر 3 دقائق. طابق العناصر الأربعة في السطرين مع البيانات الثابتة، وتحقق من أن السطرين في القائمة لا يتغيّران حتى عند تغيير الإدخال والبحث. احفظ من <strong>File → Save All</strong>. لا توجد شيفرة للاتصال بالشبكة بعد. في المرة القادمة، سنضيف ملفا يستدعي API إلى هذا المشروع نفسه."
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "هذه آخر 3 دقائق. طابق العناصر الأربعة في السطرين مع البيانات الثابتة، وتحقق من أن السطرين في القائمة لا يتغيّران حتى عند تغيير الإدخال والبحث. لا توجد شيفرة للاتصال بالشبكة بعد. في المرة القادمة، سنضيف ملفا يستدعي API إلى هذا المشروع نفسه."
     },
     {
       "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
       "translation": "تماما كـ generics في Java، يمثّل <code>&lt;GithubRepository&gt;</code> نوع العناصر. في الوقت الحالي نستخدم قيما ثابتة، وفي الخطوة القادمة سنمرر قائمة من النوع نفسه تم الحصول عليها من الاتصال بالشبكة إلى الـ Adapter نفسه."
     },
     {
-      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
-      "translation": "السطران مطابقان للبيانات الثابتة، وحُفظت ملفات MainActivity.kt والنموذج وAdapter وملفا XML الاثنان."
+      "source": "2行が固定データどおりで、ProjectツールウィンドウにMainActivity.kt・モデル・Adapter・2つのXMLが並んでいる。",
+      "translation": "السطران مطابقان للبيانات الثابتة، وتظهر في نافذة الأدوات Project ملفات MainActivity.kt والنموذج وAdapter وملفا XML الاثنان."
     },
     {
       "source": "STEP 12 · 13コマ目 · 目安 5分",
@@ -671,8 +703,8 @@
       "translation": "إنشاء ملف لاستدعاء Search API بـ Ktor"
     },
     {
-      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
-      "translation": "من الحزمة، اختر <strong>New → Kotlin Class/File</strong>. اجعل الاسم <code>GithubApi</code> والنوع <strong>File</strong>، واستبدل النص بالكامل."
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "من الحزمة، اختر <strong>New → Kotlin Class/File</strong>. اجعل الاسم <code>GithubApi</code> والنوع <strong>File</strong>. ولأنه ملف جديد، اجعل محتواه النص الكامل التالي."
     },
     {
       "source": "GithubApi.kt · 全文",
@@ -719,8 +751,8 @@
       "translation": "وجهة الإرسال هي <code>https://api.github.com/search/repositories</code>. المعامل <code>q</code> هو كلمة البحث، و<code>sort</code> هو ترتيب الفرز، و<code>per_page</code> هو الحد الأقصى لما يتم استلامه في المرة الواحدة. يستلم هذا التطبيق حتى 30 عنصرا فقط من الصفحة الأولى، ولا يجلب الصفحة التالية عند التمرير. لا حاجة إلى إدخال مفتاح API أو تسجيل الدخول."
     },
     {
-      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
-      "translation": "مجرد حفظ هذا الملف لا يبدأ الاتصال بالشبكة. ستكتب جهة الاستدعاء في STEP القادم."
+      "source": "このファイルを書いただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "مجرد كتابة هذا الملف لا يبدأ الاتصال بالشبكة. ستكتب جهة الاستدعاء في STEP القادم."
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
@@ -739,8 +771,8 @@
       "translation": "ربط الإدخال والاتصال والقائمة"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "استبدل النص الكامل لـ <code>MainActivity.kt</code> بـ <strong>الشيفرة المكتملة</strong> التالية. احذف <code>submitList(listOf(…))</code> الخاصة بالبيانات الثابتة، واستدعِ الاتصال من داخل <code>search</code>. وتبقى معالجة الحواف الداخلية (insets) المولّدة والحصول على عناصر View وتركيب Spinner."
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。",
+      "translation": "في <code>MainActivity.kt</code>، أضف الأسطر الخضراء واحذف الأسطر الحمراء لتحصل على <strong>الشيفرة المكتملة</strong>. احذف <code>submitList(listOf(…))</code> الخاصة بالبيانات الثابتة، واستدعِ الاتصال من داخل <code>search</code>. وتبقى معالجة الحواف الداخلية (insets) المولّدة والحصول على عناصر View وتركيب Spinner. مواضع التعديل خمسة: أسطر import، والخصائص، و<code>onCreate</code>، و<code>search</code>، و<code>setLoading</code> الجديدة التي تضيفها."
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -923,8 +955,8 @@
       "translation": "ما يستخدمه Adapter هو <code>==</code> لمقارنة المحتوى. ومقارنة المراجع في Kotlin تكون بـ <code>===</code>. يُنشأ كل سطر على الشاشة من القائمة التي أعادها API، ولا يُعاد فرزها داخل الجهاز."
     },
     {
-      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
-      "translation": "تصطف الأرقام تنازليا بحسب عدد النجوم، وحُفظت ملفات Kotlin الأربعة وملفا XML الاثنان."
+      "source": "スター数順で数値が降順に並び、Projectツールウィンドウに4つのKotlinファイルと2つのXMLが並んでいる。",
+      "translation": "تصطف الأرقام تنازليا بحسب عدد النجوم، وتظهر في نافذة الأدوات Project ملفات Kotlin الأربعة وملفا XML الاثنان."
     },
     {
       "source": "STEP 17 · 13コマ目 · 目安 12分",
@@ -935,8 +967,8 @@
       "translation": "تجربة موضع واحد للتخصيص"
     },
     {
-      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
-      "translation": "اختر واحدا مما يلي، ثم احفظ وشغّل التطبيق بـ Run. يمكن التحقق من تعديلات النصوص والهوامش على الشاشة قبل الاتصال أو باستخدام البيانات الثابتة أيضا. أما التعديلات التي تتطلب اتصالا بالشبكة، فانتظر إشارة المعلم لتجربتها."
+      "source": "次のうち1つを選んで変更し、Runします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "اختر واحدا مما يلي وغيّره، ثم شغّل التطبيق بـ Run. يمكن التحقق من تعديلات النصوص والهوامش على الشاشة قبل الاتصال أو باستخدام البيانات الثابتة أيضا. أما التعديلات التي تتطلب اتصالا بالشبكة، فانتظر إشارة المعلم لتجربتها."
     },
     {
       "source": "変える場所",
@@ -999,16 +1031,16 @@
       "translation": "حتى في عمليات البحث التي تحتوي على نتائج كافية، تقتصر القائمة في المرة الواحدة على 10 عناصر كحد أقصى"
     },
     {
-      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
-      "translation": "بعد التدريب، أعد التغييرات إلى حالتها السابقة واحفظ الملفات. يمكنك أن تقرر بنفسك التخصيصات التي ستبقي عليها لتسليم الواجب. اترك معرفات id وSerialName في JSON وقيم sort المخصصة لـ API كما هي دون تغيير. يتراوح نطاق <code>PER_PAGE</code> من 1 إلى 100، لكننا نجربه هذه المرة بـ 30 و10."
+      "source": "練習後は変更前へ戻します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "بعد التدريب، أعد التغييرات إلى حالتها السابقة. يمكنك أن تقرر بنفسك التخصيصات التي ستبقي عليها لتسليم الواجب. اترك معرفات id وSerialName في JSON وقيم sort المخصصة لـ API كما هي دون تغيير. يتراوح نطاق <code>PER_PAGE</code> من 1 إلى 100، لكننا نجربه هذه المرة بـ 30 و10."
     },
     {
       "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
       "translation": "الثوابت في Kotlin تُكتب بـ <code>const val</code>، وفي Java بـ <code>static final</code>. وتتوافق القيمة المعدلة مع عدد العناصر في القائمة. وليس هذا إعدادا لتغيير إجمالي عدد العناصر التي تم العثور عليها إلى 10."
     },
     {
-      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
-      "translation": "ظهر تأثير التغيير المختار على الشاشة، وأُعيدت القيم والعرض إلى حالتها الأصلية وحُفظت بعد التدريب."
+      "source": "選んだ変更の効果が画面に現れ、練習後にRunすると元の値と表示へ戻っている。",
+      "translation": "ظهر تأثير التغيير المختار على الشاشة، وعند تشغيل التطبيق بـ Run بعد التدريب تكون القيم والعرض قد عادت إلى حالتها الأصلية."
     },
     {
       "source": "STEP 18 · 13コマ目 · 目安 3分",
@@ -1019,16 +1051,16 @@
       "translation": "التحقق من الحالة المكتملة للحصة 13"
     },
     {
-      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
-      "translation": "هذه آخر 3 دقائق. تحقق من العناصر الأربعة في الأسطر الناتجة عن البحث، واختفاء مؤشر التحميل، وزر البحث المتاح للضغط. احفظ من <strong>File → Save All</strong>. وتأكد من أن موقع الحفظ الخاص بك للمرة القادمة وملفات Kotlin الأربعة ظاهرة في نافذة الأدوات Project."
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "هذه آخر 3 دقائق. تحقق من العناصر الأربعة في الأسطر الناتجة عن البحث، واختفاء مؤشر التحميل، وزر البحث المتاح للضغط. وتأكد من أن موقع الحفظ الخاص بك للمرة القادمة وملفات Kotlin الأربعة ظاهرة في نافذة الأدوات Project."
     },
     {
       "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
       "translation": "نقوم هذه المرة بتمرير قائمة نتائج الاتصال إلى الـ Adapter نفسه المستخدم في الحصة 12. وهذا نموذج يفصل بين مهمة جلب البيانات ومهمة عرضها في سطر واحد في ملفين منفصلين."
     },
     {
-      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
-      "translation": "تُعرض العناصر الأربعة لنتائج البحث، واختفى مؤشر التحميل، وحُفظت الشيفرة المصدرية وملفات XML."
+      "source": "検索結果の4項目が表示され、通信中の印が消え、Projectツールウィンドウに4つのKotlinファイルが見えている。",
+      "translation": "تظهر العناصر الأربعة في نتائج البحث، واختفى مؤشر التحميل، وتظهر ملفات Kotlin الأربعة في نافذة الأدوات Project."
     },
     {
       "source": "見えている状態",

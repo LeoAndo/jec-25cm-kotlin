@@ -227,32 +227,48 @@
       "translation": "配齐相机的库"
     },
     {
-      "source": "次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。",
-      "translation": "下面3个文件，<strong>先确认路径并全文替换</strong>，然后再同步。这样可以统一因创建日期不同而产生的库的差异。前提是用 Panda 2 创建的配置，这不是只把其他版本的 AGP 版本号降下来的步骤。"
+      "source": "カメラに使うライブラリを、次の<strong>2つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確かめます。",
+      "translation": "把相机要用的库，先<strong>添加到下面2个配置文件中</strong>，再同步。<code>build.gradle.kts</code> 有2处，请确认路径。"
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "后面的框里，只列出文件中<strong>要改的地方</strong>。<span1>绿色粗体的行</span1>是要添加的行，<span2>红色带删除线的行</span2>是要删除的行。<span3>灰色字的行</span3>是文件中已有的行，不需要输入。把这些行当作标记，用来找到要改的地方。<code>⋮</code> 表示省略了中间不改的行。"
     },
     {
       "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
       "translation": "<code>gradle/libs.versions.toml</code>。使用 CameraX 的4个库和 lifecycle。"
     },
     {
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "<code>[versions]</code> 部分，灰色字的行的数字也要与自己的文件对照。这是因为即使是 Panda 2，库的版本也会随创建日期而变化。数字不同的行，改写成这里的数字。如果项目不是用 Panda 2 创建的，改写之前先给老师看。如果只把 <code>agp</code> 的数字降低，就会与其他设置不匹配。"
+    },
+    {
+      "source": "足す行",
+      "translation": "要添加的行"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "已有的行"
+    },
+    {
+      "source": "次は <code>app/build.gradle.kts</code>。appフォルダの中のファイルです。プロジェクト直下の <code>build.gradle.kts</code> は変えません。",
+      "translation": "接下来是 <code>app/build.gradle.kts</code>。这是 app 文件夹中的文件。项目根目录下的 <code>build.gradle.kts</code> 不要改。"
+    },
+    {
+      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。",
+      "translation": "代码中的 <code>TODO STEP01</code> 是作为作业标记保留的注释，并不是本教材的STEP编号。"
+    },
+    {
+      "source": "照合用：直したあとの2つのファイルの全文",
+      "translation": "核对用：改好后的2个文件的全文"
+    },
+    {
       "source": "libs.versions.toml · 全文",
       "translation": "libs.versions.toml · 全文"
     },
     {
-      "source": "プロジェクト直下の <code>build.gradle.kts</code>。",
-      "translation": "项目根目录下的 <code>build.gradle.kts</code>。"
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · 全文"
-    },
-    {
-      "source": "<code>app/build.gradle.kts</code>。こちらはappフォルダの中です。",
-      "translation": "<code>app/build.gradle.kts</code>。这个在 app 文件夹中。"
-    },
-    {
-      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
-      "translation": "代码中的 <code>TODO STEP01</code> 是作为作业标记保留的注释，并不是本教材的STEP编号。CameraX的4行 <code>implementation</code> 已经包含在内。替换全文后，不需要再次添加相同的行。"
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · 全文"
     },
     {
       "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
@@ -299,20 +315,24 @@
       "translation": "声明使用相机"
     },
     {
-      "source": "<code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>uses-permission</code> はapplicationの外です。",
-      "translation": "全文替换 <code>app/src/main/AndroidManifest.xml</code>。<code>uses-permission</code> 放在 application 的外面。"
+      "source": "<code>app/src/main/AndroidManifest.xml</code> に、緑の行を足します。<code>uses-feature</code> と <code>uses-permission</code> は、どちらもapplicationの外です。",
+      "translation": "在 <code>app/src/main/AndroidManifest.xml</code> 中添加绿色的行。<code>uses-feature</code> 和 <code>uses-permission</code> 都放在 application 的外面。"
+    },
+    {
+      "source": "照合用：直したあとの <code>AndroidManifest.xml</code> の全文",
+      "translation": "核对用：改好后的 <code>AndroidManifest.xml</code> 的全文"
     },
     {
       "source": "AndroidManifest.xml · 全文",
       "translation": "AndroidManifest.xml · 全文"
     },
     {
-      "source": "<code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。テーマ名は生成済みの <code>Theme.A04FunnyCamera</code> と一致させます。",
-      "translation": "<code>CAMERA</code> 是使用相机的声明。仅有这个声明并不等于已获得允许，运行时要在对话框中选择。<code>camera.any</code> 是需要相机的声明，后置摄像头的选择稍后写在 Kotlin 中。主题名称要与已生成的 <code>Theme.A04FunnyCamera</code> 一致。"
+      "source": "<code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。",
+      "translation": "<code>CAMERA</code> 是使用相机的声明。仅有这个声明并不等于已获得允许，运行时要在对话框中选择。<code>camera.any</code> 是需要相机的声明，后置摄像头的选择稍后写在 Kotlin 中。"
     },
     {
-      "source": "このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。",
-      "translation": "在这个 STEP 中保存文件。让权限对话框运行起来是在 STEP 06。"
+      "source": "このSTEPでは、まだRunしません。権限のダイアログを動かすのはSTEP 06です。",
+      "translation": "在这个 STEP 中还不点击 Run。让权限对话框运行起来是在 STEP 06。"
     },
     {
       "source": "同じAndroid APIをJavaからも呼べます。権限名は文字列の手入力を避け、Manifest.permission.CAMERAを使います。",
@@ -335,8 +355,8 @@
       "translation": "<a1>保存金鱼图片 character.png</a1>，从Finder复制到自己的 <code>A04FunnyCamera/app/src/main/res/drawable/</code> 中。保存时如果变成了其他名称，请改成 <code>character.png</code>。直接放在 <strong>drawable</strong> 目录下。图片是背景透明的500×416像素。"
     },
     {
-      "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
-      "translation": "在 Android Studio 中右键点击包 <code>jp.ac.jec.a04funnycamera</code>，选择 <strong>New → Kotlin Class/File</strong>。名称填 <code>DraggableImageView</code>，类型选 <strong>Class</strong>，创建后替换为下面的全文。"
+      "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成します。新しいファイルなので、中身を次の全文にします。",
+      "translation": "在 Android Studio 中右键点击包 <code>jp.ac.jec.a04funnycamera</code>，选择 <strong>New → Kotlin Class/File</strong>。名称填 <code>DraggableImageView</code>，类型选 <strong>Class</strong>，然后创建。这是新文件，所以把内容改成下面的全文。"
     },
     {
       "source": "DraggableImageView.kt · 全文",
@@ -387,8 +407,8 @@
       "translation": "叠放相机画面、金鱼和按钮"
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。",
-      "translation": "打开 <code>app/src/main/res/layout/activity_main.xml</code>，在 <strong>Code</strong> 视图中全文替换。"
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示にします。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "打开 <code>app/src/main/res/layout/activity_main.xml</code>，切换到 <strong>Code</strong> 视图。因为不使用生成的 <code>Hello World!</code> 界面，所以把内容替换为下面的全文。"
     },
     {
       "source": "activity_main.xml · 全文",
@@ -419,8 +439,12 @@
       "translation": "获取权限并启动预览"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の全文に置き換えます。これは<strong>14コマ目の途中コード</strong>です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。",
-      "translation": "把 <code>MainActivity.kt</code> 替换为下面的全文。这是<strong>第14节课的中间代码</strong>。Take Picture 只显示确认消息，还不会保存。"
+      "source": "<code>MainActivity.kt</code> を開き、緑の行を足して<strong>14コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。",
+      "translation": "打开 <code>MainActivity.kt</code>，添加绿色的行，把它变成<strong>第14节课的中间代码</strong>。import 中也有要添加的行。灰色字的行是创建项目时就有的行。Take Picture 只显示确认消息，还不会保存。"
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "核对用：到目前为止的 <code>MainActivity.kt</code> 的全文"
     },
     {
       "source": "06-MainActivity.kt · 全文",
@@ -483,8 +507,8 @@
       "translation": "第14节课的最后3分钟"
     },
     {
-      "source": "ファイルを保存し、金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。",
-      "translation": "保存文件，把金鱼移回中央，按一次 Take Picture。等到确认消息消失。下一节课也打开同一个 <code>Documents/Kotlin/A04FunnyCamera</code>。"
+      "source": "金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。",
+      "translation": "把金鱼移回中央，按一次 Take Picture。等到确认消息消失。Android Studio 会自动保存写好的内容，所以不需要保存操作。下一节课也打开同一个 <code>Documents/Kotlin/A04FunnyCamera</code>。"
     },
     {
       "source": "途中で止まった人は、最後に画面が一致したSTEPを教科書のチェック欄で残します。14コマ目末の全文はSTEP 06です。",
@@ -531,8 +555,8 @@
       "translation": "把预览和金鱼绘制到一张图上"
     },
     {
-      "source": "まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
-      "translation": "首先，阅读下面的合成部分。<strong>唯独这段摘录不要粘贴</strong>，等把 STEP 10 的全文放进去后再点击 Run。<code>previewView.bitmap</code> 取出当前显示在预览中的画面。准备好之前是 null。"
+      "source": "まず、次の合成部分を読みます。<strong>この抜粋はまだ入力せず</strong>、STEP 10でほかの行と一緒に足してからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
+      "translation": "首先，阅读下面的合成部分。<strong>这段摘录现在还不要输入</strong>，等到 STEP 10 和其他行一起添加之后再点击 Run。<code>previewView.bitmap</code> 取出当前显示在预览中的画面。准备好之前是 null。"
     },
     {
       "source": "順序",
@@ -583,8 +607,12 @@
       "translation": "进入保存 JPEG 的完成代码"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成版の全文</strong>へ置き換えます。importも含みます。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。",
-      "translation": "把 <code>MainActivity.kt</code> 替换为下面的<strong>完成版全文</strong>。包括 import。保留第14节课的权限和相机连接，加入从按钮调用的 <code>takeScreenshot</code> 和 <code>saveBitmap</code>。"
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成版</strong>にします。importにも足す行があります。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。直す場所は、import・クラスの説明のコメント・<code>onCreate</code> のボタンの処理と、新しく足す2つのメソッドです。",
+      "translation": "在 <code>MainActivity.kt</code> 中添加绿色的行、删除红色的行，把它变成<strong>完成版</strong>。import 中也有要添加的行。保留第14节课的权限和相机连接，加入从按钮调用的 <code>takeScreenshot</code> 和 <code>saveBitmap</code>。要改的地方是 import、类的说明注释、<code>onCreate</code> 中按钮的处理，以及新添加的2个方法。"
+    },
+    {
+      "source": "消す行",
+      "translation": "要删除的行"
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -631,8 +659,8 @@
       "translation": "保存从 <code>lifecycleScope.launch</code> 开始，把压缩和写入放在 <code>withContext(Dispatchers.IO)</code> 中。离开那里后回到主线程，为 true 时显示「保存しました」（已保存），为 false 时显示「保存に失敗しました」（保存失败）。Activity 被销毁时，lifecycleScope 的协程会被取消。"
     },
     {
-      "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。",
-      "translation": "本应用面向 Android 12 及以上版本。不需要添加用于把自己应用生成的图片保存到 MediaStore 的存储权限。这与允许使用相机是两回事。<code>READ_MEDIA_IMAGES</code> 等用于读取其他应用图片的权限也不需要。保存后点击 Run，会回到金鱼可以移动的界面。"
+      "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。Runすると、金魚が動く画面に戻ります。",
+      "translation": "本应用面向 Android 12 及以上版本。不需要添加用于把自己应用生成的图片保存到 MediaStore 的存储权限。这与允许使用相机是两回事。<code>READ_MEDIA_IMAGES</code> 等用于读取其他应用图片的权限也不需要。点击 Run 后，会回到金鱼可以移动的界面。"
     },
     {
       "source": "useはJavaのtry-with-resourcesと同じく、処理後にcloseします。ラムダのitが開いた出力先です。保存の結果はBooleanで画面側へ返します。",
@@ -699,8 +727,8 @@
       "translation": "也确认不允许权限时的情况"
     },
     {
-      "source": "作ったファイルを保存します。エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。",
-      "translation": "保存做好的文件。打开模拟器的 <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong>，设为 <strong>Don’t allow</strong>（不允许）。从 Android Studio 重新点击 Run，如果出现对话框，选择 Don’t allow（不允许）。相机画面为黑色，并显示关于相机权限的提示。"
+      "source": "エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。",
+      "translation": "打开模拟器的 <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong>，设为 <strong>Don’t allow</strong>（不允许）。从 Android Studio 重新点击 Run，如果出现对话框，选择 Don’t allow（不允许）。相机画面为黑色，并显示关于相机权限的提示。"
     },
     {
       "source": "カメラを許可せず、権限が必要というSnackbarが出た画面",
@@ -807,8 +835,8 @@
       "translation": "第15节课的最后3分钟"
     },
     {
-      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
-      "translation": "保存自己的项目。将相机权限恢复为仅在使用中允许，然后依次打开预览和保存的JPEG。想要对比代码时，请与STEP 10的全文对比。"
+      "source": "カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
+      "translation": "将相机权限恢复为仅在使用中允许，然后依次打开预览和保存的JPEG。想要对比代码时，请与STEP 10的全文对比。"
     },
     {
       "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
@@ -819,8 +847,8 @@
       "translation": "表示保存结果的 Boolean 与 Java 中的作用相同。Kotlin 把类型名写在变量名后面。界面上显示的文字会随这个返回值而变化。"
     },
     {
-      "source": "自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。",
-      "translation": "自己的 A04 已保存，可以确认预览、拖动和保存的 JPEG。"
+      "source": "自分のアプリで、プレビュー・ドラッグ・保存したJPEGを確認できる。",
+      "translation": "在自己的应用里，可以确认预览、拖动和保存的 JPEG。"
     },
     {
       "source": "見えている状態",
@@ -835,8 +863,8 @@
       "translation": "同步停止"
     },
     {
-      "source": "Panda 2か、STEP 02の3ファイルが正しい場所にあるかを確認。最初の原因行を先生に見せます。",
-      "translation": "确认是否是 Panda 2，以及 STEP 02 的3个文件是否在正确的位置。把最先出现的原因行给老师看。"
+      "source": "Panda 2か、STEP 02で直した2つのファイルの場所と、足した行を確認。最初の原因行を先生に見せます。",
+      "translation": "确认是否是 Panda 2，以及 STEP 02 中改过的2个文件的位置和添加的行。把最先出现的原因行给老师看。"
     },
     {
       "source": "characterが赤い",

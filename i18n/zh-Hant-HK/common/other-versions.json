@@ -87,8 +87,8 @@
       "translation": "按照本頁 A01 的對應做法進行。在設定與下表一致、同步和 Run 都成功的範圍內進行。表格以外的分別或錯誤，請給老師看。"
     },
     {
-      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
-      "translation": "<strong>未經實際測試。</strong>以 Panda 2 的步驟為起點，但未確認能夠同樣運作。在 A01 的 STEP 00 把版本給老師看，並在替換 STEP 01 的整個設定檔之前先確認。如果畫面或產生的設定不同，請直接給老師看。"
+      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01で版の数字を書き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
+      "translation": "<strong>未經實際測試。</strong>以 Panda 2 的步驟為起點，但未確認能夠同樣運作。在 A01 的 STEP 00 把版本給老師看，並在 STEP 01 改寫版本的數字之前先確認。如果畫面或產生的設定不同，請直接給老師看。"
     },
     {
       "source": "上記以外・版が分からない",
@@ -167,12 +167,12 @@
       "translation": "按上面的6個項目建立自己的專案。即使畫面的次序不同，也要對齊 Empty Views Activity、Kotlin、API 31、Kotlin DSL。"
     },
     {
-      "source": "STEP 01：libs.versions.toml全文の置き換え",
-      "translation": "STEP 01：替換整個 libs.versions.toml"
+      "source": "STEP 01：libs.versions.toml の数字の書き換え",
+      "translation": "STEP 01：改寫 libs.versions.toml 的數字"
     },
     {
-      "source": "<strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。",
-      "translation": "<strong>不進行這個替換。</strong>把 Quail 4 產生的 <code>gradle/libs.versions.toml</code> 和建置設定作為一組保持不變，並與下面的差異表核對。只放入 Panda 2 的 AGP 9.1.1，會與 Quail 4 的 <code>optimization</code> 寫法不相容。如果已經替換，請給老師看。"
+      "source": "<strong>この書き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に書き換えた場合は先生に見せます。",
+      "translation": "<strong>不進行這個改寫。</strong>把 Quail 4 產生的 <code>gradle/libs.versions.toml</code> 和建置設定作為一組保持不變，並與下面的差異表核對。只放入 Panda 2 的 AGP 9.1.1，會與 Quail 4 的 <code>optimization</code> 寫法不相容。如果已經改寫，請給老師看。"
     },
     {
       "source": "STEP 02〜03：端末・初回Run",
