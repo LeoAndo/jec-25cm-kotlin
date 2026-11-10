@@ -171,6 +171,7 @@ Kotlin演習の対訳表。訳すときは、この表の訳語を使う。新�
 | 金魚 | pez dorado | A04 FunnyCamera で使用 |
 | 透過PNG | PNG transparente | |
 | 合成カメラ | cámara compuesta | |
+| 閉じかっこ（`{ }` の `}`） | llave de cierre | `paréntesis` は丸かっこ `( )` だけを指すので使わない（#275 の照合）。「`main` の閉じかっこの外」→ fuera de la llave de cierre de `main` |
 
 ## IntelliJ IDEAの画面に出る日本語（K01。日本語のまま残し、訳をかっこで添える）
 
@@ -203,7 +204,7 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 | 複製 | Duplicar | Finder の右クリックのメニュー |
 | （フォルダ名）のコピー | (A01HelloAndroid copia) | **複製** でできるフォルダの名前。`<code>A01HelloAndroidのコピー</code>` の中は日本語のまま残し、スペイン語表示の Mac でできる名前をかっこで添える |
 
-## 差分ブロックの言葉（A01〜A04。#275）
+## 差分ブロックの言葉（A01〜A04・K01。#275）
 
 すでにあるファイルを直すSTEPの「差分ブロック」（足す行・消す行だけを色で示すコードの枠）で使う言葉。凡例の札と、読み方を説明する文は、同じ言葉にそろえる。
 
@@ -217,6 +218,7 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 | 直す / 直す場所 | modificar / el lugar que hay que modificar | 差分の指示の「直す」は modificar。誤りを直す corregir と分ける |
 | 中身を次の全文に入れ替えます / 中身を次の全文にします | reemplaza el contenido por el siguiente archivo completo / haz que su contenido quede igual al siguiente archivo completo | 前は、生成された中身を捨てるとき。うしろは、新しく作ったファイルのとき |
 | 書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。 | Android Studio guarda automáticamente lo que escribiste, así que no necesitas realizar la acción de guardar. | A02〜A04 に1回ずつ。K01 の IntelliJ IDEA の文と同じ言葉 |
+| IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。 | Usa las líneas que agregó IntelliJ IDEA, sin borrarlas, y escribe las líneas que faltan. Asegúrate de que la misma línea no quede dos veces. | K01 の、新しく作ったファイルのSTEPに毎回出る。毎回同じ訳にする |
 
 ## 書き方の決まり
 

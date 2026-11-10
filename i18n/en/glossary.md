@@ -78,7 +78,7 @@ K01の教科書は、日本語表示の IntelliJ IDEA の画面の言葉を書�
 | サンプルコードの追加 | Add sample code | 新規プロジェクトの画面 |
 | コンパクトなプロジェクト構造を使用する | Use compact project structure | 新規プロジェクトの画面 |
 
-## 差分ブロックの言葉（A01〜A04。#275）
+## 差分ブロックの言葉（A01〜A04・K01。#275）
 
 すでにあるファイルを直すSTEPの「差分ブロック」（足す行・消す行だけを色で示すコードの枠）で使う言葉。凡例の札と、読み方を説明する文は、同じ言葉にそろえる。
 
@@ -92,6 +92,7 @@ K01の教科書は、日本語表示の IntelliJ IDEA の画面の言葉を書�
 | 直す / 直す場所 / 足す場所 | change / the places to change / places to add lines | 差分の指示の「直す」は change。エラーを直す fix と分ける |
 | 中身を次の全文に入れ替えます / 中身を次の全文にします | replace the contents with the full file below / make its contents match the full file below | 前は、生成された中身を捨てるとき。うしろは、新しく作ったファイルのとき |
 | 書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。 | Android Studio saves what you have written automatically, so you do not need to save it yourself. | A02〜A04 に1回ずつ。K01 の IntelliJ IDEA の文と同じ言葉 |
+| IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。 | Do not delete the lines that IntelliJ IDEA added; use them, and add the lines that are missing. Make sure the same line does not appear twice. | K01 の、新しく作ったファイルのSTEPに毎回出る。毎回同じ訳にする |
 
 ## 書き方の決まり
 
