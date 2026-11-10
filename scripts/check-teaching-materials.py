@@ -779,7 +779,11 @@ def print_diff(root: Path, html_name: str, block_id: str, context: int) -> int:
     すでにある行を増やしたいとき（[versions] を丸ごと見せる、など）は、貼ったあとで
     印のない行を足す。足した結果が正しいかどうかは、いつもの検査が確かめる。
     """
-    config = json.loads(read(root / CONFIG))
+    try:
+        config = json.loads(read(root / CONFIG))
+    except (OSError, json.JSONDecodeError) as error:
+        print(f"{CONFIG}:1: 設定ファイルを読み込めません: {error}", file=sys.stderr)
+        return 1
     problems = check_config(config)
     if problems:
         print("\n".join(problems), file=sys.stderr)
