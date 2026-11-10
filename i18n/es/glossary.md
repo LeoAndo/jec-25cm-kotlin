@@ -203,6 +203,21 @@ K01の教科書は、日本語表示の IntelliJ IDEA のメニュー名を書�
 | 複製 | Duplicar | Finder の右クリックのメニュー |
 | （フォルダ名）のコピー | (A01HelloAndroid copia) | **複製** でできるフォルダの名前。`<code>A01HelloAndroidのコピー</code>` の中は日本語のまま残し、スペイン語表示の Mac でできる名前をかっこで添える |
 
+## 差分ブロックの言葉（A01〜A04。#275）
+
+すでにあるファイルを直すSTEPの「差分ブロック」（足す行・消す行だけを色で示すコードの枠）で使う言葉。凡例の札と、読み方を説明する文は、同じ言葉にそろえる。
+
+| 日本語 | 訳 | メモ |
+| --- | --- | --- |
+| 足す行 / 消す行 / すでにある行（凡例の札） | Líneas a agregar / Líneas a borrar / Líneas que ya están | 枠の見出しの札。読み方を説明する文でも同じ言葉を使う（文中は las líneas a agregar） |
+| 緑の太字の行 / 赤い取り消し線の行 / 薄い字の行 | líneas verdes en negrita / líneas rojas tachadas / líneas en gris | 読み方を説明する文の中の色つきの札。`color pálido` は使わない（コードの枠が濃紺の地なので、「明るい色の字」と読めて、足す行を指しかねない。#275 の照合） |
+| 緑の行 / 赤い行 | las líneas verdes / las líneas rojas | あとのSTEPの短い言い方 |
+| 照合用：…の全文（折りたたみの見出し） | Para comparar: el archivo … completo | `Para comparar: el archivo <code>X</code> completo`。「ここまでの」は hasta este punto、「直したあとの」は ya modificado(s)。枠の見出し `· Archivo completo` と同じ言葉 |
+| 枠（コードの枠） | recuadro | 「次の枠のとおりに直します」→ modifícalo como indica el siguiente recuadro |
+| 直す / 直す場所 | modificar / el lugar que hay que modificar | 差分の指示の「直す」は modificar。誤りを直す corregir と分ける |
+| 中身を次の全文に入れ替えます / 中身を次の全文にします | reemplaza el contenido por el siguiente archivo completo / haz que su contenido quede igual al siguiente archivo completo | 前は、生成された中身を捨てるとき。うしろは、新しく作ったファイルのとき |
+| 書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。 | Android Studio guarda automáticamente lo que escribiste, así que no necesitas realizar la acción de guardar. | A02〜A04 に1回ずつ。K01 の IntelliJ IDEA の文と同じ言葉 |
+
 ## 書き方の決まり
 
 - **学生への呼びかけは tú にする。** 手順は tú の命令形で書く（Haz clic en **Run**.、Abre el archivo.）。usted・vos・vosotros は使わない。複数の人に向けるときは ustedes。

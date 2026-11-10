@@ -78,6 +78,21 @@ K01の教科書は、日本語表示の IntelliJ IDEA の画面の言葉を書�
 | サンプルコードの追加 | Add sample code | 新規プロジェクトの画面 |
 | コンパクトなプロジェクト構造を使用する | Use compact project structure | 新規プロジェクトの画面 |
 
+## 差分ブロックの言葉（A01〜A04。#275）
+
+すでにあるファイルを直すSTEPの「差分ブロック」（足す行・消す行だけを色で示すコードの枠）で使う言葉。凡例の札と、読み方を説明する文は、同じ言葉にそろえる。
+
+| 日本語 | 訳 | メモ |
+| --- | --- | --- |
+| 足す行 / 消す行 / すでにある行（凡例の札） | Lines to add / Lines to delete / Existing lines | 枠の見出しの札。読み方を説明する文でも同じ言葉を使う（文中は lines to add） |
+| 緑の太字の行 / 赤い取り消し線の行 / 薄い字の行 | Green bold lines / Red strikethrough lines / Faded lines | 読み方を説明する文の中の色つきの札。薄い色 → faded color に合わせた |
+| 緑の行 / 赤い行 | the green lines / the red lines | あとのSTEPの短い言い方 |
+| 照合用：…の全文（折りたたみの見出し） | For comparison: the full … file | `For comparison: the full <code>X</code> file`。「ここまでの」は so far、「直したあとの」は after the changes。枠の見出し `· Full file` と同じ言葉 |
+| 枠（コードの枠） | code box | comparison box（比較欄）・check box（チェック欄）と分ける。block は Kotlin の `{ }` に使う |
+| 直す / 直す場所 / 足す場所 | change / the places to change / places to add lines | 差分の指示の「直す」は change。エラーを直す fix と分ける |
+| 中身を次の全文に入れ替えます / 中身を次の全文にします | replace the contents with the full file below / make its contents match the full file below | 前は、生成された中身を捨てるとき。うしろは、新しく作ったファイルのとき |
+| 書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。 | Android Studio saves what you have written automatically, so you do not need to save it yourself. | A02〜A04 に1回ずつ。K01 の IntelliJ IDEA の文と同じ言葉 |
+
 ## 書き方の決まり
 
 - 操作は命令形、説明と画面で確認する文は現在形で書く。
