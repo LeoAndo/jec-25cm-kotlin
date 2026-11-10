@@ -87,8 +87,8 @@
       "translation": "請依照本頁 A01 的對應做法進行。在設定與下表一致、同步和 Run 都能成功的範圍內進行。表中沒有的差異或錯誤，請給老師看。"
     },
     {
-      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
-      "translation": "<strong>未實際測試。</strong>以 Panda 2 的步驟為出發點，但尚未確認能夠同樣執行。請在 A01 的 STEP 00 把版本給老師看，並在替換 STEP 01 的設定全文之前先確認。如果畫面或產生的設定不同，請直接給老師看。"
+      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01で版の数字を書き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
+      "translation": "<strong>未實際測試。</strong>以 Panda 2 的步驟為出發點，但尚未確認能夠同樣執行。請在 A01 的 STEP 00 把版本給老師看，並在 STEP 01 改寫版本的數字之前先確認。如果畫面或產生的設定不同，請直接給老師看。"
     },
     {
       "source": "上記以外・版が分からない",
@@ -167,12 +167,12 @@
       "translation": "請用上面的6個項目建立自己的專案。即使畫面的順序不同，也要讓 Empty Views Activity、Kotlin、API 31、Kotlin DSL 這幾項一致。"
     },
     {
-      "source": "STEP 01：libs.versions.toml全文の置き換え",
-      "translation": "STEP 01：libs.versions.toml 的全文替換"
+      "source": "STEP 01：libs.versions.toml の数字の書き換え",
+      "translation": "STEP 01：libs.versions.toml 的數字改寫"
     },
     {
-      "source": "<strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。",
-      "translation": "<strong>不要進行這個替換。</strong>請把 Quail 4 建立的 <code>gradle/libs.versions.toml</code> 和建置設定成組保留，並與下面的差異表對照。如果只放入 Panda 2 的 AGP 9.1.1，會和 Quail 4 的 <code>optimization</code> 寫法不相容。如果已經替換了，請給老師看。"
+      "source": "<strong>この書き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に書き換えた場合は先生に見せます。",
+      "translation": "<strong>不要進行這個改寫。</strong>請把 Quail 4 建立的 <code>gradle/libs.versions.toml</code> 和建置設定成組保留，並與下面的差異表對照。如果只放入 Panda 2 的 AGP 9.1.1，會和 Quail 4 的 <code>optimization</code> 寫法不相容。如果已經改寫了，請給老師看。"
     },
     {
       "source": "STEP 02〜03：端末・初回Run",

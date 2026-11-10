@@ -87,8 +87,8 @@
       "translation": "按照本页中 A01 的对应做法进行。在设置与下表一致、同步和 Run 都能通过的范围内继续。表中没有的差异或错误，给老师看。"
     },
     {
-      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
-      "translation": "<strong>未实际测试。</strong>以 Panda 2 的步骤为起点，但尚未确认能同样运行。在 A01 的 STEP 00 把版本给老师看，在替换 STEP 01 的设置全文之前先确认。界面或生成的设置不同时，直接给老师看。"
+      "source": "<strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01で版の数字を書き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。",
+      "translation": "<strong>未实际测试。</strong>以 Panda 2 的步骤为起点，但尚未确认能同样运行。在 A01 的 STEP 00 把版本给老师看，在 STEP 01 改写版本数字之前先确认。界面或生成的设置不同时，直接给老师看。"
     },
     {
       "source": "上記以外・版が分からない",
@@ -167,12 +167,12 @@
       "translation": "用上面的6个设置项创建自己的项目。即使界面顺序不同，也要让 Empty Views Activity、Kotlin、API 31、Kotlin DSL 一致。"
     },
     {
-      "source": "STEP 01：libs.versions.toml全文の置き換え",
-      "translation": "STEP 01：替换 libs.versions.toml 全文"
+      "source": "STEP 01：libs.versions.toml の数字の書き換え",
+      "translation": "STEP 01：改写 libs.versions.toml 中的数字"
     },
     {
-      "source": "<strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。",
-      "translation": "<strong>不做这个替换。</strong>把 Quail 4 生成的 <code>gradle/libs.versions.toml</code> 和构建设置作为一套保留，并与下面的差异表核对。如果只放入 Panda 2 的 AGP 9.1.1，会与 Quail 4 的 <code>optimization</code> 写法不匹配。已经替换了的话，给老师看。"
+      "source": "<strong>この書き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に書き換えた場合は先生に見せます。",
+      "translation": "<strong>不做这个改写。</strong>把 Quail 4 生成的 <code>gradle/libs.versions.toml</code> 和构建设置作为一套保留，并与下面的差异表核对。如果只放入 Panda 2 的 AGP 9.1.1，会与 Quail 4 的 <code>optimization</code> 写法不匹配。已经改写了的话，给老师看。"
     },
     {
       "source": "STEP 02〜03：端末・初回Run",

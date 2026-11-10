@@ -223,8 +223,12 @@
       "translation": "Hacer coincidir las versiones de las bibliotecas que se usan en la clase"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "Aunque sea el mismo Panda 2, las versiones de las bibliotecas cambian según la fecha de creación. Cambia la ventana de herramientas Project de la izquierda a la vista <strong>Project</strong>, abre <code>gradle → libs.versions.toml</code> y reemplaza todo su contenido por lo siguiente. Esto no es código de Kotlin; es la configuración que indica qué componentes se usan y en qué versión."
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "Aunque sea el mismo Panda 2, las versiones de las bibliotecas cambian según la fecha de creación. Cambia la ventana de herramientas Project de la izquierda a la vista <strong>Project</strong>, abre <code>gradle → libs.versions.toml</code> y compara los números de <code>[versions]</code>, al principio del archivo, con los siguientes. Solo en las líneas donde el número sea distinto, cámbialo por el número que aparece a continuación. No cambies nada de <code>[libraries]</code> hacia abajo. Esto no es código de Kotlin; es la configuración que indica qué componentes se usan y en qué versión."
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "Para comparar: el archivo <code>libs.versions.toml</code> completo"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -267,8 +271,8 @@
       "translation": "En la parte superior, elige la configuración de ejecución <strong>app</strong> y el AVD designado, y presiona <strong>Run ▶</strong>. Primero verifica que aparezca <code>Hello World!</code>."
     },
     {
-      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替え、全文を次で置き換えます。",
-      "translation": "Pon la ventana de herramientas Project de la izquierda en la vista <strong>Project</strong> y abre <code>app/src/main/res/layout/activity_main.xml</code>. Cambia a <strong>Code</strong> en la esquina superior derecha del editor y reemplaza todo el archivo por lo siguiente."
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "Pon la ventana de herramientas Project de la izquierda en la vista <strong>Project</strong> y abre <code>app/src/main/res/layout/activity_main.xml</code>. Cambia a <strong>Code</strong> en la esquina superior derecha del editor. Como la pantalla <code>Hello World!</code> generada no se usa, reemplaza el contenido por el siguiente archivo completo."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +343,32 @@
       "translation": "Obtener las View y preparar un lugar para guardar el tiempo transcurrido"
     },
     {
-      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。",
-      "translation": "Abre <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> y reemplaza todo el archivo por lo siguiente. Por ahora solo llega hasta conectar la pantalla con Kotlin."
+      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、次の枠のとおりに直します。まずは画面とKotlinをつなぐところまでです。",
+      "translation": "Abre <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> y modifícalo como indica el siguiente recuadro. Por ahora solo llega hasta conectar la pantalla con Kotlin."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "A partir de aquí, los recuadros muestran <strong>solo los lugares del archivo que hay que modificar</strong>. Las <span1>líneas verdes en negrita</span1> son las líneas a agregar, y las <span2>líneas rojas tachadas</span2> son las líneas a borrar. Las <span3>líneas en gris</span3> son líneas que ya están en el archivo; no las escribas. Úsalas como referencia para encontrar el lugar que hay que modificar. <code>⋮</code> es la marca que indica que se omitieron las líneas intermedias que no cambian."
+    },
+    {
+      "source": "<code>enableEdgeToEdge()</code> の行は、頭に <code>this.</code> を付けた形に直します。Javaの <code>this.メソッド()</code> と同じ書き方で、付けなくても動きは変わりません。",
+      "translation": "Modifica la línea de <code>enableEdgeToEdge()</code> para que lleve <code>this.</code> al principio. Es la misma forma de escribir que <code>this.メソッド()</code> (メソッド significa “método”) en Java; aunque no lo pongas, el funcionamiento no cambia."
+    },
+    {
+      "source": "足す行",
+      "translation": "Líneas a agregar"
+    },
+    {
+      "source": "消す行",
+      "translation": "Líneas a borrar"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "Líneas que ya están"
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "Para comparar: el archivo <code>MainActivity.kt</code> completo hasta este punto"
     },
     {
       "source": "MainActivity.kt · STEP 03終了時の全文",
@@ -479,8 +507,8 @@
       "translation": "Son los últimos 3 minutos. Presiona START → STOP → START → STOP → RESET, en ese orden. Verifica también que la ubicación de guardado de tu proyecto sea <code>Documents/Kotlin/A02CalcGame</code>."
     },
     {
-      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。次回は同じプロジェクトを開きます。",
-      "translation": "En este punto solo funciona el tiempo. Que el área de la pregunta esté vacía y que los botones numéricos todavía no hagan nada es el estado final de esta etapa. La próxima vez abrirás el mismo proyecto."
+      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次回は同じプロジェクトを開きます。",
+      "translation": "En este punto solo funciona el tiempo. Que el área de la pregunta esté vacía y que los botones numéricos todavía no hagan nada es el estado final de esta etapa. Android Studio guarda automáticamente lo que escribiste, así que no necesitas realizar la acción de guardar. La próxima vez abrirás el mismo proyecto."
     },
     {
       "source": "<code>elapsedTimeMillis</code> をクラスのプロパティに置いたので、STOPとSTARTの両方から同じ値を使えます。",
@@ -579,12 +607,8 @@
       "translation": "Conectar START, STOP y RESET con el estado de las preguntas"
     },
     {
-      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナを、まとめて次に置き換えます</strong>。View取得の行は残します。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
-      "translation": "Dentro de <code>onCreate</code>, <strong>reemplaza los tres listeners de START, STOP y RESET, todos juntos, por lo siguiente</strong>. Conserva las líneas que obtienen las View. START muestra una pregunta solo la primera vez, STOP deja de aceptar respuestas y RESET también reinicia el número de la pregunta y el número de aciertos."
-    },
-    {
-      "source": "MainActivity.kt · 3つのリスナを置き換える",
-      "translation": "MainActivity.kt · Reemplazar los tres listeners"
+      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナに、緑の行を足します</strong>。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
+      "translation": "Dentro de <code>onCreate</code>, <strong>agrega las líneas verdes a los tres listeners</strong> de START, STOP y RESET. START muestra una pregunta solo la primera vez, STOP deja de aceptar respuestas y RESET también reinicia el número de la pregunta y el número de aciertos."
     },
     {
       "source": "Run→STARTで「1問目: 10 - 数字 =」が出ます。数字は毎回変わるので、画像と同じになる必要はありません。",
@@ -671,12 +695,8 @@
       "translation": "Calificar y mostrar el tiempo y el resultado tras 10 preguntas"
     },
     {
-      "source": "<code>import</code> 一覧へ <code>import java.util.concurrent.TimeUnit</code> を追加します。前のSTEPで足した <code>val numberButtonIds</code> から <code>for</code> を閉じる <code>}</code> までを、次に置き換えます。押した数字だけを出す仮のSnackbarはなくなります。",
-      "translation": "Agrega <code>import java.util.concurrent.TimeUnit</code> a la lista de <code>import</code>. Reemplaza por lo siguiente desde el <code>val numberButtonIds</code> que agregaste en el STEP anterior hasta el <code>}</code> que cierra el <code>for</code>. El Snackbar provisional que solo mostraba el número presionado desaparece."
-    },
-    {
-      "source": "MainActivity.kt · 数字ボタンの処理全体を置き換える",
-      "translation": "MainActivity.kt · Reemplazar toda la acción de los botones numéricos"
+      "source": "前のSTEPで足した数字ボタンの処理を、<strong>採点する形に直します</strong>。緑の行を足し、赤い行を消します。<code>import</code> にも1行足します。押した数字だけを出す仮のSnackbarはなくなります。",
+      "translation": "Toma la acción de los botones numéricos que agregaste en el STEP anterior y <strong>modifícala para que califique las respuestas</strong>. Agrega las líneas verdes y borra las líneas rojas. Agrega también una línea a los <code>import</code>. El Snackbar provisional, que solo mostraba el número presionado, desaparece."
     },
     {
       "source": "Run→STARTで10問答えます。1問だけ、計算結果と違う数字を押し、残り9問は正しい数字を押してください。最後は「9問正解しました！時間は○秒です」となり、時間が止まります。10問目の正誤も数えた後で終了する順です。",
@@ -875,8 +895,8 @@
       "translation": "Después de RESET se muestran <code>00:00</code> y el área de la pregunta vacía, y se puede empezar otra vez desde la pregunta 1."
     },
     {
-      "source": "自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
-      "translation": "Guarda el <code>MainActivity.kt</code> y el <code>activity_main.xml</code> de tu propio proyecto. Si sigues personalizando, avanza verificando en la tabla del STEP 13 los lugares que se cambian y su efecto."
+      "source": "アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
+      "translation": "Si sigues con la personalización, avanza verificando en la tabla del STEP 13 el lugar que vas a cambiar y su efecto."
     },
     {
       "source": "<code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。",
@@ -891,8 +911,8 @@
       "translation": "Conserva el proyecto que creaste y avanza con las modificaciones verificando cada cambio realizado."
     },
     {
-      "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
-      "translation": "Detener, reanudar, el resultado de las 10 preguntas y reiniciar funcionan, y tu propio MainActivity.kt y el XML están guardados."
+      "source": "自分のアプリで、停止・再開・10問の結果・リセットが動いている。",
+      "translation": "En tu propia aplicación funcionan detener, reanudar, el resultado de las 10 preguntas y reiniciar."
     },
     {
       "source": "見えている状態",
@@ -963,8 +983,8 @@
       "translation": "Al presionar un número todavía aparece el Snackbar con el número"
     },
     {
-      "source": "STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。",
-      "translation": "Es el estado intermedio del STEP 10. En el STEP 11 se reemplaza toda la acción de los botones numéricos."
+      "source": "STEP 10の途中状態です。STEP 11で、仮のSnackbarを採点の処理に直します。",
+      "translation": "Es el estado intermedio del STEP 10. En el STEP 11, el Snackbar provisional se cambia por la acción que califica las respuestas."
     },
     {
       "source": "かっこが合わない",

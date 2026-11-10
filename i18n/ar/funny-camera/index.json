@@ -227,32 +227,48 @@
       "translation": "إعداد مكتبات الكاميرا"
     },
     {
-      "source": "次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。",
-      "translation": "قم بمزامنة المشروع <strong>بعد التحقق من مسارات الملفات الثلاثة التالية واستبدال نصها كاملا</strong>. يهدف هذا إلى توحيد الفروق في المكتبات الناتجة عن تاريخ الإنشاء. هذا الإجراء مبني على البنية المنشأة في Panda 2، وليس مجرد خطوات لخفض رقم AGP لإصدار مختلف."
+      "source": "カメラに使うライブラリを、次の<strong>2つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確かめます。",
+      "translation": "أضف المكتبات المستخدمة للكاميرا <strong>إلى ملفي الإعدادات التاليين أولا</strong>، ثم قم بالمزامنة. يوجد <code>build.gradle.kts</code> في موضعين، فتحقق من المسار."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "تعرض الإطارات التالية من الملف <strong>المواضع التي تعدّلها فقط</strong>. <span1>الأسطر الخضراء بخط عريض</span1> هي أسطر للإضافة، و<span2>الأسطر الحمراء المشطوبة</span2> هي أسطر للحذف. أما <span3>الأسطر ذات اللون الباهت</span3> فهي أسطر موجودة مسبقا في الملف، فلا تكتبها. استخدمها علامة للعثور على موضع التعديل. والرمز <code>⋮</code> يعني أن هناك أسطرا في الوسط لا تتغيّر، ولذلك لم تُعرض هنا."
     },
     {
       "source": "<code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。",
       "translation": "<code>gradle/libs.versions.toml</code>. نستخدم فيه مكتبات CameraX الأربع وlifecycle."
     },
     {
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "في <code>[versions]</code>، قارن أيضا الأرقام الموجودة في الأسطر ذات اللون الباهت بما في ملفك. وذلك لأن إصدارات المكتبات تختلف بحسب تاريخ الإنشاء حتى في Panda 2. في الأسطر التي يختلف فيها الرقم، غيّره إلى الرقم المكتوب هنا. وإذا أنشأت المشروع بإصدار غير Panda 2، فاعرضه على المعلم قبل التغيير. إذا خفضت رقم <code>agp</code> وحده، فلن يتوافق مع الإعدادات الأخرى."
+    },
+    {
+      "source": "足す行",
+      "translation": "أسطر للإضافة"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "أسطر موجودة مسبقا"
+    },
+    {
+      "source": "次は <code>app/build.gradle.kts</code>。appフォルダの中のファイルです。プロジェクト直下の <code>build.gradle.kts</code> は変えません。",
+      "translation": "الملف التالي هو <code>app/build.gradle.kts</code>. هذا الملف موجود داخل مجلد app. لا تغيّر <code>build.gradle.kts</code> الموجود داخل مجلد المشروع مباشرة."
+    },
+    {
+      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。",
+      "translation": "إن <code>TODO STEP01</code> داخل الكود هو تعليق تُرك كعلامة أثناء العمل، وليس رقم الخطوة في هذا الكتاب المدرسي."
+    },
+    {
+      "source": "照合用：直したあとの2つのファイルの全文",
+      "translation": "للمطابقة: النص الكامل للملفين بعد التعديل"
+    },
+    {
       "source": "libs.versions.toml · 全文",
       "translation": "libs.versions.toml · النص الكامل"
     },
     {
-      "source": "プロジェクト直下の <code>build.gradle.kts</code>。",
-      "translation": "<code>build.gradle.kts</code> الموجود مباشرة في المجلد الرئيسي للمشروع."
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · النص الكامل"
-    },
-    {
-      "source": "<code>app/build.gradle.kts</code>。こちらはappフォルダの中です。",
-      "translation": "<code>app/build.gradle.kts</code>. هذا الملف موجود داخل مجلد app."
-    },
-    {
-      "source": "コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。",
-      "translation": "إن <code>TODO STEP01</code> داخل الكود هو تعليق تُرك كعلامة أثناء العمل، وليس رقم الخطوة في هذا الكتاب المدرسي. الأسطر الأربعة الخاصة بـ <code>implementation</code> لـ CameraX موجودة بالفعل. بعد استبدال النص بالكامل، لا داعي لإضافة نفس الأسطر مرة أخرى."
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · النص الكامل"
     },
     {
       "source": "<strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。",
@@ -299,20 +315,24 @@
       "translation": "التصريح باستخدام الكاميرا"
     },
     {
-      "source": "<code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>uses-permission</code> はapplicationの外です。",
-      "translation": "استبدل نص <code>app/src/main/AndroidManifest.xml</code> كاملا. يوضع <code>uses-permission</code> خارج application."
+      "source": "<code>app/src/main/AndroidManifest.xml</code> に、緑の行を足します。<code>uses-feature</code> と <code>uses-permission</code> は、どちらもapplicationの外です。",
+      "translation": "أضف الأسطر الخضراء إلى <code>app/src/main/AndroidManifest.xml</code>. يوضع كل من <code>uses-feature</code> و<code>uses-permission</code> خارج application."
+    },
+    {
+      "source": "照合用：直したあとの <code>AndroidManifest.xml</code> の全文",
+      "translation": "للمطابقة: النص الكامل لـ <code>AndroidManifest.xml</code> بعد التعديل"
     },
     {
       "source": "AndroidManifest.xml · 全文",
       "translation": "AndroidManifest.xml · النص الكامل"
     },
     {
-      "source": "<code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。テーマ名は生成済みの <code>Theme.A04FunnyCamera</code> と一致させます。",
-      "translation": "يصرّح <code>CAMERA</code> باستخدام الكاميرا. هذا وحده لا يعني منح الإذن، بل يختاره المستخدم في مربع حوار أثناء وقت التشغيل. ويصرّح <code>camera.any</code> بالحاجة إلى كاميرا، أما اختيار الكاميرا الخلفية فسنكتبه لاحقا في Kotlin. طابق اسم السمة مع <code>Theme.A04FunnyCamera</code> المولّدة."
+      "source": "<code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。",
+      "translation": "يصرّح <code>CAMERA</code> باستخدام الكاميرا. هذا وحده لا يعني منح الإذن، بل يختاره المستخدم في مربع حوار أثناء وقت التشغيل. ويصرّح <code>camera.any</code> بالحاجة إلى كاميرا، أما اختيار الكاميرا الخلفية فسنكتبه لاحقا في Kotlin."
     },
     {
-      "source": "このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。",
-      "translation": "في هذا STEP، سنحفظ الملف. أما تشغيل مربع حوار الإذن فسيكون في STEP 06."
+      "source": "このSTEPでは、まだRunしません。権限のダイアログを動かすのはSTEP 06です。",
+      "translation": "في هذا STEP، لا تضغط Run بعد. أما تشغيل مربع حوار الإذن فسيكون في STEP 06."
     },
     {
       "source": "同じAndroid APIをJavaからも呼べます。権限名は文字列の手入力を避け、Manifest.permission.CAMERAを使います。",
@@ -335,8 +355,8 @@
       "translation": "<a1>احفظ صورة السمكة الذهبية character.png</a1>، وانسخها من Finder إلى مجلد <code>A04FunnyCamera/app/src/main/res/drawable/</code> الخاص بك. إذا تم حفظها باسم مختلف، فقم بتغييره إلى <code>character.png</code>. ضعها مباشرة داخل <strong>drawable</strong>. الصورة ذات خلفية شفافة وبأبعاد 500×416 بكسل."
     },
     {
-      "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。",
-      "translation": "في Android Studio، انقر بزر الفأرة الأيمن على الحزمة <code>jp.ac.jec.a04funnycamera</code>، ثم اختر <strong>New → Kotlin Class/File</strong>. أنشئه بالاسم <code>DraggableImageView</code> والنوع <strong>Class</strong>، ثم استبدل النص كاملا بما يلي."
+      "source": "Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成します。新しいファイルなので、中身を次の全文にします。",
+      "translation": "في Android Studio، انقر بزر الفأرة الأيمن على الحزمة <code>jp.ac.jec.a04funnycamera</code>، ثم اختر <strong>New → Kotlin Class/File</strong>. أنشئه بالاسم <code>DraggableImageView</code> والنوع <strong>Class</strong>. ولأنه ملف جديد، اجعل محتواه النص الكامل التالي."
     },
     {
       "source": "DraggableImageView.kt · 全文",
@@ -387,8 +407,8 @@
       "translation": "تراكب بث الفيديو والسمكة الذهبية والزر"
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。",
-      "translation": "افتح <code>app/src/main/res/layout/activity_main.xml</code>، واستبدل النص كاملا في عرض <strong>Code</strong>."
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示にします。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "افتح <code>app/src/main/res/layout/activity_main.xml</code>، وانتقل إلى عرض <strong>Code</strong>. لن تستخدم شاشة <code>Hello World!</code> المولّدة، لذا استبدل محتوى الملف بالنص الكامل التالي."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -419,8 +439,12 @@
       "translation": "الحصول على الإذن وتشغيل المعاينة"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の全文に置き換えます。これは<strong>14コマ目の途中コード</strong>です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。",
-      "translation": "استبدل نص <code>MainActivity.kt</code> كاملا بما يلي. هذه <strong>الشيفرة المرحلية للحصة 14</strong>. يعرض زر Take Picture رسالة تأكيد فقط، ولا يحفظ الصورة بعد."
+      "source": "<code>MainActivity.kt</code> を開き、緑の行を足して<strong>14コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。",
+      "translation": "افتح <code>MainActivity.kt</code>، وأضف الأسطر الخضراء لتحصل على <strong>الشيفرة المرحلية للحصة 14</strong>. وهناك أسطر للإضافة ضمن أسطر import أيضا. الأسطر ذات اللون الباهت هي أسطر موجودة منذ إنشاء المشروع. يعرض زر Take Picture رسالة تأكيد فقط، ولا يحفظ الصورة بعد."
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "للمطابقة: النص الكامل لـ <code>MainActivity.kt</code> حتى هذه النقطة"
     },
     {
       "source": "06-MainActivity.kt · 全文",
@@ -483,8 +507,8 @@
       "translation": "آخر 3 دقائق من الحصة 14"
     },
     {
-      "source": "ファイルを保存し、金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。",
-      "translation": "احفظ الملفات، وأعد السمكة الذهبية إلى المنتصف واضغط Take Picture مرة واحدة. انتظر حتى تختفي رسالة التأكيد. في الحصة القادمة، ستفتح مجلد <code>Documents/Kotlin/A04FunnyCamera</code> نفسه."
+      "source": "金魚を中央へ戻してTake Pictureを1回押します。確認メッセージが消えるまで待ちます。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次のコマも同じ <code>Documents/Kotlin/A04FunnyCamera</code> を開きます。",
+      "translation": "أعد السمكة الذهبية إلى المنتصف واضغط Take Picture مرة واحدة. انتظر حتى تختفي رسالة التأكيد. يحفظ Android Studio ما تكتبه تلقائيا، لذا لا تحتاج إلى إجراء عملية الحفظ. في الحصة القادمة، ستفتح مجلد <code>Documents/Kotlin/A04FunnyCamera</code> نفسه."
     },
     {
       "source": "途中で止まった人は、最後に画面が一致したSTEPを教科書のチェック欄で残します。14コマ目末の全文はSTEP 06です。",
@@ -531,8 +555,8 @@
       "translation": "رسم المعاينة والسمكة الذهبية في صورة واحدة"
     },
     {
-      "source": "まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
-      "translation": "أولا، اقرأ جزء التركيب التالي. <strong>لا تلصق هذا المقتطف وحده</strong>، بل ضع النص الكامل من STEP 10 ثم اضغط Run. يستخرج <code>previewView.bitmap</code> بث الفيديو المعروض حاليا في المعاينة. وقبل اكتمال الجاهزية، تكون قيمته null."
+      "source": "まず、次の合成部分を読みます。<strong>この抜粋はまだ入力せず</strong>、STEP 10でほかの行と一緒に足してからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。",
+      "translation": "أولا، اقرأ جزء التركيب التالي. <strong>لا تكتب هذا المقتطف بعد</strong>، بل أضفه مع الأسطر الأخرى في STEP 10 ثم اضغط Run. يستخرج <code>previewView.bitmap</code> بث الفيديو المعروض حاليا في المعاينة. وقبل اكتمال الجاهزية، تكون قيمته null."
     },
     {
       "source": "順序",
@@ -583,8 +607,12 @@
       "translation": "الانتقال إلى الشيفرة المكتملة لحفظ JPEG"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成版の全文</strong>へ置き換えます。importも含みます。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。",
-      "translation": "استبدل <code>MainActivity.kt</code> بـ <strong>النص الكامل للنسخة المكتملة</strong> التالي. يتضمّن ذلك أسطر import أيضا. نحتفظ بإذن الكاميرا وتوصيلها من الحصة 14، ونضيف <code>takeScreenshot</code> و<code>saveBitmap</code> اللتين تُستدعيان من الزر."
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成版</strong>にします。importにも足す行があります。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。直す場所は、import・クラスの説明のコメント・<code>onCreate</code> のボタンの処理と、新しく足す2つのメソッドです。",
+      "translation": "في <code>MainActivity.kt</code>، أضف الأسطر الخضراء واحذف الأسطر الحمراء لتحصل على <strong>النسخة المكتملة</strong>. وهناك أسطر للإضافة ضمن أسطر import أيضا. نحتفظ بإذن الكاميرا وتوصيلها من الحصة 14، ونضيف <code>takeScreenshot</code> و<code>saveBitmap</code> اللتين تُستدعيان من الزر. مواضع التعديل هي: أسطر import، والتعليق الذي يشرح الصنف، ومعالجة الزر في <code>onCreate</code>، والطريقتان الجديدتان اللتان تضيفهما."
+    },
+    {
+      "source": "消す行",
+      "translation": "أسطر للحذف"
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -631,8 +659,8 @@
       "translation": "تبدأ عملية الحفظ من <code>lifecycleScope.launch</code>، وتوضع عمليتا الضغط والكتابة داخل <code>withContext(Dispatchers.IO)</code>. وعند الخروج منه نعود إلى مسار التنفيذ الرئيسي، ويعرض 「保存しました」 (تم الحفظ) إذا كانت النتيجة true، أو 「保存に失敗しました」 (فشل الحفظ) إذا كانت false. وإذا تم تدمير Activity، يتم إلغاء الكوروتين التابع لـ lifecycleScope."
     },
     {
-      "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。",
-      "translation": "يستهدف هذا التطبيق نظام Android 12 أو الأحدث. لا نضيف أذونات التخزين لحفظ الصور التي ينشئها التطبيق نفسه في MediaStore. هذا الأمر منفصل تماما عن إذن الكاميرا. كما لا نحتاج إلى أذونات لقراءة صور التطبيقات الأخرى مثل <code>READ_MEDIA_IMAGES</code>. عند الحفظ والضغط على Run، تعود إلى الشاشة التي تتحرك فيها السمكة الذهبية."
+      "source": "このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。Runすると、金魚が動く画面に戻ります。",
+      "translation": "يستهدف هذا التطبيق نظام Android 12 أو الأحدث. لا نضيف أذونات التخزين لحفظ الصور التي ينشئها التطبيق نفسه في MediaStore. هذا الأمر منفصل تماما عن إذن الكاميرا. كما لا نحتاج إلى أذونات لقراءة صور التطبيقات الأخرى مثل <code>READ_MEDIA_IMAGES</code>. عند الضغط على Run، تعود إلى الشاشة التي تتحرك فيها السمكة الذهبية."
     },
     {
       "source": "useはJavaのtry-with-resourcesと同じく、処理後にcloseします。ラムダのitが開いた出力先です。保存の結果はBooleanで画面側へ返します。",
@@ -699,8 +727,8 @@
       "translation": "التحقق أيضا في حالة عدم السماح بالإذن"
     },
     {
-      "source": "作ったファイルを保存します。エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。",
-      "translation": "احفظ الملفات التي أنشأتها. في المحاكي، افتح <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong>، واجعله <strong>Don’t allow</strong> (عدم السماح). أعد التشغيل بـ Run من Android Studio، وإذا ظهر مربع الحوار، فاختر عدم السماح. سيكون بث الكاميرا أسود، وتظهر رسالة تنبيه بشأن إذن الكاميرا."
+      "source": "エミュレータの <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong> を開き、<strong>Don’t allow</strong>（許可しない）にします。Android StudioからRunし直し、ダイアログが出たら許可しないを選びます。映像は黒く、カメラの権限についての案内が出ます。",
+      "translation": "في المحاكي، افتح <strong>Settings → Apps → See all apps → A04FunnyCamera → Permissions → Camera</strong>، واجعله <strong>Don’t allow</strong> (عدم السماح). أعد التشغيل بـ Run من Android Studio، وإذا ظهر مربع الحوار، فاختر عدم السماح. سيكون بث الكاميرا أسود، وتظهر رسالة تنبيه بشأن إذن الكاميرا."
     },
     {
       "source": "カメラを許可せず、権限が必要というSnackbarが出た画面",
@@ -807,8 +835,8 @@
       "translation": "آخر 3 دقائق من الحصة 15"
     },
     {
-      "source": "自分のプロジェクトを保存します。カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
-      "translation": "احفظ مشروعك الخاص. أعد إذن الكاميرا إلى \"السماح أثناء استخدام التطبيق فقط\"، ثم افتح المعاينة وملف JPEG المحفوظ بالترتيب. إذا كنت ترغب في مقارنة الكود، فقارنه بالنص الكامل للخطوة 10."
+      "source": "カメラの許可を使用中のみ許可に戻しておき、プレビューと保存したJPEGを順に開きます。コードを見比べたいときは、STEP 10の全文と見比べます。",
+      "translation": "أعد إذن الكاميرا إلى \"السماح أثناء استخدام التطبيق فقط\"، ثم افتح المعاينة وملف JPEG المحفوظ بالترتيب. إذا كنت ترغب في مقارنة الكود، فقارنه بالنص الكامل للخطوة 10."
     },
     {
       "source": "提出準備ではサイドバーの「共通：提出課題とAPK」へ進めます。アレンジした自分のプロジェクトのコピーを使い、デバッグAPKを作ります。",
@@ -835,8 +863,8 @@
       "translation": "توقف المزامنة"
     },
     {
-      "source": "Panda 2か、STEP 02の3ファイルが正しい場所にあるかを確認。最初の原因行を先生に見せます。",
-      "translation": "التحقق مما إذا كان الإصدار Panda 2، وما إذا كانت الملفات الثلاثة في STEP 02 في مواضعها الصحيحة. اعرض السطر الأول لسبب الخطأ على المعلم."
+      "source": "Panda 2か、STEP 02で直した2つのファイルの場所と、足した行を確認。最初の原因行を先生に見せます。",
+      "translation": "التحقق مما إذا كان الإصدار Panda 2، ومن مواضع الملفين اللذين عدّلتهما في STEP 02 ومن الأسطر التي أضفتها. اعرض السطر الأول لسبب الخطأ على المعلم."
     },
     {
       "source": "characterが赤い",

@@ -223,8 +223,12 @@
       "translation": "مطابقة إصدارات المكتبات المستخدمة في الحصص"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "حتى مع Panda 2 نفسه، تختلف إصدارات المكتبات بحسب تاريخ الإنشاء. حوّل نافذة الأدوات Project على اليسار إلى عرض <strong>Project</strong>، وافتح <code>gradle → libs.versions.toml</code>، ثم استبدل محتواه كاملا بما يلي. هذه ليست شيفرة Kotlin، بل إعدادات تحدد المكوّنات المستخدمة وإصداراتها."
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "حتى مع Panda 2 نفسه، تختلف إصدارات المكتبات بحسب تاريخ الإنشاء. حوّل نافذة الأدوات Project على اليسار إلى عرض <strong>Project</strong>، وافتح <code>gradle → libs.versions.toml</code>، ثم قارن الأرقام في <code>[versions]</code> الموجود في أول الملف بما يلي. في الأسطر التي يختلف فيها الرقم فقط، غيّره إلى الرقم الوارد أدناه. لا تغيّر <code>[libraries]</code> وما تحته. هذه ليست شيفرة Kotlin، بل إعدادات تحدد المكوّنات المستخدمة وإصداراتها."
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "للمطابقة: النص الكامل لـ <code>libs.versions.toml</code>"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -267,8 +271,8 @@
       "translation": "في الأعلى، اختر إعدادات التشغيل <strong>app</strong> وجهاز AVD المحدّد، ثم اضغط <strong>Run ▶</strong>. تحقق أولا من ظهور <code>Hello World!</code>."
     },
     {
-      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替え、全文を次で置き換えます。",
-      "translation": "حوّل نافذة الأدوات Project على اليسار إلى عرض <strong>Project</strong>، وافتح <code>app/src/main/res/layout/activity_main.xml</code>. انتقل إلى <strong>Code</strong> في أعلى يمين المحرر، واستبدل النص كاملا بما يلي."
+      "source": "左のProjectツールウィンドウを <strong>Project</strong> 表示にし、<code>app/src/main/res/layout/activity_main.xml</code> を開きます。エディタ右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "حوّل نافذة الأدوات Project على اليسار إلى عرض <strong>Project</strong>، وافتح <code>app/src/main/res/layout/activity_main.xml</code>. انتقل إلى <strong>Code</strong> في أعلى يمين المحرر. لن تستخدم شاشة <code>Hello World!</code> المولّدة، لذا استبدل محتوى الملف بالنص الكامل التالي."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +343,32 @@
       "translation": "الحصول على عناصر View وتجهيز مكان لحفظ الوقت المنقضي"
     },
     {
-      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、全文を次で置き換えます。まずは画面とKotlinをつなぐところまでです。",
-      "translation": "افتح <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code>، واستبدل النص كاملا بما يلي. في هذه المرحلة، تكتفي بربط الشاشة بـ Kotlin."
+      "source": "<code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code> を開き、次の枠のとおりに直します。まずは画面とKotlinをつなぐところまでです。",
+      "translation": "افتح <code>app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt</code>، وعدّله كما في الإطار التالي. في هذه المرحلة، تكتفي بربط الشاشة بـ Kotlin."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "تعرض الإطارات التالية من الملف <strong>المواضع التي تعدّلها فقط</strong>. <span1>الأسطر الخضراء بخط عريض</span1> هي أسطر للإضافة، و<span2>الأسطر الحمراء المشطوبة</span2> هي أسطر للحذف. أما <span3>الأسطر ذات اللون الباهت</span3> فهي أسطر موجودة مسبقا في الملف، فلا تكتبها. استخدمها علامة للعثور على موضع التعديل. والرمز <code>⋮</code> يعني أن هناك أسطرا في الوسط لا تتغيّر، ولذلك لم تُعرض هنا."
+    },
+    {
+      "source": "<code>enableEdgeToEdge()</code> の行は、頭に <code>this.</code> を付けた形に直します。Javaの <code>this.メソッド()</code> と同じ書き方で、付けなくても動きは変わりません。",
+      "translation": "عدّل سطر <code>enableEdgeToEdge()</code> بإضافة <code>this.</code> في أوله. وهي الكتابة نفسها في Java، أي <code>this.メソッド()</code> (メソッド تعني «طريقة»)، ولا يتغيّر السلوك حتى لو لم تضفه."
+    },
+    {
+      "source": "足す行",
+      "translation": "أسطر للإضافة"
+    },
+    {
+      "source": "消す行",
+      "translation": "أسطر للحذف"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "أسطر موجودة مسبقا"
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "للمطابقة: النص الكامل لـ <code>MainActivity.kt</code> حتى هذه النقطة"
     },
     {
       "source": "MainActivity.kt · STEP 03終了時の全文",
@@ -479,8 +507,8 @@
       "translation": "هذه آخر 3 دقائق. اضغط START→STOP→START→STOP→RESET بالترتيب. تحقق أيضا من أن موقع حفظ مشروعك هو <code>Documents/Kotlin/A02CalcGame</code>."
     },
     {
-      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。次回は同じプロジェクトを開きます。",
-      "translation": "هنا لا يعمل إلا الوقت. كون حقل السؤال فارغا وأزرار الأرقام بلا معالجة بعد هو الحالة المكتملة لهذه المرحلة. في المرة القادمة تفتح المشروع نفسه."
+      "source": "ここでは時間だけが動きます。問題欄が空白で、数字ボタンにまだ処理がないのは、この段階の完成状態です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次回は同じプロジェクトを開きます。",
+      "translation": "هنا لا يعمل إلا الوقت. كون حقل السؤال فارغا وأزرار الأرقام بلا معالجة بعد هو الحالة المكتملة لهذه المرحلة. يحفظ Android Studio ما تكتبه تلقائيا، لذا لا تحتاج إلى إجراء عملية الحفظ. في المرة القادمة تفتح المشروع نفسه."
     },
     {
       "source": "<code>elapsedTimeMillis</code> をクラスのプロパティに置いたので、STOPとSTARTの両方から同じ値を使えます。",
@@ -579,12 +607,8 @@
       "translation": "ربط START وSTOP وRESET بحالة السؤال"
     },
     {
-      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナを、まとめて次に置き換えます</strong>。View取得の行は残します。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
-      "translation": "في <code>onCreate</code>، <strong>استبدل مستمعات START وSTOP وRESET الثلاثة كلها بما يلي</strong>. اترك أسطر الحصول على عناصر View. يطرح START سؤالا في المرة الأولى فقط، ويوقف STOP قبول الإجابات، ويعيد RESET أيضا رقم السؤال وعدد الإجابات الصحيحة."
-    },
-    {
-      "source": "MainActivity.kt · 3つのリスナを置き換える",
-      "translation": "MainActivity.kt · استبدل المستمعات الثلاثة"
+      "source": "<code>onCreate</code> 内のSTART・STOP・RESETの<strong>3つのリスナに、緑の行を足します</strong>。STARTで初回だけ出題し、STOPで回答を止め、RESETで問題番号と正解数も戻します。",
+      "translation": "في <code>onCreate</code>، <strong>أضف الأسطر الخضراء إلى مستمعات START وSTOP وRESET الثلاثة</strong>. يطرح START سؤالا في المرة الأولى فقط، ويوقف STOP قبول الإجابات، ويعيد RESET أيضا رقم السؤال وعدد الإجابات الصحيحة."
     },
     {
       "source": "Run→STARTで「1問目: 10 - 数字 =」が出ます。数字は毎回変わるので、画像と同じになる必要はありません。",
@@ -671,12 +695,8 @@
       "translation": "تصحيح الإجابات وعرض الوقت والنتيجة بعد 10 أسئلة"
     },
     {
-      "source": "<code>import</code> 一覧へ <code>import java.util.concurrent.TimeUnit</code> を追加します。前のSTEPで足した <code>val numberButtonIds</code> から <code>for</code> を閉じる <code>}</code> までを、次に置き換えます。押した数字だけを出す仮のSnackbarはなくなります。",
-      "translation": "أضف <code>import java.util.concurrent.TimeUnit</code> إلى قائمة <code>import</code>. استبدل كل ما بين <code>val numberButtonIds</code> الذي أضفته في STEP السابقة و<code>}</code> الذي يغلق <code>for</code> بما يلي. يختفي Snackbar المؤقت الذي كان يعرض الرقم المضغوط فقط."
-    },
-    {
-      "source": "MainActivity.kt · 数字ボタンの処理全体を置き換える",
-      "translation": "MainActivity.kt · استبدل معالجة أزرار الأرقام كاملة"
+      "source": "前のSTEPで足した数字ボタンの処理を、<strong>採点する形に直します</strong>。緑の行を足し、赤い行を消します。<code>import</code> にも1行足します。押した数字だけを出す仮のSnackbarはなくなります。",
+      "translation": "عدّل معالجة أزرار الأرقام التي أضفتها في STEP السابق <strong>لتصبح معالجة تصحّح الإجابات</strong>. أضف الأسطر الخضراء واحذف الأسطر الحمراء. وأضف سطرا واحدا إلى أسطر <code>import</code> أيضا. وبذلك يزول Snackbar المؤقت الذي يعرض الرقم المضغوط فقط."
     },
     {
       "source": "Run→STARTで10問答えます。1問だけ、計算結果と違う数字を押し、残り9問は正しい数字を押してください。最後は「9問正解しました！時間は○秒です」となり、時間が止まります。10問目の正誤も数えた後で終了する順です。",
@@ -875,8 +895,8 @@
       "translation": "بعد RESET يظهر <code>00:00</code> وحقل سؤال فارغ، ويمكن البدء من جديد من السؤال 1."
     },
     {
-      "source": "自分のプロジェクトの <code>MainActivity.kt</code> と <code>activity_main.xml</code> を保存します。アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
-      "translation": "احفظ <code>MainActivity.kt</code> و<code>activity_main.xml</code> في مشروعك. عندما تتابع التخصيص، تحقق من مواضع التغيير وتأثيرها في جدول STEP 13 وأنت تعمل."
+      "source": "アレンジを続けるときはSTEP 13の表から、変える場所と効果を確かめて進めます。",
+      "translation": "عند متابعة التخصيص، تحقق في جدول STEP 13 من موضع التغيير وتأثيره، ثم تابع."
     },
     {
       "source": "<code>correctNo++</code> で数え、<code>txtMessage.text = message</code> で画面へ出します。",
@@ -891,8 +911,8 @@
       "translation": "احتفظ بالمشروع الذي أنشأته بنفسك، وتابع التعديل المخصص مع التحقق من مواضع التغيير بداخله."
     },
     {
-      "source": "停止・再開・10問の結果・リセットが動き、自分のMainActivity.ktとXMLが保存されている。",
-      "translation": "يعمل الإيقاف والاستئناف ونتيجة الأسئلة العشرة وإعادة الضبط، وMainActivity.kt وXML الخاصان بك محفوظان."
+      "source": "自分のアプリで、停止・再開・10問の結果・リセットが動いている。",
+      "translation": "في تطبيقك، يعمل الإيقاف والاستئناف وعرض النتيجة بعد 10 أسئلة وإعادة الضبط."
     },
     {
       "source": "見えている状態",
@@ -963,8 +983,8 @@
       "translation": "عند الضغط على رقم ما زال يظهر Snackbar بالرقم"
     },
     {
-      "source": "STEP 10の途中状態です。STEP 11で数字ボタンの処理全体を置き換えます。",
-      "translation": "هذه الحالة المرحلية في STEP 10. في STEP 11، استبدل معالجة أزرار الأرقام كاملة."
+      "source": "STEP 10の途中状態です。STEP 11で、仮のSnackbarを採点の処理に直します。",
+      "translation": "هذه الحالة المرحلية في STEP 10. في STEP 11، استبدل Snackbar المؤقت بمعالجة تصحيح الإجابات."
     },
     {
       "source": "かっこが合わない",

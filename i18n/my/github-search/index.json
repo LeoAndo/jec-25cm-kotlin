@@ -51,8 +51,8 @@
       "translation": "STEP 04 ထည့်သွင်းမှုနှင့် Spinner ကို Kotlin နှင့် ချိတ်ဆက်ရန်"
     },
     {
-      "source": "STEP 05 11コマ目の画面を確認して保存する",
-      "translation": "STEP 05 11 ချိန်မြောက် မျက်နှာပြင်ကို စစ်ဆေးပြီး သိမ်းဆည်းရန်"
+      "source": "STEP 05 11コマ目の画面を確認する",
+      "translation": "STEP 05 11 ကြိမ်မြောက် အတန်းချိန်၏ မျက်နှာပြင်ကို စစ်ဆေးရန်"
     },
     {
       "source": "STEP 06 12コマ目：入力画面から再開する",
@@ -75,8 +75,8 @@
       "translation": "STEP 10 ပုံသေ data ကို RecyclerView သို့ ပေးပို့ရန်"
     },
     {
-      "source": "STEP 11 12コマ目の2行を確認して保存する",
-      "translation": "STEP 11 12 ချိန်မြောက်၏ 2 ကြောင်းကို စစ်ဆေးပြီး သိမ်းဆည်းရန်"
+      "source": "STEP 11 12コマ目の2行を確認する",
+      "translation": "STEP 11 12 ကြိမ်မြောက် အတန်းချိန်၏ အတန်း 2 တန်းကို စစ်ဆေးရန်"
     },
     {
       "source": "STEP 12 13コマ目：2行の画面から再開する",
@@ -243,24 +243,32 @@
       "translation": "ချိတ်ဆက်မှုနှင့် စာရင်းအတွက် အသုံးပြုမည့် setting များကို ပြင်ဆင်ရန်"
     },
     {
-      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
-      "translation": "Panda 2 တွင်လည်း ဖန်တီးသည့်ရက်ပေါ်မူတည်၍ library ၏ ဗားရှင်း ပြောင်းလဲသွားပါသည်။ အောက်ပါ <strong>setting ဖိုင် 3 ခုကို အပြည့်အစုံ အစားထိုးပြီးမှ</strong> sync လုပ်ပါ။ <code>build.gradle.kts</code> သည် 2 နေရာတွင် ရှိသောကြောင့် path ကို စစ်ဆေးပါ။ အခြား ဗားရှင်းဖြင့် ဖန်တီးထားသော တည်ဆောက်ပုံတွင် AGP နံပါတ်ကိုသာ လျှော့၍ အသုံးမပြုပါနှင့်။"
+      "source": "通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。",
+      "translation": "ချိတ်ဆက်မှုနှင့် စာရင်းအတွက် အသုံးပြုမည့် library များကို အောက်ပါ <strong>setting ဖိုင် 3 ခုတွင် ထပ်ထည့်ပြီးမှ</strong> sync လုပ်ပါ။ <code>build.gradle.kts</code> သည် 2 နေရာတွင် ရှိသောကြောင့် path ကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "ဤနေရာမှ နောက်ပိုင်းရှိ ဘောင်များတွင် ဖိုင်၏ <strong>ပြင်ရမည့်နေရာများကိုသာ</strong> ဖော်ပြထားပါသည်။ <span1>စာလုံးထူသော အစိမ်းရောင် စာကြောင်း</span1>သည် ထပ်ထည့်ရမည့် စာကြောင်း၊ <span2>မျဉ်းဖြတ်ထားသော အနီရောင် စာကြောင်း</span2>သည် ဖျက်ရမည့် စာကြောင်း ဖြစ်ပါသည်။ <span3>စာလုံးအရောင်ဖျော့သော စာကြောင်း</span3>သည် ဖိုင်ထဲတွင် ရှိပြီးသား စာကြောင်းဖြစ်၍ မရိုက်ထည့်ပါနှင့်။ ပြင်ရမည့်နေရာကို ရှာရန် အမှတ်အသားအဖြစ် သုံးပါ။ <code>⋮</code> သည် ကြားရှိ မပြောင်းသော စာကြောင်းများကို ချန်လှပ်ထားကြောင်း ပြသည့် အမှတ်အသား ဖြစ်ပါသည်။"
     },
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "ပထမဆုံးမှာ <code>gradle/libs.versions.toml</code> ဖြစ်ပါသည်။ Ktor ကို ချိတ်ဆက်မှု၊ serialization ကို JSON ပြောင်းလဲခြင်း၊ RecyclerView နှင့် CardView ကို စာရင်း၊ lifecycle ကို မျက်နှာပြင်နှင့် ချိတ်ဆက်ထားသော ချိတ်ဆက်မှုစတင်ခြင်းတို့အတွက် အသုံးပြုပါသည်။"
     },
     {
-      "source": "libs.versions.toml · 全文",
-      "translation": "libs.versions.toml ၊ အပြည့်အစုံ"
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "<code>[versions]</code> တွင် စာလုံးအရောင်ဖျော့သော စာကြောင်းများ၏ ကိန်းဂဏန်းများကိုလည်း မိမိ၏ ဖိုင်နှင့် နှိုင်းယှဉ်ကြည့်ပါ။ Panda 2 ဖြစ်သော်လည်း ဖန်တီးသည့် နေ့စွဲပေါ်မူတည်၍ library ဗားရှင်းများ ကွဲပြားနိုင်သောကြောင့် ဖြစ်ပါသည်။ ကိန်းဂဏန်း မတူသော စာကြောင်းများကို ဤနေရာရှိ ကိန်းဂဏန်းများအတိုင်း ပြောင်းရေးပါ။ Panda 2 မဟုတ်သော ဗားရှင်းဖြင့် ဖန်တီးထားသော project ဖြစ်လျှင် မပြောင်းရေးမီ ဆရာ့ကို ပြပါ။ <code>agp</code> ၏ ကိန်းဂဏန်းကိုသာ လျှော့ချလျှင် အခြားဆက်တင်များနှင့် မကိုက်ညီတော့ပါ။"
+    },
+    {
+      "source": "足す行",
+      "translation": "ထပ်ထည့်ရမည့် စာကြောင်း"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "ရှိပြီးသား စာကြောင်း"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
       "translation": "နောက်တစ်ခုမှာ project အောက်တိုက်ရိုက်ရှိ <code>build.gradle.kts</code> ဖြစ်ပါသည်။"
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · အပြည့်အစုံ"
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
@@ -271,8 +279,28 @@
       "translation": "<strong>Sync Now</strong> ကို ရွေးပါ၊ မပေါ်ပါက <strong>File → Sync Project with Gradle Files</strong> ကို ရွေးချယ်ပြီး အနီရောင် error ပျောက်သွားသည်အထိ စောင့်ပါ။ AGP 9.1.1 တွင် Kotlin ၏ build လုပ်ဆောင်ချက် ပါဝင်ပြီးဖြစ်သောကြောင့် အခြား <code>org.jetbrains.kotlin.android</code> ကို ထပ်မထည့်ပါ။ catalog အတွင်းရှိ <code>kotlin</code> မှာ ဤနေရာတွင် serialization plugin ၏ ဗားရှင်းဖြစ်ပါသည်။"
     },
     {
-      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
-      "translation": "ဆက်လက်၍ <code>app/src/main/AndroidManifest.xml</code> ကို အပြည့်အစုံ အစားထိုးပါ။ <code>INTERNET</code> သည် <code>application</code> ၏ အပြင်ဘက်၊ <code>windowSoftInputMode</code> သည် <code>activity</code> ၏ attribute ဖြစ်ပါသည်။ ချိတ်ဆက်မှုအတွက် run ချိန်တွင် ခွင့်ပြုချက်တောင်းသော dialog ပေါ်မည်မဟုတ်ပါ။"
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported=\"true\"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "ဆက်လက်၍ <code>app/src/main/AndroidManifest.xml</code> ကို ပြင်ပါ။ <code>INTERNET</code> သည် <code>application</code> ၏ အပြင်ဘက်၊ <code>windowSoftInputMode</code> သည် <code>activity</code> ၏ attribute ဖြစ်ပါသည်။ <code>android:exported=\"true\"</code> စာကြောင်းသည် အဆုံးရှိ <code>&gt;</code> ကို နောက်စာကြောင်းသို့ ရွှေ့ရသောကြောင့် ဖျက်ရမည့် စာကြောင်းနှင့် ထပ်ထည့်ရမည့် စာကြောင်း နှစ်မျိုးစလုံးတွင် ပါရှိပါသည်။ ချိတ်ဆက်မှုအတွက် run ချိန်တွင် ခွင့်ပြုချက်တောင်းသော dialog ပေါ်မည်မဟုတ်ပါ။"
+    },
+    {
+      "source": "消す行",
+      "translation": "ဖျက်ရမည့် စာကြောင်း"
+    },
+    {
+      "source": "照合用：直したあとの4つのファイルの全文",
+      "translation": "တိုက်စစ်ရန်: ပြင်ပြီးသော ဖိုင် 4 ခု၏ အပြည့်အစုံ"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml ၊ အပြည့်အစုံ"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · အပြည့်အစုံ"
+    },
+    {
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · အပြည့်အစုံ"
     },
     {
       "source": "AndroidManifest.xml · 全文",
@@ -283,8 +311,8 @@
       "translation": "နောက်အတန်းတွင် အသုံးပြုမည့် <code>@Serializable</code> ကို Swift ၏ <code>Codable</code> ကဲ့သို့ပင် JSON ပြောင်းလဲခြင်းအတွက် အသုံးပြုပါသည်။ ၎င်းပြောင်းလဲခြင်းလုပ်ငန်းစဉ်ကို ဖန်တီးနိုင်ရန်အတွက် ယခုအကြိမ်တွင် library သာမက plugin ကိုပါ သတ်မှတ်ပါသည်။"
     },
     {
-      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
-      "translation": "setting 3 ခုနှင့် Manifest ကို သိမ်းဆည်းပြီးဖြစ်ကာ Gradle sync ၏ အနီရောင် error များ ပျောက်နေပါသည်။"
+      "source": "3つの設定とManifestに足す行が入り、Gradle同期の赤いエラーが消えている。",
+      "translation": "setting 3 ခုနှင့် Manifest တွင် ထပ်ထည့်ရမည့် စာကြောင်းများ ပါဝင်နေပြီး Gradle sync ၏ အနီရောင် error များ ပျောက်နေပါသည်။"
     },
     {
       "source": "STEP 03 · 11コマ目 · 目安 20分",
@@ -307,8 +335,8 @@
       "translation": "run ရန် setting <strong>app</strong> နှင့် သတ်မှတ်ထားသော AVD ဖြင့် <strong>Run ▶</strong> လုပ်ပါ။ ပထမဆုံး <code>Hello World!</code> ကို စစ်ဆေးပါ။"
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
-      "translation": "<code>app/src/main/res/layout/activity_main.xml</code> ကို ဖွင့်ပြီး ညာဘက်အပေါ်ရှိ <strong>Code</strong> တွင် အပြည့်အစုံ အစားထိုးပါ။"
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "<code>app/src/main/res/layout/activity_main.xml</code> ကို ဖွင့်ပြီး ညာဘက်အပေါ်ရှိ <strong>Code</strong> သို့ ပြောင်းပါ။ အလိုအလျောက် ဖန်တီးထားသော <code>Hello World!</code> မျက်နှာပြင်ကို မသုံးသောကြောင့် အထဲရှိ အကြောင်းအရာကို အောက်ပါ အပြည့်အစုံဖြင့် အစားထိုးပါ။"
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +367,12 @@
       "translation": "ထည့်သွင်းမှုနှင့် Spinner ကို Kotlin ဖြင့် ချိတ်ဆက်ရန်"
     },
     {
-      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
-      "translation": "package အတွင်းရှိ <code>MainActivity.kt</code> ကို အောက်ပါ <strong>11 ခုမြောက် အတန်း၏ ကြားဖြတ် code</strong> ဖြင့် အပြည့်အစုံ အစားထိုးပါ။ import ကိုလည်း ထည့်သွင်းပါ။ နောက်ပိုင်းတွင် ရှာဖွေမှုနှင့် မချိတ်ဆက်မီ ထည့်သွင်းမှုနှင့် ရွေးချယ်စရာများကို စစ်ဆေးပါ။"
+      "source": "パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "package အတွင်းရှိ <code>MainActivity.kt</code> ကို ဖွင့်ပြီး၊ အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်၍ <strong>11 ကြိမ်မြောက် အတန်းချိန်၏ ကြားဖြတ် code</strong> ဖြစ်အောင် လုပ်ပါ။ import တွင်လည်း ထပ်ထည့်ရမည့် စာကြောင်းများ ရှိပါသည်။ စာလုံးအရောင်ဖျော့သော စာကြောင်းများသည် project ကို ဖန်တီးစဉ်ကတည်းက ရှိပြီးသား စာကြောင်းများ ဖြစ်ပါသည်။ နောက်ပိုင်းတွင် ရှာဖွေမှုနှင့် မချိတ်ဆက်မီ ထည့်သွင်းမှုနှင့် ရွေးချယ်စရာများကို စစ်ဆေးပါ။"
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "တိုက်စစ်ရန်: ဤအဆင့်အထိ <code>MainActivity.kt</code> ၏ အပြည့်အစုံ"
     },
     {
       "source": "04-MainActivity.kt · 全文",
@@ -403,20 +435,20 @@
       "translation": "STEP 05 ၊ 11 ခုမြောက် အတန်း ၊ ခန့်မှန်း 3 မိနစ်"
     },
     {
-      "source": "11コマ目の画面を確認して保存する",
-      "translation": "အတန်းချိန် 11 ၏ မျက်နှာပြင်ကို စစ်ဆေးပြီး သိမ်းဆည်းရန်"
+      "source": "11コマ目の画面を確認する",
+      "translation": "11 ကြိမ်မြောက် အတန်းချိန်၏ မျက်နှာပြင်ကို စစ်ဆေးရန်"
     },
     {
-      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
-      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ ရှာဖွေမည့် စကားလုံးကို ဖျက်၍ နှိပ်ပါက လမ်းညွှန်ချက် ထွက်လာပြီး၊ <code>kotlin</code> ကို ထည့်၍ နှိပ်ပါက 「入力: kotlin」 (ထည့်သွင်းမှု: kotlin) ပေါ်လာပါမည်။ စာရင်းသည် ဗလာအတိုင်း ဖြစ်နေပါက ပုံမှန် ဖြစ်ပါသည်။ <strong>File → Save All</strong> ဖြင့် သိမ်းဆည်းပါ။ နောက်တစ်ကြိမ်တွင် ဤ project အဟောင်းကိုပင် ဖွင့်ပါမည်။"
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次はこの同じプロジェクトを開きます。",
+      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ ရှာဖွေမည့် စကားလုံးကို ဖျက်၍ နှိပ်ပါက လမ်းညွှန်ချက် ထွက်လာပြီး၊ <code>kotlin</code> ကို ထည့်၍ နှိပ်ပါက 「入力: kotlin」 (ထည့်သွင်းမှု: kotlin) ပေါ်လာပါမည်။ စာရင်းသည် ဗလာအတိုင်း ဖြစ်နေပါက ပုံမှန် ဖြစ်ပါသည်။ ရေးထားသော အကြောင်းအရာကို Android Studio က အလိုအလျောက် သိမ်းဆည်းပေးသောကြောင့် သိမ်းဆည်းခြင်း လုပ်ဆောင်ချက် မလိုအပ်ပါ။ နောက်တစ်ကြိမ်တွင် ဤ တူညီသော project ကိုပင် ဖွင့်ပါမည်။"
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
       "translation": "နှစ်ခုစလုံးသည် ကလစ်နှိပ်သည့်အချိန်၏ လုပ်ဆောင်ချက်ကို မှတ်ပုံတင်ထားပါသည်။ ယခု <code>search</code> သည် ထည့်သွင်းမှုကို စစ်ဆေးရန်အတွက်သာ ဖြစ်ပါသည်။ ဆက်သွယ်မည့် လုပ်ဆောင်ချက်ကို အတန်းချိန် 13 တွင် ထည့်သွင်းပါမည်။"
     },
     {
-      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
-      "translation": "MainActivity.kt ကို သိမ်းဆည်းပြီးဖြစ်ကာ၊ ထည့်သွင်းမှုကို စစ်ဆေးသည့် Toast ပေါ်လာပြီး၊ စာရင်းသည် အလွတ်အတိုင်း ဖြစ်နေပါသည်။"
+      "source": "入力確認のToastが出て、一覧は空のままである。",
+      "translation": "ထည့်သွင်းမှုကို စစ်ဆေးသည့် Toast ပေါ်လာပြီး၊ စာရင်းသည် အလွတ်အတိုင်း ဖြစ်နေပါသည်။"
     },
     {
       "source": "STEP 06 · 12コマ目 · 目安 5分",
@@ -451,8 +483,8 @@
       "translation": "JSON နှင့် သက်ဆိုင်သော data class ကို ဖန်တီးရန်"
     },
     {
-      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "package ကို right click နှိပ်ပြီး <strong>New → Kotlin Class/File</strong> ကို ရွေးချယ်ကာ အမည်ကို <code>GithubSearchResponse</code>၊ အမျိုးအစားကို <strong>File</strong> ဟု ထားပါ။ ရရှိလာသော <code>GithubSearchResponse.kt</code> ကို စာသား အားလုံး အစားထိုးပါ။ အောက်ပါတို့သည် ဖိုင် 1 ခုတွင် class 3 ခုကို ရေးသားသည့် ပုံစံ ဖြစ်ပါသည်။"
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "package ကို right click နှိပ်ပြီး <strong>New → Kotlin Class/File</strong> ကို ရွေးချယ်ကာ အမည်ကို <code>GithubSearchResponse</code>၊ အမျိုးအစားကို <strong>File</strong> ဟု ထားပါ။ ရရှိလာသော <code>GithubSearchResponse.kt</code> သည် ဖိုင်အသစ်ဖြစ်သောကြောင့် အထဲရှိ အကြောင်းအရာကို အောက်ပါ အပြည့်အစုံအတိုင်း ဖြစ်အောင် လုပ်ပါ။ အောက်ပါတို့သည် ဖိုင် 1 ခုတွင် class 3 ခုကို ရေးသားသည့် ပုံစံ ဖြစ်ပါသည်။"
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -503,8 +535,8 @@
       "translation": "စာရင်း၏ 1 ကြောင်းကို XML ဖြင့် ဖန်တီးမည်"
     },
     {
-      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
-      "translation": "<code>app/src/main/res/layout</code> ကို right-click နှိပ်ပြီး <strong>New → Layout Resource File</strong> ကို ရွေးချယ်ပါ။ File name ကို <code>list_item</code> အဖြစ် သတ်မှတ်၍ ဖန်တီးပါ။ Root element ကို ဖန်တီးပြီးနောက် စာသားတစ်ခုလုံး အစားထိုးမည်ဖြစ်သဖြင့် မူလတန်ဖိုးအတိုင်းထား၍ ရပါသည်။ Code ပြသမှုသို့ ပြောင်းလဲပြီး၊ အောက်ပါအတိုင်း စာသားတစ်ခုလုံးကို အစားထိုးပါ။"
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。",
+      "translation": "<code>app/src/main/res/layout</code> ကို right-click နှိပ်ပြီး <strong>New → Layout Resource File</strong> ကို ရွေးချယ်ပါ။ File name ကို <code>list_item</code> အဖြစ် သတ်မှတ်၍ ဖန်တီးပါ။ Root element ကို မူလတန်ဖိုးအတိုင်းထား၍ ရပါသည်။ ဖန်တီးပြီးချင်း အထဲရှိ အကြောင်းအရာကို မသုံးသောကြောင့် Code ပြသမှုသို့ ပြောင်းလဲပြီး၊ အထဲရှိ အကြောင်းအရာကို အောက်ပါ အပြည့်အစုံဖြင့် အစားထိုးပါ။"
     },
     {
       "source": "list_item.xml · 全文",
@@ -531,8 +563,8 @@
       "translation": "Adapter ဖြင့် အချက်အလက်များကို 1 ကြောင်းသို့ ချိတ်ဆက်မည်"
     },
     {
-      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "package ကို right-click နှိပ်ပြီး <strong>New → Kotlin Class/File</strong> ကို ရွေးချယ်ပါ။ အမည်ကို <code>RepositoryAdapter</code>၊ အမျိုးအစားကို <strong>File</strong> အဖြစ် သတ်မှတ်ပြီး၊ စာသားတစ်ခုလုံးကို အောက်ပါအတိုင်း အစားထိုးပါ။"
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "package ကို right-click နှိပ်ပြီး <strong>New → Kotlin Class/File</strong> ကို ရွေးချယ်ပါ။ အမည်ကို <code>RepositoryAdapter</code>၊ အမျိုးအစားကို <strong>File</strong> အဖြစ် သတ်မှတ်ပါ။ ဖိုင်အသစ်ဖြစ်သောကြောင့် အထဲရှိ အကြောင်းအရာကို အောက်ပါ အပြည့်အစုံအတိုင်း ဖြစ်အောင် လုပ်ပါ။"
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -587,8 +619,8 @@
       "translation": "ပုံသေဒေတာကို RecyclerView သို့ ပေးပို့ရန်"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
-      "translation": "<code>MainActivity.kt</code> ကို အောက်ပါ 12 ကြိမ်မြောက် အတန်းချိန်၏ ကြားဖြတ် code ဖြင့် အပြည့်အစုံ အစားထိုးပါ။ 11 ကြိမ်မြောက် အတန်းချိန်၏ input စစ်ဆေးမှုကို ချန်ထားပြီး၊ <code>repositoryAdapter</code> ဖန်တီးခြင်း၊ RecyclerView နှင့် ချိတ်ဆက်ခြင်း၊ ပုံသေဒေတာ၏ <code>submitList</code> ကို ထပ်ထည့်ထားသော ပုံစံဖြစ်ပါသည်။"
+      "source": "<code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。",
+      "translation": "<code>MainActivity.kt</code> တွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်၍ 12 ကြိမ်မြောက် အတန်းချိန်၏ ကြားဖြတ် code ဖြစ်အောင် လုပ်ပါ။ 11 ကြိမ်မြောက် အတန်းချိန်၏ input စစ်ဆေးမှုကို ချန်ထားပြီး၊ <code>repositoryAdapter</code> ဖန်တီးခြင်း၊ RecyclerView နှင့် ချိတ်ဆက်ခြင်း၊ ပုံသေဒေတာ၏ <code>submitList</code> ကို ထပ်ထည့်ပါ။ ထပ်ထည့်ရမည့်နေရာများမှာ import၊ property၊ <code>onCreate</code> ဟူ၍ 3 နေရာ ဖြစ်ပါသည်။"
     },
     {
       "source": "10-MainActivity.kt · 全文",
@@ -623,20 +655,20 @@
       "translation": "STEP 11 ၊ 12 ကြိမ်မြောက် အတန်းချိန် ၊ ခန့်မှန်း 3 မိနစ်"
     },
     {
-      "source": "12コマ目の2行を確認して保存する",
-      "translation": "12 ကြိမ်မြောက် အတန်းချိန်၏ အတန်း 2 တန်းကို စစ်ဆေး၍ သိမ်းဆည်းရန်"
+      "source": "12コマ目の2行を確認する",
+      "translation": "12 ကြိမ်မြောက် အတန်းချိန်၏ အတန်း 2 တန်းကို စစ်ဆေးရန်"
     },
     {
-      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
-      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ အတန်း 2 တန်း၏ အချက် 4 ချက်ကို ပုံသေဒေတာနှင့် တိုက်စစ်ပါ၊ input ကို ပြောင်းလဲ၍ ရှာဖွေသော်လည်း စာရင်း၏ အတန်း 2 တန်းသည် ပြောင်းလဲမှုမရှိကြောင်းကို အတည်ပြုပါ။ <strong>File (ဖိုင်) → Save All (အားလုံးကို သိမ်းရန်)</strong> ကို ပြုလုပ်ပါ။ ဆက်သွယ်ရေး code မရှိသေးပါ။ နောက်တစ်ဆင့်တွင် တူညီသော project သို့ API ခေါ်မည့် ဖိုင်ကို ထပ်ထည့်ပါမည်။"
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ အတန်း 2 တန်း၏ အချက် 4 ချက်ကို ပုံသေဒေတာနှင့် တိုက်စစ်ပါ၊ input ကို ပြောင်းလဲ၍ ရှာဖွေသော်လည်း စာရင်း၏ အတန်း 2 တန်းသည် ပြောင်းလဲမှုမရှိကြောင်းကို အတည်ပြုပါ။ ဆက်သွယ်ရေး code မရှိသေးပါ။ နောက်တစ်ဆင့်တွင် တူညီသော project သို့ API ခေါ်မည့် ဖိုင်ကို ထပ်ထည့်ပါမည်။"
     },
     {
       "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
       "translation": "Java ၏ generics နည်းတူ <code>&lt;GithubRepository&gt;</code> သည် element ၏ type ဖြစ်ပါသည်။ ယခုတွင် ပုံသေတန်ဖိုးဖြစ်ပြီး၊ နောက်တစ်ဆင့်တွင် network မှ ရရှိသော တူညီသည့် type ရှိသည့် စာရင်းကို တူညီသော Adapter သို့ ပေးပို့ပါမည်။"
     },
     {
-      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
-      "translation": "အတန်း 2 တန်းသည် ပုံသေဒေတာအတိုင်းဖြစ်ပြီး၊ MainActivity.kt၊ မော်ဒယ်၊ Adapter၊ XML 2 ခုကို သိမ်းဆည်းထားပါသည်။"
+      "source": "2行が固定データどおりで、ProjectツールウィンドウにMainActivity.kt・モデル・Adapter・2つのXMLが並んでいる。",
+      "translation": "အတန်း 2 တန်းသည် ပုံသေဒေတာအတိုင်းဖြစ်ပြီး၊ Project tool window တွင် MainActivity.kt၊ မော်ဒယ်၊ Adapter၊ XML 2 ခုတို့ ယှဉ်လျက်ရှိပါသည်။"
     },
     {
       "source": "STEP 12 · 13コマ目 · 目安 5分",
@@ -671,8 +703,8 @@
       "translation": "Ktor ဖြင့် ရှာဖွေရေး API ကို ခေါ်မည့် ဖိုင်ကို ဖန်တီးရန်"
     },
     {
-      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
-      "translation": "package တွင် <strong>New (အသစ်) → Kotlin Class/File (Kotlin Class/ဖိုင်)</strong> ကို ရွေးချယ်ပါ။ အမည်ကို <code>GithubApi</code>၊ အမျိုးအစားကို <strong>File (ဖိုင်)</strong> ဟု သတ်မှတ်ပြီး၊ အပြည့်အစုံ အစားထိုးပါ။"
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "package တွင် <strong>New (အသစ်) → Kotlin Class/File (Kotlin Class/ဖိုင်)</strong> ကို ရွေးချယ်ပါ။ အမည်ကို <code>GithubApi</code>၊ အမျိုးအစားကို <strong>File (ဖိုင်)</strong> ဟု သတ်မှတ်ပါ။ ဖိုင်အသစ်ဖြစ်သောကြောင့် အထဲရှိ အကြောင်းအရာကို အောက်ပါ အပြည့်အစုံအတိုင်း ဖြစ်အောင် လုပ်ပါ။"
     },
     {
       "source": "GithubApi.kt · 全文",
@@ -719,8 +751,8 @@
       "translation": "ပေးပို့ရမည့်နေရာသည် <code>https://api.github.com/search/repositories</code> ဖြစ်ပါသည်။ <code>q</code> သည် ရှာဖွေမည့်စကားလုံး၊ <code>sort</code> သည် အစီအစဉ်၊ <code>per_page</code> သည် 1 ကြိမ်တွင် လက်ခံရရှိမည့် အများဆုံးအရေအတွက် ဖြစ်ပါသည်။ ဤအက်ပ်သည် ပထမဆုံး စာမျက်နှာကို အများဆုံး အခု 30 သာ လက်ခံရရှိမည်ဖြစ်ပြီး၊ scroll လုပ်သော်လည်း နောက်စာမျက်နှာကို ရယူမည်မဟုတ်ပါ။ API key ထည့်သွင်းခြင်း သို့မဟုတ် login ပြုလုပ်ခြင်းများ မရှိပါ။"
     },
     {
-      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
-      "translation": "ဤဖိုင်ကို သိမ်းဆည်းရုံဖြင့် ချိတ်ဆက်မှုကို စတင်မည်မဟုတ်ပါ။ နောက်တစ်ဆင့်တွင် ခေါ်ယူမည့်နေရာကို ရေးသားပါမည်။"
+      "source": "このファイルを書いただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "ဤဖိုင်ကို ရေးရုံဖြင့် ချိတ်ဆက်မှုကို စတင်မည်မဟုတ်ပါ။ နောက်တစ်ဆင့်တွင် ခေါ်ယူမည့်နေရာကို ရေးသားပါမည်။"
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
@@ -739,8 +771,8 @@
       "translation": "ထည့်သွင်းခြင်း၊ ဆက်သွယ်ခြင်းနှင့် စာရင်းကို ချိတ်ဆက်ရန်"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "<code>MainActivity.kt</code> ကို အောက်ပါ <strong>ပြီးစီးပြီးသော code</strong> ဖြင့် အားလုံးကို အစားထိုးပါ။ ပုံသေဒေတာဖြစ်သော <code>submitList(listOf(…))</code> ကို ဖယ်ရှားပြီး၊ <code>search</code> ထဲမှနေ၍ ဆက်သွယ်မှုကို ခေါ်ယူပါမည်။ ဖန်တီးစဉ်က ပါဝင်သည့် inset လုပ်ဆောင်ချက်၊ View ရယူခြင်းနှင့် Spinner တည်ဆောက်ခြင်းတို့သည် ကျန်ရှိနေမည်ဖြစ်ပါသည်။"
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。",
+      "translation": "<code>MainActivity.kt</code> တွင် အစိမ်းရောင် စာကြောင်းများကို ထပ်ထည့်ပြီး အနီရောင် စာကြောင်းများကို ဖျက်၍ <strong>ပြီးစီးပြီးသော code</strong> ဖြစ်အောင် လုပ်ပါ။ ပုံသေဒေတာဖြစ်သော <code>submitList(listOf(…))</code> ကို ဖယ်ရှားပြီး၊ <code>search</code> ထဲမှနေ၍ ဆက်သွယ်မှုကို ခေါ်ယူပါမည်။ ဖန်တီးစဉ်က ပါဝင်သည့် inset လုပ်ဆောင်ချက်၊ View ရယူခြင်းနှင့် Spinner တည်ဆောက်ခြင်းတို့သည် ကျန်ရှိနေမည်ဖြစ်ပါသည်။ ပြင်ရမည့်နေရာများမှာ import၊ property၊ <code>onCreate</code>၊ <code>search</code> နှင့် အသစ် ထပ်ထည့်မည့် <code>setLoading</code> ဟူ၍ 5 နေရာ ဖြစ်ပါသည်။"
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -923,8 +955,8 @@
       "translation": "Adapter တွင် အသုံးပြုမည်မှာ အကြောင်းအရာများအတွက် <code>==</code> ဖြစ်ပါသည်။ Kotlin ၏ reference နှိုင်းယှဉ်မှုမှာ <code>===</code> ဖြစ်ပါသည်။ မျက်နှာပြင်ရှိ အတန်းတစ်ခုစီကို API မှ ပြန်ပေးသော စာရင်းမှ ဖန်တီးထားပြီး၊ စက်အတွင်း၌ ပြန်လည်စီစဉ်ထားခြင်း မရှိပါ။"
     },
     {
-      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
-      "translation": "Star အရေအတွက်အလိုက် တန်ဖိုးများကို ကြီးစဉ်ငယ်လိုက် စီထားပြီး၊ Kotlin ဖိုင် 4 ခုနှင့် XML 2 ခုကို သိမ်းဆည်းထားပါသည်။"
+      "source": "スター数順で数値が降順に並び、Projectツールウィンドウに4つのKotlinファイルと2つのXMLが並んでいる。",
+      "translation": "Star အရေအတွက်အလိုက် တန်ဖိုးများကို ကြီးစဉ်ငယ်လိုက် စီထားပြီး၊ Project tool window တွင် Kotlin ဖိုင် 4 ခုနှင့် XML 2 ခု ယှဉ်လျက်ရှိပါသည်။"
     },
     {
       "source": "STEP 17 · 13コマ目 · 目安 12分",
@@ -935,8 +967,8 @@
       "translation": "စိတ်ကြိုက်ပြောင်းလဲနိုင်သော နေရာ 1 ခုကို စမ်းသပ်ရန်"
     },
     {
-      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
-      "translation": "အောက်ပါတို့မှ 1 ခုကို ရွေးချယ်ပြီး သိမ်းဆည်းကာ Run လုပ်ပါ။ စာသားနှင့် ကွက်လပ် ပြောင်းလဲမှုများကို ဆက်သွယ်မှု မပြုလုပ်မီ မျက်နှာပြင် သို့မဟုတ် ပုံသေဒေတာဖြင့်လည်း စစ်ဆေးနိုင်ပါသည်။ ဆက်သွယ်ရန် လိုအပ်သော ပြောင်းလဲမှုများအတွက် ဆရာ့ထံမှ အချက်ပြမှုကို စောင့်ပါ။"
+      "source": "次のうち1つを選んで変更し、Runします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "အောက်ပါတို့မှ 1 ခုကို ရွေးချယ်၍ ပြောင်းလဲပြီး Run လုပ်ပါ။ စာသားနှင့် ကွက်လပ် ပြောင်းလဲမှုများကို ဆက်သွယ်မှု မပြုလုပ်မီ မျက်နှာပြင် သို့မဟုတ် ပုံသေဒေတာဖြင့်လည်း စစ်ဆေးနိုင်ပါသည်။ ဆက်သွယ်ရန် လိုအပ်သော ပြောင်းလဲမှုများအတွက် ဆရာ့ထံမှ အချက်ပြမှုကို စောင့်ပါ။"
     },
     {
       "source": "変える場所",
@@ -999,16 +1031,16 @@
       "translation": "လုံလောက်သော ရလဒ်များရှိသည့် ရှာဖွေမှုဖြစ်လျှင်တောင်မှ 1 ကြိမ်ပြသသည့် စာရင်းမှာ အများဆုံး 10 ခု ဖြစ်သွားပါသည်။"
     },
     {
-      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
-      "translation": "လေ့ကျင့်ပြီးနောက် ပြောင်းလဲမှုမပြုမီ အခြေအနေသို့ ပြန်ထားပြီး သိမ်းဆည်းပါ။ တင်သွင်းရန် ချန်ထားမည့် စိတ်ကြိုက်ပြောင်းလဲမှုများကို ကိုယ်တိုင် ဆုံးဖြတ်နိုင်ပါသည်။ id၊ JSON ၏ SerialName၊ sort ၏ API အတွက် တန်ဖိုးများကို ထိုအတိုင်းထားပါ။ <code>PER_PAGE</code> သည် 1–100 အကြားရှိသော်လည်း၊ ယခုတစ်ကြိမ်တွင် 30 နှင့် 10 ဖြင့် စမ်းသပ်ပါမည်။"
+      "source": "練習後は変更前へ戻します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "လေ့ကျင့်ပြီးနောက် ပြောင်းလဲမှုမပြုမီ အခြေအနေသို့ ပြန်ထားပါ။ တင်သွင်းရန် ချန်ထားမည့် စိတ်ကြိုက်ပြောင်းလဲမှုများကို ကိုယ်တိုင် ဆုံးဖြတ်နိုင်ပါသည်။ id၊ JSON ၏ SerialName၊ sort ၏ API အတွက် တန်ဖိုးများကို ထိုအတိုင်းထားပါ။ <code>PER_PAGE</code> သည် 1–100 အကြားရှိသော်လည်း၊ ယခုတစ်ကြိမ်တွင် 30 နှင့် 10 ဖြင့် စမ်းသပ်ပါမည်။"
     },
     {
       "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
       "translation": "Kotlin ၏ ကိန်းသေများမှာ <code>const val</code> ဖြစ်ပြီး၊ Java တွင် <code>static final</code> ဖြစ်ပါသည်။ ပြောင်းလဲလိုက်သော တန်ဖိုးနှင့် စာရင်း၏ အရေအတွက်မှာ ကိုက်ညီမှုရှိပါသည်။ ရှာတွေ့သော စုစုပေါင်းအရေအတွက်ကို 10 သို့ ပြောင်းလဲသည့် ဆက်တင် မဟုတ်ပါ။"
     },
     {
-      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
-      "translation": "ရွေးချယ်ထားသော ပြောင်းလဲမှု၏ အကျိုးသက်ရောက်မှုသည် မျက်နှာပြင်တွင် ပေါ်လာပြီး၊ လေ့ကျင့်ပြီးနောက် မူလတန်ဖိုးနှင့် အခြေအနေသို့ ပြန်လည်ထားရှိကာ သိမ်းဆည်းနိုင်ပါသည်။"
+      "source": "選んだ変更の効果が画面に現れ、練習後にRunすると元の値と表示へ戻っている。",
+      "translation": "ရွေးချယ်ထားသော ပြောင်းလဲမှု၏ အကျိုးသက်ရောက်မှုသည် မျက်နှာပြင်တွင် ပေါ်လာပြီး၊ လေ့ကျင့်ပြီးနောက် Run လုပ်သောအခါ မူလတန်ဖိုးနှင့် မူလပြသမှုသို့ ပြန်ရောက်နေပါသည်။"
     },
     {
       "source": "STEP 18 · 13コマ目 · 目安 3分",
@@ -1019,16 +1051,16 @@
       "translation": "13 ကြိမ်မြောက် အတန်းချိန်၏ ပြီးစီးမှုအခြေအနေကို စစ်ဆေးရန်"
     },
     {
-      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
-      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ ရှာဖွေပြီး ထွက်လာသော အတန်း၏ အချက် 4 ချက်၊ ပျောက်သွားသော ဆက်သွယ်နေသည့် အမှတ်အသား၊ နှိပ်၍ရသော ရှာဖွေရေးခလုတ်တို့ကို စစ်ဆေးပါ။ <strong>File → Save All</strong>။ နောက်တစ်ကြိမ်ဖွင့်မည့် မိမိ၏ သိမ်းဆည်းရာနေရာနှင့် Kotlin ဖိုင် 4 ခုသည် Project tool window တွင် မြင်နေရကြောင်း သေချာအောင် စစ်ဆေးပါ။"
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "နောက်ဆုံး 3 မိနစ် ဖြစ်ပါသည်။ ရှာဖွေပြီး ထွက်လာသော အတန်း၏ အချက် 4 ချက်၊ ပျောက်သွားသော ဆက်သွယ်နေသည့် အမှတ်အသား၊ နှိပ်၍ရသော ရှာဖွေရေးခလုတ်တို့ကို စစ်ဆေးပါ။ နောက်တစ်ကြိမ်ဖွင့်မည့် မိမိ၏ သိမ်းဆည်းရာနေရာနှင့် Kotlin ဖိုင် 4 ခုသည် Project tool window တွင် မြင်နေရကြောင်း သေချာအောင် စစ်ဆေးပါ။"
     },
     {
       "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
       "translation": "12 ကြိမ်မြောက် အတန်းချိန်နှင့် တူညီသော Adapter သို့၊ ယခုတစ်ကြိမ်တွင် ဆက်သွယ်မှုရလဒ် စာရင်းကို ပေးပို့ထားပါသည်။ ဒေတာရယူခြင်းနှင့် 1 တန်းတွင် ပြသခြင်း အလုပ်ကို သီးခြားဖိုင်တစ်ခုစီ ခွဲထားသော ပုံစံဖြစ်ပါသည်။"
     },
     {
-      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
-      "translation": "ရှာဖွေမှုရလဒ်၏ အချက် 4 ချက်ကို ပြသထားပြီး၊ ဆက်သွယ်နေသည့် အမှတ်အသား ပျောက်သွားကာ source နှင့် XML ကို သိမ်းဆည်းထားပါသည်။"
+      "source": "検索結果の4項目が表示され、通信中の印が消え、Projectツールウィンドウに4つのKotlinファイルが見えている。",
+      "translation": "ရှာဖွေမှု ရလဒ်၏ အချက် 4 ချက် ပေါ်လာပြီး၊ ဆက်သွယ်နေသည့် အမှတ်အသား ပျောက်သွားကာ၊ Project tool window တွင် Kotlin ဖိုင် 4 ခုကို မြင်နေရပါသည်။"
     },
     {
       "source": "見えている状態",

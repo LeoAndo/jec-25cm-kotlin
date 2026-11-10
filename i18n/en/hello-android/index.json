@@ -219,8 +219,12 @@
       "translation": "Match the library versions used in class"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "Even with the same Panda 2, the library versions differ depending on when the project was created. Switch the Project tool window on the left to the <strong>Project</strong> view, open <code>gradle → libs.versions.toml</code>, and replace its entire contents with the following. This is not Kotlin code; it is a setting that specifies which components to use and their versions."
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "Even with the same Panda 2, the library versions differ depending on when the project was created. Switch the Project tool window on the left to the <strong>Project</strong> view, open <code>gradle → libs.versions.toml</code>, and compare the numbers in <code>[versions]</code> at the top with the following. Change only the lines where the number is different, so that they match the numbers below. Do not change anything from <code>[libraries]</code> down. This is not Kotlin code; it is a setting that specifies which components to use and their versions."
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "For comparison: the full <code>libs.versions.toml</code> file"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -355,8 +359,8 @@
       "translation": "Select <strong>Code</strong> at the top right of the editor. If only icons are shown, hover the mouse over them to find Code."
     },
     {
-      "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
-      "translation": "Replace the entire contents with the following XML. Do not paste it into <code>MainActivity.kt</code>."
+      "source": "生成されたXMLは使わないので、内容全体を次のXMLに入れ替えます。<code>MainActivity.kt</code> には貼りません。",
+      "translation": "The generated XML is not used, so replace the entire contents with the following XML. Do not paste it into <code>MainActivity.kt</code>."
     },
     {
       "source": "activity_main.xml · 全文",

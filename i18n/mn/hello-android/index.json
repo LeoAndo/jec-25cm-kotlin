@@ -219,8 +219,12 @@
       "translation": "Хичээлд ашиглах сангийн хувилбарыг ижил болгох"
     },
     {
-      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、内容全体を次で置き換えます。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
-      "translation": "Ижил Panda 2 хувилбар байсан ч үүсгэсэн өдрөөс хамаарч сангийн хувилбар өөрчлөгддөг. Зүүн талын Project хэрэгслийн цонхны харагдацын сонголтыг <strong>Project</strong> болгож сольж, <code>gradle → libs.versions.toml</code> файлыг нээж, бүх агуулгыг дараах кодоор солино уу. Энэ нь Kotlin код биш бөгөөд ашиглах сан болон хувилбарыг зааж өгөх тохиргоо юм."
+      "source": "同じPanda 2でも、作成日によってライブラリの版が変わります。左のProjectツールウィンドウの表示を <strong>Project</strong> に切り替え、<code>gradle → libs.versions.toml</code> を開き、先頭の <code>[versions]</code> の数字を次と見比べます。数字が違う行だけ、次の数字に書き換えます。<code>[libraries]</code> から下は変えません。これはKotlinのコードではなく、使う部品と版を指定する設定です。",
+      "translation": "Ижил Panda 2 хувилбар байсан ч үүсгэсэн өдрөөс хамаарч сангийн хувилбар өөрчлөгддөг. Зүүн талын Project хэрэгслийн цонхны харагдацын сонголтыг <strong>Project</strong> болгож сольж, <code>gradle → libs.versions.toml</code> файлыг нээж, эхэнд нь байгаа <code>[versions]</code> хэсгийн тоонуудыг дараах кодтой харьцуулж харна уу. Тоо нь өөр байгаа мөрийг л дараах тоо болгож өөрчилнө үү. <code>[libraries]</code> хэсгээс доош байгаа мөрүүдийг өөрчлөхгүй. Энэ нь Kotlin код биш бөгөөд ашиглах сан болон хувилбарыг зааж өгөх тохиргоо юм."
+    },
+    {
+      "source": "照合用：<code>libs.versions.toml</code> の全文",
+      "translation": "Тулгаж шалгахад: <code>libs.versions.toml</code> файлын бүтэн код"
     },
     {
       "source": "libs.versions.toml · 全文",
@@ -355,8 +359,8 @@
       "translation": "Засварлагчийн баруун дээд хэсэгт байрлах <strong>Code</strong> сонголтыг сонгоно уу. Хэрэв зөвхөн дүрс байвал хулганаа дээр нь аваачиж Code-ийг олно уу."
     },
     {
-      "source": "内容全体を次のXMLで置き換えます。<code>MainActivity.kt</code> には貼りません。",
-      "translation": "Бүх агуулгыг дараах XML-ээр солино уу. <code>MainActivity.kt</code>-д хуулахгүй."
+      "source": "生成されたXMLは使わないので、内容全体を次のXMLに入れ替えます。<code>MainActivity.kt</code> には貼りません。",
+      "translation": "Автоматаар үүссэн XML кодыг ашиглахгүй тул бүх агуулгыг дараах XML-ээр солино уу. <code>MainActivity.kt</code>-д хуулахгүй."
     },
     {
       "source": "activity_main.xml · 全文",

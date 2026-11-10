@@ -51,8 +51,8 @@
       "translation": "STEP 04 Оруулах талбар болон Spinner-ийг Kotlin-тай холбох"
     },
     {
-      "source": "STEP 05 11コマ目の画面を確認して保存する",
-      "translation": "STEP 05 11 дэх хичээлийн дэлгэцийг шалгаж хадгалах"
+      "source": "STEP 05 11コマ目の画面を確認する",
+      "translation": "STEP 05 11 дэх хичээлийн дэлгэцийг шалгах"
     },
     {
       "source": "STEP 06 12コマ目：入力画面から再開する",
@@ -75,8 +75,8 @@
       "translation": "STEP 10 Тогтмол өгөгдлийг RecyclerView руу дамжуулах"
     },
     {
-      "source": "STEP 11 12コマ目の2行を確認して保存する",
-      "translation": "STEP 11 12 дахь хичээлийн 2 мөрийг шалгаж хадгалах"
+      "source": "STEP 11 12コマ目の2行を確認する",
+      "translation": "STEP 11 12 дахь хичээлийн 2 мөрийг шалгах"
     },
     {
       "source": "STEP 12 13コマ目：2行の画面から再開する",
@@ -243,24 +243,32 @@
       "translation": "Холболт болон жагсаалтад ашиглах тохиргоог бүрдүүлэх"
     },
     {
-      "source": "Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。",
-      "translation": "Panda 2 дээр ч үүсгэсэн огнооноос хамааран сангуудын хувилбар өөрчлөгддөг. Дараах <strong>3 тохиргооны файлыг бүхлээр нь сольсны дараа</strong> синхрончилно уу. <code>build.gradle.kts</code> нь 2 газар байх тул замыг нь шалгана уу. Өөр хувилбараар үүсгэсэн бүтцэд зөвхөн AGP дугаарыг нь буулгаж хэрэгжүүлж болохгүй."
+      "source": "通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。",
+      "translation": "Холболт болон жагсаалтад ашиглах сангуудыг дараах <strong>3 тохиргооны файлд нэмж бичсэний дараа</strong> синхрончилно уу. <code>build.gradle.kts</code> нь 2 газар байх тул замыг нь шалгана уу."
+    },
+    {
+      "source": "このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span1>緑の太字の行</span1>は足す行、<span2>赤い取り消し線の行</span2>は消す行です。<span3>薄い字の行</span3>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。",
+      "translation": "Үүнээс хойших хүрээн дотор файлын <strong>засах газрыг л</strong> харуулна. <span1>Ногоон тод үсэгтэй мөр</span1> нь нэмэх мөр, <span2>улаан дундуур зураастай мөр</span2> нь устгах мөр юм. <span3>Бүдэг үсэгтэй мөр</span3> нь файлд аль хэдийн байгаа мөр бөгөөд түүнийг бичиж оруулахгүй. Эдгээр мөрийг засах газраа олох тэмдэг болгон ашиглана. <code>⋮</code> тэмдэг нь хооронд нь байгаа, өөрчлөхгүй мөрүүдийг орхисныг заана."
     },
     {
       "source": "最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。",
       "translation": "Эхлээд <code>gradle/libs.versions.toml</code>. Ktor-ийг холболтод, serialization-ийг JSON хувиргалтад, RecyclerView болон CardView-г жагсаалтад, lifecycle-ийг дэлгэцтэй холбоотой холболт эхлүүлэхэд ашиглана."
     },
     {
-      "source": "libs.versions.toml · 全文",
-      "translation": "libs.versions.toml · Бүх код"
+      "source": "<code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。",
+      "translation": "<code>[versions]</code> хэсэгт бүдэг үсэгтэй мөрүүдийн тоог ч мөн өөрийн файлтай харьцуулж харна уу. Учир нь Panda 2 хувилбар байсан ч үүсгэсэн өдрөөс хамаарч сангийн хувилбар өөрчлөгддөг. Тоо нь өөр байгаа мөрийг энд бичсэн тоо болгож өөрчилнө үү. Panda 2 хувилбараас өөр хувилбараар үүсгэсэн төсөл бол өөрчлөхөөсөө өмнө багшдаа үзүүлнэ үү. Зөвхөн <code>agp</code> мөрийн тоог бууруулбал бусад тохиргоотой таарахгүй болно."
+    },
+    {
+      "source": "足す行",
+      "translation": "Нэмэх мөр"
+    },
+    {
+      "source": "すでにある行",
+      "translation": "Байгаа мөр"
     },
     {
       "source": "次はプロジェクト直下の <code>build.gradle.kts</code>。",
       "translation": "Дараа нь төслийн үндсэн хавтаст байх <code>build.gradle.kts</code>."
-    },
-    {
-      "source": "build.gradle.kts · 全文",
-      "translation": "build.gradle.kts · Бүтнээр нь"
     },
     {
       "source": "次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。",
@@ -271,8 +279,28 @@
       "translation": "<strong>Sync Now</strong>-г, гарахгүй бол <strong>File → Sync Project with Gradle Files</strong> цэсийг сонгоод, улаан алдаа арилтал хүлээнэ үү. AGP 9.1.1 нь Kotlin бүтээх функцийг дотроо агуулсан тул дахин <code>org.jetbrains.kotlin.android</code>-ийг нэмэхгүй. Энд каталог дахь <code>kotlin</code> нь serialization залгаасын хувилбар юм."
     },
     {
-      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。",
-      "translation": "Үргэлжлүүлэн <code>app/src/main/AndroidManifest.xml</code> файлыг бүхлээр нь солино уу. <code>INTERNET</code> нь <code>application</code>-ийн гадна талд, <code>windowSoftInputMode</code> нь <code>activity</code>-ийн шинж чанар юм. Холболт хийх зориулалттай ажиллуулах үеийн зөвшөөрлийн харилцах цонх гарахгүй."
+      "source": "続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported=\"true\"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。",
+      "translation": "Үргэлжлүүлэн <code>app/src/main/AndroidManifest.xml</code> файлыг засна уу. <code>INTERNET</code> нь <code>application</code>-ийн гадна талд, <code>windowSoftInputMode</code> нь <code>activity</code>-ийн шинж чанар юм. <code>android:exported=\"true\"</code> мөр нь төгсгөлийн <code>&gt;</code> тэмдгийг дараагийн мөр рүү шилжүүлэх тул устгах мөр, нэмэх мөр хоёуланд нь гарна. Холболт хийх зориулалттай ажиллуулах үеийн зөвшөөрлийн харилцах цонх гарахгүй."
+    },
+    {
+      "source": "消す行",
+      "translation": "Устгах мөр"
+    },
+    {
+      "source": "照合用：直したあとの4つのファイルの全文",
+      "translation": "Тулгаж шалгахад: Зассаны дараах 4 файлын бүтэн код"
+    },
+    {
+      "source": "libs.versions.toml · 全文",
+      "translation": "libs.versions.toml · Бүх код"
+    },
+    {
+      "source": "build.gradle.kts · 全文",
+      "translation": "build.gradle.kts · Бүтнээр нь"
+    },
+    {
+      "source": "app/build.gradle.kts · 全文",
+      "translation": "app/build.gradle.kts · Бүтнээр нь"
     },
     {
       "source": "AndroidManifest.xml · 全文",
@@ -283,8 +311,8 @@
       "translation": "Дараагийн хичээлд ашиглах <code>@Serializable</code> нь Swift-ийн <code>Codable</code>-тай адилаар JSON хувиргалтад ашиглагдана. Хувиргах боловсруулалтыг үүсгэхийн тулд энэ удаад зөвхөн сан гэлтгүй залгаасыг давхар тохируулж өгнө."
     },
     {
-      "source": "3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。",
-      "translation": "3 тохиргоо болон Manifest хадгалагдаж, Gradle синхрончлолын улаан алдаа арилсан байна."
+      "source": "3つの設定とManifestに足す行が入り、Gradle同期の赤いエラーが消えている。",
+      "translation": "3 тохиргоо болон Manifest файлд нэмэх мөрүүд орж, Gradle синхрончлолын улаан алдаа арилсан байна."
     },
     {
       "source": "STEP 03 · 11コマ目 · 目安 20分",
@@ -307,8 +335,8 @@
       "translation": "Ажиллуулах тохиргооны <strong>app</strong> болон заасан AVD дээр <strong>Run ▶</strong> товчийг дарна уу. Эхлээд <code>Hello World!</code>-г шалгана уу."
     },
     {
-      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。",
-      "translation": "<code>app/src/main/res/layout/activity_main.xml</code> файлыг нээж, баруун дээд хэсгийн <strong>Code</strong> хэсэгт бүхлээр нь солино уу."
+      "source": "<code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。",
+      "translation": "<code>app/src/main/res/layout/activity_main.xml</code> файлыг нээж, баруун дээд хэсгийн <strong>Code</strong> харагдац руу шилжүүлнэ үү. Автоматаар үүссэн <code>Hello World!</code> дэлгэцийг ашиглахгүй тул файлын агуулгыг дараах бүтэн кодоор солино уу."
     },
     {
       "source": "activity_main.xml · 全文",
@@ -339,8 +367,12 @@
       "translation": "Оруулах талбар болон Spinner-ийг Kotlin-тай холбох"
     },
     {
-      "source": "パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。",
-      "translation": "Багц доторх <code>MainActivity.kt</code> файлыг дараах <strong>11 дэх хичээлийн явцын код</strong>-оор бүхлээр нь солино уу. import ч мөн багтана. Дараа нь хайлт руу холбохын өмнө оруулсан утга болон сонголтыг шалгана уу."
+      "source": "パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。",
+      "translation": "Багц доторх <code>MainActivity.kt</code> файлыг нээж, ногоон мөрүүдийг нэмээд <strong>11 дэх хичээлийн явцын код</strong> болгоно уу. import хэсэгт ч нэмэх мөр байна. Бүдэг үсэгтэй мөр нь төслийг үүсгэх үед анхнаасаа байсан мөр юм. Дараа нь хайлт руу холбохын өмнө оруулсан утга болон сонголтыг шалгана уу."
+    },
+    {
+      "source": "照合用：ここまでの <code>MainActivity.kt</code> の全文",
+      "translation": "Тулгаж шалгахад: Одоог хүртэлх <code>MainActivity.kt</code> файлын бүтэн код"
     },
     {
       "source": "04-MainActivity.kt · 全文",
@@ -403,20 +435,20 @@
       "translation": "STEP 05 · 11 дэх хичээл · Ойролцоогоор 3 минут"
     },
     {
-      "source": "11コマ目の画面を確認して保存する",
-      "translation": "11 дэх хичээлийн дэлгэцийг шалгаж хадгалах"
+      "source": "11コマ目の画面を確認する",
+      "translation": "11 дэх хичээлийн дэлгэцийг шалгах"
     },
     {
-      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。<strong>File → Save All</strong> で保存します。次はこの同じプロジェクトを開きます。",
-      "translation": "Сүүлийн 3 минут. Хайлтын үгийг устгаад дарахад заавар, <code>kotlin</code> гэж оруулаад дарахад 「入力: kotlin」 (Оролт: kotlin) гэж гарна. Жагсаалт хоосон хэвээр байх нь хэвийн. <strong>File → Save All</strong> цэсээр хадгална уу. Дараа нь мөн энэ төслийг нээнэ."
+      "source": "最後の3分です。検索語を消して押すと案内、<code>kotlin</code> を入れて押すと「入力: kotlin」。一覧は空のままで正常です。書いた内容はAndroid Studioが自動で保存するので、保存の操作は要りません。次はこの同じプロジェクトを開きます。",
+      "translation": "Сүүлийн 3 минут. Хайлтын үгийг устгаад дарахад заавар, <code>kotlin</code> гэж оруулаад дарахад 「入力: kotlin」 (Оролт: kotlin) гэж гарна. Жагсаалт хоосон хэвээр байх нь хэвийн. Бичсэн зүйлийг Android Studio програм автоматаар хадгалдаг тул хадгалах үйлдэл хийх шаардлагагүй. Дараа нь мөн энэ төслийг нээнэ."
     },
     {
       "source": "どちらもクリック時の処理を登録しています。今の <code>search</code> は入力確認だけです。通信する処理は13コマ目に入れます。",
       "translation": "Хоёулаа дарах үеийн боловсруулалтыг бүртгэж байна. Одоогийн <code>search</code> нь зөвхөн оруулах утгыг шалгана. Холболт хийх боловсруулалтыг 13 дахь хичээл дээр оруулна."
     },
     {
-      "source": "MainActivity.ktが保存され、入力確認のToastが出て、一覧は空のままである。",
-      "translation": "MainActivity.kt хадгалагдан, оруулах утгыг шалгах Toast гарсан бөгөөд жагсаалт хоосон хэвээр байна."
+      "source": "入力確認のToastが出て、一覧は空のままである。",
+      "translation": "Оруулах утгыг шалгах Toast гарсан бөгөөд жагсаалт хоосон хэвээр байна."
     },
     {
       "source": "STEP 06 · 12コマ目 · 目安 5分",
@@ -451,8 +483,8 @@
       "translation": "JSON-д харгалзах data class бүтээх"
     },
     {
-      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。",
-      "translation": "Багц дээр хулганы баруун товчийг дараад, <strong>New → Kotlin Class/File</strong> сонгон, нэрийг <code>GithubSearchResponse</code>, төрлийг <strong>File</strong> болгоно уу. Үүссэн <code>GithubSearchResponse.kt</code> файлыг бүхлээр нь солино уу. Дараах нь 1 файлд 3 класс бичих хэлбэр юм."
+      "source": "パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。",
+      "translation": "Багц дээр хулганы баруун товчийг дараад, <strong>New → Kotlin Class/File</strong> сонгон, нэрийг <code>GithubSearchResponse</code>, төрлийг <strong>File</strong> болгоно уу. Үүссэн <code>GithubSearchResponse.kt</code> нь шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу. Дараах нь 1 файлд 3 класс бичих хэлбэр юм."
     },
     {
       "source": "GithubSearchResponse.kt · 全文",
@@ -503,8 +535,8 @@
       "translation": "Жагсаалтын 1 мөрийг XML-ээр бүтээх"
     },
     {
-      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。",
-      "translation": "<code>app/src/main/res/layout</code> дээр хулганы баруун товчийг дараад <strong>New → Layout Resource File</strong>. File name-ийг <code>list_item</code> болгон үүсгэнэ үү. Root element-ийг үүсгэсний дараа бүхлээр нь солих тул анхны утгаар нь үлдээж болно. Code харагдац руу шилжүүлээд, дараах кодоор бүхлээр нь солино уу."
+      "source": "<code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。",
+      "translation": "<code>app/src/main/res/layout</code> дээр хулганы баруун товчийг дараад <strong>New → Layout Resource File</strong>. File name-ийг <code>list_item</code> болгон үүсгэнэ үү. Root element-ийг анхны утгаар нь үлдээж болно. Үүсгэсний дараах агуулгыг ашиглахгүй тул Code харагдац руу шилжүүлээд, файлын агуулгыг дараах бүтэн кодоор солино уу."
     },
     {
       "source": "list_item.xml · 全文",
@@ -531,8 +563,8 @@
       "translation": "Adapter ашиглан өгөгдлийг 1 мөр рүү холбох"
     },
     {
-      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。",
-      "translation": "Багц дээр хулганы баруун товчийг дараад <strong>New → Kotlin Class/File</strong>. Нэрийг <code>RepositoryAdapter</code>, төрлийг <strong>File</strong> болгож, бүхлээр нь дараах кодоор солино уу."
+      "source": "パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "Багц дээр хулганы баруун товчийг дараад <strong>New → Kotlin Class/File</strong>. Нэрийг <code>RepositoryAdapter</code>, төрлийг <strong>File</strong> болгоно уу. Шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу."
     },
     {
       "source": "RepositoryAdapter.kt · 全文",
@@ -587,8 +619,8 @@
       "translation": "Тогтмол өгөгдлийг RecyclerView руу дамжуулах"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。",
-      "translation": "<code>MainActivity.kt</code> файлыг дараах 12 дахь хичээлийн явцын кодоор бүхлээр нь солино уу. 11 дэх хичээлийн оруулах утгын шалгалтыг үлдээн, <code>repositoryAdapter</code> үүсгэх, RecyclerView-тэй холбох, тогтмол өгөгдлийн <code>submitList</code>-ийг нэмсэн хэлбэр юм."
+      "source": "<code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。",
+      "translation": "<code>MainActivity.kt</code> файлд ногоон мөрүүдийг нэмээд 12 дахь хичээлийн явцын код болгоно уу. 11 дэх хичээлийн оруулах утгын шалгалтыг үлдээн, <code>repositoryAdapter</code> үүсгэх, RecyclerView-тэй холбох, тогтмол өгөгдлийн <code>submitList</code>-ийг нэмнэ. Нэмэх газар нь import, шинж чанар (property), <code>onCreate</code> гэсэн 3 газар юм."
     },
     {
       "source": "10-MainActivity.kt · 全文",
@@ -623,20 +655,20 @@
       "translation": "STEP 11 · 12 дахь хичээл · Ойролцоогоор 3 минут"
     },
     {
-      "source": "12コマ目の2行を確認して保存する",
-      "translation": "12 дахь хичээлийн 2 мөрийг шалгаж хадгалах"
+      "source": "12コマ目の2行を確認する",
+      "translation": "12 дахь хичээлийн 2 мөрийг шалгах"
     },
     {
-      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。<strong>File → Save All</strong>。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
-      "translation": "Сүүлийн 3 минут. 2 мөрийн 4 зүйлийг тогтмол өгөгдөлтэй тулган, оруулсан үгийг өөрчлөөд хайсан ч жагсаалтын 2 мөр өөрчлөгдөхгүй байгааг шалгана уу. <strong>File → Save All</strong>. Хараахан холболтын код байхгүй. Дараа нь ижил төсөлд API дуудах файл нэмнэ."
+      "source": "最後の3分です。2行の4項目を固定データと照合し、入力を変えて検索しても一覧の2行は変わらないことを確認します。まだ通信のコードはありません。次は同じプロジェクトへAPIを呼ぶファイルを追加します。",
+      "translation": "Сүүлийн 3 минут. 2 мөрийн 4 зүйлийг тогтмол өгөгдөлтэй тулган, оруулсан үгийг өөрчлөөд хайсан ч жагсаалтын 2 мөр өөрчлөгдөхгүй байгааг шалгана уу. Хараахан холболтын код байхгүй. Дараа нь ижил төсөлд API дуудах файл нэмнэ."
     },
     {
       "source": "Javaのジェネリクスと同じく <code>&lt;GithubRepository&gt;</code> は要素の型です。今は固定値、次は通信から得た同じ型のリストを、同じAdapterへ渡します。",
       "translation": "Java-ийн generics-тэй адил <code>&lt;GithubRepository&gt;</code> нь элементийн төрөл юм. Одоо тогтмол утга, харин дараа нь холболтоос авсан ижил төрлийн жагсаалтыг ижил Adapter руу дамжуулна."
     },
     {
-      "source": "2行が固定データどおりで、MainActivity.kt・モデル・Adapter・2つのXMLが保存されている。",
-      "translation": "2 мөр тогтмол өгөгдлийн дагуу байх бөгөөд MainActivity.kt, модел, Adapter, 2 ширхэг XML хадгалагдсан байна."
+      "source": "2行が固定データどおりで、ProjectツールウィンドウにMainActivity.kt・モデル・Adapter・2つのXMLが並んでいる。",
+      "translation": "2 мөр тогтмол өгөгдлийн дагуу байх бөгөөд Project хэрэгслийн цонхонд MainActivity.kt, модел, Adapter, 2 ширхэг XML жагссан байна."
     },
     {
       "source": "STEP 12 · 13コマ目 · 目安 5分",
@@ -671,8 +703,8 @@
       "translation": "Ktor ашиглан хайлтын API дуудах файл бүтээх"
     },
     {
-      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。",
-      "translation": "Багц дээр <strong>New → Kotlin Class/File</strong>. Нэрийг <code>GithubApi</code>, төрлийг <strong>File</strong> болгон, бүхлээр нь солино уу."
+      "source": "パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。",
+      "translation": "Багц дээр <strong>New → Kotlin Class/File</strong>. Нэрийг <code>GithubApi</code>, төрлийг <strong>File</strong> болгоно уу. Шинэ файл тул агуулгыг нь дараах бүтэн кодтой адил болгоно уу."
     },
     {
       "source": "GithubApi.kt · 全文",
@@ -719,8 +751,8 @@
       "translation": "Илгээх хаяг нь <code>https://api.github.com/search/repositories</code>. <code>q</code> нь хайлтын үг, <code>sort</code> нь эрэмбэлэх дараалал, <code>per_page</code> нь 1 удаад хүлээн авах дээд хязгаар юм. Энэ апп нь зөвхөн эхний хуудсыг дээд тал нь 30 ширхэгээр хүлээн авах ба scroll хийсэн ч дараагийн хуудсыг татахгүй. API түлхүүр оруулах болон нэвтрэх үйлдэл байхгүй."
     },
     {
-      "source": "このファイルを保存しただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
-      "translation": "Энэ файлыг хадгалах төдийд холболт эхлэхгүй. Дараагийн STEP дээр дуудах хэсгийг бичнэ."
+      "source": "このファイルを書いただけでは通信は始まりません。次のSTEPで呼び出し元を書きます。",
+      "translation": "Энэ файлыг бичих төдийд холболт эхлэхгүй. Дараагийн STEP дээр дуудах хэсгийг бичнэ."
     },
     {
       "source": "Swiftの <code>async</code> 関数のように、結果を待つ処理を順番に書きます。Kotlinは宣言に <code>suspend</code>、呼び出し側に <code>await</code> は書きません。<code>suspend</code> だけで別スレッドになるわけではなく、ここではKtorの通信が待機中に実行を中断できるようになっています。",
@@ -739,8 +771,8 @@
       "translation": "Оруулах, холболт, жагсаалт гурвыг холбох"
     },
     {
-      "source": "<code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。",
-      "translation": "<code>MainActivity.kt</code> файлыг дараах <strong>бэлэн код</strong>-оор бүхлээр нь солино уу. Тогтмол өгөгдлийн <code>submitList(listOf(…))</code>-ийг авч, <code>search</code> дотроос холболтыг дуудна. Үүсгэх үеийн инсет боловсруулалт, View авах, Spinner бүрдүүлэх хэсэг үлдэнэ."
+      "source": "<code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。",
+      "translation": "<code>MainActivity.kt</code> файлд ногоон мөрүүдийг нэмж, улаан мөрүүдийг устгаад <strong>бэлэн код</strong> болгоно уу. Тогтмол өгөгдлийн <code>submitList(listOf(…))</code>-ийг авч, <code>search</code> дотроос холболтыг дуудна. Үүсгэх үеийн инсет боловсруулалт, View авах, Spinner бүрдүүлэх хэсэг үлдэнэ. Засах газар нь import, шинж чанар (property), <code>onCreate</code>, <code>search</code> болон шинээр нэмэх <code>setLoading</code> гэсэн 5 газар юм."
     },
     {
       "source": "MainActivity.kt · 全文",
@@ -923,8 +955,8 @@
       "translation": "Adapter-т агуулгын <code>==</code>-ийг ашиглана. Kotlin-ийн заалт харьцуулах нь <code>===</code> юм. Дэлгэцийн мөр бүрийг API-аас буцаасан жагсаалтаар үүсгэсэн бөгөөд төхөөрөмж дотор дахин эрэмбэлээгүй болно."
     },
     {
-      "source": "スター数順で数値が降順に並び、4つのKotlinファイルと2つのXMLが保存されている。",
-      "translation": "Одны тооны дарааллаар утга нь буурахаар жагсаж, 4 ширхэг Kotlin файл, 2 ширхэг XML хадгалагдсан байна."
+      "source": "スター数順で数値が降順に並び、Projectツールウィンドウに4つのKotlinファイルと2つのXMLが並んでいる。",
+      "translation": "Одны тооны дарааллаар утга нь буурахаар жагсаж, Project хэрэгслийн цонхонд 4 ширхэг Kotlin файл, 2 ширхэг XML жагссан байна."
     },
     {
       "source": "STEP 17 · 13コマ目 · 目安 12分",
@@ -935,8 +967,8 @@
       "translation": "Өөрчлөх боломжтой 1 хэсгийг турших"
     },
     {
-      "source": "次のうち1つを選び、保存してRunします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
-      "translation": "Дараахаас 1-ийг сонгон, хадгалаад Run хийнэ үү. Текст болон зайны өөрчлөлтийг холболтоос өмнөх дэлгэц эсвэл тогтмол өгөгдөл дээр ч шалгах боломжтой. Холболт шаардах өөрчлөлтийг хийхийн тулд багшийн дохиог хүлээнэ үү."
+      "source": "次のうち1つを選んで変更し、Runします。文字と余白の変更は通信前の画面や固定データでも確かめられます。通信が必要な変更は先生の合図を待ちます。",
+      "translation": "Дараахаас 1-ийг сонгон өөрчлөөд Run хийнэ үү. Текст болон зайны өөрчлөлтийг холболтоос өмнөх дэлгэц эсвэл тогтмол өгөгдөл дээр ч шалгах боломжтой. Холболт шаардах өөрчлөлтийг хийхийн тулд багшийн дохиог хүлээнэ үү."
     },
     {
       "source": "変える場所",
@@ -999,16 +1031,16 @@
       "translation": "Хангалттай үр дүн гарах хайлт дээр ч 1 удаагийн жагсаалт дээд тал нь 10 ширхэг болно"
     },
     {
-      "source": "練習後は変更前へ戻して保存します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
-      "translation": "Туршсаны дараа өөрчлөхөөс өмнөх байдалд нь буцаан хадгална уу. Даалгаварт үлдээх өөрчлөлтийг өөрөө шийдэх боломжтой. id, JSON-ийн SerialName, sort-ийн API-д зориулсан утгыг хэвээр үлдээнэ үү. <code>PER_PAGE</code> нь 1–100 хооронд байх боловч энэ удаад 30 болон 10-аар туршиж үзнэ."
+      "source": "練習後は変更前へ戻します。提出で残すアレンジは自分で決められます。id、JSONのSerialName、sortのAPI用の値はそのままにします。<code>PER_PAGE</code> は1〜100の範囲ですが、今回は30と10で試します。",
+      "translation": "Туршсаны дараа өөрчлөхөөс өмнөх байдалд нь буцаана уу. Даалгаварт үлдээх өөрчлөлтийг өөрөө шийдэх боломжтой. id, JSON-ийн SerialName, sort-ийн API-д зориулсан утгыг хэвээр үлдээнэ үү. <code>PER_PAGE</code> нь 1–100 хооронд байх боловч энэ удаад 30 болон 10-аар туршиж үзнэ."
     },
     {
       "source": "Kotlinの定数は <code>const val</code>、Javaは <code>static final</code>。変える値と一覧の件数が対応します。見つかった総件数を10へ変える設定ではありません。",
       "translation": "Kotlin-ийн тогтмол нь <code>const val</code>, Java нь <code>static final</code>. Өөрчилсөн утга болон жагсаалтын тоо харгалзана. Олдсон нийт тоог 10 болгох тохиргоо биш."
     },
     {
-      "source": "選んだ変更の効果が画面に現れ、練習後は元の値と表示へ戻して保存できている。",
-      "translation": "Сонгосон өөрчлөлтийн үр дүн дэлгэц дээр гарсан бөгөөд туршсаны дараа хуучин утга болон харагдац руу буцааж хадгалсан байна."
+      "source": "選んだ変更の効果が画面に現れ、練習後にRunすると元の値と表示へ戻っている。",
+      "translation": "Сонгосон өөрчлөлтийн үр дүн дэлгэц дээр гарсан бөгөөд туршсаны дараа Run хийхэд хуучин утга болон харагдац руу буцсан байна."
     },
     {
       "source": "STEP 18 · 13コマ目 · 目安 3分",
@@ -1019,16 +1051,16 @@
       "translation": "13 дахь хичээлийн бэлэн байдлыг шалгах"
     },
     {
-      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。<strong>File → Save All</strong>。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
-      "translation": "Сүүлийн 3 минут. Хайж гаргасан мөрийн 4 зүйл, алга болсон холболт хийж буй дүрс, дарах боломжтой болсон хайх товчийг шалгана уу. <strong>File → Save All</strong>. Дараагийн удаа нээх өөрийн хадгалах зам болон 4 ширхэг Kotlin файл Project хэрэгслийн цонхонд харагдаж байгааг баталгаажуулна уу."
+      "source": "最後の3分です。検索して出た行の4項目、消えた通信中の印、押せる検索ボタンを確認します。次回開く自分の保存先と、4つのKotlinファイルがProjectツールウィンドウに見えていることを確かめます。",
+      "translation": "Сүүлийн 3 минут. Хайж гаргасан мөрийн 4 зүйл, алга болсон холболт хийж буй дүрс, дарах боломжтой болсон хайх товчийг шалгана уу. Дараагийн удаа нээх өөрийн хадгалах зам болон 4 ширхэг Kotlin файл Project хэрэгслийн цонхонд харагдаж байгааг баталгаажуулна уу."
     },
     {
       "source": "12コマ目と同じAdapterへ、今度は通信結果のリストを渡しています。データの入手と、1行へ表示する仕事を別ファイルに分けた形です。",
       "translation": "12 дахь хичээлтэй ижил Adapter руу энэ удаад холболтын үр дүнгийн жагсаалтыг дамжуулж байна. Өгөгдөл олж авах болон 1 мөрөнд харуулах ажлыг тусдаа файлд салгасан хэлбэр юм."
     },
     {
-      "source": "検索結果の4項目が表示され、通信中の印が消え、ソースとXMLが保存されている。",
-      "translation": "Хайлтын үр дүнгийн 4 зүйл харагдан, холболт хийж буй дүрс арилж, эх код болон XML хадгалагдсан байна."
+      "source": "検索結果の4項目が表示され、通信中の印が消え、Projectツールウィンドウに4つのKotlinファイルが見えている。",
+      "translation": "Хайлтын үр дүнгийн 4 зүйл гарч, холболт хийж буй дүрс арилсан бөгөөд Project хэрэгслийн цонхонд 4 ширхэг Kotlin файл харагдаж байна."
     },
     {
       "source": "見えている状態",
