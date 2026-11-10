@@ -39,6 +39,11 @@
     "untracked_parts": [".idea", ".gradle", ".kotlin", "build", "out"],
     "untracked_names": ["local.properties"]
   },
+  "wizard_template": {
+    "root": "Panda2KotlinEmptyViewsActivity",
+    "name": "Panda2KotlinEmptyViewsActivity",
+    "package": "jp.ac.jec.panda2kotlinemptyviewsactivity"
+  },
   "projects": [
     {
       "name": "K01HelloKotlin",
@@ -141,6 +146,14 @@
           "source": "A01HelloAndroid/gradle/libs.versions.toml"
         }
       ],
+      "diffs": [
+        {
+          "html": "docs/hello-android/index.html",
+          "ids": ["code-versions"],
+          "before_template": "gradle/libs.versions.toml",
+          "after": "A01HelloAndroid/gradle/libs.versions.toml"
+        }
+      ],
       "mirrors": [
         {
           "source": "A01HelloAndroid/app/src/main/java/jp/ac/jec/a01helloandroid/MainActivity.kt",
@@ -191,6 +204,32 @@
           "html": "docs/calc-game/index.html",
           "id": "code-stage-03",
           "source": "teacher/calc-game/code/03-MainActivity.kt"
+        }
+      ],
+      "diffs": [
+        {
+          "html": "docs/calc-game/index.html",
+          "ids": ["code-versions"],
+          "before_template": "gradle/libs.versions.toml",
+          "after": "A02CalcGame/gradle/libs.versions.toml"
+        },
+        {
+          "html": "docs/calc-game/index.html",
+          "ids": ["diff-stage-03"],
+          "before_template": "app/src/main/java/jp/ac/jec/panda2kotlinemptyviewsactivity/MainActivity.kt",
+          "after": "teacher/calc-game/code/03-MainActivity.kt"
+        },
+        {
+          "html": "docs/calc-game/index.html",
+          "ids": ["diff-stage-09"],
+          "before": "teacher/calc-game/code/08-MainActivity.kt",
+          "after": "teacher/calc-game/code/09-MainActivity.kt"
+        },
+        {
+          "html": "docs/calc-game/index.html",
+          "ids": ["diff-stage-11"],
+          "before": "teacher/calc-game/code/10-MainActivity.kt",
+          "after": "A02CalcGame/app/src/main/java/jp/ac/jec/a02calcgame/MainActivity.kt"
         }
       ],
       "mirrors": [
@@ -288,6 +327,50 @@
           "source": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/MainActivity.kt"
         }
       ],
+      "diffs": [
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-libs"],
+          "before_template": "gradle/libs.versions.toml",
+          "after": "A03GithubSearch/gradle/libs.versions.toml"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-root-gradle"],
+          "before_template": "build.gradle.kts",
+          "after": "A03GithubSearch/build.gradle.kts"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-app-gradle"],
+          "before_template": "app/build.gradle.kts",
+          "after": "A03GithubSearch/app/build.gradle.kts"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-manifest"],
+          "before_template": "app/src/main/AndroidManifest.xml",
+          "after": "A03GithubSearch/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-stage-04"],
+          "before_template": "app/src/main/java/jp/ac/jec/panda2kotlinemptyviewsactivity/MainActivity.kt",
+          "after": "teacher/github-search/code/04-MainActivity.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-stage-10"],
+          "before": "teacher/github-search/code/04-MainActivity.kt",
+          "after": "teacher/github-search/code/10-MainActivity.kt"
+        },
+        {
+          "html": "docs/github-search/index.html",
+          "ids": ["diff-main"],
+          "before": "teacher/github-search/code/10-MainActivity.kt",
+          "after": "A03GithubSearch/app/src/main/java/jp/ac/jec/a03githubsearch/MainActivity.kt"
+        }
+      ],
       "mirrors": [
         {
           "source": "A03GithubSearch/gradle/libs.versions.toml",
@@ -355,11 +438,6 @@
         },
         {
           "html": "docs/funny-camera/index.html",
-          "id": "code-root-gradle",
-          "source": "A04FunnyCamera/build.gradle.kts"
-        },
-        {
-          "html": "docs/funny-camera/index.html",
           "id": "code-app-gradle",
           "source": "A04FunnyCamera/app/build.gradle.kts"
         },
@@ -387,6 +465,38 @@
           "html": "docs/funny-camera/index.html",
           "id": "code-main",
           "source": "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/MainActivity.kt"
+        }
+      ],
+      "diffs": [
+        {
+          "html": "docs/funny-camera/index.html",
+          "ids": ["diff-libs"],
+          "before_template": "gradle/libs.versions.toml",
+          "after": "A04FunnyCamera/gradle/libs.versions.toml"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "ids": ["diff-app-gradle"],
+          "before_template": "app/build.gradle.kts",
+          "after": "A04FunnyCamera/app/build.gradle.kts"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "ids": ["diff-manifest"],
+          "before_template": "app/src/main/AndroidManifest.xml",
+          "after": "A04FunnyCamera/app/src/main/AndroidManifest.xml"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "ids": ["diff-preview-main"],
+          "before_template": "app/src/main/java/jp/ac/jec/panda2kotlinemptyviewsactivity/MainActivity.kt",
+          "after": "teacher/funny-camera/code/06-MainActivity.kt"
+        },
+        {
+          "html": "docs/funny-camera/index.html",
+          "ids": ["diff-main"],
+          "before": "teacher/funny-camera/code/06-MainActivity.kt",
+          "after": "A04FunnyCamera/app/src/main/java/jp/ac/jec/a04funnycamera/MainActivity.kt"
         }
       ],
       "mirrors": [

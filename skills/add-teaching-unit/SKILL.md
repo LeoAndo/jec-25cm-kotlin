@@ -69,6 +69,10 @@ description: Add a new Android teaching unit (A01-) to this Kotlin course reposi
   **純Kotlin系のZIPは `docs/hello-kotlin/downloads/K01HelloKotlin.zip` の1つだけ**で、`K01HelloKotlin` のプロジェクトが1つしかないため増えない（作り直すのは、上の「Kotlinの回を足すだけなら」の5）。
 - `docs/<スラッグ>/images/` は、**その教科書で実際に使うスクリーンショットがあるときだけ**作る。Android単元の画面は、指定AVD `jec_25cm_kotlin_Pixel 9a` で撮る。「ここに画像を入れる」のようなプレースホルダは置かない。
 - コードのスニペットは、`<pre id="code-…"><code>` に置き、**ソースからHTMLエスケープして差し込む**。configの `snippets` がバイト単位で照合するので、手で写して直さない。
+- **すでにあるファイルを直すSTEPには、全文を載せない。「全文置換」と指示しない**（README「授業用教科書の基本方針」14）。ウィザードが作ったファイル（`libs.versions.toml`・`build.gradle.kts`・`AndroidManifest.xml`・`MainActivity.kt`）や、前のSTEPで書いたファイルを直すときは、足す行（`<ins>`）・消す行（`<del>`）・すでにある行だけを載せた差分ブロック（`<pre id="diff-…" class="diff">`）にする。
+  - 枠は手で書かない。configの `diffs` に登録してから、`python3 scripts/check-teaching-materials.py --print-diff docs/<スラッグ>/index.html <id>` で作って貼る（下の「4.」）。見出し（`<div class="code-head diff-head">`）の凡例も一緒に出る。
+  - 差分ブロックを初めて使うSTEPに、読み方の説明を置く（緑の太字の行は足す、赤い取り消し線の行は消す、薄い字の行はすでにあるので入力しない、`⋮` は省いた印）。既存の教科書（`docs/github-search/index.html` のSTEP 02）と同じ文にする。
+  - 全文を載せてよいのは、新しく作るファイル（「新しいファイルなので、中身を次の全文にします」と書く）、レイアウトXML（作った直後の中身を使わない理由を書く）、照合用の全文（差分ブロックのすぐ下に `<details class="fulltext">` で折りたたむ）だけ。
 - 教科書の中から**ほかの単元へ本文で送らない**（共通資料へのリンクはサイドバーと明示の導線だけ）。
 - **多言語展開の制約を守る**（`python3 scripts/localize-student-materials.py check` が行番号つきで落とす）。
   - 開始タグと終了タグを必ず対応させる。`<span/>` のような自己終了タグを書かない。
@@ -82,7 +86,7 @@ description: Add a new Android teaching unit (A01-) to this Kotlin course reposi
 
 - `teacher/<スラッグ>/index.html`。既存の教員用ガイドと同じ型にする。
 - **「この単元の教材方針」の節を必ず置く。** 何を意図的に外したかを、理由つきで書く。
-- `teacher/<スラッグ>/code/` に、STEPごとの照合コードを `NN-ファイル名.拡張子` の形式で置く（`01-main.kt`、`03-MainActivity.kt` など）。
+- `teacher/<スラッグ>/code/` に、STEPごとの照合コードを `NN-ファイル名.拡張子` の形式で置く（`01-main.kt`、`03-MainActivity.kt` など）。途中の段階コードは、教科書の差分ブロックの「直す前」「直したあと」になる。前の段階との差分が、そのSTEPで学生が直す行だけになるように、空行の位置や import の並びを完成コードとそろえる。段階ごとにビルドが通ることも確かめる（AGENTS.md §7）。
 - 本文に単元名の表記を入れる（`check_project` は `docs` に挙げた両方のHTMLを見る）。**Android単元は、教科書と同じく `package` の値（`jp.ac.jec.…`）も本文に書く。**
 
 ## 4. `config/teaching-materials.json`
@@ -106,6 +110,21 @@ description: Add a new Android teaching unit (A01-) to this Kotlin course reposi
   "archive": "docs/calc-game/downloads/A02CalcGame.zip"
 }
 ```
+
+差分ブロックを載せた単元は、`snippets` と並べて `diffs` も書く（A03の例）。`before_template` は、ウィザードが作った直後の形で、ひな形 `Panda2KotlinEmptyViewsActivity` の中のパスを書く（検査が、パッケージ名とプロジェクト名をその単元のものに置き換えて読む）。`before` は、前のSTEPの段階コード。
+
+```json
+"diffs": [
+  { "html": "docs/github-search/index.html", "ids": ["diff-app-gradle"],
+    "before_template": "app/build.gradle.kts",
+    "after": "A03GithubSearch/app/build.gradle.kts" },
+  { "html": "docs/github-search/index.html", "ids": ["diff-stage-10"],
+    "before": "teacher/github-search/code/04-MainActivity.kt",
+    "after": "teacher/github-search/code/10-MainActivity.kt" }
+]
+```
+
+検査は、直す前のファイルに `ids` の枠を順に当てた結果が `after` と1文字も違わないこと、当てる場所が1つに決まることを確かめる。そのため、完成プロジェクトの設定ファイルは「ひな形＋足した行」の形にする（`dependencies` を並べ替えない。使っていない行を消さない）。
 
 `package` の値は、`app/build.gradle.kts` の `namespace` と `applicationId` の両方と一致している必要がある。`root` はプロジェクトのディレクトリ、`layout` はレイアウトXMLのパス。Android単元は単元ごとに別プロジェクトなので、`root` も `archive` も単元ごとに別になる。
 

@@ -22,8 +22,52 @@
 <div class="note"><p class="box-title">POINT</p><p>Kotlinの : はJavaのextendsに対応します。親のコンストラクタを呼ぶ括弧も残します。Empty Views ActivityならXMLとActivityが組になります。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-01"><span>自分の保存先にA04FunnyCameraができ、MainActivity.ktのpackageがjp.ac.jec.a04funnycameraになっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-2"><p class="step-meta">STEP 02 · 14コマ目 · 目安 15分</p><h2>カメラのライブラリをそろえる</h2>
-<p>次の3ファイルを、<strong>パスを確かめて全文置換してから</strong>同期します。作成日によるライブラリの差をそろえます。Panda 2で作った構成が前提で、別の版のAGP番号だけを下げる手順ではありません。</p>
+<p>カメラに使うライブラリを、次の<strong>2つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確かめます。</p>
+<p>このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span class="diff-add">緑の太字の行</span>は足す行、<span class="diff-del">赤い取り消し線の行</span>は消す行です。<span class="diff-keep">薄い字の行</span>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。</p>
 <p><code>gradle/libs.versions.toml</code>。CameraXの4つとlifecycleを使います。</p>
+<p><code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。</p>
+<div class="code-head diff-head"><span>gradle/libs.versions.toml</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-libs" class="diff" tabindex="0"><code>[versions]
+agp = "9.1.1"
+coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.8.0"
+material = "1.14.0"
+activity = "1.13.0"
+constraintlayout = "2.2.2"
+<ins>camera = "1.4.2"
+lifecycle = "2.9.4"
+</ins><span class="diff-gap">⋮
+</span>androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+<ins>androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "camera" }
+camera-core = { module = "androidx.camera:camera-core", version.ref = "camera" }
+camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "camera" }
+camera-view = { module = "androidx.camera:camera-view", version.ref = "camera" }
+</ins></code></pre>
+<p>次は <code>app/build.gradle.kts</code>。appフォルダの中のファイルです。プロジェクト直下の <code>build.gradle.kts</code> は変えません。</p>
+<p>コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。</p>
+<div class="code-head diff-head"><span>app/build.gradle.kts</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-app-gradle" class="diff" tabindex="0"><code>dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+<ins>    implementation(libs.androidx.lifecycle.runtime.ktx)
+</ins>    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+<ins>
+    // TODO STEP01: cameraxライブラリを追加する - START
+    implementation(libs.camera.core)
+    implementation(libs.camera.camera2) // これ追加しないと、実行時エラーになる
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.view)
+    // END
+</ins>}
+</code></pre>
+<details class="fulltext"><summary>照合用：直したあとの2つのファイルの全文</summary>
 <div class="code-head">libs.versions.toml · 全文</div><pre id="code-libs" tabindex="0"><code>[versions]
 agp = &quot;9.1.1&quot;
 coreKtx = &quot;1.17.0&quot;
@@ -56,14 +100,7 @@ camera-view = { module = &quot;androidx.camera:camera-view&quot;, version.ref = 
 android-application = { id = &quot;com.android.application&quot;, version.ref = &quot;agp&quot; }
 
 </code></pre>
-<p>プロジェクト直下の <code>build.gradle.kts</code>。</p>
-<div class="code-head">build.gradle.kts · 全文</div><pre id="code-root-gradle" tabindex="0"><code>// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    alias(libs.plugins.android.application) apply false
-}</code></pre>
-<p><code>app/build.gradle.kts</code>。こちらはappフォルダの中です。</p>
-<p>コード内の <code>TODO STEP01</code> は作業時の目印として残しているコメントで、この教科書のSTEP番号ではありません。CameraXの4行の <code>implementation</code> は既に入っています。全文を置き換えたら、同じ行をもう一度追加する必要はありません。</p>
-<div class="code-head">build.gradle.kts · 全文</div><pre id="code-app-gradle" tabindex="0"><code>plugins {
+<div class="code-head">app/build.gradle.kts · 全文</div><pre id="code-app-gradle" tabindex="0"><code>plugins {
     alias(libs.plugins.android.application)
 }
 
@@ -101,15 +138,15 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
     // TODO STEP01: cameraxライブラリを追加する - START
     implementation(libs.camera.core)
@@ -118,6 +155,7 @@ dependencies {
     implementation(libs.camera.view)
     // END
 }</code></pre>
+</details>
 <p><strong>Sync Now</strong>（出ていなければ <strong>File → Sync Project with Gradle Files</strong>）を実行します。SDKの追加を聞かれたら内容を確認して先生と進めます。<code>gradle/wrapper/gradle-wrapper.properties</code> のGradleは <code>9.3.1</code>、AGPは <code>9.1.1</code>、compileSdkは <code>36.1</code>、targetSdkは <code>36</code> です。同期のエラーが残ったらその画面で止まります。</p>
 <table><thead><tr><th>依存関係</th><th>使う場所</th></tr></thead><tbody><tr><td>camera-core</td><td>Preview・CameraSelector</td></tr><tr><td>camera-camera2</td><td>CameraXが内部で使う背面カメラの実装</td></tr><tr><td>camera-lifecycle</td><td>Activityにプレビューを結び付ける</td></tr><tr><td>camera-view</td><td>XMLのPreviewView</td></tr><tr><td>lifecycle-runtime-ktx</td><td>保存処理を起動するlifecycleScope</td></tr></tbody></table>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>val preview = Preview.Builder().build()</code></pre>
@@ -126,9 +164,23 @@ dependencies {
 <div class="note"><p class="box-title">POINT</p><p>Javaと同じライブラリをKotlinから使えます。Kotlinではnewを書きません。camera-camera2は本文にimportがなくても実行時に必要です。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-02"><span>同期の赤いエラーがなくなり、カタログにCameraXの4つとlifecycleがある。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-3"><p class="step-meta">STEP 03 · 14コマ目 · 目安 10分</p><h2>カメラの使用を宣言する</h2>
-<p><code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>uses-permission</code> はapplicationの外です。</p>
+<p><code>app/src/main/AndroidManifest.xml</code> に、緑の行を足します。<code>uses-feature</code> と <code>uses-permission</code> は、どちらもapplicationの外です。</p>
+<div class="code-head diff-head"><span>app/src/main/AndroidManifest.xml</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-manifest" class="diff" tabindex="0"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"&gt;
+<ins>
+    &lt;uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" /&gt;
+
+    &lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+</ins>
+    &lt;application
+</code></pre>
+<details class="fulltext"><summary>照合用：直したあとの <code>AndroidManifest.xml</code> の全文</summary>
 <div class="code-head">AndroidManifest.xml · 全文</div><pre id="code-manifest" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;
 
     &lt;uses-feature
         android:name=&quot;android.hardware.camera.any&quot;
@@ -147,8 +199,7 @@ dependencies {
         android:theme=&quot;@style/Theme.A04FunnyCamera&quot;&gt;
         &lt;activity
             android:name=&quot;.MainActivity&quot;
-            android:exported=&quot;true&quot;
-            android:windowSoftInputMode=&quot;adjustResize&quot;&gt;
+            android:exported=&quot;true&quot;&gt;
             &lt;intent-filter&gt;
                 &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
 
@@ -158,7 +209,8 @@ dependencies {
     &lt;/application&gt;
 
 &lt;/manifest&gt;</code></pre>
-<p><code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。テーマ名は生成済みの <code>Theme.A04FunnyCamera</code> と一致させます。</p>
+</details>
+<p><code>CAMERA</code> はカメラを使う宣言です。これだけで許可にはならず、実行時にダイアログで選びます。<code>camera.any</code> はカメラを必要とする宣言で、背面の選択は後でKotlinに書きます。</p>
 <p>このSTEPではファイルを保存します。権限のダイアログを動かすのはSTEP 06です。</p>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>requestCameraPermission.launch(Manifest.permission.CAMERA)</code></pre>
 </div><div class="compare-item"><p class="compare-lang" translate="no">Java</p><pre tabindex="0"><code>requestCameraPermission.launch(Manifest.permission.CAMERA);</code></pre>
@@ -167,7 +219,7 @@ dependencies {
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-03"><span>ManifestにCAMERAの宣言があり、applicationの外に置かれている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-4"><p class="step-meta">STEP 04 · 14コマ目 · 目安 20分</p><h2>金魚を置いてドラッグ用のViewを作る</h2>
 <p><a href="downloads/character.png" download="character.png">金魚の画像 character.png を保存</a>し、Finderから自分の <code>A04FunnyCamera/app/src/main/res/drawable/</code> へコピーします。保存時に別名になったら <code>character.png</code> に直します。<strong>drawable</strong> の直下です。画像は背景が透過した500×416ピクセルです。</p>
-<p>Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成し、次の全文に置き換えます。</p>
+<p>Android Studioでパッケージ <code>jp.ac.jec.a04funnycamera</code> を右クリックし、<strong>New → Kotlin Class/File</strong>。名前 <code>DraggableImageView</code>、種類 <strong>Class</strong> で作成します。新しいファイルなので、中身を次の全文にします。</p>
 <div class="code-head">DraggableImageView.kt · 全文</div><pre id="code-draggable" tabindex="0"><code>package jp.ac.jec.a04funnycamera
 
 import android.content.Context
@@ -245,7 +297,7 @@ class DraggableImageView(context: Context, attrs: AttributeSet?) :
 <div class="note"><p class="box-title">POINT</p><p>プライマリコンストラクタは、Javaでクラス本体に書くコンストラクタの引数をクラス名の後へ出す形です。XMLから渡されるContextとAttributeSetを親へ渡します。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-04"><span>drawable/character.pngとDraggableImageView.ktがあり、先頭のpackageとフォルダが一致する。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-5"><p class="step-meta">STEP 05 · 14コマ目 · 目安 10分</p><h2>映像・金魚・ボタンを重ねる</h2>
-<p><code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示で全文置換します。</p>
+<p><code>app/src/main/res/layout/activity_main.xml</code> を開き、<strong>Code</strong> 表示にします。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。</p>
 <div class="code-head">activity_main.xml · 全文</div><pre id="code-layout" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -285,7 +337,116 @@ class DraggableImageView(context: Context, attrs: AttributeSet?) :
 <div class="note"><p class="box-title">POINT</p><p>XMLとKotlinの接点はidです。Javaでも同じfindViewByIdを使えます。変数の型ImageViewは、子クラスDraggableImageViewを受け取れます。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-05"><span>XMLのidがpreview_view・iv_character・btn_take_pictureで、drawableの参照が赤くなっていない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-6"><p class="step-meta">STEP 06 · 14コマ目 · 目安 15分</p><h2>権限を受け取りプレビューを起動する</h2>
-<p><code>MainActivity.kt</code> を次の全文に置き換えます。これは<strong>14コマ目の途中コード</strong>です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。</p>
+<p><code>MainActivity.kt</code> を開き、緑の行を足して<strong>14コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。Take Pictureは確認メッセージを出すだけで、まだ保存しません。</p>
+<div class="code-head diff-head"><span>MainActivity.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-preview-main" class="diff" tabindex="0"><code>package jp.ac.jec.a04funnycamera
+
+<ins>import android.Manifest
+</ins>import android.os.Bundle
+<ins>import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
+</ins>import androidx.activity.enableEdgeToEdge
+<ins>import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
+</ins>import androidx.appcompat.app.AppCompatActivity
+<ins>import androidx.camera.core.CameraSelector
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.PreviewView
+import androidx.core.content.ContextCompat
+</ins>import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+<ins>import com.google.android.material.snackbar.Snackbar
+</ins>
+<ins>/**
+ * カメラのプレビューにキャラクターを重ねて、その画面を画像として保存するActivity
+ *
+ * - キャラクターは指でドラッグして動かせる (DraggableImageView)
+ * - 14コマ目はプレビューと移動を確認する。画像の保存は15コマ目で追加する
+ */
+</ins>class MainActivity : AppCompatActivity() {
+<ins>    /**
+     * カメラ権限のリクエスト結果を受け取るためのActivityResultLauncher
+     */
+    private val requestCameraPermission =
+        registerForActivityResult(RequestPermission()) { isGranted -&gt;
+            Log.d(TAG, "isGranted: $isGranted")
+            if (isGranted) {
+                startCamera()
+            } else {
+                Log.w(TAG, "カメラの権限を許可しないとアプリが正常に動作しません")
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    "カメラの権限を許可しないとアプリが正常に動作しません",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }
+
+    private lateinit var previewView: PreviewView
+    private lateinit var characterView: ImageView
+
+</ins>    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -&gt;
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+<ins>
+        previewView = findViewById(R.id.preview_view)
+        characterView = findViewById(R.id.iv_character)
+
+        // Camera機能を使うために権限リクエストを行う
+        requestCameraPermission.launch(Manifest.permission.CAMERA)
+
+        findViewById&lt;Button&gt;(R.id.btn_take_picture).setOnClickListener {
+            Snackbar.make(findViewById(R.id.main), "プレビューを確認中です", Snackbar.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Cameraのプレビュー表示を行う
+     */
+    private fun startCamera() {
+        // 現在のプロセスに関連付けられているProcessCameraProviderを取得
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+
+        // イベントリスナーの登録
+        cameraProviderFuture.addListener(Runnable {
+            try {
+                val cameraProvider = cameraProviderFuture.get()
+
+                val preview = Preview.Builder().build()
+                preview.surfaceProvider = previewView.surfaceProvider
+
+                // フロントカメラかバックカメラを指定する
+                val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+                // 再バインドする前にユースケースのバインドを解除する
+                cameraProvider.unbindAll()
+
+                // ユースケース(今回の場合、プレビューのみ)をカメラにバインドする
+                // 背面カメラがない端末では例外が発生する
+                cameraProvider.bindToLifecycle(this, cameraSelector, preview)
+            } catch (e: Exception) {
+                Log.e(TAG, "error: ", e)
+                Snackbar.make(
+                    findViewById(R.id.main),
+                    "カメラを起動できませんでした",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            }
+        }, ContextCompat.getMainExecutor(this))
+    }
+
+    companion object {
+        private const val TAG = "MainActivity" // ログ出力時のタグ
+</ins>    }
+}
+</code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>MainActivity.kt</code> の全文</summary>
 <div class="code-head">06-MainActivity.kt · 全文</div><pre id="code-preview-main" tabindex="0"><code>package jp.ac.jec.a04funnycamera
 
 import android.Manifest
@@ -394,6 +555,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 </code></pre>
+</details>
 <p>実行設定 <strong>app</strong>、<code>jec_25cm_kotlin_Pixel 9a</code> を選び、<strong>Run ▶</strong>。カメラのダイアログで <strong>While using the app</strong>（アプリの使用中のみ）を選びます。既に許可済みならダイアログは出ません。仮想の部屋が表示されたら、金魚をつかんで上下左右へドラッグします。四辺で金魚のViewが止まります。</p>
 <table><thead><tr><th>つながり</th><th>役割</th></tr></thead><tbody><tr><td>registerForActivityResult</td><td>権限の結果をisGrantedで受け取り、許可ならstartCamera。拒否なら画面に案内。</td></tr><tr><td>getInstance → addListener</td><td>カメラの準備完了後に処理。getMainExecutorで画面を扱うスレッドへ渡す。</td></tr><tr><td>surfaceProvider</td><td>Previewの出力先をXMLのPreviewViewへ接続する。</td></tr><tr><td>DEFAULT_BACK_CAMERA</td><td>背面を選ぶ。指定AVDでは仮想の部屋。</td></tr><tr><td>bindToLifecycle</td><td>このActivityのライフサイクルにプレビューを結び付ける。</td></tr><tr><td>try / catch</td><td>起動失敗をSnackbarで表示する。</td></tr></tbody></table>
 <p>ボタンを1回押すと「プレビューを確認中です」が出ます。プレビューが黒いときは権限の状態を先生と確認し、連打で直そうとしません。</p>
@@ -422,7 +584,7 @@ float x = Math.max(0f, Math.min(newX, 100f));</code></pre>
 <div class="note"><p class="box-title">POINT</p><p>lateinitは後で代入する非Nullのプロパティです。Javaのフィールドと同じ位置に置き、setContentViewの後でfindViewByIdから代入して使います。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-08"><span>自分の保存先のA04をRunし、プレビューと途中段階の確認メッセージが出る。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-9"><p class="step-meta">STEP 09 · 15コマ目 · 目安 15分</p><h2>プレビューと金魚を1枚に描く</h2>
-<p>まず、次の合成部分を読みます。<strong>この抜粋だけは貼り付けず</strong>、STEP 10の全文を入れてからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。</p>
+<p>まず、次の合成部分を読みます。<strong>この抜粋はまだ入力せず</strong>、STEP 10でほかの行と一緒に足してからRunします。<code>previewView.bitmap</code> は現在プレビューに表示されている映像を取り出します。準備前はnullです。</p>
 <pre tabindex="0"><code>        // プレビューに表示中のカメラ映像を取得する (カメラ起動前はnull)
         val previewBitmap = previewView.bitmap
         if (previewBitmap == null) {
@@ -445,7 +607,141 @@ if (previewBitmap == null) return;</code></pre>
 <div class="note"><p class="box-title">POINT</p><p>JavaのgetBitmap()をKotlinでは.bitmapと書きます。nullの場合にreturnした後は、Kotlinのスマートキャストで非Nullとして使えます。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-09"><span>MainActivity.ktはまだSTEP 06の状態で、抜粋のbitmap・translate・drawの3か所が教科書に見えている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 <section id="step-10"><p class="step-meta">STEP 10 · 15コマ目 · 目安 25分</p><h2>JPEGを保存する完成コードへ進む</h2>
-<p><code>MainActivity.kt</code> を次の<strong>完成版の全文</strong>へ置き換えます。importも含みます。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。</p>
+<p><code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成版</strong>にします。importにも足す行があります。14コマ目の権限・カメラの接続は保ち、ボタンから呼ぶ <code>takeScreenshot</code> と <code>saveBitmap</code> を加えます。直す場所は、import・クラスの説明のコメント・<code>onCreate</code> のボタンの処理と、新しく足す2つのメソッドです。</p>
+<div class="code-head diff-head"><span>MainActivity.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-main" class="diff" tabindex="0"><code>package jp.ac.jec.a04funnycamera
+
+import android.Manifest
+<ins>import android.content.ContentValues
+import android.graphics.Bitmap
+import android.graphics.Canvas
+</ins>import android.os.Bundle
+<ins>import android.provider.MediaStore
+</ins>import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
+import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.PreviewView
+import androidx.core.content.ContextCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+<ins>import androidx.lifecycle.lifecycleScope
+</ins>import com.google.android.material.snackbar.Snackbar
+<ins>import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.IOException
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+</ins>
+/**
+ * カメラのプレビューにキャラクターを重ねて、その画面を画像として保存するActivity
+ *
+ * - キャラクターは指でドラッグして動かせる (DraggableImageView)
+<del> * - 14コマ目はプレビューと移動を確認する。画像の保存は15コマ目で追加する
+</del><ins> * - 「Take Picture」ボタンを押すと、カメラ映像とキャラクターを合成した画像を保存する
+</ins> */
+class MainActivity : AppCompatActivity() {
+<span class="diff-gap">⋮
+</span>        // Camera機能を使うために権限リクエストを行う
+        requestCameraPermission.launch(Manifest.permission.CAMERA)
+
+<del>        findViewById&lt;Button&gt;(R.id.btn_take_picture).setOnClickListener {
+            Snackbar.make(findViewById(R.id.main), "プレビューを確認中です", Snackbar.LENGTH_SHORT).show()
+        }
+</del><ins>        findViewById&lt;Button&gt;(R.id.btn_take_picture).setOnClickListener { takeScreenshot() }
+</ins>    }
+<span class="diff-gap">⋮
+</span>        }, ContextCompat.getMainExecutor(this))
+    }
+
+<ins>    /**
+     * プレビュー画面とキャラクターを合成したスクリーンショットを作成して保存する
+     */
+    private fun takeScreenshot() {
+        // プレビューに表示中のカメラ映像を取得する (カメラ起動前はnull)
+        val previewBitmap = previewView.bitmap
+        if (previewBitmap == null) {
+            Log.d(TAG, "カメラの準備ができていません")
+            return
+        }
+
+        // カメラ映像の上にキャラクターを描画する
+        val screenshot = previewBitmap.copy(Bitmap.Config.ARGB_8888, true)
+        val canvas = Canvas(screenshot)
+        canvas.translate(characterView.x - previewView.x, characterView.y - previewView.y)
+        characterView.draw(canvas)
+
+        // 画像の保存は時間がかかることがあるため、コルーチンを使ってメインスレッド以外で行う
+        lifecycleScope.launch {
+            val isSaved = withContext(Dispatchers.IO) {
+                saveBitmap(screenshot)
+            }
+            // ここはメインスレッドに戻っているので画面を更新できる
+            val message = if (isSaved) "保存しました" else "保存に失敗しました"
+            Snackbar.make(findViewById(R.id.main), message, Snackbar.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * Bitmapを共有ストレージ(Pictures/FunnyCamera)にJPEGで保存する
+     *
+     * @return 保存に成功したらtrue
+     */
+    private fun saveBitmap(bitmap: Bitmap): Boolean {
+        val dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss-SSS")
+        val fileName = LocalDateTime.now().format(dateTimeFormatter)
+        val contentValues = ContentValues()
+        contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
+        contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg") // ファイル形式はjpeg
+        // 共有ストレージのPicturesディレクトリ配下にFunnyCameraというディレクトリを作成する
+        contentValues.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/FunnyCamera")
+        // 書き込みが終わるまで他のアプリから見えないようにする
+        contentValues.put(MediaStore.MediaColumns.IS_PENDING, 1)
+
+        // 共有ストレージに保存先のファイルを作成する
+        val imageCollection =
+            MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+        val uri = contentResolver.insert(imageCollection, contentValues)
+        if (uri == null) {
+            Log.e(TAG, "保存先のファイルを作成できませんでした")
+            return false
+        }
+
+        // 作成したファイルにJPEG形式で書き込む
+        var isWritten = false
+        try {
+            val outputStream = contentResolver.openOutputStream(uri)
+            if (outputStream != null) {
+                outputStream.use {
+                    isWritten = bitmap.compress(Bitmap.CompressFormat.JPEG, 95, it)
+                }
+            }
+        } catch (e: IOException) {
+            Log.e(TAG, "error ", e)
+        }
+
+        // 書き込みに失敗したら、作成したファイルを削除する
+        if (!isWritten) {
+            contentResolver.delete(uri, null, null)
+            return false
+        }
+
+        // 書き込み完了。他のアプリから見えるようにする
+        contentValues.clear()
+        contentValues.put(MediaStore.MediaColumns.IS_PENDING, 0)
+        contentResolver.update(uri, contentValues, null, null)
+        Log.d(TAG, "savedUri $uri")
+        return true
+    }
+
+</ins>    companion object {
+</code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>MainActivity.kt</code> の全文</summary>
 <div class="code-head">MainActivity.kt · 全文</div><pre id="code-main" tabindex="0"><code>package jp.ac.jec.a04funnycamera
 
 import android.Manifest
@@ -643,6 +939,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 </code></pre>
+</details>
 <table><thead><tr><th>保存の順序</th><th>このコードの意味</th></tr></thead><tbody><tr><td>ContentValues</td><td>名前・image/jpeg・Pictures/FunnyCamera・IS_PENDING=1を指定する。</td></tr><tr><td>insert</td><td>MediaStoreに保存先を作る。戻り値のuriがnullならfalse。</td></tr><tr><td>openOutputStream → use</td><td>出力先を開いてJPEGを書き、useの終了時に閉じる。</td></tr><tr><td>compress(..., 95, it)</td><td>JPEG品質95で書き込む。圧縮に成功したかをisWrittenへ保存する。</td></tr><tr><td>失敗ならdelete</td><td>出力先を作ったが書き込めなければ、その作りかけを削除してfalse。</td></tr><tr><td>IS_PENDING=0</td><td>書き込み済みの画像を他のアプリからも見える状態にする。</td></tr></tbody></table>
 <p>保存は <code>lifecycleScope.launch</code> から始め、圧縮・書き込みを <code>withContext(Dispatchers.IO)</code> の中へ置きます。そこを抜けるとメインスレッドへ戻り、trueなら「保存しました」、falseなら「保存に失敗しました」を表示します。Activityが破棄されるとlifecycleScopeのコルーチンはキャンセルされます。</p>
 <p>このアプリの対象はAndroid 12以降です。自分のアプリが作る画像をMediaStoreへ保存するためのストレージ権限は追加しません。カメラの許可とは別の話です。<code>READ_MEDIA_IMAGES</code> など、他のアプリの画像を読むための権限も要りません。保存してRunすると、金魚が動く画面に戻ります。</p>
@@ -696,5 +993,5 @@ class MainActivity : AppCompatActivity() {
 </div></div>
 <div class="note"><p class="box-title">POINT</p><p>保存結果のBooleanはJavaと同じ役目です。Kotlinでは型名を変数名の後へ書きます。画面に出る文はこの戻り値で変わります。</p>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-14"><span>自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
-<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えている状態</th><th>確認する場所</th></tr></thead><tbody><tr><td>同期が止まる</td><td>Panda 2か、STEP 02の3ファイルが正しい場所にあるかを確認。最初の原因行を先生に見せます。</td></tr><tr><td>characterが赤い</td><td>drawable直下のcharacter.pngとXMLの@drawable/characterを照合。ファイル名の末尾に番号が付いていないか確認します。</td></tr><tr><td>起動直後に閉じる</td><td>カスタムViewの完全なクラス名、パッケージ、コンストラクタの引数2つをSTEP 04・05と照合します。</td></tr><tr><td>プレビューが黒い</td><td>カメラ権限、指定AVDの背面カメラ設定、STEP 06のsurfaceProviderとbindToLifecycleを確認。映像が出るまで保存しません。</td></tr><tr><td>権限のダイアログが出ない</td><td>既に許可しているか、拒否を繰り返している場合があります。設定のアプリ情報からCamera権限を確認し、変更後はRunし直します。</td></tr><tr><td>金魚がボタンに隠れる</td><td>XMLでボタンを後に書いた結果です。保存画像にはボタンが入らず、金魚全体が入ります。</td></tr><tr><td>金魚をつかめない</td><td>ボタンに隠れたところではボタンが先に反応します。見えている金魚の上側をドラッグします。</td></tr><tr><td>押すとプレビューを確認中ですと出る</td><td>STEP 06の途中コードです。STEP 10の完成版で保存処理へ置き換わります。</td></tr><tr><td>押しても保存の案内が出ない</td><td>プレビュー準備前のnull分岐はLogcatのみです。映像が見えてから押します。</td></tr><tr><td>保存に失敗しましたと出る</td><td>空き容量など端末の状態を先生と確認。saveBitmapがfalseを返した結果です。連打しません。</td></tr><tr><td>保存画像が見つからない</td><td>Filesの端末内ストレージでPictures/FunnyCameraを確認。今の端末の日時のjpgを開きます。</td></tr><tr><td>途中から再開したい</td><td>14コマ目末はSTEP 06の全文。15コマ目はSTEP 08から、完成版全文はSTEP 10です。</td></tr></tbody></table>
+<section id="help"><h2>困ったとき</h2><table><thead><tr><th>見えている状態</th><th>確認する場所</th></tr></thead><tbody><tr><td>同期が止まる</td><td>Panda 2か、STEP 02で直した2つのファイルの場所と、足した行を確認。最初の原因行を先生に見せます。</td></tr><tr><td>characterが赤い</td><td>drawable直下のcharacter.pngとXMLの@drawable/characterを照合。ファイル名の末尾に番号が付いていないか確認します。</td></tr><tr><td>起動直後に閉じる</td><td>カスタムViewの完全なクラス名、パッケージ、コンストラクタの引数2つをSTEP 04・05と照合します。</td></tr><tr><td>プレビューが黒い</td><td>カメラ権限、指定AVDの背面カメラ設定、STEP 06のsurfaceProviderとbindToLifecycleを確認。映像が出るまで保存しません。</td></tr><tr><td>権限のダイアログが出ない</td><td>既に許可しているか、拒否を繰り返している場合があります。設定のアプリ情報からCamera権限を確認し、変更後はRunし直します。</td></tr><tr><td>金魚がボタンに隠れる</td><td>XMLでボタンを後に書いた結果です。保存画像にはボタンが入らず、金魚全体が入ります。</td></tr><tr><td>金魚をつかめない</td><td>ボタンに隠れたところではボタンが先に反応します。見えている金魚の上側をドラッグします。</td></tr><tr><td>押すとプレビューを確認中ですと出る</td><td>STEP 06の途中コードです。STEP 10の完成版で保存処理へ置き換わります。</td></tr><tr><td>押しても保存の案内が出ない</td><td>プレビュー準備前のnull分岐はLogcatのみです。映像が見えてから押します。</td></tr><tr><td>保存に失敗しましたと出る</td><td>空き容量など端末の状態を先生と確認。saveBitmapがfalseを返した結果です。連打しません。</td></tr><tr><td>保存画像が見つからない</td><td>Filesの端末内ストレージでPictures/FunnyCameraを確認。今の端末の日時のjpgを開きます。</td></tr><tr><td>途中から再開したい</td><td>14コマ目末はSTEP 06の全文。15コマ目はSTEP 08から、完成版全文はSTEP 10です。</td></tr></tbody></table>
 <p>エラーが解決しないときは、<a href="../common/help.html?from=funny-camera">共通資料：困ったとき</a>の調べ方を試してください。それでも解決しないときは、STEP番号と画面を先生に見せましょう。</p></section><section id="references"><h2>公式資料</h2><ul><li><a href="https://developer.android.com/media/camera/camerax/preview">Android：CameraXのプレビュー</a></li><li><a href="https://developer.android.com/reference/androidx/camera/view/PreviewView#getBitmap()">Android：PreviewView.getBitmap</a></li><li><a href="https://developer.android.com/training/permissions/requesting">Android：実行時の権限</a></li><li><a href="https://developer.android.com/training/data-storage/shared/media#add-item">Android：MediaStoreへの追加とIS_PENDING</a></li><li><a href="https://developer.android.com/topic/libraries/architecture/views/coroutines-views#lifecyclescope">Android：ViewsのlifecycleScope</a></li><li><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/use.html">Kotlin：use</a></li></ul></section><footer class="footer"><p>確認日：2026年9月24日 / A04FunnyCamera、Panda 2の構成</p></footer></main></div><p class="sr-only" role="status" aria-live="polite" data-copy-status></p></body></html>

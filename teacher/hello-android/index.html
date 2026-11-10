@@ -8,7 +8,7 @@
 <li>SDKとライブラリの初回ダウンロードが学内ネットワークで通るか、授業前に1台で確認する。ダウンロード待ちが20分を超える場合は、教員の端末で実行結果を見せて、学生はXMLの入力を進める。配布見本を自作として扱わない。</li>
 <li>指定AVDを起動する。表示名は <code>jec_25cm_kotlin_Pixel 9a</code>。内部のAVD識別子は空白が下線になる場合があるが、教科書・Device Managerの表示名は空白を使う。画像の実測環境はAPI 37.1・arm64-v8a・ライトテーマ。学生のシステムイメージは教室の配布環境で確認し、API 31以上かつCPUに合うものを授業前に指定する。</li>
 <li>完成版をRunし、起動時Hello World!、変更後Hello, Android!、「1」のSnackbar、「2」のToast、「3」は表示変化なしを確認する。Logcatの検索条件は <code>package:jp.ac.jec.a01helloandroid tag:MainActivity level:DEBUG</code>。</li>
-<li>New Projectの生成値は作成日でも変わる。2026-09-24のPanda 2実測ではcoreKtxが1.19.0だった。教科書STEP 01のlibs.versions.toml全文は完成版の1.17.0を含む構成に固定し、configのsnippetsとmirrorsで一致を検査する。ひな形そのものは改変しない。</li>
+<li>New Projectの生成値は作成日でも変わる。2026-09-24のPanda 2実測ではcoreKtxが1.19.0だった。教科書STEP 01は、[versions]の数字を見比べて、違う行だけ書き換えさせる（全文は折りたたんだ照合用）。数字は完成版の1.17.0を含む構成に固定し、configのsnippets・diffs・mirrorsで一致を検査する。ひな形そのものは改変しない。</li>
 </ul></section>
 <section><h2>2. この単元の教材方針</h2>
 <p>中心は<strong>XMLのidを持つViewをKotlinで取得し、画面の操作へつなぐこと</strong>。UI部品・イベント処理はJava／Swiftの既習知識と比較する。Android側の新しい結び付け方を <code>setContentView</code> → <code>findViewById</code> → クリック登録の順で追い、結果を見出し・メッセージで確かめる。APIの一覧を覚えさせる構成にはしない。</p>
@@ -21,6 +21,7 @@
 <tr><td>完成ソースのtext・button・btn1・btn2、getText()、括弧付きラムダ、@Overrideを維持</td><td>既存のオーナーの書き方を説明する。命名や記法の整理のために完成ソースを改変しない。Kotlinで必要なのはoverrideキーワードで、注釈を必須だと教えない。</td></tr>
 <tr><td>「3」は見た目の比較用で処理を付けない</td><td>XMLのstyleとクリック処理が別であることを実物で確認できる。未実装の不具合と取り違えないよう本文にも明記する。</td></tr>
 <tr><td>最後は文字と既存の余白の変更</td><td>ここまでに扱った範囲で、変える場所と効果が結び付く。新しいAPIや機能をアレンジの条件にしない。例を正解にしない。</td></tr>
+<tr><td>STEP 01は全文の置き換えではなく、[versions]の照合</td><td>ひな形と完成版のカタログは同じで、変わりうるのは作成日でずれる版の数字だけ。全文を置き換えさせると、どこが違うのかを学生が1行ずつ探すことになる（学生のフィードバックとオーナーの判断、#269）。STEP 05〜10は、もとから足す行だけの枠。レイアウトXMLは全文のまま。</td></tr>
 </tbody></table>
 <p>完成コードへのUnit Testの追加、ダークテーマ、回転・横画面、タブレット対応は対象外。IDEの黄色い提案をSuppressで隠さない。KotlinコンパイルとAndroid Lint／エディタの提案は区別する。XMLの直接の文字列や未使用のラムダ引数について、完成コードを勝手に書き換えず役割を説明する。</p>
 <p>版の読み替えは共通資料のissue #5で扱う。A01本文の基準はPanda 2のままにする。Panda 3はオーナー決定により実測しない。Quail 4との差分は、リポジトリの2つのひな形とREADMEを基準にする。</p></section>

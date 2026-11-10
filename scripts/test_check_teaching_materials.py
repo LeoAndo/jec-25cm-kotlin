@@ -8,8 +8,10 @@
 （CIの validate ジョブとREADMEの検証コマンドに入っている）ので、ここでは重ねて見ない。
 """
 
+import contextlib
 import html
 import importlib.util
+import io
 import json
 from pathlib import Path
 import subprocess
@@ -1488,6 +1490,446 @@ class SampleGuidanceCheckTest(unittest.TestCase):
             errors = CHECKER.validate(root)
             self.assertTrue(any("docs/common/help.html:1" in error and "基本方針」13" in error
                                 for error in errors), errors)
+
+
+class DiffBlockTest(unittest.TestCase):
+    """差分ブロックの検査（README「授業用教科書の基本方針」14、#269）。
+
+    すでにあるファイルを直すSTEPは、全文ではなく、足す行（<ins>）・消す行（<del>）・
+    すでにある行（印なし）だけを載せる。その枠を直す前のファイルに当てると、直したあとの
+    ファイルと1文字も違わないことを確かめる。全文のスニペットのバイト照合と同じ役目。
+    """
+
+    HTML = "docs/x/index.html"
+    BEFORE = (
+        "plugins {\n"
+        "    alias(libs.plugins.android.application)\n"
+        "}\n"
+        "\n"
+        "dependencies {\n"
+        "    implementation(libs.material)\n"
+        "    testImplementation(libs.junit)\n"
+        "}"  # ウィザードが作るファイルと同じく、末尾に改行がない
+    )
+    AFTER = (
+        "plugins {\n"
+        "    alias(libs.plugins.android.application)\n"
+        "    alias(libs.plugins.kotlinxSerialization)\n"
+        "}\n"
+        "\n"
+        "dependencies {\n"
+        "    implementation(libs.material)\n"
+        "    implementation(libs.ktor.client.core)\n"
+        "    testImplementation(libs.junit)\n"
+        "}\n"
+    )
+    GAP = '<span class="diff-gap">⋮\n</span>'
+    PLUGINS = (
+        "plugins {\n"
+        "    alias(libs.plugins.android.application)\n"
+        "<ins>    alias(libs.plugins.kotlinxSerialization)\n</ins>"
+        "}\n"
+    )
+    DEPENDENCIES = (
+        "dependencies {\n"
+        "    implementation(libs.material)\n"
+        "<ins>    implementation(libs.ktor.client.core)\n</ins>"
+        "    testImplementation(libs.junit)\n"
+        "}\n"
+    )
+
+    # ------------------------------------------------------------------
+    # 仮のリポジトリを組み立てる道具
+    # ------------------------------------------------------------------
+
+    def _write(self, root: Path, name: str, text: str) -> None:
+        path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+    def _block(self, block_id: str, inner: str, classes: str = ' class="diff"') -> str:
+        return f'<pre id="{block_id}"{classes} tabindex="0"><code>{inner}</code></pre>'
+
+    def _project(self, **overrides) -> dict:
+        project = {
+            "name": "A03GithubSearch", "kind": "android", "root": "A03GithubSearch",
+            "package": "jp.ac.jec.a03githubsearch",
+            "docs": [self.HTML, "teacher/x/index.html"], "snippets": [], "archive": "x.zip",
+            "diffs": [{"html": self.HTML, "ids": ["diff-gradle"], "before": "before.kts", "after": "after.kts"}],
+        }
+        project.update(overrides)
+        return project
+
+    def _errors(self, page: str, *, before: str | None = None, after: str | None = None,
+                project: dict | None = None, extra: dict | None = None, config: dict | None = None) -> list[str]:
+        """教科書に page を書いたときに、check_diffs が言うこと。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.HTML, "<main>\n<p>直す場所だけを載せます。</p>\n" + page + "\n</main>")
+            self._write(root, "before.kts", self.BEFORE if before is None else before)
+            self._write(root, "after.kts", self.AFTER if after is None else after)
+            for path, text in (extra or {}).items():
+                self._write(root, path, text)
+            project = project or self._project()
+            errors: list[str] = []
+            CHECKER.check_diffs(root, config or {"projects": [project]}, project, errors)
+            return errors
+
+    # ------------------------------------------------------------------
+    # 当てた結果が、直したあとのファイルになるか
+    # ------------------------------------------------------------------
+
+    def test_block_that_gives_the_after_file_is_accepted(self):
+        """足す行をすべて載せた枠は通る。あいだの変えない行は ⋮ で省ける。"""
+        self.assertEqual(self._errors(self._block("diff-gradle", self.PLUGINS + self.GAP + self.DEPENDENCIES)), [])
+
+    def test_block_missing_an_added_line_is_rejected(self):
+        """足す行が1行でも足りないと、当てた結果が完成コードにならない。行番号と中身を出す。"""
+        dependencies = self.DEPENDENCIES.replace("<ins>    implementation(libs.ktor.client.core)\n</ins>", "")
+        errors = self._errors(self._block("diff-gradle", self.PLUGINS + self.GAP + dependencies))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("docs/x/index.html:3", errors[0])
+        self.assertIn("diff-gradleをbefore.ktsに当てても、after.ktsと一致しません", errors[0])
+        self.assertIn("8行目", errors[0])
+        self.assertIn("implementation(libs.ktor.client.core)", errors[0])
+
+    def test_changed_line_needs_both_marks(self):
+        """書き換える行は、消す行（<del>）と足す行（<ins>）の組で載せる。"""
+        after = self.AFTER.replace("implementation(libs.material)", "implementation(libs.material3)")
+        changed = (
+            "dependencies {\n"
+            "<del>    implementation(libs.material)\n</del>"
+            "<ins>    implementation(libs.material3)\n"
+            "    implementation(libs.ktor.client.core)\n</ins>"
+            "    testImplementation(libs.junit)\n"
+        )
+        self.assertEqual(self._errors(self._block("diff-gradle", self.PLUGINS + self.GAP + changed), after=after), [])
+        # 消す行を載せ忘れると、古い行が残って完成コードにならない。
+        forgotten = changed.replace("<del>    implementation(libs.material)\n</del>", "    implementation(libs.material)\n")
+        errors = self._errors(self._block("diff-gradle", self.PLUGINS + self.GAP + forgotten), after=after)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("一致しません", errors[0])
+
+    def test_end_of_file_newlines_are_ignored(self):
+        """末尾の改行や空行の違いは見ない（ウィザードのファイルは、末尾に改行がない）。"""
+        page = self._block("diff-gradle", self.PLUGINS + self.GAP + self.DEPENDENCIES)
+        self.assertEqual(self._errors(page, before=self.BEFORE + "\n\n", after=self.AFTER.rstrip()), [])
+
+    def test_block_without_marks_is_an_excerpt(self):
+        """印のない枠は「見比べるだけ」の抜粋。直す前と直したあとが同じなら通る。"""
+        page = self._block("diff-gradle", "dependencies {\n    implementation(libs.material)\n", classes="")
+        self.assertEqual(self._errors(page, after=self.BEFORE), [])
+        # 抜粋の数字が、ファイルと1文字でも違えば検出する。
+        page = self._block("diff-gradle", "dependencies {\n    implementation(libs.material3)\n", classes="")
+        errors = self._errors(page, after=self.BEFORE)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("当てる場所がありません", errors[0])
+
+    def test_several_blocks_are_applied_in_order(self):
+        """1つのファイルの差分を、説明をはさんで複数の枠に分けて載せられる。"""
+        page = (self._block("diff-plugins", self.PLUGINS) + "<p>次に、依存を足します。</p>"
+                + self._block("diff-dependencies", self.DEPENDENCIES))
+        project = self._project(diffs=[{"html": self.HTML, "ids": ["diff-plugins", "diff-dependencies"],
+                                        "before": "before.kts", "after": "after.kts"}])
+        self.assertEqual(self._errors(page, project=project), [])
+        # 片方の枠だけでは、完成コードにならない。
+        project = self._project(diffs=[{"html": self.HTML, "ids": ["diff-plugins"],
+                                        "before": "before.kts", "after": "after.kts"}])
+        errors = self._errors(page, project=project)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("一致しません", errors[0])
+
+    # ------------------------------------------------------------------
+    # 当てる場所が決まるか
+    # ------------------------------------------------------------------
+
+    def test_existing_line_that_differs_from_the_file_is_rejected(self):
+        """すでにある行が、直す前のファイルと字下げ1つでも違えば、学生は場所を探せない。"""
+        plugins = self.PLUGINS.replace("    alias(libs.plugins.android.application)\n",
+                                       "  alias(libs.plugins.android.application)\n")
+        errors = self._errors(self._block("diff-gradle", plugins + self.GAP + self.DEPENDENCIES))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("diff-gradle: 1つ目のまとまりを当てる場所がありません", errors[0])
+        self.assertIn("1行目までは直す前のファイルの1行目からと一致し、次の行が違います", errors[0])
+        self.assertIn("直す前のファイル: before.kts", errors[0])
+
+    def test_ambiguous_place_is_rejected(self):
+        """すでにある行の並びが2か所にあると、どちらを直すのか決まらない。"""
+        errors = self._errors(self._block("diff-gradle", "<ins>    // 足す行\n</ins>}\n"))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("場所が1つに決まりません（同じ並びが3行目・8行目にあります）", errors[0])
+        self.assertIn("前後のすでにある行を足してください", errors[0])
+
+    def test_block_without_existing_line_is_rejected(self):
+        """足す行しかない枠は、どこへ足すのかが分からない。"""
+        errors = self._errors(self._block("diff-gradle", "<ins>    alias(libs.plugins.kotlinxSerialization)\n</ins>"))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("すでにある行（印のない行か消す行）がありません", errors[0])
+
+    def test_hunks_must_follow_the_file_order(self):
+        """まとまりは、ファイルの上から下の順に並べる。"""
+        errors = self._errors(self._block("diff-gradle", self.DEPENDENCIES + self.GAP + self.PLUGINS))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("2つ目のまとまりが、前のまとまりと重なっているか、それより上の行を指しています", errors[0])
+
+    # ------------------------------------------------------------------
+    # 枠の書き方
+    # ------------------------------------------------------------------
+
+    def test_marks_must_cover_whole_lines(self):
+        """印は行の単位で付ける。行の途中から始まる印は、どの行のことか決まらない。"""
+        inline = self.PLUGINS.replace("<ins>    alias(libs.plugins.kotlinxSerialization)\n</ins>",
+                                      "    <ins>alias(libs.plugins.kotlinxSerialization)\n</ins>")
+        unclosed = self.PLUGINS.replace("kotlinxSerialization)\n</ins>", "kotlinxSerialization)</ins>\n")
+        for inner in (inline, unclosed):
+            with self.subTest(inner=inner):
+                errors = self._errors(self._block("diff-gradle", inner + self.GAP + self.DEPENDENCIES))
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("印は行の単位で付けてください", errors[0])
+
+    def test_other_tags_are_rejected(self):
+        """強調などのタグを混ぜると、学生が入力する文字と枠の中身が食い違う。"""
+        inner = self.PLUGINS.replace("    alias(libs.plugins.kotlinxSerialization)\n",
+                                     "    <b>alias</b>(libs.plugins.kotlinxSerialization)\n")
+        errors = self._errors(self._block("diff-gradle", inner + self.GAP + self.DEPENDENCIES))
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("以外のタグは使えません", errors[0])
+
+    def test_gap_must_sit_between_lines(self):
+        """省略の目印は、まとまりとまとまりのあいだにだけ置く。"""
+        cases = [
+            (self.GAP + self.PLUGINS, "省略の目印（⋮）の前に、行がありません"),
+            (self.PLUGINS + self.GAP + self.GAP + self.DEPENDENCIES, "省略の目印（⋮）の前に、行がありません"),
+            (self.PLUGINS + self.GAP, "省略の目印（⋮）のあとに、行がありません"),
+            ("", "差分ブロックが空です"),
+        ]
+        for inner, message in cases:
+            with self.subTest(message=message, inner=inner):
+                errors = self._errors(self._block("diff-gradle", inner))
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(message, errors[0])
+
+    def test_escaped_characters_are_compared_as_written_in_the_file(self):
+        """枠の中の &lt; や &quot; は、ファイルの < や " と同じ文字として比べる。"""
+        before = '<manifest>\n    <application android:label="x">\n</manifest>'
+        after = '<manifest>\n    <uses-permission android:name="android.permission.INTERNET" />\n    <application android:label="x">\n</manifest>'
+        inner = ("&lt;manifest&gt;\n"
+                 "<ins>    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;\n</ins>"
+                 '    &lt;application android:label="x"&gt;\n')
+        self.assertEqual(self._errors(self._block("diff-gradle", inner), before=before, after=after), [])
+
+    # ------------------------------------------------------------------
+    # 直す前のファイル：ウィザードが作った直後の形（before_template）
+    # ------------------------------------------------------------------
+
+    TEMPLATE = {"root": "Panda2KotlinEmptyViewsActivity", "name": "Panda2KotlinEmptyViewsActivity",
+                "package": "jp.ac.jec.panda2kotlinemptyviewsactivity"}
+    GENERATED = ('android {\n    namespace = "jp.ac.jec.panda2kotlinemptyviewsactivity"\n}\n'
+                 '// Theme.Panda2KotlinEmptyViewsActivity')
+    NAMED = ('android {\n    namespace = "jp.ac.jec.a03githubsearch"\n'
+             "    buildFeatures { viewBinding = false }\n}\n// Theme.A03GithubSearch\n")
+
+    def _template_errors(self, inner: str) -> list[str]:
+        project = self._project(diffs=[{"html": self.HTML, "ids": ["diff-gradle"],
+                                        "before_template": "app/build.gradle.kts", "after": "after.kts"}])
+        return self._errors(
+            self._block("diff-gradle", inner), after=self.NAMED, project=project,
+            extra={"Panda2KotlinEmptyViewsActivity/app/build.gradle.kts": self.GENERATED},
+            config={"wizard_template": self.TEMPLATE, "projects": [project]})
+
+    def test_template_is_read_with_the_names_of_the_unit(self):
+        """ひな形のパッケージ名とプロジェクト名を、その単元の名前に置き換えてから当てる。
+
+        学生が New Project で作った直後のファイルと同じ形になる。
+        """
+        inner = ('android {\n    namespace = "jp.ac.jec.a03githubsearch"\n'
+                 "<ins>    buildFeatures { viewBinding = false }\n</ins>}\n")
+        self.assertEqual(self._template_errors(inner), [])
+
+    def test_block_written_with_the_template_names_is_rejected(self):
+        """ひな形の名前のまま写した枠は、学生のファイルと合わない。"""
+        inner = ('android {\n    namespace = "jp.ac.jec.panda2kotlinemptyviewsactivity"\n'
+                 "<ins>    buildFeatures { viewBinding = false }\n</ins>}\n")
+        errors = self._template_errors(inner)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("当てる場所がありません", errors[0])
+        self.assertIn("Panda2KotlinEmptyViewsActivity/app/build.gradle.kts（名前をA03GithubSearchに置き換えた形）", errors[0])
+
+    # ------------------------------------------------------------------
+    # ファイルや枠が無いとき
+    # ------------------------------------------------------------------
+
+    def test_missing_block_and_files_are_reported(self):
+        """枠のidの書き間違いと、直す前後のファイルの置き忘れを、それぞれ報告する。"""
+        page = self._block("diff-gradle", self.PLUGINS + self.GAP + self.DEPENDENCIES)
+        cases = [
+            ({"ids": ["diff-typo"]}, "docs/x/index.html:1: 差分ブロックがありません: diff-typo"),
+            ({"before": "missing.kts"}, "missing.kts:1: 差分ブロックの、直す前のファイルがありません"),
+            ({"after": "missing.kts"}, "missing.kts:1: 差分ブロックの、直したあとのファイルがありません"),
+            ({"html": "docs/x/missing.html"}, "docs/x/missing.html:1: 差分ブロックを載せる教材ファイルがありません"),
+        ]
+        for change, message in cases:
+            with self.subTest(change=change):
+                diff = {"html": self.HTML, "ids": ["diff-gradle"], "before": "before.kts", "after": "after.kts"}
+                diff.update(change)
+                self.assertEqual(self._errors(page, project=self._project(diffs=[diff])), [message])
+
+    # ------------------------------------------------------------------
+    # 登録もれ（check_diff_registration）
+    # ------------------------------------------------------------------
+
+    def _registration_errors(self, page: str, diffs: list) -> list[str]:
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, self.HTML, page)
+            errors: list[str] = []
+            CHECKER.check_diff_registration(root, {"projects": [self._project(diffs=diffs)]}, errors)
+            return errors
+
+    def test_unregistered_diff_block_is_rejected(self):
+        """登録のない差分ブロックは、当てた結果を誰も確かめていない。"""
+        page = "<p>直す場所</p>\n" + self._block("diff-gradle", self.PLUGINS) + "\n" + self._block("diff-other", self.DEPENDENCIES)
+        diffs = [{"html": self.HTML, "ids": ["diff-gradle"], "before": "before.kts", "after": "after.kts"}]
+        errors = self._registration_errors(page, diffs)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("docs/x/index.html:7", errors[0])
+        self.assertIn("差分ブロックがconfig/teaching-materials.jsonのdiffsにありません: diff-other", errors[0])
+
+    def test_diff_block_without_id_is_rejected(self):
+        """idのない差分ブロックは、登録のしようがない。"""
+        errors = self._registration_errors('<pre class="diff"><code>x\n</code></pre>', [])
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("にidがありません", errors[0])
+
+    def test_plain_code_blocks_need_no_registration(self):
+        """全文のコード枠や比較欄（class="diff" でない <pre>）は、登録を求めない。"""
+        page = '<pre id="code-main" tabindex="0"><code>x\n</code></pre><pre><code>y\n</code></pre>'
+        self.assertEqual(self._registration_errors(page, []), [])
+
+    # ------------------------------------------------------------------
+    # 設定の書き方（check_config）
+    # ------------------------------------------------------------------
+
+    def _config_errors(self, diff: dict, *, template: dict | None = None, **project) -> list[str]:
+        config = {"scan_roots": [], "terms": [], "projects": [self._project(diffs=[diff], **project)]}
+        if template is not None:
+            config["wizard_template"] = template
+        return CHECKER.check_config(config)
+
+    def test_incomplete_diff_setting_is_reported_in_japanese(self):
+        """diffs の書き忘れや書き間違いを、トレースバックではなく日本語のエラーにする。"""
+        complete = {"html": self.HTML, "ids": ["diff-gradle"], "before": "before.kts", "after": "after.kts"}
+        self.assertEqual(self._config_errors(complete), [])
+        for key in ("html", "ids", "after"):
+            with self.subTest(key=key):
+                errors = self._config_errors({name: value for name, value in complete.items() if name != key})
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn(f"のdiffs[0]に{key}がありません", errors[0])
+        for ids in ("diff-gradle", [], [""]):
+            with self.subTest(ids=ids):
+                errors = self._config_errors({**complete, "ids": ids})
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("idsは、<pre>のidを1つ以上並べた配列で書いてください", errors[0])
+
+    def test_diff_needs_exactly_one_before(self):
+        """直す前のファイルは、before か before_template のどちらか1つ。"""
+        base = {"html": self.HTML, "ids": ["diff-gradle"], "after": "after.kts"}
+        for extra in ({}, {"before": "before.kts", "before_template": "app/build.gradle.kts"}):
+            with self.subTest(extra=extra):
+                errors = self._config_errors({**base, **extra}, template=self.TEMPLATE)
+                self.assertEqual(len(errors), 1, errors)
+                self.assertIn("beforeかbefore_templateのどちらか1つを書いてください", errors[0])
+
+    def test_before_template_needs_the_wizard_template(self):
+        """before_template は、ひな形の場所（wizard_template）と、単元の package が要る。"""
+        diff = {"html": self.HTML, "ids": ["diff-gradle"], "before_template": "app/build.gradle.kts", "after": "after.kts"}
+        self.assertEqual(self._config_errors(diff, template=self.TEMPLATE), [])
+        errors = self._config_errors(diff)
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("設定にwizard_templateを書いてください", errors[0])
+        errors = self._config_errors(diff, template={"root": "Panda2KotlinEmptyViewsActivity"})
+        self.assertEqual(len(errors), 2, errors)
+        self.assertIn("wizard_templateにnameがありません", errors[0])
+        self.assertIn("wizard_templateにpackageがありません", errors[1])
+        # 純Kotlin系の単元には package（文字列）がないので、ひな形の名前を置き換えられない。
+        kotlin = self._project(diffs=[diff])
+        del kotlin["package"]
+        errors = CHECKER.check_config({"scan_roots": [], "terms": [], "wizard_template": self.TEMPLATE,
+                                       "projects": [kotlin]})
+        self.assertEqual(len(errors), 1, errors)
+        self.assertIn("before_templateは、packageを持つ単元（android）でだけ使えます", errors[0])
+
+    # ------------------------------------------------------------------
+    # 差分ブロックを作る（--print-diff）
+    # ------------------------------------------------------------------
+
+    def test_generated_block_passes_the_check(self):
+        """--print-diff が作った枠は、そのまま検査を通る。"""
+        before, after = CHECKER.code_lines(self.BEFORE), CHECKER.code_lines(self.AFTER)
+        hunks = CHECKER.diff_hunks_between(before, after, 1)
+        block = CHECKER.render_diff_block(hunks, "diff-gradle")
+        self.assertIn('<pre id="diff-gradle" class="diff" tabindex="0"><code>', block)
+        self.assertIn("<ins>    alias(libs.plugins.kotlinxSerialization)\n</ins>", block)
+        self.assertEqual(self._errors(block), [])
+
+    def test_generated_block_gets_enough_lines_to_fix_the_place(self):
+        """前後1行だけでは場所が決まらないまとまりには、決まるまで行を足す。"""
+        before = ["fun a() {", "    run()", "}", "", "fun b() {", "    run()", "}"]
+        after = ["fun a() {", "    run()", "}", "", "fun b() {", "    run()", "    stop()", "}"]
+        hunks = CHECKER.diff_hunks_between(before, after, 1)
+        # 「    run()」と「}」だけでは a と b のどちらか決まらないので、「fun b() {」まで含める。
+        self.assertEqual(hunks, [[(" ", "fun b() {"), (" ", "    run()"), ("+", "    stop()"), (" ", "}")]])
+        self.assertEqual(CHECKER.apply_diff_hunks(before, hunks), after)
+
+    def test_generated_hunks_close_to_each_other_are_joined(self):
+        """あいだが数行しかないまとまりは、⋮ で省かずに1つにつなげる。"""
+        before = [f"line {number}" for number in range(1, 21)]
+        near = before[:3] + ["added A"] + before[3:8] + ["added B"] + before[8:]
+        self.assertEqual(len(CHECKER.diff_hunks_between(before, near, 1)), 1)
+        far = before[:3] + ["added A"] + before[3:15] + ["added B"] + before[15:]
+        hunks = CHECKER.diff_hunks_between(before, far, 1)
+        self.assertEqual(len(hunks), 2)
+        self.assertEqual(CHECKER.render_diff_block(hunks, "x").count(self.GAP), 1)
+
+    def test_head_lists_only_the_kinds_in_the_block(self):
+        """見出しの凡例には、その枠に出てくる行の種類だけを並べる。"""
+        added = [[(" ", "a"), ("+", "b")]]
+        head = CHECKER.render_diff_head("app/build.gradle.kts", added)
+        self.assertIn("<span>app/build.gradle.kts</span>", head)
+        self.assertIn('<span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span>', head)
+        self.assertNotIn("消す行", head)
+        self.assertIn('<span class="diff-del">消す行</span>',
+                      CHECKER.render_diff_head("x", [[(" ", "a"), ("-", "b"), ("+", "c")]]))
+
+    def test_print_diff_uses_the_registered_files(self):
+        """登録した1件の、直す前後のファイルから枠を作って表示する。登録がなければ知らせる。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, "before.kts", self.BEFORE)
+            self._write(root, "after.kts", self.AFTER)
+            self._write(root, "config/teaching-materials.json", json.dumps(
+                {"scan_roots": [], "terms": [], "projects": [self._project()]}, ensure_ascii=False))
+            output, problems = io.StringIO(), io.StringIO()
+            with contextlib.redirect_stdout(output), contextlib.redirect_stderr(problems):
+                self.assertEqual(CHECKER.print_diff(root, self.HTML, "diff-gradle", 3), 0)
+                self.assertEqual(CHECKER.print_diff(root, self.HTML, "diff-typo", 3), 1)
+            self.assertIn('<div class="code-head diff-head"><span>after.kts</span>', output.getvalue())
+            self.assertIn('<pre id="diff-gradle" class="diff" tabindex="0"><code>plugins {\n', output.getvalue())
+            self.assertIn("diffsに登録がありません: docs/x/index.html の diff-typo", problems.getvalue())
+
+    def test_validate_runs_the_checks(self):
+        """validate() の流れから、当てた結果の検査と登録もれの検査の両方が呼ばれる。"""
+        with tempfile.TemporaryDirectory() as name:
+            root = Path(name)
+            self._write(root, "before.kts", self.BEFORE)
+            self._write(root, "after.kts", self.AFTER)
+            self._write(root, self.HTML, self._block("diff-gradle", self.PLUGINS) + self._block("diff-other", self.DEPENDENCIES))
+            self._write(root, "config/teaching-materials.json", json.dumps(
+                {"scan_roots": [], "terms": [], "projects": [self._project()]}, ensure_ascii=False))
+            errors = CHECKER.validate(root)
+            self.assertTrue(any("diff-gradleをbefore.ktsに当てても、after.ktsと一致しません" in error
+                                for error in errors), errors)
+            self.assertTrue(any("diffsにありません: diff-other" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

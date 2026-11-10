@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         editQuery = findViewById(R.id.edit_query)
         spSort = findViewById(R.id.sp_sort)
         btnSearch = findViewById(R.id.btn_search)
-
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = repositoryAdapter
         repositoryAdapter.submitList(
