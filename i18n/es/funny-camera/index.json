@@ -847,8 +847,8 @@
       "translation": "El Boolean del resultado de guardado cumple la misma función que en Java. En Kotlin, el nombre del tipo se escribe después del nombre de la variable. El texto que aparece en la pantalla cambia según este valor de retorno."
     },
     {
-      "source": "自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。",
-      "translation": "Tu A04 está guardado y puedes comprobar la vista previa, el arrastre y el JPEG guardado."
+      "source": "自分のアプリで、プレビュー・ドラッグ・保存したJPEGを確認できる。",
+      "translation": "En tu propia aplicación, puedes comprobar la vista previa, el arrastre y el JPEG guardado."
     },
     {
       "source": "見えている状態",

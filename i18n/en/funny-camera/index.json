@@ -847,8 +847,8 @@
       "translation": "The Boolean save result plays the same role as in Java. In Kotlin, you write the type name after the variable name. The message shown on the screen changes with this return value."
     },
     {
-      "source": "自分のA04が保存され、プレビュー・ドラッグ・保存したJPEGを確認できる。",
-      "translation": "Your A04 is saved, and you can check the preview, dragging, and the saved JPEG."
+      "source": "自分のアプリで、プレビュー・ドラッグ・保存したJPEGを確認できる。",
+      "translation": "In your own app, you can check the preview, dragging, and the saved JPEG."
     },
     {
       "source": "見えている状態",
