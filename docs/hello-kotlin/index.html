@@ -1374,7 +1374,7 @@ let yamada = Person(name: "Yamada", age: 20)</code></pre></div></div><p>これ�
 <section id="step-20" aria-labelledby="title-20">
 <p class="step-meta">STEP 20 · 4コマ目 · 目安 20分</p>
 <h2 id="title-20">ex05 を作る：if と文字列の比較</h2>
-<h3>① ex05 を作り、2つの条件を書く</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex05</code> と入力します。</li><li>できた <code>ex05</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex05/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。先頭の <code>package ex05</code> が2行にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex05/main.kt · 全文</div><pre id="code-ex05" tabindex="0"><code>package ex05
+<h3>① ex05 を作り、2つの条件を書く</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex05</code> と入力します。</li><li>できた <code>ex05</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex05/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex05/main.kt · 全文</div><pre id="code-ex05" tabindex="0"><code>package ex05
 
 fun main() {
     val flag = true
@@ -1416,7 +1416,7 @@ if "Tanaka" == yamada {
 <section id="step-21" aria-labelledby="title-21">
 <p class="step-meta">STEP 21 · 4コマ目 · 目安 20分</p>
 <h2 id="title-21">ex06 を作る：listOf と for</h2>
-<h3>① ex06 を作り、リストの要素を出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex06</code> と入力します。</li><li>できた <code>ex06</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex06/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。先頭の <code>package ex06</code> が2行にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex06/main.kt · 全文</div><pre id="code-ex06" tabindex="0"><code>package ex06
+<h3>① ex06 を作り、リストの要素を出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex06</code> と入力します。</li><li>できた <code>ex06</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex06/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex06/main.kt · 全文</div><pre id="code-ex06" tabindex="0"><code>package ex06
 
 fun main() {
     val persons = listOf("tanaka", "yamada", "sato")
@@ -1444,7 +1444,7 @@ for person in persons {
 <section id="step-22" aria-labelledby="title-22">
 <p class="step-meta">STEP 22 · 4コマ目 · 目安 30分</p>
 <h2 id="title-22">ex04 を作る：クラスとプライマリコンストラクタ</h2>
-<h3>① ex04 を作り、クラスから値を取り出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex04</code> と入力します。</li><li>できた <code>ex04</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex04/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。先頭の <code>package ex04</code> が2行にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex04/main.kt · 全文</div><pre id="code-ex04" tabindex="0"><code>package ex04
+<h3>① ex04 を作り、クラスから値を取り出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex04</code> と入力します。</li><li>できた <code>ex04</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex04/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex04/main.kt · 全文</div><pre id="code-ex04" tabindex="0"><code>package ex04
 
 fun main() {
     val yamada = Person("Yamada", 20)
@@ -1545,7 +1545,7 @@ yamada.name</code></pre></div></div><div class="note"><p class="box-title">POINT
 <li>左の <code>src</code> に <code>ex01</code>〜<code>ex06</code> があることを確かめます。既存のパッケージは残します。</li>
 <li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex08</code> を作ります。</li>
 <li><code>ex08</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。名前は <code>Foo</code>、種類は <strong>ファイル</strong> を選びます。大文字の <code>F</code> から始めます。</li>
-<li>できた <code>Foo.kt</code> は新しいファイルなので、中身を次の全文にし、<code>fun main()</code> の左の実行ボタンからRunします。</li>
+<li>できた <code>Foo.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。</li>
 </ol>
 <pre id="code-ex08-start" tabindex="0"><code>package ex08
 
@@ -1603,7 +1603,7 @@ public static void main(String[] args) {
     println(foo.counter)
 </ins>}
 </code></pre>
-<details class="fulltext"><summary>照合用：直したあとの <code>Foo.kt</code> の全文</summary>
+<details class="fulltext"><summary>照合用：ここまでの <code>Foo.kt</code> の全文</summary>
 <div class="code-head">src/ex08/Foo.kt · 完成コード</div>
 <pre id="code-ex08" tabindex="0"><code>package ex08
 
@@ -1703,7 +1703,7 @@ getが呼ばれる：　10
 <ol>
 <li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex09</code> を作ります。</li>
 <li><code>ex09</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li>
-<li><code>main.kt</code> は新しいファイルなので、中身を次の全文にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。</li>
+<li><code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。</li>
 <li>このファイルの <code>fun main()</code> の左からRunします。</li>
 </ol>
 <div class="code-head">src/ex09/main.kt · 完成コード</div>
@@ -1870,7 +1870,7 @@ static void showPerson(Object value) {
 
 <div class="goal"><p class="box-title">このステップのゴール</p><p>Swiftの <code>extension</code> と同じ発想で、<code>Int</code> に対して呼べる関数を書き、<code>5.plusTen()</code> で <code>15</code> を出します。</p></div>
 <h3>① ex07/main.kt を作って実行する</h3>
-<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> から <code>ex07</code> を作ります。今日作った <code>ex08</code>・<code>ex09</code> の中には作りません。</li><li><code>ex07</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>新しいファイルなので、中身を次の全文にし、この <code>fun main()</code> の左からRunします。</li></ol>
+<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> から <code>ex07</code> を作ります。今日作った <code>ex08</code>・<code>ex09</code> の中には作りません。</li><li><code>ex07</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。</li></ol>
 <div class="code-head">src/ex07/main.kt · 完成コード</div>
 <pre id="code-ex07" tabindex="0"><code>package ex07
 
@@ -1994,7 +1994,7 @@ print(foo.counter)</code></pre></div>
 <li>左の <code>src</code> に <code>ex01</code>〜<code>ex09</code> があることを確かめます。以前のパッケージは残します。</li>
 <li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex10</code> を作ります。</li>
 <li><code>ex10</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> から名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li>
-<li><code>main.kt</code> は新しいファイルなので、中身を次の全文にし、<code>fun main()</code> の左の実行ボタンからRunします。</li>
+<li><code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。</li>
 </ol>
 <pre id="code-ex10-start" tabindex="0"><code>package ex10
 
@@ -2043,7 +2043,7 @@ public static void main(String[] args) {
 <ins>
 data class Person(val name: String)
 </ins></code></pre>
-<details class="fulltext"><summary>照合用：直したあとの <code>main.kt</code> の全文</summary>
+<details class="fulltext"><summary>照合用：ここまでの <code>main.kt</code> の全文</summary>
 <div class="code-head">src/ex10/main.kt · 完成コード</div>
 <pre id="code-ex10" tabindex="0"><code>package ex10
 
@@ -2130,7 +2130,7 @@ let result2 = list.map { name in Person(name: name) }</code></pre></div>
 
 <div class="goal"><p class="box-title">このステップのゴール</p><p><code>foo.bar</code> を2回読んでも、<code>computed!</code> が1回だけ出ることを確かめます。Swiftの <code>lazy var</code> と初回計算の動きは似ています。Kotlinでは <code>by</code> を使い、プロパティの値を用意する処理を別のオブジェクトへ任せます。</p></div>
 <h3>① ex11/main.kt を作る（8分）</h3>
-<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。</li><li><code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>新しいファイルなので、中身を次の全文にし、この <code>fun main()</code> の左からRunします。</li></ol>
+<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。</li><li><code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。</li></ol>
 <div class="code-head">src/ex11/main.kt · 完成コード</div>
 <pre id="code-ex11" tabindex="0"><code>package ex11
 
