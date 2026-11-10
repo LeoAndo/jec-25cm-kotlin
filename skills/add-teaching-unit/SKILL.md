@@ -13,7 +13,7 @@ description: Add a new Android teaching unit (A01-) to this Kotlin course reposi
 
 1. `K01HelloKotlin/src/exNN/main.kt` を足す（ファイルの先頭に `package exNN`。番号は前年度資料の節に対応させる）。
 2. `config/teaching-materials.json` のK01の `packages`（配列）と `sources` に、その `exNN` を足す。
-3. `docs/hello-kotlin/index.html` にSTEPを足し、サイドバーの `.progress` の `max` と `data-progress-label` の総数を直す。教科書に貼るコードは `snippets` に登録する。
+3. `docs/hello-kotlin/index.html` にSTEPを足し、サイドバーの `.progress` の `max` と `data-progress-label` の総数を直す。教科書に貼るコードは `snippets` に登録する。**前のSTEPで書いたファイルを直すSTEPには全文を載せず、差分ブロックにする**（README「授業用教科書の基本方針」14）。直す前の形を段階コード `teacher/hello-kotlin/code/stepNN-ファイル名.kt` として置き、`diffs` に登録してから `python3 scripts/check-teaching-materials.py --print-diff docs/hello-kotlin/index.html <id> --context 30` で作って貼る。作った直後の `main.kt` は新しいファイルなので、全文を載せて「新しいファイルなので、中身を次の全文にします」と書く（AGENTS.md §9）。
 4. `teacher/hello-kotlin/index.html` の進め方にその回を足し、`teacher/hello-kotlin/code/` に完成コードの複製を置いて `mirrors` に登録する。
 5. 配布ZIPを作り直す。
 

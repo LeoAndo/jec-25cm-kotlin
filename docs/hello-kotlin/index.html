@@ -148,9 +148,9 @@ Tanaka</code></pre>
 <tr><td>ショートカットのボタン</td><td>キーボードショートカットの一覧を出します。</td></tr>
 <tr><td>下の実行結果のウィンドウ</td><td>出力が出る場所です。Runすると自動で開きます。</td></tr>
 </tbody></table>
-<h3>② エディタの中身を置き換えて実行する</h3>
-<p>エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んでから、次のコードを貼り付けます。</p>
-<div class="code-head">Playgroundのエディタ · 全体を置き換える</div>
+<h3>② 見本を消し、3行を入力して実行する</h3>
+<p>エディタには、Playgroundの見本が最初から入っています。この見本は使いません。Playgroundの側で中身が変わることがあり、直す場所を示せないためです。エディタの中をクリックし、<kbd>⌘ A</kbd> で全部選んで消してから、次の全文を入力します。</p>
+<div class="code-head">Playgroundのエディタ · 全文</div>
 <pre id="code-hello" tabindex="0"><code>fun main() {
     println(&quot;Hello, Kotlin!&quot;)
 }</code></pre>
@@ -261,8 +261,9 @@ i = 5
 <div class="note"><p class="box-title">1行目が <code>package ex01</code> になっていないとき</p><p>ファイルが <code>ex01</code> の中ではなく <code>src</code> の直下にできています。<code>main.kt</code> を右クリックして削除し、④からやり直します。<code>ex01</code> を右クリックしたかどうかが分かれ目です。</p></div>
 <p>この単元は全6コマです。回を重ねるごとに、同じ <code>K01HelloKotlin</code> プロジェクトの <code>src</code> の下に、いまと同じ手順で <code>ex02</code>、<code>ex03</code> …とパッケージを足していきます。プロジェクトを作り直さないので、前の回に書いたコードを、いつでも開いて見返せます。</p>
 
-<h3>⑦ ファイル全体を、次の内容にする</h3>
-<div class="code-head">src/ex01/main.kt · 全体を置き換える</div>
+<h3>⑦ main.kt に、println の1行を書く</h3>
+<p><code>main.kt</code> は、いま作った新しいファイルなので、中身を次の全文にします。<code>package ex01</code> と <code>fun main()</code> の行は、⑥で見たとおり IntelliJ IDEA が入れています。自分で入力するのは、<code>{</code> と <code>}</code> のあいだの <code>println</code> の1行です。</p>
+<div class="code-head">src/ex01/main.kt · 全文</div>
 <pre id="code-package" tabindex="0"><code>package ex01
 
 fun main() {
@@ -310,18 +311,21 @@ public class Main {
 <tr><td><code>val</code></td><td>再代入禁止。あとから別の値を入れるとコンパイルエラーになります。</td></tr>
 <tr><td><code>var</code></td><td>再代入可能。あとから別の値を入れられます。</td></tr>
 </tbody></table>
-<h3>① ファイル全体を、次の内容に置き換える</h3>
-<div class="code-head">main.kt · 全体を置き換える</div>
-<pre id="code-valvar" tabindex="0"><code>package ex01
+<h3>① println の行を、変数の宣言と表示に書き換える</h3>
+<p>STEP 02 で書いた <code>main.kt</code> を直します。<code>println(&quot;Hello, Kotlin!&quot;)</code> の行を消し、同じ場所に、変数の宣言と表示の行を足します。</p>
+<p>前のSTEPで書いたファイルを直すときは、このあとも、<strong>直す行に色を付けた枠</strong>で示します。<span class="diff-add">緑の太字の行</span>は足す行、<span class="diff-del">赤い取り消し線の行</span>は消す行です。<span class="diff-keep">薄い字の行</span>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。</p>
+<div class="code-head diff-head"><span>src/ex01/main.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-valvar" class="diff" tabindex="0"><code>package ex01
 
 fun main() {
-    val number1 = 1
-    var name = &quot;Yamada&quot;
-    name = &quot;Tanaka&quot;
+<del>    println("Hello, Kotlin!")
+</del><ins>    val number1 = 1
+    var name = "Yamada"
+    name = "Tanaka"
 
     println(number1)
     println(name)
-}</code></pre>
+</ins>}
+</code></pre>
 <h3>② 実行結果</h3>
 <div class="code-head">Runの結果</div>
 <pre tabindex="0"><code>1
@@ -362,33 +366,31 @@ name = &quot;Tanaka&quot;</code></pre></div>
 <tr><td><code>Double</code></td><td><code>2.0</code></td><td>小数点を書くと、この型になります。既定の浮動小数点型です。</td></tr>
 <tr><td><code>Float</code></td><td><code>3.0f</code></td><td>うしろに <code>f</code> を付けると、この型になります。</td></tr>
 </tbody></table>
-<h3>① 追加する場所を見つける</h3>
-<div class="code-head">場所の目印 · この枠は入力しません</div>
-<pre tabindex="0"><code>    val number1 = 1
-    // ① この位置に、次の2行を追加します。
-    var name = &quot;Yamada&quot;
-    name = &quot;Tanaka&quot;
+<h3>① 値の行と表示の行に、2行ずつ足す</h3>
+<p>STEP 03 で書いた <code>main.kt</code> に、緑の行を足します。足す場所は2か所で、<code>val number1 = 1</code> の下と、<code>println(number1)</code> の下です。薄い字の行は、すでにある行なので入力しません。</p>
+<div class="code-head diff-head"><span>src/ex01/main.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-types" class="diff" tabindex="0"><code>package ex01
+
+fun main() {
+    val number1 = 1
+<ins>    val number2 = 2.0 // Double
+    val number3 = 3.0f // Float
+</ins>    var name = "Yamada"
+    name = "Tanaka"
 
     println(number1)
-    // ② この位置に、次の2行を追加します。
-    println(name)</code></pre>
-<h3>② 値の行に2行追加する</h3>
-<div class="code-head">追加① · val number1 = 1 の下</div>
-<pre id="code-types" tabindex="0"><code>val number2 = 2.0 // Double
-val number3 = 3.0f // Float</code></pre>
-<h3>③ 表示の行に2行追加する</h3>
-<div class="code-head">追加② · println(number1) の下</div>
-<pre id="code-types-print" tabindex="0"><code>println(number2)
-println(number3)</code></pre>
-<p>貼り付けると、IntelliJ IDEA が行頭の字下げをそろえます。ほかの行と頭がそろっていれば大丈夫です。</p>
-<h3>④ 実行結果</h3>
+<ins>    println(number2)
+    println(number3)
+</ins>    println(name)
+}
+</code></pre>
+<h3>② 実行結果</h3>
 <div class="code-head">Runの結果 · この4行が出れば成功</div>
 <pre tabindex="0"><code>1
 2.0
 3.0
 Tanaka</code></pre>
 <p><code>3.0f</code> と書いたのに、出るのは <code>3.0</code> です。<code>f</code> はリテラルの型を決める目印で、値そのものには入っていません。Javaで <code>System.out.println(3.0f)</code> としたときと同じ結果です。</p>
-<h3>⑤ Java / Swift ではどう書くか（型）</h3>
+<h3>③ Java / Swift ではどう書くか（型）</h3>
 <div class="compare">
 <div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>val number1 = 1    // Int
 val number2 = 2.0  // Double
@@ -410,7 +412,7 @@ let number3: Float = 3.0 // Float</code></pre></div>
 <li>小数のリテラルが既定で <code>Double</code> になる点は、KotlinもSwiftも同じです。</li>
 <li>Swiftには <code>3.0f</code> という書き方がありません。Swiftで <code>Float</code> にしたいときは <code>let number3: Float = 3.0</code> のように型注釈で指定します。Kotlinはこの点ではJavaと同じく、接尾辞の <code>f</code> が使えます。</li>
 </ul></div>
-<h3>⑥ Java / Swift ではどう書くか（出力）</h3>
+<h3>④ Java / Swift ではどう書くか（出力）</h3>
 <div class="compare">
 <div class="compare-item" data-lang="Kotlin"><p class="compare-lang" translate="no">Kotlin</p><pre><code>println(number1)
 print(number1)</code></pre></div>
@@ -656,8 +658,9 @@ public class Main {
 </tbody></table>
 <p>型の最後に <code>?</code> を1文字足すかどうかだけで、別の型になります。</p>
 
-<h3>① ファイル全体を、次の内容にする</h3>
-<div class="code-head">src/ex02/main.kt · 全体を置き換える</div>
+<h3>① main.kt の中身を、次の全文にする</h3>
+<p><code>main.kt</code> は、前のSTEPで作った新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</p>
+<div class="code-head">src/ex02/main.kt · 全文</div>
 <pre id="code-nullable" tabindex="0"><code>package ex02
 
 fun main() {
@@ -738,19 +741,20 @@ int length = name1.length();
 </tbody></table>
 <p><strong><code>?.</code> は「<code>null</code> なら呼ばずに <code>null</code> を返す」という意味です。</strong> 呼ぶか呼ばないかの分岐が、記号1つに入っています。</p>
 
-<h3>② ファイル全体を、次の内容にする</h3>
-<div class="code-head">src/ex02/main.kt · 全体を置き換える</div>
-<pre id="code-safe-call" tabindex="0"><code>package ex02
+<h3>② name2 を使う3行を足す</h3>
+<p>STEP 09 で書いた <code>main.kt</code> に、緑の3行を足します。足す場所は、<code>var name2: String? = null</code> の下です。薄い字の行は、すでにある行なので入力しません。</p>
+<div class="code-head diff-head"><span>src/ex02/main.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-safe-call" class="diff" tabindex="0"><code>package ex02
 
 fun main() {
-    val name1: String = &quot;Saito&quot;
+    val name1: String = "Saito"
     println(name1.count())
 
     var name2: String? = null
+<ins>    println(name2?.count())
+    name2 = "Tanaka"
     println(name2?.count())
-    name2 = &quot;Tanaka&quot;
-    println(name2?.count())
-}</code></pre>
+</ins>}
+</code></pre>
 
 <h3>③ 実行結果</h3>
 <div class="code-head">Runの結果 · この3行が出れば成功</div>
@@ -1063,8 +1067,9 @@ func sum(a: Int, b: Int) -&gt; Int {
 <div class="goal"><p class="box-title">このステップのゴール</p><p><code>fun</code> で関数を宣言し、引数を <code>名前: 型</code>、戻り値を末尾の <code>: 型</code> で書きます。<code>return</code> で返した値を <code>main</code> で受け取り、1行目の <code>3</code> を出します。</p></div>
 <p class="file">変更するファイル：src/ex03/main.kt</p>
 
-<h3>① ファイル全体を、次の内容にする</h3>
-<div class="code-head">src/ex03/main.kt · 全体を置き換える</div>
+<h3>① main.kt の中身を、次の全文にする</h3>
+<p><code>main.kt</code> は、前のSTEPで作った新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</p>
+<div class="code-head">src/ex03/main.kt · 全文</div>
 <pre id="code-sum" tabindex="0"><code>package ex03
 
 fun main() {
@@ -1140,23 +1145,24 @@ final int ret = sum(1, 2);</code></pre></div>
 <div class="goal"><p class="box-title">このステップのゴール</p><p>戻り値のない関数を書きます。Kotlinでは、末尾に<strong>何も書きません</strong>。2行目の <code>3</code> を出して、出力を完成させます。</p></div>
 <p class="file">変更するファイル：src/ex03/main.kt</p>
 
-<h3>① ファイル全体を、次の内容にする</h3>
-<div class="code-head">src/ex03/main.kt · 全体を置き換える</div>
-<pre id="code-sum2" tabindex="0"><code>package ex03
+<h3>① sum2 の呼び出しと宣言を足す</h3>
+<p>STEP 15 で書いた <code>main.kt</code> に、緑の行を足します。薄い字の行は、すでにある行なので入力しません。</p>
+<div class="code-head diff-head"><span>src/ex03/main.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-sum2" class="diff" tabindex="0"><code>package ex03
 
 fun main() {
     val ret = sum(1, 2)
     println(ret)
-    sum2(1, 2)
-}
+<ins>    sum2(1, 2)
+</ins>}
 
 fun sum(a: Int, b: Int): Int {
     return a + b
 }
-
+<ins>
 fun sum2(a: Int, b: Int) {
     println(a + b)
-}</code></pre>
+}
+</ins></code></pre>
 <p>足したのは、<code>main</code> の中の <code>sum2(1, 2)</code> の1行と、いちばん下の <code>sum2</code> の宣言です。<strong><code>sum2</code> のかっこのうしろには、何も書きません。</strong> <code>: Int</code> のような型も、記号も付けません。</p>
 
 <h3>② 実行結果</h3>
@@ -1368,7 +1374,7 @@ let yamada = Person(name: "Yamada", age: 20)</code></pre></div></div><p>これ�
 <section id="step-20" aria-labelledby="title-20">
 <p class="step-meta">STEP 20 · 4コマ目 · 目安 20分</p>
 <h2 id="title-20">ex05 を作る：if と文字列の比較</h2>
-<h3>① ex05 を作り、2つの条件を書く</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex05</code> と入力します。</li><li>できた <code>ex05</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex05/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex05</code> が2行にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex05/main.kt · ファイル全体</div><pre id="code-ex05" tabindex="0"><code>package ex05
+<h3>① ex05 を作り、2つの条件を書く</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex05</code> と入力します。</li><li>できた <code>ex05</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex05/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex05/main.kt · 全文</div><pre id="code-ex05" tabindex="0"><code>package ex05
 
 fun main() {
     val flag = true
@@ -1410,7 +1416,7 @@ if "Tanaka" == yamada {
 <section id="step-21" aria-labelledby="title-21">
 <p class="step-meta">STEP 21 · 4コマ目 · 目安 20分</p>
 <h2 id="title-21">ex06 を作る：listOf と for</h2>
-<h3>① ex06 を作り、リストの要素を出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex06</code> と入力します。</li><li>できた <code>ex06</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex06/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex06</code> が2行にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex06/main.kt · ファイル全体</div><pre id="code-ex06" tabindex="0"><code>package ex06
+<h3>① ex06 を作り、リストの要素を出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex06</code> と入力します。</li><li>できた <code>ex06</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex06/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex06/main.kt · 全文</div><pre id="code-ex06" tabindex="0"><code>package ex06
 
 fun main() {
     val persons = listOf("tanaka", "yamada", "sato")
@@ -1438,7 +1444,7 @@ for person in persons {
 <section id="step-22" aria-labelledby="title-22">
 <p class="step-meta">STEP 22 · 4コマ目 · 目安 30分</p>
 <h2 id="title-22">ex04 を作る：クラスとプライマリコンストラクタ</h2>
-<h3>① ex04 を作り、クラスから値を取り出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex04</code> と入力します。</li><li>できた <code>ex04</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex04/main.kt</code> を開き、中身を次の完成コードにします。先頭の <code>package ex04</code> が2行にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex04/main.kt · ファイル全体</div><pre id="code-ex04" tabindex="0"><code>package ex04
+<h3>① ex04 を作り、クラスから値を取り出す</h3><ol><li>左の<strong>プロジェクト</strong>ツールウィンドウで <code>src</code> を右クリックし、<strong>新規 → パッケージ</strong>を選び、<code>ex04</code> と入力します。</li><li>できた <code>ex04</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong>を選びます。名前は <code>main</code>、種類は<strong>ファイル</strong>にします。</li><li><code>src/ex04/main.kt</code> を開きます。新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。</li><li>このファイルの <code>fun main()</code> の左にある ▷ から実行します。前の演習の実行ボタンと取り違えないでください。</li></ol><div class="code-head">src/ex04/main.kt · 全文</div><pre id="code-ex04" tabindex="0"><code>package ex04
 
 fun main() {
     val yamada = Person("Yamada", 20)
@@ -1539,9 +1545,9 @@ yamada.name</code></pre></div></div><div class="note"><p class="box-title">POINT
 <li>左の <code>src</code> に <code>ex01</code>〜<code>ex06</code> があることを確かめます。既存のパッケージは残します。</li>
 <li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex08</code> を作ります。</li>
 <li><code>ex08</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> を選びます。名前は <code>Foo</code>、種類は <strong>ファイル</strong> を選びます。大文字の <code>F</code> から始めます。</li>
-<li>できた <code>Foo.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。</li>
+<li>できた <code>Foo.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。</li>
 </ol>
-<pre tabindex="0"><code>package ex08
+<pre id="code-ex08-start" tabindex="0"><code>package ex08
 
 fun main() {
     println("ex08")
@@ -1570,8 +1576,34 @@ public static void main(String[] args) {
 <h2 id="title-26">アクセサを自分で書く（ex08）</h2>
 
 <div class="goal"><p class="box-title">このステップのゴール</p><p><code>foo.counter</code> に代入したときと、読んだときに別の処理が走ることを、コンソールの6行で確かめます。Javaのgetter / setter、Swiftのcomputed propertyに対応する書き方です。</p></div>
-<h3>① Foo.kt 全体を次の内容にする</h3>
-<p><code>src/ex08/Foo.kt</code> を開き、先ほどの <code>println("ex08")</code> を含めて、ファイル全体を置き換えます。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。</p>
+<h3>① Foo.kt に、クラスと main の中身を書く</h3>
+<p><code>src/ex08/Foo.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println("ex08")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。<code>class Foo</code> と <code>fun main()</code> は、どちらもファイルの直下に置きます。</p>
+<div class="code-head diff-head"><span>src/ex08/Foo.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-ex08" class="diff" tabindex="0"><code>package ex08
+
+<ins>class Foo {
+    var counter = 0
+        set(value) {
+            println("setが呼ばれる： $value")
+            if (value &gt;= 0) {
+                field = value
+            }
+        }
+        get() {
+            println("getが呼ばれる：　$field")
+            return field
+        }
+}
+
+</ins>fun main() {
+<del>    println("ex08")
+</del><ins>    val foo = Foo()
+    foo.counter = -1
+    println(foo.counter)
+    foo.counter = 10
+    println(foo.counter)
+</ins>}
+</code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>Foo.kt</code> の全文</summary>
 <div class="code-head">src/ex08/Foo.kt · 完成コード</div>
 <pre id="code-ex08" tabindex="0"><code>package ex08
 
@@ -1596,6 +1628,7 @@ fun main() {
     foo.counter = 10
     println(foo.counter)
 }</code></pre>
+</details>
 <p><code>fun main()</code> の左からRunします。<code>val foo</code> でも <code>foo.counter</code> に代入できる点に注目してください。固定しているのは <code>foo</code> が参照するオブジェクトで、<code>counter</code> は <code>var</code> です。</p>
 <h3>② 実行結果</h3>
 <pre tabindex="0"><code>setが呼ばれる： -1
@@ -1670,7 +1703,7 @@ getが呼ばれる：　10
 <ol>
 <li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex09</code> を作ります。</li>
 <li><code>ex09</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li>
-<li><code>main.kt</code> 全体を次の内容にします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。</li>
+<li><code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。末尾の <code>Person</code> と <code>Person2</code> は <code>main</code> の閉じかっこの<strong>外</strong>です。</li>
 <li>このファイルの <code>fun main()</code> の左からRunします。</li>
 </ol>
 <div class="code-head">src/ex09/main.kt · 完成コード</div>
@@ -1837,7 +1870,7 @@ static void showPerson(Object value) {
 
 <div class="goal"><p class="box-title">このステップのゴール</p><p>Swiftの <code>extension</code> と同じ発想で、<code>Int</code> に対して呼べる関数を書き、<code>5.plusTen()</code> で <code>15</code> を出します。</p></div>
 <h3>① ex07/main.kt を作って実行する</h3>
-<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> から <code>ex07</code> を作ります。今日作った <code>ex08</code>・<code>ex09</code> の中には作りません。</li><li><code>ex07</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。</li></ol>
+<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> から <code>ex07</code> を作ります。今日作った <code>ex08</code>・<code>ex09</code> の中には作りません。</li><li><code>ex07</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。</li></ol>
 <div class="code-head">src/ex07/main.kt · 完成コード</div>
 <pre id="code-ex07" tabindex="0"><code>package ex07
 
@@ -1961,9 +1994,9 @@ print(foo.counter)</code></pre></div>
 <li>左の <code>src</code> に <code>ex01</code>〜<code>ex09</code> があることを確かめます。以前のパッケージは残します。</li>
 <li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex10</code> を作ります。</li>
 <li><code>ex10</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> から名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li>
-<li><code>main.kt</code> 全体を次の内容にし、<code>fun main()</code> の左の実行ボタンからRunします。</li>
+<li><code>main.kt</code> は新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、<code>fun main()</code> の左の実行ボタンからRunします。</li>
 </ol>
-<pre tabindex="0"><code>package ex10
+<pre id="code-ex10-start" tabindex="0"><code>package ex10
 
 fun main() {
     println("ex10")
@@ -1992,8 +2025,25 @@ public static void main(String[] args) {
 <h2 id="title-32">map でリストの要素を変換する（ex10）</h2>
 
 <div class="goal"><p class="box-title">このステップのゴール</p><p>同じ名前のリストから、<code>San</code> を付けた文字列のリストと、<code>Person</code> のリストを作ります。JavaのStream APIの <code>map</code>、Swiftの配列の <code>map</code> に対応する書き方です。</p></div>
-<h3>① main.kt 全体を次の内容にする（10分）</h3>
-<p><code>src/ex10/main.kt</code> を開き、先ほどの <code>println("ex10")</code> を含めて全体を置き換えます。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。</p>
+<h3>① main.kt に、2つの map を書く（10分）</h3>
+<p><code>src/ex10/main.kt</code> を開き、次の枠のとおりに直します。先ほどの <code>println("ex10")</code> は、動くことを確かめるための仮の行なので消します。緑の行を足し、赤い行を消します。薄い字の行は、すでにある行なので入力しません。最後の <code>data class Person(...)</code> は、<code>main</code> の閉じかっこの外です。</p>
+<div class="code-head diff-head"><span>src/ex10/main.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-ex10" class="diff" tabindex="0"><code>package ex10
+
+<ins>// map関数のサンプル
+</ins>fun main() {
+<del>    println("ex10")
+</del><ins>    val list = listOf("Yamada", "Tanaka")
+
+    val result: List&lt;String&gt; = list.map { "$it San" }
+    println(result)
+
+    val result2: List&lt;Person&gt; = list.map { name -&gt; Person(name) }
+    println(result2)
+</ins>}
+<ins>
+data class Person(val name: String)
+</ins></code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>main.kt</code> の全文</summary>
 <div class="code-head">src/ex10/main.kt · 完成コード</div>
 <pre id="code-ex10" tabindex="0"><code>package ex10
 
@@ -2009,6 +2059,7 @@ fun main() {
 }
 
 data class Person(val name: String)</code></pre>
+</details>
 <p>このファイルの <code>fun main()</code> の左からRunします。</p>
 <h3>② 実行結果</h3>
 <pre tabindex="0"><code>[Yamada San, Tanaka San]
@@ -2079,7 +2130,7 @@ let result2 = list.map { name in Person(name: name) }</code></pre></div>
 
 <div class="goal"><p class="box-title">このステップのゴール</p><p><code>foo.bar</code> を2回読んでも、<code>computed!</code> が1回だけ出ることを確かめます。Swiftの <code>lazy var</code> と初回計算の動きは似ています。Kotlinでは <code>by</code> を使い、プロパティの値を用意する処理を別のオブジェクトへ任せます。</p></div>
 <h3>① ex11/main.kt を作る（8分）</h3>
-<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。</li><li><code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>ファイル全体を次の内容にし、この <code>fun main()</code> の左からRunします。</li></ol>
+<ol><li><code>src</code> を右クリックし、<strong>新規 → パッケージ</strong> で <code>ex11</code> を作ります。</li><li><code>ex11</code> を右クリックし、<strong>新規 → Kotlin ファイル/クラス</strong> で名前を <code>main</code>、種類を <strong>ファイル</strong> にします。</li><li>新しいファイルなので、中身を次の全文にします。IntelliJ IDEA が入れた行は消さずに使い、足りない行を書き足します。同じ行が2回にならないようにします。書けたら、この <code>fun main()</code> の左からRunします。</li></ol>
 <div class="code-head">src/ex11/main.kt · 完成コード</div>
 <pre id="code-ex11" tabindex="0"><code>package ex11
 
@@ -2165,14 +2216,15 @@ print(foo.bar)</code></pre></div>
 <h3>④ bar を読まなければ計算しない（4分）</h3>
 <ol><li><code>main</code> の2つの <code>println(foo.bar)</code> をいったん消し、代わりに <code>println(foo.counter)</code> を1行書きます。</li><li>Runすると <code>5.0</code> だけが出て、<code>computed!</code> は出ません。オブジェクトを作っても、<code>bar</code> を読まなければその計算は始まらないことを確かめます。</li><li><code>println(foo.counter)</code> を消し、元の <code>println(foo.bar)</code> 2行へ戻します。</li></ol>
 <h3>⑤ 初回の前後で counter を変える（8分）</h3>
-<p><code>class Foo</code> はそのままにして、<code>main</code> だけ次の形へ置き換えます。</p>
-<pre tabindex="0"><code>fun main() {
+<p><code>class Foo</code> はそのままにして、<code>main</code> に緑の2行を一時的に足します。薄い字の行は、すでにある行なので入力しません。</p>
+<div class="code-head diff-head"><span>src/ex11/main.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-ex11-counter" class="diff" tabindex="0"><code>fun main() {
     val foo = Foo()
-    foo.counter = 10.0
-    println(foo.bar)
-    foo.counter = 20.0
-    println(foo.bar)
-}</code></pre>
+<ins>    foo.counter = 10.0
+</ins>    println(foo.bar)
+<ins>    foo.counter = 20.0
+</ins>    println(foo.bar)
+}
+</code></pre>
 <p>Runすると、次の3行が出ます。</p>
 <pre tabindex="0"><code>computed!
 11.0
