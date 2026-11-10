@@ -86,9 +86,9 @@ description: Review teaching materials against Kotlin console and Android projec
   grep -nE '言える|言えた|言えれば|説明できた|説明できれば|気づいたことを1つメモ' docs/hello-kotlin/index.html teacher/hello-kotlin/index.html
   ```
 - **教科書（`docs/`）、`はじめに.txt`、リリースノートが、完成プロジェクト（`samples/` や完成版ZIP）の開き方・置き場所を案内していないかを見る。** 案内があれば**対応が必要**な指摘とする（README「授業用教科書の基本方針」13）。「完成プロジェクト」「samples」の語とZIPへのリンクは `check-teaching-materials.py` が落とすので、「先生が作った見本」「答え合わせ用」のような言い換えを見る。教員用ガイド（`teacher/`）は完成プロジェクトに触れてよいが、学生を教科書から案内している前提で書いていないかを見る。
-- **Android系（`A01`〜）の教科書が、すでにあるファイルを直すSTEPで、全文を載せて「全文置換」「全体を置き換える」と指示していないかを見る。** 指示していれば**対応が必要**な指摘とする（README「授業用教科書の基本方針」14）。直し方は、足す行（`<ins>`）・消す行（`<del>`）・すでにある行だけを載せた差分ブロックにすること。新しく作るファイル、レイアウトXML、折りたたんだ照合用の全文（`<details class="fulltext">`）は例外なので指摘しない。足す行・消す行そのものの食い違いは `check-teaching-materials.py` が落とすので、見るのは、差分ブロックを初めて使うSTEPに読み方の説明があるか、段階コードや完成プロジェクトの設定ファイルに、学生が打つ必要のない並べ替えが混ざっていないか。
+- **教科書（純Kotlin系の `K01` と、Android系の `A01`〜）が、すでにあるファイルを直すSTEPで、全文を載せて「全文置換」「全体を置き換える」「ファイル全体を、次の内容にする」と指示していないかを見る。** 指示していれば**対応が必要**な指摘とする（README「授業用教科書の基本方針」14）。直し方は、足す行（`<ins>`）・消す行（`<del>`）・すでにある行だけを載せた差分ブロックにすること。新しく作るファイル（K01 の、作った直後の `main.kt`・`Foo.kt` を含む）、K01 の Kotlin Playground（STEP 01）、レイアウトXML、折りたたんだ照合用の全文（`<details class="fulltext">`）は例外なので指摘しない。K01 の差分ブロックは、変えない行を `⋮` で省かずにファイル全体を載せる。これも指摘しない。足す行・消す行そのものの食い違いは `check-teaching-materials.py` が落とすので、見るのは、差分ブロックを初めて使うSTEPに読み方の説明があるか、段階コードや完成プロジェクトの設定ファイルに、学生が打つ必要のない並べ替えが混ざっていないか。
   ```sh
-  grep -n '全文置換\|全文を置き換\|全体を置き換\|全文を次で置き換' docs/hello-android/index.html docs/calc-game/index.html docs/github-search/index.html docs/funny-camera/index.html
+  grep -n '全文置換\|全文を置き換\|全体を置き換\|全文を次で置き換\|ファイル全体を\|全体を次の内容' docs/hello-kotlin/index.html docs/hello-android/index.html docs/calc-game/index.html docs/github-search/index.html docs/funny-camera/index.html
   ```
 - 初学者向けのコード構成を変えるだけの改善は、教材の学習目標と変更範囲を比較して判断する（上の「完成コードの判断基準」10）。
 - 自動レビューの指摘はそのまま実行せず、必ず現在のソースと検査結果で再確認する。
