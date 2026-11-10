@@ -527,6 +527,7 @@ Xcode と macOS の欄も聞いていますが、この授業では使いませ�
     **差分ブロックは、当てた結果を検査します。** `config/teaching-materials.json` の `diffs` に、枠の `id`・直す前のファイル・直したあとのファイルを登録します。`scripts/check-teaching-materials.py` が、直す前のファイルに枠を上から順に当てると直したあとのファイルと1文字も違わないこと、すでにある行の並びで当てる場所が1つに決まることを確かめます。登録のない差分ブロックがあっても落とします。直す前のファイルは、前のSTEPの段階コード（`teacher/<スラッグ>/code/`）か、ウィザードが作った直後の形です。後者は、`Panda2KotlinEmptyViewsActivity` の同じ場所のファイルを読み、パッケージ名とプロジェクト名だけをその単元のものに置き換えて作ります（`config` の `wizard_template`）。そのため、Android系の完成プロジェクトの設定ファイル（`libs.versions.toml`・`build.gradle.kts`・`AndroidManifest.xml`）は、「ひな形＋足した行」の形に保ちます。並びを変えたり、使っていない行を消したりすると、学生が打つ必要のない行が差分に出ます。枠のHTMLは手で書かず、登録してから `python3 scripts/check-teaching-materials.py --print-diff docs/<スラッグ>/index.html <id>` で作ります。
 
     いまこの形になっているのは、Android系（A01〜A04）の教科書です。純Kotlin系（K01）の「ファイル全体を、次の内容にする」は、[#271](https://github.com/LeoAndo/jec-25cm-kotlin/issues/271) で同じ方針に直します。
+15. **ファイルを保存する操作は案内しません。** IntelliJ IDEA も Android Studio も、編集した内容を自動でファイルに保存します。`File → Save All` を押させる手順や、「〜が保存されている」という確認欄は書きません（オーナーの指摘、2026-11-10。[#273](https://github.com/LeoAndo/jec-25cm-kotlin/issues/273)）。手で保存する前提で書くと、要らない操作が増え、確認欄にも、学生が画面で確かめられない項目が入ります。確認欄には、Projectツールウィンドウに並ぶファイルや、Runしたときの表示のように、画面で確かめられることを書きます。代わりに、各単元で1回、最初のコマの終わりに「書いた内容は自動で保存される」ことを書きます（本文からほかの単元へ送らないので、単元ごとに書きます）。アプリの機能としての保存（A04 の画像の保存など）は、この対象ではありません。
 
 # 単元の範囲の決め方（全単元共通）
 
