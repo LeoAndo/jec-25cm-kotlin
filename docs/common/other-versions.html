@@ -16,7 +16,7 @@
 <table><thead><tr><th>使っている版</th><th>進め方</th></tr></thead><tbody>
 <tr><td>Panda 2 / 2025.3.2</td><td>授業の基準です。教科書の手順どおり進めます。作成日でライブラリの版が変わるため、A01のSTEP 01にある設定の照合も行います。</td></tr>
 <tr><td>Quail 4 / 2026.1.4</td><td>このページのA01の読み替えに従います。下の表と設定が一致し、同期・Runが通る範囲で進めます。表にない違いやエラーは先生に見せます。</td></tr>
-<tr><td>Panda 3 / 2025.3.3</td><td><strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01の設定全文を置き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。</td></tr>
+<tr><td>Panda 3 / 2025.3.3</td><td><strong>実測していません。</strong>Panda 2の手順を出発点にしますが、同じように動くと確認済みではありません。A01のSTEP 00で版を先生に見せ、STEP 01で版の数字を書き換える前に確認します。画面や生成設定が違ったら、そのまま先生に見せます。</td></tr>
 <tr><td>上記以外・版が分からない</td><td>新規作成や設定の変更を始める前に先生へ相談します。この資料で動作を確認した範囲には含みません。</td></tr>
 </tbody></table>
 <p>授業ではmacOSを使います。見た目や項目の位置だけの違いは、次の表の選択内容で合わせます。必要な項目が見つからない、同期が赤い、Runできない場合は、設定を次々と変更せず先生と確認します。基準のPanda 2へ切り替えるかも、その場で決めます。</p>
@@ -40,7 +40,7 @@
 <p>対象は <code>A01HelloAndroid</code> のSTEP 00〜13です。先生に版を見せたあと、次の表を手元に置いて進めます。</p>
 <table><thead><tr><th>教科書の場所</th><th>Quail 4で行うこと</th></tr></thead><tbody>
 <tr><td>STEP 01：New Project</td><td>上の6項目で自分のプロジェクトを作ります。画面の順序が違っても、Empty Views Activity・Kotlin・API 31・Kotlin DSLを合わせます。</td></tr>
-<tr><td>STEP 01：libs.versions.toml全文の置き換え</td><td><strong>この置き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に置き換えた場合は先生に見せます。</td></tr>
+<tr><td>STEP 01：libs.versions.toml の数字の書き換え</td><td><strong>この書き換えは行いません。</strong>Quail 4が作った <code>gradle/libs.versions.toml</code> とビルド設定をセットで保ち、次の差分表と照合します。Panda 2のAGP 9.1.1だけを入れると、Quail 4の <code>optimization</code> の書き方と合いません。既に書き換えた場合は先生に見せます。</td></tr>
 <tr><td>STEP 02〜03：端末・初回Run</td><td>指定AVDを選び、生成直後の <code>Hello World!</code> を確かめます。SDKやJDKのダウンロード中は進行表示を確認します。</td></tr>
 <tr><td>STEP 04：activity_main.xml</td><td>教科書のXML全文を使います。<code>main</code>・<code>text</code>・<code>button</code>・<code>btn1</code>・<code>btn2</code> のidを変えません。</td></tr>
 <tr><td>STEP 05〜10：Kotlinの処理を追加</td><td>教科書と同じコードを入力します。生成された余白処理は残し、<code>onCreate</code> の中へ追加します。文字変更・Snackbar・Toast・Logcatの確認結果は同じです。</td></tr>

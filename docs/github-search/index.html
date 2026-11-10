@@ -36,8 +36,92 @@ protected void onCreate(Bundle savedInstanceState) {
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-01"><span>自分の保存先にA03GithubSearchがあり、パッケージ名がjp.ac.jec.a03githubsearchになっている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-2"><p class="step-meta">STEP 02 · 11コマ目 · 目安 20分</p><h2>通信と一覧に使う設定をそろえる</h2>
-<p>Panda 2でも作成日によってライブラリの版が変わります。次の<strong>3つの設定ファイルを全文置換してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。別の版で生成した構成に、AGP番号だけを下げて適用しないでください。</p>
+<p>通信と一覧に使うライブラリを、次の<strong>3つの設定ファイルに書き足してから</strong>同期します。<code>build.gradle.kts</code> は2か所にあるので、パスを確認します。</p>
+<p>このあとの枠には、ファイルの<strong>直す場所だけ</strong>を載せます。<span class="diff-add">緑の太字の行</span>は足す行、<span class="diff-del">赤い取り消し線の行</span>は消す行です。<span class="diff-keep">薄い字の行</span>は、すでにファイルにある行で、入力しません。直す場所を探す目印にします。<code>⋮</code> は、あいだの変えない行を省いた印です。</p>
 <p>最初は <code>gradle/libs.versions.toml</code>。Ktorは通信、serializationはJSON変換、RecyclerViewとCardViewは一覧、lifecycleは画面に結び付いた通信開始に使います。</p>
+<p><code>[versions]</code> は、薄い字の行の数字も自分のファイルと見比べます。Panda 2でも、作成日によってライブラリの版が変わるためです。数字が違う行は、ここの数字に書き換えます。Panda 2以外で作ったプロジェクトでは、書き換える前に先生に見せます。<code>agp</code> の数字だけを下げると、ほかの設定と合わなくなります。</p>
+<div class="code-head diff-head"><span>gradle/libs.versions.toml</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-libs" class="diff" tabindex="0"><code>[versions]
+agp = "9.1.1"
+<ins>kotlin = "2.4.20"
+</ins>coreKtx = "1.17.0"
+junit = "4.13.2"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+appcompat = "1.8.0"
+material = "1.14.0"
+activity = "1.13.0"
+constraintlayout = "2.2.2"
+<ins>recyclerview = "1.4.0"
+cardview = "1.0.0"
+lifecycle = "2.9.4"
+ktor = "3.2.3"
+</ins><span class="diff-gap">⋮
+</span>androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+<ins>androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+</ins>
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+<ins>kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+</ins></code></pre>
+<p>次はプロジェクト直下の <code>build.gradle.kts</code>。</p>
+<div class="code-head diff-head"><span>build.gradle.kts</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-root-gradle" class="diff" tabindex="0"><code>// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+<ins>    alias(libs.plugins.kotlinxSerialization) apply false
+</ins>}
+</code></pre>
+<p>次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。</p>
+<div class="code-head diff-head"><span>app/build.gradle.kts</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-app-gradle" class="diff" tabindex="0"><code>plugins {
+    alias(libs.plugins.android.application)
+<ins>    alias(libs.plugins.kotlinxSerialization)
+</ins>}
+<span class="diff-gap">⋮
+</span>dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+<ins>    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+</ins>    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+<ins>
+    // Kotlin Multiplatformのアプリ用テンプレートプロジェクトのktor依存関係を参考にした
+    // https://github.com/Kotlin/KMP-App-Template/blob/main/composeApp/build.gradle.kts#L52-L54
+    // https://github.com/Kotlin/KMP-App-Template/blob/main/composeApp/build.gradle.kts#L35
+    implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+</ins>}
+</code></pre>
+<p><strong>Sync Now</strong>、出なければ <strong>File → Sync Project with Gradle Files</strong> を選び、赤いエラーが消えるまで待ちます。AGP 9.1.1はKotlinのビルド機能を内蔵しているので、別の <code>org.jetbrains.kotlin.android</code> は足しません。カタログの <code>kotlin</code> はここではserializationプラグインの版です。</p>
+<p>続けて <code>app/src/main/AndroidManifest.xml</code> を直します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。<code>android:exported="true"</code> の行は、末尾の <code>&gt;</code> を次の行へ移すので、消す行と足す行の両方に出ます。通信のための実行時の許可ダイアログは出ません。</p>
+<div class="code-head diff-head"><span>app/src/main/AndroidManifest.xml</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-manifest" class="diff" tabindex="0"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"&gt;
+<ins>
+    &lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+</ins>
+    &lt;application
+<span class="diff-gap">⋮
+</span>        &lt;activity
+            android:name=".MainActivity"
+<del>            android:exported="true"&gt;
+</del><ins>            android:exported="true"
+            android:windowSoftInputMode="adjustResize"&gt;
+</ins>            &lt;intent-filter&gt;
+</code></pre>
+<details class="fulltext"><summary>照合用：直したあとの4つのファイルの全文</summary>
 <div class="code-head">libs.versions.toml · 全文</div><pre id="code-libs" tabindex="0"><code>[versions]
 agp = &quot;9.1.1&quot;
 kotlin = &quot;2.4.20&quot;
@@ -74,13 +158,11 @@ ktor-serialization-kotlinx-json = { module = &quot;io.ktor:ktor-serialization-ko
 [plugins]
 android-application = { id = &quot;com.android.application&quot;, version.ref = &quot;agp&quot; }
 kotlinxSerialization = { id = &quot;org.jetbrains.kotlin.plugin.serialization&quot;, version.ref = &quot;kotlin&quot; }</code></pre>
-<p>次はプロジェクト直下の <code>build.gradle.kts</code>。</p>
 <div class="code-head">build.gradle.kts · 全文</div><pre id="code-root-gradle" tabindex="0"><code>// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlinxSerialization) apply false
 }</code></pre>
-<p>次は <code>app/build.gradle.kts</code>。ここでserializationプラグインと使うライブラリを有効にします。</p>
 <div class="code-head">build.gradle.kts · 全文</div><pre id="code-app-gradle" tabindex="0"><code>plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlinxSerialization)
@@ -120,17 +202,17 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.activity)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.material)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
     // Kotlin Multiplatformのアプリ用テンプレートプロジェクトのktor依存関係を参考にした
     // https://github.com/Kotlin/KMP-App-Template/blob/main/composeApp/build.gradle.kts#L52-L54
@@ -140,8 +222,6 @@ dependencies {
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
 }</code></pre>
-<p><strong>Sync Now</strong>、出なければ <strong>File → Sync Project with Gradle Files</strong> を選び、赤いエラーが消えるまで待ちます。AGP 9.1.1はKotlinのビルド機能を内蔵しているので、別の <code>org.jetbrains.kotlin.android</code> は足しません。カタログの <code>kotlin</code> はここではserializationプラグインの版です。</p>
-<p>続けて <code>app/src/main/AndroidManifest.xml</code> を全文置換します。<code>INTERNET</code> は <code>application</code> の外側、<code>windowSoftInputMode</code> は <code>activity</code> の属性です。通信のための実行時の許可ダイアログは出ません。</p>
 <div class="code-head">AndroidManifest.xml · 全文</div><pre id="code-manifest" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;
@@ -170,6 +250,7 @@ dependencies {
     &lt;/application&gt;
 
 &lt;/manifest&gt;</code></pre>
+</details>
 <h3>Java／Swiftとの比較</h3><div class="compare"><div class="compare-item"><p class="compare-lang" translate="no">Kotlin</p><pre tabindex="0"><code>@Serializable
 data class Owner(val login: String)</code></pre>
 </div><div class="compare-item"><p class="compare-lang" translate="no">Swift</p><pre tabindex="0"><code>struct Owner: Codable {
@@ -180,7 +261,7 @@ data class Owner(val login: String)</code></pre>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-02"><span>3つの設定とManifestが保存され、Gradle同期の赤いエラーが消えている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-3"><p class="step-meta">STEP 03 · 11コマ目 · 目安 20分</p><h2>検索画面をXMLで作る</h2>
-<ol><li><strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使います。</li><li>なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong>。先生指定のAPI 31以上のイメージで作成し、このAVD名にします。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code>。候補がなければ先生に画面を見せます。</li><li>実行設定 <strong>app</strong> と指定AVDで <strong>Run ▶</strong>。まず <code>Hello World!</code> を確認します。</li><li><code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> で全文を置き換えます。</li></ol><div class="code-head">activity_main.xml · 全文</div><pre id="code-layout" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<ol><li><strong>Tools → Device Manager</strong> で <code>jec_25cm_kotlin_Pixel 9a</code> を起動します。既にある端末を使います。</li><li>なければ <strong>＋ → Create Virtual Device</strong>（または <strong>Create Device</strong>）から <strong>Phone → Pixel 9a</strong>。先生指定のAPI 31以上のイメージで作成し、このAVD名にします。Apple Siliconは <code>arm64-v8a</code>、Intel Macは <code>x86_64</code>。候補がなければ先生に画面を見せます。</li><li>実行設定 <strong>app</strong> と指定AVDで <strong>Run ▶</strong>。まず <code>Hello World!</code> を確認します。</li><li><code>app/src/main/res/layout/activity_main.xml</code> を開き、右上の <strong>Code</strong> に切り替えます。生成された <code>Hello World!</code> の画面は使わないので、中身を次の全文に入れ替えます。</li></ol><div class="code-head">activity_main.xml · 全文</div><pre id="code-layout" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
     android:id=&quot;@+id/main&quot;
@@ -249,7 +330,75 @@ data class Owner(val login: String)</code></pre>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-03"><span>指定AVDに入力欄・ソート順・検索ボタンが出て、一覧と通信中の印は出ていない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-4"><p class="step-meta">STEP 04 · 11コマ目 · 目安 27分</p><h2>入力とSpinnerをKotlinにつなぐ</h2>
-<p>パッケージ内の <code>MainActivity.kt</code> を、次の<strong>11コマ目の途中コード</strong>で全文置換します。importも含めます。後で検索へつなぐ前に、入力と選択肢を確認します。</p>
+<p>パッケージ内の <code>MainActivity.kt</code> を開き、緑の行を足して<strong>11コマ目の途中コード</strong>にします。importにも足す行があります。薄い字の行は、プロジェクトを作ったときからある行です。後で検索へつなぐ前に、入力と選択肢を確認します。</p>
+<div class="code-head diff-head"><span>MainActivity.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-stage-04" class="diff" tabindex="0"><code>package jp.ac.jec.a03githubsearch
+
+import android.os.Bundle
+<ins>import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.Spinner
+import android.widget.Toast
+</ins>import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+<ins>import com.google.android.material.textfield.TextInputEditText
+</ins>
+class MainActivity : AppCompatActivity() {
+<ins>    private lateinit var editQuery: TextInputEditText
+    private lateinit var spSort: Spinner
+    private lateinit var btnSearch: Button
+
+</ins>    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets -&gt;
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+<ins>
+        editQuery = findViewById(R.id.edit_query)
+        spSort = findViewById(R.id.sp_sort)
+        btnSearch = findViewById(R.id.btn_search)
+
+        spSort.adapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_spinner_item,
+            SORT_ITEMS.map { it.first },
+        ).apply {
+            setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        }
+
+        btnSearch.setOnClickListener { search() }
+    }
+
+    private fun search() {
+        val query = editQuery.text?.toString()?.trim().orEmpty()
+        if (query.isEmpty()) {
+            showMessage("検索ワードを入力してください")
+            return
+        }
+        showMessage("入力: $query")
+    }
+
+    private fun showMessage(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    companion object {
+        /** Spinnerに表示するラベルと、APIのsortパラメータの組。空文字はベストマッチ順を表す */
+        private val SORT_ITEMS = listOf(
+            "ベストマッチ" to "",
+            "スター数" to "stars",
+            "フォーク数" to "forks",
+            "更新日時" to "updated",
+        )
+</ins>    }
+}
+</code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>MainActivity.kt</code> の全文</summary>
 <div class="code-head">04-MainActivity.kt · 全文</div><pre id="code-stage-04" tabindex="0"><code>package jp.ac.jec.a03githubsearch
 
 import android.os.Bundle
@@ -317,6 +466,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 </code></pre>
+</details>
 <table><thead><tr><th>場所</th><th>画面とのつながり</th></tr></thead><tbody><tr><td><code>lateinit var</code></td><td>Javaで後から代入するフィールドに対応。findViewByIdで代入してから読む。</td></tr><tr><td><code>SORT_ITEMS</code></td><td>左が表示文字、右が後でAPIへ送る値。<code>to</code> でPairを作る。</td></tr><tr><td><code>map { it.first }</code></td><td>表示文字だけのリストを作る。<code>it</code> は各Pair。</td></tr><tr><td><code>apply { … }</code></td><td>生成したArrayAdapterを設定して、その同じオブジェクトを返す。</td></tr><tr><td><code>trim().orEmpty()</code></td><td>前後の空白を除き、nullなら空文字にする。</td></tr><tr><td><code>search()</code></td><td>空なら案内、入力があればその文字をToastに出す。まだ通信しない。</td></tr></tbody></table>
 <p>RunしてSpinnerを開き、4つの選択肢を確認します。入力欄に <code>kotlin</code> を入れ、必要なら端末の戻る操作でキーボードを閉じて検索を押します。「入力: kotlin」が短く出ます。入力を消すと「検索ワードを入力してください」です。</p>
 <figure><img src="images/initial.png" alt="完成版の起動画面。11コマ目も選択肢を作ると同じ形になる" width="270" height="606" loading="lazy"><figcaption>完成版の起動画面。11コマ目も選択肢を作ると同じ形になる（指定AVDで撮影）</figcaption></figure>
@@ -346,7 +496,7 @@ class MainActivity : AppCompatActivity() {
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-06"><span>自分のA03GithubSearchで、前回の入力確認のToastが出ている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-7"><p class="step-meta">STEP 07 · 12コマ目 · 目安 20分</p><h2>JSONに対応するdata classを作る</h2>
-<p>パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> を全文置換します。以下は1ファイルに3つのクラスを書く形です。</p>
+<p>パッケージを右クリックし、<strong>New → Kotlin Class/File</strong> を選び、名前を <code>GithubSearchResponse</code>、種類を <strong>File</strong> にします。できた <code>GithubSearchResponse.kt</code> は新しいファイルなので、中身を次の全文にします。以下は1ファイルに3つのクラスを書く形です。</p>
 <div class="code-head">GithubSearchResponse.kt · 全文</div><pre id="code-models" tabindex="0"><code>package jp.ac.jec.a03githubsearch
 
 import kotlinx.serialization.SerialName
@@ -397,7 +547,7 @@ data class Owner(val login: String)</code></pre>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-07"><span>GithubSearchResponse.ktに3つのdata classがあり、SerializableとSerialNameの赤い波線が消えている。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-8"><p class="step-meta">STEP 08 · 12コマ目 · 目安 15分</p><h2>一覧の1行をXMLで作る</h2>
-<p><code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは作成後に全文を置き換えるので初期値のままで構いません。Code表示に切り替え、次で全文置換します。</p>
+<p><code>app/src/main/res/layout</code> を右クリックして <strong>New → Layout Resource File</strong>。File nameを <code>list_item</code> にして作成します。Root elementは初期値のままで構いません。作成直後の中身は使わないので、Code表示に切り替え、中身を次の全文に入れ替えます。</p>
 <div class="code-head">list_item.xml · 全文</div><pre id="code-row" tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;androidx.cardview.widget.CardView xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
     xmlns:tools=&quot;http://schemas.android.com/tools&quot;
@@ -455,7 +605,7 @@ data class Owner(val login: String)</code></pre>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-08"><span>list_item.xmlのプレビューに4項目が縦に並び、各TextViewのidがコードと一致している。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-9"><p class="step-meta">STEP 09 · 12コマ目 · 目安 25分</p><h2>Adapterでデータを1行へ結び付ける</h2>
-<p>パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にし、全文を次で置き換えます。</p>
+<p>パッケージを右クリックして <strong>New → Kotlin Class/File</strong>。名前を <code>RepositoryAdapter</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。</p>
 <div class="code-head">RepositoryAdapter.kt · 全文</div><pre id="code-adapter" tabindex="0"><code>package jp.ac.jec.a03githubsearch
 
 import android.view.LayoutInflater
@@ -523,7 +673,42 @@ public boolean areContentsTheSame(GithubRepository oldItem, GithubRepository new
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-09"><span>RepositoryAdapter.ktに赤い波線がなく、id比較と内容比較の2つのメソッドがある。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-10"><p class="step-meta">STEP 10 · 12コマ目 · 目安 22分</p><h2>固定データをRecyclerViewへ渡す</h2>
-<p><code>MainActivity.kt</code> を次の12コマ目の途中コードで全文置換します。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加した形です。</p>
+<p><code>MainActivity.kt</code> に緑の行を足して、12コマ目の途中コードにします。11コマ目の入力確認を残し、<code>repositoryAdapter</code> の作成、RecyclerViewとの接続、固定データの <code>submitList</code> を追加します。足す場所は、import・プロパティ・<code>onCreate</code> の3か所です。</p>
+<div class="code-head diff-head"><span>MainActivity.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-stage-10" class="diff" tabindex="0"><code>import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+<ins>import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+</ins>import com.google.android.material.textfield.TextInputEditText
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var editQuery: TextInputEditText
+    private lateinit var spSort: Spinner
+    private lateinit var btnSearch: Button
+<ins>
+    private val repositoryAdapter = RepositoryAdapter()
+</ins>
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+<span class="diff-gap">⋮
+</span>        editQuery = findViewById(R.id.edit_query)
+        spSort = findViewById(R.id.sp_sort)
+        btnSearch = findViewById(R.id.btn_search)
+<ins>        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = repositoryAdapter
+        repositoryAdapter.submitList(
+            listOf(
+                GithubRepository(1L, "HelloKotlin", Owner("student"), 12, 3),
+                GithubRepository(2L, "CalcGame", Owner("classroom"), 5, 1),
+            ),
+        )
+</ins>
+        spSort.adapter = ArrayAdapter(
+            this,
+</code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>MainActivity.kt</code> の全文</summary>
 <div class="code-head">10-MainActivity.kt · 全文</div><pre id="code-stage-10" tabindex="0"><code>package jp.ac.jec.a03githubsearch
 
 import android.os.Bundle
@@ -559,8 +744,8 @@ class MainActivity : AppCompatActivity() {
         editQuery = findViewById(R.id.edit_query)
         spSort = findViewById(R.id.sp_sort)
         btnSearch = findViewById(R.id.btn_search)
-
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = repositoryAdapter
         repositoryAdapter.submitList(
@@ -605,6 +790,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 </code></pre>
+</details>
 <p><code>LinearLayoutManager(this)</code> は縦方向の一覧を配置します。<code>this</code> はこのMainActivity。<code>recyclerView.adapter</code> へ同じ <code>repositoryAdapter</code> を渡してから、そのAdapterへリストを送ります。</p>
 <p>Runすると、<code>student / HelloKotlin / 12 / 3</code> と <code>classroom / CalcGame / 5 / 1</code> が表示されます。これらはKotlinに書いた練習用データで、GitHubの検索結果ではありません。検索ボタンは引き続き入力確認のToastだけを出します。</p>
 <figure><img src="images/local-list.png" alt="通信せずに固定の2件を表示した12コマ目の途中画面" width="270" height="606" loading="lazy"><figcaption>通信せずに固定の2件を表示した12コマ目の途中画面（指定AVDで撮影）</figcaption></figure>
@@ -634,7 +820,7 @@ recyclerView.setAdapter(repositoryAdapter);</code></pre>
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-12"><span>自分のプロジェクトで固定の2行が出ており、次に追加するGithubApi.ktはまだない。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-13"><p class="step-meta">STEP 13 · 13コマ目 · 目安 15分</p><h2>Ktorで検索APIを呼ぶファイルを作る</h2>
-<p>パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にし、全文を置き換えます。</p>
+<p>パッケージで <strong>New → Kotlin Class/File</strong>。名前を <code>GithubApi</code>、種類を <strong>File</strong> にします。新しいファイルなので、中身を次の全文にします。</p>
 <div class="code-head">GithubApi.kt · 全文</div><pre id="code-api" tabindex="0"><code>package jp.ac.jec.a03githubsearch
 
 import io.ktor.client.HttpClient
@@ -685,7 +871,80 @@ object GithubApi {
 </div><div class="check"><p class="box-title">ここで止まって確認</p><label><input type="checkbox" data-check="step-13"><span>GithubApi.ktのimportとbodyに赤い波線がなく、Runしてもまだ固定の2行が出る。</span></label><p>できたらチェックします。止まったときは、この画面を先生に見せましょう。</p></div></section>
 
 <section id="step-14"><p class="step-meta">STEP 14 · 13コマ目 · 目安 25分</p><h2>入力・通信・一覧をつなぐ</h2>
-<p><code>MainActivity.kt</code> を次の<strong>完成コード</strong>で全文置換します。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。</p>
+<p><code>MainActivity.kt</code> の緑の行を足し、赤い行を消して、<strong>完成コード</strong>にします。固定データの <code>submitList(listOf(…))</code> を外し、<code>search</code> の中から通信を呼びます。生成時のインセット処理、View取得、Spinnerの組み立ては残ります。直す場所は、import・プロパティ・<code>onCreate</code>・<code>search</code> と、新しく足す <code>setLoading</code> の5か所です。</p>
+<div class="code-head diff-head"><span>MainActivity.kt</span><span class="diff-legend"><span class="diff-add">足す行</span><span class="diff-del">消す行</span><span class="diff-keep">すでにある行</span></span></div><pre id="diff-main" class="diff" tabindex="0"><code>package jp.ac.jec.a03githubsearch
+
+import android.os.Bundle
+<ins>import android.view.View
+</ins>import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.Spinner
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+<ins>import androidx.lifecycle.lifecycleScope
+</ins>import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+<ins>import com.google.android.material.progressindicator.CircularProgressIndicator
+</ins>import com.google.android.material.textfield.TextInputEditText
+<ins>import kotlinx.coroutines.launch
+</ins>
+class MainActivity : AppCompatActivity() {
+    private lateinit var editQuery: TextInputEditText
+    private lateinit var spSort: Spinner
+    private lateinit var btnSearch: Button
+<ins>    private lateinit var progress: CircularProgressIndicator
+</ins>
+    private val repositoryAdapter = RepositoryAdapter()
+<span class="diff-gap">⋮
+</span>        spSort = findViewById(R.id.sp_sort)
+        btnSearch = findViewById(R.id.btn_search)
+        val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+<ins>        progress = findViewById(R.id.progress)
+</ins>
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = repositoryAdapter
+<del>        repositoryAdapter.submitList(
+            listOf(
+                GithubRepository(1L, "HelloKotlin", Owner("student"), 12, 3),
+                GithubRepository(2L, "CalcGame", Owner("classroom"), 5, 1),
+            ),
+        )
+</del>
+        spSort.adapter = ArrayAdapter(
+            this,
+<span class="diff-gap">⋮
+</span>            showMessage("検索ワードを入力してください")
+            return
+        }
+<del>        showMessage("入力: $query")
+</del><ins>        val sort = SORT_ITEMS[spSort.selectedItemPosition].second
+
+        lifecycleScope.launch {
+            setLoading(true)
+            runCatching { GithubApi.searchRepositories(query, sort) }
+                .onSuccess { repositories -&gt;
+                    repositoryAdapter.submitList(repositories)
+                    if (repositories.isEmpty()) showMessage("検索結果が0件でした")
+                }
+                .onFailure { e -&gt;
+                    repositoryAdapter.submitList(emptyList())
+                    showMessage("検索に失敗しました: ${e.message}")
+                }
+            setLoading(false)
+        }
+    }
+
+    private fun setLoading(isLoading: Boolean) {
+        progress.visibility = if (isLoading) View.VISIBLE else View.INVISIBLE
+        btnSearch.isEnabled = !isLoading
+</ins>    }
+
+    private fun showMessage(message: String) {
+</code></pre>
+<details class="fulltext"><summary>照合用：ここまでの <code>MainActivity.kt</code> の全文</summary>
 <div class="code-head">MainActivity.kt · 全文</div><pre id="code-main" tabindex="0"><code>package jp.ac.jec.a03githubsearch
 
 import android.os.Bundle
@@ -786,6 +1045,7 @@ class MainActivity : AppCompatActivity() {
     }
 }
 </code></pre>
+</details>
 <table><thead><tr><th>順番</th><th>処理</th></tr></thead><tbody><tr><td>1</td><td>入力をtrimし、空ならToastを出して <code>return</code>。通信しない。</td></tr><tr><td>2</td><td>選択位置の <code>second</code> をAPI用sortとして取り出す。</td></tr><tr><td>3</td><td><code>lifecycleScope.launch</code> の中で <code>setLoading(true)</code>。印を出し検索ボタンを無効にする。</td></tr><tr><td>4</td><td><code>runCatching</code> の中で結果を待つ。成功なら <code>onSuccess</code> で <code>submitList</code>。</td></tr><tr><td>5</td><td>0件なら空の一覧とToast。失敗なら <code>onFailure</code> で古い一覧を空にしてToast。</td></tr><tr><td>6</td><td><code>setLoading(false)</code> で印を隠し、検索ボタンを有効へ戻す。</td></tr></tbody></table>
 <p><code>lifecycleScope</code> は画面に結び付いたコルーチンの開始場所です。<code>launch</code> の内側なら <code>suspend</code> 関数を呼べます。今回は画面を開いたまま操作します。<code>onSuccess</code> の <code>repositories</code>、<code>onFailure</code> の <code>e</code> はラムダの引数です。<code>e.message</code> の詳細文は原因やライブラリの版で変わります。</p>
 <p>Runすると起動時の一覧は空になります。合図があったら <code>kotlin</code> を入力し、必要なら端末の戻る操作でキーボードを閉じ、検索を<strong>1回</strong>押します。応答後に4項目の行が並びます。処理が速いと通信中の印は一瞬です。</p>

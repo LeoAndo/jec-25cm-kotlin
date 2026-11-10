@@ -9,8 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import java.util.concurrent.ThreadLocalRandom
 import com.google.android.material.snackbar.Snackbar
+import java.util.concurrent.ThreadLocalRandom
 
 class MainActivity : AppCompatActivity() {
     private var nowNo = 1 // 今の問題が何問目かのカウント数

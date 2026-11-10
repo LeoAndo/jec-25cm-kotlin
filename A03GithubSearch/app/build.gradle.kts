@@ -37,17 +37,17 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.activity)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.material)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
     // Kotlin Multiplatformのアプリ用テンプレートプロジェクトのktor依存関係を参考にした
     // https://github.com/Kotlin/KMP-App-Template/blob/main/composeApp/build.gradle.kts#L52-L54
