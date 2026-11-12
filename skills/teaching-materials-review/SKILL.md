@@ -45,7 +45,7 @@ description: Review teaching materials against Kotlin console and Android projec
 - ビルドが通ること。
 
   ```sh
-  cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
+  cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew --no-daemon assembleDebug
   ```
 
 - `app/build.gradle.kts` の `namespace` と `applicationId` が `package`（`jp.ac.jec.` で始まる）と一致すること。

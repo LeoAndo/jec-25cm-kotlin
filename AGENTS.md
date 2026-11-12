@@ -59,8 +59,10 @@
 - **Android単元**：worktreeには `local.properties` がない（Git管理外のため）。ビルドは環境変数 `ANDROID_HOME` で通す。未設定なら、コマンドの前に付ける。`local.properties` は作ってもコミットしない。
 
   ```sh
-  cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
+  cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew --no-daemon assembleDebug
   ```
+
+  `--no-daemon` は、オーナーのAndroid Studioが動かしているGradleデーモンを借りないために付ける（§7の「オーナーの作業を止めない」）。
 
 - **純Kotlin系（`K01`）**：`K01HelloKotlin` はGradleプロジェクトではないので、コマンドラインのビルドがない。**IntelliJ IDEA で `K01HelloKotlin` を開き、対象の `exNN/main.kt` の `fun main()` を実行して、Runツールウィンドウの出力を目で確かめる。** プロジェクトは1つだけなので、どの回の作業でも開くのは `K01HelloKotlin` である。`.idea/` はGit管理外（リポジトリ直下の `.gitignore`）なので、worktreeで初めて開いたときはJDKとKotlinの設定を聞かれる。これは正常で、設定ファイルはコミットしない。
 - **commitしないPoC成果物は、リポジトリの外に置く。** 置き場は `~/Documents/jec-25cm-kotlin-verification-deliverables`。なければ作る。
@@ -288,6 +290,38 @@ PR本文の検証の節に、項目ごとに1行で書く。検証結果をま�
 - 「一部確認」には、確認できた範囲と残りの両方を書く。「未確認」には理由を書き、あとから「確認済み」に書き換えるのは、実際に確認したときだけにする。
 - 「方法」には、エミュレータで操作したのか、IntelliJ IDEA で実行したのか、`kotlinc` で実行したのか、ビルドだけか、コードを読んだだけかを書く。コードを読んだだけの項目を、動かして確認したことにしない。
 - 動かして確認したときは、検証の節の最初に、対象のコミットと、エミュレータの名前（純Kotlin系は `kotlinc` の版）を1回だけ書く。
+
+### オーナーの作業を止めない
+
+エージェントは、オーナーと同じ機械で動くことがある。オーナーはその機械で、IntelliJ IDEA・Android Studio・エミュレータ・ビルドを使っている。Androidプログラミング1（jec-26cm-android-programming-1）では、2026-11-10 にエージェントが Android Studio のヘッドレス検査（`inspect.sh`）を11回走らせ、共有の adb サーバーが10回再起動されて、オーナーが別のプロジェクトで使っていたエミュレータの接続がそのたびに2〜4秒切れた。設定やキャッシュの置き場を分けても、adb サーバーとGradleデーモンは共有されたままだった。このリポジトリも同じ機械と同じ道具を使うので、次の5つを守る（#286）。
+
+1. **Android Studio と IntelliJ IDEA を、エージェントが起動しない。** 画面つきでも、ヘッドレスの `inspect.sh` でも同じ。純Kotlin系の出力と警告は、上の `kotlinc` のコマンドで確かめる（IntelliJ IDEA に同梱のコンパイラをコマンドラインから呼ぶだけで、IntelliJ IDEA は起動しない）。エディタに出る赤い波線や警告、メニュー・ウィザード・Runツールウィンドウの見え方を確かめる必要があるときは、オーナーへ引き継ぐ（上の「打ち切りの上限と引き継ぎ」の4つを書く）。エージェントが自分で行うのは、オーナーの了承を得て、オーナーがIDEとエミュレータを使っていない時間に限る。
+2. **`adb` には必ず `-s <シリアル>` を付ける。`adb kill-server` と `adb start-server` は実行しない。** adb サーバーは機械に1つで、止めると、オーナーのエミュレータやIDEの接続も切れる。`adb devices` が何も返さないときも、サーバーを再起動して直そうとせず、オーナーへ引き継ぐ。
+3. **エミュレータは、動いているものを確かめてから使う。** 使ってよいのは、指定のAVD `jec_25cm_kotlin_Pixel 9a` だけ。ほかのエミュレータや実機が見えても、何も入れず、操作しない。
+
+   ```sh
+   adb devices                          # 動いている端末のシリアルを見る
+   adb -s <シリアル> emu avd name       # そのエミュレータのAVD名を確かめる
+   ```
+
+   指定のAVDが動いていなければ、画面を出さず、状態を保存しない形で、自分で起動する。AVDの名前は `emulator -list-avds` に出るとおりに書き、ポートは、動いている端末と重ならない偶数を選ぶ（シリアルは `emulator-<ポート>` になる）。終わったら、自分で起動したものだけを閉じる。**オーナーが起動したエミュレータは閉じない。**
+
+   ```sh
+   "$ANDROID_HOME/emulator/emulator" -list-avds
+   "$ANDROID_HOME/emulator/emulator" -avd <AVDの名前> -no-window -no-snapshot-save -port <ポート> &
+   adb -s emulator-<ポート> emu kill    # 自分で起動したものだけを閉じる
+   ```
+
+   指定のAVDがすでに動いているときは、オーナーが使っている最中かもしれない。アプリを入れる前に、使ってよいかをオーナーに確かめる。
+4. **コマンドラインのビルドは `./gradlew --no-daemon …` にする。** 動いているGradleデーモンを借りず、終わったあとにデーモンも残さない（§2のコマンド例もこの形にしてある）。段階コードを差し替えてビルドするときも同じ。`./gradlew --stop` は実行しない。オーナーのIDEが使っているデーモンも止まる。
+5. **ブラウザでの確認は、作業用のプロファイルを付けた headless Chrome で行う。** オーナーのプロファイルやウィンドウを使わない。実際のクリップボードを書き換える操作（教科書のコピーボタンを押す、など）はしない。コピーボタンの動きを確かめる必要があるときは、オーナーへ引き継ぐ。
+
+   ```sh
+   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+     --user-data-dir="$(mktemp -d)" --screenshot=<出力先.png> <開くファイルのURL>
+   ```
+
+クラウドのセッションのように、オーナーの機械と別の場所で動くときは、共有するものがないので、1〜5で止まることはない。その環境ではエミュレータもIntelliJ IDEAも動かせないので、動かしての確認は「打ち切りの上限と引き継ぎ」のとおり引き継ぐ。
 
 ## 8. PRとレビュー対応
 

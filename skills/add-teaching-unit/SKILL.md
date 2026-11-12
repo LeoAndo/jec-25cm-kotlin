@@ -38,7 +38,7 @@ description: Add a new Android teaching unit (A01-) to this Kotlin course reposi
 - ビルドを通し、エミュレータ `jec_25cm_kotlin_Pixel 9a` で動かす。
 
   ```sh
-  cd A0NXxx && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
+  cd A0NXxx && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew --no-daemon assembleDebug
   ```
 
 - 完成プロジェクトの `README.md` は `A03GithubSearch/README.md` の形にそろえる（画面の構成の表 → 使用しているAPI → ソースコードの構成の表 → 処理の流れ → 実装のポイント → 主なライブラリ → ビルドと実行）。
@@ -224,7 +224,7 @@ python3 scripts/package-student-materials.py
 Android単元を触ったときは、そのプロジェクトをビルドする。
 
 ```sh
-cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew assembleDebug
+cd A01HelloAndroid && ANDROID_HOME="$HOME/Library/Android/sdk" ./gradlew --no-daemon assembleDebug
 ```
 
 Kotlinの回を足したときは、IntelliJ IDEA で `K01HelloKotlin` を開き、その `exNN` の `fun main()` を実行して、コンソール出力が教科書に書いたとおりかを確かめる。
