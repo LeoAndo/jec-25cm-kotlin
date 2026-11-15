@@ -8,7 +8,12 @@
       "name": "English",
       "distribute": true,
       "ui": {
-        "progress": "{count} / {total} steps checked"
+        "progress": "{count} / {total} steps checked",
+        "contents": "Contents",
+        "resources": "Other units and shared guides",
+        "file_location": "Check the file location",
+        "code_scroll": "For long lines, you can scroll horizontally within the code block.",
+        "table_scroll": "Scroll horizontally within the table area to view the right side."
       },
       "language_label": "Language",
       "translation_notice": "This page was translated by AI. The Japanese version is authoritative. If a translation seems wrong, ask your teacher.",
@@ -22,7 +27,12 @@
       "distribute": true,
       "han": true,
       "ui": {
-        "progress": "已确认 {count} / {total} 个步骤"
+        "progress": "已确认 {count} / {total} 个步骤",
+        "contents": "目录",
+        "resources": "其他单元与通用资料",
+        "file_location": "查看文件位置",
+        "code_scroll": "较长的代码行可在代码框内左右滚动查看。",
+        "table_scroll": "在表格框内左右滚动，即可查看表格右侧的内容。"
       },
       "language_label": "语言",
       "translation_notice": "本页由 AI 翻译。请以日语版为准。如发现翻译有误，请告知老师。",
@@ -36,7 +46,12 @@
       "distribute": true,
       "han": true,
       "ui": {
-        "progress": "已確認 {count} / {total} 個步驟"
+        "progress": "已確認 {count} / {total} 個步驟",
+        "contents": "目錄",
+        "resources": "其他單元與共通資料",
+        "file_location": "查看檔案位置",
+        "code_scroll": "較長的程式碼行可在程式碼框內左右捲動查看。",
+        "table_scroll": "在表格框內左右捲動，即可查看表格右側的內容。"
       },
       "language_label": "語言",
       "translation_notice": "本頁由 AI 翻譯。請以日文版為準。如發現翻譯有誤，請告知老師。",
@@ -50,7 +65,12 @@
       "distribute": true,
       "han": true,
       "ui": {
-        "progress": "已確認 {count} / {total} 個步驟"
+        "progress": "已確認 {count} / {total} 個步驟",
+        "contents": "目錄",
+        "resources": "其他單元與共通資料",
+        "file_location": "查看檔案位置",
+        "code_scroll": "較長的程式碼行可在程式碼框內左右捲動查看。",
+        "table_scroll": "在表格框內左右捲動，即可查看表格右側的內容。"
       },
       "language_label": "語言",
       "translation_notice": "本頁面由 AI 翻譯。請以日文版為準。如果覺得翻譯有誤，請告訴老師。",
@@ -63,7 +83,12 @@
       "name": "한국어",
       "distribute": true,
       "ui": {
-        "progress": "{total} 단계 중 {count} 단계 확인함"
+        "progress": "{total} 단계 중 {count} 단계 확인함",
+        "contents": "목차",
+        "resources": "다른 단원과 공통 자료",
+        "file_location": "파일 위치 확인",
+        "code_scroll": "긴 줄은 코드 영역 안에서 가로로 스크롤하여 볼 수 있습니다.",
+        "table_scroll": "표 영역 안에서 가로로 스크롤하면 표의 오른쪽을 볼 수 있습니다."
       },
       "language_label": "언어",
       "translation_notice": "이 페이지는 AI가 번역했습니다. 일본어판이 원본입니다. 번역이 이상하다고 느끼면 선생님에게 알려 주세요.",
@@ -76,7 +101,12 @@
       "name": "မြန်မာဘာသာ",
       "distribute": true,
       "ui": {
-        "progress": "အဆင့် {total} ခုအနက် {count} ခု စစ်ဆေးပြီး"
+        "progress": "အဆင့် {total} ခုအနက် {count} ခု စစ်ဆေးပြီး",
+        "contents": "မာတိကာ",
+        "resources": "အခြားသင်ခန်းစာများနှင့် အများသုံးလမ်းညွှန်များ",
+        "file_location": "ဖိုင်တည်နေရာကို စစ်ဆေးရန်",
+        "code_scroll": "ရှည်သောကုဒ်လိုင်းများကို ဖတ်ရန် ကုဒ်ဘောင်အတွင်း ဘယ်ညာသို့ ရွှေ့ကြည့်နိုင်သည်။",
+        "table_scroll": "ဇယား၏ ညာဘက်ပိုင်းကို ကြည့်ရန် ဘောင်အတွင်း ဘယ်ညာသို့ ရွှေ့ကြည့်နိုင်သည်။"
       },
       "language_label": "ဘာသာစကား",
       "translation_notice": "ဤစာမျက်နှာကို AI ဖြင့် ဘာသာပြန်ထားပါသည်။ ဂျပန်ဘာသာမူရင်းကို အတည်အဖြစ် ယူပါ။ ဘာသာပြန်ချက် မှားနေသည်ဟု ထင်ပါက ဆရာကို မေးပါ။",
@@ -89,7 +119,12 @@
       "name": "Español",
       "distribute": true,
       "ui": {
-        "progress": "{count} / {total} pasos verificados"
+        "progress": "{count} / {total} pasos verificados",
+        "contents": "Contenido",
+        "resources": "Otras unidades y guías comunes",
+        "file_location": "Ver la ubicación del archivo",
+        "code_scroll": "Puedes desplazarte horizontalmente dentro del bloque de código para ver las líneas largas.",
+        "table_scroll": "Desplázate horizontalmente dentro del área de la tabla para ver su parte derecha."
       },
       "language_label": "Idioma",
       "translation_notice": "Esta página fue traducida con IA. La versión en japonés es la oficial. Si una traducción te parece incorrecta, pregúntale a tu docente.",
@@ -103,7 +138,12 @@
       "distribute": true,
       "dir": "rtl",
       "ui": {
-        "progress": "الخطوات التي تم التحقق منها: {count} / {total}"
+        "progress": "الخطوات التي تم التحقق منها: {count} / {total}",
+        "contents": "المحتويات",
+        "resources": "الوحدات الأخرى والأدلة المشتركة",
+        "file_location": "عرض موقع الملف",
+        "code_scroll": "يمكنك التمرير أفقيًا داخل إطار الكود لعرض الأسطر الطويلة.",
+        "table_scroll": "مرّر أفقيًا داخل إطار الجدول لعرض جانبه الأيمن."
       },
       "language_label": "اللغة",
       "translation_notice": "تمت ترجمة هذه الصفحة باستخدام الذكاء الاصطناعي. النسخة اليابانية هي المرجع. إذا بدت لك الترجمة خاطئة، فاسأل المعلم.",
@@ -116,7 +156,12 @@
       "name": "Монгол",
       "distribute": true,
       "ui": {
-        "progress": "Шалгасан алхам: {count} / {total}"
+        "progress": "Шалгасан алхам: {count} / {total}",
+        "contents": "Агуулга",
+        "resources": "Бусад бүлэг ба нийтлэг заавар",
+        "file_location": "Файлын байршлыг шалгах",
+        "code_scroll": "Урт мөрийг кодын хүрээн дотор хэвтээ чиглэлд гүйлгэж харж болно.",
+        "table_scroll": "Хүснэгтийн баруун хэсгийг харахын тулд хүрээн дотор хэвтээ чиглэлд гүйлгэж болно."
       },
       "language_label": "Хэл",
       "translation_notice": "Энэ хуудсыг хиймэл оюун ухаан (AI) ашиглан орчуулсан. Япон хэлний хувилбар нь албан ёсны эх юм. Орчуулга буруу санагдвал багшаасаа асууна уу.",
@@ -126,6 +171,11 @@
     }
   ],
   "source_ui": {
-    "progress": "{count} / {total} ステップ確認済み"
+    "progress": "{count} / {total} ステップ確認済み",
+    "contents": "目次",
+    "resources": "ほかの単元・共通資料",
+    "file_location": "ファイルの場所を確認する",
+    "code_scroll": "長い行は、コードの枠内を横にスクロールできます。",
+    "table_scroll": "表の右側は、枠内を横にスクロールして確認できます。"
   }
 }
