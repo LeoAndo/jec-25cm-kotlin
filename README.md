@@ -145,6 +145,8 @@ python3 scripts/student-apk-review.py inspect \
 
 Android SDK Command-Line Toolsの `apkanalyzer` をPATHか `ANDROID_HOME` から探してManifest・リソース・DEXの証拠を集めます。見つからない場合は `--apkanalyzer /絶対パス/apkanalyzer` で指定できます。不足・失敗・タイムアウト・出力上限は結果に残します。教材版が不明の場合だけ `--baseline-ref HEAD --provisional` で暫定比較とします。比較commitを固定してその版のconfigを読み、Android以外・不明なkind・未知の単元は収集前に拒否します。出力先は新しいフォルダに限り、Gitリポジトリやworktree内も拒否します。
 
+各出力ファイルの上限は10 MiBです。DEXの全体一覧は `dex-packages.txt` に記録します。比較版configのパッケージ名、APKのapplicationId、Manifestのアプリ・起動クラスを手がかりに、該当のパッケージで定義されたクラスの行を一覧の末尾まで確認し、`dex-app-classes.txt` に別途保存します。`evidence.json` の `commands.dex-packages.app_classes` で候補の範囲・件数・収集状態を確認できます。全体一覧が上限に達した場合も候補は保存され、全体の終了コードは一部未確認の `2` です。候補が見つからない場合は、名前を変更したAPKや難読化されたAPKも含め、アプリ側のクラスは未確認とします。
+
 終了コード `0` は要求した静的情報の収集完了、`2` は一部未確認、`1` は引数解析後の入力・比較基準・出力先などのエラーです。CLI構文エラーも `2` ですが、この場合は収集を始めません。標準エラーと今回の `evidence.json` の有無・内容を確認してください。**収集成功は評価完了ではありません。** スクリプトが作った未評価テンプレートを、そのまま返却しません。
 
 スキルに従って、比較版の教科書・教員用ガイド・Kotlin/XMLとAPKのリソース・DEX・動作を照合し、教員用 `report.md` と学生向け `feedback.md` を仕上げます。現教材はKotlin＋XML＋`findViewById`です。Kotlinの生成クラス・ラムダ・コルーチン・依存ライブラリの差は、そのまま学生の工夫とは扱いません。確定した変更、変更の可能性、未確認を分け、必要な場合だけソースや対象APKのビルドに対応する難読化のmappingを確認します。作者本人、制作過程、不正の有無はAPKから断定しません。
