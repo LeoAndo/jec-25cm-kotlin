@@ -65,9 +65,13 @@ class StudentApkReviewTest(unittest.TestCase):
             " print('<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" '"
             "'package=\"student.changed\" android:versionCode=\"1\">'"
             "'<uses-sdk android:minSdkVersion=\"24\" android:targetSdkVersion=\"36\"/>'"
+            "'<application><activity-alias android:name=\".Entry\" '"
+            "'android:targetActivity=\"custom.feature.MainActivity\">"
+            "<intent-filter><category android:name=\"android.intent.category.LAUNCHER\"/>"
+            "</intent-filter></activity-alias></application>'"
             "'</manifest>')\n"
             "elif 'dex' in sys.argv:\n"
-            " print('C student.changed.MainActivity')\n"
+            " print('C d 1\t1\t32\tstudent.changed.MainActivity')\n"
             "else:\n"
             " print('<TextView/>')\n",
             encoding="utf-8",
@@ -110,6 +114,76 @@ class StudentApkReviewTest(unittest.TestCase):
         self.assertIn("動作確認：未確認", report)
         self.assertIn("未評価・教員確認前", feedback)
         self.assertIn("未記入", feedback)
+
+    def replace_dex_output(self, body):
+        script = self.analyzer.read_text(encoding="utf-8")
+        start = script.index("elif 'dex' in sys.argv:\n")
+        end = script.index("else:\n", start)
+        self.analyzer.write_text(
+            script[:start] + "elif 'dex' in sys.argv:\n" + body + script[end:],
+            encoding="utf-8",
+        )
+
+    def test_dex_classes_after_output_limit_are_saved_separately(self):
+        self.replace_dex_output(
+            " sys.stdout.write('C d 1\\t1\\t32\\tdependency.pkg.Class\\n' * 350000)\n"
+            " sys.stdout.write('M d 1\\t1\\t32\\t' + 'x' * 140000 + '\\n')\n"
+            " print('C d 1\\t1\\t32\\tstudent.changed.MainActivity')\n"
+            " print('C d 1\\t1\\t32\\tstudent.changedlib.Lookalike')\n"
+            " print('C r 0\\t1\\t32\\tstudent.changed.ReferenceOnly')\n"
+            " print('C d 1\\t1\\t32\\tcustom.feature.ExtraClass')\n"
+            " print('C d 1\\t1\\t32\\tjp.ac.jec.reference.Fallback', end='')\n"
+        )
+        result = self.run_review()
+        self.assertEqual(result.returncode, 2, result.stderr)
+        dex = self.evidence()["commands"]["dex-packages"]
+        self.assertEqual(dex["status"], "truncated")
+        self.assertEqual(dex["exit_code"], 0)
+        self.assertEqual((self.output / dex["stdout"]).stat().st_size, 10 * 1024 * 1024)
+        classes = dex["app_classes"]
+        self.assertEqual(classes["status"], "ok")
+        self.assertEqual(classes["class_count"], 3)
+        self.assertEqual(classes["package_prefixes"],
+                         ["custom.feature", "jp.ac.jec.reference", "student.changed"])
+        rows = (self.output / classes["file"]).read_text(encoding="utf-8").splitlines()
+        self.assertEqual([row.split()[-1] for row in rows],
+                         ["student.changed.MainActivity", "custom.feature.ExtraClass",
+                          "jp.ac.jec.reference.Fallback"])
+
+    def test_no_dex_package_matches_keeps_result_partial(self):
+        self.replace_dex_output(" print('C d 1\\t1\\t32\\tdependency.pkg.Class')\n")
+        result = self.run_review()
+        self.assertEqual(result.returncode, 2, result.stderr)
+        dex = self.evidence()["commands"]["dex-packages"]
+        self.assertEqual(dex["status"], "ok")
+        self.assertEqual(dex["app_classes"]["status"], "not_found")
+        self.assertEqual(dex["app_classes"]["class_count"], 0)
+        self.assertTrue(self.evidence()["warnings"])
+
+    def test_app_classes_file_is_capped_without_cutting_class_rows(self):
+        module = self.load_module()
+        self.output.mkdir()
+        rows = b"C d 1\t1\t32\tstudent.changed.MainActivity\n"
+        with patch.object(module, "MAX_TOOL_BYTES", len(rows) + 1):
+            result = module.collect(
+                [sys.executable, "-c", f"import sys; sys.stdout.buffer.write({rows * 4!r})"],
+                self.output, "dex-packages", 5, dex_packages=("student.changed",),
+            )
+        self.assertEqual(result["app_classes"]["status"], "truncated")
+        self.assertEqual(result["app_classes"]["class_count"], 1)
+        self.assertEqual((self.output / result["app_classes"]["file"]).read_bytes(), rows)
+
+    def test_dex_timeout_does_not_report_candidates_as_complete(self):
+        self.replace_dex_output(
+            " print('C d 1\\t1\\t32\\tstudent.changed.MainActivity', flush=True)\n"
+            " time.sleep(10)\n"
+        )
+        result = self.run_review("--timeout", "0.8")
+        self.assertEqual(result.returncode, 2, result.stderr)
+        dex = self.evidence()["commands"]["dex-packages"]
+        self.assertEqual(dex["status"], "timeout")
+        self.assertEqual(dex["app_classes"]["status"], "incomplete")
+        self.assertEqual(dex["app_classes"]["class_count"], 1)
 
     def test_all_four_android_projects_are_accepted(self):
         for name in ("A01HelloAndroid", "A02CalcGame", "A03GithubSearch", "A04FunnyCamera"):

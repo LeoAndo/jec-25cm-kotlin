@@ -1,15 +1,19 @@
 """提出APKの静的な根拠を収集する。採点・インストール・学生への送信は行わない。"""
 
 import argparse
+from contextlib import ExitStack
 from datetime import datetime, timezone
 import hashlib
 import json
 import os
 from pathlib import Path, PurePosixPath
 import re
+import selectors
 import shutil
+import signal
 import subprocess
 import sys
+from time import monotonic
 import xml.etree.ElementTree as ET
 from zipfile import BadZipFile, ZipFile
 
@@ -18,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_APK_BYTES = 1024 * 1024 * 1024
 MAX_UNCOMPRESSED_BYTES = 2 * MAX_APK_BYTES
 MAX_TOOL_BYTES = 10 * 1024 * 1024
+TOOL_READ_BYTES = 64 * 1024
 ANDROID = "{http://schemas.android.com/apk/res/android}"
 
 
@@ -108,25 +113,155 @@ def find_analyzer(explicit):
     return next((str(p) for p in candidates if p.is_file() and os.access(p, os.X_OK)), None)
 
 
-def collect(command, output, name, timeout):
+class CappedFile:
+    def __init__(self, file):
+        self.file = file
+        self.remaining = MAX_TOOL_BYTES
+        self.truncated = False
+
+    def write(self, chunk):
+        saved = chunk[:self.remaining]
+        self.file.write(saved)
+        self.remaining -= len(saved)
+        self.truncated |= len(saved) < len(chunk)
+
+
+class DexAppClasses:
+    def __init__(self, output, packages):
+        self.output = output
+        self.prefixes = tuple(pkg.encode("utf-8") + b"." for pkg in packages)
+        self.pending = b""
+        self.skipping = False
+        self.truncated = False
+        self.count = 0
+
+    def feed(self, chunk):
+        rows = chunk.split(b"\n")
+        for i, row in enumerate(rows):
+            last = i == len(rows) - 1
+            if self.skipping:
+                self.skipping = last
+                continue
+            # チャンクをまたぐ行だけを保持する。異常に長い1行でメモリを使い切らない。
+            if len(self.pending) + len(row) > TOOL_READ_BYTES:
+                self.truncated |= (self.pending + row).startswith(b"C d ")
+                self.pending = b""
+                self.skipping = last
+                continue
+            row = self.pending + row
+            if last:
+                self.pending = row
+            else:
+                self.save_row(row)
+                self.pending = b""
+
+    def save_row(self, row):
+        fields = row.split(None, 5)
+        if len(fields) != 6 or fields[:2] != [b"C", b"d"]:
+            return
+        if not fields[-1].strip().startswith(self.prefixes):
+            return
+        if len(row) + 1 > self.output.remaining:
+            self.truncated = True
+            return
+        self.output.write(row + b"\n")
+        self.count += 1
+
+
+def capture(command, timeout, outputs, dex_classes):
+    deadline = monotonic() + timeout
+    with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                          start_new_session=True) as proc, selectors.DefaultSelector() as selector:
+        selector.register(proc.stdout, selectors.EVENT_READ, "stdout")
+        selector.register(proc.stderr, selectors.EVENT_READ, "stderr")
+        try:
+            while selector.get_map():
+                remaining = deadline - monotonic()
+                if remaining <= 0:
+                    raise subprocess.TimeoutExpired(command, timeout)
+                events = selector.select(remaining)
+                for key, _ in events:
+                    chunk = key.fileobj.read1(TOOL_READ_BYTES)
+                    if not chunk:
+                        selector.unregister(key.fileobj)
+                        if dex_classes is not None and key.data == "stdout":
+                            dex_classes.feed(b"\n")
+                        continue
+                    outputs[key.data].write(chunk)
+                    if dex_classes is not None and key.data == "stdout":
+                        dex_classes.feed(chunk)
+            return proc.wait(timeout=max(0, deadline - monotonic()))
+        except BaseException:
+            # 起動用のシェルが子プロセスを残しても、パイプの読み取りを終えられるようにする。
+            try:
+                os.killpg(proc.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+            raise
+
+
+def collect(command, output, name, timeout, *, dex_packages=None):
     stdout_path, stderr_path = output / f"{name}.txt", output / f"{name}.stderr.txt"
     result = {"command": command, "stdout": stdout_path.name, "stderr": stderr_path.name}
-    with stdout_path.open("wb") as stdout, stderr_path.open("wb") as stderr:
+    with ExitStack() as stack:
+        streams = {
+            "stdout": CappedFile(stack.enter_context(stdout_path.open("wb"))),
+            "stderr": CappedFile(stack.enter_context(stderr_path.open("wb"))),
+        }
+        classes = None
+        if dex_packages is not None:
+            classes_path = output / "dex-app-classes.txt"
+            classes = DexAppClasses(CappedFile(stack.enter_context(classes_path.open("wb"))),
+                                    dex_packages)
         try:
-            completed = subprocess.run(command, stdout=stdout, stderr=stderr, timeout=timeout)
-            result.update(status="ok" if completed.returncode == 0 else "failed",
-                          exit_code=completed.returncode)
+            exit_code = capture(command, timeout, streams, classes)
+            result.update(status="ok" if exit_code == 0 else "failed", exit_code=exit_code)
         except subprocess.TimeoutExpired:
             result.update(status="timeout", exit_code=None)
         except OSError as exc:
-            stderr.write(str(exc).encode("utf-8"))
+            streams["stderr"].write(str(exc).encode("utf-8"))
             result.update(status="failed", exit_code=None)
-    for path in (stdout_path, stderr_path):
-        if path.stat().st_size > MAX_TOOL_BYTES:
-            with path.open("r+b") as stream:
-                stream.truncate(MAX_TOOL_BYTES)
-            result.update(status="truncated", limit_bytes=MAX_TOOL_BYTES)
+
+    truncated = [name for name, stream in streams.items() if stream.truncated]
+    if truncated:
+        result.update(limit_bytes=MAX_TOOL_BYTES, truncated_streams=truncated)
+        if result["status"] == "ok":
+            result["status"] = "truncated"
+    if classes is not None:
+        # 全体一覧が打ち切られても、ツールが成功していれば候補は最後まで確認できている。
+        if result["exit_code"] != 0:
+            status = "incomplete"
+        elif classes.truncated:
+            status = "truncated"
+        elif classes.count:
+            status = "ok"
+        else:
+            status = "not_found"
+        result["app_classes"] = {
+            "file": classes_path.name,
+            "package_prefixes": list(dex_packages),
+            "class_count": classes.count,
+            "status": status,
+            "limit_bytes": MAX_TOOL_BYTES,
+        }
     return result
+
+
+def manifest_code_packages(manifest):
+    # applicationIdとコードのnamespaceが異なるAPKでは、起動コンポーネントも手がかりにする。
+    app = manifest.find("application")
+    if app is None:
+        return []
+    class_names = [app.get(ANDROID + "name", "")]
+    for activity in app:
+        if activity.tag not in ("activity", "activity-alias"):
+            continue
+        if any(category.get(ANDROID + "name") == "android.intent.category.LAUNCHER"
+               for category in activity.findall("intent-filter/category")):
+            attr = "targetActivity" if activity.tag == "activity-alias" else "name"
+            class_names.append(activity.get(ANDROID + attr, ""))
+    return sorted({name.rpartition(".")[0] for name in class_names if not name.startswith(".")
+                   and "." in name})
 
 
 def manifest_details(path):
@@ -141,6 +276,7 @@ def manifest_details(path):
         "min_sdk": sdk.get(ANDROID + "minSdkVersion") if sdk is not None else None,
         "target_sdk": sdk.get(ANDROID + "targetSdkVersion") if sdk is not None else None,
         "permissions": [p.get(ANDROID + "name") for p in manifest.findall("uses-permission")],
+        "code_packages": manifest_code_packages(manifest),
     }
 
 
@@ -226,23 +362,39 @@ def inspect(args):
         data["warnings"].append("apkanalyzerが見つかりません。Manifest・DEXは未確認です。")
         data["status"] = "partial"
     else:
-        commands = [("manifest", ["manifest", "print"]),
-                    ("dex-packages", ["dex", "packages", "--defined-only"])]
-        commands.extend((f"resource-{i:03}", ["resources", "xml", "--file", resource])
-                        for i, resource in enumerate(resources, 1))
-        for name, arguments in commands:
-            data["commands"][name] = collect(
-                [analyzer, *arguments, str(apk)], output, name, args.timeout,
-            )
-        if data["commands"]["manifest"]["status"] == "ok":
+        commands = data["commands"]
+        commands["manifest"] = collect(
+            [analyzer, "manifest", "print", str(apk)], output, "manifest", args.timeout,
+        )
+        if commands["manifest"]["status"] == "ok":
             try:
                 data["manifest"] = manifest_details(output / "manifest.txt")
             except (ET.ParseError, UnicodeError, ValueError) as exc:
-                data["commands"]["manifest"]["status"] = "invalid_output"
+                commands["manifest"]["status"] = "invalid_output"
                 data["warnings"].append(str(exc))
-        if any(c["status"] != "ok" for c in data["commands"].values()):
+
+        manifest = data.get("manifest", {})
+        candidates = (base["project"].get("package"), manifest.get("application_id"),
+                      *manifest.get("code_packages", []))
+        packages = tuple(sorted({name for name in candidates if name}))
+        commands["dex-packages"] = collect(
+            [analyzer, "dex", "packages", "--defined-only", str(apk)],
+            output, "dex-packages", args.timeout, dex_packages=packages,
+        )
+        if commands["dex-packages"]["app_classes"]["status"] != "ok":
             data["status"] = "partial"
-            data["warnings"].append("収集に失敗した項目があります。commandsと標準エラーを確認してください。")
+            data["warnings"].append(
+                "アプリ側のクラス候補は一部未確認です。dex-packagesのapp_classesを確認してください。"
+            )
+        for i, resource in enumerate(resources, 1):
+            name = f"resource-{i:03}"
+            commands[name] = collect(
+                [analyzer, "resources", "xml", "--file", resource, str(apk)],
+                output, name, args.timeout,
+            )
+        if any(c["status"] != "ok" for c in commands.values()):
+            data["status"] = "partial"
+            data["warnings"].append("未確認の収集項目があります。commandsと標準エラーを確認してください。")
     (output / "evidence.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
     )
