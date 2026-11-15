@@ -366,7 +366,7 @@ details[open] > summary { margin-bottom: 1rem; }
 .textbook .lesson-menu > summary::-webkit-details-marker { display: none; }
 .textbook .menu-chevron { width: 7px; height: 7px; border-right: 1.5px solid; border-bottom: 1.5px solid; transform: rotate(45deg); margin-top: -4px; flex-shrink: 0; }
 .textbook .lesson-menu[open] .menu-chevron { transform: rotate(225deg); margin-top: 4px; }
-.textbook .lesson-menu-content { position: absolute; inset-inline-end: 0; top: calc(100% + 10px); width: min(350px, calc(100vw - 32px)); max-height: calc(100dvh - var(--language-nav-height, 0px) - var(--lesson-nav-height, 64px) - 26px); overflow-y: auto; overscroll-behavior: contain; background: var(--nav-menu-bg); border: 1px solid var(--line); box-shadow: 0 10px 30px var(--menu-shadow); padding: 8px 12px 12px; border-radius: 8px; }
+.textbook .lesson-menu-content { position: absolute; inset-inline-end: 0; top: calc(100% + 10px); width: min(350px, calc(100vw - 32px)); max-height: var(--lesson-menu-max-height, calc(100dvh - var(--language-nav-height, 0px) - var(--lesson-nav-height, 64px) - 26px)); overflow-y: auto; overscroll-behavior: contain; background: var(--nav-menu-bg); border: 1px solid var(--line); box-shadow: 0 10px 30px var(--menu-shadow); padding: 8px 12px 12px; border-radius: 8px; }
 .textbook .lesson-menu-content .eyebrow { font-size: 12px; margin: 12px 9px 4px; color: var(--muted); }
 .textbook .lesson-menu-content ol { margin: 4px 0 12px; }
 .textbook .lesson-menu-content li a { border-radius: 4px; }

@@ -227,14 +227,27 @@
     sidebar.classList.add('lesson-bar');
     sidebar.append(bar);
     document.body.classList.add('has-lesson-nav');
+    const resizeMenu = () => {
+      if (!menu.open) return;
+      const viewport = window.visualViewport;
+      const bottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+      // 冒頭の翻訳注記やヘッダーも含め、目次の実位置から残りの高さを求める。
+      panel.style.setProperty('--lesson-menu-max-height', `${Math.max(0, bottom - panel.getBoundingClientRect().top - 16)}px`);
+    };
+    menu.addEventListener('toggle', resizeMenu);
+    window.addEventListener('resize', resizeMenu);
+    window.visualViewport?.addEventListener('resize', resizeMenu);
+    window.visualViewport?.addEventListener('scroll', resizeMenu, { passive: true });
     const resize = () => {
       document.documentElement.style.setProperty('--lesson-nav-height', `${bar.getBoundingClientRect().height}px`);
       scrollHints.forEach(([container, hint]) => { hint.hidden = container.scrollWidth <= container.clientWidth; });
+      resizeMenu();
     };
     resize();
     if ('ResizeObserver' in window) {
       const observer = new ResizeObserver(resize);
       observer.observe(bar);
+      document.querySelectorAll('.topbar, .translation-note').forEach(item => observer.observe(item));
       scrollHints.forEach(([container]) => observer.observe(container));
     } else {
       window.addEventListener('resize', resize);
@@ -247,7 +260,7 @@
       if (menu.open && !menu.contains(event.target)) menu.open = false;
     });
     update();
-    return { menu, step, title };
+    return { menu, step, title, resizeMenu };
   };
   const lessonNavigation = enhanceTextbook();
   const links = [...document.querySelectorAll('.sidebar a[href^="#"]')];
@@ -280,7 +293,7 @@
     window.addEventListener('scroll', () => {
       if (queued) return;
       queued = true;
-      requestAnimationFrame(() => { queued = false; updateLocation(); });
+      requestAnimationFrame(() => { queued = false; updateLocation(); lessonNavigation.resizeMenu(); });
     }, { passive: true });
     updateLocation();
   } else if ('IntersectionObserver' in window) {
@@ -378,7 +391,10 @@
   if (languageNav) {
     const resizeNav = () => {
       document.documentElement.style.setProperty('--language-nav-height', `${languageNav.getBoundingClientRect().height}px`);
-      if (lessonNavigation) updateLocation();
+      if (lessonNavigation) {
+        updateLocation();
+        lessonNavigation.resizeMenu();
+      }
     };
     resizeNav();
     document.documentElement.classList.add('has-language-nav');
